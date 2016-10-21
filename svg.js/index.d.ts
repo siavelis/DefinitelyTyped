@@ -272,5 +272,5 @@ declare namespace svgjs {
 
 declare var SVG: svgjs.Library;
 declare module "svg.js" {
-    export = SVG
+    export = SVG;
 }

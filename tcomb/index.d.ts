@@ -27,7 +27,7 @@ declare namespace TComb {
     func: {
         (domain: TCombBase[], codomain: TCombBase, name?: string): Func_Static;
         (domain: TCombBase, codomain: TCombBase, name?: string) : Func_Static;
-    }
+    };
     Err: Err_Static;
     Re: Re_Static;
     Dat: Dat_Static;

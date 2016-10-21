@@ -22,7 +22,7 @@ declare module Sendgrid {
         proxy?: string;
         web?: {
             pool?: any;
-        }
+        };
     }
 
     export interface OptionsExport {
@@ -32,7 +32,7 @@ declare module Sendgrid {
         proxy?: string;
         web?: {
             pool?: any;
-        }
+        };
     }
 
     //#endregion

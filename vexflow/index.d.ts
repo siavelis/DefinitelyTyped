@@ -135,7 +135,7 @@ declare namespace Vex {
 
             //inconsistent member : this is missing in vexflow_font.js, but present in gonville_original.js and gonville_all.js
             original_font_information : {postscript_name : string, version_string : string, vendor_url : string, full_font_name : string, font_family_name : string, copyright : string, description : string, trademark : string, designer : string, designer_url : string, unique_font_identifier : string, license_url : string, license_description : string, manufacturer_name : string, font_sub_family_name : string};
-        }
+        };
 
         class Accidental extends Modifier {
             //TODO remove the following lines once TypeScript allows subclass overrides with type changes
@@ -554,7 +554,7 @@ declare namespace Vex {
 
         namespace Modifier {
             const enum Position {LEFT = 1, RIGHT, ABOVE, BELOW}
-            const CATEGORY : string
+            const CATEGORY : string;
         }
 
         class ModifierContext {
@@ -1233,7 +1233,7 @@ declare namespace Vex {
 
         namespace TextNote {
             const enum Justification {LEFT = 1, CENTER, RIGHT}
-            const GLYPHS : {[name : string] : {code : string, point : number, x_shift : number, y_shift : number}}
+            const GLYPHS : {[name : string] : {code : string, point : number, x_shift : number, y_shift : number}};
         }
 
         interface Tickable {

@@ -49,5 +49,5 @@ declare module 'serialport' {
         }
     }
 
-    export = SerialPort
+    export = SerialPort;
 }

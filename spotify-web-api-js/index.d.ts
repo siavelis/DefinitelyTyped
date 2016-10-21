@@ -16,16 +16,16 @@ declare namespace SpotifyWebApiJs {
      * one is the error object (null if no error), and the second is the value if the request succeeded.
      */
     interface ResultsCallback<T> {
-        (error: ErrorObject, value: T) : any
+        (error: ErrorObject, value: T) : any;
     }
 
     /**
      * Describes the regular error object: https://developer.spotify.com/web-api/user-guide/#error-details
      */
     interface ErrorObject {
-        status: number,
-        response: string,
-        statusText: string
+        status: number;
+        response: string;
+        statusText: string;
     }
 
     /**
@@ -159,7 +159,7 @@ declare namespace SpotifyWebApiJs {
          * @param userIds The ids of the users. If you know their Spotify URI it is easy to find their user id (e.g. spotify:user:<here_is_the_user_id>)
          * @param callback An optional callback that receives 2 parameters. The first one is the error object (null if no error), and the second is the value if the request succeeded.
          */
-        isFollowingUsers(userIds: string[], callback?: ResultsCallback<SpotifyApi.UserFollowsUsersOrArtistsResponse>) : Promise<SpotifyApi.UserFollowsUsersOrArtistsResponse>
+        isFollowingUsers(userIds: string[], callback?: ResultsCallback<SpotifyApi.UserFollowsUsersOrArtistsResponse>) : Promise<SpotifyApi.UserFollowsUsersOrArtistsResponse>;
 
         /**
          * Checks to see if the current user is following one or more artists.

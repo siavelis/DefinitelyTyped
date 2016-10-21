@@ -246,7 +246,7 @@ declare class Browseris {
     win32: boolean;
     win64bit: boolean;
     winnt: boolean;
-    armProcessor: boolean
+    armProcessor: boolean;
 }
 
 declare var browseris: Browseris;
@@ -7401,13 +7401,13 @@ declare namespace SP {
             static ButtonIDs: {
                 prev: number;
                 next: number;
-            }
+            };
 
             static ButtonState: {
                 hidden: number
                 disabled: number;
                 enabled: number;
-            }
+            };
         }
 
         export module Workplace {
@@ -9338,7 +9338,7 @@ declare class SPClientAutoFill {
         Footer: number;
         Separator: number;
         Loading: number;
-    }
+    };
 
     static KeyProperty: string; //= 'AutoFillKey';
     static DisplayTextProperty: string;// = 'AutoFillDisplayText';
@@ -9769,7 +9769,7 @@ declare namespace ListModule {
         export function createItemPropertiesTitle(renderCtx: SPClientTemplates.RenderContext, listItem: IListItem): string;
         export function clearSelectedItemsDict(context: any): void;
         export function ctxInitItemState(context: any): void;
-        export function getAttributeFromItemTable(itemTableParam: HTMLElement, strAttributeName: string, strAttributeOldName: string): string
+        export function getAttributeFromItemTable(itemTableParam: HTMLElement, strAttributeName: string, strAttributeOldName: string): string;
         export function getSelectedItemsDict(context: any): any;
         export function removeOnlyPagingArgs(url: string): string;
         export function removePagingArgs(url: string): string;
@@ -10386,7 +10386,7 @@ declare namespace SP {
                 constructor(origRecKey: string, recordKey: number, changeKey: JsGrid.IChangeKey);
                 originalRecordKey: number;
                 recordKey: number;
-                changeKey: JsGrid.IChangeKey
+                changeKey: JsGrid.IChangeKey;
             }
             export class SingleCellClick implements IEventArgs {
                 constructor(eventInfo: Sys.UI.DomEvent, recordKey: number, fieldKey: string);
@@ -10396,11 +10396,11 @@ declare namespace SP {
             }
             export class PendingChangeKeyInitiallyComplete implements IEventArgs {
                 constructor(changeKey: JsGrid.IChangeKey);
-                changeKey: JsGrid.IChangeKey
+                changeKey: JsGrid.IChangeKey;
             }
             export class VacateChange implements IEventArgs {
                 constructor(changeKey: JsGrid.IChangeKey);
-                changeKey: JsGrid.IChangeKey
+                changeKey: JsGrid.IChangeKey;
             }
             export class GridErrorStateChanged implements IEventArgs {
                 constructor(bAnyErrors: boolean);
@@ -10429,11 +10429,11 @@ declare namespace SP {
             }
             export class OnBeginRedoDataUpdateChange implements IEventArgs {
                 constructor(changeKey: JsGrid.IChangeKey);
-                changeKey: JsGrid.IChangeKey
+                changeKey: JsGrid.IChangeKey;
             }
             export class OnBeginUndoDataUpdateChange implements IEventArgs {
                 constructor(changeKey: JsGrid.IChangeKey);
-                changeKey: JsGrid.IChangeKey
+                changeKey: JsGrid.IChangeKey;
             }
 
         }
@@ -11056,7 +11056,7 @@ declare namespace SP {
         }
 
         export interface IGridData {
-            MetaData: IGridMetadata
+            MetaData: IGridMetadata;
 
             Fields: IFieldInfo[];
             Columns: IColumnInfo[];

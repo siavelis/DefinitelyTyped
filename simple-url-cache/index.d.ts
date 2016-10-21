@@ -16,18 +16,18 @@ declare module 'simple-url-cache' {
     }
 
     export interface RegexRule {
-        regex: RegExp
+        regex: RegExp;
     }
 
     export interface MaxAgeRegexRule extends RegexRule {
-        maxAge: number
+        maxAge: number;
     }
 
     export interface CacheRules {
-        cacheMaxAge: MaxAgeRegexRule[],
-        cacheAlways: RegexRule[],
-        cacheNever: RegexRule[],
-        default: string
+        cacheMaxAge: MaxAgeRegexRule[];
+        cacheAlways: RegexRule[];
+        cacheNever: RegexRule[];
+        default: string;
     }
 
     export interface FileStorageConfig extends privateN.StorageConfig {
@@ -46,7 +46,7 @@ declare module 'simple-url-cache' {
 
     namespace privateN {
         interface StorageConfig {
-            type: string
+            type: string;
         }
 
         interface CacheStorage {

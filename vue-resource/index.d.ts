@@ -114,7 +114,7 @@ declare namespace vuejs {
     }
 
     interface ComponentOption {
-        http?: (HttpOptions & { headers?: HttpHeaders } & { [key: string]: any })
+        http?: (HttpOptions & { headers?: HttpHeaders } & { [key: string]: any });
     }
 }
 

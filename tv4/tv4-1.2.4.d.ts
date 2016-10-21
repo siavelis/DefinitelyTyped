@@ -43,6 +43,6 @@ interface TV4 {
 	errorCodes: TV4ErrorCodes;
 }
 declare module "tv4" {
-	var tv4: TV4
+	var tv4: TV4;
 	export = tv4;
 }

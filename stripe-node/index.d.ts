@@ -151,7 +151,7 @@ declare namespace StripeNode {
                  * "legal_entity.first_name").
                  */
                 fields_needed: Array<string>;
-            }
+            };
         }
 
         interface IAccountCreationOptions extends IAccountUpdateOptions {
@@ -341,7 +341,7 @@ declare namespace StripeNode {
                  * ‘tuesday’, etc. Required and available only if interval is weekly.
                  */
                 weekly_anchor?: string;
-            }
+            };
         }
 
         interface IAccountUpdateOptions extends IDataOptions, IAccountShared {
@@ -400,7 +400,7 @@ declare namespace StripeNode {
                  * required.
                  */
                 routing_number?: string;
-            }
+            };
         }
 
         interface IExternalAccountCreationOptions extends IDataOptionsWithMetadata {
@@ -428,11 +428,11 @@ declare namespace StripeNode {
         }
 
         interface IBankAccountListOptions extends IListOptions {
-            object: "bank_account"
+            object: "bank_account";
         }
 
         interface ICardListOptions extends IListOptions {
-            object: "card"
+            object: "card";
         }
 
         interface IRejectReason {
@@ -604,7 +604,7 @@ declare namespace StripeNode {
                 bitcoin_receiver?: number;
                 customer_bank_account?: number;
                 alipay_account?: number;
-            }
+            };
         }
 
         interface IBalanceTransaction extends IResourceObject {
@@ -999,7 +999,7 @@ declare namespace StripeNode {
                  * the user_report to fraudulent. Stripe will use the information you send to improve our fraud detection algorithm
                  */
                 user_report?: "fraudulent" | "safe";
-            }
+            };
 
             /**
              * This is the email address that the receipt for this charge will be sent to.
@@ -1030,7 +1030,7 @@ declare namespace StripeNode {
                  * "all", "alipay_account", "bitcoin_receiver", or "card".
                  */
                 object: "all" | "alipay_account" | "bitcoin_receiver" | "card";
-            }
+            };
         }
 
         interface IChargeRefunds extends IList<refunds.IRefund>, resources.ChargeRefunds { }
@@ -1377,11 +1377,11 @@ declare namespace StripeNode {
         }
 
         interface IBankAccountSourceListOptions extends IListOptions {
-            object: "bank_account"
+            object: "bank_account";
         }
 
         interface ICardSourceListOptions extends IListOptions {
-            object: "card"
+            object: "card";
         }
     }
 
@@ -1745,7 +1745,7 @@ declare namespace StripeNode {
                 data: string | Buffer;
                 name: string;
                 type: string | "application/octet-stream";
-            }
+            };
         }
 
         interface IFileUploadListOptions extends IListOptionsCreated {
@@ -2010,7 +2010,7 @@ declare namespace StripeNode {
             /**
              * Extra information about a charge for the customer’s credit card statement.
              */
-            statement_descriptor?: string
+            statement_descriptor?: string;
 
             /**
              * The ID of the subscription to invoice. If not set, the created invoice will include all pending invoice items for
@@ -2049,7 +2049,7 @@ declare namespace StripeNode {
             /**
              * Extra information about a charge for the customer’s credit card statement.
              */
-            statement_descriptor?: string
+            statement_descriptor?: string;
 
             /**
              * The percent tax rate applied to the invoice, represented as a decimal number.
@@ -2513,7 +2513,7 @@ declare namespace StripeNode {
                  * or it can be a dictionary with the following options:
                  */
                 returned?: IDateFilter;
-            }
+            };
         }
 
         interface IOrderItemCreationHash {
@@ -3209,7 +3209,7 @@ declare namespace StripeNode {
                  * The personal_id_number for PII in string form.
                  */
                 personal_id_number: string;
-            }
+            };
         }
     }
 
@@ -3354,7 +3354,7 @@ declare namespace StripeNode {
              * An arbitrary string which you can attach to a transfer object. It is
              * displayed when in the web interface alongside the transfer.
              */
-            description?: string
+            description?: string;
 
             /**
              * You can use this parameter to transfer funds from a charge (or
@@ -4419,7 +4419,7 @@ declare namespace StripeNode {
                     minimum: Array<string>;
                     additional: Array<string>;
                 }
-            }
+            };
         }
     }
 
@@ -6315,7 +6315,7 @@ declare namespace StripeNode {
          * Return values where the created field is before or equal to this timestamp.
          */
         lte?: string;
-    }
+    };
 
     /**
      * A set of key/value pairs that you can attach to an object. It can be useful for storing

@@ -629,7 +629,7 @@ declare namespace SocketIOClient {
 		 * used in Node.js client environment to manually specify certificate
 		 * information.
 		 */
-		passphrase?: string
+		passphrase?: string;
 
 		/**
 		 * (SSL) Public x509 certificate to use. Can be used in Node.js client

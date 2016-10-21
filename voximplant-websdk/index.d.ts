@@ -2005,23 +2005,23 @@ declare namespace VoxImplant {
 		/**
 		*	Groups this roster item belongs to
 		*/
-		groups: string[],
+		groups: string[];
 		/**
 		*	User id
 		*/
-		id: string,
+		id: string;
 		/**
 		*	User display name
 		*/
-		name: string,
+		name: string;
 		/**
 		*	Resources
 		*/
-		resources: string[],
+		resources: string[];
 		/**
 		*	Subscription type
 		*/
-		subscription_type: number
+		subscription_type: number;
 	}
 
 	/**

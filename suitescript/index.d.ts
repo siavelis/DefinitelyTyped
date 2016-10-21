@@ -75,7 +75,7 @@ declare namespace nlobjRecord.prototype {
              *
              */
             addMarkAllButtons : /* nlobjSubList.prototype.addMarkAllButtons */ any;
-        }
+        };
     }
 }
 declare namespace nlobjRecord.prototype.GetSubListRet.prototype {
@@ -100,7 +100,7 @@ declare namespace nlobjRecord.prototype.GetSubListRet.prototype {
              *
              */
             setDisabled : /* nlobjButton.prototype.setDisabled */ any;
-        }
+        };
     }
 }
 declare namespace nlobjRecord.prototype {
@@ -215,7 +215,7 @@ declare namespace nlobjRecord.prototype {
              *
              */
             addSelectOption : /* nlobjField.prototype.addSelectOption */ any;
-        }
+        };
     }
 }
 declare namespace nlobjPortlet.prototype {
@@ -245,7 +245,7 @@ declare namespace nlobjPortlet.prototype {
              *
              */
             addParamToURL : /* nlobjColumn.prototype.addParamToURL */ any;
-        }
+        };
     }
 }
 declare namespace nlobjForm.prototype {
@@ -270,7 +270,7 @@ declare namespace nlobjForm.prototype {
              *
              */
             setHelpText : /* nlobjTab.prototype.setHelpText */ any;
-        }
+        };
     }
 }
 declare namespace nlobjAssistant.prototype {
@@ -335,7 +335,7 @@ declare namespace nlobjAssistant.prototype {
              *
              */
             getAllLineItemFields : /* nlobjAssistantStep.prototype.getAllLineItemFields */ any;
-        }
+        };
     }
 }
 declare namespace nlobjForm.prototype {
@@ -370,7 +370,7 @@ declare namespace nlobjForm.prototype {
              *
              */
             setShowBorder : /* nlobjFieldGroup.prototype.setShowBorder */ any;
-        }
+        };
     }
 }
 declare namespace nlobjForm.prototype {
@@ -395,7 +395,7 @@ declare namespace nlobjForm.prototype {
              *
              */
             setDisabled : /* nlobjButton.prototype.setDisabled */ any;
-        }
+        };
     }
 }
 

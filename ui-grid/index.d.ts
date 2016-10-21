@@ -711,7 +711,7 @@ declare namespace uiGrid {
          * total items at the bottom of the grid, and the selected items if selection is enabled.
          * @default 'ui-grid/ui-grid-grid-footer'
          */
-        gridFooterTemplate?: string
+        gridFooterTemplate?: string;
         /**
          * Null by default. When provided, this setting uses a custom header
          * template, rather than the default template. Can be set to either the name of a template file:
@@ -1455,7 +1455,7 @@ declare namespace uiGrid {
                  * @param {cancelCellEditHandler} handler Callback
                  */
                 cancelCellEdit: (scope: ng.IScope, handler: cancelCellEditHandler<TEntity>) => void;
-            }
+            };
         }
         export interface afterCellEditHandler<TEntity> {
             /**
@@ -2275,7 +2275,7 @@ declare namespace uiGrid {
                  * This event fires when scroll reaches top percentage of grid and needs to load data
                  */
                 needLoadMoreDataTop: Function;
-            }
+            };
         }
     }
 

@@ -10,7 +10,7 @@ declare namespace TypeCheck {
     [typeName: string]: {
       typeOf: string;
       validate: (x: any)=> any;
-    }
+    };
   }
 
   export interface Options {

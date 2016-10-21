@@ -264,18 +264,18 @@ declare namespace tabris {
     /**
      * Returns a (possibly empty) collection of all descendants of this widget.
      */
-    find (): WidgetCollection
+    find (): WidgetCollection;
 
     /**
      * Returns a (possibly empty) collection of all descendants of this widget that match the selector.
      * @param selector
      */
-    find (selector: string): WidgetCollection
+    find (selector: string): WidgetCollection;
 
     /**
      * Returns `true` if the widget has been disposed, otherwise `false`.
      */
-    isDisposed (): boolean
+    isDisposed (): boolean;
 
     /**
      * Returns the parent of this widget.

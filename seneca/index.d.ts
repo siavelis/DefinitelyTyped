@@ -70,7 +70,7 @@ declare module "seneca" {
                 act?: boolean;
                 stack?: boolean;
                 unknown?: string;
-            },
+            };
             // Action statistics settings. See rolling-stats module.
             stats?: {
                 size?: number;
@@ -105,7 +105,7 @@ declare module "seneca" {
                 interval?: number;
                 // By default, does not run.
                 running?: boolean;
-            },
+            };
             // zig module settings for seneca.start() chaining.
             zig?: any;
             log?: {
@@ -218,7 +218,7 @@ declare module "seneca" {
             remove$(id: DatabaseID | EntityDataWithQuery, callback: EntityRemoveCallback): void;
             list$(query: EntityDataWithQuery, callback: EntityListCallback): void;
         }
-        
+
     }
 
     export = SNS;

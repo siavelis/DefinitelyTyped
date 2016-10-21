@@ -165,7 +165,7 @@ declare namespace sjcl {
         extract(a: BitArray, bstart: number, blenth: number): number;
 
         /// Concatenate two bit arrays.
-        concat(a1: BitArray, a2: BitArray): BitArray
+        concat(a1: BitArray, a2: BitArray): BitArray;
 
         /// Find the length of an array of bits.
         bitLength(a: BitArray): number;

@@ -202,7 +202,7 @@ interface Stamp {
  * @param {function} options.init A closure(s) (function(s)) used to create private data and privileged methods.
  * @param {object} options.static A map of properties to mixin into new and other stamp it will compose with.
  * */
-declare function stampit(options?: Options): Stamp
+declare function stampit(options?: Options): Stamp;
 
 declare namespace stampit {
 

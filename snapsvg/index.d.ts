@@ -370,7 +370,7 @@ declare namespace Snap {
         getSubpath(path:string,from:number,to:number):string;
         getTotalLength(path:string):number;
         intersection(path1:string,path2:string):Array<IntersectionDot>;
-        isBBoxIntersect(bbox1:BBox,bbox2:BBox):boolean
+        isBBoxIntersect(bbox1:BBox,bbox2:BBox):boolean;
         isPointInside(path:string,x:number,y:number):boolean;
         isPointInsideBBox(bbox:BBox,x:number,y:number):boolean;
         map(path:string,matrix:Snap.Matrix):string;
@@ -382,13 +382,13 @@ declare namespace Snap {
     }
 
     interface IntersectionDot{
-        x:number,
-        y:number,
-        t1:number,
-        t2:number,
-        segment1:number,
-        segment2:number,
-        bez1:Array<number>,
-        bez2:Array<number>
+        x: number;
+        y: number;
+        t1: number;
+        t2: number;
+        segment1: number;
+        segment2: number;
+        bez1: Array<number>;
+        bez2: Array<number>;
     }
 }

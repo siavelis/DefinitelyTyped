@@ -152,6 +152,6 @@ export declare function compileFile(pathname: string, options: SwigOptions, cb: 
 export declare function compileFile(pathname: string, options?: SwigOptions): (locals?: any) => string;
 export declare function render(source: string, options?: SwigOptions): string;
 export declare function renderFile(pathName: string, locals: any, cb: (err: Error, output: string) => void): void;
-export declare function renderFile(pathName: string, locals?: any): string
+export declare function renderFile(pathName: string, locals?: any): string;
 export declare function run(templateFn: Function, locals?: any, filePath?: string): string;
 export declare function invalidateCache(): void;

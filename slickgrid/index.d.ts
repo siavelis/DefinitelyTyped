@@ -742,7 +742,7 @@ declare namespace Slick {
 			 * Metadata indexed by column index
 			 */
 			[index: number]: ColumnMetadata<T>;
-		}
+		};
 	}
 
 	export interface ColumnMetadata<T extends SlickData> {
@@ -1441,7 +1441,7 @@ declare namespace Slick {
 	export interface CellCssStylesHash {
 		[index: number]: {
 			[id: string]: string;
-		}
+		};
 	}
 
 	export interface Viewport {
