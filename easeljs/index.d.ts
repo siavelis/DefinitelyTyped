@@ -55,7 +55,7 @@ declare namespace createjs {
 
 
     export class BitmapText extends DisplayObject {
-        constructor(text?:string, spriteSheet?:SpriteSheet);
+        constructor(text?: string, spriteSheet?: SpriteSheet);
 
         static maxPoolSize: number;
 

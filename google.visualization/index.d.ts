@@ -43,7 +43,7 @@ declare namespace google {
             constructor(spec?: ChartSpecs);
             draw(container_ref?: HTMLElement): void;
             toJSON(): string;
-            clone():ChartWrapper;
+            clone(): ChartWrapper;
             getDataSourceUrl(): string;
             getDataTable(): DataTable;
             getChartType(): string;
@@ -204,7 +204,7 @@ declare namespace google {
 
             setRefreshInterval(intervalSeconds: number): void;
             setTimeout(timeoutSeconds: number): void;
-            setQuery(queryString:string): void;
+            setQuery(queryString: string): void;
 
             send(callback: (response: QueryResponse) => void): void;
         }

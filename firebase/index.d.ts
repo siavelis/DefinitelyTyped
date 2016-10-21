@@ -171,8 +171,8 @@ interface Firebase extends FirebaseQuery {
 	/**
 	 * Authenticates a Firebase client using an authentication token or Firebase Secret.
 	 */
-	authWithCustomToken(autoToken: string, onComplete: (error: any, authData: FirebaseAuthData) => void, options?:Object): void;
-	authWithCustomToken(autoToken: string, options?:Object): Promise<FirebaseAuthData>;
+	authWithCustomToken(autoToken: string, onComplete: (error: any, authData: FirebaseAuthData) => void, options?: Object): void;
+	authWithCustomToken(autoToken: string, options?: Object): Promise<FirebaseAuthData>;
 	/**
 	 * Authenticates a Firebase client using a new, temporary guest account.
 	 */

@@ -44,7 +44,7 @@ declare namespace Minilog {
         */
         clear(): Filter;
 
-        test(name:any, level:any): boolean;
+        test(name: any, level: any): boolean;
 
         /**
         * specifies the behavior when a log line doesn't match either the whitelist or the blacklist.

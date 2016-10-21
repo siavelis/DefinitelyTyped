@@ -5,8 +5,8 @@
 
 interface IPathHistory{
 	initial: any;
-	pushState(state: any, title: string, path: string):void;
-	popState(event: any): void;	
+	pushState(state: any, title: string, path: string): void;
+	popState(event: any): void;
 	listen(fallback: any): void;
 }
 
@@ -15,7 +15,7 @@ interface IPathRoute{
 	enter(fns: Function|Function[]): IPathRoute;
 	exit(fn: () => void): IPathRoute;
 	partition(): string[];
-	run():void;
+	run(): void;
 }
 
 interface IPathRoutes{
@@ -36,21 +36,21 @@ interface IPathRouteConstructor {
 
 interface IPath {
     map(path: string): IPathRoute;
-	
+
 	root(path: string): void;
-	
+
 	rescue(fn: Function): void;
-	
+
 	history: IPathHistory;
-	
+
 	match(path: string, parameterize: boolean): IPathRoute;
-	
+
 	dispatch(passed_route: string): void;
-	
+
     listen(): void;
-	
+
 	core: IPathCore;
-	
+
 	routes: IPathRoutes
 }
 

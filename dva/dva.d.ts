@@ -6,21 +6,21 @@
 /// <reference types="react" />
 declare module 'dva' {
     /** connecting Container Components */
-    export function connect(maps:Object):Function;
+    export function connect(maps: Object): Function;
 
-    export default function dva(opts?:Object):{
+    export default function dva(opts?: Object):{
 
         /** dva plugin */
-        use: (hooks:Object)=>void,
+        use: (hooks: Object)=>void,
 
         /** dva bootstrap */
-        start: (selector?:String|HTMLElement)=>void,
+        start: (selector?: String|HTMLElement)=>void,
 
         /** dva add model */
-        model: (model:Object)=>void,
+        model: (model: Object)=>void,
 
         /** dva setting router */
-        router: (router:Object)=>Object|JSX.Element,
+        router: (router: Object)=>Object|JSX.Element,
     };
 }
 
@@ -32,7 +32,7 @@ declare module 'dva/router' {
         history?: Object
     }
     export class Router extends React.Component<RouterProps, {}> {
-        render():JSX.Element
+        render(): JSX.Element
     }
 
 
@@ -41,7 +41,7 @@ declare module 'dva/router' {
         component?: React.ReactNode
     }
     export class Route extends React.Component<RouteProps, {}> {
-        render():JSX.Element
+        render(): JSX.Element
     }
 
     /**

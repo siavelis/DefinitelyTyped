@@ -14,241 +14,241 @@ declare class ngGridReorderable {
     constructor();
 }
 
-declare var ngStyleProvider:ngGrid.IStyleProviderStatic;
-declare var ngSearchProvider:ngGrid.ISearchProviderStatic;
-declare var ngSelectionProvider:ngGrid.ISelectionProviderStatic;
-declare var ngEventProvider:ngGrid.IEventProviderStatic;
-declare var ngAggregate:ngGrid.IAggregateStatic;
-declare var ngRenderedRange:ngGrid.IRenderedRangeStatic;
-declare var ngDimension:ngGrid.IDimensionStatic;
-declare var ngRow:ngGrid.IRowStatic;
-declare var ngColumn:ngGrid.IColumnStatic;
-declare var ngFooter:ngGrid.IFooterStatic;
+declare var ngStyleProvider: ngGrid.IStyleProviderStatic;
+declare var ngSearchProvider: ngGrid.ISearchProviderStatic;
+declare var ngSelectionProvider: ngGrid.ISelectionProviderStatic;
+declare var ngEventProvider: ngGrid.IEventProviderStatic;
+declare var ngAggregate: ngGrid.IAggregateStatic;
+declare var ngRenderedRange: ngGrid.IRenderedRangeStatic;
+declare var ngDimension: ngGrid.IDimensionStatic;
+declare var ngRow: ngGrid.IRowStatic;
+declare var ngColumn: ngGrid.IColumnStatic;
+declare var ngFooter: ngGrid.IFooterStatic;
 
 declare namespace ngGrid {
 
     export interface IDomAccessProvider {
-        previousColumn:IColumn;
-        grid:IGridInstance;
-        changeUserSelect(elm:angular.IAugmentedJQuery, value:string):void;
-        focusCellElement($scope:IGridScope, index:number):void;
-        selectionHandlers($scope:IGridScope, elm:angular.IAugmentedJQuery):void;
+        previousColumn: IColumn;
+        grid: IGridInstance;
+        changeUserSelect(elm: angular.IAugmentedJQuery, value: string): void;
+        focusCellElement($scope: IGridScope, index: number): void;
+        selectionHandlers($scope: IGridScope, elm: angular.IAugmentedJQuery): void;
     }
 
     export interface IStyleProviderStatic {
-        new($scope:IGridScope, grid:IGridInstance):IStyleProvider;
+        new($scope: IGridScope, grid: IGridInstance): IStyleProvider;
     }
 
     export interface IStyleProvider {
     }
 
     export interface ISearchProviderStatic {
-        new($scope:IGridScope, grid:IGridInstance, $filter:angular.IFilterService):ISearchProvider;
+        new($scope: IGridScope, grid: IGridInstance, $filter: angular.IFilterService): ISearchProvider;
     }
 
     export interface ISearchProvider {
-        fieldMap:any;
-        extFilter:boolean;
-        evalFilter():void;
+        fieldMap: any;
+        extFilter: boolean;
+        evalFilter(): void;
     }
 
     export interface ISelectionProviderStatic {
-        new(grid:IGridInstance, $scope:IGridScope, $parse:angular.IParseService):ISelectionProvider;
+        new(grid: IGridInstance, $scope: IGridScope, $parse: angular.IParseService): ISelectionProvider;
     }
 
     export interface ISelectionProvider {
-        multi:boolean;
-        selectedItems:any[];
-        selectedIndex:number;
-        lastClickedRow:any;
-        ignoreSelectedItemChanges:boolean;
-        pKeyParser:angular.ICompiledExpression;
-        ChangeSelection(rowItem:any, event:any):void;
-        getSelection(entity:any):number;
-        getSelectionIndex(entity:any):number;
-        setSelection(rowItem:IRow, isSelected:boolean):void;
-        toggleSelectAll(checkAll:boolean, bypass:boolean, selectFiltered:boolean):void;
+        multi: boolean;
+        selectedItems: any[];
+        selectedIndex: number;
+        lastClickedRow: any;
+        ignoreSelectedItemChanges: boolean;
+        pKeyParser: angular.ICompiledExpression;
+        ChangeSelection(rowItem: any, event: any): void;
+        getSelection(entity: any): number;
+        getSelectionIndex(entity: any): number;
+        setSelection(rowItem: IRow, isSelected: boolean): void;
+        toggleSelectAll(checkAll: boolean, bypass: boolean, selectFiltered: boolean): void;
     }
 
     export interface IEventProviderStatic {
-        new(grid:IGridInstance, $scope:IGridScope, domUtilityService:service.IDomUtilityService, $timeout:angular.ITimeoutService):IEventProvider;
+        new(grid: IGridInstance, $scope: IGridScope, domUtilityService: service.IDomUtilityService, $timeout: angular.ITimeoutService): IEventProvider;
     }
 
     export interface IEventProvider {
-        colToMove:IColumn;
-        groupToMove:any;
-        assignEvents():void;
-        assignGridEventHandlers():void;
-        dragStart(event:any):void;
-        dragOver(event:any):void;
-        setDraggables():void;
-        onGroupMouseDown(event:any):void;
-        onGroupDrop(event:any):void;
-        onHeaderMouseDown(event:any):void;
-        onHeaderDrop(event:any):void;
+        colToMove: IColumn;
+        groupToMove: any;
+        assignEvents(): void;
+        assignGridEventHandlers(): void;
+        dragStart(event: any): void;
+        dragOver(event: any): void;
+        setDraggables(): void;
+        onGroupMouseDown(event: any): void;
+        onGroupDrop(event: any): void;
+        onHeaderMouseDown(event: any): void;
+        onHeaderDrop(event: any): void;
     }
 
     export interface IAggregateStatic {
-        new(aggEntity:any, rowFactory:IRowFactory, rowHeight:number, groupInitState:boolean):IAggregate;
+        new(aggEntity: any, rowFactory: IRowFactory, rowHeight: number, groupInitState: boolean): IAggregate;
     }
 
     export interface IAggregate {
-        rowIndex:number;
-        offsetTop:number;
-        entity:any;
-        label:string;
-        field:string;
-        depth:number;
-        parent:any;
-        children:any[];
-        aggChildren:any[];
-        aggIndex:number;
-        collapsed:boolean;
-        groupInitState:boolean;
-        rowFactory:IRowFactory;
-        rowHeight:number;
-        isAggRow:boolean;
-        offsetLeft:number;
-        aggLabelFilter:any;
+        rowIndex: number;
+        offsetTop: number;
+        entity: any;
+        label: string;
+        field: string;
+        depth: number;
+        parent: any;
+        children: any[];
+        aggChildren: any[];
+        aggIndex: number;
+        collapsed: boolean;
+        groupInitState: boolean;
+        rowFactory: IRowFactory;
+        rowHeight: number;
+        isAggRow: boolean;
+        offsetLeft: number;
+        aggLabelFilter: any;
     }
 
     export interface IRowConfig {
-        enableCellSelection:boolean;
-        enableRowSelection:boolean;
-        jqueryUITheme:boolean;
-        rowClasses:string[];
-        rowHeight:number;
-        selectWithCheckboxOnly:boolean;
-        selectedItems:any[];
+        enableCellSelection: boolean;
+        enableRowSelection: boolean;
+        jqueryUITheme: boolean;
+        rowClasses: string[];
+        rowHeight: number;
+        selectWithCheckboxOnly: boolean;
+        selectedItems: any[];
 
-        afterSelectionChangeCallback():void;
-        beforeSelectionChangeCallback():void;
+        afterSelectionChangeCallback(): void;
+        beforeSelectionChangeCallback(): void;
     }
 
     export interface IRenderedRangeStatic {
-        new(top:number, bottom:number):IRenderedRange;
+        new(top: number, bottom: number): IRenderedRange;
     }
 
     export interface IRenderedRange {
-        bottomRow:number;
-        topRow:number;
+        bottomRow: number;
+        topRow: number;
     }
 
     export interface IRowFactory {
-        aggCache:any;
-        dataChanged:boolean;
-        groupedData:any;
-        numberOfAggregates:number;
-        parentCache:any[];
-        parsedData:any[];
-        renderedRange:IRenderedRange;
-        rowConfig:IRowConfig;
-        rowHeight:number;
-        selectionProvider:ISelectionProvider;
+        aggCache: any;
+        dataChanged: boolean;
+        groupedData: any;
+        numberOfAggregates: number;
+        parentCache: any[];
+        parsedData: any[];
+        renderedRange: IRenderedRange;
+        rowConfig: IRowConfig;
+        rowHeight: number;
+        selectionProvider: ISelectionProvider;
 
-        UpdateViewableRange(newRange:IRenderedRange):void;
-        buildAggregateRow(aggEntity:any, rowIndex:number):IAggregate;
-        buildEntityRow(entity:any, rowIndex:number):IRow;
-        filteredRowsChanged():void;
-        fixRowCache():void;
-        getGrouping(groups:any):void;
-        parseGroupData(groupData:any):void;
-        renderedChange():void;
-        renderedChangeNoGroups():void;
+        UpdateViewableRange(newRange: IRenderedRange): void;
+        buildAggregateRow(aggEntity: any, rowIndex: number): IAggregate;
+        buildEntityRow(entity: any, rowIndex: number): IRow;
+        filteredRowsChanged(): void;
+        fixRowCache(): void;
+        getGrouping(groups: any): void;
+        parseGroupData(groupData: any): void;
+        renderedChange(): void;
+        renderedChangeNoGroups(): void;
     }
 
     export interface IDimensionStatic {
-        new(options:any):IDimension;
+        new(options: any): IDimension;
     }
 
     export interface IDimension {
-        outerHeight?:number;
-        outerWidth?:number;
-        autoFitHeight?:boolean;
+        outerHeight?: number;
+        outerWidth?: number;
+        autoFitHeight?: boolean;
     }
 
     export interface IElementDimension {
-        rootMaxH?:number;
-        rootMaxW?:number;
-        rowIndexCellW?:number;
-        rowSelectedCellW?:number;
-        scrollH?:number;
-        scrollW?:number;
+        rootMaxH?: number;
+        rootMaxW?: number;
+        rowIndexCellW?: number;
+        rowSelectedCellW?: number;
+        scrollH?: number;
+        scrollW?: number;
     }
 
     export interface IRowStatic {
-        new(entity:any, config:IRowConfig, selectionProvider:ISelectionProvider, rowIndex:number, $utils:any):IRow;
+        new(entity: any, config: IRowConfig, selectionProvider: ISelectionProvider, rowIndex: number, $utils: any): IRow;
     }
 
     export interface IRow {
-        entity:any;
-        config:IRowConfig;
-        selectionProvider:ISelectionProvider;
-        rowIndex:number;
-        utils:any;
-        selected:boolean;
-        cursor:string;
-        offsetTop:number;
-        rowDisplayIndex:number;
-        afterSelectionChange():void;
-        beforeSelectionChange():void;
-        setSelection(isSelected:boolean):void;
-        continueSelection(event:any):void;
-        ensureEntity(expected:any):void;
-        toggleSelected(event:any):boolean;
-        alternatingRowClass():void;
-        getProperty(path:string):any;
-        copy():IRow;
-        setVars(fromRow:IRow):void;
+        entity: any;
+        config: IRowConfig;
+        selectionProvider: ISelectionProvider;
+        rowIndex: number;
+        utils: any;
+        selected: boolean;
+        cursor: string;
+        offsetTop: number;
+        rowDisplayIndex: number;
+        afterSelectionChange(): void;
+        beforeSelectionChange(): void;
+        setSelection(isSelected: boolean): void;
+        continueSelection(event: any): void;
+        ensureEntity(expected: any): void;
+        toggleSelected(event: any): boolean;
+        alternatingRowClass(): void;
+        getProperty(path: string): any;
+        copy(): IRow;
+        setVars(fromRow: IRow): void;
     }
 
     export interface IColumnStatic {
-        new(config:IGridOptions, $scope:IGridScope, grid:IGridInstance, domUtilityService:service.IDomUtilityService, $templateCache:angular.ITemplateCacheService, $utils:any):IColumn;
+        new(config: IGridOptions, $scope: IGridScope, grid: IGridInstance, domUtilityService: service.IDomUtilityService, $templateCache: angular.ITemplateCacheService, $utils: any): IColumn;
     }
 
     export interface IColumn {
-        colDef:IColumnDef;
-        width:number;
-        groupIndex:number;
-        isGroupedBy:boolean;
-        minWidth:number;
-        maxWidth:number;
-        enableCellEdit:boolean;
-        cellEditableCondition:any;
-        headerRowHeight:number;
-        displayName:string;
-        index:number;
-        isAggCol:boolean;
-        cellClass:string;
-        sortPriority:number;
-        cellFilter:any;
-        field:string;
-        aggLabelFilter:any;
-        visible:boolean;
-        sortable:boolean;
-        resizable:boolean;
-        pinnable:boolean;
-        pinned:boolean;
-        originalIndex:number;
-        groupable:boolean;
-        sortDirection:string;
-        sortingAlgorithm:Function;
-        headerClass:string;
-        cursor:string;
-        headerCellTemplate:string;
-        cellTemplate:string;
-        groupedByClass():string;
-        toggleVisible():void;
-        showSortButtonUp():boolean;
-        showSortButtonDown():boolean;
-        noSortVisible():boolean;
-        sort(event:any):boolean;
-        gripClick():any;
-        gripOnMouseDown(event:any):any;
-        onMouseMove(event:any):void;
-        gripOnMouseUp(event:any):void;
-        copy():IColumn;
-        setVars(fromCol:IColumn):void;
+        colDef: IColumnDef;
+        width: number;
+        groupIndex: number;
+        isGroupedBy: boolean;
+        minWidth: number;
+        maxWidth: number;
+        enableCellEdit: boolean;
+        cellEditableCondition: any;
+        headerRowHeight: number;
+        displayName: string;
+        index: number;
+        isAggCol: boolean;
+        cellClass: string;
+        sortPriority: number;
+        cellFilter: any;
+        field: string;
+        aggLabelFilter: any;
+        visible: boolean;
+        sortable: boolean;
+        resizable: boolean;
+        pinnable: boolean;
+        pinned: boolean;
+        originalIndex: number;
+        groupable: boolean;
+        sortDirection: string;
+        sortingAlgorithm: Function;
+        headerClass: string;
+        cursor: string;
+        headerCellTemplate: string;
+        cellTemplate: string;
+        groupedByClass(): string;
+        toggleVisible(): void;
+        showSortButtonUp(): boolean;
+        showSortButtonDown(): boolean;
+        noSortVisible(): boolean;
+        sort(event: any): boolean;
+        gripClick(): any;
+        gripOnMouseDown(event: any): any;
+        onMouseMove(event: any): void;
+        gripOnMouseUp(event: any): void;
+        copy(): IColumn;
+        setVars(fromCol: IColumn): void;
     }
 
     export interface IGridScope extends angular.IScope {

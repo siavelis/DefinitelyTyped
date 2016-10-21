@@ -16,7 +16,7 @@ declare let LeState : {
         getDescription(): {};
         createListener({ id, selector, force }: {
             id: number;
-            selector: (state :any) => {};
+            selector: (state : any) => {};
             force?: boolean;
         }): void;
     };

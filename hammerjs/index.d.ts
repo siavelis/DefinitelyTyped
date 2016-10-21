@@ -3,7 +3,7 @@
 // Definitions by: Philip Bulley <https://github.com/milkisevil/>, Han Lin Yap <https://github.com/codler>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare var Hammer:HammerStatic;
+declare var Hammer: HammerStatic;
 
 declare module "hammerjs" {
     export = Hammer;
@@ -11,9 +11,9 @@ declare module "hammerjs" {
 
 interface HammerStatic
 {
-  new( element:HTMLElement | SVGElement, options?:HammerOptions ): HammerManager;
+  new( element: HTMLElement | SVGElement, options?: HammerOptions ): HammerManager;
 
-  defaults:HammerDefaults;
+  defaults: HammerDefaults;
 
   VERSION: number;
 
@@ -58,14 +58,14 @@ interface HammerStatic
   Rotate:         RotateRecognizerStatic;
   Press:          PressRecognizerStatic;
 
-  on( target:EventTarget, types:string, handler:Function ):void;
-  off( target:EventTarget, types:string, handler:Function ):void;
-  each( obj:any, iterator:Function, context:any ):     void;
-  merge( dest:any, src:any ):    any;
-  extend( dest:any, src:any, merge:boolean ):   any;
-  inherit( child:Function, base:Function, properties:any ):any;
-  bindFn( fn:Function, context:any ):Function;
-  prefixed( obj:any, property:string ):string;
+  on( target: EventTarget, types: string, handler: Function ): void;
+  off( target: EventTarget, types: string, handler: Function ): void;
+  each( obj: any, iterator: Function, context: any ):     void;
+  merge( dest: any, src: any ):    any;
+  extend( dest: any, src: any, merge: boolean ):   any;
+  inherit( child: Function, base: Function, properties: any ): any;
+  bindFn( fn: Function, context: any ): Function;
+  prefixed( obj: any, property: string ): string;
 }
 
 type RecognizerTuple =
@@ -76,167 +76,167 @@ type RecognizerTuple =
 
 interface HammerDefaults extends HammerOptions
 {
-  domEvents:boolean;
-  enable:boolean;
-  preset:RecognizerTuple[];
-  touchAction:string;
-  cssProps:CssProps;
+  domEvents: boolean;
+  enable: boolean;
+  preset: RecognizerTuple[];
+  touchAction: string;
+  cssProps: CssProps;
 
   inputClass:() => void;
-  inputTarget:EventTarget;
+  inputTarget: EventTarget;
 }
 
 interface CssProps
 {
-  contentZooming:string;
-  tapHighlightColor:string;
-  touchCallout:string;
-  touchSelect:string;
-  userDrag:string;
-  userSelect:string;
+  contentZooming: string;
+  tapHighlightColor: string;
+  touchCallout: string;
+  touchSelect: string;
+  userDrag: string;
+  userSelect: string;
 }
 
 interface HammerOptions
 {
-  cssProps?:CssProps;
-  domEvents?:boolean;
-  enable?:boolean | ((manager: HammerManager) => boolean);
-  preset?:RecognizerTuple[];
-  touchAction?:string;
-  recognizers?:RecognizerTuple[];
+  cssProps?: CssProps;
+  domEvents?: boolean;
+  enable?: boolean | ((manager: HammerManager) => boolean);
+  preset?: RecognizerTuple[];
+  touchAction?: string;
+  recognizers?: RecognizerTuple[];
 
   inputClass?:() => void;
-  inputTarget?:EventTarget;
+  inputTarget?: EventTarget;
 }
 
 interface HammerManagerConstructor {
-  new( element:EventTarget, options?:HammerOptions ):HammerManager;
+  new( element: EventTarget, options?: HammerOptions ): HammerManager;
 }
 
 interface HammerListener {
-  (event:HammerInput): void
+  (event: HammerInput): void
 }
 
 interface HammerManager
 {
-  add( recogniser:Recognizer ):Recognizer;
-  add( recogniser:Recognizer ):HammerManager;
-  add( recogniser:Recognizer[] ):Recognizer;
-  add( recogniser:Recognizer[] ):HammerManager;
-  destroy():void;
-  emit( event:string, data:any ):void;
-  get( recogniser:Recognizer ):Recognizer;
-  get( recogniser:string ):Recognizer;
-  off( events:string, handler?:HammerListener ):void;
-  on( events:string, handler:HammerListener ):void;
-  recognize( inputData:any ):void;
-  remove( recogniser:Recognizer ):HammerManager;
-  remove( recogniser:string ):HammerManager;
-  set( options:HammerOptions ):HammerManager;
-  stop( force:boolean ):void;
+  add( recogniser: Recognizer ): Recognizer;
+  add( recogniser: Recognizer ): HammerManager;
+  add( recogniser: Recognizer[] ): Recognizer;
+  add( recogniser: Recognizer[] ): HammerManager;
+  destroy(): void;
+  emit( event: string, data: any ): void;
+  get( recogniser: Recognizer ): Recognizer;
+  get( recogniser: string ): Recognizer;
+  off( events: string, handler?: HammerListener ): void;
+  on( events: string, handler: HammerListener ): void;
+  recognize( inputData: any ): void;
+  remove( recogniser: Recognizer ): HammerManager;
+  remove( recogniser: string ): HammerManager;
+  set( options: HammerOptions ): HammerManager;
+  stop( force: boolean ): void;
 }
 
 declare class HammerInput
 {
-  constructor( manager:HammerManager, callback:Function );
+  constructor( manager: HammerManager, callback: Function );
 
-  destroy():void;
-  handler():void;
-  init():void;
+  destroy(): void;
+  handler(): void;
+  init(): void;
 
   /** Name of the event. Like panstart. */
-  type:string;
+  type: string;
 
   /** Movement of the X axis. */
-  deltaX:number;
+  deltaX: number;
 
   /** Movement of the Y axis. */
-  deltaY:number;
+  deltaY: number;
 
   /** Total time in ms since the first input. */
-  deltaTime:number;
+  deltaTime: number;
 
   /** Distance moved. */
-  distance:number;
+  distance: number;
 
   /** Angle moved. */
-  angle:number;
+  angle: number;
 
   /** Velocity on the X axis, in px/ms. */
-  velocityX:number;
+  velocityX: number;
 
   /** Velocity on the Y axis, in px/ms */
-  velocityY:number;
+  velocityY: number;
 
   /** Highest velocityX/Y value. */
-  velocity:number;
+  velocity: number;
 
   /** Direction moved. Matches the DIRECTION constants. */
-  direction:number;
+  direction: number;
 
   /** Direction moved from it's starting point. Matches the DIRECTION constants. */
-  offsetDirection:number;
+  offsetDirection: number;
 
   /** Scaling that has been done when multi-touch. 1 on a single touch. */
-  scale:number;
+  scale: number;
 
   /** Rotation that has been done when multi-touch. 0 on a single touch. */
-  rotation:number;
+  rotation: number;
 
   /** Center position for multi-touch, or just the single pointer. */
-  center:HammerPoint;
+  center: HammerPoint;
 
   /** Source event object, type TouchEvent, MouseEvent or PointerEvent. */
-  srcEvent:TouchEvent | MouseEvent | PointerEvent;
+  srcEvent: TouchEvent | MouseEvent | PointerEvent;
 
   /** Target that received the event. */
-  target:HTMLElement;
+  target: HTMLElement;
 
   /** Primary pointer type, could be touch, mouse, pen or kinect. */
-  pointerType:string;
+  pointerType: string;
 
   /** Event type, matches the INPUT constants. */
-  eventType:number;
+  eventType: number;
 
   /** true when the first input. */
-  isFirst:boolean;
+  isFirst: boolean;
 
   /** true when the final (last) input. */
-  isFinal:boolean;
+  isFinal: boolean;
 
   /** Array with all pointers, including the ended pointers (touchend, mouseup). */
-  pointers:any[];
+  pointers: any[];
 
   /** Array with all new/moved/lost pointers. */
-  changedPointers:any[];
+  changedPointers: any[];
 
   /** Reference to the srcEvent.preventDefault() method. Only for experts! */
-  preventDefault:Function;
+  preventDefault: Function;
 }
 
 declare class MouseInput extends HammerInput
 {
-  constructor( manager:HammerManager, callback:Function );
+  constructor( manager: HammerManager, callback: Function );
 }
 
 declare class PointerEventInput extends HammerInput
 {
-  constructor( manager:HammerManager, callback:Function );
+  constructor( manager: HammerManager, callback: Function );
 }
 
 declare class SingleTouchInput extends HammerInput
 {
-  constructor( manager:HammerManager, callback:Function );
+  constructor( manager: HammerManager, callback: Function );
 }
 
 declare class TouchInput extends HammerInput
 {
-  constructor( manager:HammerManager, callback:Function );
+  constructor( manager: HammerManager, callback: Function );
 }
 
 declare class TouchMouseInput extends HammerInput
 {
-  constructor( manager:HammerManager, callback:Function );
+  constructor( manager: HammerManager, callback: Function );
 }
 
 interface RecognizerOptions {
@@ -254,47 +254,47 @@ interface RecognizerOptions {
 
 interface RecognizerStatic
 {
-  new( options?:RecognizerOptions ):Recognizer;
+  new( options?: RecognizerOptions ): Recognizer;
 }
 
 interface Recognizer
 {
-  defaults:any;
+  defaults: any;
 
-  canEmit():boolean;
-  canRecognizeWith( otherRecognizer:Recognizer ):boolean;
-  dropRecognizeWith( otherRecognizer:Recognizer ):Recognizer;
-  dropRecognizeWith( otherRecognizer:string ):Recognizer;
-  dropRequireFailure( otherRecognizer:Recognizer ):Recognizer;
-  dropRequireFailure( otherRecognizer:string ):Recognizer;
-  emit( input:HammerInput ):void;
-  getTouchAction():any[];
-  hasRequireFailures():boolean;
-  process( inputData:HammerInput ):string;
-  recognize( inputData:HammerInput ):void;
-  recognizeWith( otherRecognizer:Recognizer ):Recognizer;
-  recognizeWith( otherRecognizer:string ):Recognizer;
-  requireFailure( otherRecognizer:Recognizer ):Recognizer;
-  requireFailure( otherRecognizer:string ):Recognizer;
-  reset():void;
-  set( options?:RecognizerOptions ):Recognizer;
-  tryEmit( input:HammerInput ):void;
+  canEmit(): boolean;
+  canRecognizeWith( otherRecognizer: Recognizer ): boolean;
+  dropRecognizeWith( otherRecognizer: Recognizer ): Recognizer;
+  dropRecognizeWith( otherRecognizer: string ): Recognizer;
+  dropRequireFailure( otherRecognizer: Recognizer ): Recognizer;
+  dropRequireFailure( otherRecognizer: string ): Recognizer;
+  emit( input: HammerInput ): void;
+  getTouchAction(): any[];
+  hasRequireFailures(): boolean;
+  process( inputData: HammerInput ): string;
+  recognize( inputData: HammerInput ): void;
+  recognizeWith( otherRecognizer: Recognizer ): Recognizer;
+  recognizeWith( otherRecognizer: string ): Recognizer;
+  requireFailure( otherRecognizer: Recognizer ): Recognizer;
+  requireFailure( otherRecognizer: string ): Recognizer;
+  reset(): void;
+  set( options?: RecognizerOptions ): Recognizer;
+  tryEmit( input: HammerInput ): void;
 }
 
 interface AttrRecognizerStatic
 {
-  attrTest( input:HammerInput ):boolean;
-  process( input:HammerInput ):any;
+  attrTest( input: HammerInput ): boolean;
+  process( input: HammerInput ): any;
 }
 
 interface AttrRecognizer extends Recognizer
 {
-  new( options?:RecognizerOptions ):AttrRecognizer;
+  new( options?: RecognizerOptions ): AttrRecognizer;
 }
 
 interface PanRecognizerStatic
 {
-  new( options?:RecognizerOptions ):PanRecognizer;
+  new( options?: RecognizerOptions ): PanRecognizer;
 }
 
 interface PanRecognizer extends AttrRecognizer
@@ -303,7 +303,7 @@ interface PanRecognizer extends AttrRecognizer
 
 interface PinchRecognizerStatic
 {
-  new( options?:RecognizerOptions ):PinchRecognizer;
+  new( options?: RecognizerOptions ): PinchRecognizer;
 }
 
 interface PinchRecognizer extends AttrRecognizer
@@ -312,7 +312,7 @@ interface PinchRecognizer extends AttrRecognizer
 
 interface PressRecognizerStatic
 {
-  new( options?:RecognizerOptions ):PressRecognizer;
+  new( options?: RecognizerOptions ): PressRecognizer;
 }
 
 interface PressRecognizer extends AttrRecognizer
@@ -321,7 +321,7 @@ interface PressRecognizer extends AttrRecognizer
 
 interface RotateRecognizerStatic
 {
-  new( options?:RecognizerOptions ):RotateRecognizer;
+  new( options?: RecognizerOptions ): RotateRecognizer;
 }
 
 interface RotateRecognizer extends AttrRecognizer
@@ -330,7 +330,7 @@ interface RotateRecognizer extends AttrRecognizer
 
 interface SwipeRecognizerStatic
 {
-  new( options?:RecognizerOptions ):SwipeRecognizer;
+  new( options?: RecognizerOptions ): SwipeRecognizer;
 }
 
 interface SwipeRecognizer extends AttrRecognizer
@@ -339,7 +339,7 @@ interface SwipeRecognizer extends AttrRecognizer
 
 interface TapRecognizerStatic
 {
-  new( options?:RecognizerOptions ):TapRecognizer;
+  new( options?: RecognizerOptions ): TapRecognizer;
 }
 
 interface TapRecognizer extends AttrRecognizer
@@ -348,13 +348,13 @@ interface TapRecognizer extends AttrRecognizer
 
 declare class TouchAction
 {
-  constructor( manager:HammerManager, value:string );
+  constructor( manager: HammerManager, value: string );
 
-  compute():string;
-  preventDefaults( input:HammerInput ):void;
-  preventSrc( srcEvent:any ):void;
-  set( value:string ):void;
-  update():void;
+  compute(): string;
+  preventDefaults( input: HammerInput ): void;
+  preventSrc( srcEvent: any ): void;
+  set( value: string ): void;
+  update(): void;
 }
 
 interface HammerPoint

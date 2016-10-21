@@ -120,10 +120,10 @@ declare namespace lf {
       addTableColumn(
           tableName: string, columnName: string,
           defaultValue: string|boolean|number|Date|ArrayBuffer): Promise<void>
-      dropTableColumn(tableName: string, columnName:string): Promise<void>
+      dropTableColumn(tableName: string, columnName: string): Promise<void>
       renameTableColumn(
           tableName: string, oldColumnName: string,
-          newColumnName:string) : Promise<void>
+          newColumnName: string) : Promise<void>
       createRow(payload: Object): Row
       getVersion(): number
       dump(): Array<Object>

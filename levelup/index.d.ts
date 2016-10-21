@@ -1,4 +1,4 @@
-// Type definitions for LevelUp 
+// Type definitions for LevelUp
 // Project: https://github.com/rvagg/node-levelup
 // Definitions by: Bret Little <https://github.com/blittle>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
@@ -24,9 +24,9 @@ interface LevelUp {
 
     batch(array: Batch[], options?: { keyEncoding?: string; valueEncoding?: string; sync?: boolean }, callback?: (error?: any)=>any): void;
     batch(array: Batch[], callback?: (error?: any)=>any): void;
-    batch():LevelUpChain;
-    isOpen():boolean;
-    isClosed():boolean;
+    batch(): LevelUpChain;
+    isOpen(): boolean;
+    isClosed(): boolean;
     createReadStream(options?: any): any;
     createKeyStream(options?: any): any;
     createValueStream(options?: any): any;
@@ -45,19 +45,19 @@ interface LevelUpChain {
 }
 
 interface levelupOptions {
-    createIfMissing?: boolean; 
-    errorIfExists?: boolean; 
-    compression?: boolean; 
-    cacheSize?: number; 
-    keyEncoding?: string; 
-    valueEncoding?: string; 
+    createIfMissing?: boolean;
+    errorIfExists?: boolean;
+    compression?: boolean;
+    cacheSize?: number;
+    keyEncoding?: string;
+    valueEncoding?: string;
     db?: string
 }
 
 declare module "levelup" {
 
     function levelup(hostname: string, options?: levelupOptions): LevelUp;
-    
+
     export = levelup;
 }
 

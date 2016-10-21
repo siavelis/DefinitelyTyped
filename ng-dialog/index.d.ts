@@ -101,7 +101,7 @@ declare module 'angular' {
 			 * The function accepts a single optional parameter which is used as the value of the resolved promise.
 			 * @param {any} [value] - The value with which the promise will resolve
 			 */
-			confirm(value?:any) : void;
+			confirm(value?: any) : void;
 		}
 
 		interface IDialogOptions {

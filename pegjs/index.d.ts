@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare namespace PEG {
-	function parse(input:string):any;
+	function parse(input: string): any;
 
 	interface Location {
 		line: number;
@@ -22,10 +22,10 @@ declare namespace PEG {
 		column: number;
 		offset: number;
 		location: LocationRange;
-		expected:any[];
-		found:any;
-		name:string;
-		message:string;
+		expected: any[];
+		found: any;
+		name: string;
+		message: string;
 	}
 }
 
@@ -56,7 +56,7 @@ export interface ParserOptions {
 }
 
 export interface Parser {
-    parse(input: string, options?:ParserOptions): any;
+    parse(input: string, options?: ParserOptions): any;
 
     SyntaxError: any;
 }

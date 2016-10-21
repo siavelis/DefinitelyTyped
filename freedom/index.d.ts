@@ -7,7 +7,7 @@ declare namespace freedom {
     // Common on/emit for message passing interfaces.
     interface EventDispatchFn<T> { (eventType: string, value?: T): void; }
     interface EventHandlerFn<T> {
-        (eventType: string, handler: (eventData:T) => void): void;
+        (eventType: string, handler: (eventData: T) => void): void;
     }
 
     interface Error {
@@ -355,7 +355,7 @@ declare namespace freedom.TcpSocket {
         close(): Promise<void>;
         // TcpSockets have 3 types of events:
         on(type: 'onConnection', f: (i: ConnectInfo) => void): void;
-        on(type: 'onData', f: (i:ReadInfo) => void): void;
+        on(type: 'onData', f: (i: ReadInfo) => void): void;
         off(type: 'onData', f: (i: ReadInfo) => void): void;
         on(type: 'onDisconnect', f: (i: DisconnectInfo) => void): void;
         on(eventType: string, f: (i: Object) => void): void;

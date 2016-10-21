@@ -52,7 +52,7 @@ declare namespace olx {
         /*** Whether the control should start collapsed or not (expanded). Default to true.*/
         collapsed?: boolean;
         /*** Text label to use for the expanded overviewmap button. Default is «. Instead of text, also a Node (e.g. a span element) can be used.*/
-        collapseLabel? :string | Node;
+        collapseLabel? : string | Node;
         /*** Whether the control can be collapsed or not. Default to true.*/
         collapsible?: boolean;
         /*** Text label to use for the collapsed overviewmap button. Default is ». Instead of text, also a Node (e.g. a span element) can be used.*/

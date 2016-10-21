@@ -32,7 +32,7 @@ declare namespace oboe {
 
 		start(callback: (status: number, headers: Object) => void): Oboe;
 
-		abort():void;
+		abort(): void;
 
 		source: string;
 	}

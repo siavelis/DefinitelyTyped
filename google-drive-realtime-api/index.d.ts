@@ -17,7 +17,7 @@
 // gapi is a global var introduced by https://apis.google.com/js/api.js
 declare namespace gapi.drive.realtime {
 
-	type GoogEventHandler = ((evt:ObjectChangedEvent) => void) | ((e:Event) => void) | EventListener;
+	type GoogEventHandler = ((evt: ObjectChangedEvent) => void) | ((e: Event) => void) | EventListener;
 
 	// Complete
 	// https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime.Collaborator
@@ -51,36 +51,36 @@ declare namespace gapi.drive.realtime {
 		// use the permissionId property.
 		userId : string;
 
-		new (sessionId:string, userId:string, displayName:string, color:string, isMe:boolean, isAnonymous:boolean,
-		     photoUrl:string, permissionId:string) : Collaborator;
+		new (sessionId: string, userId: string, displayName: string, color: string, isMe: boolean, isAnonymous: boolean,
+		     photoUrl: string, permissionId: string) : Collaborator;
 	}
 
 	// Complete
 	// https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime.CollaborativeObject
 	export class CollaborativeObject {
 		// The id of this collaborative object. Read-only.
-		id:string;
+		id: string;
 
 		// The type of this collaborative object. For standard collaborative objects,
 		// see gapi.drive.realtime.CollaborrativeType for possible values; for custom collaborative objects, this value is
 		// application-defined.
 		// Addition: the possible values for standard objects are EditableString, List, and Map.
-		type:string;
+		type: string;
 
 		// Adds an event listener to the event target. The same handler can only be added once per the type.
 		// Even if you add the same handler multiple times using the same type then it will only be called once
 		// when the event is dispatched.
-		addEventListener(type:string, listener:GoogEventHandler, opt_capture?:boolean):void;
+		addEventListener(type: string, listener: GoogEventHandler, opt_capture?: boolean): void;
 
 		// Removes all event listeners from this object.
-		removeAllEventListeners():void;
+		removeAllEventListeners(): void;
 
 		// Removes an event listener from the event target. The handler must be the same object as the one added.
 		// If the handler has not been added then nothing is done.
-		removeEventListener(type:string, listener:GoogEventHandler, opt_capture?:boolean):void;
+		removeEventListener(type: string, listener: GoogEventHandler, opt_capture?: boolean): void;
 
 		// Returns a string representation of this collaborative object.
-		toString():string;
+		toString(): string;
 	}
 
 	// Complete
@@ -94,38 +94,38 @@ declare namespace gapi.drive.realtime {
 		};
 
 		//The index of the current location the reference points to. Write to this property to change the referenced index.
-		index:number;
+		index: number;
 
 		// The behavior of this index reference when the element it points at is deleted.
 		// @return one of the elements of DeleteMode
-		deleteMode():string;
+		deleteMode(): string;
 
 		// The object this reference points to. Read-only.
-		referencedObject():V;
+		referencedObject(): V;
 	}
 
 	// Complete
 	// https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime.CollaborativeMap
 	export class CollaborativeMap<V> extends CollaborativeObject {
-		size:string;
+		size: string;
 
-		static type:string; // equals "Map"
+		static type: string; // equals "Map"
 
 		// Removes all entries.
-		clear():void;
+		clear(): void;
 
 		// Removes the entry for the given key (if such an entry exists).
 		// @return the value that was mapped to this key, or null if there was no existing value.
-		delete(key:string):V;
+		delete(key: string): V;
 
 		// Returns the value mapped to the given key.
-		get(key:string):V;
+		get(key: string): V;
 
 		// Checks if this map contains an entry for the given key.
-		has(key:string):boolean;
+		has(key: string): boolean;
 
 		// Returns whether this map is empty.
-		isEmpty():boolean;
+		isEmpty(): boolean;
 
 		// Returns an array containing a copy of the items in this map. Modifications to the returned array do
 		// not modify this collaborative map.
@@ -134,48 +134,48 @@ declare namespace gapi.drive.realtime {
 
 		// Returns an array containing a copy of the keys in this map. Modifications to the returned array
 		// do not modify this collaborative map.
-		keys():string[];
+		keys(): string[];
 
 		// Put the value into the map with the given key, overwriting an existing value for that key.
 		// @return the old map value, if any, that used to be mapped to the given key.
-		set(key:string, value:V):V;
+		set(key: string, value: V): V;
 
 		// Returns an array containing a copy of the values in this map. Modifications to the returned array
 		// do not modify this collaborative map.
-		values():V[];
+		values(): V[];
 	}
 
 	// Complete
 	// https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime.CollaborativeString
 	export class CollaborativeString extends CollaborativeObject {
 		// The length of the string. Read only.
-		length:number;
+		length: number;
 
 		// The text of this collaborative string. Reading from this property is equivalent to calling getText(). Writing to this property is equivalent to calling setText().
-		text:string;
+		text: string;
 
-		static type:string; // equals "EditableString"
+		static type: string; // equals "EditableString"
 
 		// Appends a string to the end of this one.
-		append(text:string):void;
+		append(text: string): void;
 
 		// Gets a string representation of the collaborative string.
-		getText():string;
+		getText(): string;
 
 		// Inserts a string into the collaborative string at a specific index.
-		insertString(index:number, text:string):void;
+		insertString(index: number, text: string): void;
 
 		// Creates an IndexReference at the given {@code index}. If {@code canBeDeleted} is set, then a delete
 		// over the index will delete the reference. Otherwise the reference will shift to the beginning of the deleted range.
-		registerReference(index:number, canBeDeleted:boolean):IndexReference<CollaborativeString>;
+		registerReference(index: number, canBeDeleted: boolean): IndexReference<CollaborativeString>;
 
 		// Deletes the text between startIndex (inclusive) and endIndex (exclusive).
-		removeRange(startIndex:number, endIndex:number):void;
+		removeRange(startIndex: number, endIndex: number): void;
 
 		// Sets the contents of this collaborative string. Note that this method performs a text diff between the
 		// current string contents and the new contents so that the string will be modified using the minimum number
 		// of text inserts and deletes possible to change the current contents to the newly-specified contents.
-		setText(text:string):void;
+		setText(text: string): void;
 	}
 
 	// Complete
@@ -184,28 +184,28 @@ declare namespace gapi.drive.realtime {
 		// The number of entries in the list. Assign to this field to reduce the size of the list.
 		// Note that the length given must be less than or equal to the current size.
 		// The length of a list cannot be extended in this way.
-		length:number;
+		length: number;
 
-		static type:string; // equals "List"
+		static type: string; // equals "List"
 
 		// Returns a copy of the contents of this collaborative list as an array.
 		// Changes to the returned object will not affect the original collaborative list.
-		asArray():V[];
+		asArray(): V[];
 
 		// Removes all values from the list.
-		clear():void;
+		clear(): void;
 
 		// Gets the value at the given index.
-		get(ind:number):V;
+		get(ind: number): V;
 
 		//Returns the first index of the given value, or -1 if it cannot be found.
-		indexOf(value:V, opt_comparatorFn?:(x1:V, x2:V) => boolean):number;
+		indexOf(value: V, opt_comparatorFn?:(x1: V, x2: V) => boolean): number;
 
 		//Inserts an item into the list at a given index.
-		insert(index:number, value:V):void;
+		insert(index: number, value: V): void;
 
 		// Inserts a list of items into the list at a given index.
-		insertAll(index:number, values:V[]):void;
+		insertAll(index: number, values:V[]):void;
 
 		// Returns the last index of the given value, or -1 if it cannot be found.
 		lastIndexOf(value:V, opt_comparatorFn?:(x1:V, x2:V) => boolean):number;
@@ -435,7 +435,7 @@ declare namespace gapi.drive.realtime {
 		new (target:CollaborativeObject, sessionId:string, userId:string, compoundOperationNames:string[],
 		     isLocal:boolean, isUndo:boolean, isRedo:boolean, index:number,
 		     values:V[], movedFromList:CollaborativeList<V>, movedFromIndex:number):ValuesAddedEvent<V>;
-	
+
 		// The index of the first added value
 		index:number;
 
@@ -545,12 +545,12 @@ declare namespace gapi.drive.realtime {
 		opt_initializerFn? : (m:Model) => void,
 		opt_errorFn? : (e:gapi.drive.realtime.Error) => void
 	) : Document;
-	
+
 	/* Loads an existing file by id.
 	https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime#.load
-	
+
 	 @Param fileId {string}  Id of the file to load.
-	 
+
 	 @Param onLoaded {function(non-null gapi.drive.realtime.Document)}
 	 A callback that will be called when the realtime document is ready. The created or opened realtime document
 	 object will be passed to this function.

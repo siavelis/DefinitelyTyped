@@ -185,7 +185,7 @@ declare namespace jo {
     interface OrderBySettings extends ISettings {
         Property: string;
         Order: string;
-        DefaultProperty:string;
+        DefaultProperty: string;
         DefaultOrder: string;
     }
 

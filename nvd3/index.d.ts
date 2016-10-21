@@ -38,7 +38,7 @@ declare namespace nv {
     }
 
     interface SymbolMap {
-        set(name:string,func: (size: any)=>void): void
+        set(name: string,func: (size: any)=>void): void
     }
 
     interface Utils {
@@ -318,7 +318,7 @@ declare namespace nv {
         /*If true, masks lines within the X and Y scales using a clip-path*/
         clipEdge(value: boolean): this;
         close(): (d: any) => number;
-        close(func: (d:any) => number): this;
+        close(func: (d: any) => number): this;
         /*Colors to use for the different data. If an array is given, it is converted to a function automatically.*/
         color(value: string[]): this;
         /*Colors to use for the different data. If an array is given, it is converted to a function automatically.*/
@@ -959,7 +959,7 @@ id(value: number|string): this;
         /*pie/donut charts only: what kind of data to display for the slice labels. Options are key, value, or percent. */
         labelType(value: string): this;
         /*pie/donut charts only: what kind of data to display for the slice labels. Options are key, value, or percent. */
-        labelType(func: (d: any, i: number, values:any)=> string): this;
+        labelType(func: (d: any, i: number, values: any)=> string): this;
         /*Whether pie/donut chart labels should be outside the slices instead of inside them*/
         labelsOutside(): boolean;
         /*Whether pie/donut chart labels should be outside the slices instead of inside them*/
@@ -1209,7 +1209,7 @@ id(value: number|string): this;
         xTickFormat(format: (d: any, i: any) => string) : this;
         yTickFormat(format: (d: any) => string): this;
         yTickFormat(format: string): this;
-        yTickFormat(format: (d: any, i: any) => string) :this;
+        yTickFormat(format: (d: any, i: any) => string) : this;
     }
 
     interface StackedArea extends Scatter {
@@ -2890,7 +2890,7 @@ id(value: number|string): this;
         /*No longer used.Use chart.dispatch.changeState(...) instead*/
         defaultState(value: any): this;
         dimensionData(): any
-        dimensionData(d:any) : this
+        dimensionData(d: any) : this
         /*D3 format for each x axis*/
         dimensionFormats(): string[];
         /*D3 format for each x axis*/

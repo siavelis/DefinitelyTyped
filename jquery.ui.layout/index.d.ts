@@ -52,7 +52,7 @@ declare namespace JQueryUILayout {
         fxSettings?: JQueryAnimationOptions;
         initClosed?: boolean;
         initHidden?: boolean;
-        onshow_start?: string | { (name:string, pane:JQuery, state: PaneState, options: PaneOptions, layout_name: string): (boolean | void) };
+        onshow_start?: string | { (name: string, pane: JQuery, state: PaneState, options: PaneOptions, layout_name: string): (boolean | void) };
         onshow_end?: string | { (name: string, pane: JQuery, state: PaneState, options: PaneOptions, layout_name: string): void };
         onshow?: string | { (name: string, pane: JQuery, state: PaneState, options: PaneOptions, layout_name: string): void };
         onhide_start?: string | { (name: string, pane: JQuery, state: PaneState, options: PaneOptions, layout_name: string): (boolean | void) };

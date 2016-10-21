@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 interface JQuery {
-    gridstack (options: IGridstackOptions):GridStack
+    gridstack (options: IGridstackOptions): GridStack
 }
 
 interface GridStack {
@@ -24,24 +24,24 @@ interface GridStack {
     /**
     * Initializes batch updates. You will see no changes until commit method is called.
     */
-    batchUpdate():void
+    batchUpdate(): void
     /**
     * Gets current cell height.
     */
-    cellHeight():number
+    cellHeight(): number
     /**
     * Update current cell height. This method rebuilds an internal CSS style sheet. Note: You can expect performance issues if call this method too often.
     * @param {number} val the cell height
     */
-    cellHeight(val:number):void
+    cellHeight(val: number): void
     /**
     * Gets current cell width.
     */
-    cellWidth():number
+    cellWidth(): number
     /**
     * Finishes batch updates. Updates DOM nodes. You must call it after batchUpdate.
     */
-    commit():void
+    commit(): void
     /**
     * Destroys a grid instance.
     */
@@ -144,7 +144,7 @@ interface GridStack {
     * @param {number} height  new dimensions height. If value is null or undefined it will be ignored.
     * @param {boolean} autoPosition  if true then x, y parameters will be ignored and widget will be places on the first available position
     */
-    willItFit(x: number, y: number, width: number, height: number, autoPosition:boolean):boolean
+    willItFit(x: number, y: number, width: number, height: number, autoPosition: boolean): boolean
 
 
 }
@@ -153,14 +153,14 @@ interface GridStack {
 */
 interface MousePosition {
     top: number,
-    left:number,
+    left: number,
 }
 /**
 *   Defines the position of a cell inside the grid
 */
 interface CellPosition {
     x: number,
-    y:number
+    y: number
 }
 declare namespace GridStackUI {
     interface Utils {

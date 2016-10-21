@@ -38,13 +38,13 @@ declare namespace LobiboxModule {
 
         // events
         // when messagebox show is called but before it is actually shown
-        onShow?           (lobibox:any): void ;
+        onShow?           (lobibox: any): void ;
         // after messagebox is shown
-        shown?            (lobibox:any): void;
+        shown?            (lobibox: any): void;
         // when messagebox remove method is called but before it is actually hidden
-        beforeClose?      (lobibox:any): void;
+        beforeClose?      (lobibox: any): void;
         // after messagebox is hidden
-        closed?           (lobibox:any): void;
+        closed?           (lobibox: any): void;
     }
 
     interface MessageBoxesOptions extends MessageBoxesDefault {
@@ -83,7 +83,7 @@ declare namespace LobiboxModule {
                 closeOnClick?: boolean
             },
         }|any;
-        callback? (lobibox:any, type?:string, ev?: any): void;
+        callback? (lobibox: any, type?: string, ev?: any): void;
     }
     interface ConfirmOptions extends MessageBoxesOptions {
         title?           : string;
@@ -140,15 +140,15 @@ declare namespace LobiboxModule {
         params?          : {};  // Parameters which will be send by ajax for loading content
     }
     interface ProgressEvents {
-        progressUpdated? (lobibox:LobiboxStatic): void;
-        progressComplete? (lobibox:LobiboxStatic): void;
+        progressUpdated? (lobibox: LobiboxStatic): void;
+        progressComplete? (lobibox: LobiboxStatic): void;
     }
     interface PromptMethods {
-        setValue? (val?:string): PromptMethods;
+        setValue? (val?: string): PromptMethods;
         getValue? (): string;
     }
     interface ProgressMethods {
-        setProgress? (progress:number): ProgressMethods;
+        setProgress? (progress: number): ProgressMethods;
         getProgress? (): number;
     }
 
@@ -192,6 +192,6 @@ declare namespace LobiboxModule {
         confirm:    {<T extends MessageBoxesDefault>(options?: ConfirmOptions): T, DEFAULTS: ConfirmOptions};
         progress:   {<T extends MessageBoxesDefault>(options: ProgressOptions): T, DEFAULTS: ProgressOptions};
         window:     {<T extends MessageBoxesDefault>(options: WindowOptions): T, DEFAULTS: WindowOptions};
-        notify:     {<T extends NotifyDefault>(type: string, options?: NotifyOptions): T, DEFAULTS?: NotifyDefault,OPTIONS?:NotifyOptions};
+        notify:     {<T extends NotifyDefault>(type: string, options?: NotifyOptions): T, DEFAULTS?: NotifyDefault,OPTIONS?: NotifyOptions};
     }
 }

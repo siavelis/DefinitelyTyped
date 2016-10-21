@@ -9,7 +9,7 @@ declare namespace goog.appengine {
 		 * Create a channel object using the token returned by the createChannel() call on the server.
 		 * @param token {string}
 		 */
-		constructor(token:string);
+		constructor(token: string);
 
 		/**
 		 * Open a socket on this channel. open() returns a goog.appengine.Socket object.
@@ -22,7 +22,7 @@ declare namespace goog.appengine {
 		 * @param {Function} [handler]
 		 * @return {Socket}
 		 */
-		open(handler?:Function):Socket;
+		open(handler?: Function): Socket;
 	}
 
 	export class Socket {
@@ -30,7 +30,7 @@ declare namespace goog.appengine {
 		 * Close the socket.
 		 * The socket cannot be used again after calling close; the server must create a new socket.
 		 */
-		close():void;
+		close(): void;
 
 		/**
 		 * Set this to a function called when the socket is ready to receive messages.
@@ -44,14 +44,14 @@ declare namespace goog.appengine {
 		 * @param message
 		 * @param message.data
 		 */
-		onmessage:(message:any)=>void;
+		onmessage:(message: any)=>void;
 
 		/**
 		 * Set this property to a function called when an error occurs on the socket.
 		 * The function is passed one parameter: an error object.
 		 * The description field is a description of the error and the code field is an HTTP error code indicating the error.
 		 */
-		onerror:Function;
+		onerror: Function;
 
 		/**
 		 * Set this property to a function that called when the socket is closed.

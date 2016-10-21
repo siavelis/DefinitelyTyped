@@ -124,7 +124,7 @@ declare module "orientjs" {
             isValid?(input: string): boolean;
             isValid?(input: RID): boolean;
             isValid?(input: any): boolean;
-            toRid?(cluster: number, position: number):any;
+            toRid?(cluster: number, position: number): any;
         }
 
         interface Property {
@@ -388,7 +388,7 @@ declare module "orientjs" {
         }
 
         interface ServerConfig {
-            constructor(config?: any):ServerConfig;
+            constructor(config?: any): ServerConfig;
              useToken: boolean;
              host: string;
              port: number;

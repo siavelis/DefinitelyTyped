@@ -4,47 +4,47 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare namespace ECharts {
-    function init(dom:HTMLDivElement|HTMLCanvasElement, theme?:Object|string, opts?:{
+    function init(dom: HTMLDivElement|HTMLCanvasElement, theme?: Object|string, opts?:{
         devicePixelRatio?: number
         renderer?: string
-    }):ECharts;
+    }): ECharts;
 
-    function connect(group:string|Array<string>):void;
+    function connect(group: string|Array<string>): void;
 
-    function disConnect(group:string):void;
+    function disConnect(group: string): void;
 
-    function dispose(target:ECharts|HTMLDivElement|HTMLCanvasElement):void;
+    function dispose(target: ECharts|HTMLDivElement|HTMLCanvasElement): void;
 
-    function getInstanceByDom(target:HTMLDivElement|HTMLCanvasElement):void;
+    function getInstanceByDom(target: HTMLDivElement|HTMLCanvasElement): void;
 
-    function registerMap(mapName:string, geoJson:Object, specialAreas?:Object):void;
+    function registerMap(mapName: string, geoJson: Object, specialAreas?: Object): void;
 
-    function registerTheme(themeName:string, theme:Object):void;
+    function registerTheme(themeName: string, theme: Object): void;
 
     class ECharts {
-        group:string;
+        group: string;
 
-        setOption(option:EChartOption, notMerge?:boolean, notRefreshImmediately?:boolean):void
+        setOption(option: EChartOption, notMerge?: boolean, notRefreshImmediately?: boolean): void
 
-        getWidth():number
+        getWidth(): number
 
-        getHeight():number
+        getHeight(): number
 
-        getDom():HTMLCanvasElement|HTMLDivElement
+        getDom(): HTMLCanvasElement|HTMLDivElement
 
-        getOption():Object
+        getOption(): Object
 
-        resize():void
+        resize(): void
 
-        dispatchAction(payload:Object):void
+        dispatchAction(payload: Object): void
 
-        on(eventName:string, handler:Function, context?:Object):void
+        on(eventName: string, handler: Function, context?: Object): void
 
-        off(eventName:string, handler?:Function):void
+        off(eventName: string, handler?: Function): void
 
-        showLoading(type?:string, opts?:Object):void
+        showLoading(type?: string, opts?: Object): void
 
-        hideLoading():void
+        hideLoading(): void
 
         getDataURL(opts:{
             // 导出的格式，可选 png, jpeg
@@ -53,7 +53,7 @@ declare namespace ECharts {
             pixelRatio?: number,
             // 导出的图片背景色，默认使用 option 里的 backgroundColor
             backgroundColor?: string
-        }):string
+        }): string
 
         getConnectedDataURL(opts:{
             // 导出的格式，可选 png, jpeg
@@ -62,13 +62,13 @@ declare namespace ECharts {
             pixelRatio: number,
             // 导出的图片背景色，默认使用 option 里的 backgroundColor
             backgroundColor: string
-        }):string
+        }): string
 
-        clear():void
+        clear(): void
 
-        isDisposed():boolean
+        isDisposed(): boolean
 
-        dispose():void
+        dispose(): void
     }
 
     interface EChartOption {

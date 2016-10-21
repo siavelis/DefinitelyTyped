@@ -13,17 +13,17 @@ declare namespace FoundationSites {
 
     // http://foundation.zurb.com/sites/docs/abide.html#javascript-reference
     interface Abide {
-        requiredChecked(element:Object): boolean;
-        findFormError($el:Object): Object;
-        findLabel(element:Object): boolean;
-        addErrorClasses(element:Object): void;
-        removeErrorClasses(element:Object): void;
-        validateInput(element:Object, form:Object): void;
-        validateForm(element:Object): void;
-        validateText(element:Object): boolean;
-        validateRadio(group:string): boolean;
-        matchValidation($el:Object, validators:string, required:boolean): boolean;
-        resetForm($form:Object): void;
+        requiredChecked(element: Object): boolean;
+        findFormError($el: Object): Object;
+        findLabel(element: Object): boolean;
+        addErrorClasses(element: Object): void;
+        removeErrorClasses(element: Object): void;
+        validateInput(element: Object, form: Object): void;
+        validateForm(element: Object): void;
+        validateText(element: Object): boolean;
+        validateRadio(group: string): boolean;
+        matchValidation($el: Object, validators: string, required: boolean): boolean;
+        resetForm($form: Object): void;
         destroy(): void;
     }
 
@@ -53,14 +53,14 @@ declare namespace FoundationSites {
         formErrorSelector?: string;
         formErrorClass?: string;
         liveValidate?: boolean;
-        validators?:any;
+        validators?: any;
     }
 
     // http://foundation.zurb.com/sites/docs/accordion.html#javascript-reference
     interface Accordion {
-        toggle($target:JQuery): void;
-        down($target:JQuery, firstTime:boolean): void;
-        up($target:JQuery): void;
+        toggle($target: JQuery): void;
+        down($target: JQuery, firstTime: boolean): void;
+        up($target: JQuery): void;
         destroy(): void;
     }
 
@@ -73,9 +73,9 @@ declare namespace FoundationSites {
     // http://foundation.zurb.com/sites/docs/accordion-menu.html#javascript-reference
     interface AccordionMenu {
         hideAll(): void;
-        toggle($target:JQuery): void;
-        down($target:JQuery, firstTime:boolean): void;
-        up($target:JQuery): void;
+        toggle($target: JQuery): void;
+        down($target: JQuery, firstTime: boolean): void;
+        up($target: JQuery): void;
         destroy(): void;
     }
 
@@ -87,9 +87,9 @@ declare namespace FoundationSites {
     // http://foundation.zurb.com/sites/docs/drilldown-menu.html#javascript-reference
     interface Drilldown {
         _hideAll(): void;
-        _back($elem:JQuery): void;
-        _show($elem:JQuery): void;
-        _hide($elem:JQuery): void;
+        _back($elem: JQuery): void;
+        _show($elem: JQuery): void;
+        _hide($elem: JQuery): void;
         destroy(): void;
     }
 
@@ -132,7 +132,7 @@ declare namespace FoundationSites {
         clickOpen?: boolean;
         closingTime?: number;
         alignment?: string;
-        closeOnClick?:boolean;
+        closeOnClick?: boolean;
         verticalClass?: string;
         rightClass?: string;
         forceFollow?: boolean;
@@ -140,22 +140,22 @@ declare namespace FoundationSites {
 
     // http://foundation.zurb.com/sites/docs/equalizer.html#javascript-reference
     interface Equalizer {
-        getHeights(element:Object): Array<any>;
-        getHeightsByRow(cb:Function): void;
-        applyHeight(heights:Array<any>): void;
-        applyHeightByRow(groups:Array<any>):void;
+        getHeights(element: Object): Array<any>;
+        getHeightsByRow(cb: Function): void;
+        applyHeight(heights: Array<any>): void;
+        applyHeightByRow(groups: Array<any>): void;
         destroy(): void;
     }
 
     interface IEqualizerOptions {
         equalizeOnStack?: boolean;
         equalizeByRow?: boolean;
-        equalizeOn?:string;
+        equalizeOn?: string;
     }
 
     // http://foundation.zurb.com/sites/docs/interchange.html#javascript-reference
     interface Interchange {
-        replace(path:string): void;
+        replace(path: string): void;
         destroy(): void;
     }
 
@@ -181,10 +181,10 @@ declare namespace FoundationSites {
 
     // http://foundation.zurb.com/sites/docs/offcanvas.html#javascript-reference
     interface OffCanvas {
-        reveal(isRevealed:boolean): void;
-        open(event:Object, trigger:JQuery): void;
+        reveal(isRevealed: boolean): void;
+        open(event: Object, trigger: JQuery): void;
         close(): void;
-        toggle(event:Object, trigger:JQuery): void;
+        toggle(event: Object, trigger: JQuery): void;
         destroy(): void;
     }
 
@@ -202,7 +202,7 @@ declare namespace FoundationSites {
     // http://foundation.zurb.com/sites/docs/orbit.html#javascript-reference
     interface Orbit {
         geoSync(): void;
-        changeSlide(isLTR:boolean, chosenSlide?:Object, idx?:number): void;
+        changeSlide(isLTR: boolean, chosenSlide?: Object, idx?: number): void;
         destroy(): void;
     }
 

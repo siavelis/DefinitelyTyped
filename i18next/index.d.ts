@@ -133,6 +133,6 @@ declare namespace i18n {
     }
 }
 
-declare var i18n:i18n.I18n;
+declare var i18n: i18n.I18n;
 
 export = i18n;

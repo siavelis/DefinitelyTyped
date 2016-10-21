@@ -49,7 +49,7 @@ interface NodeRequireFunction {
 }
 
 interface NodeRequire extends NodeRequireFunction {
-    resolve(id:string): string;
+    resolve(id: string): string;
     cache: any;
     extensions: any;
     main: any;
@@ -149,7 +149,7 @@ declare var Buffer: {
      * @param byteOffset
      * @param length
      */
-    from(arrayBuffer: ArrayBuffer, byteOffset?: number, length?:number): Buffer;
+    from(arrayBuffer: ArrayBuffer, byteOffset?: number, length?: number): Buffer;
     /**
      * Copies the passed {buffer} data onto a new Buffer instance.
      *
@@ -334,7 +334,7 @@ declare namespace NodeJS {
                 visibility: string;
             };
         };
-        kill(pid:number, signal?: string|number): void;
+        kill(pid: number, signal?: string|number): void;
         pid: number;
         title: string;
         arch: string;
@@ -343,7 +343,7 @@ declare namespace NodeJS {
         nextTick(callback: Function): void;
         umask(mask?: number): number;
         uptime(): number;
-        hrtime(time?:number[]): number[];
+        hrtime(time?: number[]): number[];
         domain: Domain;
 
         // Worker
@@ -2099,7 +2099,7 @@ declare module "util" {
     export function isDate(object: any): boolean;
     export function isError(object: any): boolean;
     export function inherits(constructor: any, superConstructor: any): void;
-    export function debuglog(key:string): (msg:string,...param: any[])=>void;
+    export function debuglog(key: string): (msg: string,...param: any[])=>void;
 }
 
 declare module "assert" {

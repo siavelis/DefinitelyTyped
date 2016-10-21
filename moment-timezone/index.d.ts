@@ -60,8 +60,8 @@ declare module "moment" {
     interface Moment {
         tz(): string;
         tz(timezone: string): Moment;
-        zoneAbbr() :Moment;
-        zoneName() :Moment;
+        zoneAbbr() : Moment;
+        zoneName() : Moment;
     }
 
     const tz: MomentTimezone.MomentTimezone;

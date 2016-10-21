@@ -8,23 +8,23 @@
 declare namespace ngCordova {
 
     export interface IGeoPositionError {
-      code:number;
-      message:string;
+      code: number;
+      message: string;
     }
 
     export interface IGeoCoordinates {
-      latitude?:number;
-      longitude?:number;
-      accuracy?:number;
-      altitude?:number;
-      heading?:number;
-      speed?:number;
-      altitudeAccuracy?:number;
+      latitude?: number;
+      longitude?: number;
+      accuracy?: number;
+      altitude?: number;
+      heading?: number;
+      speed?: number;
+      altitudeAccuracy?: number;
     }
 
     export interface IGeoPosition {
-      coords:IGeoCoordinates;
-      timestamp:Date;
+      coords: IGeoCoordinates;
+      timestamp: Date;
     }
 
     export interface IGeolocationOptions {

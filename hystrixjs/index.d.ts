@@ -11,9 +11,9 @@ declare namespace HystrixJS {
      interface HystrixProperties {
         "hystrix.force.circuit.open"?: boolean,
         "hystrix.force.circuit.closed"?: boolean,
-        "hystrix.circuit.sleepWindowInMilliseconds"?:number,
+        "hystrix.circuit.sleepWindowInMilliseconds"?: number,
         "hystrix.circuit.errorThresholdPercentage"?: number,
-        "hystrix.circuit.volumeThreshold"?:number,
+        "hystrix.circuit.volumeThreshold"?: number,
         "hystrix.circuit.volumeThreshold.forceOverride"?: boolean,
         "hystrix.circuit.volumeThreshold.override"?: number,
         "hystrix.execution.timeoutInMilliseconds"?: number,

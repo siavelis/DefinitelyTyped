@@ -28,13 +28,13 @@ declare namespace com.fontoxml
 
 	export interface IWorkflowInfo
 	{
-		id:string;
-		displayName:string;
+		id: string;
+		displayName: string;
 	}
 
 	export interface IUserInfo extends IWorkflowInfo
 	{
-		roleId:string;
+		roleId: string;
 	}
 
 	//This is describes the object that is assigned to the MessageEvent.data

@@ -45,8 +45,8 @@ declare namespace maquette {
     afterUpdate?: (element: Element, projectionOptions: ProjectionOptions, vnodeSelector: string, properties: VNodeProperties,
       children: VNode[]) => void;
     key?: Object;
-    classes?: {[index:string]: boolean};
-    styles?: {[index:string]: string};
+    classes?: {[index: string]: boolean};
+    styles?: {[index: string]: string};
 
     // From Element
     ontouchcancel?: (ev?: TouchEvent) => boolean|void;
@@ -131,7 +131,7 @@ declare namespace maquette {
      */
   export function createMapping<Source, Target>(
     getSourceKey: (source: Source) => (string|number),
-    createResult: (source: Source, index:number) => Target,
+    createResult: (source: Source, index: number) => Target,
     updateResult: (source: Source, target: Target, index: number) => void): Mapping<Source, Target>;
 
     /**
@@ -220,7 +220,7 @@ declare namespace maquette {
          * These objects are assumed to be immutable primitive values.
          * @param {function} calculation - Function that takes zero arguments and returns an object (A {@link VNode} assumably) that can be cached.
          */
-    result(inputs: Array<Object>, calculation: () => Result):Result;
+    result(inputs: Array<Object>, calculation: () => Result): Result;
   }
 
   /**

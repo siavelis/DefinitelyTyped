@@ -75,7 +75,7 @@ declare namespace noUiSlider {
          * See manual formatting to the right for usage information.
          * By default, noUiSlider will format output with 2 decimals.
          */
-        format?: Object | ((...args:any[]) => any);
+        format?: Object | ((...args: any[]) => any);
 
         /**
          * Allows you to generate points along the slider.

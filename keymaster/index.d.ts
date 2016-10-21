@@ -39,7 +39,7 @@ interface Keymaster {
     command: boolean;
 
     setScope(scopeName: string): void;
-    getScope():string;
+    getScope(): string;
     deleteScope(scopeName: string): void;
 
     noConflict(): void;
