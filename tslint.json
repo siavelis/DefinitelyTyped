@@ -29,9 +29,11 @@
 		"no-var-requires": false,
 		"object-literal-sort-keys": false,
 		"one-line": false,
+		"ordered-imports": false,
+		"quotemark": false, //todo
 		"switch-default": false,
 		"trailing-comma": false,
-		"typedef": [true, "call-signature"],
+		"typedef": false, ///todo
 		"variable-name": false,
 		"whitespace": [true,
 			"check-branch",

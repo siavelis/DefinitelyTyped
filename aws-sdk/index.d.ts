@@ -20,7 +20,7 @@ export class EnvironmentCredentials extends Credentials {
     constructor(profile: string);
 }
 
-export module CognitoIdentity {
+export namespace CognitoIdentity {
     export interface CognitoIdentityCredentialsParams {
         IdentityPoolId?: string;
         AccountId?: string;
@@ -489,7 +489,7 @@ export declare module DynamoDB {
         ReturnConsumedCapacity?: "INDEXES" | "TOTAL" | "NONE";
     }
 
-    type _DDBDC_ComparisonOperator = "EQ" | "NE" | "IN" | "LE" | "LT" | "GE" | "GT" | "BETWEEN" | "NOT_NULL" | "NULL" | "CONTAINS" | "NOT_CONTAINS" | "BEGINS_WITH"
+    type _DDBDC_ComparisonOperator = "EQ" | "NE" | "IN" | "LE" | "LT" | "GE" | "GT" | "BETWEEN" | "NOT_NULL" | "NULL" | "CONTAINS" | "NOT_CONTAINS" | "BEGINS_WITH";
     type _DDBDC_Keys = { [someKey: string]: any };
     type _DDBDC_KeyComparison = {
         [someKey: string]: {
@@ -517,7 +517,7 @@ export declare module DynamoDB {
                 Exists: boolean;
           Value?: any;
             }
-        }
+        };
     }
 
     interface UpdateParam extends _DDBDC_Writer {
@@ -527,7 +527,7 @@ export declare module DynamoDB {
                 Action: "PUT" | "ADD" | "DELETE";
                 Value: any
             }
-        }
+        };
     }
 
     interface QueryParam extends _DDBDC_Reader {
@@ -579,7 +579,7 @@ export declare module DynamoDB {
 
 // ===========================================================
 
-export module CloudFormation {
+export namespace CloudFormation {
     export interface CancelUpdateStackParams {
         StackName: string;
     }
@@ -808,7 +808,7 @@ export declare module Lambda {
         FunctionName: string;
         StartingPosition: string; /* TRIM_HORIZON | LATEST */
         BatchSize?: number;
-        Enabled?: boolean
+        Enabled?: boolean;
     }
 
     export interface CreateFunctionParams {
@@ -817,7 +817,7 @@ export declare module Lambda {
             S3Key?: string;
             S3ObjectVersion?: string;
             ZipFile?: any; // new Buffer('...') || string;
-        },
+        };
         FunctionName: string;
         Handler: string;
         Role: string;
@@ -829,7 +829,7 @@ export declare module Lambda {
         VpcConfig?: {
             SecurityGroupIds?: string[];
             SubnetIds?: string[];
-        }
+        };
     }
 
     export interface DeleteAliasParams {
@@ -882,25 +882,25 @@ export declare module Lambda {
         FunctionName: string;
         FunctionVersion?: string;
         Marker?: string;
-        MaxItems?: number
+        MaxItems?: number;
     }
 
     export interface ListEventSourceMappingsParams {
         EventSourceArn?: string;
         FunctionName?: string;
         Marker?: string;
-        MaxItems?: number
+        MaxItems?: number;
     }
 
     export interface ListFunctionsParams {
         Marker?: string;
-        MaxItems?: number
+        MaxItems?: number;
     }
 
     export interface ListVersionsByFunctionParams {
         FunctionName: string;
         Marker?: string;
-        MaxItems?: number
+        MaxItems?: number;
     }
 
     export interface PublishVersionParams {
@@ -949,11 +949,11 @@ export declare module Lambda {
         VpcConfig?: {
             SecurityGroupIds?: string[];
             SubnetIds?: string[];
-        }
+        };
     }
 }
 
-export module AutoScaling {
+export namespace AutoScaling {
     export interface AutoScalingOptions {
         params?: any;
         endpoint?: string;
@@ -1301,7 +1301,7 @@ export module AutoScaling {
     }
 }
 
-export module SQS {
+export namespace SQS {
     export interface SqsOptions {
         params?: any;
         endpoint?: string;
@@ -1337,14 +1337,14 @@ export module SQS {
     }
 
     export interface ChangeMessageVisibilityParams {
-        QueueUrl: string,
-        ReceiptHandle: string,
-        VisibilityTimeout: number
+        QueueUrl: string;
+        ReceiptHandle: string;
+        VisibilityTimeout: number;
     }
 
     export interface ChangeMessageVisibilityBatchParams {
-        QueueUrl: string,
-        Entries: { Id: string; ReceiptHandle: string; VisibilityTimeout?: number; }[]
+        QueueUrl: string;
+        Entries: { Id: string; ReceiptHandle: string; VisibilityTimeout?: number; }[];
     }
 
     export interface ChangeMessageVisibilityBatchResponse {
@@ -2445,7 +2445,7 @@ export declare module ecs {
     }
 }
 
-export module sts {
+export namespace sts {
     export interface AssumeRoleParams {
         RoleArn: string;
         RoleSessionName: string;
