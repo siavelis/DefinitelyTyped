@@ -173,7 +173,7 @@ declare namespace Backbone {
         has(attribute: string): boolean;
         hasChanged(attribute?: string): boolean;
         isNew(): boolean;
-        isValid(options?:any): boolean;
+        isValid(options?: any): boolean;
         previous(attribute: string): any;
         previousAttributes(): any[];
         save(attributes?: any, options?: ModelSaveOptions): any;
@@ -206,7 +206,7 @@ declare namespace Backbone {
         **/
         private static extend(properties: any, classProperties?: any): any;
 
-        model: new (...args:any[]) => TModel;
+        model: new (...args: any[]) => TModel;
         models: TModel[];
         length: number;
 

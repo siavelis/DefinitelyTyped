@@ -23,8 +23,8 @@ declare module commangular {
 		 * 				It has to be something that implements ICommand. Same as angular syntax
          * @param commandConfig It's and object with paramaters to configure the command execution.
          */
-		create (commandName: string, commandFunction: Function, commandConfig?:ICommandConfig) : void;
-		command (commandName: string, commandFunction: Function, commandConfig?:ICommandConfig) : void;
+		create (commandName: string, commandFunction: Function, commandConfig?: ICommandConfig) : void;
+		command (commandName: string, commandFunction: Function, commandConfig?: ICommandConfig) : void;
 
 		/**
 		 * This function allows you to hijack the execution before or after and

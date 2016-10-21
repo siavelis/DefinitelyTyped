@@ -1354,13 +1354,13 @@ interface ZeptoCollection {
 	**/
 	on(type: string, fn: (e: Event) => boolean): ZeptoCollection;
 	// todo: v0.9 will introduce string literals
-	//on(type: 'ajaxStart', fn: ZeptoAjaxStartEvent): ZeptoCollection;
-	//on(type: 'ajaxBeforeSend', fn: ZeptoAjaxBeforeSendEvent): ZeptoCollection;
-	//on(type: 'ajaxSend', fn: ZeptoAjaxSendEvent): ZeptoCollection;
-	//on(type: 'ajaxSuccess', fn: ZeptoAjaxSuccessEvent): ZeptoCollection;
-	//on(type: 'ajaxError', fn: ZeptoAjaxErrorEvent): ZeptoCollection;
-	//on(type: 'ajaxComplete', fn: ZeptoAjaxCompleteEvent): ZeptoCollection;
-	//on(type: 'ajaxStop', fn: ZeptoAjaxStopEvent): ZeptoCollection;
+	// on(type: 'ajaxStart', fn: ZeptoAjaxStartEvent): ZeptoCollection;
+	// on(type: 'ajaxBeforeSend', fn: ZeptoAjaxBeforeSendEvent): ZeptoCollection;
+	// on(type: 'ajaxSend', fn: ZeptoAjaxSendEvent): ZeptoCollection;
+	// on(type: 'ajaxSuccess', fn: ZeptoAjaxSuccessEvent): ZeptoCollection;
+	// on(type: 'ajaxError', fn: ZeptoAjaxErrorEvent): ZeptoCollection;
+	// on(type: 'ajaxComplete', fn: ZeptoAjaxCompleteEvent): ZeptoCollection;
+	// on(type: 'ajaxStop', fn: ZeptoAjaxStopEvent): ZeptoCollection;
 
 	/**
 	* @see ZeptoCollection.on

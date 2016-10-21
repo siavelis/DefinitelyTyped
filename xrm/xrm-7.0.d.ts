@@ -135,7 +135,7 @@ declare namespace Xrm
     /**
      *  A definition module for asynchronous interface declarations.
      */
-    export module Async
+    export namespace Async
     {
         /**
          * Called when the operation is successful.
@@ -168,7 +168,7 @@ declare namespace Xrm
     /**
      * A definition module for collection interface declarations.
      */
-    export module Collection
+    export namespace Collection
     {
         /**
          * Interface for a matching delegate.
@@ -268,7 +268,7 @@ declare namespace Xrm
      *
      * @see {@link http://msdn.microsoft.com/en-us/library/gg328255.aspx|Documentation} for details.
      */
-    export module Page
+    export namespace Page
     {
         /**
          * Enumeration of entity form states/types.
@@ -1161,7 +1161,7 @@ declare namespace Xrm
         /**
          * Module for the Xrm.Page.data API.
          */
-        export module data
+        export namespace data
         {
             /**
              * Interface for the Xrm.Page.data.process API.
@@ -1754,7 +1754,7 @@ declare namespace Xrm
         /**
          * Module for Xrm.Page.ui API.
          */
-        export module ui
+        export namespace ui
         {
             /**
              * Interface for Xrm.Page.ui.process API
@@ -2086,7 +2086,7 @@ declare namespace Xrm
      *
      * @see {@link http://msdn.microsoft.com/en-us/library/gg328483.aspx} for details.
      */
-    export module Url
+    export namespace Url
     {
         /**
          * An enumeration for view types.
@@ -2249,7 +2249,7 @@ declare namespace Xrm
      *
      * @see {@link http://msdn.microsoft.com/en-us/library/gg328255.aspx|Documentation} for details.
      */
-    export module Utility
+    export namespace Utility
     {
         export interface OpenParameters
         {

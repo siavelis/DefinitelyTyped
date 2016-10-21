@@ -101,12 +101,12 @@ declare namespace axe {
 	}
 	export interface AxePlugin {
 		id: string,
-		run(...args:any[]): any,
+		run(...args: any[]): any,
 		commands: {
 			id: string,
-			callback(...args:any[]): void
+			callback(...args: any[]): void
 		}[],
-		cleanup?(callback:Function): void
+		cleanup?(callback: Function): void
 	}
 
 	export let plugins: any
@@ -119,7 +119,7 @@ declare namespace axe {
 	 * @param  {Function} callback The function to invoke when analysis is complete.
 	 * @returns {Object}  results  The aXe results object
 	 */
-	export function a11yCheck(context: ElementContext, options: {runOnly?: RunOnly, rules?: Object}, callback: (results:AxeResults) => void): AxeResults
+	export function a11yCheck(context: ElementContext, options: {runOnly?: RunOnly, rules?: Object}, callback: (results: AxeResults) => void): AxeResults
 
 	/**
 	 * Method for configuring the data format used by aXe. Helpful for adding new

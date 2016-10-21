@@ -14,9 +14,9 @@ declare namespace AceAjax {
 
     export interface EditorCommand {
 
-        name:string;
+        name: string;
 
-        bindKey:any;
+        bindKey: any;
 
         exec: Function;
 
@@ -31,9 +31,9 @@ declare namespace AceAjax {
 
         platform: string;
 
-        addCommands(commands:EditorCommand[]): void;
+        addCommands(commands: EditorCommand[]): void;
 
-        addCommand(command:EditorCommand): void;
+        addCommand(command: EditorCommand): void;
 
         exec(name: string, editor: Editor, args: any): void;
     }
@@ -1063,7 +1063,7 @@ declare namespace AceAjax {
 
         onChangeMode(e?: any): void;
 
-        execCommand(command:string, args?: any): void;
+        execCommand(command: string, args?: any): void;
 
         /**
          * Sets a Configuration Option
@@ -1078,17 +1078,17 @@ declare namespace AceAjax {
         /**
          * Get a Configuration Option
          **/
-        getOption(name: any):any;
+        getOption(name: any): any;
 
         /**
          * Get Configuration Options
          **/
-        getOptions():any;
+        getOptions(): any;
 
         /**
          * Get rid of console warning by setting this to Infinity
          **/
-        $blockScrolling:number;
+        $blockScrolling: number;
 
         /**
          * Sets a new key handler, such as "vim" or "windows".
@@ -1841,13 +1841,13 @@ declare namespace AceAjax {
     **/
     export interface Range {
 
-        startRow:number;
+        startRow: number;
 
-        startColumn:number;
+        startColumn: number;
 
-        endRow:number;
+        endRow: number;
 
-        endColumn:number;
+        endColumn: number;
 
         start: Position;
 

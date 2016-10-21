@@ -31,11 +31,11 @@ declare namespace Microsoft {
         }
 
         interface Promise {
-            then(doneCallBack: () => any, failCallBack?: (message: string) => any):any;
+            then(doneCallBack: () => any, failCallBack?: (message: string) => any): any;
         }
 
         interface PromiseTokenCacheItems {
-            then(doneCallBack: (tokenCacheItems: TokenCacheItem[]) => any, failCallBack?: (message: string) => any):any;
+            then(doneCallBack: (tokenCacheItems: TokenCacheItem[]) => any, failCallBack?: (message: string) => any): any;
         }
 
         class TokenCache {
@@ -85,11 +85,11 @@ declare namespace Microsoft {
         }
 
         interface PromiseAuthenticationResult {
-            then(doneCallBack: (context: AuthenticationResult) => any, failCallBack?: (message: string) => any):any;
+            then(doneCallBack: (context: AuthenticationResult) => any, failCallBack?: (message: string) => any): any;
         }
 
         interface PromiseAuthenticationContext {
-            then(doneCallBack: (context: AuthenticationContext) => any, failCallBack?: (message: string) => any):any;
+            then(doneCallBack: (context: AuthenticationContext) => any, failCallBack?: (message: string) => any): any;
         }
 
         class AuthenticationContext {

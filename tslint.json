@@ -1,0 +1,46 @@
+{
+	"extends": "tslint:latest",
+	"rules": {
+		"adjacent-overload-signatures": false, //todo
+		"align": false, //todo
+        "semicolon": true,
+		"only-arrow-functions": false, //This was activating for `declare function socket(type: string, options?: any): Socket;`
+		"class-name": false, //todo
+		"comment-format": false, //todo
+		"curly": false,
+		"eofline": false, //todo
+		"indent": false, //[true, "tabs"],
+		"interface-name": false,
+		"jsdoc-format": false,
+		"max-line-length": false, //todo
+		"member-access": false,
+		"member-ordering": false,
+		"no-bitwise": false,
+		"no-consecutive-blank-lines": false, //todo
+		"no-console": false,
+		"no-construct": false,
+		"no-empty": false,
+		"no-namespace": false,
+		"no-reference": false,
+		"no-shadowed-variable": false,
+		"no-string-literal": false,
+		"no-unused-variable": false,
+		"no-var-keyword": false, //todo
+		"no-var-requires": false,
+		"object-literal-sort-keys": false,
+		"one-line": false,
+		"switch-default": false,
+		"trailing-comma": false,
+		"typedef": [true, "call-signature"],
+		"variable-name": false,
+		"whitespace": [true,
+			"check-branch",
+			"check-decl",
+			"check-operator",
+			"check-module",
+			"check-separator",
+			"check-type",
+			"check-typecast"
+		]
+	}
+}

@@ -125,7 +125,7 @@ declare namespace Xrm
              * @return  An array of control.
              */
             getControl( delegateFunction: Collection.MatchingDelegate<Page.Control> ): Page.Control[];
-        }
+        };
 
         /**
          * Provides a container for useful functions not directly related to the current page.
@@ -207,7 +207,7 @@ declare namespace Xrm
              *                                              formid
              */
             openWebResource( webResourceName: string, webResourceData?: string, width?: number, height?: number ): Window;
-        }
+        };
     }
 
     /**
@@ -482,7 +482,7 @@ declare namespace Xrm
     /**
      *  A definition module for asynchronous interface declarations.
      */
-    export module Async
+    export namespace Async
     {
         /**
          * Called when the operation is successful.
@@ -515,7 +515,7 @@ declare namespace Xrm
     /**
      * A definition module for collection interface declarations.
      */
-    export module Collection
+    export namespace Collection
     {
         /**
          * Interface for a matching delegate.
@@ -615,7 +615,7 @@ declare namespace Xrm
      *
      * @see {@link http://msdn.microsoft.com/en-us/library/gg328255.aspx|Documentation} for details.
      */
-    export module Page
+    export namespace Page
     {
         /**
          * Requirement Level for Xrm.Page.Attribute.getRequiredLevel() and Xrm.Page.Attribute.setRequiredLevel().
@@ -1424,7 +1424,7 @@ declare namespace Xrm
         /**
          * Module for the Xrm.Page.data API.
          */
-        export module data
+        export namespace data
         {
             /**
              * Interface for the Xrm.Page.data.process API.
@@ -1477,11 +1477,11 @@ declare namespace Xrm
                  * Use this method to asynchronously retrieve the enabled business process flows that the user can switch to for an
                  * entity.
                  *
-                 * @param   {Function} callbackFunction The callback function must accept a parameter that contains an object with 
+                 * @param   {Function} callbackFunction The callback function must accept a parameter that contains an object with
                  *                                      dictionary properties where the name of the property is the Id of the
                  *                                      business process flow and the value of the property is the name of the
                  *                                      business process flow.
-                 *                                      
+                 *
                  *                                      The enabled processes are filtered according to the user’s privileges. The
                  *                                      list of enabled processes is the same ones a user can see in the UI if they
                  *                                      want to change the process manually.
@@ -1501,7 +1501,7 @@ declare namespace Xrm
                  * @param   {ContextSensitiveHandler}   handler The function will be added to the bottom of the event
                  *                                              handler pipeline. The execution context is automatically
                  *                                              set to be the first parameter passed to the event handler.
-                 * 
+                 *
                  *                                              Use a reference to a named function rather than an
                  *                                              anonymous function if you may later want to remove the
                  *                                              event handler.
@@ -1515,7 +1515,7 @@ declare namespace Xrm
                  * @param   {ContextSensitiveHandler}   handler The function will be added to the bottom of the event
                  *                                              handler pipeline. The execution context is automatically
                  *                                              set to be the first parameter passed to the event handler.
-                 * 
+                 *
                  *                                              Use a reference to a named function rather than an
                  *                                              anonymous function if you may later want to remove the
                  *                                              event handler.
@@ -2054,7 +2054,7 @@ declare namespace Xrm
         /**
          * Module for Xrm.Page.ui API.
          */
-        export module ui
+        export namespace ui
         {
             /**
              * Form Notification Levels for Xrm.Ui.setFormNotification().
@@ -2300,7 +2300,7 @@ declare namespace Xrm
      *
      * @see {@link http://msdn.microsoft.com/en-us/library/gg328483.aspx} for details.
      */
-    export module Url
+    export namespace Url
     {
         /**
          * Command Bar Display options for Xrm.Url.FormOpenParameters.cmdbar, Xrm.Url.ViewOpenParameters.cmdbar, and Xrm.Utility.FormOpenParameters.cmdbar.
@@ -2467,7 +2467,7 @@ declare namespace Xrm
      *
      * @see {@link http://msdn.microsoft.com/en-us/library/gg328255.aspx|Documentation} for details.
      */
-    export module Utility
+    export namespace Utility
     {
         export interface OpenParameters
         {

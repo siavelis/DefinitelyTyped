@@ -26,7 +26,7 @@ interface Cordova {
     /** Access a Cordova module by name. */
     require(moduleName: string): any;
     /** Namespace for Cordova plugin functionality */
-    plugins:CordovaPlugins;
+    plugins: CordovaPlugins;
 }
 
 interface CordovaPlugins {}
@@ -59,7 +59,7 @@ interface Document {
 }
 
 interface Window {
-  cordova:Cordova;
+  cordova: Cordova;
 }
 
 // cordova/argscheck module

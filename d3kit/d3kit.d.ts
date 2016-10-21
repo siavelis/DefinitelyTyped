@@ -55,7 +55,7 @@ declare namespace d3kit {
         dimension(): [number, number];
         dimension(dimension: [number|string, number|string], doNotDispatch?: boolean): Skeleton;
         autoResize(mode?: string|boolean): string|boolean|void;
-        autoResizeDetection(method?:string): string|void;
+        autoResizeDetection(method?: string): string|void;
         autoResizeToAspectRatio(ratio?: number|boolean): number|boolean|void;
 
         // Other functions

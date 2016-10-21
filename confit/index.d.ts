@@ -5,7 +5,7 @@
 
 declare module "confit" {
   interface ProtocolsSetPrivate {
-    [protocol:string] : (value:any, callback?:any) => void
+    [protocol: string] : (value: any, callback?: any) => void
   }
 
   interface ConfigStore {
