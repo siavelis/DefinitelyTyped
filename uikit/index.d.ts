@@ -64,20 +64,20 @@ declare namespace UIkit {
          * Create a alert dialog
          * @param  {string} message The message to display. Can be Html
          */
-        alert(message:string): void
+        alert(message: string): void
         /**
          * Create a confirm dialog and execute the function on positive confirmation
          * @param  {string} message The message to display. Can be Html
          * @param  {function}      fn      A function to execute on confirmation
          */
-        confirm(message:string, fn:() => any): void
+        confirm(message: string, fn:() => any): void
         /**
          * Create a prompt dialog, where the user enter information
          * @param  {string} message The message to display. Can be Html
          * @param  {function} fn  A function to execute on confirmation. The function
          * receive the new value as a parameter
          */
-        prompt(message:string, fn:(newValue:string) => any): void
+        prompt(message: string, fn:(newValue: string) => any): void
         /**
          * Create a prompt dialog, where the user enter information
          * @param  {string} message The message to display. Can be Html
@@ -85,12 +85,12 @@ declare namespace UIkit {
          * @param  {function} fn  A function to execute on confirmation. The function
          * receive the new value as a parameter
          */
-        prompt(message:string, value:string, fn:(newValue:string) => any): void
+        prompt(message: string, value: string, fn:(newValue: string) => any): void
         /**
          * Create a modal that blocks the entire page
          * @param {string} content A content to display. Can be Html
          */
-        blockUI(content:string): ModalElement
+        blockUI(content: string): ModalElement
         /**
          * Select a modal element on page and return it.
          * @example
@@ -104,7 +104,7 @@ declare namespace UIkit {
 	     * }
          * </code></pre>
          */
-        (selector:string|JQuery): ModalElement
+        (selector: string|JQuery): ModalElement
     }
     /**
      * Create a smooth off-canvas sidebar that slides in and out of the page
@@ -133,14 +133,14 @@ declare namespace UIkit {
          * Show an off-canvas matching the passed CSS selector
          * @param  {string} selector A CSS selector
          */
-        show(selector:string): void
+        show(selector: string): void
         /**
          * Hide any active offcanvas. Set force to true, if you don't want any
          * animation
          * @param  {boolean} force When seted to true do not run animations.
          * @default false
          */
-        hide(force?:boolean): void
+        hide(force?: boolean): void
     }
     interface LightBoxOptions {
         /**
@@ -192,11 +192,11 @@ declare namespace UIkit {
          * @param  {Array<LightBoxItem>} items Group of items on the lightbox
          * @return {LightBoxElement}           The lightbox element to show
          */
-        create(items:Array<LightBoxItem>): LightBoxElement
+        create(items: Array<LightBoxItem>): LightBoxElement
         /**
          * Init element manually
          */
-        (element:string|JQuery, options?:LightBoxOptions): LightBoxElement
+        (element: string|JQuery, options?: LightBoxOptions): LightBoxElement
 
     }
     type CallbackAutoComplete = () => string
@@ -250,7 +250,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options?:AutoCompleteOptions): any
+        (element: string|JQuery, options?: AutoCompleteOptions): any
     }
     interface DatePickerOptions {
         /**
@@ -331,7 +331,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options?:DatePickerOptions): any
+        (element: string|JQuery, options?: DatePickerOptions): any
     }
     interface HtmlEditorOptions {
         /**
@@ -433,7 +433,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options?:SliderOptions): any
+        (element: string|JQuery, options?: SliderOptions): any
     }
     interface SlideSetOptions {
         /**
@@ -520,7 +520,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options?:SlideSetOptions): any
+        (element: string|JQuery, options?: SlideSetOptions): any
     }
     interface SlideShowOptions {
         /**
@@ -619,7 +619,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options:SlideShowOptions): any
+        (element: string|JQuery, options: SlideShowOptions): any
     }
     interface ParallaxOptions {
 
@@ -659,7 +659,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options:ParallaxOptions): any
+        (element: string|JQuery, options: ParallaxOptions): any
     }
     interface AccordionOptions {
         /**
@@ -742,7 +742,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options:AccordionOptions): any
+        (element: string|JQuery, options: AccordionOptions): any
     }
 
     interface NotifyOptions {
@@ -785,24 +785,24 @@ declare namespace UIkit {
          * Show a message with default options
          * @param message The html message
          */
-        (message:string): any
+        (message: string): any
         /**
          * Show a message with a different status
          * @param message The html message
          * @param status The string status
          */
-        (message:string, status:string): any
+        (message: string, status: string): any
         /**
          * Show a message with diferente options
          * @param message The html message
          * @param options Options
          */
-        (message:string, options:NotifyOptions): any
+        (message: string, options: NotifyOptions): any
         /**
          * Show a message with diferent options
          * @param options Options
          */
-        (options:NotifyOptions): any
+        (options: NotifyOptions): any
     }
     interface SearchOptions {
         /**
@@ -848,7 +848,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options:SearchOptions): any
+        (element: string|JQuery, options: SearchOptions): any
     }
     interface NestableOptions {
         /**
@@ -1004,7 +1004,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options:NestableOptions): any
+        (element: string|JQuery, options: NestableOptions): any
     }
     interface SortableOptions {
         /**
@@ -1082,7 +1082,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options:SortableOptions): any
+        (element: string|JQuery, options: SortableOptions): any
     }
     interface StickyOptions {
         /**
@@ -1185,7 +1185,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options:StickyOptions): any
+        (element: string|JQuery, options: StickyOptions): any
     }
     interface TimepickerOptions {
         /**
@@ -1221,7 +1221,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options:TimepickerOptions): any
+        (element: string|JQuery, options: TimepickerOptions): any
     }
     interface TooltipOptions {
         /**
@@ -1278,7 +1278,7 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options:TooltipOptions): any
+        (element: string|JQuery, options: TooltipOptions): any
     }
     interface UploadOptions {
         /**
@@ -1414,26 +1414,26 @@ declare namespace UIkit {
          * @param element
          * @param options
          */
-        (element:string|JQuery, options:UploadOptions): any
+        (element: string|JQuery, options: UploadOptions): any
     }
-    export var modal:Modal;
-    export var lightbox:LightBox;
-    export var offcanvas:OffCanvas;
-    export var autocomplete:AutoComplete;
-    export var datepicker:DatePicker;
-    export var htmleditor:HtmlEditor;
-    export var slider:Slider;
-    export var slideset:SlideSet;
-    export var slideshow:SlideShow;
-    export var parallax:Parallax;
-    export var accordion:Accordion;
-    export var notify:Notify;
-    export var search:Search;
-    export var nestable:Nestable;
-    export var sortable:Sortable;
-    export var sticky:Sticky;
-    export var timepicker:Timepicker;
-    export var tooltip:Tooltip;
+    export var modal: Modal;
+    export var lightbox: LightBox;
+    export var offcanvas: OffCanvas;
+    export var autocomplete: AutoComplete;
+    export var datepicker: DatePicker;
+    export var htmleditor: HtmlEditor;
+    export var slider: Slider;
+    export var slideset: SlideSet;
+    export var slideshow: SlideShow;
+    export var parallax: Parallax;
+    export var accordion: Accordion;
+    export var notify: Notify;
+    export var search: Search;
+    export var nestable: Nestable;
+    export var sortable: Sortable;
+    export var sticky: Sticky;
+    export var timepicker: Timepicker;
+    export var tooltip: Tooltip;
     export var uploadSelect: Upload;
     export var uploadDrop: Upload;
 }

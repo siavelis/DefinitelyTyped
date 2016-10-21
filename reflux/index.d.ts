@@ -16,7 +16,7 @@ declare module  RefluxCore {
     }
 
     interface ListenFn {
-        (...params: any[]):any,
+        (...params: any[]): any,
         completed: Function,
         failed: Function
     }
@@ -37,12 +37,12 @@ declare module  RefluxCore {
         stopListeningTo(listenable: Listenable): boolean,
         stopListeningToAll(): void,
         fetchInitialState(listenable: Listenable, defaultCallback: Function): void,
-        trigger(state: any):void;
+        trigger(state: any): void;
         listen(callback: Function, bindContext: any): Function;
     }
 
     interface ActionsDefinition {
-        [index: string]:any
+        [index: string]: any
     }
 
     interface Actions {
@@ -56,9 +56,9 @@ declare module  RefluxCore {
     function createActions(definition: ActionsDefinition): any;
     function createActions(definitions: string[]): any;
 
-    function connect(store: Store, key?: string):void;
-    function listenTo(store: Store, handler: string):void;
-    function setState(state: any):void;
+    function connect(store: Store, key?: string): void;
+    function listenTo(store: Store, handler: string): void;
+    function setState(state: any): void;
 
     function ListenerMixin(): any;
 }

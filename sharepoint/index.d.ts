@@ -11,7 +11,7 @@ declare var _spBodyOnLoadCalled: boolean;
 declare function ExecuteOrDelayUntilBodyLoaded(initFunc: () => void): void;
 declare function ExecuteOrDelayUntilScriptLoaded(func: () => void, depScriptFileName: string): boolean;
 declare function ExecuteOrDelayUntilEventNotified(func: Function, eventName: string): boolean;
-declare var Strings:any;
+declare var Strings: any;
 
 declare namespace SP {
     export class SOD {
@@ -11216,40 +11216,40 @@ declare namespace Srch
 {
     export enum EventType
     {
-        none, 
-        queryReady, 
-        queryIssuing, 
-        batchQueryIssuing, 
-        resultReady, 
-        batchResultReady, 
-        queryStateChanged, 
-        resultRendered, 
-        preLoad, 
-        load, 
+        none,
+        queryReady,
+        queryIssuing,
+        batchQueryIssuing,
+        resultReady,
+        batchResultReady,
+        queryStateChanged,
+        resultRendered,
+        preLoad,
+        load,
         postLoad
     }
 
     export enum MessageLevel
     {
-        information, 
-        warning, 
-        error        
+        information,
+        warning,
+        error
     }
 
     export enum UserActionType
     {
-        search, 
-        pageNext, 
-        pagePrev, 
-        refine, 
-        sort, 
+        search,
+        pageNext,
+        pagePrev,
+        refine,
+        sort,
         filterLanguage
     }
 
     export enum DateTimeKind
     {
-        unspecified, 
-        utc, 
+        unspecified,
+        utc,
         local
     }
 
@@ -11274,7 +11274,7 @@ declare namespace Srch
         /** If set to true, control will load scripts defined by the serverTemplateScriptsToLoad field after control load. True by default. */
         set_delayLoadTemplateScripts(value: boolean): boolean;
         get_states(): any;
-        set_states(value: any): any; 
+        set_states(value: any): any;
         get_messages(): any[];
         set_messages(value: any[]): any[];
         get_showDataErrors(): boolean;
@@ -11482,7 +11482,7 @@ declare namespace Srch
         /** Save expanded state of the specified filter to cookie */
         static setExpanded(filterName: string, value: string): void;
         static multiRefinerSpecifyOtherFilterValue(refinerName: string, clientControl: Refinement, useContains: boolean, useKQL: boolean): void;
-        
+
         constructor(elem: Element);
 
         get_selectedRefinementControls(): RefinementControl[];
@@ -11491,7 +11491,7 @@ declare namespace Srch
         set_useManagedNavigationRefiners(value: boolean): boolean;
         get_emptyRefinementMessageId(): string;
         set_emptyRefinementMessageId(value: string): string;
-        
+
         scriptApplication_PreLoad(sender: any, e: any): void;
         render(): void;
         addRefinementFilter(filterName: string, filterToken: any): void;
@@ -11622,7 +11622,7 @@ declare namespace Srch
 
         get_queryGroupNames(): string[];
         set_queryGroupNames(value: any): string[];
-        
+
         /** Gets the results page address, e.g. '~site/_layouts/15/osssearchresults.aspx?u={contexturl}' */
         get_resultsPageAddress(): string;
         /** Sets the results page address, e.g. '~site/_layouts/15/osssearchresults.aspx?u={contexturl}'
@@ -11630,19 +11630,19 @@ declare namespace Srch
           * e.g. specified site are returned. Omit this parameter if you want to search everywhere.
           */
         set_resultsPageAddress(value: string): string;
-        
+
         get_showAdvancedLink(): boolean;
         set_showAdvancedLink(value: boolean): boolean;
-        
+
         get_showQuerySuggestions(): boolean;
         set_showQuerySuggestions(value: boolean): boolean;
-        
+
         get_showNavigation(): boolean;
         set_showNavigation(value: boolean): boolean;
-        
+
         get_showPeopleNameSuggestions(): boolean;
         set_showPeopleNameSuggestions(value: boolean): boolean;
-        
+
         /** Gets the interval in milliseconds, if user is idle during this interval, suggestions retrieval will be initiated.
          * Default value is 250.
          */
@@ -11651,57 +11651,57 @@ declare namespace Srch
          * Default value is 250.
          */
         set_querySuggestionCompletionInterval(value: number): number;
-        
+
         /** Gets minimum length of the search term for suggestions to be retrieved. Default is 2 letters. */
         get_querySuggestionMinimumPrefixLength(): number;
         /** Sets minimum length of the search term for suggestions to be retrieved. Default is 2 letters. */
         set_querySuggestionMinimumPrefixLength(value: number): number;
-        
+
         /** Gets number of suggestions to display. Default is 5. */
         get_querySuggestionCount(): number;
         /** Sets number of suggestions to display. Default is 5. */
         set_querySuggestionCount(value: number): number;
-        
+
         get_personalResultCount(): number;
         set_personalResultCount(value: number): number;
-        
+
         get_advancedSearchPageAddress(): string;
         set_advancedSearchPageAddress(value: string): string;
-        
+
         get_showPreferencesLink(): boolean;
         set_showPreferencesLink(value: boolean): boolean;
-        
+
         get_serverInitialRender(): boolean;
         set_serverInitialRender(value: boolean): boolean;
-        
+
         get_setFocusOnPageLoad(): boolean;
         set_setFocusOnPageLoad(value: boolean): boolean;
-        
+
         get_allowEmptySearch(): boolean;
         set_allowEmptySearch(value: boolean): boolean;
-        
+
         get_updatePageTitle(): boolean;
         set_updatePageTitle(value: boolean): boolean;
-        
+
         get_pageTitlePrefix(): string;
         set_pageTitlePrefix(value: string): string;
-        
+
         /** Gets the search input placeholder text */
         get_currentPrompt(): string;
         /** Sets the search input placeholder text */
         set_currentPrompt(value: string): string;
-        
+
         get_initialPrompt(): string;
         set_initialPrompt(value: string): string;
-        
+
         /** Gets the css class/classes of the placeholder text. Default is 'ms-srch-sb-prompt ms-helperText' */
         get_promptCssClass(): string;
         /** Sets the css class/classes of the placeholder text. Default is 'ms-srch-sb-prompt ms-helperText' */
         set_promptCssClass(value: string): string;
-        
+
         get_tryInplaceQuery(): boolean;
         set_tryInplaceQuery(value: boolean): boolean;
-        
+
         /** Gets the id of the search box input element */
         get_searchBoxInputId(): string;
         /** Sets the id of the search box input element */
@@ -11709,40 +11709,40 @@ declare namespace Srch
 
         get_searchBoxContainerId(): string;
         set_searchBoxContainerId(value: string): string;
-        
+
         get_navigationButtonId(): string;
         set_navigationButtonId(value: string): string;
-        
+
         get_suggestionsListId(): string;
         set_suggestionsListId(value: string): string;
-        
+
         get_navigationListId(): string;
         set_navigationListId(value: string): string;
-        
+
         get_searchBoxInputElement(): Element;
-        
+
         get_searchBoxProgressClass(): string;
         set_searchBoxProgressClass(value: string): string;
-        
+
         get_searchBoxContainerElement(): Element;
-        
+
         get_searchBoxLinkId(): string;
         set_searchBoxLinkId(value: string): string;
-        
+
         get_searchBoxLinkElement(): Element;
-        
+
         get_navigationNodes(): any;
         set_navigationNodes(value: any): any;
-        
+
         get_msBeforeShowingProgress(): number;
         set_msBeforeShowingProgress(value: number): number;
-        
+
         get_maintainQueryState(): boolean;
         set_maintainQueryState(value: boolean): boolean;
-        
+
         get_querySuggestionsSourceID(): string;
         set_querySuggestionsSourceID(value: string): string;
-        
+
         scriptApplication_PreLoad(sender: any, e: any): void;
         scriptApplication_PostLoad(sender: any, e: any): void;
         serverTemplateScriptsCallback(): any;
@@ -11780,14 +11780,14 @@ declare namespace Srch
         /** Returns true if the value parameter is null or empty string */
         static e(value: string): boolean;
         /** Returns true if the value parameter is empty string */
-        static w(value: any): boolean; 
+        static w(value: any): boolean;
         /** Returns true if the value parameter is null or undefined */
         static n(value: any): boolean;
         /** Returns true if current page is in edit mode */
         static isPageInEditMode(): boolean;
         /** Returns true if current page is displayed in the Minimal Download Strategy (MDS) mode */
         static isPageInMdsMode(): boolean;
-        
+
         static isPagePartialLoad(): boolean;
         /** Returns true if the current page uses right-to-left mode (RTL) */
         static isRTL(): boolean;
@@ -11861,7 +11861,7 @@ declare namespace Srch
         static ensureAllowedProtocol(value: string): string;
         /** Indicates whether the specified protocol is allowed. */
         static isProtocolAllowed(value: string, allowRelativeUrl: boolean): boolean;
-        
+
         /** Returns true if the URL is a relative URL */
         static isUrlRelative(url: string): boolean;
         /** Returns true if the URL is a server-relative URL (i.e. starts with '/') */
@@ -11871,7 +11871,7 @@ declare namespace Srch
 
         static logClick(e: any, clickType: any): void;
         static fillKeywordQuery(query: any, dp: any): void;
-        
+
         /** Parses username out from SharePoint user field value */
         static getUsernameFromAuthorField(authorField: string): string;
         /** Parses user display name out from SharePoint user field value */
@@ -11905,7 +11905,7 @@ declare namespace Srch
 
         /** Copies the specified string to clipboard, if possible */
         static copyLink(link: string): void;
-        
+
         /** Registers display template function in the system.
          *  @param name Identifier of the template. Usually template is registered twice: by URL and by name.
          *  @param template The display template. It can be either string, or function, that gets the CSR context object and returns HTML string
@@ -11942,14 +11942,14 @@ declare namespace Srch
         static getFolderIconUrl(): string;
         /** Returns URL of the appropriate file image based on the file type identifier (see getFriendlyNameForFileExtension) */
         static getIconUrlByFileExtension(item: string, defaultIconPath?: string): string;
-        
+
         /** Returns string that contains safe call to HP.Show, passing over the itemId, hpContainerId and templateUrl parameters, and supplying true for wide parameter. */
         static getShowHoverPanelCallbackWide(itemId: string, hpContainerId: string, templateUrl: string): string;
         /** Returns string that contains safe call to HP.Show, passing over the itemId, hpContainerId and templateUrl parameters, and supplying false for wide parameter. */
         static getShowHoverPanelCallback(itemId: string, hpContainerId: string, templateUrl: string): string;
         /** Returns string that contains safe call to HP.Hide */
         static getHideHoverPanelCallback(): string;
-        
+
         static getHighlightedProperty(key: string, result: any, property: string): any;
         static processHHXML(pre: string): string;
         static createXMLDocument(xml: string): XMLDocument;
@@ -11967,7 +11967,7 @@ declare namespace Srch
         static isFirstRankedBlock(resultTable: Microsoft.SharePoint.Client.Search.Query.ResultTable): boolean;
         static isIntentTable(resultTable: Microsoft.SharePoint.Client.Search.Query.ResultTable): boolean;
         static createBehavior(id: string, type: any, properties: any, targetElementId: string): any;
-        
+
         /** Uses SPAnimation to animate an element */
         static animate(element: Element, animationID: any, finishFunc: any): void;
         static hideElement(element: Element): void;
@@ -11976,11 +11976,11 @@ declare namespace Srch
         static resetElement(element: Element): void;
         static shouldAnimate(dp: any): boolean;
         static animateResults(result: Result, userAction: any): void;
-        
+
         static loadScripts(scriptReferences: string[], success: any, failure: any, timeout: number): void;
         static appendScriptsToLoad(scripts: string[], script: string): void;
         static registerLoadedScripts(scripts: string[]): void;
-        
+
         /** Returns HTML for collapsible refiner title */
         static collapsibleRefinerTitle(propertyName: string, idPrefix: string, title: string, iconClass: string, customOnClick: string): string;
         /** Returns true if current page is osssearchresults.aspx */
@@ -11989,7 +11989,7 @@ declare namespace Srch
         static replaceUrlTokens(url: string): string;
         /** Adds ctag parameter to the URL and replaces URL tokens */
         static urlTokenExpansion(jsLink: string): string;
-        
+
         static includeCSS(templateLink: string, relativeLink: string): void;
         static includeScript(templateLink: string, scriptLink: string): void;
         static includeLanguageScript(templateLink: string, scriptLink: string): void;
@@ -12136,7 +12136,7 @@ declare namespace Srch
          * After registration the controls will be correctly processed in the page search context.
          */
         registerClientControl(clientControl: DisplayControl | DataProvider | SearchBox): void;
-        
+
         /** Puts specified hash-key address into the current page location.
          * @param url The hash-key, e.g. '#k=test'
          */
@@ -12780,7 +12780,7 @@ declare namespace Srch
         static rs_PartialResultWarning_Line1: string;
         static rs_PartialResultWarning_Line2: string;
         static rs_HasParseExceptionWarning_Line1: string;
-        static rs_HasParseExceptionWarning_Line2: string;        
+        static rs_HasParseExceptionWarning_Line2: string;
     }
 
 }

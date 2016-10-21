@@ -7,25 +7,25 @@
 
 declare module THREE {
 	class OrthographicTrackballControls extends EventDispatcher {
-		constructor(object:Camera, domElement?:HTMLElement);
+		constructor(object: Camera, domElement?: HTMLElement);
 
-		object:Camera;
-		domElement:HTMLElement;
+		object: Camera;
+		domElement: HTMLElement;
 
 		// API
-		enabled:boolean;
+		enabled: boolean;
 		screen:{ left: number; top: number; width: number; height: number };
-		radius:number;
-		rotateSpeed:number;
-		zoomSpeed:number;
-		panSpeed:number;
-		noRotate:boolean;
-		noZoom:boolean;
-		noPan:boolean;
-		noRoll:boolean;
-		staticMoving:boolean;
-		dynamicDampingFactor:number;
-		keys:number[];
+		radius: number;
+		rotateSpeed: number;
+		zoomSpeed: number;
+		panSpeed: number;
+		noRotate: boolean;
+		noZoom: boolean;
+		noPan: boolean;
+		noRoll: boolean;
+		staticMoving: boolean;
+		dynamicDampingFactor: number;
+		keys: number[];
 
 		target: THREE.Vector3;
 
@@ -38,14 +38,14 @@ declare module THREE {
 		top0: number;
 		bottom0: number;
 
-		update():void;
-		reset():void;
-		checkDistances():void;
-		zoomCamera():void;
-		panCamera():void;
-		rotateCamera():void;
+		update(): void;
+		reset(): void;
+		checkDistances(): void;
+		zoomCamera(): void;
+		panCamera(): void;
+		rotateCamera(): void;
 
-		handleResize():void;
-		handleEvent(event: any):void;
+		handleResize(): void;
+		handleEvent(event: any): void;
 	}
 }

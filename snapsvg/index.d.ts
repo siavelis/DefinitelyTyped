@@ -3,7 +3,7 @@
 // Definitions by: Lars Klein <https://github.com/lhk>, Mattanja Kern <https://github.com/mattanja>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare function mina(a:number, A:number, b:number, B:number, get:Function, set:Function, easing?:(num:number)=>number):mina.AnimationDescriptor;
+declare function mina(a: number, A: number, b: number, B: number, get: Function, set: Function, easing?:(num: number)=>number): mina.AnimationDescriptor;
 declare namespace mina {
     export interface MinaAnimation {
         id: string;
@@ -37,60 +37,60 @@ declare namespace mina {
         update(): void;
     }
 
-    export function backin(n:number):number;
-    export function backout(n:number):number;
-    export function bounce(n:number):number;
-    export function easein(n:number):number;
-    export function easeinout(n:number):number;
-    export function easeout(n:number):number;
-    export function elastic(n:number):number;
-    export function getById(id:string):AnimationDescriptor;
-    export function linear(n:number):number;
-    export function time():number;
+    export function backin(n: number): number;
+    export function backout(n: number): number;
+    export function bounce(n: number): number;
+    export function easein(n: number): number;
+    export function easeinout(n: number): number;
+    export function easeout(n: number): number;
+    export function elastic(n: number): number;
+    export function getById(id: string): AnimationDescriptor;
+    export function linear(n: number): number;
+    export function time(): number;
 }
 
-declare function Snap(width:number|string,height:number|string):Snap.Paper;
-declare function Snap(query:string):Snap.Paper;
-declare function Snap(DOM:SVGElement):Snap.Paper;
+declare function Snap(width: number|string,height: number|string): Snap.Paper;
+declare function Snap(query: string): Snap.Paper;
+declare function Snap(DOM: SVGElement): Snap.Paper;
 
 declare namespace Snap {
-    export var filter:Filter;
-    export var path:Path;
+    export var filter: Filter;
+    export var path: Path;
 
-    export function Matrix():void;
-    export function matrix():Matrix;
-    export function matrix(a:number,b:number,c:number,d:number,e:number,f:number):Matrix;
-    export function matrix(svgMatrix:SVGMatrix):Matrix;
+    export function Matrix(): void;
+    export function matrix(): Matrix;
+    export function matrix(a: number,b: number,c: number,d: number,e: number,f: number): Matrix;
+    export function matrix(svgMatrix: SVGMatrix): Matrix;
 
-    export function ajax(url:string,postData:string,callback:Function,scope?:Object):XMLHttpRequest;
-    export function ajax(url:string,postData:Object,callback:Function,scope?:Object):XMLHttpRequest;
-    export function ajax(url:string,callback:Function,scope?:Object):XMLHttpRequest;
-    export function format(token:string,json:Object):string;
-    export function fragment(varargs:any):Fragment;
-    export function getElementByPoint(x:number,y:number):Snap.Element;
-    export function is(o:any,type:string):boolean;
-    export function load(url:string,callback:Function,scope?:Object):void;
-    export function plugin(f:Function):void;
-    export function select(query:string):Snap.Element;
-    export function selectAll(query:string):any;
-    export function snapTo(values:Array<number>,value:number,tolerance?:number):number;
+    export function ajax(url: string,postData: string,callback: Function,scope?: Object): XMLHttpRequest;
+    export function ajax(url: string,postData: Object,callback: Function,scope?: Object): XMLHttpRequest;
+    export function ajax(url: string,callback: Function,scope?: Object): XMLHttpRequest;
+    export function format(token: string,json: Object): string;
+    export function fragment(varargs: any): Fragment;
+    export function getElementByPoint(x: number,y: number): Snap.Element;
+    export function is(o: any,type: string): boolean;
+    export function load(url: string,callback: Function,scope?: Object): void;
+    export function plugin(f: Function): void;
+    export function select(query: string): Snap.Element;
+    export function selectAll(query: string): any;
+    export function snapTo(values: Array<number>,value: number,tolerance?: number): number;
 
-    export function animate(from:number|number[],to:number|number[],updater:(n:number)=>void,duration:number,easing?:(num:number)=>number,callback?:()=>void):mina.MinaAnimation;
-    export function animation(attr:Object,duration:number,easing?:(num:number)=>number,callback?:()=>void):Snap.Animation;
+    export function animate(from: number|number[],to: number|number[],updater:(n: number)=>void,duration: number,easing?:(num: number)=>number,callback?:()=>void): mina.MinaAnimation;
+    export function animation(attr: Object,duration: number,easing?:(num: number)=>number,callback?:()=>void): Snap.Animation;
 
-    export function color(clr:string):RGBHSB;
-    export function getRGB(color:string):RGB;
-    export function hsb(h:number,s:number,b:number):HSB;
-    export function hsl(h:number,s:number,l:number):HSL;
-    export function rgb(r:number,g:number,b:number):RGB;
-    export function hsb2rgb(h:number,s:number,v:number):RGB;
-    export function hsl2rgb(h:number,s:number,l:number):RGB;
-    export function rgb2hsb(r:number,g:number,b:number):HSB;
-    export function rgb2hsl(r:number,g:number,b:number):HSL;
+    export function color(clr: string): RGBHSB;
+    export function getRGB(color: string): RGB;
+    export function hsb(h: number,s: number,b: number): HSB;
+    export function hsl(h: number,s: number,l: number): HSL;
+    export function rgb(r: number,g: number,b: number): RGB;
+    export function hsb2rgb(h: number,s: number,v: number): RGB;
+    export function hsl2rgb(h: number,s: number,l: number): RGB;
+    export function rgb2hsb(r: number,g: number,b: number): HSB;
+    export function rgb2hsl(r: number,g: number,b: number): HSL;
 
-    export function angle(x1:number,y1:number,x2:number,y2:number,x3?:number,y3?:number):number;
-    export function rad(deg:number):number;
-    export function deg(rad:number):number;
+    export function angle(x1: number,y1: number,x2: number,y2: number,x3?: number,y3?: number): number;
+    export function rad(deg: number): number;
+    export function deg(rad: number): number;
     export function sin(angle: number): number;
     export function cos(angle: number): number;
     export function tan(angle: number): number;
@@ -102,61 +102,61 @@ declare namespace Snap {
     export function len(x1: number, y1: number, x2: number, y2: number): number;
     export function len2(x1: number, y1: number, x2: number, y2: number): number;
 
-    export function parse(svg:string):Fragment;
-    export function parsePathString(pathString:string):Array<any>;
-    export function parsePathString(pathString:Array<string>):Array<any>;
-    export function parseTransformString(TString:string):Array<any>;
-    export function parseTransformString(TString:Array<string>):Array<any>;
+    export function parse(svg: string): Fragment;
+    export function parsePathString(pathString: string): Array<any>;
+    export function parsePathString(pathString: Array<string>): Array<any>;
+    export function parseTransformString(TString: string): Array<any>;
+    export function parseTransformString(TString: Array<string>): Array<any>;
 
     export function closest(x: number, y: number, X: number, Y: number): boolean;
 
     export interface RGB {
-        r:number;
-        g:number;
-        b:number;
-        hex:string;
+        r: number;
+        g: number;
+        b: number;
+        hex: string;
     }
 
     export interface HSB {
-        h:number;
-        s:number;
-        b:number;
+        h: number;
+        s: number;
+        b: number;
     }
 
     export interface RGBHSB {
-        r:number;
-        g:number;
-        b:number;
-        hex:string;
-        error:boolean;
-        h:number;
-        s:number;
-        v:number;
-        l:number;
+        r: number;
+        g: number;
+        b: number;
+        hex: string;
+        error: boolean;
+        h: number;
+        s: number;
+        v: number;
+        l: number;
     }
 
     export interface HSL {
-        h:number;
-        s:number;
-        l:number;
+        h: number;
+        s: number;
+        l: number;
     }
 
     export interface BBox {
-        cx:number;
-        cy:number;
-        h:number;
-        height:number;
-        path:number;
-        r0:number;
-        r1:number;
-        r2:number;
-        vb:string;
-        w:number;
-        width:number;
-        x2:number;
-        x:number;
-        y2:number;
-        y:number;
+        cx: number;
+        cy: number;
+        h: number;
+        height: number;
+        path: number;
+        r0: number;
+        r1: number;
+        r2: number;
+        vb: string;
+        w: number;
+        width: number;
+        x2: number;
+        x: number;
+        y2: number;
+        y: number;
     }
 
     export interface TransformationDescriptor {
@@ -170,44 +170,44 @@ declare namespace Snap {
     }
 
     export interface Animation {
-        attr:{[attr:string]:string|number|boolean|any};
-        duration:number;
-        easing?:(num:number)=>number;
+        attr:{[attr: string]: string|number|boolean|any};
+        duration: number;
+        easing?:(num: number)=>number;
         callback?:()=>void;
     }
 
     export interface Element {
-        add(el:Snap.Element):Snap.Element;
-        addClass(value:string):Snap.Element;
-        after(el:Snap.Element):Snap.Element;
-        align(el: Snap.Element, way: string):Snap.Element;
-        animate(animation:any):Snap.Element;
-        animate(attrs:{[attr:string]:string|number|boolean|any},duration:number,easing?:(num: number)=> number,callback?:()=>void):Snap.Element;
-        append(el:Snap.Element):Snap.Element;
-        appendTo(el:Snap.Element):Snap.Element;
-        asPX(attr:string,value?:string):number;            //TODO: check what is really returned
-        attr(param:string):string;
-        attr(params:{[attr:string]:string|number|boolean|any}):Snap.Element;
-        before(el:Snap.Element):Snap.Element;
+        add(el: Snap.Element): Snap.Element;
+        addClass(value: string): Snap.Element;
+        after(el: Snap.Element): Snap.Element;
+        align(el: Snap.Element, way: string): Snap.Element;
+        animate(animation: any): Snap.Element;
+        animate(attrs:{[attr: string]: string|number|boolean|any},duration: number,easing?:(num: number)=> number,callback?:()=>void): Snap.Element;
+        append(el: Snap.Element): Snap.Element;
+        appendTo(el: Snap.Element): Snap.Element;
+        asPX(attr: string,value?: string): number;            //TODO: check what is really returned
+        attr(param: string): string;
+        attr(params:{[attr: string]: string|number|boolean|any}): Snap.Element;
+        before(el: Snap.Element): Snap.Element;
         children(): Snap.Element[];
-        clone():Snap.Element;
-        data(key:string,value?:any):any;
+        clone(): Snap.Element;
+        data(key: string,value?: any): any;
         getAlign(el: Snap.Element, way: string): string;
-        getBBox():BBox;
-        getPointAtLength(length:number):{x:number, y:number, alpha:number};
-        getSubpath(from:number,to:number):string;
-        getTotalLength():number;
-        hasClass(value:string):boolean;
+        getBBox(): BBox;
+        getPointAtLength(length: number):{x: number, y: number, alpha: number};
+        getSubpath(from: number,to: number): string;
+        getTotalLength(): number;
+        hasClass(value: string): boolean;
         inAnim(): { anim: Animation; mina: mina.AnimationDescriptor; curStatus: number; status: (n?: number) => number; stop: () => void }[];
-        innerSVG():string;
-        insertAfter(el:Snap.Element):Snap.Element;
-        insertBefore(el:Snap.Element):Snap.Element;
-        marker(x:number,y:number,width:number,height:number,refX:number,refY:number):Snap.Element;
-        node:HTMLElement;
-        outerSVG():string;
-        parent():Snap.Element;
-        pattern(x:any,y:any,width:any,height:any):Snap.Element;
-        prepend(el:Snap.Element):Snap.Element;
+        innerSVG(): string;
+        insertAfter(el: Snap.Element): Snap.Element;
+        insertBefore(el: Snap.Element): Snap.Element;
+        marker(x: number,y: number,width: number,height: number,refX: number,refY: number): Snap.Element;
+        node: HTMLElement;
+        outerSVG(): string;
+        parent(): Snap.Element;
+        pattern(x: any,y: any,width: any,height: any): Snap.Element;
+        prepend(el: Snap.Element): Snap.Element;
         prependTo(el:Snap.Element):Snap.Element;
         remove():Snap.Element;
         removeClass(value:string):Snap.Element;

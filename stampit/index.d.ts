@@ -7,7 +7,7 @@
  * Function used as .init() argument.
  */
 interface Init {
-    (ctx:Context): any | Promise<any>;
+    (ctx: Context): any | Promise<any>;
 }
 
 /**
@@ -97,7 +97,7 @@ interface Stamp {
      * an .enclose() function is an anti-pattern that should be avoided, when possible.
      * @return A new object composed of the Stamps and prototypes provided.
      */
-    (state?:{}, ...encloseArgs:any[]): any | Promise<any>;
+    (state?:{}, ...encloseArgs: any[]): any | Promise<any>;
 
     /**
      * Just like calling stamp(), stamp.create() invokes the stamp and returns a new instance.
@@ -109,7 +109,7 @@ interface Stamp {
      * an .enclose() function is an anti-pattern that should be avoided, when possible.
      * @return A new object composed of the Stamps and prototypes provided.
      */
-    create(state?:{}, ...encloseArgs:any[]): any | Promise<any>;
+    create(state?:{}, ...encloseArgs: any[]): any | Promise<any>;
 
     /**
      * An object map containing the fixed prototypes.
@@ -146,7 +146,7 @@ interface Stamp {
     /**
      * @deprecated Use .init() instead.
      */
-    enclose(...functions:Init[]): Stamp;
+    enclose(...functions: Init[]): Stamp;
 
     /**
      * @deprecated Use .init() instead.
@@ -161,7 +161,7 @@ interface Stamp {
      * @param functions Closures (functions) used to create private data and privileged methods.
      * @return A new Stamp.
      */
-    init(...functions:Init[]): Stamp;
+    init(...functions: Init[]): Stamp;
 
     /**
      * Take n functions, an array of functions, or n objects and add the functions to the enclose prototype.
@@ -189,7 +189,7 @@ interface Stamp {
      * @param stamps Stampit factories, aka Stamps.
      * @return A new Stamp composed from arguments and `this`.
      */
-    compose(...stamps:Stamp[]): Stamp;
+    compose(...stamps: Stamp[]): Stamp;
 }
 
 /**
@@ -232,7 +232,7 @@ declare namespace stampit {
      * @param functions Closures (functions) used to create private data and privileged methods.
      * @return A new Stamp.
      */
-    export function init(...functions:Init[]): Stamp;
+    export function init(...functions: Init[]): Stamp;
 
     /**
      * A shortcut methods for stampit().static()
@@ -247,7 +247,7 @@ declare namespace stampit {
      * @param stamps Stamps produced by stampit.
      * @return A new Stamp made of all the given.
      */
-    export function compose(...stamps:Stamp[]): Stamp;
+    export function compose(...stamps: Stamp[]): Stamp;
 
     /**
      * Take a destination object followed by one or more source objects,
@@ -257,29 +257,29 @@ declare namespace stampit {
      * @param source Objects to copy properties from.
      * @return The destination object.
      */
-    export function mixin(destination:any, ...source:any[]): any;
+    export function mixin(destination: any, ...source: any[]): any;
 
     /**
      * Alias for mixin()
      */
-    export function mixIn(destination:any, ...source:any[]): any;
+    export function mixIn(destination: any, ...source: any[]): any;
 
     /**
      * Alias for mixin()
      */
-    export function extend(destination:any, ...source:any[]): any;
+    export function extend(destination: any, ...source: any[]): any;
 
     /**
      * Alias for mixin()
      */
-    export function assign(destination:any, ...source:any[]): any;
+    export function assign(destination: any, ...source: any[]): any;
 
     /**
      * Check if an object is a Stamp.
      * @param obj An object to check.
      * @return true if the object is a Stamp; otherwise - false.
      */
-    export function isStamp(obj:any): boolean;
+    export function isStamp(obj: any): boolean;
 
     /**
      * Take an old-fashioned JS constructor and return a Stamp
@@ -287,7 +287,7 @@ declare namespace stampit {
      * @param Constructor Old-fashioned constructor function.
      * @return A new Stamp based on the given constructor.
      */
-    export function convertConstructor(Constructor:any): Stamp;
+    export function convertConstructor(Constructor: any): Stamp;
 }
 
 declare module "stampit" {

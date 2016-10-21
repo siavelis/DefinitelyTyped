@@ -10,9 +10,9 @@ declare namespace SigmaJs{
 
     interface Camera {
         angle: number;
-        cameraPosition(x: number, y:number): {x: number; y: number};
+        cameraPosition(x: number, y: number): {x: number; y: number};
         goTo(settings: { [index: string]: any }): void;
-        graphPosition(x: number, y:number): {x: number; y: number};
+        graphPosition(x: number, y: number): {x: number; y: number};
         ratio: number;
         readPrefix: string;
         settings(setting: string) : any;
@@ -21,9 +21,9 @@ declare namespace SigmaJs{
     }
 
     interface Canvas {
-        edges: {[renderType: string]: (edge: Edge, source: Node, target: Node, ...a:any[]) => void};
-        labels: {[renderType: string]: (node: Node, ...a:any[]) => void};
-        nodes: {[renderType: string]: (node: Node, ...a:any[]) => void};
+        edges: {[renderType: string]: (edge: Edge, source: Node, target: Node, ...a: any[]) => void};
+        labels: {[renderType: string]: (node: Node, ...a: any[]) => void};
+        nodes: {[renderType: string]: (node: Node, ...a: any[]) => void};
     }
 
     interface Classes {
@@ -175,7 +175,7 @@ declare namespace SigmaJs{
         new(container: Element): Sigma;
         new(configuration: SigmaConfigs): Sigma;
         canvas: Canvas;
-        classes:Classes;
+        classes: Classes;
         misc: Miscellaneous;
         parsers: Parsers;
         plugins: Plugins;
@@ -300,8 +300,8 @@ declare namespace SigmaJs{
     }
 
     interface SVGObject<T> {
-        create: (object: T, ...a:any[]) => Element;
-        update: (object: T, ...a:any[]) => void;
+        create: (object: T, ...a: any[]) => Element;
+        update: (object: T, ...a: any[]) => void;
     }
 }
 

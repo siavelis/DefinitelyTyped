@@ -5,10 +5,10 @@
 
 
 interface Uniq{
-  <T>(ip:Array<T>): Array<T>;
+  <T>(ip: Array<T>): Array<T>;
 }
 
-declare var uniq :Uniq;
+declare var uniq : Uniq;
 
 declare module "uniq" {
 export = uniq;

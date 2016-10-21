@@ -39,11 +39,11 @@ declare namespace R {
     }
 
     interface ObjFunc {
-        [index:string]: Function;
+        [index: string]: Function;
     }
 
     interface ObjFunc2 {
-        [index:string]: (x: any, y: any) => boolean;
+        [index: string]: (x: any, y: any) => boolean;
     }
 
     interface Pred {
@@ -129,8 +129,8 @@ declare namespace R {
        addIndex<T>(fn: (f: (item: T) => void, list: T[]) => T[])
          : CurriedFunction2<(item: T, idx: number, list?: T[]) => void, T[], T[]>;
        /* Special case for reduce */
-       addIndex<T,U>(fn: (f: (acc:U, item: T) => U, aci:U, list: T[]) => U)
-         : CurriedFunction3<(acc:U, item: T, idx: number, list?: T[]) => U, U, T[], U>;
+       addIndex<T,U>(fn: (f: (acc: U, item: T) => U, aci: U, list: T[]) => U)
+         : CurriedFunction3<(acc: U, item: T, idx: number, list?: T[]) => U, U, T[], U>;
 
         /**
          * Applies a function to the value at the given index of an array, returning a new copy of the array with the
@@ -731,13 +731,13 @@ declare namespace R {
         /**
         * Same as R.invertObj, however this accounts for objects with duplicate values by putting the values into an array.
         */
-        invert<T>(obj: T): {[index:string]: string[]};
+        invert<T>(obj: T): {[index: string]: string[]};
 
         /**
         * Returns a new object with the keys of the given object as values, and the values of the given object as keys.
         */
-        invertObj(obj: any): {[index:string]: string};
-        invertObj(obj: {[index: number]: string}): {[index:string]: string};
+        invertObj(obj: any): {[index: string]: string};
+        invertObj(obj: {[index: number]: string}): {[index: string]: string};
 
 
         /**
@@ -898,8 +898,8 @@ declare namespace R {
         /**
          * Like mapObj, but but passes additional arguments to the predicate function.
          */
-        mapObjIndexed<T, TResult>(fn: (value: T, key: string, obj?: any) => TResult, obj: any): {[index:string]: TResult};
-        mapObjIndexed<T, TResult>(fn: (value: T, key: string, obj?: any) => TResult): (obj: any) => {[index:string]: TResult};
+        mapObjIndexed<T, TResult>(fn: (value: T, key: string, obj?: any) => TResult, obj: any): {[index: string]: TResult};
+        mapObjIndexed<T, TResult>(fn: (value: T, key: string, obj?: any) => TResult): (obj: any) => {[index: string]: TResult};
 
         /**
          * Tests a regular expression agains a String
@@ -1245,8 +1245,8 @@ declare namespace R {
          * value according to strict equality (`===`).  Most likely used to
          * filter a list.
          */
-        // propEq<T>(name: string, val: T, obj: {[index:string]: T}): boolean;
-        // propEq<T>(name: string, val: T, obj: {[index:number]: T}): boolean;
+        // propEq<T>(name: string, val: T, obj: {[index: string]: T}): boolean;
+        // propEq<T>(name: string, val: T, obj: {[index: number]: T}): boolean;
         propEq<T>(name: string, val: T, obj: any): boolean;
         // propEq<T>(name: number, val: T, obj: any): boolean;
         propEq<T>(name: string, val: T): (obj: any) => boolean;
@@ -1789,8 +1789,8 @@ declare namespace R {
          * Creates a new object out of a list of keys and a list of values.
          */
         // TODO: Dictionary<T> as a return value is to specific, any seems to loose
-        zipObj<T>(keys: string[], values: T[]): {[index:string]: T};
-        zipObj(keys: string[]): <T>(values: T[]) => {[index:string]: T};
+        zipObj<T>(keys: string[], values: T[]): {[index: string]: T};
+        zipObj(keys: string[]): <T>(values: T[]) => {[index: string]: T};
 
 
         /**

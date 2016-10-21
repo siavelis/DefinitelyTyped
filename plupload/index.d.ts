@@ -138,7 +138,7 @@ interface plupload_error extends plupload_response {
 }
 
 declare class plupload {
-    static Uploader(settings: plupload_settings):void;
+    static Uploader(settings: plupload_settings): void;
 
     static VERSION: string;
 

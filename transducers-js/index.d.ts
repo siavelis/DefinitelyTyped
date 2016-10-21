@@ -106,7 +106,7 @@ declare module 'transducers-js' {
   export function keep<TResult, TInput> (f: (x: TInput) => any): Transducer<TResult, TInput, TInput>;
 
   export class KeepIndexed<TResult, TInput> implements Transformer<TResult, TInput> {
-    constructor (f: (i: number, x:TInput) => any, xf: Transformer<TResult, TInput>);
+    constructor (f: (i: number, x: TInput) => any, xf: Transformer<TResult, TInput>);
     ['@@transducer/init'] (): TResult;
     ['@@transducer/step'] (result: TResult, input: TInput): TResult;
     ['@@transducer/result'] (result: TResult): TResult;

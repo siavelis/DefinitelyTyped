@@ -49,8 +49,8 @@ declare namespace QuillJS {
         insertText(index: number, text: string, source?: sourceType): void;
         insertText(index: number, text: string, format: string, value: string, source?: sourceType): void;
         insertText(index: number, text: string, formats: formatsType, source?: sourceType): void;
-        pasteHTML(index: number, html: string, source?:sourceType): string;
-        pasteHTML(html:string, source?: sourceType): string;
+        pasteHTML(index: number, html: string, source?: sourceType): string;
+        pasteHTML(html: string, source?: sourceType): string;
         setContents(delta: DeltaStatic, source?: sourceType): void;
         setText(text: string, source?: sourceType): void;
         update(source?: string): void;

@@ -71,7 +71,7 @@ declare namespace SocketIO {
 		 * which will be null if there was no problem, and one parameter, success,
 		 * of type boolean
 		 */
-		checkRequest( req:any, fn:( err: any, success: boolean ) => void ):void;
+		checkRequest( req: any, fn:( err: any, success: boolean ) => void ): void;
 
 		/**
 		 * Gets whether we're serving the client.js file or not
@@ -123,7 +123,7 @@ declare namespace SocketIO {
 
 		/**
 		 * Sets the allowed origins for requests
-		 * @param v The allowed origins, in host:port form
+		 * @param v The allowed origins, in host: port form
 		 * @default "*:*"
 		 * return This Server
 		 */
@@ -180,7 +180,7 @@ declare namespace SocketIO {
 		/**
 		 * Closes the server connection
 		 */
-		close():void;
+		close(): void;
 
 		/**
 		 * The event fired when we get a new connection
@@ -226,7 +226,7 @@ declare namespace SocketIO {
 		 * are sent as special 'error' packets to clients
 		 * @return The default '/' Namespace
 		 */
-		use( fn: ( socket:Socket, fn: ( err?: any ) => void ) =>void ): Namespace;
+		use( fn: ( socket: Socket, fn: ( err?: any ) => void ) =>void ): Namespace;
 
 		/**
 		 * Emits an event to the default Namespace

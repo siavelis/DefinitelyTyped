@@ -47,8 +47,8 @@ declare module "proj4" {
         /**
          * @name Proj
          */
-        export function Proj(srsCode:any, callback?: any): InterfaceProjection;
-        
+        export function Proj(srsCode: any, callback?: any): InterfaceProjection;
+
         /**
          * @name WGS84
          */
@@ -62,12 +62,12 @@ declare module "proj4" {
         export function Point(coordinates: Array<number>): InterfaceCoordinates;
         export function Point(coordinates: InterfaceCoordinates): InterfaceCoordinates;
         export function Point(coordinates: string): InterfaceCoordinates;
-        
+
         /**
          * @name toPoint
          */
         export function toPoint(array: Array<number>): InterfaceCoordinates;
-        
+
         /**
          * @name defs
          */

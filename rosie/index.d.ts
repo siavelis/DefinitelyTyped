@@ -168,7 +168,7 @@ declare namespace rosie {
      * @param {object=} options
      * @return {object}
      */
-    attributes(attributes:Object, options: Object): Object;
+    attributes(attributes: Object, options: Object): Object;
 
     /**
      * Generates values for all the registered options using the values given.

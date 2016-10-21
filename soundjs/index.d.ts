@@ -146,16 +146,16 @@ declare namespace createjs {
 
     export class PlayPropsConfig
 	{
-	delay:number;
-	duration:number;
-	interrupt:string;
-	loop:number;
-	offset:number;
-	pan:number;
-	startTime:number;
-	volume:number;
-	static create( value:PlayPropsConfig|any ): PlayPropsConfig;
-	set ( props:any ): PlayPropsConfig;
+	delay: number;
+	duration: number;
+	interrupt: string;
+	loop: number;
+	offset: number;
+	pan: number;
+	startTime: number;
+	volume: number;
+	static create( value: PlayPropsConfig|any ): PlayPropsConfig;
+	set ( props: any ): PlayPropsConfig;
 	}
 
     export class Sound extends EventDispatcher

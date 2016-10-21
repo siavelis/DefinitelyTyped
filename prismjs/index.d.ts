@@ -68,7 +68,7 @@ declare namespace PrismJS {
 		code?: any;
 		highlightedCode?: any;
 		type?: string;
-		content?:string;
+		content?: string;
 		tag?: string;
 		classes?: Array<string>;
 		attributes?: Array<string> | Object;
@@ -80,7 +80,7 @@ declare namespace PrismJS {
 	}
 
 	interface Util {
-		encode(tokens:Token | Array<Token> | string): Token | Array<Token> | string;
+		encode(tokens: Token | Array<Token> | string): Token | Array<Token> | string;
 		type(o: Object): string;
 		objId(obj: Object): Identifier;
 		clone(o: LanguageDefinition): LanguageDefinition;
@@ -113,28 +113,28 @@ declare namespace PrismJS {
         pattern?: RegExp;
 
         /**
-         * This option mitigates JavaScript’s lack of lookbehind. When set to true, the first capturing group in the regex 
+         * This option mitigates JavaScript’s lack of lookbehind. When set to true, the first capturing group in the regex
          * pattern is discarded when matching this token, so it effectively behaves as if it was lookbehind
          */
         lookbehind?: boolean;
-		
+
         /**
          * This property accepts another object literal, with tokens that are allowed to be nested in this token.
-         * This makes it easier to define certain languages. However, keep in mind that they’re slower and if coded poorly, 
+         * This makes it easier to define certain languages. However, keep in mind that they’re slower and if coded poorly,
          * can even result in infinite recursion. For an example of nested tokens, check out the Markup language definition
          */
         inside?: LanguageDefinition;
-        
+
         /**
          * Accepts an object literal with tokens and appends them to the end of the current object literal.
          */
         rest?: Array<Token>;
 	}
-	
+
 	interface Languages extends Array<LanguageDefinition> {
-        
+
 		extend(id: string, redef: LanguageDefinition): LanguageDefinition;
-		
+
 		/**
 		 * Insert a token before another token in a language literal
 		 * As this needs to recreate the object (we cannot actually insert before keys in object literals),
@@ -143,21 +143,21 @@ declare namespace PrismJS {
 		 * @param before The key to insert before. If not provided, the function appends instead.
 		 * @param insert Object with the key/value pairs to insert
 		 * @param root The object that contains `inside`. If equal to Prism.languages, it can be omitted.
-		 */		
+		 */
 		insertBefore(inside: string, before: string, insert: LanguageDefinition, root: Object): any;
 	}
-	
+
 	interface Hooks {
 		all: Array<Array<(env: Environment) => void>>;
-		add(name: string, callback: (env: Environment) => void):void;
+		add(name: string, callback: (env: Environment) => void): void;
 		run(name: string, env: Environment): void;
 	}
-	
+
 	interface Token {
 		type: string;
 		content: Token | Array<Token> | string;
 		alias: string;
-		stringify(o:string| Array<any>, language: LanguageDefinition, parent: HTMLPreElement): string; 
+		stringify(o: string| Array<any>, language: LanguageDefinition, parent: HTMLPreElement): string;
 	}
 }
 

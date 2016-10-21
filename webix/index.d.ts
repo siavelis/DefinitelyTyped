@@ -8,43 +8,43 @@ declare namespace webix {
 type WebixTemplate = (...args: any[])=>string;
 type WebixCallback = (...args: any[])=>any;
 interface PromisedData {
-    then(handler:(data:any)=>any):PromisedData;
-    fail(handler:(error:any)=>any):PromisedData;
+    then(handler:(data: any)=>any): PromisedData;
+    fail(handler:(error: any)=>any): PromisedData;
 }
 
-function ajax():webix._ajax;
-function $$(id: string|Event|HTMLElement):webix.ui.baseview;
+function ajax(): webix._ajax;
+function $$(id: string|Event|HTMLElement): webix.ui.baseview;
 
 
 interface _ajax{
-	bind(master:any):webix._ajax;
-	del(url:string, params?:any, callback?:WebixCallback):PromisedData;
-	get(url:string, params?:any, callback?:WebixCallback):PromisedData;
-	getXHR():any;
-	headers(values:any):webix._ajax;
-	post(url:string, params?:any, callback?:WebixCallback):PromisedData;
-	put(url:string, params?:any, callback?:WebixCallback):PromisedData;
-	response(type:string):void;
-	stringify(data:any):string;
-	sync():webix._ajax;
+	bind(master: any): webix._ajax;
+	del(url: string, params?: any, callback?: WebixCallback): PromisedData;
+	get(url: string, params?: any, callback?: WebixCallback): PromisedData;
+	getXHR(): any;
+	headers(values: any): webix._ajax;
+	post(url: string, params?: any, callback?: WebixCallback): PromisedData;
+	put(url: string, params?: any, callback?: WebixCallback): PromisedData;
+	response(type: string): void;
+	stringify(data: any): string;
+	sync(): webix._ajax;
 	master: any;
 }
 interface clipbuffer{
-	destructor():void;
-	focus():void;
-	init():void;
-	set(text:string):void;
+	destructor(): void;
+	focus(): void;
+	init(): void;
+	set(text: string): void;
 }
 interface color{
-	hexToDec(hex:string):number;
-	hsvToRgb(h:number, s:number, v:number):any[];
-	rgbToHsv(r:number, g:number, b:number):any[];
-	toHex(number:number, length?:number):string;
-	toRgb(rgb:string):any[];
+	hexToDec(hex: string): number;
+	hsvToRgb(h: number, s: number, v: number): any[];
+	rgbToHsv(r: number, g: number, b: number): any[];
+	toHex(number: number, length?: number): string;
+	toRgb(rgb: string): any[];
 }
 interface csv{
-	parse(text:string, delimiter?:any):any[];
-	stringify(data:any[], delimiter?:any):string;
+	parse(text: string, delimiter?: any): any[];
+	stringify(data: any[], delimiter?: any): string;
 	delimiter: any;
 	escape: boolean;
 }
@@ -80,46 +80,46 @@ interface env{
 	translate: string;
 }
 interface history{
-	push(view:string, url:string, value:any):void;
-	track(view:string, url:string):void;
+	push(view: string, url: string, value: any): void;
+	track(view: string, url: string): void;
 }
 interface html{
-	addCss(node:HTMLElement, name:string):void;
-	addMeta(name:string, value:string):void;
-	addStyle(css:string):void;
-	allowSelect():void;
-	create(name:string, attrs:any, html?:string):HTMLElement;
-	createCss(data:any):string;
-	denySelect():void;
-	getValue(node:HTMLElement):string;
-	index(node:HTMLElement):number;
-	insertBefore(node:HTMLElement, before:HTMLElement, rescue?:HTMLElement):void;
-	locate(ev:Event|HTMLElement, name:string):string;
-	offset(node:HTMLElement):any;
-	pos(ev:Event):any;
-	posRelative(ev:Event):any;
-	preventEvent(ev:Event):boolean;
-	remove(node:HTMLElement|HTMLElement[]):void;
-	removeCss(node:HTMLElement, name:string):void;
-	stopEvent(ev:Event):boolean;
+	addCss(node: HTMLElement, name: string): void;
+	addMeta(name: string, value: string): void;
+	addStyle(css: string): void;
+	allowSelect(): void;
+	create(name: string, attrs: any, html?: string): HTMLElement;
+	createCss(data: any): string;
+	denySelect(): void;
+	getValue(node: HTMLElement): string;
+	index(node: HTMLElement): number;
+	insertBefore(node: HTMLElement, before: HTMLElement, rescue?: HTMLElement): void;
+	locate(ev: Event|HTMLElement, name: string): string;
+	offset(node: HTMLElement): any;
+	pos(ev: Event): any;
+	posRelative(ev: Event): any;
+	preventEvent(ev: Event): boolean;
+	remove(node: HTMLElement|HTMLElement[]): void;
+	removeCss(node: HTMLElement, name: string): void;
+	stopEvent(ev: Event): boolean;
 }
 interface i18n{
-	dateFormatDate(date:string):any;
-	dateFormatStr(date:any):string;
-	fullDateFormatDate(date:string):any;
-	fullDateFormatStr(date:Date):string;
-	intFormat(num:number):string;
-	longDateFormatDate(date:string):any;
-	longDateFormatStr(date:any):string;
-	numberFormat(number:number):string;
-	parseFormatDate(date:string):any;
-	parseFormatStr(date:any):string;
-	parseTimeFormatDate(date:string):any;
-	parseTimeFormatStr(date:any):string;
-	priceFormat(number:number):string;
-	setLocale(name:string):void;
-	timeFormatDate(time:string):any;
-	timeFormatStr(date:any):string;
+	dateFormatDate(date: string): any;
+	dateFormatStr(date: any): string;
+	fullDateFormatDate(date: string): any;
+	fullDateFormatStr(date: Date): string;
+	intFormat(num: number): string;
+	longDateFormatDate(date: string): any;
+	longDateFormatStr(date: any): string;
+	numberFormat(number: number): string;
+	parseFormatDate(date: string): any;
+	parseFormatStr(date: any): string;
+	parseTimeFormatDate(date: string): any;
+	parseTimeFormatStr(date: any): string;
+	priceFormat(number: number): string;
+	setLocale(name: string): void;
+	timeFormatDate(time: string): any;
+	timeFormatStr(date: any): string;
 	calendar: any;
 	controls: any;
 	dateFormat: string;
@@ -141,229 +141,229 @@ interface locale{
 	pager: any;
 }
 interface markup{
-	init(node:string, target:string):webix.ui.baseview;
-	parse(data:any, datatype:string):void;
+	init(node: string, target: string): webix.ui.baseview;
+	parse(data: any, datatype: string): void;
 	attribute: any;
 	dataTag: any;
 	namespace: any;
 }
 interface promise{
-	all(promise:PromisedData, morepromises?:PromisedData):void;
-	defer():PromisedData;
-	fcall():PromisedData;
-	nfcall():PromisedData;
+	all(promise: PromisedData, morepromises?: PromisedData): void;
+	defer(): PromisedData;
+	fcall(): PromisedData;
+	nfcall(): PromisedData;
 }
 interface rules{
-	isChecked():boolean;
-	isEmail():boolean;
-	isNotEmpty():boolean;
-	isNumber():boolean;
+	isChecked(): boolean;
+	isEmail(): boolean;
+	isNotEmpty(): boolean;
+	isNumber(): boolean;
 }
 interface cookie{
-	clear():void;
-	get(name:string):any;
-	put(name:string, value:any):void;
-	remove(name:string):void;
+	clear(): void;
+	get(name: string): any;
+	put(name: string, value: any): void;
+	remove(name: string): void;
 }
 interface local{
-	clear():void;
-	get(name:string):any;
-	put(name:string, value:any):void;
-	remove(name:string):void;
+	clear(): void;
+	get(name: string): any;
+	put(name: string, value: any): void;
+	remove(name: string): void;
 }
 interface session{
-	clear():void;
-	get(name:string):any;
-	put(name:string, value:any):void;
-	remove(name:string):void;
+	clear(): void;
+	get(name: string): any;
+	put(name: string, value: any): void;
+	remove(name: string): void;
 }
 interface storage{
-	cookie:webix.cookie;
-	local:webix.local;
-	session:webix.session;
+	cookie: webix.cookie;
+	local: webix.local;
+	session: webix.session;
 }
 
-function alert(text:string, callback:WebixCallback):HTMLElement;
-function animate(html_element:HTMLElement, animation:any):void;
-function attachEvent(type:string, functor:WebixCallback, id?:string):string|number;
-function bind(code:WebixCallback, master:any):WebixCallback;
-function blockEvent():void;
-function callEvent(name:string, params:any[]):boolean;
-function clone(source:any):any;
-function confirm(text:string, callback:WebixCallback):HTMLElement;
-function copy(source:any):any;
-function delay(code:WebixCallback, owner?:any, params?:any[], delay?:number):number;
-function detachEvent(id:string):void;
-function dp(name:string):any;
-function editStop():void;
-function event(node:HTMLElement|string, event:string, handler:WebixCallback, context?:any):string|number;
-function eventRemove(id:string|number):void;
-function exec(code:string):void;
-function extend(target:any, source:any, overwrite:boolean):any;
-function hasEvent(name:string):boolean;
-function isArray(check:any):boolean;
-function isDate(check:any):boolean;
-function isUndefined(check:any):boolean;
-function jsonp(url:string, params?:any, callback?:WebixCallback, master?:any):void;
-function mapEvent(map:any):void;
-function message(text:string):void;
-function modalbox(text:string, callback:WebixCallback):HTMLElement;
-function once(code:WebixCallback):void;
-function proto(target:any, mixin1?:any, mixinN?:any):any;
-function protoUI(target:any, view:any, mixin1:any, mixinN:any):any;
-function proxy(type:string, source:string):any;
-function ready(code:WebixCallback):void;
-function remote():void;
-function require(url:string):void;
-function send(url:string, values:any, method:string, target:string):void;
-function single(source:WebixCallback):WebixCallback;
-function template(template:string):WebixCallback;
-function toArray(array:any[]):any[];
-function toExcel(id:any, options:any):void;
-function toFunctor(name:string):WebixCallback;
-function toNode(id:string):HTMLElement;
-function toPDF(id:string, name:string):void;
-function toPNG(id:string, name:string):void;
-function type(config:any):void;
-function ui(config:any, parent?:any, replacement?:any):webix.ui.baseview;
-function uid():number;
-function unblockEvent():void;
-function wrap(target:WebixCallback, source:WebixCallback):WebixCallback;
+function alert(text: string, callback: WebixCallback): HTMLElement;
+function animate(html_element: HTMLElement, animation: any): void;
+function attachEvent(type: string, functor: WebixCallback, id?: string): string|number;
+function bind(code: WebixCallback, master: any): WebixCallback;
+function blockEvent(): void;
+function callEvent(name: string, params: any[]): boolean;
+function clone(source: any): any;
+function confirm(text: string, callback: WebixCallback): HTMLElement;
+function copy(source: any): any;
+function delay(code: WebixCallback, owner?: any, params?: any[], delay?: number): number;
+function detachEvent(id: string): void;
+function dp(name: string): any;
+function editStop(): void;
+function event(node: HTMLElement|string, event: string, handler: WebixCallback, context?: any): string|number;
+function eventRemove(id: string|number): void;
+function exec(code: string): void;
+function extend(target: any, source: any, overwrite: boolean): any;
+function hasEvent(name: string): boolean;
+function isArray(check: any): boolean;
+function isDate(check: any): boolean;
+function isUndefined(check: any): boolean;
+function jsonp(url: string, params?: any, callback?: WebixCallback, master?: any): void;
+function mapEvent(map: any): void;
+function message(text: string): void;
+function modalbox(text: string, callback: WebixCallback): HTMLElement;
+function once(code: WebixCallback): void;
+function proto(target: any, mixin1?: any, mixinN?: any): any;
+function protoUI(target: any, view: any, mixin1: any, mixinN: any): any;
+function proxy(type: string, source: string): any;
+function ready(code: WebixCallback): void;
+function remote(): void;
+function require(url: string): void;
+function send(url: string, values: any, method: string, target: string): void;
+function single(source: WebixCallback): WebixCallback;
+function template(template: string): WebixCallback;
+function toArray(array: any[]): any[];
+function toExcel(id: any, options: any): void;
+function toFunctor(name: string): WebixCallback;
+function toNode(id: string): HTMLElement;
+function toPDF(id: string, name: string): void;
+function toPNG(id: string, name: string): void;
+function type(config: any): void;
+function ui(config: any, parent?: any, replacement?: any): webix.ui.baseview;
+function uid(): number;
+function unblockEvent(): void;
+function wrap(target: WebixCallback, source: WebixCallback): WebixCallback;
 
 var codebase: string;
 var name: string;
 var version: string;
-var clipbuffer:webix.clipbuffer;
-var color:webix.color;
-var csv:webix.csv;
-var editors:webix.editors;
-var env:webix.env;
-var history:webix.history;
-var html:webix.html;
-var i18n:webix.i18n;
-var locale:webix.locale;
-var markup:webix.markup;
-var promise:webix.promise;
-var rules:webix.rules;
-var storage:webix.storage;
+var clipbuffer: webix.clipbuffer;
+var color: webix.color;
+var csv: webix.csv;
+var editors: webix.editors;
+var env: webix.env;
+var history: webix.history;
+var html: webix.html;
+var i18n: webix.i18n;
+var locale: webix.locale;
+var markup: webix.markup;
+var promise: webix.promise;
+var rules: webix.rules;
+var storage: webix.storage;
 
 interface ActiveContent{
 }
-var ActiveContent:ActiveContent;
+var ActiveContent: ActiveContent;
 interface AtomDataLoader{
-	load(url:string, type?:string, callback?:WebixCallback):webix.promise;
-	parse(data:any, type:string):void;
+	load(url: string, type?: string, callback?: WebixCallback): webix.promise;
+	parse(data: any, type: string): void;
 }
-var AtomDataLoader:AtomDataLoader;
+var AtomDataLoader: AtomDataLoader;
 interface AtomRender{
-	render(id:string|number, data:any, type:string):void;
-	sync(source:any, filter:WebixCallback, silent:boolean):void;
+	render(id: string|number, data: any, type: string): void;
+	sync(source: any, filter: WebixCallback, silent: boolean): void;
 }
-var AtomRender:AtomRender;
+var AtomRender: AtomRender;
 interface AutoTooltip{
 }
-var AutoTooltip:AutoTooltip;
+var AutoTooltip: AutoTooltip;
 interface BaseBind{
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	unbind():void;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	unbind(): void;
 }
-var BaseBind:BaseBind;
+var BaseBind: BaseBind;
 interface BindSource{
-	addBind(source:any, rule:string, format:string):void;
-	getBindData(key:string|number, update:boolean):void;
-	removeBind(source:any):void;
-	saveBatch(func:WebixCallback):void;
-	setBindData(data:any, key:string|number):void;
+	addBind(source: any, rule: string, format: string): void;
+	getBindData(key: string|number, update: boolean): void;
+	removeBind(source: any): void;
+	saveBatch(func: WebixCallback): void;
+	setBindData(data: any, key: string|number): void;
 }
-var BindSource:BindSource;
+var BindSource: BindSource;
 interface Canvas{
-	clearCanvas():void;
-	getCanvas(context:string):any;
-	hideCanvas():void;
-	renderText(x:number, y:number, text:string, css:string, w:number):void;
-	renderTextAt(valign:string, align:string, x:number, y:number, t:string, c:string, w:number):void;
-	showCanvas():void;
-	toggleCanvas():void;
+	clearCanvas(): void;
+	getCanvas(context: string): any;
+	hideCanvas(): void;
+	renderText(x: number, y: number, text: string, css: string, w: number): void;
+	renderTextAt(valign: string, align: string, x: number, y: number, t: string, c: string, w: number): void;
+	showCanvas(): void;
+	toggleCanvas(): void;
 }
-var Canvas:Canvas;
+var Canvas: Canvas;
 interface CodeParser{
-	collapseNames(obj:any):{ [key: string]: any; };
-	expandNames(obj:{ [key: string]: any; }):any;
+	collapseNames(obj: any):{ [key: string]: any; };
+	expandNames(obj:{ [key: string]: any; }): any;
 }
-var CodeParser:CodeParser;
+var CodeParser: CodeParser;
 interface CollectionBind{
-	getCursor():number;
-	refreshCursor():void;
-	setCursor(cursor:string|number):void;
+	getCursor(): number;
+	refreshCursor(): void;
+	setCursor(cursor: string|number): void;
 }
-var CollectionBind:CollectionBind;
+var CollectionBind: CollectionBind;
 interface ContextHelper{
-	attachTo(view:any):void;
-	getContext():any;
-	setContext(context:any):void;
+	attachTo(view: any): void;
+	getContext(): any;
+	setContext(context: any): void;
 }
-var ContextHelper:ContextHelper;
+var ContextHelper: ContextHelper;
 interface CopyPaste{
 }
-var CopyPaste:CopyPaste;
+var CopyPaste: CopyPaste;
 interface CustomScroll{
-	enable(html_node:HTMLElement|webix.ui.baseview):void;
-	init():void;
-	resize():void;
+	enable(html_node: HTMLElement|webix.ui.baseview): void;
+	init(): void;
+	resize(): void;
 	scrollStep: number;
 }
-var CustomScroll:CustomScroll;
+var CustomScroll: CustomScroll;
 interface DataCollection{
-	add(obj:any, index?:number):string|number;
-	addBind(source:any, rule:string, format:string):void;
-	attachEvent(type:string, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	clearAll():void;
-	clearValidation():void;
-	copy(sid:string|number, tindex:number, tobj?:any, details?:any):void;
-	count():number;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	exists(id:string|number):boolean;
-	filter(text:string|WebixTemplate|WebixCallback, value:string, preserve:boolean):void;
-	find(criterion:WebixCallback, first?:boolean):any;
-	getBindData(key:string|number, update:boolean):void;
-	getCursor():number;
-	getFirstId():string|number;
-	getIdByIndex(index:number):string|number;
-	getIndexById(id:string|number):number;
-	getItem(id:string|number):any;
-	getLastId():string|number;
-	getNextId(id:string|number, step:number):string|number;
-	getPrevId(id:string|number, step:number):string|number;
-	hasEvent(name:string):boolean;
-	isVisible():boolean;
-	load(url:string, type?:string, callback?:WebixCallback):webix.promise;
-	loadNext(count:number, start:number, callback:WebixCallback, url:string, now:boolean):void;
-	mapEvent(map:any):void;
-	move(sid:string, tindex:number, tobj?:any, details?:any):string;
-	moveBottom(id:string|number):void;
-	moveDown(id:string|number, step:number):void;
-	moveTop(id:string|number):void;
-	moveUp(id:string|number, step:number):void;
-	parse(data:any, type:string):void;
-	refresh(id?:string|number):void;
-	refreshCursor():void;
-	remove(id:string|number):void;
-	removeBind(source:any):void;
-	saveBatch(func:WebixCallback):void;
-	serialize():any;
-	setBindData(data:any, key:string|number):void;
-	setCursor(cursor:string|number):void;
-	sort(by:string, dir?:string, as?:string):void;
-	sync(source:any, filter:WebixCallback, silent:boolean):void;
-	unbind():void;
-	unblockEvent():void;
-	updateItem(id:string|number, data:any):void;
-	validate(id?:string):boolean;
+	add(obj: any, index?: number): string|number;
+	addBind(source: any, rule: string, format: string): void;
+	attachEvent(type: string, functor: WebixCallback, id?: string): string|number;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	clearAll(): void;
+	clearValidation(): void;
+	copy(sid: string|number, tindex: number, tobj?: any, details?: any): void;
+	count(): number;
+	define(property: string, value: any): void;
+	destructor(): void;
+	detachEvent(id: string): void;
+	exists(id: string|number): boolean;
+	filter(text: string|WebixTemplate|WebixCallback, value: string, preserve: boolean): void;
+	find(criterion: WebixCallback, first?: boolean): any;
+	getBindData(key: string|number, update: boolean): void;
+	getCursor(): number;
+	getFirstId(): string|number;
+	getIdByIndex(index: number): string|number;
+	getIndexById(id: string|number): number;
+	getItem(id: string|number): any;
+	getLastId(): string|number;
+	getNextId(id: string|number, step: number): string|number;
+	getPrevId(id: string|number, step: number): string|number;
+	hasEvent(name: string): boolean;
+	isVisible(): boolean;
+	load(url: string, type?: string, callback?: WebixCallback): webix.promise;
+	loadNext(count: number, start: number, callback: WebixCallback, url: string, now: boolean): void;
+	mapEvent(map: any): void;
+	move(sid: string, tindex: number, tobj?: any, details?: any): string;
+	moveBottom(id: string|number): void;
+	moveDown(id: string|number, step: number): void;
+	moveTop(id: string|number): void;
+	moveUp(id: string|number, step: number): void;
+	parse(data: any, type: string): void;
+	refresh(id?: string|number): void;
+	refreshCursor(): void;
+	remove(id: string|number): void;
+	removeBind(source: any): void;
+	saveBatch(func: WebixCallback): void;
+	serialize(): any;
+	setBindData(data: any, key: string|number): void;
+	setCursor(cursor: string|number): void;
+	sort(by: string, dir?: string, as?: string): void;
+	sync(source: any, filter: WebixCallback, silent: boolean): void;
+	unbind(): void;
+	unblockEvent(): void;
+	updateItem(id: string|number, data: any): void;
+	validate(id?: string): boolean;
 	config: { [key: string]: any; };
 	name: string;
 }
@@ -377,595 +377,595 @@ interface DataDriver{
 	json: any;
 	xml: any;
 }
-var DataDriver:DataDriver;
+var DataDriver: DataDriver;
 interface DataLoader{
-	add(obj:any, index?:number):string|number;
-	clearAll():void;
-	count():number;
-	exists(id:string|number):boolean;
-	filter(text:string|WebixTemplate|WebixCallback, value:string, preserve:boolean):void;
-	find(criterion:WebixCallback, first?:boolean):any;
-	getFirstId():string|number;
-	getIdByIndex(index:number):string|number;
-	getIndexById(id:string|number):number;
-	getItem(id:string|number):any;
-	getLastId():string|number;
-	getNextId(id:string|number, step:number):string|number;
-	getPrevId(id:string|number, step:number):string|number;
-	load(url:string, type?:string, callback?:WebixCallback):webix.promise;
-	loadNext(count:number, start:number, callback:WebixCallback, url:string, now:boolean):void;
-	parse(data:any, type:string):void;
-	refresh(id?:string|number):void;
-	remove(id:string|number):void;
-	serialize():any;
-	sort(by:string, dir?:string, as?:string):void;
-	sync(source:any, filter:WebixCallback, silent:boolean):void;
-	updateItem(id:string|number, data:any):void;
+	add(obj: any, index?: number): string|number;
+	clearAll(): void;
+	count(): number;
+	exists(id: string|number): boolean;
+	filter(text: string|WebixTemplate|WebixCallback, value: string, preserve: boolean): void;
+	find(criterion: WebixCallback, first?: boolean): any;
+	getFirstId(): string|number;
+	getIdByIndex(index: number): string|number;
+	getIndexById(id: string|number): number;
+	getItem(id: string|number): any;
+	getLastId(): string|number;
+	getNextId(id: string|number, step: number): string|number;
+	getPrevId(id: string|number, step: number): string|number;
+	load(url: string, type?: string, callback?: WebixCallback): webix.promise;
+	loadNext(count: number, start: number, callback: WebixCallback, url: string, now: boolean): void;
+	parse(data: any, type: string): void;
+	refresh(id?: string|number): void;
+	remove(id: string|number): void;
+	serialize(): any;
+	sort(by: string, dir?: string, as?: string): void;
+	sync(source: any, filter: WebixCallback, silent: boolean): void;
+	updateItem(id: string|number, data: any): void;
 }
-var DataLoader:DataLoader;
+var DataLoader: DataLoader;
 interface DataMarks{
-	addCss(id:string|number, css:string, silent?:boolean):void;
-	clearCss(css:string, silent?:boolean):void;
-	hasCss(id:string|number, css:string):boolean;
-	removeCss(id:string|number, css:string, silent?:boolean):void;
+	addCss(id: string|number, css: string, silent?: boolean): void;
+	clearCss(css: string, silent?: boolean): void;
+	hasCss(id: string|number, css: string): boolean;
+	removeCss(id: string|number, css: string, silent?: boolean): void;
 }
-var DataMarks:DataMarks;
+var DataMarks: DataMarks;
 interface DataMove{
-	copy(sid:string|number, tindex:number, tobj?:any, details?:any):void;
-	move(sid:string, tindex:number, tobj?:any, details?:any):string;
-	moveBottom(id:string|number):void;
-	moveDown(id:string|number, step:number):void;
-	moveTop(id:string|number):void;
-	moveUp(id:string|number, step:number):void;
+	copy(sid: string|number, tindex: number, tobj?: any, details?: any): void;
+	move(sid: string, tindex: number, tobj?: any, details?: any): string;
+	moveBottom(id: string|number): void;
+	moveDown(id: string|number, step: number): void;
+	moveTop(id: string|number): void;
+	moveUp(id: string|number, step: number): void;
 }
-var DataMove:DataMove;
+var DataMove: DataMove;
 interface DataProcessor{
-	attachEvent(type:string, functor:WebixCallback, id?:string):string|number;
-	attachProgress(start:WebixCallback, end:WebixCallback, error:WebixCallback):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	clearValidation():void;
-	define(property:string, value:any):void;
-	detachEvent(id:string):void;
-	escape(value:string):string;
-	getItemState(itemId:string|number):any;
-	getState():string|boolean;
-	hasEvent(name:string):boolean;
-	ignore(code:WebixCallback, master:any):void;
-	mapEvent(map:any):void;
-	off():void;
-	on():void;
-	processResult(data:any):void;
-	reset():void;
-	save(id:string|number, operation:string):void;
-	send():void;
-	setItemState(itemId:string|number, state:boolean):void;
-	unblockEvent():void;
-	validate(mode?:any):boolean;
+	attachEvent(type: string, functor: WebixCallback, id?: string): string|number;
+	attachProgress(start: WebixCallback, end: WebixCallback, error: WebixCallback): void;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	clearValidation(): void;
+	define(property: string, value: any): void;
+	detachEvent(id: string): void;
+	escape(value: string): string;
+	getItemState(itemId: string|number): any;
+	getState(): string|boolean;
+	hasEvent(name: string): boolean;
+	ignore(code: WebixCallback, master: any): void;
+	mapEvent(map: any): void;
+	off(): void;
+	on(): void;
+	processResult(data: any): void;
+	reset(): void;
+	save(id: string|number, operation: string): void;
+	send(): void;
+	setItemState(itemId: string|number, state: boolean): void;
+	unblockEvent(): void;
+	validate(mode?: any): boolean;
 	config: { [key: string]: any; };
 	name: string;
 }
-var DataProcessor:DataProcessor;
+var DataProcessor: DataProcessor;
 interface DataRecord{
-	attachEvent(type:string, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	define(property:string, value:any):void;
-	detachEvent(id:string):void;
-	getValues():any;
-	hasEvent(name:string):boolean;
-	isVisible():boolean;
-	load(url:string, type?:string, callback?:WebixCallback):webix.promise;
-	mapEvent(map:any):void;
-	parse(data:any, type:string):void;
-	refresh(id?:string|number):void;
-	setValues(values:any, update?:boolean):void;
-	unbind():void;
-	unblockEvent():void;
+	attachEvent(type: string, functor: WebixCallback, id?: string): string|number;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	define(property: string, value: any): void;
+	detachEvent(id: string): void;
+	getValues(): any;
+	hasEvent(name: string): boolean;
+	isVisible(): boolean;
+	load(url: string, type?: string, callback?: WebixCallback): webix.promise;
+	mapEvent(map: any): void;
+	parse(data: any, type: string): void;
+	refresh(id?: string|number): void;
+	setValues(values: any, update?: boolean): void;
+	unbind(): void;
+	unblockEvent(): void;
 	config: { [key: string]: any; };
 	name: string;
 }
-var DataRecord:DataRecord;
+var DataRecord: DataRecord;
 interface DataState{
-	getState():any;
-	setState(state:any):void;
+	getState(): any;
+	setState(state: any): void;
 }
-var DataState:DataState;
+var DataState: DataState;
 interface DataStore{
-	add(obj:any, index?:number):string|number;
-	addMark(id:string, name:string, css?:boolean, value?:any):any;
-	attachEvent(type:string, functor:WebixCallback, id?:string):string|number;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	changeId(old:string|number, newid:string|number):void;
-	clearAll():void;
-	clearMark(name:string):void;
-	count():number;
-	destructor():void;
-	detachEvent(id:string):void;
-	each(method:WebixCallback, master?:any, all?:boolean):void;
-	exists(id:string|number):boolean;
-	filter(text:string|WebixTemplate|WebixCallback, value:string, preserve:boolean):void;
-	find(criterion:WebixCallback, first?:boolean):any;
-	getFirstId():string|number;
-	getIdByIndex(index:number):string|number;
-	getIndexById(id:string|number):number;
-	getIndexRange(from:string|number, to:string|number):any[];
-	getItem(id:string|number):any;
-	getLastId():string|number;
-	getMark(id:string, mark_name:string):any;
-	getNextId(id:string|number, step:number):string|number;
-	getPrevId(id:string|number, step:number):string|number;
-	getRange(from:string|number, to:string|number):any[];
-	hasEvent(name:string):boolean;
-	id(item:any):string|number;
-	importData(source:webix.ui.baseview):void;
-	mapEvent(map:any):void;
-	move(sid:string, tindex:number, tobj?:any, details?:any):string;
-	provideApi(target:any, eventable:boolean):void;
-	refresh(id?:string|number):void;
-	remove(id:string|number):void;
-	removeMark(id:string, name:string, css:boolean):void;
-	scheme(config:any):void;
-	serialize():any;
-	setDriver(type:string):void;
-	silent(code:WebixCallback):void;
-	sort(by:string, dir?:string, as?:string):void;
-	sync(source:any, filter:WebixCallback, silent:boolean):void;
-	unblockEvent():void;
-	unsync():void;
-	updateItem(id:string|number, data:any):void;
+	add(obj: any, index?: number): string|number;
+	addMark(id: string, name: string, css?: boolean, value?: any): any;
+	attachEvent(type: string, functor: WebixCallback, id?: string): string|number;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	changeId(old: string|number, newid: string|number): void;
+	clearAll(): void;
+	clearMark(name: string): void;
+	count(): number;
+	destructor(): void;
+	detachEvent(id: string): void;
+	each(method: WebixCallback, master?: any, all?: boolean): void;
+	exists(id: string|number): boolean;
+	filter(text: string|WebixTemplate|WebixCallback, value: string, preserve: boolean): void;
+	find(criterion: WebixCallback, first?: boolean): any;
+	getFirstId(): string|number;
+	getIdByIndex(index: number): string|number;
+	getIndexById(id: string|number): number;
+	getIndexRange(from: string|number, to: string|number): any[];
+	getItem(id: string|number): any;
+	getLastId(): string|number;
+	getMark(id: string, mark_name: string): any;
+	getNextId(id: string|number, step: number): string|number;
+	getPrevId(id: string|number, step: number): string|number;
+	getRange(from: string|number, to: string|number): any[];
+	hasEvent(name: string): boolean;
+	id(item: any): string|number;
+	importData(source: webix.ui.baseview): void;
+	mapEvent(map: any): void;
+	move(sid: string, tindex: number, tobj?: any, details?: any): string;
+	provideApi(target: any, eventable: boolean): void;
+	refresh(id?: string|number): void;
+	remove(id: string|number): void;
+	removeMark(id: string, name: string, css: boolean): void;
+	scheme(config: any): void;
+	serialize(): any;
+	setDriver(type: string): void;
+	silent(code: WebixCallback): void;
+	sort(by: string, dir?: string, as?: string): void;
+	sync(source: any, filter: WebixCallback, silent: boolean): void;
+	unblockEvent(): void;
+	unsync(): void;
+	updateItem(id: string|number, data: any): void;
 	driver: any;
 	name: string;
 	order: any[];
 	pull: any;
 }
-var DataStore:DataStore;
+var DataStore: DataStore;
 interface DataValue{
-	attachEvent(type:string, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	detachEvent(id:string):void;
-	getValue():string;
-	hasEvent(name:string):boolean;
-	isVisible():boolean;
-	mapEvent(map:any):void;
-	refresh():void;
-	setValue(value:string):void;
-	unbind():void;
-	unblockEvent():void;
+	attachEvent(type: string, functor: WebixCallback, id?: string): string|number;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	detachEvent(id: string): void;
+	getValue(): string;
+	hasEvent(name: string): boolean;
+	isVisible(): boolean;
+	mapEvent(map: any): void;
+	refresh(): void;
+	setValue(value: string): void;
+	unbind(): void;
+	unblockEvent(): void;
 	name: string;
 }
-var DataValue:DataValue;
+var DataValue: DataValue;
 interface Date{
-	add(date:any, inc:number, mode:string):any;
-	copy(date:any):any;
-	datePart(date:any):any;
-	dateToStr(format:string, utc:boolean):WebixCallback;
-	dayStart(date:any):any;
-	equal(datea:any, dateb:any):boolean;
-	getISOWeek(date:any):number;
-	getUTCISOWeek(data:any):number;
-	isHoliday(date:any):boolean;
-	monthStart(date:any):any;
-	strToDate(format:string, utc:boolean):WebixCallback;
-	timePart(date:any):number;
-	toFixed(num:number):number;
-	weekStart(date:any):any;
-	yearStart(date:any):any;
+	add(date: any, inc: number, mode: string): any;
+	copy(date: any): any;
+	datePart(date: any): any;
+	dateToStr(format: string, utc: boolean): WebixCallback;
+	dayStart(date: any): any;
+	equal(datea: any, dateb: any): boolean;
+	getISOWeek(date: any): number;
+	getUTCISOWeek(data: any): number;
+	isHoliday(date: any): boolean;
+	monthStart(date: any): any;
+	strToDate(format: string, utc: boolean): WebixCallback;
+	timePart(date: any): number;
+	toFixed(num: number): number;
+	weekStart(date: any): any;
+	yearStart(date: any): any;
 	startOnMonday: boolean;
 }
-var Date:Date;
+var Date: Date;
 interface Destruction{
-	destructor():void;
+	destructor(): void;
 }
-var Destruction:Destruction;
+var Destruction: Destruction;
 interface DragControl{
-	addDrag(node:string|number|HTMLElement, ctrl:any):void;
-	addDrop(node:string|number|HTMLElement, ctrl:any, master_mode:boolean):void;
-	createDrag(event:Event):void;
-	destroyDrag():void;
-	getContext():any;
-	getMaster(target:any):any;
-	getNode():HTMLElement;
-	sendSignal(signal:string):void;
-	$drag(s:any, e:Event):HTMLElement;
-	$dragIn(s:any, t:any, e:Event):void;
-	$dragOut(s:any, t:any, n:any, e:Event):void;
+	addDrag(node: string|number|HTMLElement, ctrl: any): void;
+	addDrop(node: string|number|HTMLElement, ctrl: any, master_mode: boolean): void;
+	createDrag(event: Event): void;
+	destroyDrag(): void;
+	getContext(): any;
+	getMaster(target: any): any;
+	getNode(): HTMLElement;
+	sendSignal(signal: string): void;
+	$drag(s: any, e: Event): HTMLElement;
+	$dragIn(s: any, t: any, e: Event): void;
+	$dragOut(s: any, t: any, n: any, e: Event): void;
 	$dragPos: WebixCallback;
-	$drop(s:any, t:any, d:any, e:Event):void;
+	$drop(s: any, t: any, d: any, e: Event): void;
 	left: number;
 	top: number;
 }
-var DragControl:DragControl;
+var DragControl: DragControl;
 interface DragItem{
-	$drag(source:HTMLElement, ev:Event):string;
+	$drag(source: HTMLElement, ev: Event): string;
 	$dragHTML: WebixCallback;
-	$dragIn(source:HTMLElement, target:HTMLElement, ev:Event):HTMLElement;
-	$dragMark(context:any, ev:Event):boolean;
-	$dragOut(source:HTMLElement, old_target:HTMLElement, new_target:HTMLElement, ev:Event):void;
-	$drop(source:HTMLElement, target:HTMLElement, ev:Event):void;
+	$dragIn(source: HTMLElement, target: HTMLElement, ev: Event): HTMLElement;
+	$dragMark(context: any, ev: Event): boolean;
+	$dragOut(source: HTMLElement, old_target: HTMLElement, new_target: HTMLElement, ev: Event): void;
+	$drop(source: HTMLElement, target: HTMLElement, ev: Event): void;
 	$dropAllow: WebixCallback;
 }
-var DragItem:DragItem;
+var DragItem: DragItem;
 interface DragOrder{
-	$drag(source:HTMLElement, ev:Event):string;
-	$dragIn(source:HTMLElement, target:HTMLElement, ev:Event):HTMLElement;
+	$drag(source: HTMLElement, ev: Event): string;
+	$dragIn(source: HTMLElement, target: HTMLElement, ev: Event): HTMLElement;
 	$dragPos: WebixCallback;
-	$drop(source:HTMLElement, target:HTMLElement, ev:Event):void;
+	$drop(source: HTMLElement, target: HTMLElement, ev: Event): void;
 }
-var DragOrder:DragOrder;
+var DragOrder: DragOrder;
 interface EditAbility{
-	edit(id:any):void;
-	editCancel():void;
-	editNext():boolean;
-	editStop():void;
-	focusEditor():void;
-	getEditState():any;
-	getEditor(id?:string):any;
-	getEditorValue():string;
-	validateEditor(id?:string|number):boolean;
+	edit(id: any): void;
+	editCancel(): void;
+	editNext(): boolean;
+	editStop(): void;
+	focusEditor(): void;
+	getEditState(): any;
+	getEditor(id?: string): any;
+	getEditorValue(): string;
+	validateEditor(id?: string|number): boolean;
 }
-var EditAbility:EditAbility;
+var EditAbility: EditAbility;
 interface EventSystem{
-	attachEvent(type:string, functor:WebixCallback, id?:string):string|number;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	detachEvent(id:string):void;
-	hasEvent(name:string):boolean;
-	mapEvent(map:any):void;
-	unblockEvent():void;
+	attachEvent(type: string, functor: WebixCallback, id?: string): string|number;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	detachEvent(id: string): void;
+	hasEvent(name: string): boolean;
+	mapEvent(map: any): void;
+	unblockEvent(): void;
 }
-var EventSystem:EventSystem;
+var EventSystem: EventSystem;
 interface Group{
-	group(config:any, mode:boolean):void;
-	ungroup(mode:boolean):void;
+	group(config: any, mode: boolean): void;
+	ungroup(mode: boolean): void;
 }
-var Group:Group;
+var Group: Group;
 interface GroupMethods{
-	any(property:string, data:any):void;
-	count(property:string, data:any):void;
-	max(property:string, data:any):void;
-	min(property:string, data:any):void;
-	string(property:string, data:any):void;
-	sum(property:string, data:any):void;
+	any(property: string, data: any): void;
+	count(property: string, data: any): void;
+	max(property: string, data: any): void;
+	min(property: string, data: any): void;
+	string(property: string, data: any): void;
+	sum(property: string, data: any): void;
 }
-var GroupMethods:GroupMethods;
+var GroupMethods: GroupMethods;
 interface GroupStore{
-	group(stats:any):void;
-	ungroup():void;
+	group(stats: any): void;
+	ungroup(): void;
 }
-var GroupStore:GroupStore;
+var GroupStore: GroupStore;
 interface HtmlMap{
-	addPoly(id:string|number, points:any[]):void;
-	addRect(id:string|number, points:any[], userdata?:string):void;
-	addSector(id:string|number, aplha0:number, aplha1:number, x:number, y:number, R:number, ky:number):void;
-	render(html:HTMLElement):void;
+	addPoly(id: string|number, points: any[]): void;
+	addRect(id: string|number, points: any[], userdata?: string): void;
+	addSector(id: string|number, aplha0: number, aplha1: number, x: number, y: number, R: number, ky: number): void;
+	render(html: HTMLElement): void;
 }
-var HtmlMap:HtmlMap;
+var HtmlMap: HtmlMap;
 interface IdSpace{
-	innerId(id:string|number):string|number;
-	ui(view:any):webix.ui.baseview;
+	innerId(id: string|number): string|number;
+	ui(view: any): webix.ui.baseview;
 	$$: any;
 }
-var IdSpace:IdSpace;
+var IdSpace: IdSpace;
 interface KeysNavigation{
-	moveSelection(direction:string):void;
+	moveSelection(direction: string): void;
 }
-var KeysNavigation:KeysNavigation;
+var KeysNavigation: KeysNavigation;
 interface MapCollection{
 }
-var MapCollection:MapCollection;
+var MapCollection: MapCollection;
 interface Modality{
 }
-var Modality:Modality;
+var Modality: Modality;
 interface MouseEvents{
 	on_click: WebixCallback;
 	on_context: { [key: string]: any; };
 	on_dblclick: WebixCallback;
 	on_mouse_move: WebixCallback;
 }
-var MouseEvents:MouseEvents;
+var MouseEvents: MouseEvents;
 interface Movable{
 }
-var Movable:Movable;
+var Movable: Movable;
 interface NavigationButtons{
 }
-var NavigationButtons:NavigationButtons;
+var NavigationButtons: NavigationButtons;
 interface Number{
-	format(value:number, config:any):string;
-	numToStr(config:any):WebixCallback;
+	format(value: number, config: any): string;
+	numToStr(config: any): WebixCallback;
 }
-var Number:Number;
+var Number: Number;
 interface OverlayBox{
-	hideOverlay():void;
-	showOverlay():void;
+	hideOverlay(): void;
+	showOverlay(): void;
 }
-var OverlayBox:OverlayBox;
+var OverlayBox: OverlayBox;
 interface PagingAbility{
-	getPage():number;
-	getPager():any;
-	setPage(page:number):void;
+	getPage(): number;
+	getPager(): any;
+	setPage(page: number): void;
 }
-var PagingAbility:PagingAbility;
+var PagingAbility: PagingAbility;
 interface PowerArray{
-	each(functor:WebixCallback, master:any):void;
-	filter(functor:WebixCallback, master:any):any[];
-	find(data:any):number;
-	insertAt(data:any, pos:number):void;
-	map(functor:WebixCallback, master:any):any[];
-	remove(value:any):void;
-	removeAt(pos:number, len:number):void;
+	each(functor: WebixCallback, master: any): void;
+	filter(functor: WebixCallback, master: any): any[];
+	find(data: any): number;
+	insertAt(data: any, pos: number): void;
+	map(functor: WebixCallback, master: any): any[];
+	remove(value: any): void;
+	removeAt(pos: number, len: number): void;
 }
-var PowerArray:PowerArray;
+var PowerArray: PowerArray;
 interface ProgressBar{
-	hideProgress():void;
-	showProgress(config?:any):void;
+	hideProgress(): void;
+	showProgress(config?: any): void;
 }
-var ProgressBar:ProgressBar;
+var ProgressBar: ProgressBar;
 interface RecordBind{
 }
-var RecordBind:RecordBind;
+var RecordBind: RecordBind;
 interface RenderStack{
-	customize(obj:any):void;
-	getItemNode(id:string|number):void;
-	locate(e:Event):string|number;
-	render(id:string|number, data:any, type:string):void;
-	showItem(id:string|number):void;
+	customize(obj: any): void;
+	getItemNode(id: string|number): void;
+	locate(e: Event): string|number;
+	render(id: string|number, data: any, type: string): void;
+	showItem(id: string|number): void;
 	type: { [key: string]: any; };
 	types: { [key: string]: any; };
 }
-var RenderStack:RenderStack;
+var RenderStack: RenderStack;
 interface Scrollable{
-	getScrollState():any;
-	scrollTo(x:number, y:number):void;
+	getScrollState(): any;
+	scrollTo(x: number, y: number): void;
 }
-var Scrollable:Scrollable;
+var Scrollable: Scrollable;
 interface SelectionModel{
-	getSelectedId(as_array:boolean):string|any[];
-	getSelectedItem(as_array:boolean):any;
-	isSelected(id:string|number):boolean;
-	select(id:string|any[], preserve:boolean):void;
-	selectAll(from?:string, to?:string):void;
-	unselect(id?:string):void;
-	unselectAll():void;
+	getSelectedId(as_array: boolean): string|any[];
+	getSelectedItem(as_array: boolean): any;
+	isSelected(id: string|number): boolean;
+	select(id: string|any[], preserve: boolean): void;
+	selectAll(from?: string, to?: string): void;
+	unselect(id?: string): void;
+	unselectAll(): void;
 }
-var SelectionModel:SelectionModel;
+var SelectionModel: SelectionModel;
 interface Settings{
-	define(property:string, value:any):void;
+	define(property: string, value: any): void;
 	config: { [key: string]: any; };
 	name: string;
 }
-var Settings:Settings;
+var Settings: Settings;
 interface SingleRender{
-	customize(obj:any):void;
-	render(id:string|number, data:any, type:string):void;
-	sync(source:any, filter:WebixCallback, silent:boolean):void;
+	customize(obj: any): void;
+	render(id: string|number, data: any, type: string): void;
+	sync(source: any, filter: WebixCallback, silent: boolean): void;
 	type: { [key: string]: any; };
 }
-var SingleRender:SingleRender;
+var SingleRender: SingleRender;
 interface Sparklines{
-	template(item:any, common:string, data:any[], column:any, index:number):string;
+	template(item: any, common: string, data: any[], column: any, index: number): string;
 	paddingX: number;
 	paddingY: number;
 	radius: number;
 }
-var Sparklines:Sparklines;
+var Sparklines: Sparklines;
 interface TablePaste{
 }
-var TablePaste:TablePaste;
+var TablePaste: TablePaste;
 interface Touch{
-	disable():void;
-	enable():void;
-	limit(mode:boolean):void;
-	scrollTo(node:HTMLElement, x:number, y:number, speed:string):void;
+	disable(): void;
+	enable(): void;
+	limit(mode: boolean): void;
+	scrollTo(node: HTMLElement, x: number, y: number, speed: string): void;
 	config: any;
 }
-var Touch:Touch;
+var Touch: Touch;
 interface TreeAPI{
-	close(id:string|number):void;
-	closeAll():void;
-	getOpenItems():any[];
-	getState():any;
-	isBranchOpen(id:string|number):boolean;
-	open(id:string|number, show?:boolean):void;
-	openAll():void;
-	setState(state:any):void;
+	close(id: string|number): void;
+	closeAll(): void;
+	getOpenItems(): any[];
+	getState(): any;
+	isBranchOpen(id: string|number): boolean;
+	open(id: string|number, show?: boolean): void;
+	openAll(): void;
+	setState(state: any): void;
 }
-var TreeAPI:TreeAPI;
+var TreeAPI: TreeAPI;
 interface TreeClick{
-	webix_tree_checkbox(obj:any, common:{ [key: string]: any; }):string;
-	webix_tree_close(obj:any, common:{ [key: string]: any; }):string;
-	webix_tree_open(obj:any, common:{ [key: string]: any; }):string;
+	webix_tree_checkbox(obj: any, common:{ [key: string]: any; }): string;
+	webix_tree_close(obj: any, common:{ [key: string]: any; }): string;
+	webix_tree_open(obj: any, common:{ [key: string]: any; }): string;
 }
-var TreeClick:TreeClick;
+var TreeClick: TreeClick;
 interface TreeCollection{
-	add(obj:any, index?:number, parentId?:string):string;
-	addBind(source:any, rule:string, format:string):void;
-	attachEvent(type:string, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	clearAll():void;
-	clearValidation():void;
-	copy(sid:string|number, tindex:number, tobj?:any, details?:any):void;
-	count():number;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	exists(id:string|number):boolean;
-	filter(text:string|WebixTemplate|WebixCallback, value:string, preserve:boolean):void;
-	find(criterion:WebixCallback, first?:boolean):any;
-	getBindData(key:string|number, update:boolean):void;
-	getBranchIndex(id:string|number, parent?:string|number):number;
-	getCursor():number;
-	getFirstChildId(id:string|number):string;
-	getFirstId():string|number;
-	getIdByIndex(index:number):string|number;
-	getIndexById(id:string|number):number;
-	getItem(id:string|number):any;
-	getLastId():string|number;
-	getNextId(id:string|number, step:number):string|number;
-	getNextSiblingId(id:string|number):string|number;
-	getParentId(id:string|number):string|number;
-	getPrevId(id:string|number, step:number):string|number;
-	getPrevSiblingId(id:string|number):string|number;
-	hasEvent(name:string):boolean;
-	isBranch(id:string|number):boolean;
-	isVisible():boolean;
-	load(url:string, type?:string, callback?:WebixCallback):webix.promise;
-	loadBranch(id:string|number, callback:WebixCallback, url:string):void;
-	loadNext(count:number, start:number, callback:WebixCallback, url:string, now:boolean):void;
-	mapEvent(map:any):void;
-	move(sid:string, tindex:number, tobj?:any, details?:any):string;
-	moveBottom(id:string|number):void;
-	moveDown(id:string|number, step:number):void;
-	moveTop(id:string|number):void;
-	moveUp(id:string|number, step:number):void;
-	parse(data:any, type:string):void;
-	refresh(id?:string|number):void;
-	refreshCursor():void;
-	remove(id:string|number):void;
-	removeBind(source:any):void;
-	saveBatch(func:WebixCallback):void;
-	serialize():any;
-	setBindData(data:any, key:string|number):void;
-	setCursor(cursor:string|number):void;
-	sort(by:string, dir?:string, as?:string):void;
-	sync(source:any, filter:WebixCallback, silent:boolean):void;
-	unbind():void;
-	unblockEvent():void;
-	updateItem(id:string|number, data:any):void;
-	validate(id?:string):boolean;
+	add(obj: any, index?: number, parentId?: string): string;
+	addBind(source: any, rule: string, format: string): void;
+	attachEvent(type: string, functor: WebixCallback, id?: string): string|number;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	clearAll(): void;
+	clearValidation(): void;
+	copy(sid: string|number, tindex: number, tobj?: any, details?: any): void;
+	count(): number;
+	define(property: string, value: any): void;
+	destructor(): void;
+	detachEvent(id: string): void;
+	exists(id: string|number): boolean;
+	filter(text: string|WebixTemplate|WebixCallback, value: string, preserve: boolean): void;
+	find(criterion: WebixCallback, first?: boolean): any;
+	getBindData(key: string|number, update: boolean): void;
+	getBranchIndex(id: string|number, parent?: string|number): number;
+	getCursor(): number;
+	getFirstChildId(id: string|number): string;
+	getFirstId(): string|number;
+	getIdByIndex(index: number): string|number;
+	getIndexById(id: string|number): number;
+	getItem(id: string|number): any;
+	getLastId(): string|number;
+	getNextId(id: string|number, step: number): string|number;
+	getNextSiblingId(id: string|number): string|number;
+	getParentId(id: string|number): string|number;
+	getPrevId(id: string|number, step: number): string|number;
+	getPrevSiblingId(id: string|number): string|number;
+	hasEvent(name: string): boolean;
+	isBranch(id: string|number): boolean;
+	isVisible(): boolean;
+	load(url: string, type?: string, callback?: WebixCallback): webix.promise;
+	loadBranch(id: string|number, callback: WebixCallback, url: string): void;
+	loadNext(count: number, start: number, callback: WebixCallback, url: string, now: boolean): void;
+	mapEvent(map: any): void;
+	move(sid: string, tindex: number, tobj?: any, details?: any): string;
+	moveBottom(id: string|number): void;
+	moveDown(id: string|number, step: number): void;
+	moveTop(id: string|number): void;
+	moveUp(id: string|number, step: number): void;
+	parse(data: any, type: string): void;
+	refresh(id?: string|number): void;
+	refreshCursor(): void;
+	remove(id: string|number): void;
+	removeBind(source: any): void;
+	saveBatch(func: WebixCallback): void;
+	serialize(): any;
+	setBindData(data: any, key: string|number): void;
+	setCursor(cursor: string|number): void;
+	sort(by: string, dir?: string, as?: string): void;
+	sync(source: any, filter: WebixCallback, silent: boolean): void;
+	unbind(): void;
+	unblockEvent(): void;
+	updateItem(id: string|number, data: any): void;
+	validate(id?: string): boolean;
 	config: { [key: string]: any; };
 	name: string;
 }
-var TreeCollection:TreeCollection;
+var TreeCollection: TreeCollection;
 interface TreeDataLoader{
-	loadBranch(id:string|number, callback:WebixCallback, url:string):void;
+	loadBranch(id: string|number, callback: WebixCallback, url: string): void;
 }
-var TreeDataLoader:TreeDataLoader;
+var TreeDataLoader: TreeDataLoader;
 interface TreeDataMove{
-	copy(sid:string|number, tindex:number, tobj?:webix.ui.baseview, details?:any):string|number;
-	move(sid:string|number, tindex:number, tobj?:webix.ui.baseview, details?:any):string|number;
+	copy(sid: string|number, tindex: number, tobj?: webix.ui.baseview, details?: any): string|number;
+	move(sid: string|number, tindex: number, tobj?: webix.ui.baseview, details?: any): string|number;
 	$dropAllow: WebixCallback;
 }
-var TreeDataMove:TreeDataMove;
+var TreeDataMove: TreeDataMove;
 interface TreeRenderStack{
-	getItemNode(id:string|number):void;
-	render(id:string|number, data:any, type:string):void;
+	getItemNode(id: string|number): void;
+	render(id: string|number, data: any, type: string): void;
 }
-var TreeRenderStack:TreeRenderStack;
+var TreeRenderStack: TreeRenderStack;
 interface TreeStateCheckbox{
-	checkAll(id?:string|number):void;
-	checkItem(id:string):void;
-	getChecked():any[];
-	isChecked(id:string|number):boolean;
-	uncheckAll(id?:string|number):void;
-	uncheckItem(id:string):void;
+	checkAll(id?: string|number): void;
+	checkItem(id: string): void;
+	getChecked(): any[];
+	isChecked(id: string|number): boolean;
+	uncheckAll(id?: string|number): void;
+	uncheckItem(id: string): void;
 }
-var TreeStateCheckbox:TreeStateCheckbox;
+var TreeStateCheckbox: TreeStateCheckbox;
 interface TreeStore{
-	add(obj:any, index?:number, parentId?:string):string;
-	changeId(old:string|number, newid:string|number):void;
-	clearAll():void;
-	count():number;
-	each(code:WebixCallback, master:any, all:boolean, pid:string):void;
-	eachChild(pid:string, code:WebixCallback, master?:any, all?:boolean):void;
-	eachLeaf(pid:string, code:WebixCallback):void;
-	eachOpen(code:WebixCallback, master?:any, pid?:string):void;
-	eachSubItem(pid:string, code:WebixCallback):void;
-	getBranch(id:string):any[];
-	getBranchIndex(id:string|number, parent?:string|number):number;
-	getFirstChildId(id:string|number):string;
-	getNextSiblingId(id:string|number):string|number;
-	getParentId(id:string|number):string|number;
-	getPrevSiblingId(id:string|number):string|number;
-	getTopRange():any[];
-	isBranch(id:string|number):boolean;
-	provideApi(target:any, eventable:boolean):void;
-	remove(id:string|number):void;
-	serialize():any;
+	add(obj: any, index?: number, parentId?: string): string;
+	changeId(old: string|number, newid: string|number): void;
+	clearAll(): void;
+	count(): number;
+	each(code: WebixCallback, master: any, all: boolean, pid: string): void;
+	eachChild(pid: string, code: WebixCallback, master?: any, all?: boolean): void;
+	eachLeaf(pid: string, code: WebixCallback): void;
+	eachOpen(code: WebixCallback, master?: any, pid?: string): void;
+	eachSubItem(pid: string, code: WebixCallback): void;
+	getBranch(id: string): any[];
+	getBranchIndex(id: string|number, parent?: string|number): number;
+	getFirstChildId(id: string|number): string;
+	getNextSiblingId(id: string|number): string|number;
+	getParentId(id: string|number): string|number;
+	getPrevSiblingId(id: string|number): string|number;
+	getTopRange(): any[];
+	isBranch(id: string|number): boolean;
+	provideApi(target: any, eventable: boolean): void;
+	remove(id: string|number): void;
+	serialize(): any;
 	name: string;
 }
-var TreeStore:TreeStore;
+var TreeStore: TreeStore;
 interface TreeTableClick{
 }
-var TreeTableClick:TreeTableClick;
+var TreeTableClick: TreeTableClick;
 interface TreeTablePaste{
-	insert(data:any[]):void;
+	insert(data: any[]): void;
 }
-var TreeTablePaste:TreeTablePaste;
+var TreeTablePaste: TreeTablePaste;
 interface TreeType{
-	checkbox(obj:any, common:any):string;
-	folder(obj:any, common:any):string;
-	icon(obj:any, common:any):string;
-	space(obj:any, common:any):string;
+	checkbox(obj: any, common: any): string;
+	folder(obj: any, common: any): string;
+	icon(obj: any, common: any): string;
+	space(obj: any, common: any): string;
 }
-var TreeType:TreeType;
+var TreeType: TreeType;
 interface UIExtension{
 }
-var UIExtension:UIExtension;
+var UIExtension: UIExtension;
 interface UIManager{
-	addHotKey(key:string, handler:WebixCallback, obj?:any):void;
-	applyChanges():void;
-	canFocus(id:string|number):boolean;
-	destructor():void;
-	getFocus():webix.ui.baseview;
-	getNext(view:any):any;
-	getPrev(view:any):any;
-	getState(id:string, childs:boolean):any;
-	getTop(id:string|number):any;
-	hasFocus(id:string|number):boolean;
-	removeHotKey(key:string, handler?:WebixCallback, obj?:any):void;
-	setFocus(id:string|number):void;
-	setState(state:any):void;
+	addHotKey(key: string, handler: WebixCallback, obj?: any): void;
+	applyChanges(): void;
+	canFocus(id: string|number): boolean;
+	destructor(): void;
+	getFocus(): webix.ui.baseview;
+	getNext(view: any): any;
+	getPrev(view: any): any;
+	getState(id: string, childs: boolean): any;
+	getTop(id: string|number): any;
+	hasFocus(id: string|number): boolean;
+	removeHotKey(key: string, handler?: WebixCallback, obj?: any): void;
+	setFocus(id: string|number): void;
+	setState(state: any): void;
 }
-var UIManager:UIManager;
+var UIManager: UIManager;
 interface Undo{
-	ignoreUndo(functor:WebixCallback):void;
-	removeUndo(id:string):void;
-	undo(id:string):void;
+	ignoreUndo(functor: WebixCallback): void;
+	removeUndo(id: string): void;
+	undo(id: string): void;
 }
-var Undo:Undo;
+var Undo: Undo;
 interface UploadDriver{
 	flash: any;
 	html5: any;
 }
-var UploadDriver:UploadDriver;
+var UploadDriver: UploadDriver;
 interface ValidateCollection{
-	clearValidation():void;
-	validate(id?:string):boolean;
+	clearValidation(): void;
+	validate(id?: string): boolean;
 }
-var ValidateCollection:ValidateCollection;
+var ValidateCollection: ValidateCollection;
 interface ValidateData{
-	clearValidation():void;
-	validate(mode?:any):boolean;
+	clearValidation(): void;
+	validate(mode?: any): boolean;
 }
-var ValidateData:ValidateData;
+var ValidateData: ValidateData;
 interface ValueBind{
 }
-var ValueBind:ValueBind;
+var ValueBind: ValueBind;
 interface Values{
-	clear():void;
-	focus(item:string):void;
-	getCleanValues():any;
-	getDirtyValues():any;
-	getValues(details?:any):{ [key: string]: any; };
-	isDirty():boolean;
-	markInvalid(name:string, state?:boolean|string):void;
-	setDirty(mark?:boolean):void;
-	setValues(values:any, update?:boolean):void;
+	clear(): void;
+	focus(item: string): void;
+	getCleanValues(): any;
+	getDirtyValues(): any;
+	getValues(details?: any):{ [key: string]: any; };
+	isDirty(): boolean;
+	markInvalid(name: string, state?: boolean|string): void;
+	setDirty(mark?: boolean): void;
+	setValues(values: any, update?: boolean): void;
 }
-var Values:Values;
+var Values: Values;
 interface VirtualRenderStack{
-	getItemNode(id:string|number):void;
-	render(id:string|number, data:any, type:string):void;
-	showItem(id:string|number):void;
+	getItemNode(id: string|number): void;
+	render(id: string|number, data: any, type: string): void;
+	showItem(id: string|number): void;
 }
-var VirtualRenderStack:VirtualRenderStack;
+var VirtualRenderStack: VirtualRenderStack;
 
 
 interface DataCollectionFactory {
@@ -976,11 +976,11 @@ var DataCollection: DataCollectionFactory;
 
 namespace ui {
 
-function delay(config:any):void;
-function fullScreen():void;
-function hasMethod(name:string, method_name:string):boolean;
-function resize():void;
-function zIndex():number;
+function delay(config: any): void;
+function fullScreen(): void;
+function hasMethod(name: string, method_name: string): boolean;
+function resize(): void;
+function zIndex(): number;
 var scrollSize: number;
 var zIndexBase: number;
 
@@ -1007,40 +1007,40 @@ interface baselayoutConfig{
 }
 type baselayoutEventName ='onBindRequest'|'onDestruct';
 interface baselayout extends webix.ui.baseview{
-	addView(view:any, index?:number):webix.ui.baseview;
-	adjust():void;
-	attachEvent(type:baselayoutEventName, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	disable():void;
-	enable():void;
-	getChildViews():any[];
-	getFormView():webix.ui.baseview;
-	getNode():any;
-	getParentView():any;
-	getTopParentView():webix.ui.baseview;
-	hasEvent(name:string):boolean;
-	hide():void;
-	index(obj:any):number;
-	isEnabled():boolean;
-	isVisible():boolean;
-	mapEvent(map:any):void;
-	reconstruct():void;
-	removeView(id:string|number):void;
-	resize():void;
-	resizeChildren():void;
-	show(force?:boolean, animation?:boolean):void;
-	showBatch(name:string):void;
-	unbind():void;
-	unblockEvent():void;
+	addView(view: any, index?: number): webix.ui.baseview;
+	adjust(): void;
+	attachEvent(type: baselayoutEventName, functor: WebixCallback, id?: string): string|number;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	define(property: string, value: any): void;
+	destructor(): void;
+	detachEvent(id: string): void;
+	disable(): void;
+	enable(): void;
+	getChildViews(): any[];
+	getFormView(): webix.ui.baseview;
+	getNode(): any;
+	getParentView(): any;
+	getTopParentView(): webix.ui.baseview;
+	hasEvent(name: string): boolean;
+	hide(): void;
+	index(obj: any): number;
+	isEnabled(): boolean;
+	isVisible(): boolean;
+	mapEvent(map: any): void;
+	reconstruct(): void;
+	removeView(id: string|number): void;
+	resize(): void;
+	resizeChildren(): void;
+	show(force?: boolean, animation?: boolean): void;
+	showBatch(name: string): void;
+	unbind(): void;
+	unblockEvent(): void;
 
 	$getSize: any[];
 	$height: number;
-	$setSize(x:number, y:number):boolean;
+	$setSize(x: number, y: number): boolean;
 	$skin: any;
 	$view: HTMLElement;
 	$width: number;
@@ -1065,27 +1065,27 @@ interface baseviewConfig{
 }
 type baseviewEventName ='onBindRequest'|'onDestruct';
 interface baseview{
-	adjust():void;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	define(property:string, value:any):void;
-	destructor():void;
-	disable():void;
-	enable():void;
-	getChildViews():any[];
-	getFormView():webix.ui.baseview;
-	getNode():any;
-	getParentView():any;
-	getTopParentView():webix.ui.baseview;
-	hide():void;
-	isEnabled():boolean;
-	isVisible():boolean;
-	resize():void;
-	show(force?:boolean, animation?:boolean):void;
-	unbind():void;
+	adjust(): void;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	define(property: string, value: any): void;
+	destructor(): void;
+	disable(): void;
+	enable(): void;
+	getChildViews(): any[];
+	getFormView(): webix.ui.baseview;
+	getNode(): any;
+	getParentView(): any;
+	getTopParentView(): webix.ui.baseview;
+	hide(): void;
+	isEnabled(): boolean;
+	isVisible(): boolean;
+	resize(): void;
+	show(force?: boolean, animation?: boolean): void;
+	unbind(): void;
 
 	$getSize: any[];
 	$height: number;
-	$setSize(x:number, y:number):boolean;
+	$setSize(x: number, y: number): boolean;
 	$skin: any;
 	$view: HTMLElement;
 	$width: number;
@@ -1138,49 +1138,49 @@ interface checksuggestConfig{
 }
 type checksuggestEventName ='onAfterScroll'|'onBeforeShow'|'onBindRequest'|'onBlur'|'onDestruct'|'onFocus'|'onHide'|'onKeyPress'|'onLongTouch'|'onShow'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValueSuggest'|'onViewMove'|'onViewMoveEnd'|'onViewResize';
 interface checksuggest extends webix.ui.baseview{
-	adjust():void;
-	attachEvent(type:checksuggestEventName, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	close():void;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	disable():void;
-	enable():void;
-	getBody():any;
-	getButton():webix.ui.baseview;
-	getChildViews():any[];
-	getFormView():webix.ui.baseview;
-	getHead():any;
-	getItemText(id:string|number):string;
-	getList():webix.ui.baseview;
-	getMasterValue():any;
-	getNode():any;
-	getParentView():any;
-	getSuggestion():string;
-	getTopParentView():webix.ui.baseview;
-	getValue():string|number;
-	hasEvent(name:string):boolean;
-	hide():void;
-	isEnabled():boolean;
-	isVisible():boolean;
-	linkInput(input:HTMLElement):void;
-	mapEvent(map:any):void;
-	resize():void;
-	resizeChildren():void;
-	setMasterValue(value:any):void;
-	setPosition(x:number, y:number):void;
-	setValue(value:string|number):void;
-	show(force?:boolean, animation?:boolean):void;
-	unbind():void;
-	unblockEvent():void;
+	adjust(): void;
+	attachEvent(type: checksuggestEventName, functor: WebixCallback, id?: string): string|number;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	close(): void;
+	define(property: string, value: any): void;
+	destructor(): void;
+	detachEvent(id: string): void;
+	disable(): void;
+	enable(): void;
+	getBody(): any;
+	getButton(): webix.ui.baseview;
+	getChildViews(): any[];
+	getFormView(): webix.ui.baseview;
+	getHead(): any;
+	getItemText(id: string|number): string;
+	getList(): webix.ui.baseview;
+	getMasterValue(): any;
+	getNode(): any;
+	getParentView(): any;
+	getSuggestion(): string;
+	getTopParentView(): webix.ui.baseview;
+	getValue(): string|number;
+	hasEvent(name: string): boolean;
+	hide(): void;
+	isEnabled(): boolean;
+	isVisible(): boolean;
+	linkInput(input: HTMLElement): void;
+	mapEvent(map: any): void;
+	resize(): void;
+	resizeChildren(): void;
+	setMasterValue(value: any): void;
+	setPosition(x: number, y: number): void;
+	setValue(value: string|number): void;
+	show(force?: boolean, animation?: boolean): void;
+	unbind(): void;
+	unblockEvent(): void;
 
 	$getSize: any[];
 	$height: number;
 	$scope: any;
-	$setSize(x:number, y:number):boolean;
+	$setSize(x: number, y: number): boolean;
 	$skin: any;
 	$view: HTMLElement;
 	$width: number;
@@ -1220,71 +1220,71 @@ interface protoConfig{
 }
 type protoEventName ='onAfterAdd'|'onAfterDelete'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onAfterSort'|'onBeforeAdd'|'onBeforeDelete'|'onBeforeLoad'|'onBeforeRender'|'onBeforeSort'|'onBindRequest'|'onBlur'|'onDataRequest'|'onDataUpdate'|'onDestruct'|'onFocus'|'onItemRender'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValidationError'|'onValidationSuccess'|'onViewResize';
 interface proto extends webix.ui.baseview{
-	add(obj:any, index?:number):string|number;
-	addCss(id:string|number, css:string, silent?:boolean):void;
-	adjust():void;
-	attachEvent(type:protoEventName, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	clearAll():void;
-	clearCss(css:string, silent?:boolean):void;
-	clearValidation():void;
-	count():number;
-	customize(obj:any):void;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	disable():void;
-	enable():void;
-	exists(id:string|number):boolean;
-	filter(text:string|WebixTemplate|WebixCallback, value:string, preserve:boolean):void;
-	find(criterion:WebixCallback, first?:boolean):any;
-	getChildViews():any[];
-	getFirstId():string|number;
-	getFormView():webix.ui.baseview;
-	getIdByIndex(index:number):string|number;
-	getIndexById(id:string|number):number;
-	getItem(id:string|number):any;
-	getItemNode(id:string|number):void;
-	getLastId():string|number;
-	getNextId(id:string|number, step:number):string|number;
-	getNode():any;
-	getPage():number;
-	getPager():any;
-	getParentView():any;
-	getPrevId(id:string|number, step:number):string|number;
-	getTopParentView():webix.ui.baseview;
-	hasCss(id:string|number, css:string):boolean;
-	hasEvent(name:string):boolean;
-	hide():void;
-	isEnabled():boolean;
-	isVisible():boolean;
-	load(url:string, type?:string, callback?:WebixCallback):webix.promise;
-	loadNext(count:number, start:number, callback:WebixCallback, url:string, now:boolean):void;
-	locate(e:Event):string|number;
-	mapEvent(map:any):void;
-	parse(data:any, type:string):void;
-	refresh(id?:string|number):void;
-	remove(id:string|number):void;
-	removeCss(id:string|number, css:string, silent?:boolean):void;
-	render(id:string|number, data:any, type:string):void;
-	resize():void;
-	serialize():any;
-	setPage(page:number):void;
-	show(force?:boolean, animation?:boolean):void;
-	showItem(id:string|number):void;
-	sort(by:string, dir?:string, as?:string):void;
-	sync(source:any, filter:WebixCallback, silent:boolean):void;
-	unbind():void;
-	unblockEvent():void;
-	updateItem(id:string|number, data:any):void;
-	validate(id?:string):boolean;
+	add(obj: any, index?: number): string|number;
+	addCss(id: string|number, css: string, silent?: boolean): void;
+	adjust(): void;
+	attachEvent(type: protoEventName, functor: WebixCallback, id?: string): string|number;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	clearAll(): void;
+	clearCss(css: string, silent?: boolean): void;
+	clearValidation(): void;
+	count(): number;
+	customize(obj: any): void;
+	define(property: string, value: any): void;
+	destructor(): void;
+	detachEvent(id: string): void;
+	disable(): void;
+	enable(): void;
+	exists(id: string|number): boolean;
+	filter(text: string|WebixTemplate|WebixCallback, value: string, preserve: boolean): void;
+	find(criterion: WebixCallback, first?: boolean): any;
+	getChildViews(): any[];
+	getFirstId(): string|number;
+	getFormView(): webix.ui.baseview;
+	getIdByIndex(index: number): string|number;
+	getIndexById(id: string|number): number;
+	getItem(id: string|number): any;
+	getItemNode(id: string|number): void;
+	getLastId(): string|number;
+	getNextId(id: string|number, step: number): string|number;
+	getNode(): any;
+	getPage(): number;
+	getPager(): any;
+	getParentView(): any;
+	getPrevId(id: string|number, step: number): string|number;
+	getTopParentView(): webix.ui.baseview;
+	hasCss(id: string|number, css: string): boolean;
+	hasEvent(name: string): boolean;
+	hide(): void;
+	isEnabled(): boolean;
+	isVisible(): boolean;
+	load(url: string, type?: string, callback?: WebixCallback): webix.promise;
+	loadNext(count: number, start: number, callback: WebixCallback, url: string, now: boolean): void;
+	locate(e: Event): string|number;
+	mapEvent(map: any): void;
+	parse(data: any, type: string): void;
+	refresh(id?: string|number): void;
+	remove(id: string|number): void;
+	removeCss(id: string|number, css: string, silent?: boolean): void;
+	render(id: string|number, data: any, type: string): void;
+	resize(): void;
+	serialize(): any;
+	setPage(page: number): void;
+	show(force?: boolean, animation?: boolean): void;
+	showItem(id: string|number): void;
+	sort(by: string, dir?: string, as?: string): void;
+	sync(source: any, filter: WebixCallback, silent: boolean): void;
+	unbind(): void;
+	unblockEvent(): void;
+	updateItem(id: string|number, data: any): void;
+	validate(id?: string): boolean;
 
 	$getSize: any[];
 	$height: number;
 	$scope: any;
-	$setSize(x:number, y:number):boolean;
+	$setSize(x: number, y: number): boolean;
 	$skin: any;
 	$view: HTMLElement;
 	$width: number;
@@ -1307,14 +1307,14 @@ interface resizeareaConfig{
 }
 type resizeareaEventName ='onResize'|'onResizeEnd';
 interface resizearea extends webix.ui.baseview{
-	attachEvent(type:resizeareaEventName, functor:WebixCallback, id?:string):string|number;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	define(property:string, value:any):void;
-	detachEvent(id:string):void;
-	hasEvent(name:string):boolean;
-	mapEvent(map:any):void;
-	unblockEvent():void;
+	attachEvent(type: resizeareaEventName, functor: WebixCallback, id?: string): string|number;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	define(property: string, value: any): void;
+	detachEvent(id: string): void;
+	hasEvent(name: string): boolean;
+	mapEvent(map: any): void;
+	unblockEvent(): void;
 
 	config: resizeareaConfig;
 	name: string;
@@ -1337,28 +1337,28 @@ interface viewConfig{
 }
 type viewEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize';
 interface view extends webix.ui.baseview{
-	adjust():void;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	define(property:string, value:any):void;
-	destructor():void;
-	disable():void;
-	enable():void;
-	getChildViews():any[];
-	getFormView():webix.ui.baseview;
-	getNode():any;
-	getParentView():any;
-	getTopParentView():webix.ui.baseview;
-	hide():void;
-	isEnabled():boolean;
-	isVisible():boolean;
-	resize():void;
-	show(force?:boolean, animation?:boolean):void;
-	unbind():void;
+	adjust(): void;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	define(property: string, value: any): void;
+	destructor(): void;
+	disable(): void;
+	enable(): void;
+	getChildViews(): any[];
+	getFormView(): webix.ui.baseview;
+	getNode(): any;
+	getParentView(): any;
+	getTopParentView(): webix.ui.baseview;
+	hide(): void;
+	isEnabled(): boolean;
+	isVisible(): boolean;
+	resize(): void;
+	show(force?: boolean, animation?: boolean): void;
+	unbind(): void;
 
 	$getSize: any[];
 	$height: number;
 	$scope: any;
-	$setSize(x:number, y:number):boolean;
+	$setSize(x: number, y: number): boolean;
 	$skin: any;
 	$view: HTMLElement;
 	$width: number;
@@ -1380,19 +1380,19 @@ interface vscrollConfig{
 }
 type vscrollEventName ='onScroll';
 interface vscroll extends webix.ui.baseview{
-	activeArea(node:HTMLElement):void;
-	attachEvent(type:vscrollEventName, functor:WebixCallback, id?:string):string|number;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	define(property:string, value:any):void;
-	detachEvent(id:string):void;
-	getScroll():number;
-	getSize():number;
-	hasEvent(name:string):boolean;
-	mapEvent(map:any):void;
-	scrollTo(pos:number):void;
-	sizeTo(size:number):void;
-	unblockEvent():void;
+	activeArea(node: HTMLElement): void;
+	attachEvent(type: vscrollEventName, functor: WebixCallback, id?: string): string|number;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	define(property: string, value: any): void;
+	detachEvent(id: string): void;
+	getScroll(): number;
+	getSize(): number;
+	hasEvent(name: string): boolean;
+	mapEvent(map: any): void;
+	scrollTo(pos: number): void;
+	sizeTo(size: number): void;
+	unblockEvent(): void;
 
 	config: vscrollConfig;
 	name: string;
@@ -1429,40 +1429,40 @@ interface accordionConfig{
 }
 type accordionEventName ='onAfterCollapse'|'onAfterExpand'|'onBindRequest'|'onDestruct';
 interface accordion extends webix.ui.baseview{
-	addView(view:any, index?:number):webix.ui.baseview;
-	adjust():void;
-	attachEvent(type:accordionEventName, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	disable():void;
-	enable():void;
-	getChildViews():any[];
-	getFormView():webix.ui.baseview;
-	getNode():any;
-	getParentView():any;
-	getTopParentView():webix.ui.baseview;
-	hasEvent(name:string):boolean;
-	hide():void;
-	index(obj:any):number;
-	isEnabled():boolean;
-	isVisible():boolean;
-	mapEvent(map:any):void;
-	reconstruct():void;
-	removeView(id:string|number):void;
-	resize():void;
-	resizeChildren():void;
-	show(force?:boolean, animation?:boolean):void;
-	showBatch(name:string):void;
-	unbind():void;
-	unblockEvent():void;
+	addView(view: any, index?: number): webix.ui.baseview;
+	adjust(): void;
+	attachEvent(type: accordionEventName, functor: WebixCallback, id?: string): string|number;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	define(property: string, value: any): void;
+	destructor(): void;
+	detachEvent(id: string): void;
+	disable(): void;
+	enable(): void;
+	getChildViews(): any[];
+	getFormView(): webix.ui.baseview;
+	getNode(): any;
+	getParentView(): any;
+	getTopParentView(): webix.ui.baseview;
+	hasEvent(name: string): boolean;
+	hide(): void;
+	index(obj: any): number;
+	isEnabled(): boolean;
+	isVisible(): boolean;
+	mapEvent(map: any): void;
+	reconstruct(): void;
+	removeView(id: string|number): void;
+	resize(): void;
+	resizeChildren(): void;
+	show(force?: boolean, animation?: boolean): void;
+	showBatch(name: string): void;
+	unbind(): void;
+	unblockEvent(): void;
 
 	$getSize: any[];
 	$height: number;
-	$setSize(x:number, y:number):boolean;
+	$setSize(x: number, y: number): boolean;
 	$skin: any;
 	$view: HTMLElement;
 	$width: number;
@@ -1499,38 +1499,38 @@ interface accordionitemConfig{
 }
 type accordionitemEventName ='onAfterContextMenu'|'onAfterScroll'|'onBeforeContextMenu'|'onBindRequest'|'onBlur'|'onDestruct'|'onFocus'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize';
 interface accordionitem extends webix.ui.baseview{
-	adjust():void;
-	attachEvent(type:accordionitemEventName, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	collapse():void;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	disable():void;
-	enable():void;
-	expand():void;
-	getChildViews():any[];
-	getFormView():webix.ui.baseview;
-	getNode():any;
-	getParentView():any;
-	getTopParentView():webix.ui.baseview;
-	hasEvent(name:string):boolean;
-	hide():void;
-	isEnabled():boolean;
-	isVisible():boolean;
-	mapEvent(map:any):void;
-	refresh():void;
-	resize():void;
-	show(force?:boolean, animation?:boolean):void;
-	unbind():void;
-	unblockEvent():void;
+	adjust(): void;
+	attachEvent(type: accordionitemEventName, functor: WebixCallback, id?: string): string|number;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	blockEvent(): void;
+	callEvent(name: string, params: any[]): boolean;
+	collapse(): void;
+	define(property: string, value: any): void;
+	destructor(): void;
+	detachEvent(id: string): void;
+	disable(): void;
+	enable(): void;
+	expand(): void;
+	getChildViews(): any[];
+	getFormView(): webix.ui.baseview;
+	getNode(): any;
+	getParentView(): any;
+	getTopParentView(): webix.ui.baseview;
+	hasEvent(name: string): boolean;
+	hide(): void;
+	isEnabled(): boolean;
+	isVisible(): boolean;
+	mapEvent(map: any): void;
+	refresh(): void;
+	resize(): void;
+	show(force?: boolean, animation?: boolean): void;
+	unbind(): void;
+	unblockEvent(): void;
 
 	$getSize: any[];
 	$height: number;
 	$scope: any;
-	$setSize(x:number, y:number):boolean;
+	$setSize(x: number, y: number): boolean;
 	$skin: any;
 	$view: HTMLElement;
 	$width: number;
@@ -1565,31 +1565,31 @@ interface barcodeConfig{
 }
 type barcodeEventName ='onAfterScroll'|'onBindRequest'|'onBlur'|'onDestruct'|'onFocus'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize';
 interface barcode extends webix.ui.baseview{
-	adjust():void;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	define(property:string, value:any):void;
-	destructor():void;
-	disable():void;
-	enable():void;
-	getChildViews():any[];
-	getFormView():webix.ui.baseview;
-	getNode():any;
-	getParentView():any;
-	getTopParentView():webix.ui.baseview;
-	getValue():string;
-	hide():void;
-	isEnabled():boolean;
-	isVisible():boolean;
-	render():void;
-	resize():void;
-	setValue(value:string):void;
-	show(force?:boolean, animation?:boolean):void;
-	unbind():void;
+	adjust(): void;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	define(property: string, value: any): void;
+	destructor(): void;
+	disable(): void;
+	enable(): void;
+	getChildViews(): any[];
+	getFormView(): webix.ui.baseview;
+	getNode(): any;
+	getParentView(): any;
+	getTopParentView(): webix.ui.baseview;
+	getValue(): string;
+	hide(): void;
+	isEnabled(): boolean;
+	isVisible(): boolean;
+	render(): void;
+	resize(): void;
+	setValue(value: string): void;
+	show(force?: boolean, animation?: boolean): void;
+	unbind(): void;
 
 	$getSize: any[];
 	$height: number;
 	$scope: any;
-	$setSize(x:number, y:number):boolean;
+	$setSize(x: number, y: number): boolean;
 	$skin: any;
 	$view: HTMLElement;
 	$width: number;
@@ -1631,35 +1631,35 @@ interface buttonConfig{
 }
 type buttonEventName ='onAfterRender'|'onAfterScroll'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onFocus'|'onItemClick'|'onKeyPress'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize';
 interface button extends webix.ui.baseview{
-	adjust():void;
-	attachEvent(type:buttonEventName, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	blur():void;
-	callEvent(name:string, params:any[]):boolean;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	disable():void;
-	enable():void;
-	focus():void;
-	getChildViews():any[];
-	getFormView():webix.ui.baseview;
-	getInputNode():HTMLElement;
-	getNode():any;
-	getParentView():any;
-	getTopParentView():webix.ui.baseview;
-	getValue():string;
-	hasEvent(name:string):boolean;
-	hide():void;
-	isEnabled():boolean;
-	isVisible():boolean;
-	mapEvent(map:any):void;
-	refresh():void;
-	render(id:string|number, data:any, type:string):void;
-	resize():void;
-	setValue(value:string):void;
-	show(force?:boolean, animation?:boolean):void;
+	adjust(): void;
+	attachEvent(type: buttonEventName, functor: WebixCallback, id?: string): string|number;
+	bind(target: any, rule?: WebixCallback, format?: string): void;
+	blockEvent(): void;
+	blur(): void;
+	callEvent(name: string, params: any[]): boolean;
+	define(property: string, value: any): void;
+	destructor(): void;
+	detachEvent(id: string): void;
+	disable(): void;
+	enable(): void;
+	focus(): void;
+	getChildViews(): any[];
+	getFormView(): webix.ui.baseview;
+	getInputNode(): HTMLElement;
+	getNode(): any;
+	getParentView(): any;
+	getTopParentView(): webix.ui.baseview;
+	getValue(): string;
+	hasEvent(name: string): boolean;
+	hide(): void;
+	isEnabled(): boolean;
+	isVisible(): boolean;
+	mapEvent(map: any): void;
+	refresh(): void;
+	render(id: string|number, data: any, type: string): void;
+	resize(): void;
+	setValue(value: string): void;
+	show(force?: boolean, animation?:boolean):void;
 	sync(source:any, filter:WebixCallback, silent:boolean):void;
 	unbind():void;
 	unblockEvent():void;

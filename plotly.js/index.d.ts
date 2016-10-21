@@ -29,11 +29,11 @@ interface PlotlyConfig {
 }
 
 interface PlotlyStatic {
-    newPlot(divid:string | HTMLElement, data:any[], layout?:any, config?:PlotlyConfig):void;
+    newPlot(divid: string | HTMLElement, data: any[], layout?: any, config?: PlotlyConfig): void;
 }
 
-declare module "plotly.js" {    
+declare module "plotly.js" {
     export = plotly;
 }
 
-declare var plotly:PlotlyStatic;
+declare var plotly: PlotlyStatic;

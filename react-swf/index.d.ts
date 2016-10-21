@@ -20,7 +20,7 @@ declare namespace rswf {
         /**
         *  Identifies the location of the Flash Player plug-in so that the user can download it if it is not already installed.
         */
-        pluginspage?:string
+        pluginspage?: string
         /**
         * Specifies the width of the SWF content in either pixels or percentage of browser window.
         */

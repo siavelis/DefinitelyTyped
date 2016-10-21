@@ -19,9 +19,9 @@ interface RaphaelAnimation {
 }
 
 interface RaphaelFont {
-    w:number;
-    face:any;
-    glyphs:any;
+    w: number;
+    face: any;
+    glyphs: any;
 }
 
 interface RaphaelElement {

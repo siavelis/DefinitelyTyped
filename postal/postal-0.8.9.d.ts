@@ -12,13 +12,13 @@ interface IConfiguration{
 interface ISubscriptionDefinition{
 	unsubscribe(): void;
 	subscribe(callback: (data: any, envelope: IEnvelope)=> void): void;
-	defer():ISubscriptionDefinition;
+	defer(): ISubscriptionDefinition;
 	disposeAfter(maxCalls: number): ISubscriptionDefinition;
 	distinctUntilChanged(): ISubscriptionDefinition;
 	once(): ISubscriptionDefinition;
 	withConstraint(predicate: Function): ISubscriptionDefinition;
 	withConstraints(predicates: Array<Function>): ISubscriptionDefinition;
-	
+
 	withContext(context: any): ISubscriptionDefinition;
 	withDebounce(milliseconds: number, immediate: boolean ): ISubscriptionDefinition;
 	withDelay(milliseconds: number): ISubscriptionDefinition;
@@ -52,10 +52,10 @@ interface IPostalUtils{
 }
 
 interface IPostal {
-	channel(name?:string): IChannelDefinition;
-	
+	channel(name?: string): IChannelDefinition;
+
 	linkChannels(sources: IEnvelope | IEnvelope[], destinations:  IEnvelope | IEnvelope[]): ISubscriptionDefinition[];
-	
+
 	utils: IPostalUtils;
 
 	configuration: IConfiguration;
