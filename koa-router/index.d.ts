@@ -27,7 +27,7 @@ declare module Router {
 
     export interface IRouterOptions {
         /**
-         * Router prefixes 
+         * Router prefixes
          */
         prefix?: string;
         /**

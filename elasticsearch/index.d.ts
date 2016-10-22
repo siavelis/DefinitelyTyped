@@ -286,7 +286,7 @@ declare module Elasticsearch {
             }[]
         },
         aggregations?: any
-    } 
+    }
 
     export interface MSearchParams extends GenericParams {
         index?: string | string[] | Boolean;

@@ -1832,16 +1832,16 @@ declare namespace mat4 {
 
      /**
      * Creates a matrix from a quaternion rotation, vector translation and vector scale.
-     * 
+     *
      * This is equivalent to (but much faster than):
-     * 
-     *     mat4.identity(dest); 
-     *     mat4.translate(dest, vec); 
-     *     var quatMat = mat4.create(); 
-     *     quat4.toMat4(quat, quatMat); 
-     *     mat4.multiply(dest, quatMat); 
+     *
+     *     mat4.identity(dest);
+     *     mat4.translate(dest, vec);
+     *     var quatMat = mat4.create();
+     *     quat4.toMat4(quat, quatMat);
+     *     mat4.multiply(dest, quatMat);
      *     mat4.scale(dest, scale)
-     * 
+     *
      * @param out mat4 receiving operation result
      * @param q Rotation quaternion
      * @param v Translation vector

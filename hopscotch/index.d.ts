@@ -27,7 +27,7 @@ interface HopscotchConfiguration {
   onEnd?:   CallbackNameNamesOrDefinition;
   onClose?: CallbackNameNamesOrDefinition;
   onError?: CallbackNameNamesOrDefinition;
-               
+
   i18n?: {
     nextBtn?: string;
     prevBtn?: string;
@@ -81,7 +81,7 @@ interface HopscotchStatic {
    * Actually starts the tour. Optional stepNum argument specifies what step to start at.
    */
   startTour(tour: TourDefinition, stepNum?: number): void;
-  
+
   /**
    * Skips to a given step in the tour
    */
@@ -128,12 +128,12 @@ interface HopscotchStatic {
    * Adds a callback for one of the event types. Valid event types are:
    * *start*, *end*, *next*, *prev*, *show*, *close*, *error*
    */
-  listen(eventName: string, callback: () => void): void; 
+  listen(eventName: string, callback: () => void): void;
 
   /**
    * Removes a callback for one of the event types.
    */
-  unlisten(eventName: string, callback: () => void): void; 
+  unlisten(eventName: string, callback: () => void): void;
 
   /**
    * Remove callbacks for hopscotch events. If tourOnly is set to true, only removes

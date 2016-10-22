@@ -4,8 +4,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 /*************************************
- *                                   * 
- *               MODULES             * 
+ *                                   *
+ *               MODULES             *
  *                                   *
  *************************************/
 ///////////////////////////

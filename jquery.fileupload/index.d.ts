@@ -5,7 +5,7 @@
 
 /// <reference types="jquery"/>
 
-// Interface options for the plugin 
+// Interface options for the plugin
 interface JQueryFileInputOptions {
 
     /**
@@ -205,7 +205,7 @@ interface JQueryFileInputOptions {
 
     cache?: boolean;
     timeout?: number;
-    
+
     active?: Function;
     progress?: (e: JQueryEventObject, data: JQueryFileUploadProgressObject) => void;
     send?: (e: JQueryEventObject, data: JQueryFileUploadProgressObject) => void;
@@ -227,7 +227,7 @@ interface JQueryFileInputOptions {
     chunkfail?: (e: JQueryEventObject, data: JQueryFileUploadChunkObject) => void;
     chunkalways?: (e: JQueryEventObject, data: JQueryFileUploadChunkObject) => void;
 
-    // Others 
+    // Others
     url?: string;
     files?: any;
 

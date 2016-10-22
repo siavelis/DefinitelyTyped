@@ -197,7 +197,7 @@ declare module linqjs {
         cast<TResult>(): IEnumerable<TResult>;
         toArray(): T[];
         toList(): IList<T>;
-        // truly, return type is ILookup<TKey, T> but Visual Studio + TypeScript Compiler can't compile. 
+        // truly, return type is ILookup<TKey, T> but Visual Studio + TypeScript Compiler can't compile.
         toLookup<TKey>(keySelector: (element: T) => TKey): ILookup<TKey, any>;
         toLookup<TKey, TElement>(keySelector: (element: T) => TKey, elementSelector: (element: T) => TElement): ILookup<TKey, TElement>;
         toLookup<TKey, TElement, TCompare>(keySelector: (element: T) => TKey, elementSelector: (element: T) => TElement, compareSelector: (key: TKey) => TCompare): ILookup<TKey, TElement>;

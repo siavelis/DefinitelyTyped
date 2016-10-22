@@ -2,7 +2,7 @@
 // Project: https://github.com/apache/cordova-plugin-media-capture
 // Definitions by: Microsoft Open Technologies Inc <http://msopentech.com>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// 
+//
 // Copyright (c) Microsoft Open Technologies Inc
 // Licensed under the MIT license
 
@@ -75,7 +75,7 @@ interface MediaFile {
     /**
      * Retrieves format information about the media capture file.
      * @param successCallback Invoked with a MediaFileData object when successful.
-     * @param errorCallback   Invoked if the attempt fails, this function. 
+     * @param errorCallback   Invoked if the attempt fails, this function.
      */
     getFormatData(
         successCallback: (data: MediaFileData) => void,

@@ -105,11 +105,11 @@ interface JQuery{
     startGame(callback?: () => void): JQuery;
     pauseGame(): JQuery;
     resumeGame(callback?: () => void ): JQuery;
-    
+
     registerCallback(callback: () => void , rate: number): JQuery;
     registerCallback(callback: () => number , rate: number): JQuery;
     registerCallback(callback: () => boolean , rate: number): JQuery;
-    
+
     clearScenegraph(): JQuery;
     clearAll(clearCallbacks?: boolean): JQuery;
 
@@ -146,7 +146,7 @@ interface JQuery{
 
     addSprite(name: string, options: SpriteOptions): JQuery;
     addGroup(name: string, options: GroupOptions): JQuery;
-    
+
     addTilemap(name: string, tileDescription: number[][], animationList : Animation[], options: TileMapOptions) : JQuery;
     addTilemap(name: string, tileDescription: number[][], animation : Animation, options: TileMapOptions) : JQuery;
     addTilemap(name: string, tileDescription: (i: number, j: number) => number, animationList : Animation[], options: TileMapOptions) : JQuery;
@@ -154,7 +154,7 @@ interface JQuery{
 
 
     gQ: GameQuery;
-    
+
     setAnimation(animation: Animation, callback?: () => any): JQuery;
     setAnimation(animation: number, callback?: () => any): JQuery;
     setAnimation(): JQuery;
@@ -165,7 +165,7 @@ interface JQuery{
 
 interface JQueryStatic{
     playground(): JQuery;
-    
+
     gQ: GameQuery;
     gameQuery: GameQuery;
 }

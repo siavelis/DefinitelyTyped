@@ -8,7 +8,7 @@
 
 interface ObloUtilStatic {
   debug : boolean;
-  
+
   log(...args: any[]) : void;
   error(...args: any[]) : void;
   clip(min : number, max : number, x : number) : number;

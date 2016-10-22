@@ -32,7 +32,7 @@ declare module "react-router-bootstrap/lib/IndexLinkContainer" {
 declare module "react-router-bootstrap" {
 
     import LinkContainer from "react-router-bootstrap/lib/LinkContainer"
-    
+
     import IndexLinkContainer from "react-router-bootstrap/lib/IndexLinkContainer"
 
     export {

@@ -50,7 +50,7 @@ declare namespace scrollReveal {
         reveal(selector: string, interval: number): ScrollRevealObject;
         reveal(selector: string, options: ScrollRevealObjectOptions): ScrollRevealObject;
         reveal(selector: string, options: ScrollRevealObjectOptions, interval: number): ScrollRevealObject;
-        
+
         reveal(selector: HTMLElement): ScrollRevealObject;
         reveal(selector: HTMLElement, interval: number): ScrollRevealObject;
         reveal(selector: HTMLElement, options: ScrollRevealObjectOptions): ScrollRevealObject;

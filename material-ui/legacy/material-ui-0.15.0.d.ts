@@ -533,7 +533,7 @@ declare namespace __MaterialUI {
     namespace propTypes {
         type horizontal = 'left' | 'middle' | 'right';
         type vertical = 'top' | 'center' | 'bottom';
-        
+
         interface origin {
             horizontal: horizontal;
             vertical: vertical;

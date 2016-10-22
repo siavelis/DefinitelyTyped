@@ -23,7 +23,7 @@ interface ScrollToOptions {
     */
     margin?: boolean;
     /**
-    * Add/deduct from the end position. 
+    * Add/deduct from the end position.
     * One number for both axes or { top:x, left:y }.
     */
     offset?: any;
@@ -38,7 +38,7 @@ interface ScrollToOptions {
     */
     queue?: boolean;
     /**
-    * Function to be called after the scrolling ends. 
+    * Function to be called after the scrolling ends.
     */
     onAfter?: () => void;
     /**

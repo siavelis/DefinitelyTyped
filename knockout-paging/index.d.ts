@@ -12,8 +12,8 @@ interface KnockoutStatic {
 
 interface KnockoutPagingOptions {
     defaults: KnockoutPagingDefaultOptions;
-    generators: { 
-    	[name: string]: KnockoutPageGenerator; 
+    generators: {
+    	[name: string]: KnockoutPageGenerator;
 		'sliding': KnockoutSlidingPageGenerator
     }
 }

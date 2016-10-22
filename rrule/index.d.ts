@@ -39,7 +39,7 @@ declare namespace RRule {
         equals(other: Weekday): boolean;
 
         toString(): string;
-        
+
         getJsWeekday(): number;
     }
 
@@ -129,7 +129,7 @@ declare namespace RRule {
         MINUTELY    = 5,
         SECONDLY    = 6
     }
-    
+
     const YEARLY: Frequency;
     const MONTHLY: Frequency;
     const WEEKLY: Frequency;

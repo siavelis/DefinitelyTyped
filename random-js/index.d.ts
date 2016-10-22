@@ -5,7 +5,7 @@
 
 
 declare module TemporaryName {
-	
+
 	export interface Engine {
 
 	}

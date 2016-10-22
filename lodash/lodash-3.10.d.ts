@@ -14726,7 +14726,7 @@ declare module _ {
          * Splits string by separator.
          *
          * Note: This method is based on String#split.
-         * 
+         *
          * @param separator The separator pattern to split by.
          * @param limit The length to truncate results to.
          * @return Returns the new array with the terms splitted.

@@ -8,7 +8,7 @@
 interface bxSliderOptions {
     /**
      * mode Type of transition between slides
-     * 
+     *
      * default: 'horizontal'
      * options: 'horizontal', 'vertical', 'fade'
      */
@@ -16,7 +16,7 @@ interface bxSliderOptions {
 
     /**
      * speed Slide transition duration (in ms)
-     * 
+     *
      * default: 500
      * options: integer
      */
@@ -24,7 +24,7 @@ interface bxSliderOptions {
 
     /**
      * slideMargin Margin between each slide
-     * 
+     *
      * default: 0
      * options: integer
      */
@@ -32,7 +32,7 @@ interface bxSliderOptions {
 
     /**
      * startSlide Starting slide index (zero-based)
-     * 
+     *
      * default: 0
      * options: integer
      */
@@ -40,7 +40,7 @@ interface bxSliderOptions {
 
     /**
      * randomStart Start slider on a random slide
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -49,7 +49,7 @@ interface bxSliderOptions {
     /**
      * slideSelector Element to use as slides (ex. 'div.slide').
      * Note: by default, bxSlider will use all immediate children of the slider element
-     * 
+     *
      * default: ''
      * options: jQuery selector
      */
@@ -57,7 +57,7 @@ interface bxSliderOptions {
 
     /**
      * infiniteLoop If true, clicking "Next" while on the last slide will transition to the first slide and vice-versa
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -66,7 +66,7 @@ interface bxSliderOptions {
     /**
      * hideControlOnEnd If true, "Prev" and "Next" controls will receive a class disabled when slide is the first or the last
      * Note: Only used when infiniteLoop: false
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -75,7 +75,7 @@ interface bxSliderOptions {
     /**
      * easing The type of "easing" to use during transitions. If using CSS transitions, include a value for the transition-timing-function property. If not using CSS transitions, you may include plugins/jquery.easing.1.3.js for many options.
      * See http://gsgd.co.uk/sandbox/jquery/easing/ for more info.
-     * 
+     *
      * default: null
      * options: if using CSS: 'linear', 'ease', 'ease-in', 'ease-out', 'ease-in-out', 'cubic-bezier(n,n,n,n)'. If not using CSS: 'swing', 'linear' (see the above file for more options)
      */
@@ -83,7 +83,7 @@ interface bxSliderOptions {
 
     /**
      * captions Include image captions. Captions are derived from the image's title attribute
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -91,7 +91,7 @@ interface bxSliderOptions {
 
     /**
      * ticker Use slider in ticker mode (similar to a news ticker)
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -99,7 +99,7 @@ interface bxSliderOptions {
 
     /**
      * tickerHover Ticker will pause when mouse hovers over slider. Note: this functionality does NOT work if using CSS transitions!
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -107,7 +107,7 @@ interface bxSliderOptions {
 
     /**
      * adaptiveHeight Dynamically adjust slider height based on each slide's height
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -115,7 +115,7 @@ interface bxSliderOptions {
 
     /**
      * adaptiveHeightSpeed Slide height transition duration (in ms). Note: only used if adaptiveHeight: true
-     * 
+     *
      * default: 500
      * options: integer
      */
@@ -124,7 +124,7 @@ interface bxSliderOptions {
     /**
      * video If any slides contain video, set this to true. Also, include plugins/jquery.fitvids.js
      * See http://fitvidsjs.com/ for more info
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -132,7 +132,7 @@ interface bxSliderOptions {
 
     /**
      * responsive Enable or disable auto resize of the slider. Useful if you need to use fixed width sliders.
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -140,7 +140,7 @@ interface bxSliderOptions {
 
     /**
      * useCSS If true, CSS transitions will be used for horizontal and vertical slide animations (this uses native hardware acceleration). If false, jQuery animate() will be used.
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -148,7 +148,7 @@ interface bxSliderOptions {
 
     /**
      * preloadImages If 'all', preloads all images before starting the slider. If 'visible', preloads only images in the initially visible slides before starting the slider (tip: use 'visible' if all slides are identical dimensions)
-     * 
+     *
      * default: 'visible'
      * options: 'all', 'visible'
      */
@@ -156,7 +156,7 @@ interface bxSliderOptions {
 
     /**
      * touchEnabled If true, slider will allow touch swipe transitions
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -164,7 +164,7 @@ interface bxSliderOptions {
 
     /**
      * swipeThreshold Amount of pixels a touch swipe needs to exceed in order to execute a slide transition. Note: only used if touchEnabled: true
-     * 
+     *
      * default: 50
      * options: integer
      */
@@ -172,7 +172,7 @@ interface bxSliderOptions {
 
     /**
      * oneToOneTouch If true, non-fade slides follow the finger as it swipes
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -180,7 +180,7 @@ interface bxSliderOptions {
 
     /**
      * preventDefaultSwipeX If true, touch screen will not move along the x-axis as the finger swipes
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -188,7 +188,7 @@ interface bxSliderOptions {
 
     /**
      * preventDefaultSwipeY If true, touch screen will not move along the y-axis as the finger swipes
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -196,7 +196,7 @@ interface bxSliderOptions {
 
     /**
      * wrapperClass Class to wrap the slider in. Change to prevent from using default bxSlider styles.
-     * 
+     *
      * default: 'bx-wrapper'
      * options: string
      */
@@ -204,7 +204,7 @@ interface bxSliderOptions {
 
     /**
      * pager If true, a pager will be added
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -212,7 +212,7 @@ interface bxSliderOptions {
 
     /**
      * pagerType If 'full', a pager link will be generated for each slide. If 'short', a x / y pager will be used (ex. 1 / 5)
-     * 
+     *
      * default: 'full'
      * options: 'full', 'short'
      */
@@ -220,7 +220,7 @@ interface bxSliderOptions {
 
     /**
      * pagerShortSeparator If pagerType: 'short', pager will use this value as the separating character
-     * 
+     *
      * default: ' / '
      * options: string
      */
@@ -228,7 +228,7 @@ interface bxSliderOptions {
 
     /**
      * pagerSelector Element used to populate the populate the pager. By default, the pager is appended to the bx-viewport
-     * 
+     *
      * default: ''
      * options: jQuery selector
      */
@@ -236,7 +236,7 @@ interface bxSliderOptions {
 
     /**
      * pagerCustom Parent element to be used as the pager. Parent element must contain a <a data-slide-index="x"> element for each slide. See example here. Not for use with dynamic carousels.
-     * 
+     *
      * default: null
      * options: jQuery selector
      */
@@ -245,7 +245,7 @@ interface bxSliderOptions {
     /**
      * buildPager If supplied, function is called on every slide element, and the returned value is used as the pager item markup.
      * See examples for detailed implementation
-     * 
+     *
      * default: null
      * options: functoin(slideIndex)
      */
@@ -254,7 +254,7 @@ interface bxSliderOptions {
 
     /**
      * controls If true, "Next" / "Prev" controls will be added
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -262,7 +262,7 @@ interface bxSliderOptions {
 
     /**
      * nextText Text to be used for the "Next" control
-     * 
+     *
      * default: 'Next'
      * options: string
      */
@@ -270,7 +270,7 @@ interface bxSliderOptions {
 
     /**
      * prevText Text to be used for the "Prev" control
-     * 
+     *
      * default: 'Prev'
      * options: string
      */
@@ -278,7 +278,7 @@ interface bxSliderOptions {
 
     /**
      * nextSelector Element used to populate the "Next" control
-     * 
+     *
      * default: null
      * options: jQuery selector
      */
@@ -286,7 +286,7 @@ interface bxSliderOptions {
 
     /**
      * prevSelector Element used to populate the "Prev" control
-     * 
+     *
      * default: null
      * options: jQuery selector
      */
@@ -294,7 +294,7 @@ interface bxSliderOptions {
 
     /**
      * autoControls If true, "Start" / "Stop" controls will be added
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -302,7 +302,7 @@ interface bxSliderOptions {
 
     /**
      * startText Text to be used for the "Start" control
-     * 
+     *
      * default: 'Start'
      * options: string
      */
@@ -310,7 +310,7 @@ interface bxSliderOptions {
 
     /**
      * stopText Text to be used for the "Stop" control
-     * 
+     *
      * default: 'Stop'
      * options: string
      */
@@ -318,7 +318,7 @@ interface bxSliderOptions {
 
     /**
      * autoControlsCombine When slideshow is playing only "Stop" control is displayed and vice-versa
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -326,7 +326,7 @@ interface bxSliderOptions {
 
     /**
      * autoControlsSelector Element used to populate the auto controls
-     * 
+     *
      * default: null
      * options: jQuery selector
      */
@@ -334,7 +334,7 @@ interface bxSliderOptions {
 
     /**
      * keyboardEnabled Allows for keyboard control of visible slider. Keypress ignored if slider not visible.
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -342,7 +342,7 @@ interface bxSliderOptions {
 
     /**
      * auto Slides will automatically transition
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -350,7 +350,7 @@ interface bxSliderOptions {
 
     /**
      * stopAutoOnClick Auto will stop on interaction with controls
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -358,7 +358,7 @@ interface bxSliderOptions {
 
     /**
      * pause The amount of time (in ms) between each auto transition
-     * 
+     *
      * default: 4000
      * options: integer
      */
@@ -366,7 +366,7 @@ interface bxSliderOptions {
 
     /**
      * autoStart Auto show starts playing on load. If false, slideshow will start when the "Start" control is clicked
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -374,7 +374,7 @@ interface bxSliderOptions {
 
     /**
      * autoDirection The direction of auto show slide transitions
-     * 
+     *
      * default: 'next'
      * options: 'next', 'prev'
      */
@@ -382,7 +382,7 @@ interface bxSliderOptions {
 
     /**
      * autoHover Auto show will pause when mouse hovers over slider
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -390,7 +390,7 @@ interface bxSliderOptions {
 
     /**
      * autoDelay Time (in ms) auto show should wait before starting
-     * 
+     *
      * default: 0
      * options: integer
      */
@@ -398,7 +398,7 @@ interface bxSliderOptions {
 
     /**
      * minSlides The minimum number of slides to be shown. Slides will be sized down if carousel becomes smaller than the original size.
-     * 
+     *
      * default: 1
      * options: integer
      */
@@ -406,7 +406,7 @@ interface bxSliderOptions {
 
     /**
      * maxSlides The maximum number of slides to be shown. Slides will be sized up if carousel becomes larger than the original size.
-     * 
+     *
      * default: 1
      * options: integer
      */
@@ -414,7 +414,7 @@ interface bxSliderOptions {
 
     /**
      * moveSlides The number of slides to move on transition. This value must be >= minSlides, and <= maxSlides. If zero (default), the number of fully-visible slides will be used.
-     * 
+     *
      * default: 0
      * options: integer
      */
@@ -422,7 +422,7 @@ interface bxSliderOptions {
 
     /**
      * slideWidth The width of each slide. This setting is required for all horizontal carousels!
-     * 
+     *
      * default: 0
      * options: integer
      */
@@ -430,7 +430,7 @@ interface bxSliderOptions {
 
     /**
      * shrinkItems The Carousel will only show whole items and shrink the images to fit the viewport based on maxSlides/MinSlides.
-     * 
+     *
      * default: false
      * options: boolean (true / false)
      */
@@ -438,7 +438,7 @@ interface bxSliderOptions {
 
     /**
      * ariaLive Adds Aria Live attribute to slider.
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -446,7 +446,7 @@ interface bxSliderOptions {
 
     /**
      * ariaHidden Adds Aria Hidden attribute to any nonvisible slides.
-     * 
+     *
      * default: true
      * options: boolean (true / false)
      */
@@ -454,7 +454,7 @@ interface bxSliderOptions {
 
     /**
      * onSliderLoad Executes immediately after the slider is fully loaded
-     * 
+     *
      * default: function(){}
      * options: function(currentIndex){ // your code here }
      * arguments:
@@ -464,7 +464,7 @@ interface bxSliderOptions {
 
     /**
      * onSliderResize Executes immediately after the slider is resized
-     * 
+     *
      * default: function(){}
      * options: function(currentIndex){ // your code here }
      * arguments:
@@ -474,7 +474,7 @@ interface bxSliderOptions {
 
     /**
      * onSlideBefore Executes immediately before each slide transition.
-     * 
+     *
      * default: function(){}
      * options: function($slideElement, oldIndex, newIndex){ // your code here }
      * arguments:
@@ -486,7 +486,7 @@ interface bxSliderOptions {
 
     /**
      * onSlideAfter Executes immediately after each slide transition. Function argument is the current slide element (when transition completes).
-     * 
+     *
      * default: function(){}
      * options: function($slideElement, oldIndex, newIndex){ // your code here }
      * arguments:
@@ -498,7 +498,7 @@ interface bxSliderOptions {
 
     /**
      * onSlideNext Executes immediately before each "Next" slide transition. Function argument is the target (next) slide element.
-     * 
+     *
      * default: function(){}
      * options: function($slideElement, oldIndex, newIndex){ // your code here }
      * arguments:
@@ -510,7 +510,7 @@ interface bxSliderOptions {
 
     /**
      * onSlidePrev Executes immediately before each "Prev" slide transition. Function argument is the target (prev) slide element.
-     * 
+     *
      * default: function(){}
      * options: function($slideElement, oldIndex, newIndex){ // your code here }
      * arguments:
@@ -525,7 +525,7 @@ interface bxSlider {
 
     /**
      * goToSlide Performs a slide transition to the supplied slide index (zero-based)
-     * 
+     *
      * example:
      * slider = $('.bxslider').bxSlider();
      * slider.goToSlide(3);
@@ -534,7 +534,7 @@ interface bxSlider {
 
     /**
      * goToNextSlide Performs a "Next" slide transition
-     * 
+     *
      * example:
      * slider = $('.bxslider').bxSlider();
      * slider.goToNextSlide();
@@ -543,7 +543,7 @@ interface bxSlider {
 
     /**
      * goToPrevSlide Performs a "Prev" slide transition
-     * 
+     *
      * example:
      * slider = $('.bxslider').bxSlider();
      * slider.goToPrevSlide();
@@ -552,7 +552,7 @@ interface bxSlider {
 
     /**
      * startAuto Starts the auto show. Provide an argument false to prevent the auto controls from being updated.
-     * 
+     *
      * example:
      * slider = $('.bxslider').bxSlider();
      * slider.startAuto();
@@ -561,7 +561,7 @@ interface bxSlider {
 
     /**
      * stopAuto Stops the auto show. Provide an argument false to prevent the auto controls from being updated.
-     * 
+     *
      * example:
      * slider = $('.bxslider').bxSlider();
      * slider.stopAuto();
@@ -570,7 +570,7 @@ interface bxSlider {
 
     /**
      * getCurrentSlide Returns the current active slide
-     * 
+     *
      * example:
      * slider = $('.bxslider').bxSlider();
      * var current = slider.getCurrentSlide();
@@ -579,7 +579,7 @@ interface bxSlider {
 
     /**
      * getSlideCount Returns the total number of slides in the slider
-     * 
+     *
      * example:
      * slider = $('.bxslider').bxSlider();
      * var slideQty = slider.getSlideCount();
@@ -588,7 +588,7 @@ interface bxSlider {
 
     /**
      * redrawSlider Redraw the slider. Useful when needing to redraw a hidden slider after it is unhidden.
-     * 
+     *
      * example:
      * slider = $('.bxslider').bxSlider();
      * slider.redrawSlider();
@@ -597,7 +597,7 @@ interface bxSlider {
 
     /**
      * reloadSlider Reload the slider. Useful when adding slides on the fly. Accepts an optional settings object. See here for an example.
-     * 
+     *
      * example:
      * slider = $('.bxslider').bxSlider();
      * slider.reloadSlider();
@@ -606,7 +606,7 @@ interface bxSlider {
 
     /**
      * destroySlider Destroy the slider. This reverts all slider elements back to their original state (before calling the slider).
-     * 
+     *
      * example:
      * slider = $('.bxslider').bxSlider();
      * slider.destroySlider();

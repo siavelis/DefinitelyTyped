@@ -1078,7 +1078,7 @@ interface JQueryStatic {
     data: {
         repeaterName?: any;
     };
-  
+
     /**
      * Use this value to output an index value in a template repeater.
      */

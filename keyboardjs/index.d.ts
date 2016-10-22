@@ -126,6 +126,6 @@ declare namespace keyboardjs {
      */
     export function stop(): void;
 }
-    
+
 export = keyboardjs;
 export as namespace keyboardJS;

@@ -5452,7 +5452,7 @@ declare namespace go {
 
         /**
          * Copies properties from this model to the given model, which must be of the same class as this model.
-         * @param {Model} copy 
+         * @param {Model} copy
          */
         protected cloneProtected(copy: Model): void;
 
@@ -6629,7 +6629,7 @@ declare namespace go {
 
         /**
          * Copies properties from this layout to the given layout, which must be of the same class as this layout.
-         * @param {Layout} copy 
+         * @param {Layout} copy
          */
         protected cloneProtected(copy: Layout): void;
 

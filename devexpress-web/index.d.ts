@@ -1653,7 +1653,7 @@ interface ASPxClientBinaryImage extends ASPxClientEdit {
     GetValue(): Object;
     /**
      * For internal use only.
-     * @param value 
+     * @param value
      */
     SetValue(value: Object): void;
     /**
@@ -3661,7 +3661,7 @@ interface ASPxClientCardView extends ASPxClientGridBase {
      * @param column An ASPxClientCardViewColumn object that represents the data column.
      * @param sortOrder A string value that specifies the column's sort order ('ASC', 'DSC' or 'NONE').
      * @param reset true to clear any previous sorting; otherwise, false.
-     * @param sortIndex 
+     * @param sortIndex
      */
     SortBy(column: ASPxClientCardViewColumn, sortOrder: string, reset: boolean, sortIndex: number): void;
     /**
@@ -6293,7 +6293,7 @@ interface ASPxClientVerticalGrid extends ASPxClientGridBase {
      * @param rowIndex An integer value that specifies the row's position within the row collection.
      * @param sortOrder A string value that specifies the row's sort order ('ASC', 'DSC' or 'NONE').
      * @param reset true to clear any previous sorting; otherwise, false.
-     * @param sortIndex 
+     * @param sortIndex
      */
     SortBy(rowIndex: number, sortOrder: string, reset: boolean, sortIndex: number): void;
     /**
@@ -9889,7 +9889,7 @@ interface DeleteBookmarkCommand extends CommandWithSimpleStateBase {
 interface GoToBookmarkCommand extends CommandWithSimpleStateBase {
     /**
      * Executes the GoToBookmarkCommand command by applying the specified setting.  May result in taking no action if the command's state does not allow command execution. Use the object's getState method to check the command state.
-     * @param name 
+     * @param name
      */
     execute(name: string): boolean;
 }
@@ -10882,8 +10882,8 @@ interface OpenPageMarginsDialogCommand extends CommandWithSimpleStateBase {
  */
 interface ChangePageOrientationCommand extends CommandBase {
     /**
-     * 
-     * @param isPortrait 
+     *
+     * @param isPortrait
      */
     execute(isPortrait: any): boolean;
     /**
@@ -14354,8 +14354,8 @@ interface ASPxClientToolTipBase {
      */
     Close(): void;
     /**
-     * 
-     * @param bounds 
+     *
+     * @param bounds
      */
     CalculatePosition(bounds: Object): ASPxClientPoint;
     /**
@@ -15861,9 +15861,9 @@ interface MVCxClientPopupControl extends ASPxClientPopupControl {
      */
     PerformWindowCallback(window: ASPxClientPopupWindow, data: Object): void;
     /**
-     * 
-     * @param window 
-     * @param parameter 
+     *
+     * @param window
+     * @param parameter
      */
     PerformWindowCallback(window: ASPxClientPopupWindow, parameter: string): void;
     /**
@@ -16081,9 +16081,9 @@ interface MVCxClientSchedulerTemplateToolTip extends ASPxClientToolTipBase {
  */
 interface MVCxClientSchedulerToolTipDisplayingEventHandler<S> {
     /**
-     * 
-     * @param source 
-     * @param e 
+     *
+     * @param source
+     * @param e
      */
     (source: S, e: MVCxClientSchedulerToolTipDisplayingEventArgs): void;
 }
@@ -16369,7 +16369,7 @@ interface ASPxClientControlBase {
     GetClientVisible(): boolean;
     /**
      * Specifies whether a control is displayed.
-     * @param visible 
+     * @param visible
      */
     SetClientVisible(visible: boolean): void;
     /**
@@ -16547,8 +16547,8 @@ interface ASPxClientEvent<T> {
     ClearHandlers(): void;
     /**
      * For internal use only.
-     * @param source 
-     * @param e 
+     * @param source
+     * @param e
      */
     FireEvent(source: Object, e: ASPxClientEventArgs): void;
 }
@@ -16936,18 +16936,18 @@ interface ASPxClientControlCollection {
      */
     GetByName(name: string): Object;
     /**
-     * 
-     * @param predicate 
+     *
+     * @param predicate
      */
     GetControlsByPredicate(predicate: ASPxClientControlPredicate): Object[];
     /**
-     * 
-     * @param type 
+     *
+     * @param type
      */
     GetControlsByType(type: Object): Object[];
     /**
-     * 
-     * @param action 
+     *
+     * @param action
      */
     ForEachControl(action: ASPxClientControlAction): void;
 }
@@ -19809,9 +19809,9 @@ interface ASPxClientPopupControl extends ASPxClientPopupControlBase {
      */
     GetWindowPopUpReasonMouseEvent(window: ASPxClientPopupWindow): Object;
     /**
-     * 
-     * @param window 
-     * @param parameter 
+     *
+     * @param window
+     * @param parameter
      */
     PerformWindowCallback(window: ASPxClientPopupWindow, parameter: string): void;
     /**
@@ -26150,9 +26150,9 @@ interface ASPxSchedulerDateTimeHelperStatic {
      */
     ToDayTime(date: Date): any;
     /**
-     * 
-     * @param date 
-     * @param dayCount 
+     *
+     * @param date
+     * @param dayCount
      */
     AddDays(date: Date, dayCount: number): Date;
     /**

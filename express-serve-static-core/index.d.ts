@@ -827,7 +827,7 @@ declare module "express-serve-static-core" {
          * third argument.
          */
         (req: Request, res: Response): any;
-        
+
         /**
             * Initialize the server.
             *
@@ -1056,7 +1056,7 @@ declare module "express-serve-static-core" {
             * simply by removing them from this object.
             */
         routes: any;
-        
+
         /**
          * Used to get all registered routes in Express Application
          */

@@ -1596,7 +1596,7 @@ declare module "react" {
          * sets whether the webpage scales to fit the view and the user can change the scale
          */
         scalesPageToFit?: boolean
-        
+
         ref?: Ref<WebViewStatic & ViewStatic>
     }
 
@@ -2031,11 +2031,11 @@ declare module "react" {
         /**
          * Specifies the side of the screen from which the drawer will slide in.
          */
-        positions: { 
+        positions: {
             Left: number;
             Right: number;
         }
-        
+
         /**
          * Opens the drawer.
          */
@@ -2304,7 +2304,7 @@ declare module "react" {
          * Whether the view should be indicating an active refresh.
          */
         refreshing?: boolean
-        
+
         ref?: Ref<RefreshControlStatic>
     }
 
@@ -3357,7 +3357,7 @@ declare module "react" {
     /**
    * Class that contains the info and methods for app navigation.
    */
-    export interface NavigationContext { 
+    export interface NavigationContext {
         parent: NavigationContext;
         top: NavigationContext;
         currentRoute: any;
@@ -3787,7 +3787,7 @@ declare module "react" {
          * Color of text on unselected tabs
          */
         unselectedTintColor?: string
-        
+
         ref?: Ref<TabBarIOSStatic & ViewStatic>
     }
 
@@ -5184,7 +5184,7 @@ declare module "react" {
          * dialog box.
          */
         requestPermissions( permissions?: PushNotificationPermissions[] ): Promise<PushNotificationPermissions>
-        
+
         /**
          * Unregister for all remote notifications received via Apple Push
          * Notification service.

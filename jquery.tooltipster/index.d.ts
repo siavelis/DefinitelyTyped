@@ -166,7 +166,7 @@ interface JQuery {
 
     /**
     * Initiate the Tooltipster plugin
-    */ 
+    */
     tooltipster(): JQuery;
 
     /**

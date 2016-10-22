@@ -13,7 +13,7 @@ declare namespace DotObject {
         (arg: any): any;
     }
 
-    interface Dot {     
+    interface Dot {
         /**
          *
          * Copy a property from one object to another object.

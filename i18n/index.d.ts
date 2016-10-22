@@ -50,7 +50,7 @@ declare namespace i18n {
          * json files prefix
          */
         prefix?: string;
-        
+
         /**
          * object or [obj1, obj2] to bind the i18n api and current locale to - defaults to null
          */

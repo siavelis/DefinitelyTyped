@@ -114,9 +114,9 @@ export var layouts: {
   addLayout: (name: string, serializerGenerator: (config?: LayoutConfig) => Layout) => void,
 
   /**
-   * Get layout. Available predified layout names: 
+   * Get layout. Available predified layout names:
    * messagePassThrough, basic, colored, coloured, pattern, dummy
-   * 
+   *
    */
   layout: (name: string, config: LayoutConfig) => Layout
 }

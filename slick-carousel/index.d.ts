@@ -296,7 +296,7 @@ interface JQuerySlickOptions {
      * Default: 1000
      */
     zIndex?: number;
-    
+
 }
 
 

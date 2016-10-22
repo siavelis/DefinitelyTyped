@@ -61,7 +61,7 @@ declare namespace Draft {
                 // the default `TextEditorBlock` is used.
                 blockRendererFn?(block: ContentBlock): any;
 
-                // Function that allows to define class names to apply to the given block when it is rendered. 
+                // Function that allows to define class names to apply to the given block when it is rendered.
                 blockStyleFn?(block: ContentBlock): string;
 
                 // Provide a map of inline style names corresponding to CSS style objects
@@ -110,7 +110,7 @@ declare namespace Draft {
                 handleReturn?(e: SyntheticKeyboardEvent): boolean,
 
                 // Map a key command string provided by your key binding function to a
-                // specified behavior.                
+                // specified behavior.
                 handleKeyCommand?(command: DraftEditorCommand): boolean,
                 handleKeyCommand?(command: string): boolean,
 

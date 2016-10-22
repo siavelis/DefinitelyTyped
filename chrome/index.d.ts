@@ -5517,7 +5517,7 @@ declare namespace chrome.storage {
 		get(callback: (items: { [key: string]: any }) => void): void;
 		/**
 		 * Gets one or more items from storage.
-		 * @param keys A single key to get, list of keys to get, or a dictionary specifying default values. 
+		 * @param keys A single key to get, list of keys to get, or a dictionary specifying default values.
 		 * An empty list or object will return an empty result object. Pass in null to get the entire contents of storage.
 		 * @param callback Callback with storage items, or on failure (in which case runtime.lastError will be set).
 		 * Parameter items: Object with items in their key-value mappings.
