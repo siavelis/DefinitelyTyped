@@ -118,12 +118,12 @@ declare namespace GoogleAppsScript {
      *  triggers and control publishing the script as a service.
      */
     export interface ScriptApp {
-      AuthMode: AuthMode
-      AuthorizationStatus: AuthorizationStatus
-      EventType: EventType
-      InstallationSource: InstallationSource
-      TriggerSource: TriggerSource
-      WeekDay: Base.Weekday
+      AuthMode: AuthMode;
+      AuthorizationStatus: AuthorizationStatus;
+      EventType: EventType;
+      InstallationSource: InstallationSource;
+      TriggerSource: TriggerSource;
+      WeekDay: Base.Weekday;
       deleteTrigger(trigger: Trigger): void;
       getAuthorizationInfo(authMode: AuthMode): AuthorizationInfo;
       getInstallationSource(): InstallationSource;

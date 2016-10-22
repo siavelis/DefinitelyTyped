@@ -21,10 +21,10 @@ interface HopscotchConfiguration {
   skipIfNoElement?: boolean;
   nextOnTargetClick?: boolean;
 
-  onNext?:  CallbackNameNamesOrDefinition;
-  onPrev?:  CallbackNameNamesOrDefinition;
+  onNext?: CallbackNameNamesOrDefinition;
+  onPrev?: CallbackNameNamesOrDefinition;
   onStart?: CallbackNameNamesOrDefinition;
-  onEnd?:   CallbackNameNamesOrDefinition;
+  onEnd?: CallbackNameNamesOrDefinition;
   onClose?: CallbackNameNamesOrDefinition;
   onError?: CallbackNameNamesOrDefinition;
 
@@ -35,7 +35,7 @@ interface HopscotchConfiguration {
     skipBtn?: string;
     closeTooltip?: string;
     stepNums?: string[];
-  }
+  };
 }
 
 interface TourDefinition extends HopscotchConfiguration {
@@ -45,7 +45,7 @@ interface TourDefinition extends HopscotchConfiguration {
 
 interface StepDefinition {
   placement: string;
-  target: string | HTMLElement | Array<string | HTMLElement>
+  target: string | HTMLElement | Array<string | HTMLElement>;
 
   title?: string;
   content?: string;
@@ -73,7 +73,7 @@ interface StepDefinition {
   onPrev?: CallbackNameNamesOrDefinition;
   onNext?: CallbackNameNamesOrDefinition;
   onShow?: CallbackNameNamesOrDefinition;
-  onCTA?:  CallbackNameNamesOrDefinition;
+  onCTA?: CallbackNameNamesOrDefinition;
 }
 
 interface HopscotchStatic {

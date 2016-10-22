@@ -36,7 +36,7 @@ declare namespace JSData {
         findAllFallbackAdapters?: Array<string>;
         findAllStrategy?: string;
         findFallbackAdapters?: Array<string>;
-        findStrategy?: string
+        findStrategy?: string;
         findStrictCache?: boolean;
         idAttribute?: string;
         ignoredChanges?: Array<RegExp | string>;
@@ -216,7 +216,7 @@ declare namespace JSData {
 
     type DSSyncLifecycleHookHandler = (resource: DSResourceDefinition<any>, data: any) => void;
     type DSAsyncLifecycleHookHandler = (resource: DSResourceDefinition<any>, data: any) => JSDataPromise<any>;
-    type DSAsyncLifecycleHookHandlerCb = (resource: DSResourceDefinition<any>, data: any, cb: (err: Error, data: any) => void) => void
+    type DSAsyncLifecycleHookHandlerCb = (resource: DSResourceDefinition<any>, data: any, cb: (err: Error, data: any) => void) => void;
 
     interface IDSResourceLifecycleValidateEventHandlers {
         beforeValidate?: DSAsyncLifecycleHookHandler | DSAsyncLifecycleHookHandlerCb;
@@ -334,7 +334,7 @@ declare namespace JSData {
     // options are passed to adapter.HTTP() method-call, js-data-http adapter by default uses AXIOS but can also be $http in case of angular
     // or a custom adapter implementation. The adapter can be set via the DSActionConfig.
     interface DSActionFn {
-        <T>(id: string | number, options?: Object): JSDataPromise<T>
+        <T>(id: string | number, options?: Object): JSDataPromise<T>;
     }
 }
 

@@ -58,7 +58,7 @@ declare namespace jasmine {
     function addMatchers(matchers: CustomMatcherFactories): void;
     function stringMatching(str: string): Any;
     function stringMatching(str: RegExp): Any;
-    function formatErrorMsg(domain: string, usage: string): (msg: string) => string
+    function formatErrorMsg(domain: string, usage: string): (msg: string) => string;
 
     interface Any {
 
@@ -512,7 +512,7 @@ declare namespace jasmine {
         runDetails: {
             failedExpectations: ExpectationResult[];
             order: jasmine.Order
-        }
+        };
 
         new (): any;
 

@@ -86,9 +86,9 @@ declare namespace Elasticsearch {
     }
 
     export interface Explanation {
-        value: number,
-        description: string,
-        details: Explanation[]
+        value: number;
+        description: string;
+        details: Explanation[];
     }
 
     export interface GenericParams {
@@ -261,31 +261,31 @@ declare namespace Elasticsearch {
     }
 
     export interface SearchResponse<T> {
-        took: number,
-        timed_out: boolean,
-        _scroll_id?: string,
+        took: number;
+        timed_out: boolean;
+        _scroll_id?: string;
         _shards: {
-            total: number,
-            successful: number,
-            failed: number
-        },
+            total: number;
+            successful: number;
+            failed: number;
+        };
         hits: {
-            total: number,
-            max_score: number,
+            total: number;
+            max_score: number;
             hits: {
-                _index: string,
-                _type: string,
-                _id: string,
-                _score: number,
-                _source: T,
-                _version: number,
-                _explanation?: Explanation,
-                fields?: any,
-                highlight?: any,
-                inner_hits?: any
+                _index: string;
+                _type: string;
+                _id: string;
+                _score: number;
+                _source: T;
+                _version: number;
+                _explanation?: Explanation;
+                fields?: any;
+                highlight?: any;
+                inner_hits?: any;
             }[]
-        },
-        aggregations?: any
+        };
+        aggregations?: any;
     }
 
     export interface MSearchParams extends GenericParams {
@@ -345,7 +345,7 @@ declare namespace Elasticsearch {
         retryOnConflict?: Number;
         refresh?: Boolean;
         parent?: string;
-        lang?:string;
+        lang?: string;
         fields?: string | string[] | Boolean;
         consistensy?: string;
     }
@@ -363,7 +363,7 @@ declare namespace Elasticsearch {
 
     export interface Cat {
         health(params: CatHealthOptions, callback: (error: any, response: any) => void): void;
-        health(params: CatHealthOptions): PromiseLike<any>
+        health(params: CatHealthOptions): PromiseLike<any>;
     }
 
     export interface CatHealthOptions extends GenericParams {

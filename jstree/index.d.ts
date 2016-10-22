@@ -721,7 +721,7 @@ interface JSTree extends JQuery {
     * @param {Object} options options for this instance
     * @trigger init.jstree, loading.jstree, loaded.jstree, ready.jstree, changed.jstree
     */
-    init: (el: HTMLElement|JQuery|string, options:any) => void;
+    init: (el: HTMLElement|JQuery|string, options: any) => void;
 
     /**
     * destroy an instance
@@ -1071,7 +1071,7 @@ interface JSTree extends JQuery {
     * @param {mixed} obj the node to reveal
     * @private
     */
-    _open_to: (obj:any) => void;
+    _open_to: (obj: any) => void;
 
     /**
     * closes a node, hiding its children
@@ -1329,7 +1329,7 @@ interface JSTree extends JQuery {
     * @return {Boolean}
     * @trigger set_text.jstree
     */
-    set_text: (obj:any, val:string) => boolean;
+    set_text: (obj: any, val: string) => boolean;
 
     /**
     * gets a JSON representation of a node (or the whole tree)

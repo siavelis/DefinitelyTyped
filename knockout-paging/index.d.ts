@@ -15,7 +15,7 @@ interface KnockoutPagingOptions {
     generators: {
     	[name: string]: KnockoutPageGenerator;
 		'sliding': KnockoutSlidingPageGenerator
-    }
+    };
 }
 
 interface KnockoutPagingDefaultOptions {

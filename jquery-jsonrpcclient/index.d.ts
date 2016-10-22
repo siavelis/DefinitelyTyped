@@ -7,7 +7,7 @@
 
 interface JsonRpcClientOptions extends JQueryAjaxSettings {
     ajaxUrl: string;
-    headers?: {[key:string]: any};
+    headers?: {[key: string]: any};
     socketUrl?: string;
     onmessage?: (ev: MessageEvent) => void;
     onopen?: (ev: Event) => void;

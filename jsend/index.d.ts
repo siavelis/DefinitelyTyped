@@ -24,7 +24,7 @@ declare namespace jsend {
   }
 
   interface jsendExpress extends jsendCore {
-    (err: string | Object, json?: Object): void
+    (err: string | Object, json?: Object): void;
   }
 
   interface jsend extends jsendCore {
@@ -35,7 +35,7 @@ declare namespace jsend {
   }
 
   interface jsendExport extends jsend {
-    (config?: { strict: boolean }, host?: Object): jsend
+    (config?: { strict: boolean }, host?: Object): jsend;
   }
   var jsend: jsendExport;
 }

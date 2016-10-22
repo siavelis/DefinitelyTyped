@@ -9,7 +9,7 @@
 
 interface JQuery
 {
-	dataTable(param?:DataTables.Options): DataTables.DataTable;
+	dataTable(param?: DataTables.Options): DataTables.DataTable;
 }
 
 declare namespace DataTables
@@ -17,17 +17,17 @@ declare namespace DataTables
 	export interface DataTable
 	{
 		/// Perform a jQuery selector action on the table's TR elements (from the tbody) and return the resulting jQuery object.
-		$(selector:string, opts?:RowParams): JQuery;
-		$(selector:Node[], opts?:RowParams): JQuery;
-		$(selector:JQuery, opts?:RowParams): JQuery;
+		$(selector: string, opts?: RowParams): JQuery;
+		$(selector: Node[], opts?: RowParams): JQuery;
+		$(selector: JQuery, opts?: RowParams): JQuery;
 
 		/// Almost identical to $ in operation, but in this case returns the data for the matched rows.
-		_(selector:string, opts?:RowParams): any[];
-		_(selector:Node[], opts?:RowParams): any[];
-		_(selector:JQuery, opts?:RowParams): any[];
+		_(selector: string, opts?: RowParams): any[];
+		_(selector: Node[], opts?: RowParams): any[];
+		_(selector: JQuery, opts?: RowParams): any[];
 
 		/// Add a single new row or multiple rows of data to the table.
-		fnAddData(data:any, redraw?:boolean): number[];
+		fnAddData(data: any, redraw?: boolean): number[];
 
 		/// This function will make DataTables recalculate the column sizes.
 		fnAdjustColumnSizing(redraw?: boolean): void;
@@ -54,7 +54,7 @@ declare namespace DataTables
 
 		/// Get the data for the whole table, an individual row or an individual cell based on the provided parameters.
 		fnGetData(row?: Node, col?: number): any;
-		fnGetData(row?: number, col?: number):any;
+		fnGetData(row?: number, col?: number): any;
 
 		/// Get an array of the TR nodes that are used in the table's body.
 		fnGetNodes(row?: number): any; // Node[] | Node
@@ -90,8 +90,8 @@ declare namespace DataTables
 
 		/// Update a table cell or row - this method will accept either a single value to update the cell with,
 		/// an array of values with one element for each column or an object in the same format as the original data source.
-		fnUpdate(data: any, row: Node, column?:number, redraw?: boolean, action?: boolean): number;
-		fnUpdate(data: any, dataIndex: number, column?:number, redraw?: boolean, action?: boolean): number;
+		fnUpdate(data: any, row: Node, column?: number, redraw?: boolean, action?: boolean): number;
+		fnUpdate(data: any, dataIndex: number, column?: number, redraw?: boolean, action?: boolean): number;
 
 		/// Provide a common method for plug-ins to check the version of DataTables being used,
 		/// in order to ensure compatibility.
@@ -414,7 +414,7 @@ declare namespace DataTables
 
 	export interface FooterCallback
 	{
-		(foot: Element, data: any[], start:number, end:number, display: number[]): void;
+		(foot: Element, data: any[], start: number, end: number, display: number[]): void;
 	}
 
 	export interface FormatNumber
@@ -424,12 +424,12 @@ declare namespace DataTables
 
 	export interface HeaderCallback
 	{
-		(head: Element, data: any[], start:number, end:number, display: number[]): void;
+		(head: Element, data: any[], start: number, end: number, display: number[]): void;
 	}
 
 	export interface InfoCallback
 	{
-		(settings: Settings, start: number, end: number, max:number, total: number, pre: string): string;
+		(settings: Settings, start: number, end: number, max: number, total: number, pre: string): string;
 	}
 
 	export interface InitComplete
@@ -464,12 +464,12 @@ declare namespace DataTables
 
 	export interface StateSaveCallback
 	{
-		(settings: any, data:any): void;
+		(settings: any, data: any): void;
 	}
 
 	export interface StateSaveParams
 	{
-		(settings: any, data:any): void;
+		(settings: any, data: any): void;
 	}
 
 	export interface CreatedCell

@@ -20,10 +20,10 @@ interface KeyHandler {
 interface FilterEvent {
     target?: {
         tagName?: string;
-    }
+    };
     srcElement?: {
         tagName?: string;
-    }
+    };
 }
 
 interface Keymaster {

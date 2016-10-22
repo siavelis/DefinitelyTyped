@@ -136,7 +136,7 @@ declare namespace jake{
 		/**
 		*
 		*/
-		windowsVerbatimArguments?: boolean
+		windowsVerbatimArguments?: boolean;
 	}
 	export function exec(cmds: string[], callback?: () => void, opts?: ExecOptions): void;
 

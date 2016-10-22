@@ -320,7 +320,7 @@ declare namespace GoogleAppsScript {
      *      }
      */
     export interface XmlService {
-      ContentTypes: ContentType
+      ContentTypes: ContentType;
       createCdata(text: string): Cdata;
       createComment(text: string): Comment;
       createDocType(elementName: string): DocType;

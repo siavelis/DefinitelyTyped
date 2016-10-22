@@ -230,4 +230,4 @@ declare module "knockout.validation" {
     export = validation;
 }
 
-declare var validation: KnockoutValidationStatic
+declare var validation: KnockoutValidationStatic;

@@ -6,8 +6,8 @@
 declare namespace google {
 
   export function load(
-    moduleName:        string,
-    moduleVersion:     string,
+    moduleName: string,
+    moduleVersion: string,
     optionalSettings?: any
   ): void;
 }
@@ -104,20 +104,20 @@ declare namespace google.earth {
    *    Common usage is to call this function upon the <body>'s load event, or to use google.setOnLoadCallback.
    */
   export function createInstance(
-    domNode:         string|Element,
-    initCallback:    (plugin: GEPlugin) => void,
+    domNode: string|Element,
+    initCallback: (plugin: GEPlugin) => void,
     failureCallback: (error: any) => void,
-    options?:        any
+    options?: any
   ): void;
 
   /**
    * Attaches a listener to a given object for a specific event; when the event occurs on the object, the given callback is invoked.
    */
   export function addEventListener(
-    targetObject:     any,
-    eventID:          string,
+    targetObject: any,
+    eventID: string,
     listenerCallback: (event: KmlEvent) => void,
-    useCapture?:      boolean
+    useCapture?: boolean
   ): void;
 
   /**
@@ -129,10 +129,10 @@ declare namespace google.earth {
    *    If you are using an anonymous function callback, it will need to be refactored into its own variable.
    */
   export function removeEventListener(
-    targetObject:     any,
-    eventID:          string,
+    targetObject: any,
+    eventID: string,
     listenerCallback: (event: KmlEvent) => void,
-    useCapture?:      boolean
+    useCapture?: boolean
   ): void;
 
   /**
@@ -141,8 +141,8 @@ declare namespace google.earth {
    * Note: This function does not display the feature on the Earth. See below for more information.
    */
   export function fetchKml(
-    pluginInstance:     GEPlugin,
-    url:                string,
+    pluginInstance: GEPlugin,
+    url: string,
     completionCallback: (feature: KmlFeature) => void
   ): void;
 
@@ -853,19 +853,19 @@ declare namespace google.earth {
      * Sets the latitude, longitude, and altitude.
      */
     setLatLngAlt(
-      index:     number,
-      latitude:  number,
+      index: number,
+      latitude: number,
       longitude: number,
-      altitude:  number
+      altitude: number
     ): void;
 
     /**
      * Appends one or more new elements to the end of an array and returns the new length of the array.
      */
     pushLatLngAlt(
-      latitude:  number,
+      latitude: number,
       longitude: number,
-      altitude:  number
+      altitude: number
     ): void;
 
     /**
@@ -887,9 +887,9 @@ declare namespace google.earth {
      * Adds an element or elements to the beginning of an array.
      */
     unshiftLatLngAlt(
-      latitude:  number,
+      latitude: number,
       longitude: number,
-      altitude:  number
+      altitude: number
     ): void;
 
     /**
@@ -973,9 +973,9 @@ declare namespace google.earth {
      * * GEPlugin.ALTITUDE_RELATIVE_TO_SEA_FLOOR
      */
     project(
-      lat:          number,
-      lng:          number,
-      alt:          number,
+      lat: number,
+      lng: number,
+      alt: number,
       altitudeMode: KmlAltitudeModeEnum
     ): KmlVec2;
 
@@ -1028,11 +1028,11 @@ declare namespace google.earth {
      * * GEPlugin.HIT_TEST_BUILDINGS
      */
     hitTest(
-      x:      number,
+      x: number,
       xUnits: KmlUnitsEnum,
-      y:      number,
+      y: number,
       yUnits: KmlUnitsEnum,
-      mode:   GEHitTestModeEnum
+      mode: GEHitTestModeEnum
     ): GEHitTestResult;
   }
 
@@ -1503,9 +1503,9 @@ declare namespace google.earth {
      * Sets the coordinates of the vector.
      */
     set(
-      x:      number,
+      x: number,
       xUnits: KmlUnitsEnum,
-      y:      number,
+      y: number,
       yUnits: KmlUnitsEnum
     ): void;
 
@@ -2131,10 +2131,10 @@ declare namespace google.earth {
      * Sets the north, south, east, and west edges of the bounding box, as well as the rotation of the overlay.
      */
     setBox(
-      north:    number,
-      south:    number,
-      east:     number,
-      west:     number,
+      north: number,
+      south: number,
+      east: number,
+      west: number,
       rotation: number
     ): void;
 
@@ -2206,13 +2206,13 @@ declare namespace google.earth {
      * Sets the north, south, east, west, rotation, minAltitude, maxAltitude, and altitudeMode of bounding box.
      */
     setAltBox(
-      north:        number,
-      south:        number,
-      east:         number,
-      west:         number,
-      rotation:     number,
-      minAltitude:  number,
-      maxAltitude:  number,
+      north: number,
+      south: number,
+      east: number,
+      west: number,
+      rotation: number,
+      minAltitude: number,
+      maxAltitude: number,
       altitudeMode: KmlAltitudeModeEnum
     ): void;
 
@@ -2273,8 +2273,8 @@ declare namespace google.earth {
      * Sets the minLodPixels, maxLodPixels, minFadeExtent, and maxFadeExtent for the projected region on the screen.
      */
     set(
-      minLodPixels:  number,
-      maxLodPixels:  number,
+      minLodPixels: number,
+      maxLodPixels: number,
       minFadeExtent: number,
       maxFadeExtent: number
     ): void;
@@ -2505,13 +2505,13 @@ declare namespace google.earth {
      * Sets the latitude, longitude, altitude, altitudeMode, heading, tilt, and range for the camera.
      */
     set	(
-      latitude:     number,
-      longitude:    number,
-      altitude:     number,
+      latitude: number,
+      longitude: number,
+      altitude: number,
       altitudeMode: KmlAltitudeModeEnum,
-      heading:      number,
-      tilt:         number,
-      range:        number
+      heading: number,
+      tilt: number,
+      range: number
     ): void;
 
     /**
@@ -2612,13 +2612,13 @@ declare namespace google.earth {
      * Sets the latitude, longitude, altitude, alitudeMode, heading, tilt, and roll values.
      */
     set(
-      latitude:     number,
-      longitude:    number,
-      altitude:     number,
+      latitude: number,
+      longitude: number,
+      altitude: number,
       altitudeMode: KmlAltitudeModeEnum,
-      heading:      number,
-      tilt:         number,
-      roll:         number
+      heading: number,
+      tilt: number,
+      roll: number
     ): void;
 
     /**
@@ -2848,12 +2848,12 @@ declare namespace google.earth {
      * Sets altitudeMode, extrude, tessellate, latitude, longitude, and altitude values.
      */
     set(
-      latitude:     number,
-      longitude:    number,
-      altitude:     number,
+      latitude: number,
+      longitude: number,
+      altitude: number,
       altitudeMode: KmlAltitudeModeEnum,
-      extrude:      boolean,
-      tessellate:   boolean
+      extrude: boolean,
+      tessellate: boolean
     ): void;
 
     /**

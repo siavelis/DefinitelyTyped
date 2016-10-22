@@ -37,7 +37,7 @@ declare namespace QtyModule {
 
     isCompatible(other: string|Qty): boolean;
 
-    isInverse(other: string|Qty): boolean
+    isInverse(other: string|Qty): boolean;
 
     kind(): string;
 

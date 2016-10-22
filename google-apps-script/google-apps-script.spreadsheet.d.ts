@@ -893,8 +893,8 @@ declare namespace GoogleAppsScript {
      *  the parent class for the Spreadsheet service.
      */
     export interface SpreadsheetApp {
-      DataValidationCriteria: DataValidationCriteria
-      ProtectionType: ProtectionType
+      DataValidationCriteria: DataValidationCriteria;
+      ProtectionType: ProtectionType;
       create(name: string): Spreadsheet;
       create(name: string, rows: Integer, columns: Integer): Spreadsheet;
       flush(): void;

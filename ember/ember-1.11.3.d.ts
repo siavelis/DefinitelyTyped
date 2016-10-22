@@ -2380,7 +2380,7 @@ declare namespace Ember {
         @param {Function} method The function of the subscription
         @return this
         */
-        off(name: string, target:any , method: Function): Evented;
+        off(name: string, target: any , method: Function): Evented;
 
         /**
         Checks to see if object has any subscriptions for named event.

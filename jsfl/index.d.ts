@@ -1094,13 +1094,13 @@ interface FlashTimeline {
     removeFrames(startFrameIndex?: number, endFrameIndex?: number): void;
 
     /** Removes the motion object created with timeline.createMotionObject(), and converts the frame(s) to static frames. */
-    removeMotionObject(startFrame: number, endFrame: number): void
+    removeMotionObject(startFrame: number, endFrame: number): void;
 
     /** Moves the first specified layer before or after the second specified layer. */
     reorderLayer(layerToMove: number, layerToPutItBy: number, bAddBefore?: boolean): void;
 
     /** Reverses a range of frames. */
-    reverseFrames(startFrameIndex?: number, endFrameIndex?: number): void
+    reverseFrames(startFrameIndex?: number, endFrameIndex?: number): void;
 
     /** Selects all the frames in the current timeline. */
     selectAllFrames(): void;
@@ -1290,7 +1290,7 @@ declare class SpriteSheetExporter {
   canShapePad: boolean;
   canStackDuplicateFrames: boolean;
   changeSymbol();
-  exportSpriteSheet(fileURL: string,option: Object,writeMetaData?: boolean): string;
+  exportSpriteSheet(fileURL: string, option: Object, writeMetaData?: boolean): string;
   format: string;
   image: string;
   layoutFormat: string;

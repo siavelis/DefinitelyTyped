@@ -111,6 +111,6 @@ interface JQuery {
     slimScroll: {
         (): JQuery;
         (options: IJQuerySlimScrollOptions): JQuery;
-    }
+    };
 }
 

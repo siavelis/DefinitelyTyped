@@ -129,8 +129,8 @@ declare namespace Knockback {
         collection(colleciton: Backbone.Collection<Backbone.Model>);
         collection(): Backbone.Collection<Backbone.Model>;
         destroy();
-        shareOptions():  CollectionOptions;
-        filters(id: any) : Backbone.Model;
+        shareOptions(): CollectionOptions;
+        filters(id: any): Backbone.Model;
         filters(ids: any[]): CollectionObservable;
         filters(iterator: (element: Backbone.Model) => boolean): CollectionObservable;
         comparator(comparatorFunction: any);

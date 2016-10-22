@@ -15,25 +15,25 @@ declare namespace joint {
         }
 
         class Graph extends Backbone.Model {
-            addCell(cell: Cell) : void;
-            addCells(cells: Cell[]) : void;
-            initialize() : void;
-            fromJSON(json: any) : void;
-            toJSON() : Object;
-            clear() : void;
+            addCell(cell: Cell): void;
+            addCells(cells: Cell[]): void;
+            initialize(): void;
+            fromJSON(json: any): void;
+            toJSON(): Object;
+            clear(): void;
             getConnectedLinks(cell: Cell, opt?: any): Link[];
-            disconnectLinks(cell: Cell) : void;
-            removeLinks(cell: Cell) : void;
-            findModelsFromPoint(point: {x : number; y: number}): Element[];
+            disconnectLinks(cell: Cell): void;
+            removeLinks(cell: Cell): void;
+            findModelsFromPoint(point: {x: number; y: number}): Element[];
         }
 
         class Cell extends Backbone.Model {
-            toJSON() : Object;
-            remove(options?: any) : void;
-            toFront() : void;
-            toBack() : void;
-            embed(cell: Cell) : void;
-            unembed(cell: Cell) : void;
+            toJSON(): Object;
+            remove(options?: any): void;
+            toFront(): void;
+            toBack(): void;
+            embed(cell: Cell): void;
+            unembed(cell: Cell): void;
             getEmbeddedCells(): Cell[];
             clone(opt?: any): Backbone.Model;      // @todo: return can either be Cell or Cell[].
             attr(attrs: any): Cell;
@@ -44,7 +44,7 @@ declare namespace joint {
             position(): {x: number, y: number};
             translate(tx: number, ty?: number): Element;
             resize(width: number, height: number): Element;
-            rotate(angle: number, options : {absolute : boolean; origin: {x: number;y: number}}): Element;
+            rotate(angle: number, options: {absolute: boolean; origin: {x: number; y: number}}): Element;
             remove(): void;
         }
 
@@ -71,7 +71,7 @@ declare namespace joint {
         class Paper extends Backbone.View<Backbone.Model> {
             options: IOptions;
 
-            setDimensions(width: number, height: number) : void;
+            setDimensions(width: number, height: number): void;
             scale(sx: number, sy?: number, ox?: number, oy?: number): Paper;
             rotate(deg: number, ox?: number, oy?: number): Paper;      // @todo not released yet though it's in the source code already
             findView(el: any): CellView;
@@ -82,7 +82,7 @@ declare namespace joint {
         }
 
         class ElementView extends CellView {
-            scale(sx: number, sy: number) : void;
+            scale(sx: number, sy: number): void;
         }
 
         class CellView extends Backbone.View<Cell> {

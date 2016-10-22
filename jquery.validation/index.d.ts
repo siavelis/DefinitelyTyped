@@ -134,7 +134,7 @@ declare namespace JQueryValidation
         /**
          * String or Function. If specified, the error label is displayed to show a valid element. If a String is given, it is added as a class to the label. If a Function is given, it is called with the label (as a jQuery object) and the validated input (as a DOM element). The label can be used to add a text like "ok!".
          */
-        success?: string|{($label: JQuery, validatedInput: HTMLElement):void};
+        success?: string|{($label: JQuery, validatedInput: HTMLElement): void};
         /**
          * Called to revert changes made by option highlight, same arguments as highlight.
          *

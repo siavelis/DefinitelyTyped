@@ -25,7 +25,7 @@ declare module "istanbul-middleware" {
     type ClientMatcher = (req: express.Request) => boolean;
     type PathTransformer = (req: express.Request) => string;
 
-    export function createClientHandler(root: string,opts?: {
+    export function createClientHandler(root: string, opts?: {
         matcher?: ClientMatcher,
         pathTransformer?: PathTransformer,
         verbose?: boolean

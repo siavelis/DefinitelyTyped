@@ -275,10 +275,10 @@ declare namespace GoogleAppsScript {
      *      var newForm = FormApp.create('Form Name');
      */
     export interface FormApp {
-      Alignment: Alignment
-      DestinationType: DestinationType
-      ItemType: ItemType
-      PageNavigationType: PageNavigationType
+      Alignment: Alignment;
+      DestinationType: DestinationType;
+      ItemType: ItemType;
+      PageNavigationType: PageNavigationType;
       create(title: string): Form;
       getActiveForm(): Form;
       getUi(): Base.Ui;

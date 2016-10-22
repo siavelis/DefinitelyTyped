@@ -12,14 +12,14 @@ declare  namespace hljs
 		name: string,
 		value: string,
 		ignore_illegals?: boolean,
-		continuation?: boolean) : IHighlightResult;
+		continuation?: boolean): IHighlightResult;
 	export function highlightAuto(
 		value: string,
-		languageSubset?: string[]) : IAutoHighlightResult;
+		languageSubset?: string[]): IAutoHighlightResult;
 
-	export function fixMarkup(value: string) : string;
+	export function fixMarkup(value: string): string;
 
-	export function highlightBlock(block: Node) : void;
+	export function highlightBlock(block: Node): void;
 
 	export function configure(options: IOptions): void;
 
@@ -48,20 +48,20 @@ declare  namespace hljs
 	export var RE_STARTERS_RE: string;
 
 	// Common modes
-	export var BACKSLASH_ESCAPE : IMode;
-	export var APOS_STRING_MODE : IMode;
-	export var QUOTE_STRING_MODE : IMode;
-	export var PHRASAL_WORDS_MODE : IMode;
-	export var C_LINE_COMMENT_MODE : IMode;
-	export var C_BLOCK_COMMENT_MODE : IMode;
-	export var HASH_COMMENT_MODE : IMode;
-	export var NUMBER_MODE : IMode;
-	export var C_NUMBER_MODE : IMode;
-	export var BINARY_NUMBER_MODE : IMode;
-	export var CSS_NUMBER_MODE : IMode;
-	export var REGEX_MODE : IMode;
-	export var TITLE_MODE : IMode;
-	export var UNDERSCORE_TITLE_MODE : IMode;
+	export var BACKSLASH_ESCAPE: IMode;
+	export var APOS_STRING_MODE: IMode;
+	export var QUOTE_STRING_MODE: IMode;
+	export var PHRASAL_WORDS_MODE: IMode;
+	export var C_LINE_COMMENT_MODE: IMode;
+	export var C_BLOCK_COMMENT_MODE: IMode;
+	export var HASH_COMMENT_MODE: IMode;
+	export var NUMBER_MODE: IMode;
+	export var C_NUMBER_MODE: IMode;
+	export var BINARY_NUMBER_MODE: IMode;
+	export var CSS_NUMBER_MODE: IMode;
+	export var REGEX_MODE: IMode;
+	export var TITLE_MODE: IMode;
+	export var UNDERSCORE_TITLE_MODE: IMode;
 
 	export interface IHighlightResultBase
 	{
@@ -93,20 +93,20 @@ declare  namespace hljs
 		RE_STARTERS_RE: string;
 
 		// Common modes
-		BACKSLASH_ESCAPE : IMode;
-		APOS_STRING_MODE : IMode;
-		QUOTE_STRING_MODE : IMode;
-		PHRASAL_WORDS_MODE : IMode;
-		C_LINE_COMMENT_MODE : IMode;
-		C_BLOCK_COMMENT_MODE : IMode;
-		HASH_COMMENT_MODE : IMode;
-		NUMBER_MODE : IMode;
-		C_NUMBER_MODE : IMode;
-		BINARY_NUMBER_MODE : IMode;
-		CSS_NUMBER_MODE : IMode;
-		REGEX_MODE : IMode;
-		TITLE_MODE : IMode;
-		UNDERSCORE_TITLE_MODE : IMode;
+		BACKSLASH_ESCAPE: IMode;
+		APOS_STRING_MODE: IMode;
+		QUOTE_STRING_MODE: IMode;
+		PHRASAL_WORDS_MODE: IMode;
+		C_LINE_COMMENT_MODE: IMode;
+		C_BLOCK_COMMENT_MODE: IMode;
+		HASH_COMMENT_MODE: IMode;
+		NUMBER_MODE: IMode;
+		C_NUMBER_MODE: IMode;
+		BINARY_NUMBER_MODE: IMode;
+		CSS_NUMBER_MODE: IMode;
+		REGEX_MODE: IMode;
+		TITLE_MODE: IMode;
+		UNDERSCORE_TITLE_MODE: IMode;
 	}
 
 	// Reference:

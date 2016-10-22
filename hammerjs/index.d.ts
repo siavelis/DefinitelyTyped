@@ -17,52 +17,52 @@ interface HammerStatic
 
   VERSION: number;
 
-  INPUT_START:  number;
-  INPUT_MOVE:   number;
-  INPUT_END:    number;
+  INPUT_START: number;
+  INPUT_MOVE: number;
+  INPUT_END: number;
   INPUT_CANCEL: number;
 
-  STATE_POSSIBLE:   number;
-  STATE_BEGAN:      number;
-  STATE_CHANGED:    number;
-  STATE_ENDED:      number;
+  STATE_POSSIBLE: number;
+  STATE_BEGAN: number;
+  STATE_CHANGED: number;
+  STATE_ENDED: number;
   STATE_RECOGNIZED: number;
-  STATE_CANCELLED:  number;
-  STATE_FAILED:     number;
+  STATE_CANCELLED: number;
+  STATE_FAILED: number;
 
-  DIRECTION_NONE:       number;
-  DIRECTION_LEFT:       number;
-  DIRECTION_RIGHT:      number;
-  DIRECTION_UP:         number;
-  DIRECTION_DOWN:       number;
+  DIRECTION_NONE: number;
+  DIRECTION_LEFT: number;
+  DIRECTION_RIGHT: number;
+  DIRECTION_UP: number;
+  DIRECTION_DOWN: number;
   DIRECTION_HORIZONTAL: number;
-  DIRECTION_VERTICAL:   number;
-  DIRECTION_ALL:        number;
+  DIRECTION_VERTICAL: number;
+  DIRECTION_ALL: number;
 
-  Manager:     HammerManagerConstructor;
-  Input:       HammerInput;
+  Manager: HammerManagerConstructor;
+  Input: HammerInput;
   TouchAction: TouchAction;
 
-  TouchInput:        TouchInput;
-  MouseInput:        MouseInput;
+  TouchInput: TouchInput;
+  MouseInput: MouseInput;
   PointerEventInput: PointerEventInput;
-  TouchMouseInput:   TouchMouseInput;
-  SingleTouchInput:  SingleTouchInput;
+  TouchMouseInput: TouchMouseInput;
+  SingleTouchInput: SingleTouchInput;
 
-  Recognizer:     RecognizerStatic;
+  Recognizer: RecognizerStatic;
   AttrRecognizer: AttrRecognizerStatic;
-  Tap:            TapRecognizerStatic;
-  Pan:            PanRecognizerStatic;
-  Swipe:          SwipeRecognizerStatic;
-  Pinch:          PinchRecognizerStatic;
-  Rotate:         RotateRecognizerStatic;
-  Press:          PressRecognizerStatic;
+  Tap: TapRecognizerStatic;
+  Pan: PanRecognizerStatic;
+  Swipe: SwipeRecognizerStatic;
+  Pinch: PinchRecognizerStatic;
+  Rotate: RotateRecognizerStatic;
+  Press: PressRecognizerStatic;
 
   on( target: EventTarget, types: string, handler: Function ): void;
   off( target: EventTarget, types: string, handler: Function ): void;
-  each( obj: any, iterator: Function, context: any ):     void;
-  merge( dest: any, src: any ):    any;
-  extend( dest: any, src: any, merge: boolean ):   any;
+  each( obj: any, iterator: Function, context: any ): void;
+  merge( dest: any, src: any ): any;
+  extend( dest: any, src: any, merge: boolean ): any;
   inherit( child: Function, base: Function, properties: any ): any;
   bindFn( fn: Function, context: any ): Function;
   prefixed( obj: any, property: string ): string;
@@ -114,7 +114,7 @@ interface HammerManagerConstructor {
 }
 
 interface HammerListener {
-  (event: HammerInput): void
+  (event: HammerInput): void;
 }
 
 interface HammerManager
@@ -246,7 +246,7 @@ interface RecognizerOptions {
   interval?: number;
   pointers?: number;
   posThreshold?: number;
-  taps?: number
+  taps?: number;
   threshold?: number;
   time?: number;
   velocity?: number;

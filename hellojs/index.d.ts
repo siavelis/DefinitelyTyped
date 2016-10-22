@@ -36,23 +36,23 @@ interface HelloJSDeferredErrorCB<TP> {
 
 interface HelloJSThenable<T> {
     then<TP>(
-            successCB?:  HelloJSDeferredSuccessCB<T, TP>,
-            errorCB?:    HelloJSDeferredErrorCB<TP>
+            successCB?: HelloJSDeferredSuccessCB<T, TP>,
+            errorCB?: HelloJSDeferredErrorCB<TP>
         ): HelloJSThenable<TP>;
 
     then<TP>(
-            successCB?:   HelloJSDeferredSuccessCB<T, TP>,
-            errorCB?:   HelloJSImmediateErrorCB<TP>
+            successCB?: HelloJSDeferredSuccessCB<T, TP>,
+            errorCB?: HelloJSImmediateErrorCB<TP>
         ): HelloJSThenable<TP>;
 
     then<TP>(
-            successCB?:  HelloJSImmediateSuccessCB<T, TP>,
-            errorCB?:    HelloJSDeferredErrorCB<TP>
+            successCB?: HelloJSImmediateSuccessCB<T, TP>,
+            errorCB?: HelloJSDeferredErrorCB<TP>
         ): HelloJSThenable<TP>;
 
     then<TP>(
-            successCB?:  HelloJSImmediateSuccessCB<T, TP>,
-            errorCB?:   HelloJSImmediateErrorCB<TP>
+            successCB?: HelloJSImmediateSuccessCB<T, TP>,
+            errorCB?: HelloJSImmediateErrorCB<TP>
         ): HelloJSThenable<TP>;
 }
 
@@ -90,7 +90,7 @@ interface HelloJSStaticNamed {
     login(option?: HelloJSLoginOptions, callback?: () => void): void;
     logout(callback?: () => void): void;
     getAuthResponse(): any;
-    api(path?: string, method?: string, data?: any, callback?: (json?: any) => void):  HelloJSStatic;
+    api(path?: string, method?: string, data?: any, callback?: (json?: any) => void): HelloJSStatic;
 }
 
 interface HelloJSOAuthDef {

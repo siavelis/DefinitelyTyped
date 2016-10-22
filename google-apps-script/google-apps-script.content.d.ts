@@ -17,7 +17,7 @@ declare namespace GoogleAppsScript {
      *      }
      */
     export interface ContentService {
-      MimeType: MimeType
+      MimeType: MimeType;
       createTextOutput(): TextOutput;
       createTextOutput(content: string): TextOutput;
     }

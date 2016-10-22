@@ -17,7 +17,7 @@ interface ReactLikeObject {
 }
 
 interface Module {
-    (reactObj: ReactLikeObject): CreateElement
+    (reactObj: ReactLikeObject): CreateElement;
 }
 
 interface CreateElement {
@@ -29,7 +29,7 @@ interface CreateElement {
      * @param children A single React node (string or ReactElement) or array of nodes.
      * Note that unlike with React itself, multiple children must be placed into an array.
      */
-    <P>(specString: string, children: React.ReactNode): React.DOMElement<P, Element>
+    <P>(specString: string, children: React.ReactNode): React.DOMElement<P, Element>;
 
     /**
      * Renders an HTML element from the given spec string, with optional props
@@ -40,7 +40,7 @@ interface CreateElement {
      * @param children A single React node (string or ReactElement) or array of nodes.
      * Note that unlike with React itself, multiple children must be placed into an array.
      */
-    <P>(specString: string, props?: React.HTMLAttributes<{}>, children?: React.ReactNode): React.DOMElement<P, Element>
+    <P>(specString: string, props?: React.HTMLAttributes<{}>, children?: React.ReactNode): React.DOMElement<P, Element>;
 
 
     /**
@@ -50,7 +50,7 @@ interface CreateElement {
      * @param children A single React node (string or ReactElement) or array of nodes.
      * Note that unlike with React itself, multiple children must be placed into an array.
      */
-    <P>(component: React.ComponentClass<P>, children: React.ReactNode): React.ReactElement<P>
+    <P>(component: React.ComponentClass<P>, children: React.ReactNode): React.ReactElement<P>;
 
     /**
      * Renders a React component, with optional props and children
@@ -60,8 +60,8 @@ interface CreateElement {
      * @param children A single React node (string or ReactElement) or array of nodes.
      * Note that unlike with React itself, multiple children must be placed into an array.
      */
-    <P>(component: React.ComponentClass<P>, props?: P, children?: React.ReactNode): React.ReactElement<P>
+    <P>(component: React.ComponentClass<P>, props?: P, children?: React.ReactNode): React.ReactElement<P>;
 }
 
-declare var exports: Module
-export = exports
+declare var exports: Module;
+export = exports;

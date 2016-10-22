@@ -11,7 +11,7 @@ declare module 'js-schema'
         (obj: any): boolean; // test obj against the schema
     }
 
-    export default function schema(definition: any): Schema
+    export default function schema(definition: any): Schema;
 }
 
 interface NumberConstructor

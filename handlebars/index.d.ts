@@ -114,7 +114,7 @@ interface CompileOptions {
         with?: boolean;
         log?: boolean;
         lookup?: boolean;
-    }
+    };
     knownHelpersOnly?: boolean;
     noEscape?: boolean;
     strict?: boolean;
@@ -216,11 +216,11 @@ declare namespace hbs {
 
         interface PartialBlockStatement extends Statement {
             name: PathExpression | SubExpression;
-            params: Expression[],
-            hash: Hash,
-            program: Program,
-            openStrip: StripFlags,
-            closeStrip: StripFlags
+            params: Expression[];
+            hash: Hash;
+            program: Program;
+            openStrip: StripFlags;
+            closeStrip: StripFlags;
         }
 
         interface ContentStatement extends Statement {

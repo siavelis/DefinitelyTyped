@@ -134,7 +134,7 @@ declare namespace Interact {
         targetElement: any;
 
         startEvent: any;
-        pointerUp: any
+        pointerUp: any;
 
         xe: number;
         ye: number;
@@ -165,12 +165,12 @@ declare namespace Interact {
     interface InteractEvent {
         altKey: boolean;
         axes: string;
-        button: number
+        button: number;
         clientX0: number;
-        clientX: number
+        clientX: number;
         clientY0: number;
-        clientY: number
-        ctrlKey: boolean
+        clientY: number;
+        ctrlKey: boolean;
         dt: number;
         duration: number;
         dx: number;
@@ -205,7 +205,7 @@ declare namespace Interact {
         autoScroll(): any;
         autoScroll(options: boolean): InteractStatic;
         autoScroll(options: {[key: string]: any}): InteractStatic;
-        currentAction(): string
+        currentAction(): string;
         debug(): Debug;
         deltaSource(): string;
         // "page" and "client" are the valid parameters
@@ -237,7 +237,7 @@ declare namespace Interact {
         stop(event: Event): InteractStatic;
         styleCursor(): boolean;
         styleCursor(newValue: boolean): InteractStatic;
-        supportsTouch(): boolean
+        supportsTouch(): boolean;
     }
 }
 

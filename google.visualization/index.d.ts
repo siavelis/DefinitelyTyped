@@ -133,7 +133,7 @@ declare namespace google {
         }
 
         export interface Properties {
-            [property: string]: any
+            [property: string]: any;
         }
 
         export interface SortByColumn {
@@ -210,8 +210,8 @@ declare namespace google {
         }
 
         export interface QueryOptions {
-            sendMethod?: string,
-            makeRequestParams?: Object
+            sendMethod?: string;
+            makeRequestParams?: Object;
         }
 
         //#endregion
@@ -346,7 +346,7 @@ declare namespace google {
                 x2: string;
                 y2: string;
                 useObjectBoundingBoxUnits?: boolean;
-            }
+            };
         }
 
         export interface ChartTextStyle {
@@ -364,13 +364,13 @@ declare namespace google {
             focused?: {
                 color?: string;
                 opacity?: number;
-            }
+            };
             opacity?: number;
             orientation?: string;
             selected?: {
                 color?: string;
                 opacity?: number;
-            }
+            };
             trigger?: string;
         }
 
@@ -580,7 +580,7 @@ declare namespace google {
             isStacked?: boolean;
             legend?: ChartLegend;
             reverseCategories?: boolean;
-            selectionMode?: string // single / multiple
+            selectionMode?: string; // single / multiple
             series?: any;
             theme?: string;
             title?: string;
@@ -626,7 +626,7 @@ declare namespace google {
             orientation?: string;
             pointSize?: number;
             reverseCategories?: boolean;
-            selectionMode?: string // single / multiple
+            selectionMode?: string; // single / multiple
             series?: any;
             theme?: string;
             title?: string;
@@ -760,7 +760,7 @@ declare namespace google {
             orientation?: string;
             pointSize?: number;
             reverseCategories?: boolean;
-            selectionMode?: string // single / multiple
+            selectionMode?: string; // single / multiple
             series?: any;
             theme?: string;
             title?: string;
@@ -844,7 +844,7 @@ declare namespace google {
             isStacked?: boolean;
             legend?: ChartLegend;
             reverseCategories?: boolean;
-            selectionMode?: string // single / multiple
+            selectionMode?: string; // single / multiple
             series?: any;
             theme?: string;
             title?: string;
@@ -1047,7 +1047,7 @@ declare namespace google {
                 rowLabelStyle?: LabelStyle;
                 showRowLabels?: boolean;
                 singleColor?: string;
-            }
+            };
             width?: number;
         }
 
@@ -1085,7 +1085,7 @@ declare namespace google {
             legend?: ChartLegend;
             orientation?: string;
             reverseCategories?: boolean;
-            selectionMode?: string // single / multiple
+            selectionMode?: string; // single / multiple
             series?: any;
             theme?: string;
             title?: string;
@@ -1138,7 +1138,7 @@ declare namespace google {
             pointSize?: number;
             pointsVisible?: boolean;
             reverseCategories?: boolean;
-            selectionMode?: string;// single / multiple
+            selectionMode?: string; // single / multiple
             series?: any;
             seriesType?: string;
             theme?: string;

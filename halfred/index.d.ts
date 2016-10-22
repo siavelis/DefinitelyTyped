@@ -140,7 +140,7 @@ declare module "halfred" {
 
   /** @see https://github.com/basti1302/halfred#links-and-embedded-resources */
   interface LinkCollection {
-    [rel: string]: Link[]
+    [rel: string]: Link[];
   }
 
   /**

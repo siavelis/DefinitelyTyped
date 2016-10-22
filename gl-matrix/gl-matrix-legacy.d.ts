@@ -477,7 +477,7 @@ declare namespace vec3 {
      * @param b the second operand
      * @returns out
      */
-    export function sub(out: GLM.IArray, a: GLM.IArray, b: GLM.IArray): GLM.IArray
+    export function sub(out: GLM.IArray, a: GLM.IArray, b: GLM.IArray): GLM.IArray;
 
     /**
      * Multiplies two vec3's
@@ -1848,7 +1848,7 @@ declare namespace mat4 {
      * @param s Scale vector
      * @returns out
      */
-    export function fromRotationTranslationScale(out: GLM.IArray, q: GLM.IArray, v: GLM.IArray, s: GLM.IArray): GLM.IArray
+    export function fromRotationTranslationScale(out: GLM.IArray, q: GLM.IArray, v: GLM.IArray, s: GLM.IArray): GLM.IArray;
 
     /**
      * Creates a matrix from a quaternion

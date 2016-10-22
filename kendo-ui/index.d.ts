@@ -949,7 +949,7 @@ declare namespace kendo.data {
     }
 
     interface DataSourceSchemaWithConstructorModel extends DataSourceSchema {
-        model?:  typeof Model;
+        model?: typeof Model;
     }
 
     interface DataSourceSchemaModel {

@@ -2174,7 +2174,7 @@ declare namespace Ember {
         @param {Function} method The function of the subscription
         @return this
         */
-        off(name: string, target:any , method: Function): Evented;
+        off(name: string, target: any , method: Function): Evented;
 
         /**
         Checks to see if object has any subscriptions for named event.
@@ -2667,7 +2667,7 @@ declare namespace Em {
         var adapter: typeof Ember.Test.adapter;
         var QUnitAdapter: typeof Ember.Test.QUnitAdapter;
         var registerWaiter: typeof Ember.Test.registerWaiter;
-        var unregisterWaiter: typeof Ember.Test.unregisterWaiter
+        var unregisterWaiter: typeof Ember.Test.unregisterWaiter;
         var resolve: typeof Ember.Test.resolve;
     }
     class TextArea extends Ember.TextArea { }
@@ -2694,7 +2694,7 @@ declare namespace Em {
     var debug: typeof Ember.debug;
     var defineProperty: typeof Ember.defineProperty;
     var deprecate: typeof Ember.deprecate;
-    var deprecateFunc: typeof Ember.deprecateFunc
+    var deprecateFunc: typeof Ember.deprecateFunc;
     var destroy: typeof Ember.destroy;
     var empty: typeof Ember.empty;
     var endPropertyChanges: typeof Ember.endPropertyChanges;

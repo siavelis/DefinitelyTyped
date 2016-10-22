@@ -117,7 +117,7 @@ declare module 'joi' {
 
 	export interface IPOptions {
 		version?: Array<string>;
-		cidr?: string
+		cidr?: string;
 	}
 
 	export interface ValidationError extends Error {
@@ -612,7 +612,7 @@ declare module 'joi' {
 		 */
 		requiredKeys(children: string): ObjectSchema;
 		requiredKeys(children: string[]): ObjectSchema;
-		requiredKeys(child:string, ...children: string[]): ObjectSchema;
+		requiredKeys(child: string, ...children: string[]): ObjectSchema;
 
 		/**
 		 * Sets the specified children to optional.
@@ -623,7 +623,7 @@ declare module 'joi' {
 		 */
 		optionalKeys(children: string): ObjectSchema;
 		optionalKeys(children: string[]): ObjectSchema;
-		optionalKeys(child:string, ...children: string[]): ObjectSchema;
+		optionalKeys(child: string, ...children: string[]): ObjectSchema;
 	}
 
 	export interface BinarySchema extends AnySchema<BinarySchema> {

@@ -146,8 +146,8 @@ declare namespace GoogleAppsScript {
      *      }
      */
     export interface LinearOptimizationService {
-      Status: Status
-      VariableType: VariableType
+      Status: Status;
+      VariableType: VariableType;
       createEngine(): LinearOptimizationEngine;
     }
 

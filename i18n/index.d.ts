@@ -344,6 +344,6 @@ declare namespace Express {
         region: string;
     }
     export interface Response extends i18nAPI {
-        locals: i18nAPI
+        locals: i18nAPI;
     }
 }

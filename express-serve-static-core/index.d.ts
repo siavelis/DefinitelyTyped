@@ -888,7 +888,7 @@ declare module "express-serve-static-core" {
             * @param val
             */
         set(setting: string, val: any): Application;
-        get: {(name: string): any;} & IRouterMatcher<this>;
+        get: {(name: string): any} & IRouterMatcher<this>;
 
         param(name: string | string[], handler: RequestParamHandler): this;
         // Alternatively, you can pass only a callback, in which case you have the opportunity to alter the app.param() API

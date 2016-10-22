@@ -1035,7 +1035,7 @@ declare namespace google.maps {
 
     export interface DrivingOptions {
         departureTime: Date;
-        trafficModel: TrafficModel
+        trafficModel: TrafficModel;
     }
 
     export enum TrafficModel
@@ -1584,7 +1584,7 @@ declare namespace google.maps {
         constructor(container: Element, opts?: StreetViewPanoramaOptions);
         controls: MVCArray[]; // Array<MVCArray<Node>>
         getLinks(): StreetViewLink[];
-        getLocation():  StreetViewLocation;
+        getLocation(): StreetViewLocation;
         getPano(): string;
         getPhotographerPov(): StreetViewPov;
         getPosition(): LatLng;
@@ -1799,8 +1799,8 @@ declare namespace google.maps {
         toUrlValue(precision?: number): string;
     }
 
-    export type LatLngLiteral = { lat: number; lng: number }
-    export type LatLngBoundsLiteral = { east: number; north: number; south: number; west: number }
+    export type LatLngLiteral = { lat: number; lng: number };
+    export type LatLngBoundsLiteral = { east: number; north: number; south: number; west: number };
 
     export class LatLngBounds {
         constructor(sw?: LatLng|LatLngLiteral, ne?: LatLng|LatLngLiteral);

@@ -241,7 +241,7 @@ declare module "sdk/page-mod" {
     contentScriptOptions?: any, attachTo?: attachmentMode | attachmentMode[], contentScriptWhen?: "start" | "ready" | "end",
     exclude?: string | string[], onAttach?: (worker: FFAddonSDK.ContentWorker) => any, onError?: (error: Error) => any}): PageMod;
 
-  type attachmentMode = "existing" | "top" | "frame"
+  type attachmentMode = "existing" | "top" | "frame";
 
   interface PageMod {
     destroy: () => void;
@@ -1103,7 +1103,7 @@ declare namespace FFAddonSDK {
     new(options: {window: Window, contentScript?: string | string[], contentScriptFile?: string | string[],
       onMessage: (data?: any) => any, onError: (data?: any) => any}): ContentWorker;
     url: URL;
-    port: Port,
+    port: Port;
     tab: Tab;
     on: (event: "detach" | "message" | "error", handler: () => any) => void;
     postMessage: (data?: any) => void;

@@ -237,14 +237,14 @@ interface JQueryFileInputOptions {
 }
 
 interface JQueryFileUpload extends JQuery  {
-    contentType:string;
+    contentType: string;
 }
 
 interface JQuery {
     // Interface to the main method of jQuery File Upload
     fileupload(settings: JQueryFileInputOptions | string): JQueryFileUpload;
-    fileupload(action:string,  settings: JQueryFileInputOptions | string): JQueryFileUpload;
-    fileupload(action: string, message:string, settings: JQueryFileInputOptions | string): JQueryFileUpload;
+    fileupload(action: string, settings: JQueryFileInputOptions | string): JQueryFileUpload;
+    fileupload(action: string, message: string, settings: JQueryFileInputOptions | string): JQueryFileUpload;
 }
 
 interface JQuerySupport {

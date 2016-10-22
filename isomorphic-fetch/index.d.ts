@@ -115,7 +115,7 @@ declare class Request extends Body implements IRequest {
     url: string;
     headers: IHeaders;
 
-    type: RequestType
+    type: RequestType;
     destination: RequestDestination;
     referrer: string;
     referrerPolicy: ReferrerPolicy;
@@ -159,7 +159,7 @@ declare class Response extends Body implements IResponse {
     static redirect(url: string, status?: number): IResponse;
     static error(): IResponse;
 
-    type: ResponseType
+    type: ResponseType;
 
     url: string;
     redirected: boolean;

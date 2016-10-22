@@ -28,7 +28,7 @@ interface KnockoutStatic {
         prototype: KnockstrapStringTemplateEngine;
         new (): KnockstrapStringTemplateEngine;
         instance: KnockstrapStringTemplateEngine;
-    }
+    };
 }
 
 interface KnockstrapStringTemplateEngine extends KnockoutNativeTemplateEngine {

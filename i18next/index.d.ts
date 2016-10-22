@@ -61,7 +61,7 @@ declare namespace i18n {
         fallbackNS?: string | string[];
         whitelist?: string[];
         lowerCaseLng?: boolean;
-        load?: string
+        load?: string;
         preload?: string[];
         keySeparator?: string;
         nsSeparator?: string;

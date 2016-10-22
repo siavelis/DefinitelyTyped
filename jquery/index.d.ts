@@ -689,7 +689,7 @@ interface JQueryStatic {
      *
      * @param settings The JQueryAjaxSettings to be used for the request
      */
-    get(settings : JQueryAjaxSettings): JQueryXHR;
+    get(settings: JQueryAjaxSettings): JQueryXHR;
     /**
      * Load JSON-encoded data from the server using a GET HTTP request.
      *
@@ -740,7 +740,7 @@ interface JQueryStatic {
      *
      * @param settings The JQueryAjaxSettings to be used for the request
      */
-    post(settings : JQueryAjaxSettings): JQueryXHR;
+    post(settings: JQueryAjaxSettings): JQueryXHR;
     /**
      * A multi-purpose callbacks list object that provides a powerful way to manage callback lists.
      *
@@ -2344,7 +2344,7 @@ interface JQuery {
      * @param data Data to be passed to the handler in event.data when an event is triggered.
      * @param handler A function to execute when the event is triggered. The value false is also allowed as a shorthand for a function that simply does return false.
     */
-    on(events: string, data : any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
+    on(events: string, data: any, handler: (eventObject: JQueryEventObject, ...args: any[]) => any): JQuery;
     /**
      * Attach an event handler function for one or more events to the selected elements.
      *

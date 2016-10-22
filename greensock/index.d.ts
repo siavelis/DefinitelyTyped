@@ -43,7 +43,7 @@ declare type TweenConfig = {
     onOverwrite?: Function;
     autoCSS?: boolean;
     callbackScope?: Object;
-}
+};
 
 //com.greensock.core
 declare class Animation {

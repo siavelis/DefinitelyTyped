@@ -47,7 +47,7 @@ interface JQueryCookieStatic {
     /**
      * Gets an object of cookies as key-value pairs
      */
-    (): {[key:string]:string};
+    (): {[key: string]: string};
     /**
      * Gets a cookie by name
      * @param name The name of the cookie to get

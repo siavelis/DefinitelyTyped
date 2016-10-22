@@ -183,24 +183,24 @@ declare module 'jspdf' {
         };
 
         // jsPDF plugin: fromHTML
-        fromHTML(HTML:string | HTMLElement, x:number, y:number, settings?:any, callback?:Function, margins?:any):jsPDF;
+        fromHTML(HTML: string | HTMLElement, x: number, y: number, settings?: any, callback?: Function, margins?: any): jsPDF;
 
         // jsPDF plugin: JavaScript
-        addJS(txt:string):jsPDF;
+        addJS(txt: string): jsPDF;
 
         // jsPDF plugin: PNG
-        processPNG(imageData:any, imageIndex:number, alias:string, compression:any, dataAsBinaryString:string):any;
+        processPNG(imageData: any, imageIndex: number, alias: string, compression: any, dataAsBinaryString: string): any;
 
         // jsPDF plugin: split_text_to_size
-        getCharWidthsArray(text:string, options?:any):any[];
-        getStringUnitWidth(text:string, options?:any):number;
-        splitTextToSize(text:string, maxlen:number, options?:any):any;
+        getCharWidthsArray(text: string, options?: any): any[];
+        getStringUnitWidth(text: string, options?: any): number;
+        splitTextToSize(text: string, maxlen: number, options?: any): any;
 
         // jsPDF plugin: SVG
-        addSVG(svgtext:string, x:number, y:number, w?:number, h?:number):jsPDF;
+        addSVG(svgtext: string, x: number, y: number, w?: number, h?: number): jsPDF;
 
         // jsPDF plugin: total_pages
-        putTotalPages(pageExpression:string):jsPDF;
+        putTotalPages(pageExpression: string): jsPDF;
     }
 
     namespace jsPDF {}

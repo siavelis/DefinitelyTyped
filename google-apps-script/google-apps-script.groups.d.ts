@@ -46,7 +46,7 @@ declare namespace GoogleAppsScript {
      *        Logger.log('You belong to ' + groups.length + ' groups.');
      */
     export interface GroupsApp {
-      Role: Role
+      Role: Role;
       getGroupByEmail(email: string): Group;
       getGroups(): Group[];
     }

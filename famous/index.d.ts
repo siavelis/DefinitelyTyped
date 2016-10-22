@@ -110,7 +110,7 @@ declare module "famous/core" {
 }
 
 declare module "famous/dom-renderables" {
-	import { Node } from 'famous/core'
+	import { Node } from 'famous/core';
 
 	export class DOMElement {
 		constructor(node: Node, options?: IDOMElementOptions);
@@ -136,8 +136,8 @@ declare module "famous/dom-renderables" {
 }
 
 declare module "famous/components" {
-	import { Node } from 'famous/core'
-	import { Vec2 } from 'famous/math'
+	import { Node } from 'famous/core';
+	import { Vec2 } from 'famous/math';
 
 	export class Position {
 		constructor(node: Node);
@@ -404,7 +404,7 @@ declare module "famous/physics" {
 		Vec3,
 		Mat33,
 		Quaternion
-	} from 'famous/math'
+	} from 'famous/math';
 
 	export class PhysicsEngine {
 		on(key: string, callback: (payload: any) => void): void;

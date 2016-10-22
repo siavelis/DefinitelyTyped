@@ -32,8 +32,8 @@ declare namespace GoogleAppsScript {
      *      }
      */
     export interface DriveApp {
-      Access: Access
-      Permission: Permission
+      Access: Access;
+      Permission: Permission;
       addFile(child: File): Folder;
       addFolder(child: Folder): Folder;
       continueFileIterator(continuationToken: string): FileIterator;

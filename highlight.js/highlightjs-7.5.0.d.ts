@@ -12,8 +12,8 @@ declare module "highlight.js"
 		export function blockText(block: Node, ignoreNewLines: boolean): string;
 		export function blockLanguage(block: Node): string;
 
-		export function highlight(language_name: string, value: string): IHighlightResult
-		export function highlightAuto(text: string): IHighlightResult
+		export function highlight(language_name: string, value: string): IHighlightResult;
+		export function highlightAuto(text: string): IHighlightResult;
 
 		export function fixMarkup(value: string, tabReplace: boolean, useBR: boolean): string;
 
