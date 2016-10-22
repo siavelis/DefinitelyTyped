@@ -283,10 +283,10 @@ declare namespace ReactBootstrap {
         onHide?: Function;
         onEnter?: Function;
         onEntered?: Function;
-        onEntering?: Function;    
+        onEntering?: Function;
         onExit?: Function;
         onExited?: Function;
-        onExiting?: Function;    
+        onExiting?: Function;
     }
     type ModalDialog = React.ClassicComponent<ModalDialogProps, {}>;
     var ModalDialog: React.ClassicComponentClass<ModalDialogProps>;
@@ -1037,13 +1037,13 @@ declare namespace ReactBootstrap {
     function createChainedFunctionType(...funcs:Function[]):Function
     interface ValidComponentChildrenType{
         map: (children:any,func:any,context:any) => any
-        forEach:(children:any,func:any,context:any) => any
-        count:(children:any) => number
-        filter:(children:any,func:any,context:any) => any
-        find:(children:any,func:any,context:any) => any
-        every:(children:any,func:any,context:any) => any
-        some:(children:any,func:any,context:any) => any
-        toArray:(children:any) => any
+        forEach: (children:any,func:any,context:any) => any
+        count: (children:any) => number
+        filter: (children:any,func:any,context:any) => any
+        find: (children:any,func:any,context:any) => any
+        every: (children:any,func:any,context:any) => any
+        some: (children:any,func:any,context:any) => any
+        toArray: (children:any) => any
     }
     class utils {
         static bootstrapUtils:bootstrapUtilsType

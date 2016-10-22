@@ -14,7 +14,7 @@ interface Mixpanel
 
     disable(events?:string[]):void;
 
-    track(eventName:string, params?:{[index:string]:any}, callback?:() => void):void;
+    track(eventName:string, params?:{[index:string]:any}, callback?: () => void):void;
 
     track_links(querySelector:string, eventName:string, params?:{[index:string]:any}):void;
 
@@ -43,13 +43,13 @@ declare namespace Mixpanel
 {
     interface People
     {
-        set(keys:{[index:string]:any}, callback?:() => void):void;
+        set(keys:{[index:string]:any}, callback?: () => void):void;
 
-        set(key:string, value:any, callback?:() => void):void;
+        set(key:string, value:any, callback?: () => void):void;
 
-        set_once(keys:{[index:string]:any}, callback?:() => void):void;
+        set_once(keys:{[index:string]:any}, callback?: () => void):void;
 
-        set_once(key:string, value:any, callback?:() => void):void;
+        set_once(key:string, value:any, callback?: () => void):void;
 
         increment(key:string):void;
 
@@ -61,7 +61,7 @@ declare namespace Mixpanel
 
         append(key:string, value:any):void;
 
-        track_charge(amount:number, params?:{[index:string]:any}, callback?:() => void):void;
+        track_charge(amount:number, params?:{[index:string]:any}, callback?: () => void):void;
 
         clear_charges():void;
 

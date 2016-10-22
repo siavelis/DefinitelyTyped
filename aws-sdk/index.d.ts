@@ -481,7 +481,7 @@ export declare class DynamoDB {
 
 // ==========================================================
 
-export declare module DynamoDB {
+export namespace DynamoDB {
 
     interface _DDBDC_Generic {
         TableName: string;
@@ -786,7 +786,7 @@ export namespace CloudFormation {
 
 // ===========================================================
 
-export declare module Lambda {
+export namespace Lambda {
     export interface AddPermissionParams {
         Action: string;
         FunctionName: string;
@@ -872,7 +872,7 @@ export declare module Lambda {
     export interface InvokeParams {
         FunctionName: string;
         ClientContext?: string;
-        InvocationType?: string;/* 'Event | RequestResponse | DryRun' */
+        InvocationType?: string; /* 'Event | RequestResponse | DryRun' */
         LogType?: string; /* 'None | Tail' */
         Payload?: any; /* new Buffer('...') || string */
         Qualifier?: string;
@@ -1356,7 +1356,7 @@ export namespace SQS {
         QueueUrl?: string;
         MessageBody: string;
         DelaySeconds?: number;
-        MessageAttributes?: { [name: string]: MessageAttribute; }
+        MessageAttributes?: { [name: string]: MessageAttribute; };
     }
 
     export interface ReceiveMessageParams {
@@ -1392,7 +1392,7 @@ export namespace SQS {
         Id: string;
         MessageBody: string;
         DelaySeconds?: number;
-        MessageAttributes?: { [name: string]: MessageAttribute; }
+        MessageAttributes?: { [name: string]: MessageAttribute; };
     }
 
     export interface CreateQueueParams {
@@ -1442,7 +1442,7 @@ export namespace SQS {
         Body: string;
         Attributes: { [name: string]: any };
         MD5OfMessageAttributes: string;
-        MessageAttributes: { [name: string]: MessageAttribute; }
+        MessageAttributes: { [name: string]: MessageAttribute; };
     }
 
     export interface MessageAttribute {
@@ -1492,7 +1492,7 @@ export namespace SQS {
 
 }
 
-export declare module SES {
+export namespace SES {
 
     export interface Client {
         config: ClientConfig;
@@ -1535,7 +1535,7 @@ export declare module SES {
 
 }
 
-export declare module Swf {
+export namespace Swf {
 
     export interface Client {
         //constructor(options?: any);
@@ -2146,7 +2146,7 @@ export declare module Swf {
 
 }
 
-export declare module Sns {
+export namespace Sns {
 
     export interface Client {
         config: ClientConfig;
@@ -2189,7 +2189,7 @@ export declare module Sns {
 
 }
 
-export declare module s3 {
+export namespace s3 {
     interface Owner {
         DisplayName: string;
         ID: string;
@@ -2205,7 +2205,7 @@ export declare module s3 {
         ETag: string;
         Size: number;
         StorageClass: "STANDARD" | "REDUCED_REDUNDANCY" | "GLACIER";
-        Owner?: Owner
+        Owner?: Owner;
     }
 
     // This private interface contains the common parts between v1 and v2 of the API Request and is exposed via V1 and V2 subclasses
@@ -2320,7 +2320,7 @@ export declare module s3 {
     }
 }
 
-export declare module ecs {
+export namespace ecs {
     export interface CreateServicesParams {
         desiredCount: number;
         serviceName: string;
@@ -2499,7 +2499,7 @@ export namespace sts {
         /**
          * An optional credentials object to fill instead of creating a new object. Useful when modifying an existing credentials object from a refresh call.
          */
-        Credentials?: Credentials
+        Credentials?: Credentials;
     }
 
     export interface DecodeAuthorizationMessageParams {
@@ -2508,12 +2508,12 @@ export namespace sts {
 
     export interface GetFederationTokenParams {
         Name: string;
-        DurationSeconds?: number,
-        Policy?: string
+        DurationSeconds?: number;
+        Policy?: string;
     }
 
     export interface GetSessionTokenParams {
-        DurationSeconds: number,
+        DurationSeconds: number;
         SerialNumber: string;
         TokenCode: string;
     }

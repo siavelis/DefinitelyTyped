@@ -28,15 +28,15 @@ declare namespace __ONOFF {
         listeners: Array<(error: Error, value: number) => void>;
         valueFd: number;
 
-        read(cb:(err: Error, value: number) => void): void;
+        read(cb: (err: Error, value: number) => void): void;
         readSync(): number;
 
-        write(value: number, cb:(err: Error, value: number) => void): void;
+        write(value: number, cb: (err: Error, value: number) => void): void;
         writeSync(value: number): void;
 
-        watch(cb:(error: Error, value: number) => void): void;
+        watch(cb: (error: Error, value: number) => void): void;
         unwatch(): void;
-        unwatch(cb:(error: Error, value: number) => void): void;
+        unwatch(cb: (error: Error, value: number) => void): void;
         unwatchAll(): void;
 
         direction(): string;

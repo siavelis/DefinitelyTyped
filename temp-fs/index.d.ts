@@ -32,7 +32,7 @@ declare namespace tempfs {
          *
          * @param callback makes it asynchronous.
          */
-        unlink(callback?:(error: Error)=>any): any;
+        unlink(callback?: (error: Error) => any): any;
     }
 
     /**
@@ -57,7 +57,7 @@ declare namespace tempfs {
          *
          * @param callback makes it asynchronous.
          */
-        unlink(callback?:(error: Error)=>any): any;
+        unlink(callback?: (error: Error) => any): any;
     }
 
     /**
@@ -132,7 +132,7 @@ declare namespace tempfs {
     /**
      * Remove all tracked files and directories asynchronously.
      */
-    function clear(callback?:()=>any): any;
+    function clear(callback?: () => any): any;
 
     /**
      * Remove all tracked files and directories synchronously.
@@ -158,7 +158,7 @@ declare namespace tempfs {
      *                 <code>null</code>, <code>dir</code> has the properties of
      *                 {@link dir}.
      */
-    function mkdir(options?: options, callback?:(err: any, dir: dir)=>any): any;
+    function mkdir(options?: options, callback?: (err: any, dir: dir) => any): any;
 
     /**
      * The synchronous version of {@link mkdir}.
@@ -180,7 +180,7 @@ declare namespace tempfs {
      *                 <code>null</code>, <code>file</code> has the properties
      *                 of {@link file}.
      */
-    function open(options?: options, callback?:(err: any, file: file)=>any): any;
+    function open(options?: options, callback?: (err: any, file: file) => any): any;
 
     /**
      * The synchronous version of {@link open}.

@@ -8,15 +8,15 @@
 declare namespace aa {
 
 	export interface ILabelStrategies  {
-		[strategyName: string]: (element: ng.IAugmentedJQueryStatic, labelText: string, isRequired: boolean)=>void;
+		[strategyName: string]: (element: ng.IAugmentedJQueryStatic, labelText: string, isRequired: boolean) => void;
 	}
 
 	export interface IFieldGroupStrategies {
-		[strategyName: string]: (element: ng.IAugmentedJQueryStatic)=>void;
+		[strategyName: string]: (element: ng.IAugmentedJQueryStatic) => void;
 	}
 
 	export interface IValMsgPlacementStrategies {
-		[strategyName: string]: (formFieldElement: ng.IAugmentedJQueryStatic, formName: string, formFieldName: string)=>void;
+		[strategyName: string]: (formFieldElement: ng.IAugmentedJQueryStatic, formName: string, formFieldName: string) => void;
 	}
 
 	export interface IValidIconStrategy {
@@ -26,11 +26,11 @@ declare namespace aa {
 	}
 
 	export interface ISpinnerClickStrategies {
-		[strategyName: string]: (element: ng.IAugmentedJQueryStatic)=>void;
+		[strategyName: string]: (element: ng.IAugmentedJQueryStatic) => void;
 	}
 
 	export interface IOnNavigateAwayStrategies {
-		[strategyName: string]: (rootFormScope: ng.IScope, rootForm: ng.IAugmentedJQueryStatic, $injector: ng.auto.IInjectorService)=>void;
+		[strategyName: string]: (rootFormScope: ng.IScope, rootForm: ng.IAugmentedJQueryStatic, $injector: ng.auto.IInjectorService) => void;
 	}
 
 	export interface IValidationMessages {
@@ -51,7 +51,7 @@ declare namespace aa {
 		defaultOnNavigateAwayStrategy: string;
 		validationMessages: IValidationMessages;
 		valMsgForTemplate: string;
-		confirmResetStrategy:()=>boolean;
+		confirmResetStrategy: () => boolean;
 		globalSettings: IGlobalSettings;
 
 		labelStrategies: ILabelStrategies;
@@ -101,6 +101,6 @@ declare namespace aa {
 		ignore?: any;
 		globals?: any;
 		resolve?: any;
-		resolveFn?:(modelValue: string) => string;
+		resolveFn?: (modelValue: string) => string;
 	}
 }

@@ -27,7 +27,7 @@ declare namespace MDNS {
     }
 
     interface AdvertisementCreatable {
-        new(serviceType: ServiceType, port: number, options?: AdvertisementOptions, callback?:(error: DnsSdError, service: Service)=>void): Advertisement;
+        new(serviceType: ServiceType, port: number, options?: AdvertisementOptions, callback?: (error: DnsSdError, service: Service) => void): Advertisement;
     }
 
     interface Advertisement extends NodeJS.EventEmitter {
@@ -38,7 +38,7 @@ declare namespace MDNS {
     // --- Browser ---
 
     interface BrowserOptions {
-        resolverSequence?: Array<(service: Service, next:()=>void)=>boolean>;
+        resolverSequence?: Array<(service: Service, next: () => void) => boolean>;
         interfaceIndex?: number;
         networkInterface?: string;
         domain?: any;
@@ -50,13 +50,13 @@ declare namespace MDNS {
         start(): any;
         stop(): any;
         on(event: string, listener: Function): this;
-        on(event:'serviceUp', listener:(info: Service)=>void): this;
-        on(event:'serviceDown', listener:(info: Service)=>void): this;
+        on(event:'serviceUp', listener: (info: Service) => void): this;
+        on(event:'serviceDown', listener: (info: Service) => void): this;
     }
 
     interface BrowserStatic {
         new(serviceType: ServiceType, options?: BrowserOptions): Browser;
-        defaultResolverSequence: Array<(service: Service, next:()=>void)=>boolean>
+        defaultResolverSequence: Array<(service: Service, next: () => void) => boolean>
     }
 
     // --- Services ---
@@ -102,11 +102,11 @@ declare namespace MDNS {
     }
 
     interface DefaultResolverSequenceTasks extends MDNSResolverSequenceTasks {
-        DNSServiceResolve(options?:{flags: any}):(service: Service, next:()=>void)=>boolean;
-        DNSServiceGetAddrInfo(options?: any):(service: Service, next:()=>void)=>boolean;
-        getaddrinfo(options?: any):(service: Service, next:()=>void)=>boolean;
-        makeAddressesUnique():(service: Service, next:()=>void)=>boolean;
-        filterAddresses(fn:(address: string, index?: number, addresses?: Array<string>)=>boolean): void;
+        DNSServiceResolve(options?:{flags: any}): (service: Service, next: () => void) => boolean;
+        DNSServiceGetAddrInfo(options?: any): (service: Service, next: () => void) => boolean;
+        getaddrinfo(options?: any): (service: Service, next: () => void) => boolean;
+        makeAddressesUnique(): (service: Service, next: () => void) => boolean;
+        filterAddresses(fn: (address: string, index?: number, addresses?: Array<string>) => boolean): void;
         logService(): void;
     }
 
@@ -135,9 +135,9 @@ declare namespace MDNS {
 
     function createBrowser(serviceType: ServiceType, options?: BrowserOptions): Browser;
 
-    function createAdvertisement(serviceType: ServiceType, port: number, options?: AdvertisementOptions, callback?:(error: DnsSdError, service: Service)=>void): Advertisement;
+    function createAdvertisement(serviceType: ServiceType, port: number, options?: AdvertisementOptions, callback?: (error: DnsSdError, service: Service) => void): Advertisement;
 
-    function resolve(service: Service, sequence?: Array<(service: Service, next:()=>void)=>boolean>, callback?:(error: DnsSdError, service: Service)=>void): void;
+    function resolve(service: Service, sequence?: Array<(service: Service, next: () => void) => boolean>, callback?: (error: DnsSdError, service: Service) => void): void;
 
     function browseThemAll(options: BrowserOptions): Browser;
 

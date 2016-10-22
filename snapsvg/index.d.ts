@@ -3,7 +3,7 @@
 // Definitions by: Lars Klein <https://github.com/lhk>, Mattanja Kern <https://github.com/mattanja>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare function mina(a: number, A: number, b: number, B: number, get: Function, set: Function, easing?:(num: number)=>number): mina.AnimationDescriptor;
+declare function mina(a: number, A: number, b: number, B: number, get: Function, set: Function, easing?: (num: number) => number): mina.AnimationDescriptor;
 declare namespace mina {
     export interface MinaAnimation {
         id: string;
@@ -75,8 +75,8 @@ declare namespace Snap {
     export function selectAll(query: string): any;
     export function snapTo(values: Array<number>,value: number,tolerance?: number): number;
 
-    export function animate(from: number|number[],to: number|number[],updater:(n: number)=>void,duration: number,easing?:(num: number)=>number,callback?:()=>void): mina.MinaAnimation;
-    export function animation(attr: Object,duration: number,easing?:(num: number)=>number,callback?:()=>void): Snap.Animation;
+    export function animate(from: number|number[],to: number|number[],updater: (n: number) => void,duration: number,easing?: (num: number) => number,callback?: () => void): mina.MinaAnimation;
+    export function animation(attr: Object,duration: number,easing?: (num: number) => number,callback?: () => void): Snap.Animation;
 
     export function color(clr: string): RGBHSB;
     export function getRGB(color: string): RGB;
@@ -172,8 +172,8 @@ declare namespace Snap {
     export interface Animation {
         attr:{[attr: string]: string|number|boolean|any};
         duration: number;
-        easing?:(num: number)=>number;
-        callback?:()=>void;
+        easing?: (num: number) => number;
+        callback?: () => void;
     }
 
     export interface Element {
@@ -182,7 +182,7 @@ declare namespace Snap {
         after(el: Snap.Element): Snap.Element;
         align(el: Snap.Element, way: string): Snap.Element;
         animate(animation: any): Snap.Element;
-        animate(attrs:{[attr: string]: string|number|boolean|any},duration: number,easing?:(num: number)=> number,callback?:()=>void): Snap.Element;
+        animate(attrs:{[attr: string]: string|number|boolean|any},duration: number,easing?: (num: number)=> number,callback?: () => void): Snap.Element;
         append(el: Snap.Element): Snap.Element;
         appendTo(el: Snap.Element): Snap.Element;
         asPX(attr: string,value?: string): number;            //TODO: check what is really returned
@@ -329,8 +329,8 @@ declare namespace Snap {
     }
 
     export interface Set {
-        animate(attrs:{[attr:string]:string|number|boolean|any},duration:number,easing?:(num:number)=>number,callback?:()=>void):Snap.Element;
-        animate(...params:Array<{attrs:any,duration:number,easing:(num:number)=>number,callback?:()=>void}>):Snap.Element;
+        animate(attrs:{[attr:string]:string|number|boolean|any},duration:number,easing?: (num:number) => number,callback?: () => void):Snap.Element;
+        animate(...params:Array<{attrs:any,duration:number,easing: (num:number) => number,callback?: () => void}>):Snap.Element;
         attr(params: {[attr:string]:string|number|boolean|any}): Snap.Element;
         attr(param: string): string;
         bind(attr: string, callback: Function): Snap.Set;

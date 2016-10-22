@@ -64,15 +64,15 @@ declare namespace Atmosphere {
         pollingInterval?: number;
 
         onError?: (response?: Response) => void;
-        onClose?:  (response?: Response)  => void;
-        onOpen?:  (response?: Response)  => void;
-        onMessage?:  (response: Response)  => void;
-        onReopen?:  (request?: Request, response?: Response) => void;
-        onReconnect?:  (request?: Request, response?: Response)  => void;
-        onMessagePublished?:  (response?: Response)  => void;
-        onTransportFailure?:  (reason?: string, response?: Response)  => void;
-        onLocalMessage?:  (request?: Request) => void;
-        onFailureToReconnect?:  (request?: Request, response?: Response) => void;
+        onClose?: (response?: Response) => void;
+        onOpen?: (response?: Response) => void;
+        onMessage?: (response: Response) => void;
+        onReopen?: (request?: Request, response?: Response) => void;
+        onReconnect?: (request?: Request, response?: Response) => void;
+        onMessagePublished?: (response?: Response) => void;
+        onTransportFailure?: (reason?: string, response?: Response) => void;
+        onLocalMessage?: (request?: Request) => void;
+        onFailureToReconnect?: (request?: Request, response?: Response) => void;
         onClientTimeout?: (request?: Request) => void;
 
         subscribe?: (options: Request) => void;

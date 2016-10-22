@@ -245,7 +245,7 @@ declare namespace ng {
         // The observer function will be invoked once during the next $digest
         // following compilation. The observer is then invoked whenever the
         // interpolated value changes.
-        $observe(name: string, fn:(value?:any)=>any): Function;
+        $observe(name: string, fn: (value?:any) => any): Function;
 
         // A map of DOM element attribute names to the normalized name. This is needed
         // to do reverse lookup from normalized name back to actual name.
@@ -647,7 +647,7 @@ declare namespace ng {
         catch<TResult>(onRejected: (reason: any) => IPromise<TResult>): IPromise<TResult>;
         catch<TResult>(onRejected: (reason: any) => TResult): IPromise<TResult>;
 
-        finally<TResult>(finallyCallback: ()=>any):IPromise<TResult>;
+        finally<TResult>(finallyCallback: () => any):IPromise<TResult>;
     }
 
     interface IDeferred<T> {

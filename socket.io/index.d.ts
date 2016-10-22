@@ -71,7 +71,7 @@ declare namespace SocketIO {
 		 * which will be null if there was no problem, and one parameter, success,
 		 * of type boolean
 		 */
-		checkRequest( req: any, fn:( err: any, success: boolean ) => void ): void;
+		checkRequest( req: any, fn: ( err: any, success: boolean ) => void ): void;
 
 		/**
 		 * Gets whether we're serving the client.js file or not

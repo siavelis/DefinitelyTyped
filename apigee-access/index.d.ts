@@ -29,7 +29,7 @@ declare namespace ApigeeAccess {
 
     interface SecureVault{
         getKeys(callback: (err: any, data: any) => void): void;
-        get(key: string, callback: (err: any, data: any) => void): void;    
+        get(key: string, callback: (err: any, data: any) => void): void;
     }
 
     interface QuotaService{

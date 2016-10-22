@@ -30,7 +30,7 @@ declare namespace mathjs {
 
 		uninitialized: any;
 		version: string;
-		
+
 		config(options: any): void;
 
                 expression: MathNode;
@@ -1210,20 +1210,20 @@ declare namespace mathjs {
 		 * @param x A one dimensional matrix or array to filter
                  * @param test
 		 */
-		filter(x: MathArray|Matrix, test: RegExp|((item: any)=>boolean)): MathArray|Matrix;
+		filter(x: MathArray|Matrix, test: RegExp|((item: any) => boolean)): MathArray|Matrix;
 
 		/**
 		 * Iterate over all elements of a matrix/array, and executes the given callback function.
 		 * @param x The matrix to iterate on.
 		 * @param callback The callback function is invoked with three parameters: the value of the element, the index of the element, and the Matrix/array being traversed.
 		 */
-		forEach(x: MathArray|Matrix, callback: (item: any)=>any): void;
+		forEach(x: MathArray|Matrix, callback: (item: any) => any): void;
 
 		/**
 		 * Format a value of any type into a string.
 		 * @param value The value to be formatted
 		 */
-		format(value: any, options?: IFormatOptions|number|((item: any)=>string)): string;
+		format(value: any, options?: IFormatOptions|number|((item: any) => string)): string;
 
 		/**
                  * Test whether a value is an integer number. The function supports number, BigNumber, and Fraction.
@@ -1259,7 +1259,7 @@ declare namespace mathjs {
 		 * @param x The matrix to iterate on.
 		 * @param callback The callback method is invoked with three parameters: the value of the element, the index of the element, and the matrix being traversed.
 		 */
-		map(x: MathArray|Matrix, callback: (item: any)=>any): MathArray|Matrix;
+		map(x: MathArray|Matrix, callback: (item: any) => any): MathArray|Matrix;
 
 		/**
 		 * Partition-based selection of an array or 1D matrix. Will find the kth smallest value, and mutates the input array. Uses Quickselect.
@@ -1268,7 +1268,7 @@ declare namespace mathjs {
 		 * @param compare  An optional comparator function. The function is called as compare(a, b), and must return 1 when a > b, -1 when a < b, and 0 when a == b. Default value: 'asc'.
 		 * @returns Returns the kth lowest value.
 		 */
-		partitionSelect(x: MathArray|Matrix, k: number, compare?: string|((a: any, b: any)=>number)): any;
+		partitionSelect(x: MathArray|Matrix, k: number, compare?: string|((a: any, b: any) => number)): any;
 
 		/**
 		 * Interpolate values into a string template.
@@ -1283,7 +1283,7 @@ declare namespace mathjs {
 		 * @param x A one dimensional matrix or array to sort
 		 * @param compare  An optional comparator function. The function is called as compare(a, b), and must return 1 when a > b, -1 when a < b, and 0 when a == b. Default value: 'asc'.
 		 */
-		sort(x: MathArray|Matrix, compare?: string|((a: any, b: any)=>number)): MathArray|Matrix;
+		sort(x: MathArray|Matrix, compare?: string|((a: any, b: any) => number)): MathArray|Matrix;
 
 		/**
 		 * Determine the type of a variable.
@@ -1366,7 +1366,7 @@ declare namespace mathjs {
                  * @param  {Function} callback(node [description]
                  * @return {[Mathnode]}           Returns an array with nodes for which test returned true
                  */
-                filter(callback: (node: MathNode, path: string, parent: MathNode)=>any ): MathNode[];
+                filter(callback: (node: MathNode, path: string, parent: MathNode) => any ): MathNode[];
 
 
                 /**
@@ -1374,7 +1374,7 @@ declare namespace mathjs {
                  * @param  {MathNode} callback(node [description]
                  * @return {[type]}                 [description]
                  */
-                forEach(callback: (node: MathNode, path: string, parent: MathNode)=>boolean): MathNode[];
+                forEach(callback: (node: MathNode, path: string, parent: MathNode) => boolean): MathNode[];
 
 
                 /**
@@ -1406,7 +1406,7 @@ declare namespace mathjs {
                 traverse(callback: (node: MathNode, path: string, parent: MathNode)=> void): any;
 //addEventListener(ev: 'change', callback: (ev: EditorChangeEvent) => any);
 
-                transform(callback: (node: MathNode, path: string, parent: MathNode)=>boolean): MathNode[];
+                transform(callback: (node: MathNode, path: string, parent: MathNode) => boolean): MathNode[];
 
 	}
 
@@ -1457,7 +1457,7 @@ declare namespace mathjs {
                  * A custom formatting function. Can be used to override the built-in notations. Function fn is called with
                  * value as parameter and must return a string. Is useful for example to format all values inside a matrix in a particular way.
 		 * */
-		fn?: (item: any)=>string;
+		fn?: (item: any) => string;
 	}
 
 	export interface Help {
@@ -2195,18 +2195,18 @@ declare namespace mathjs {
 		 * @param x A one dimensional matrix or array to filter
                  * @param test
 		 */
-		filter(test: RegExp|((item: any)=>boolean)): IMathJsChain;
+		filter(test: RegExp|((item: any) => boolean)): IMathJsChain;
 
 		/**
 		 * Format a value of any type into a string.
 		 */
-		format(options?: IFormatOptions|number|((item: any)=>string)): IMathJsChain;
+		format(options?: IFormatOptions|number|((item: any) => string)): IMathJsChain;
 
 		/**
 		 * Create a new matrix or array with the results of the callback function executed on each entry of the matrix/array.
 		 * @param callback The callback method is invoked with three parameters: the value of the element, the index of the element, and the matrix being traversed.
 		 */
-		map(callback: (item: any)=>any): IMathJsChain;
+		map(callback: (item: any) => any): IMathJsChain;
 
 		/**
 		 * Partition-based selection of an array or 1D matrix. Will find the kth smallest value, and mutates the input array. Uses Quickselect.
@@ -2214,13 +2214,13 @@ declare namespace mathjs {
 		 * @param compare  An optional comparator function. The function is called as compare(a, b), and must return 1 when a > b, -1 when a < b, and 0 when a == b. Default value: 'asc'.
 		 * @returns Returns the kth lowest value.
 		 */
-		partitionSelect(k: number, compare?: string|((a: any, b: any)=>number)): IMathJsChain;
+		partitionSelect(k: number, compare?: string|((a: any, b: any) => number)): IMathJsChain;
 
 		/**
 		 * Sort the items in a matrix.
 		 * @param compare  An optional comparator function. The function is called as compare(a, b), and must return 1 when a > b, -1 when a < b, and 0 when a == b. Default value: 'asc'.
 		 */
-		sort(compare?: string|((a: any, b: any)=>number)): IMathJsChain;
+		sort(compare?: string|((a: any, b: any) => number)): IMathJsChain;
 
 		done(): any;
 		valueOf(): any;

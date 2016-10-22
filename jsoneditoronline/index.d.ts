@@ -154,8 +154,8 @@ declare class JSONEditor {
 	static getInnerText(element: HTMLElement, buffer: JSONEditorBuffer): string;
 	static getInternetExplorerVersion(): number;
 	Events: {
-		addEventListener(element: HTMLElement, action: string, listener:(event?: Event) => void, useCapture: boolean): (event?: Event) => void;
-		removeEventListener(element: HTMLElement, action: string, listener:(event?: Event) => void, useCapture: boolean): void;
+		addEventListener(element: HTMLElement, action: string, listener: (event?: Event) => void, useCapture: boolean): (event?: Event) => void;
+		removeEventListener(element: HTMLElement, action: string, listener: (event?: Event) => void, useCapture: boolean): void;
 		stopPropagation(event: Event): void;
 		preventDefault(event: Event): void;
 

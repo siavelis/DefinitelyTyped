@@ -11,16 +11,16 @@ declare module 'dva' {
     export default function dva(opts?: Object):{
 
         /** dva plugin */
-        use: (hooks: Object)=>void,
+        use: (hooks: Object) => void,
 
         /** dva bootstrap */
-        start: (selector?: String|HTMLElement)=>void,
+        start: (selector?: String|HTMLElement) => void,
 
         /** dva add model */
-        model: (model: Object)=>void,
+        model: (model: Object) => void,
 
         /** dva setting router */
-        router: (router: Object)=>Object|JSX.Element,
+        router: (router: Object) => Object|JSX.Element,
     };
 }
 

@@ -8,7 +8,7 @@
 export = __PI_SPI;
 
 declare namespace __PI_SPI {
-    
+
     enum mode {
         CPHA = 0x01,
         CPOL = 0x02
@@ -32,11 +32,11 @@ declare namespace __PI_SPI {
         bitOrder(order:order):void;
 
 
-        write(writebuf:Buffer, cb:(error:Error,data:Buffer) => void):void;
-        read(readcount:number, cb:(error:Error,data:Buffer) => void):void;
+        write(writebuf:Buffer, cb: (error:Error,data:Buffer) => void):void;
+        read(readcount:number, cb: (error:Error,data:Buffer) => void):void;
 
-        transfer(writebuf:Buffer, cb:(error:Error,data:Buffer) => void ):void;
-        transfer(writebuf:Buffer, readcount:number, cb:(error:Error,data:Buffer) => void ):void;
+        transfer(writebuf:Buffer, cb: (error:Error,data:Buffer) => void ):void;
+        transfer(writebuf:Buffer, readcount:number, cb: (error:Error,data:Buffer) => void ):void;
 
         close():void;
     }

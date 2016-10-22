@@ -38,7 +38,7 @@ declare namespace nv {
     }
 
     interface SymbolMap {
-        set(name: string,func: (size: any)=>void): void
+        set(name: string,func: (size: any) => void): void
     }
 
     interface Utils {

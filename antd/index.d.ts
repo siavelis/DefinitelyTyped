@@ -42,7 +42,7 @@ declare namespace Antd {
         /**可选参数，关闭时触发的回调函数 */
         onClose?: Function;
         /**可选参数，是否显示辅助图标 */
-        showIcon?: boolean
+        showIcon?: boolean;
     }
 
 
@@ -80,7 +80,7 @@ declare namespace Antd {
         /** 展示封顶的数字值*/
         overflowCount?: number;
         /** 不展示数字，只有一个小红点*/
-        dot?: boolean
+        dot?: boolean;
     }
 
 
@@ -111,8 +111,7 @@ declare namespace Antd {
 
     interface ButtonGroupProps {
         /** 设置按钮大小，可选值为 `small` `large` 或者不设*/
-        size?: string
-
+        size?: string;
     }
 
     /**
@@ -120,7 +119,7 @@ declare namespace Antd {
 
     通过设置 `size` 为 `large` `small` 分别把按钮组合设为大、小尺寸。若不设置 `size`，则尺寸为中。*/
     class ButtonGroup extends React.Component<ButtonGroupProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     /**
@@ -131,8 +130,8 @@ declare namespace Antd {
 
     标记了一个（或封装一组）操作命令，响应用户点击行为，触发相应的业务逻辑。*/
     export class Button extends React.Component<ButtonProps, {}> {
-        static Group: typeof ButtonGroup
-        render(): JSX.Element
+        static Group: typeof ButtonGroup;
+        render(): JSX.Element;
     }
 
 
@@ -141,10 +140,10 @@ declare namespace Antd {
 
     interface BreadcrumbItemProps {
         /** 链接，如不传则不可点击   */
-        href?: string
+        href?: string;
     }
     export class BreadcrumbItem extends React.Component<BreadcrumbItemProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     interface BreadcrumbProps {
@@ -153,7 +152,7 @@ declare namespace Antd {
         /** 路由的参数*/
         params?: Object;
         /** 分隔符自定义*/
-        separator?: string | React.ReactNode
+        separator?: string | React.ReactNode;
     }
     /**
      * #Breadcrumb
@@ -165,8 +164,8 @@ declare namespace Antd {
     - 当需要告知用户“你在哪里”时；
     - 当需要向上导航的功能时。*/
     export class Breadcrumb extends React.Component<BreadcrumbProps, {}> {
-        static Item: typeof BreadcrumbItem
-        render(): JSX.Element
+        static Item: typeof BreadcrumbItem;
+        render(): JSX.Element;
     }
 
 
@@ -190,7 +189,7 @@ declare namespace Antd {
         /** 默认展示日期*/
         defaultValue?: Date;
         /** 初始模式，`month/year`*/
-        mode?: string
+        mode?: string;
     }
     /**
      * #Calendar
@@ -201,7 +200,7 @@ declare namespace Antd {
     当数据是日期或按照日期划分时，例如日程、课表、价格日历等，农历等。目前支持年/月切换。
     */
     export class Calendar extends React.Component<CalendarProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -220,7 +219,7 @@ declare namespace Antd {
         /** 切换面板的回调*/
         beforeChange?: Function;
         /** 切换面板的回调*/
-        afterChange?: Function
+        afterChange?: Function;
     }
     /**
      * #Carousel
@@ -233,7 +232,7 @@ declare namespace Antd {
     - 常用于一组图片或卡片轮播。
     */
     export class Carousel extends React.Component<CarouselProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -265,7 +264,7 @@ declare namespace Antd {
         /** 禁用*/
         disabled?: boolean;
         /** 是否支持清除*/
-        allowClear?: boolean
+        allowClear?: boolean;
 
     }
     /**
@@ -279,7 +278,7 @@ declare namespace Antd {
     - 从一个较大的数据集合中进行选择时，用多级分类进行分隔，方便选择。
     - 比起 Select 组件，可以在同一个浮层中完成选择，有较好的体验。*/
     export class Cascader extends React.Component<CascaderProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -292,7 +291,7 @@ declare namespace Antd {
         /** 初始是否选中*/
         defaultChecked?: boolean;
         /** 变化时回调函数*/
-        onChange?: Function
+        onChange?: Function;
     }
 
     interface CheckboxGroupProps {
@@ -303,11 +302,11 @@ declare namespace Antd {
         /** 指定可选项*/
         options?: Array<any>;
         /** 变化时回调函数*/
-        onChange?: Function
+        onChange?: Function;
     }
     /** Checkbox 组*/
     class CheckboxGroup extends React.Component<CheckboxGroupProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
     /**
      * #Checkbox
@@ -319,8 +318,8 @@ declare namespace Antd {
     - 单独使用可以表示两种状态之间的切换，和 `switch` 类似。区别在于切换 `switch` 会直接触发状态改变，而 `checkbox` 一般用于状态标记，需要和提交操作配合。
     */
     export class Checkbox extends React.Component<CheckboxProps, {}> {
-        static Group: typeof CheckboxGroup
-        render(): JSX.Element
+        static Group: typeof CheckboxGroup;
+        render(): JSX.Element;
     }
 
 
@@ -333,7 +332,7 @@ declare namespace Antd {
         /** 初始化选中面板的key */
         defaultActiveKey?: Array<string>;
         /** 切换面板的回调*/
-        onChange?: Function
+        onChange?: Function;
 
     }
     class CollapsePanel extends React.Component<{
@@ -342,7 +341,7 @@ declare namespace Antd {
         /** 面板头内容*/
         header: React.ReactNode | string
     }, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
     /**
      * #Collapse
@@ -353,8 +352,8 @@ declare namespace Antd {
     - 对复杂区域进行分组和隐藏，保持页面的整洁。
     - `手风琴` 是一种特殊的折叠面板，只允许单个内容区域展开。*/
     export class Collapse extends React.Component<CollapseProps, {}> {
-        static Panel: typeof CollapsePanel
-        render(): JSX.Element
+        static Panel: typeof CollapsePanel;
+        render(): JSX.Element;
     }
 
 
@@ -384,17 +383,17 @@ declare namespace Antd {
         /** 点击确定按钮的回调*/
         onOk?: Function;
         /** 定义浮层的容器，默认为 body 上新建 div*/
-        getCalendarContainer?: Function
+        getCalendarContainer?: Function;
 
     }
     interface RangePickProps extends DatePickerProps<RangePicker> {
 
     }
     class RangePicker extends React.Component<RangePickProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
     class MonthPicker extends React.Component<RangePickProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
     /**
      * #DatePicker
@@ -404,9 +403,9 @@ declare namespace Antd {
 
     当用户需要输入一个日期，可以点击标准输入框，弹出日期面板进行选择。*/
     export class DatePicker extends React.Component<DatePickerProps<any>, {}> {
-        static RangePicker: typeof RangePicker
-        static MonthPicker: typeof MonthPicker
-        render(): JSX.Element
+        static RangePicker: typeof RangePicker;
+        static MonthPicker: typeof MonthPicker;
+        render(): JSX.Element;
     }
 
 
@@ -418,7 +417,7 @@ declare namespace Antd {
         /** 触发下拉的行为  ['click'] or ['hover']*/
         trigger?: Array<string>;
         /** 菜单节点*/
-        overlay: React.ReactNode
+        overlay: React.ReactNode;
 
     }
 
@@ -432,7 +431,7 @@ declare namespace Antd {
         /** 菜单节点*/
         overlay: React.ReactNode
     }, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
     /**
      * #Dropdown
@@ -443,8 +442,8 @@ declare namespace Antd {
     当页面上的操作命令过多时，用此组件可以收纳操作元素。点击或移入触点，会出现一个下拉菜单。可在列表中进行选择，并执行相应的命令。
     */
     export class Dropdown extends React.Component<DropdownProps, {}> {
-        static Button: typeof DropdownButton
-        render(): JSX.Element
+        static Button: typeof DropdownButton;
+        render(): JSX.Element;
     }
 
 
@@ -469,42 +468,42 @@ declare namespace Antd {
         wrapperCol?: Object;
         className?: string;
         required?: boolean;
-        id?: string
+        id?: string;
     }
     /**
     表单一定会包含表单域，表单域可以是输入控件，标准表单域，标签，下拉菜单，文本域等。
 
     这里我们分别封装了表单域 `<Form.Item />` 和输入控件 `<Input />`。*/
     export class FormItem extends React.Component<FormItemProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
     interface FormComponentProps {
-        form: CreateFormOptions
+        form: CreateFormOptions;
     }
     export class FormComponent extends React.Component<FormComponentProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     // function  create
     type CreateFormOptions = {
         /** 获取一组输入控件的值，如不传入参数，则获取全部组件的值*/
-        getFieldsValue(): (fieldNames?: Array<string>) => any
+        getFieldsValue(): (fieldNames?: Array<string>) => any;
         /** 获取一个输入控件的值*/
-        getFieldValue(): (fieldName: string) => any
+        getFieldValue(): (fieldName: string) => any;
         /** 设置一组输入控件的值*/
-        setFieldsValue(): (obj: Object) => void
+        setFieldsValue(): (obj: Object) => void;
         /** 设置一组输入控件的值*/
-        setFields(): (obj: Object) => void
+        setFields(): (obj: Object) => void;
         /** 校验并获取一组输入域的值与 Error*/
-        validateFields(): (fieldNames?: Array<string>, options?: Object, callback?: (erros: any, values: any) => void) => any
+        validateFields(): (fieldNames?: Array<string>, options?: Object, callback?: (erros: any, values: any) => void) => any;
         /** 与 `validateFields` 相似，但校验完后，如果校验不通过的菜单域不在可见范围内，则自动滚动进可见范围 */
-        validateFieldsAndScroll(): (fieldNames?: Array<string>, options?: Object, callback?: (erros: any, values: any) => void) => any
+        validateFieldsAndScroll(): (fieldNames?: Array<string>, options?: Object, callback?: (erros: any, values: any) => void) => any;
         /** 获取某个输入控件的 Error */
-        getFieldError(): (name: string) => Object
+        getFieldError(): (name: string) => Object;
         /** 判断一个输入控件是否在校验状态*/
         isFieldValidating(): (name: string) => Object
-        /**重置一组输入控件的值与状态，如不传入参数，则重置所有组件*/
-        resetFields(): (names?: Array<string>) => void
+        /**重置一组输入控件的值与状态，如不传入参数，则重置所有;组件*/
+        resetFields(): (names?: Array<string>) => void;
 
         getFieldsValue(): (id: string, options: {
             /** 子节点的值的属性，如 Checkbox 的是 'checked'*/
@@ -519,10 +518,8 @@ declare namespace Antd {
             rules?: Array<any>,
             /** 必填输入控件唯一标志*/
             id?: string
-        }) => Array<any>
-
-
-    }
+        }) => Array<any>;
+    };
 
     interface ComponentDecorator {
         <T extends (typeof FormComponent)>(component: T): T;
@@ -550,7 +547,7 @@ declare namespace Antd {
     - 行内排列：使其表现为 `inline-block` 级别的控件。
     */
     export class Form extends React.Component<FormProps, {}> {
-        static Item: typeof FormItem
+        static Item: typeof FormItem;
         static create(options?: {
             /**
              *   当 `Form.Item` 子节点的值发生改变时触发，可以把对应的值转存到 Redux store
@@ -558,8 +555,8 @@ declare namespace Antd {
             onFieldsChange?: (props: Object, fields: Array<any>) => void,
             /**  把 props 转为对应的值，可用于把 Redux store 中的值读出 */
             mapPropsToFields?: (props: Object) => void
-        }): ComponentDecorator
-        render(): JSX.Element
+        }): ComponentDecorator;
+        render(): JSX.Element;
     }
 
 
@@ -569,7 +566,7 @@ declare namespace Antd {
     // Icon
     interface IconProps {
         /** 图标类型*/
-        type: string
+        type: string;
     }
     /**
      * #Icon
@@ -597,7 +594,7 @@ declare namespace Antd {
     <i class="anticon anticon-${type}"></i>
     ```*/
     export class Icon extends React.Component<IconProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -621,10 +618,10 @@ declare namespace Antd {
         /** 带标签的 input，设置后置标签*/
         addonAfter?: React.ReactNode;
         prefixCls?: string;
-        placeholder?: string
+        placeholder?: string;
     }
     export class Input extends React.Component<InputProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -647,7 +644,7 @@ declare namespace Antd {
         /** 禁用*/
         disabled?: boolean;
         /** 输入框大小*/
-        size?: string
+        size?: string;
 
     }
     /**
@@ -658,7 +655,7 @@ declare namespace Antd {
 
     当需要获取标准数值时。*/
     export class InputNumber extends React.Component<InputNumberProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -668,10 +665,10 @@ declare namespace Antd {
         type?: string;
         align?: string;
         justify?: string;
-        className?: string
+        className?: string;
     }
     export class Row extends React.Component<RowProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     // Col
@@ -681,7 +678,7 @@ declare namespace Antd {
         offset?: string;
         push?: string;
         pull?: string;
-        className?: string
+        className?: string;
     }
     /**
     在多数业务情况下，Ant Design需要在设计区域内解决大量信息收纳的问题，因此在12栅格系统的基础上，我们将整个设计建议区域按照24等分的原则进行划分。
@@ -703,7 +700,7 @@ declare namespace Antd {
 
     Flex 布局是基于 24 栅格来定义每一个“盒子”的宽度，但排版则不拘泥于栅格。*/
     export class Col extends React.Component<ColProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -717,10 +714,10 @@ declare namespace Antd {
          * @type {boolean}
          */
         disabled?: boolean;
-        key: string
+        key: string;
     }
     export class MenuItem extends React.Component<MenuItemProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     interface MenuSubMenuProps {
@@ -735,10 +732,10 @@ declare namespace Antd {
          *
          * @type {(MenuItem | MenuSubMenu)}
          */
-        children?: JSX.Element[]
+        children?: JSX.Element[];
     }
     export class MenuSubMenu extends React.Component<MenuSubMenuProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     interface MenuItemGroupProps {
@@ -753,10 +750,10 @@ declare namespace Antd {
          *
          * @type {MenuItem}
          */
-        children?: JSX.Element[]
+        children?: JSX.Element[];
     }
     export class MenuItemGroup extends React.Component<MenuItemGroupProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -794,7 +791,7 @@ declare namespace Antd {
         /** 点击 menuitem 调用此函数*/
         onClick?: (item: any, key: string) => void;
         /** 根节点样式*/
-        style?: Object
+        style?: Object;
     }
     /**
     # Menu
@@ -806,11 +803,11 @@ declare namespace Antd {
 
     更多布局和导航的范例可以参考：[常用布局](/spec/layout)。*/
     export class Menu extends React.Component<MenuProps, {}> {
-        static Item: typeof MenuItem
-        static SubMenu: typeof MenuSubMenu
-        static ItemGroup: typeof MenuItemGroup
-        static Divider: typeof React.Component
-        render(): JSX.Element
+        static Item: typeof MenuItem;
+        static SubMenu: typeof MenuSubMenu;
+        static ItemGroup: typeof MenuItemGroup;
+        static Divider: typeof React.Component;
+        render(): JSX.Element;
     }
 
 
@@ -818,10 +815,10 @@ declare namespace Antd {
     // Message
     type MessageFunc = (
         /** 提示内容*/
-        content: string;
+        content: string,
         /** 自动关闭的延时*/
         duration?: number
-    ) => void
+    ) => void;
     /**
      * #Message
     全局展示操作反馈信息。
@@ -845,7 +842,7 @@ declare namespace Antd {
             top: number
         }) => void
         destroy: () => void
-    }
+    };
 
     // Modal
     type ModalFunc = (options: {
@@ -857,7 +854,7 @@ declare namespace Antd {
         iconClassName?: string,
         okText?: string,
         cancelText?: string
-    }) => void
+    }) => void;
 
     interface ModalProps {
         /** 对话框是否可见*/
@@ -881,7 +878,7 @@ declare namespace Antd {
         /** 取消按钮文字*/
         cancelText?: string;
         /** 点击蒙层是否允许关闭*/
-        maskClosable?: boolean
+        maskClosable?: boolean;
     }
 
     /**
@@ -894,11 +891,11 @@ declare namespace Antd {
 
     另外当需要一个简洁的确认框询问用户时，可以使用精心封装好的 `ant.Modal.confirm()` 等方法。*/
     export class Modal extends React.Component<ModalProps, {}> {
-        static info: ModalFunc
-        static success: ModalFunc
-        static error: ModalFunc
-        static confirm: ModalFunc
-        render(): JSX.Element
+        static info: ModalFunc;
+        static success: ModalFunc;
+        static error: ModalFunc;
+        static confirm: ModalFunc;
+        render(): JSX.Element;
     }
 
 
@@ -919,7 +916,7 @@ declare namespace Antd {
             onClose?: Function,
             /** 默认 4.5 秒后自动关闭，配置为 null 则不自动关闭*/
             duration?: number
-        }) => void
+        }) => void;
     /**
      * #notification
     全局展示通知提醒信息。
@@ -943,7 +940,7 @@ declare namespace Antd {
             top: number
         }) => void
 
-    }
+    };
 
 
 
@@ -965,7 +962,7 @@ declare namespace Antd {
         /** 是否可以改变 pageSize */
         showSizeChanger?: boolean;
         /** 指定每页可以显示多少条*/
-        pageSizeOptions?: Array<number>
+        pageSizeOptions?: Array<number>;
         /** pageSize 变化的回调  */
         onShowSizeChange?: Function;
         /** 是否可以快速跳转至某页*/
@@ -975,7 +972,7 @@ declare namespace Antd {
         /** 当添加该属性时，显示为简单分页*/
         simple?: Object;
         /** 用于显示总共有多少条数据*/
-        showTotal?: Function
+        showTotal?: Function;
     }
     /**
      * #Pagination
@@ -986,7 +983,7 @@ declare namespace Antd {
     - 当加载/渲染所有数据将花费很多时间时；
     - 可切换页码浏览数据。*/
     export class Pagination extends React.Component<PaginationProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1013,7 +1010,7 @@ declare namespace Antd {
         /** 确认按钮文字*/
         okText?: string;
         /** 取消按钮文字*/
-        cancelText?: string
+        cancelText?: string;
     }
     /**
      * #Popconfirm
@@ -1026,7 +1023,7 @@ declare namespace Antd {
     和 `confirm` 弹出的全屏居中模态对话框相比，交互形式更轻量。
     */
     export class Popconfirm extends React.Component<PopconfirmProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1055,7 +1052,7 @@ declare namespace Antd {
         /** 用于手动控制浮层显隐*/
         visible?: boolean;
         /** 显示隐藏改变的回调*/
-        onVisibleChange?: Function
+        onVisibleChange?: Function;
     }
     /**
      * #Popover
@@ -1068,7 +1065,7 @@ declare namespace Antd {
     和 `Tooltip` 的区别是，用户可以对浮层上的元素进行操作，因此它可以承载更复杂的内容，比如链接或按钮等。
     */
     export class Popover extends React.Component<PopoverProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1091,10 +1088,10 @@ declare namespace Antd {
         /** 进度条线的宽度，单位是px*/
         strokeWidth?: number;
         /** 是否显示进度数值和状态图标*/
-        showInfo?: boolean
+        showInfo?: boolean;
     }
     export class Line extends React.Component<LineProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     interface CircleProps {
@@ -1107,10 +1104,10 @@ declare namespace Antd {
         /** 进度条线的宽度，单位是进度条画布宽度的百分比*/
         strokeWidth?: number;
         /** 必填，进度条画布宽度，单位px。这里没有提供height属性设置，Line型高度就是strokeWidth，Circle型高度等于width*/
-        width?: number
+        width?: number;
     }
     export class Circle extends React.Component<CircleProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
     /**
      * #Progress
@@ -1125,7 +1122,7 @@ declare namespace Antd {
     export const Progress: {
         Line: typeof Line,
         Circle: typeof Circle
-    }
+    };
 
 
     // QueueAnim
@@ -1147,7 +1144,7 @@ declare namespace Antd {
         /** 进出场动画进行中的类名*/
         animatingClassName?: Array<string>;
         /** QueueAnim 替换的标签名*/
-        component?: string
+        component?: string;
     }
     /**
      * #QueueAnim
@@ -1162,7 +1159,7 @@ declare namespace Antd {
     - 特别适合首页和需要视觉展示效果的宣传页，以及单页应用的切换页面动效。
     */
     export class QueueAnim extends React.Component<QueueAnimProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1182,10 +1179,10 @@ declare namespace Antd {
         /** 默认选中的值*/
         defaultValue?: string;
         /**  大小，只对按钮样式生效*/
-        size?: RadioGroupSize | string
+        size?: RadioGroupSize | string;
     }
     export class RadioGroup extends React.Component<RadioGroupProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1195,7 +1192,7 @@ declare namespace Antd {
         /** 初始是否选中*/
         defaultChecked?: boolean;
         /** 根据 value 进行比较，判断是否选中  */
-        value?: any
+        value?: any;
     }
     /**
      * #Radio
@@ -1207,9 +1204,9 @@ declare namespace Antd {
     - 和 Select 的区别是，Radio 所有选项默认可见，方便用户在比较中选择，因此选项不宜过多。
     */
     export class Radio extends React.Component<RadioProps, {}> {
-        static Group: typeof RadioGroup
-        static Button: typeof Button
-        render(): JSX.Element
+        static Group: typeof RadioGroup;
+        static Button: typeof Button;
+        render(): JSX.Element;
     }
 
 
@@ -1221,19 +1218,19 @@ declare namespace Antd {
         /** 如果 react 需要你设置此项，此项值与 value 的值相同，然后可以省略 value 设置*/
         key?: string;
         /** 默认根据此属性值进行筛选*/
-        value: string
+        value: string;
     }
     export class SelectOption extends React.Component<SelectOptionProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     interface SelectOptGroupProps {
         /** 组名*/
         label: string | React.ReactNode;
-        key?: string
+        key?: string;
     }
     export class SelectOptGroup extends React.Component<SelectOptGroupProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     interface SelectProps {
@@ -1275,7 +1272,7 @@ declare namespace Antd {
         showSearch?: boolean;
         /** 是否禁用*/
         disabled?: boolean;
-        style?: Object
+        style?: Object;
     }
     /**
      * #Select
@@ -1285,9 +1282,9 @@ declare namespace Antd {
 
     弹出一个下拉菜单给用户选择操作，用于代替原生的选择器，或者需要一个更优雅的多选器时。*/
     export class Select extends React.Component<SelectProps, {}> {
-        static Option: typeof SelectOption
-        static OptGroup: typeof SelectOptGroup
-        render(): JSX.Element
+        static Option: typeof SelectOption;
+        static OptGroup: typeof SelectOptGroup;
+        render(): JSX.Element;
     }
 
 
@@ -1318,7 +1315,7 @@ declare namespace Antd {
         onAfterChange?: Function;
         /** Slider 会把当前值传给 `tipFormatter`，并在 Tooltip 中显示 `tipFormatter` 的返回值，若为 null，则隐藏 Tooltip。*/
         tipFormatter?: Function | any;
-        range?: boolean
+        range?: boolean;
     }
     /**
      * #Slider
@@ -1328,7 +1325,7 @@ declare namespace Antd {
 
     当用户需要在数值区间/自定义区间内进行选择时，可为连续或离散值。*/
     export class Slider extends React.Component<SliderProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1339,7 +1336,7 @@ declare namespace Antd {
         /** spin组件中点的大小，可选值为 small default large*/
         size?: string;
         /** 用于内嵌其他组件的模式，可以关闭 loading 效果*/
-        spining?: boolean
+        spining?: boolean;
     }
     /**
      * #Spin
@@ -1350,7 +1347,7 @@ declare namespace Antd {
     页面局部处于等待异步数据或正在渲染过程时，合适的加载动效会有效缓解用户的焦虑。
     */
     export class Spin extends React.Component<SpinProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1368,10 +1365,10 @@ declare namespace Antd {
         /**  可选参数，步骤的详情描述。*/
         description?: string | React.ReactNode;
         /** 可选参数，步骤的Icon。如果不指定，则使用默认的样式。*/
-        icon?: string | React.ReactNode
+        icon?: string | React.ReactNode;
     }
     export class Step extends React.Component<StepProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     interface StepsProps {
@@ -1382,7 +1379,7 @@ declare namespace Antd {
         /** 可选参数，指定步骤条方向（目前支持水平和竖直两种方向，默认水平方向）。*/
         direction?: string;
         /** 可选参数，指定步骤的详细描述文字的最大宽度。*/
-        maxDescriptionWidth?: number
+        maxDescriptionWidth?: number;
 
     }
     /**
@@ -1393,8 +1390,8 @@ declare namespace Antd {
 
     当任务复杂或者存在先后关系时，将其分解成一系列步骤，从而简化任务。*/
     export class Steps extends React.Component<StepsProps, {}> {
-        static Step: typeof Step
-        render(): JSX.Element
+        static Step: typeof Step;
+        render(): JSX.Element;
     }
 
 
@@ -1412,7 +1409,7 @@ declare namespace Antd {
         /** 非选中时的内容*/
         unCheckedChildren?: React.ReactNode;
         /** 开关大小*/
-        size?: string
+        size?: string;
     }
     /**
      * #Switch
@@ -1424,7 +1421,7 @@ declare namespace Antd {
     - 和 `checkbox `的区别是，切换 `switch` 会直接触发状态改变，而 `checkbox` 一般用于状态标记，需要和提交操作配合。
     */
     export class Switch extends React.Component<SwitchProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1435,14 +1432,14 @@ declare namespace Antd {
         checkbox,
         radio
     }
-    type SelectedRowKeys = Array<any>
+    type SelectedRowKeys = Array<any>;
     interface RowSelection {
         type?: RowSelectionType | string;
         selectedRowKeys?: SelectedRowKeys;
         onChange?: (selectedRowKeys: SelectedRowKeys, selectedRows: any) => void;
         getCheckboxProps?: (record: any) => void;
         onSelect?: (record: any, selected: any, selectedRows: any) => void;
-        onSelectAll?: (rselectedecord: any, selectedRows: any, changeRows: any) => void
+        onSelectAll?: (rselectedecord: any, selectedRows: any, changeRows: any) => void;
     }
     interface Columns {
         /** React 需要的 key，建议设置*/
@@ -1466,7 +1463,7 @@ declare namespace Antd {
         /** 列宽度*/
         width?: string | number;
         /** 列的 className*/
-        className?: string
+        className?: string;
     }
     interface TableProps {
         /** 列表项是否可选择*/
@@ -1502,7 +1499,7 @@ declare namespace Antd {
         /** 是否显示表头*/
         showHeader?: boolean;
         /** 表格底部自定义渲染函数*/
-        footer?: (currentPageData: Object) => void
+        footer?: (currentPageData: Object) => void;
 
     }
     /**
@@ -1514,7 +1511,7 @@ declare namespace Antd {
     - 当有大量结构化的数据需要展现时；
     - 当需要对数据进行排序、搜索、分页、自定义操作等复杂行为时。*/
     export class Table extends React.Component<TableProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1522,10 +1519,10 @@ declare namespace Antd {
     // Tabs
     interface TabPaneProps {
         /** 选项卡头显示文字*/
-        tab: React.ReactNode | string
+        tab: React.ReactNode | string;
     }
     export class TabPane extends React.Component<TabPaneProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     enum TabsType {
@@ -1553,7 +1550,7 @@ declare namespace Antd {
         /** 页签位置，可选值有 `top` `right` `bottom` `left`*/
         tabPosition?: TabsPosition | string;
         /** 新增和删除页签的回调，在 `type="editable-card"` 时有效*/
-        onEdit?: (targetKey: string, action: any) => void
+        onEdit?: (targetKey: string, action: any) => void;
     }
     /**
      * #Tabs
@@ -1569,8 +1566,8 @@ declare namespace Antd {
     - 标准线条式页签，用于容器内部的主功能切换，这是最常用的 Tabs。
     - [RadioButton](/components/radio/#demo-radiobutton) 可作为更次级的页签来使用。*/
     export class Tabs extends React.Component<TabsProps, {}> {
-        static TabPane: typeof TabPane
-        render(): JSX.Element
+        static TabPane: typeof TabPane;
+        render(): JSX.Element;
     }
 
 
@@ -1585,7 +1582,7 @@ declare namespace Antd {
         /** 动画关闭后的回调*/
         afterClose?: Function;
         /** 标签的色彩*/
-        color?: string
+        color?: string;
     }
     /**
      * #Tag
@@ -1596,7 +1593,7 @@ declare namespace Antd {
     - 用于标记事物的属性和维度。
     - 进行分类。*/
     export class Tag extends React.Component<TagProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1627,7 +1624,7 @@ declare namespace Antd {
         /** 禁止选择部分分钟选项*/
         disabledMinutes?: Function;
         /** 禁止选择部分秒选项*/
-        disabledSeconds?: Function
+        disabledSeconds?: Function;
 
     }
     /**
@@ -1640,7 +1637,7 @@ declare namespace Antd {
     当用户需要输入一个时间，可以点击标准输入框，弹出时间面板进行选择。
     */
     export class TimePicker extends React.Component<TimePickerProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1649,15 +1646,15 @@ declare namespace Antd {
     // Timeline
     interface TimeLineItemProps {
         /** 指定圆圈颜色。*/
-        color?: string
+        color?: string;
     }
     export class TimeLineItem extends React.Component<TimeLineItemProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     interface TimelineProps {
         /** 指定最后一个幽灵节点是否存在或内容*/
-        pending?: boolean | React.ReactNode
+        pending?: boolean | React.ReactNode;
     }
     /**
      * #Timeline
@@ -1668,8 +1665,8 @@ declare namespace Antd {
     - 当有一系列信息需要从上至下按时间排列时；
     - 需要有一条时间轴进行视觉上的串联时；*/
     export class Timeline extends React.Component<TimelineProps, {}> {
-        static Item: typeof TimeLineItem
-        render(): JSX.Element
+        static Item: typeof TimeLineItem;
+        render(): JSX.Element;
     }
 
 
@@ -1680,7 +1677,7 @@ declare namespace Antd {
         /** 气泡框位置，可选 `top` `left` `right` `bottom` `topLeft` `topRight` `bottomLeft` `bottomRight` `leftTop` `leftBottom` `rightTop` `rightBottom`*/
         placement?: PopoverPlacement | string;
         /** 提示文字*/
-        title?: string | React.ReactNode
+        title?: string | React.ReactNode;
     }
     /**
      * #Tooltip
@@ -1692,7 +1689,7 @@ declare namespace Antd {
 
     可用来代替系统默认的 `title` 提示，提供一个`按钮/文字/操作`的文案解释。*/
     export class Tooltip extends React.Component<TooltipProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1722,9 +1719,9 @@ declare namespace Antd {
         /** 搜索框的默认值*/
         searchPlaceholder?: string;
         /** 当列表为空时显示的内容*/
-        notFoundContent?: React.ReactNode | string
+        notFoundContent?: React.ReactNode | string;
         /** 底部渲染函数*/
-        footer?: (props: any) => any
+        footer?: (props: any) => any;
     }
     /**
      * #Transfer
@@ -1735,7 +1732,7 @@ declare namespace Antd {
     用直观的方式在两栏中移动元素，完成选择行为。
     */
     export class Transfer extends React.Component<TransferProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1748,10 +1745,10 @@ declare namespace Antd {
         disableCheckbox?: boolean;
         title?: string | React.ReactNode;
         key?: string;
-        isLeaf?: boolean
+        isLeaf?: boolean;
     }
     export class TreeNode extends React.Component<TreeNodeProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
     interface TreeProps {
@@ -1805,8 +1802,8 @@ declare namespace Antd {
      * 文件夹、组织架构、生物分类、国家地区等等，世间万物的大多数结构都是树形结构。使用`树控件`可以完整展现其中的层级关系，并具有展开收起选择等交互功能。
     */
     export class Tree extends React.Component<TreeProps, {}> {
-        static TreeNode: typeof TreeNode
-        render(): JSX.Element
+        static TreeNode: typeof TreeNode;
+        render(): JSX.Element;
     }
 
 
@@ -1823,13 +1820,13 @@ declare namespace Antd {
         /** 树节点显示的内容*/
         title?: React.ReactNode | string;
         /** 是否是叶子节点*/
-        isLeaf?: boolean
+        isLeaf?: boolean;
     }
     export class TreeSelectTreeNode extends React.Component<TreeSelectTreeNodeProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
-    type TreeData = Array<{ value: any, label: string, children: TreeData }>
+    type TreeData = Array<{ value: any, label: string, children: TreeData }>;
     interface TreeSelectProps {
         style?: Object;
         /** 指定当前选中的条目*/
@@ -1877,7 +1874,7 @@ declare namespace Antd {
         /** treeNodes数据，如果设置则不需要手动构造TreeNode节点（如果value在整个树范围内不唯一，需要设置`key`其值为整个树范围内的唯一id*/
         treeData?: TreeData;
         /** 异步加载数据*/
-        loadData?: (node: any) => void
+        loadData?: (node: any) => void;
     }
     /**
      * #TreeSelect
@@ -1888,8 +1885,8 @@ declare namespace Antd {
     类似 Select 的选择控件，可选择的数据结构是一个树形结构时，可以使用 TreeSelect，例如公司层级、学科系统、分类目录等等。
     */
     export class TreeSelect extends React.Component<TreeSelectProps, {}> {
-        static TreeNode: typeof TreeSelectTreeNode
-        render(): JSX.Element
+        static TreeNode: typeof TreeSelectTreeNode;
+        render(): JSX.Element;
     }
 
 
@@ -1920,7 +1917,7 @@ declare namespace Antd {
         /** 上传列表的内建样式，支持两种基本样式 `text` or `picture`   */
         listType?: string;
         /** 自定义类名*/
-        className?: string
+        className?: string;
 
     }
     /**
@@ -1935,7 +1932,7 @@ declare namespace Antd {
     - 当需要展现上传的进度时。
     - 当需要使用拖拽交互时。*/
     export class Upload extends React.Component<UploadProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
@@ -1948,135 +1945,135 @@ declare namespace Antd {
 
 // export all antd
 declare module 'antd' {
-    export = Antd
+    export = Antd;
 }
 // single export point
 declare module 'antd/lib/Affix' {
-    export default Antd.Affix
+    export default Antd.Affix;
 }
 declare module 'antd/lib/Button' {
-    export default Antd.Button
+    export default Antd.Button;
 }
 declare module 'antd/lib/Alert' {
-    export default Antd.Alert
+    export default Antd.Alert;
 }
 declare module 'antd/lib/Badge' {
-    export default Antd.Badge
+    export default Antd.Badge;
 }
 declare module 'antd/lib/Breadcrumb' {
-    export default Antd.Breadcrumb
+    export default Antd.Breadcrumb;
 }
 declare module 'antd/lib/Calendar' {
-    export default Antd.Calendar
+    export default Antd.Calendar;
 }
 declare module 'antd/lib/Carousel' {
-    export default Antd.Carousel
+    export default Antd.Carousel;
 }
 declare module 'antd/lib/Cascader' {
-    export default Antd.Cascader
+    export default Antd.Cascader;
 }
 declare module 'antd/lib/Checkbox' {
-    export default Antd.Checkbox
+    export default Antd.Checkbox;
 }
 declare module 'antd/lib/Collapse' {
-    export default Antd.Collapse
+    export default Antd.Collapse;
 }
 declare module 'antd/lib/DatePicker' {
-    export default Antd.DatePicker
+    export default Antd.DatePicker;
 }
 declare module 'antd/lib/Dropdown' {
-    export default Antd.Dropdown
+    export default Antd.Dropdown;
 }
 declare module 'antd/lib/Icon' {
-    export default Antd.Icon
+    export default Antd.Icon;
 }
 declare module 'antd/lib/Form' {
-    export default Antd.Form
+    export default Antd.Form;
 }
 declare module 'antd/lib/Input' {
-    export default Antd.Input
+    export default Antd.Input;
 }
 declare module 'antd/lib/InputNumber' {
-    export default Antd.InputNumber
+    export default Antd.InputNumber;
 }
 declare module 'antd/lib/Row' {
-    export default Antd.Row
+    export default Antd.Row;
 }
 declare module 'antd/lib/Col' {
-    export default Antd.Col
+    export default Antd.Col;
 }
 declare module 'antd/lib/Menu' {
-    export default Antd.Menu
+    export default Antd.Menu;
 }
 declare module 'antd/lib/message' {
-    export default Antd.message
+    export default Antd.message;
 }
 declare module 'antd/lib/Modal' {
-    export default Antd.Modal
+    export default Antd.Modal;
 }
 declare module 'antd/lib/notification' {
-    export default Antd.notification
+    export default Antd.notification;
 }
 declare module 'antd/lib/Pagination' {
-    export default Antd.Pagination
+    export default Antd.Pagination;
 }
 declare module 'antd/lib/Popconfirm' {
-    export default Antd.Popconfirm
+    export default Antd.Popconfirm;
 }
 declare module 'antd/lib/Popover' {
-    export default Antd.Popover
+    export default Antd.Popover;
 }
 declare module 'antd/lib/Progress' {
-    export default Antd.Progress
+    export default Antd.Progress;
 }
 declare module 'antd/lib/QueueAnim' {
-    export default Antd.QueueAnim
+    export default Antd.QueueAnim;
 }
 declare module 'antd/lib/Radio' {
-    export default Antd.Radio
+    export default Antd.Radio;
 }
 declare module 'antd/lib/Select' {
-    export default Antd.Select
+    export default Antd.Select;
 }
 declare module 'antd/lib/Slider' {
-    export default Antd.Slider
+    export default Antd.Slider;
 }
 declare module 'antd/lib/Spin' {
-    export default Antd.Spin
+    export default Antd.Spin;
 }
 declare module 'antd/lib/Steps' {
-    export default Antd.Steps
+    export default Antd.Steps;
 }
 declare module 'antd/lib/Switch' {
-    export default Antd.Switch
+    export default Antd.Switch;
 }
 declare module 'antd/lib/Table' {
-    export default Antd.Table
+    export default Antd.Table;
 }
 declare module 'antd/lib/Tabs' {
-    export default Antd.Tabs
+    export default Antd.Tabs;
 }
 declare module 'antd/lib/Tag' {
-    export default Antd.Tag
+    export default Antd.Tag;
 }
 declare module 'antd/lib/TimePicker' {
-    export default Antd.TimePicker
+    export default Antd.TimePicker;
 }
 declare module 'antd/lib/Timeline' {
-    export default Antd.Timeline
+    export default Antd.Timeline;
 }
 declare module 'antd/lib/Tooltip' {
-    export default Antd.Tooltip
+    export default Antd.Tooltip;
 }
 declare module 'antd/lib/Transfer' {
-    export default Antd.Transfer
+    export default Antd.Transfer;
 }
 declare module 'antd/lib/Tree' {
-    export default Antd.Tree
+    export default Antd.Tree;
 }
 declare module 'antd/lib/TreeSelect' {
-    export default Antd.TreeSelect
+    export default Antd.TreeSelect;
 }
 declare module 'antd/lib/Upload' {
-    export default Antd.Upload
+    export default Antd.Upload;
 }

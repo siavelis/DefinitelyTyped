@@ -35,7 +35,7 @@ declare namespace QioFS {
 	export function copyTree(source: string, target: string): Q.Promise<void>;
 
 	export function list(path: string): Q.Promise<string[]>;
-	export function listTree(path: string, guard?:(path: string, stat: any) => boolean): Q.Promise<string[]>;
+	export function listTree(path: string, guard?: (path: string, stat: any) => boolean): Q.Promise<string[]>;
 	export function listDirectoryTree(path: string): Q.Promise<string[]>;
 
 	export function makeDirectory(path: string, mode?: string): Q.Promise<void>;
@@ -172,7 +172,7 @@ declare namespace QioHTTP {
 		status: number;
 		headers: Headers;
 		body: Qio.Reader
-		onclose:() => void;
+		onclose: () => void;
 		node: any;
 	}
 	interface Headers {

@@ -24,7 +24,7 @@ declare namespace axe {
 		value?: {
 			include?: string[];
 			exclude?: string[];
-		}
+		};
 		values?: TagValue[];
 	}
 	export interface AxeResults {

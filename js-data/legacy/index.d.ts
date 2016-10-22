@@ -14,7 +14,7 @@ declare namespace JSData {
         then<U>(onFulfilled?: (value: R) => U | JSDataPromise<U>,  onRejected?: (error: any) => U | JSDataPromise<U>): JSDataPromise<U>;
         catch<U>(onRejected?: (error: any) => U | JSDataPromise<U>): JSDataPromise<U>;
         // enhanced with finally
-        finally<U>(finallyCb?:() => U):JSDataPromise<U>;
+        finally<U>(finallyCb?: () => U):JSDataPromise<U>;
     }
 
     interface DS {
@@ -79,7 +79,7 @@ declare namespace JSData {
         bypassCache?: boolean;
         cacheResponse?: boolean;
         defaultAdapter?: string;
-        defaultFilter?: (collection:Array<any>, resourceName:string, params:DSFilterArg, options:DSConfiguration)=>Array<any>;
+        defaultFilter?: (collection:Array<any>, resourceName:string, params:DSFilterArg, options:DSConfiguration) => Array<any>;
         eagerEject?: boolean;
         endpoint?: string;
         error?: boolean | ((message?:any, ...optionalParams:any[])=> void);
@@ -203,44 +203,44 @@ declare namespace JSData {
     type DSFilterArg = DSFilterParams | Object;
 
     interface IDSResourceLifecycleValidateEventHandlers {
-        beforeValidate?: (resourceName:string, data:any, cb:(err:any, data?:any)=>void)=>void;
-        validate?: (resourceName:string, data:any, cb:(err:any, data?:any)=>void)=>void;
-        afterValidate?: (resourceName:string, data:any, cb:(err:any, data?:any)=>void)=>void;
+        beforeValidate?: (resourceName:string, data:any, cb: (err:any, data?:any) => void) => void;
+        validate?: (resourceName:string, data:any, cb: (err:any, data?:any) => void) => void;
+        afterValidate?: (resourceName:string, data:any, cb: (err:any, data?:any) => void) => void;
     }
 
     interface IDSResourceLifecycleCreateEventHandlers {
-        beforeCreate?: (resourceName:string, data:any, cb:(err:any, data?:any)=>void)=>void;
-        afterCreate?: (resourceName:string, data:any, cb:(err:any, data?:any)=>void)=>void;
+        beforeCreate?: (resourceName:string, data:any, cb: (err:any, data?:any) => void) => void;
+        afterCreate?: (resourceName:string, data:any, cb: (err:any, data?:any) => void) => void;
     }
 
     interface IDSResourceLifecycleCreateInstanceEventHandlers {
-        beforeCreateInstance?: (resourceName:string, data:any)=>void;
-        afterCreateInstance?: (resourceName:string, data:any)=>void;
+        beforeCreateInstance?: (resourceName:string, data:any) => void;
+        afterCreateInstance?: (resourceName:string, data:any) => void;
     }
 
     interface IDSResourceLifecycleUpdateEventHandlers {
-        beforeUpdate?: (resourceName:string, data:any, cb:(err:any, data?:any)=>void)=>void;
-        afterUpdate?: (resourceName:string, data:any, cb:(err:any, data?:any)=>void)=>void;
+        beforeUpdate?: (resourceName:string, data:any, cb: (err:any, data?:any) => void) => void;
+        afterUpdate?: (resourceName:string, data:any, cb: (err:any, data?:any) => void) => void;
     }
 
     interface IDSResourceLifecycleDestroyEventHandlers {
-        beforeDestroy?: (resourceName:string, data:any, cb:(err:any, data?:any)=>void)=>void;
-        afterDestroy?: (resourceName:string, data:any, cb:(err:any, data?:any)=>void)=>void;
+        beforeDestroy?: (resourceName:string, data:any, cb: (err:any, data?:any) => void) => void;
+        afterDestroy?: (resourceName:string, data:any, cb: (err:any, data?:any) => void) => void;
     }
 
     interface IDSResourceLifecycleInjectEventHandlers {
-        beforeInject?: (resourceName:string, data:any)=>void;
-        afterInject?: (resourceName:string, data:any)=>void;
+        beforeInject?: (resourceName:string, data:any) => void;
+        afterInject?: (resourceName:string, data:any) => void;
     }
 
     interface IDSResourceLifecycleEjectEventHandlers {
-        beforeEject?: (resourceName:string, data:any)=>void;
-        afterEject?: (resourceName:string, data:any)=>void;
+        beforeEject?: (resourceName:string, data:any) => void;
+        afterEject?: (resourceName:string, data:any) => void;
     }
 
     interface IDSResourceLifecycleReapEventHandlers {
-        beforeReap?: (resourceName:string, data:any)=>void;
-        afterReap?: (resourceName:string, data:any)=>void;
+        beforeReap?: (resourceName:string, data:any) => void;
+        afterReap?: (resourceName:string, data:any) => void;
     }
 
     interface IDSResourceLifecycleEventHandlers extends IDSResourceLifecycleCreateEventHandlers,

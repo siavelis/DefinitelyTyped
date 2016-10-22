@@ -199,7 +199,7 @@ declare namespace gapi.drive.realtime {
 		get(ind: number): V;
 
 		//Returns the first index of the given value, or -1 if it cannot be found.
-		indexOf(value: V, opt_comparatorFn?:(x1: V, x2: V) => boolean): number;
+		indexOf(value: V, opt_comparatorFn?: (x1: V, x2: V) => boolean): number;
 
 		//Inserts an item into the list at a given index.
 		insert(index: number, value: V): void;
@@ -208,7 +208,7 @@ declare namespace gapi.drive.realtime {
 		insertAll(index: number, values:V[]):void;
 
 		// Returns the last index of the given value, or -1 if it cannot be found.
-		lastIndexOf(value:V, opt_comparatorFn?:(x1:V, x2:V) => boolean):number;
+		lastIndexOf(value:V, opt_comparatorFn?: (x1:V, x2:V) => boolean):number;
 
 		//Moves a single element in this list (at index) to immediately before destinationIndex.
 		//Both indices are with respect to the position of elements before the move.
@@ -280,7 +280,7 @@ declare namespace gapi.drive.realtime {
 		// Adds an event listener to the event target.
 		// The same handler can only be added once per the type. Even if you add the same handler multiple times using the
 		// same type then it will only be called once when the event is dispatched.
-		addEventListener(type:string, listener:() => void | EventListener, opt_capture?:boolean):void;
+		addEventListener(type:string, listener: () => void | EventListener, opt_capture?:boolean):void;
 
 		// Starts a compound operation. If a name is given, that name will be recorded in the mutation for use in revision
 		// history, undo menus, etc. When beginCompoundOperation() is called, all subsequent edits to the data model will
@@ -325,7 +325,7 @@ declare namespace gapi.drive.realtime {
 
 		// Removes an event listener from the event target. The handler must be the same object as the one added.
 		// If the handler has not been added then nothing is done.
-		removeEventListener(type:string, listener:() => void | EventListener, opt_capture?:boolean):void;
+		removeEventListener(type:string, listener: () => void | EventListener, opt_capture?:boolean):void;
 
 		// The current server revision number for this model. The revision number begins at 1 (the initial empty model)
 		// and is incremented each time the model is changed on the server (either by the current session or any
@@ -678,7 +678,7 @@ declare namespace rtclient {
 		 * @param mimeType {string} the MIME type of the new file.
 		 * @param callback {(file:DriveAPIFileResource) => void} the callback to call after creation.
 		 */
-		createRealtimeFile(title:string, mimeType:string, callback:(file:DriveAPIFileResource) => void) : void;
+		createRealtimeFile(title:string, mimeType:string, callback: (file:DriveAPIFileResource) => void) : void;
 	}
 
 	export var RealtimeLoader : RealtimeLoaderFactory
@@ -689,7 +689,7 @@ declare namespace rtclient {
 	 * @param mimeType {string} the MIME type of the new file.
 	 * @param callback {(file:DriveAPIFileResource) => void} the callback to call after creation.
 	 */
-	export function createRealtimeFile(title:string, mimeType:string, callback:(file:DriveAPIFileResource) => void) : void
+	export function createRealtimeFile(title:string, mimeType:string, callback: (file:DriveAPIFileResource) => void) : void
 }
 
 // INCOMPLETE

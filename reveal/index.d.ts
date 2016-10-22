@@ -6,8 +6,8 @@
 declare var Reveal: RevealStatic;
 
 interface RevealStatic {
-    initialize:(config: RevealOptions)=>void;
-    configure:(diff: RevealOptions)=>void;
+    initialize: (config: RevealOptions) => void;
+    configure: (diff: RevealOptions) => void;
 
     // Navigation
     slide(indexh: number, indexv?: number, f?: number, o?: number): void;
@@ -114,6 +114,6 @@ interface RevealOptions {
 
 interface RevealDependency {
     src: string;
-    condition:()=>boolean;
+    condition: () => boolean;
     async?: boolean;
 }

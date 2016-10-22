@@ -109,7 +109,7 @@ declare namespace commander {
          * @return {Command} for chaining
          * @api public
          */
-        action(fn:(...args: any[])=>void): ICommand;
+        action(fn: (...args: any[]) => void): ICommand;
 
         /**
          * Define option with `flags`, `description` and optional
@@ -159,7 +159,7 @@ declare namespace commander {
          * @return {Command} for chaining
          * @api public
          */
-        option(flags: string, description?: string, fn?:((arg1: any, arg2: any)=>void)|RegExp, defaultValue?: any): ICommand;
+        option(flags: string, description?: string, fn?: ((arg1: any, arg2: any) => void)|RegExp, defaultValue?: any): ICommand;
         option(flags: string, description?: string, defaultValue?: any): ICommand;
 
         /**

@@ -35,7 +35,7 @@ declare namespace goog.appengine {
 		/**
 		 * Set this to a function called when the socket is ready to receive messages.
 		 */
-		onopen:()=>void;
+		onopen: () => void;
 
 		/**
 		 * Set this to a function called when the socket receives a message.
@@ -44,7 +44,7 @@ declare namespace goog.appengine {
 		 * @param message
 		 * @param message.data
 		 */
-		onmessage:(message: any)=>void;
+		onmessage: (message: any) => void;
 
 		/**
 		 * Set this property to a function called when an error occurs on the socket.
@@ -58,6 +58,6 @@ declare namespace goog.appengine {
 		 * When the socket is closed, it cannot be reopened.
 		 * Use the open() method on a goog.appengine.Channel object to create a new socket.
 		 */
-		onclose:()=>void;
+		onclose: () => void;
 	}
 }

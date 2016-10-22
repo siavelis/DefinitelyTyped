@@ -15,7 +15,7 @@ declare namespace observejs {
 		 * @param onChange the function that gets invoked if a change is detected
 		 * @param the target of observation
 		 */
-		open(onChange:(newValue:any, oldValue:any)=>any, receiver?:any):void
+		open(onChange: (newValue:any, oldValue:any) => any, receiver?:any):void
 
 		/**
 		 * Report any changes now (does nothing if there are no changes to report).
@@ -102,7 +102,7 @@ declare namespace observejs {
 	}
 
 	interface ArrayObserver_instance extends Observable {
-		open(onChange:(splices:Array<splice>)=>any):void
+		open(onChange: (splices:Array<splice>) => any):void
 	}
 
 	/**
@@ -129,7 +129,7 @@ declare namespace observejs {
 	}
 
 	interface ObjectObserver_instance extends Observable {
-		open(onChange:(added:Properties, removed:Properties, changed:Properties, getOldValueFn:(property:string)=>any)=>any):void
+		open(onChange: (added:Properties, removed:Properties, changed:Properties, getOldValueFn: (property:string) => any) => any):void
 	}
 
 	/**
@@ -151,7 +151,7 @@ declare namespace observejs {
 	}
 
 	interface CompoundObserver_instance extends Observable {
-		open(onChange:(newValues:Array<any>, oldValue:Array<any>)=>any):void
+		open(onChange: (newValues:Array<any>, oldValue:Array<any>) => any):void
 
 		/**
 		 * Adds the receivers property at the specified path to the list of observables.
@@ -186,14 +186,14 @@ declare namespace observejs {
 		 * @param getValue function that proxys getting a value
 		 * @param setValue function that proxys setting a value
 		 */
-		new(observer:Observable, getValue:(value:any)=>any, setValue:(value:any)=>any): ObserverTransform_instance
+		new(observer:Observable, getValue: (value:any) => any, setValue: (value:any) => any): ObserverTransform_instance
 
 		/**
 		 * Constructor
 		 * @param observer the observer to transform
 		 * @param valueFn function that gets invoked with all observed values. May return a single new value.
 		 */
-		new(observer:Observable, valueFn:(values:Array<any>)=>any): ObserverTransform_instance
+		new(observer:Observable, valueFn: (values:Array<any>) => any): ObserverTransform_instance
 	}
 
 	interface ObserverTransform_instance extends Observable {

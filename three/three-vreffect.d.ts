@@ -7,7 +7,7 @@
 
 declare namespace THREE {
     export class VREffect {
-        constructor(renderer: Renderer, callback?: (params: string)=>void);
+        constructor(renderer: Renderer, callback?: (params: string) => void);
         render(scene: Scene, camera: Camera): void;
         setSize(width: number, height: number): void;
         setFullScreen(flag: boolean): void;

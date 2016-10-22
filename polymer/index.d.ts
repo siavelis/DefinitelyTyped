@@ -68,7 +68,7 @@ declare namespace polymer {
 
     // Properties
 
-    properties?:{[prop: string]:(PropConstructorType|PropObjectType);};
+    properties?:{[prop: string]: (PropConstructorType|PropObjectType);};
 
     getPropertyInfo?(property: string): Object;
 
@@ -164,7 +164,7 @@ declare namespace polymer {
 
     fire?(type: string, detail?: any, options?: Object): CustomEvent;
 
-    async?(callback: ()=>void, waitTime?: number): number;
+    async?(callback: () => void, waitTime?: number): number;
 
     cancelAsync?(handle: number): void;
 

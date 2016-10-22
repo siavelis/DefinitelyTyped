@@ -25,7 +25,7 @@ declare namespace svgjs {
 
     export interface Doc extends Element {
         svg(data: string): any;
-        pattern(w: number, h: number, add:(e: Element)=>void): Element;
+        pattern(w: number, h: number, add: (e: Element) => void): Element;
 
         defs(): Defs;
 
@@ -100,8 +100,8 @@ declare namespace svgjs {
         visible(): boolean;
         remove(): void;
 
-        each(iterator:(i?: number, children?: Element[])=>void, deep?: boolean): void;
-        filter(adder:(filter: Filter)=>void): Element;
+        each(iterator: (i?: number, children?: Element[]) => void, deep?: boolean): void;
+        filter(adder: (filter: Filter) => void): Element;
 
         transform(t: Transform): Element;
         transform(): Transform;
@@ -195,9 +195,9 @@ declare namespace svgjs {
         cy(y: number, anchor?: boolean): Animation;
 
         size(w: number, h: number, anchor?: boolean): Animation;
-        during(cb:(pos: number)=>void): Animation;
+        during(cb: (pos: number) => void): Animation;
         to(value: number): Animation;
-        after(cb:()=>void): Animation;
+        after(cb: () => void): Animation;
 
         // TODO style, etc, bbox...
     }
@@ -218,7 +218,7 @@ declare namespace svgjs {
         path(data: string): Element;
         image(url: string, w?: number, h?: number): Element;
         text(text: string): Element;
-        text(adder:(element: Element)=>void): Element;
+        text(adder: (element: Element) => void): Element;
         use(element: Element): Element;
 
         group(): Element;

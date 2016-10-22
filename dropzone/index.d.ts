@@ -65,7 +65,7 @@ interface DropzoneOptions {
 	dictRemoveFileConfirmation?: string;
 	dictMaxFilesExceeded?: string;
 
-	accept?(file: DropzoneFile, done:(error?: string|Error) => void): void;
+	accept?(file: DropzoneFile, done: (error?: string|Error) => void): void;
 	init?(): void;
 	forceFallback?: boolean;
 	fallback?(): void;
@@ -119,7 +119,7 @@ declare class Dropzone {
 
 	static autoDiscover: boolean;
 	static options: any;
-	static confirm:(question: string, accepted:() => void, rejected?:() => void) => void;
+	static confirm: (question: string, accepted: () => void, rejected?: () => void) => void;
 
 	static ADDED: string;
 	static QUEUED: string;
@@ -162,7 +162,7 @@ declare class Dropzone {
 
 	getUploadingFiles(): DropzoneFile[];
 
-	accept(file: DropzoneFile, done:(error?: string|Error) => void): void;
+	accept(file: DropzoneFile, done: (error?: string|Error) => void): void;
 
 	getActiveFiles(): DropzoneFile[];
 
@@ -172,54 +172,54 @@ declare class Dropzone {
 
 	enqueueFiles(file: DropzoneFile[]): void;
 
-	createThumbnail(file: DropzoneFile, callback?:(...args: any[]) => void): any;
+	createThumbnail(file: DropzoneFile, callback?: (...args: any[]) => void): any;
 
-	createThumbnailFromUrl(file: DropzoneFile, url: string, callback?:(...args: any[]) => void): any;
+	createThumbnailFromUrl(file: DropzoneFile, url: string, callback?: (...args: any[]) => void): any;
 
-	on(eventName: string, callback:(...args: any[]) => void): Dropzone;
+	on(eventName: string, callback: (...args: any[]) => void): Dropzone;
 
 	off(eventName: string): Dropzone;
 
 	emit(eventName: string, ...args: any[]): Dropzone;
 
-	on(eventName:"drop", callback:(e: DragEvent) => any): Dropzone;
-	on(eventName:"dragstart", callback:(e: DragEvent) => any): Dropzone;
-	on(eventName:"dragend", callback:(e: DragEvent) => any): Dropzone;
-	on(eventName:"dragenter", callback:(e: DragEvent) => any): Dropzone;
-	on(eventName:"dragover", callback:(e: DragEvent) => any): Dropzone;
-	on(eventName:"dragleave", callback:(e: DragEvent) => any): Dropzone;
-	on(eventName:"paste", callback:(e: DragEvent) => any): Dropzone;
+	on(eventName:"drop", callback: (e: DragEvent) => any): Dropzone;
+	on(eventName:"dragstart", callback: (e: DragEvent) => any): Dropzone;
+	on(eventName:"dragend", callback: (e: DragEvent) => any): Dropzone;
+	on(eventName:"dragenter", callback: (e: DragEvent) => any): Dropzone;
+	on(eventName:"dragover", callback: (e: DragEvent) => any): Dropzone;
+	on(eventName:"dragleave", callback: (e: DragEvent) => any): Dropzone;
+	on(eventName:"paste", callback: (e: DragEvent) => any): Dropzone;
 
 	on(eventName:"reset"): Dropzone;
 
-	on(eventName:"addedfile", callback:(file: DropzoneFile) => any): Dropzone;
-	on(eventName:"addedfiles", callback:(files: DropzoneFile[]) => any): Dropzone;
-	on(eventName:"removedfile", callback:(file: DropzoneFile) => any): Dropzone;
-	on(eventName:"thumbnail", callback:(file: DropzoneFile, dataUrl: string) => any): Dropzone;
+	on(eventName:"addedfile", callback: (file: DropzoneFile) => any): Dropzone;
+	on(eventName:"addedfiles", callback: (files: DropzoneFile[]) => any): Dropzone;
+	on(eventName:"removedfile", callback: (file: DropzoneFile) => any): Dropzone;
+	on(eventName:"thumbnail", callback: (file: DropzoneFile, dataUrl: string) => any): Dropzone;
 
-	on(eventName:"error", callback:(file: DropzoneFile, message: string|Error) => any): Dropzone;
-	on(eventName:"errormultiple", callback:(files: DropzoneFile[], message: string|Error) => any): Dropzone;
+	on(eventName:"error", callback: (file: DropzoneFile, message: string|Error) => any): Dropzone;
+	on(eventName:"errormultiple", callback: (files: DropzoneFile[], message: string|Error) => any): Dropzone;
 
-	on(eventName:"processing", callback:(file: DropzoneFile) => any): Dropzone;
-	on(eventName:"processingmultiple", callback:(files: DropzoneFile[]) => any): Dropzone;
+	on(eventName:"processing", callback: (file: DropzoneFile) => any): Dropzone;
+	on(eventName:"processingmultiple", callback: (files: DropzoneFile[]) => any): Dropzone;
 
-	on(eventName:"uploadprogress", callback:(file: DropzoneFile, progress: number, bytesSent: number) => any): Dropzone;
-	on(eventName:"totaluploadprogress", callback:(totalProgress: number, totalBytes: number, totalBytesSent: number) => any): Dropzone;
+	on(eventName:"uploadprogress", callback: (file: DropzoneFile, progress: number, bytesSent: number) => any): Dropzone;
+	on(eventName:"totaluploadprogress", callback: (totalProgress: number, totalBytes: number, totalBytesSent: number) => any): Dropzone;
 
-	on(eventName:"sending", callback:(file: DropzoneFile, xhr: XMLHttpRequest, formData: FormData) => any): Dropzone;
-	on(eventName:"sendingmultiple", callback:(files: DropzoneFile[], xhr: XMLHttpRequest, formData: FormData) => any): Dropzone;
+	on(eventName:"sending", callback: (file: DropzoneFile, xhr: XMLHttpRequest, formData: FormData) => any): Dropzone;
+	on(eventName:"sendingmultiple", callback: (files: DropzoneFile[], xhr: XMLHttpRequest, formData: FormData) => any): Dropzone;
 
-	on(eventName:"success", callback:(file: DropzoneFile) => any): Dropzone;
-	on(eventName:"successmultiple", callback:(files: DropzoneFile[]) => any): Dropzone;
+	on(eventName:"success", callback: (file: DropzoneFile) => any): Dropzone;
+	on(eventName:"successmultiple", callback: (files: DropzoneFile[]) => any): Dropzone;
 
-	on(eventName:"canceled", callback:(file: DropzoneFile) => any): Dropzone;
-	on(eventName:"canceledmultiple", callback:(file: DropzoneFile[]) => any): Dropzone;
+	on(eventName:"canceled", callback: (file: DropzoneFile) => any): Dropzone;
+	on(eventName:"canceledmultiple", callback: (file: DropzoneFile[]) => any): Dropzone;
 
-	on(eventName:"complete", callback:(file: DropzoneFile) => any): Dropzone;
-	on(eventName:"completemultiple", callback:(file: DropzoneFile[]) => any): Dropzone;
+	on(eventName:"complete", callback: (file: DropzoneFile) => any): Dropzone;
+	on(eventName:"completemultiple", callback: (file: DropzoneFile[]) => any): Dropzone;
 
-	on(eventName:"maxfilesexceeded", callback:(file: DropzoneFile) => any): Dropzone;
-	on(eventName:"maxfilesreached", callback:(files: DropzoneFile[]) => any): Dropzone;
+	on(eventName:"maxfilesexceeded", callback: (file: DropzoneFile) => any): Dropzone;
+	on(eventName:"maxfilesreached", callback: (files: DropzoneFile[]) => any): Dropzone;
 	on(eventName:"queuecomplete"): Dropzone;
 
 	emit(eventName:"drop", e: DragEvent): Dropzone;

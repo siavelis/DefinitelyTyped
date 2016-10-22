@@ -190,7 +190,7 @@ declare namespace BlissNS {
         extend<T>(target: Object, source: any, whitelist? : string[] | string | Function | RegExp): T;
 
         lazy(object: Object, property: string, getter: () => any): Object;
-        lazy<T>(object:Object, property: string, getter:() => any): T;
+        lazy<T>(object:Object, property: string, getter: () => any): T;
 
         lazy(object: Object, properties: {[propertyName:string]: () => any}): Object;
         lazy<T>(object: Object, properties: {[propertyName:string]: () => any}): T;

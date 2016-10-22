@@ -116,7 +116,7 @@ declare namespace Resumable {
     /**
      * A function which displays an error a selected file is smaller than allowed. (Default: displays an alert for every bad file.)
      **/
-    minFileSizeErrorCallback?:(file: ResumableFile, errorCount: number) => void;
+    minFileSizeErrorCallback?: (file: ResumableFile, errorCount: number) => void;
     /**
      * The maximum allowed file size. (Default: undefined)
      **/

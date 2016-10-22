@@ -48,7 +48,7 @@ declare namespace cucumber {
 		getTags():string[];
 		getException():Error;
 		getAttachments():any[];
-		attach(data:any, mimeType?:string, callback?:(err?:any) => void):void;
+		attach(data:any, mimeType?:string, callback?: (err?:any) => void):void;
 		isSuccessful():boolean;
 		isFailed():boolean;
 		isPending():boolean;
@@ -61,7 +61,7 @@ declare namespace cucumber {
 	}
 
 	interface AroundCode{
-		(scenario: HookScenario, runScenario?: (error:string, callback?:Function)=>void): void;
+		(scenario: HookScenario, runScenario?: (error:string, callback?:Function) => void): void;
 	}
 
 	export interface Hooks {
@@ -69,6 +69,6 @@ declare namespace cucumber {
 		After(code: HookCode): void;
 		Around(code: AroundCode):void;
 		setDefaultTimeout(time:number): void;
-		registerHandler(handlerOption:string, code:(event:any, callback:CallbackStepDefinition) =>void): void;
+		registerHandler(handlerOption:string, code: (event:any, callback:CallbackStepDefinition) =>void): void;
 	}
 }

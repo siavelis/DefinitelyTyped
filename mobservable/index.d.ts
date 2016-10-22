@@ -62,7 +62,7 @@ interface _IMobservableStatic {
      * @param scope (optional)
      * @returns disposer function to prematurely end the observer.
      */
-    observeUntil(predicate: ()=>boolean, effect: Mobservable.Lambda, scope?: any): Mobservable.Lambda;
+    observeUntil(predicate: () => boolean, effect: Mobservable.Lambda, scope?: any): Mobservable.Lambda;
 
     /**
      * During a transaction no views are updated until the end of the transaction.
@@ -70,7 +70,7 @@ interface _IMobservableStatic {
      * @param action a function that updates some reactive state
      * @returns any value that was returned by the 'action' parameter.
      */
-    transaction<T>(action: ()=>T): T;
+    transaction<T>(action: () => T): T;
 
     /**
      * Converts a reactive structure into a non-reactive structure.
@@ -88,13 +88,13 @@ interface _IMobservableStatic {
 
         getObserverTree(thing:any, property?:string): Mobservable.IObserverTree;
 
-        trackTransitions(extensive?:boolean, onReport?:(lines:Mobservable.ITransitionEvent) => void) : Mobservable.Lambda;
+        trackTransitions(extensive?:boolean, onReport?: (lines:Mobservable.ITransitionEvent) => void) : Mobservable.Lambda;
     }
 }
 
 interface IMakeReactive {
     <T>(value: T[], opts?: Mobservable.IMakeReactiveOptions): Mobservable.IObservableArray<T>;
-    <T>(value: ()=>T, opts?: Mobservable.IMakeReactiveOptions): Mobservable.IObservableValue<T>;
+    <T>(value: () => T, opts?: Mobservable.IMakeReactiveOptions): Mobservable.IObservableValue<T>;
     <T extends string|number|boolean|Date|RegExp|Function|void>(value: T, opts?: Mobservable.IMakeReactiveOptions): Mobservable.IObservableValue<T>;
     <T extends Object>(value: Object, opts?: Mobservable.IMakeReactiveOptions): T;
 }
@@ -125,21 +125,21 @@ declare namespace Mobservable {
     }
 
     interface IObservable {
-        observe(callback: (...args: any[])=>void, fireImmediately?: boolean): Lambda;
+        observe(callback: (...args: any[]) => void, fireImmediately?: boolean): Lambda;
     }
 
     interface IObservableValue<T> extends IObservable {
         (): T;
         (value: T):void;
-        observe(callback: (newValue: T, oldValue: T)=>void, fireImmediately?: boolean): Lambda;
+        observe(callback: (newValue: T, oldValue: T) => void, fireImmediately?: boolean): Lambda;
     }
 
     interface IObservableArray<T> extends IObservable, Array<T> {
         spliceWithArray(index: number, deleteCount?: number, newItems?: T[]): T[];
-        observe(listener: (changeData: IArrayChange<T>|IArraySplice<T>)=>void, fireImmediately?: boolean): Lambda;
+        observe(listener: (changeData: IArrayChange<T>|IArraySplice<T>) => void, fireImmediately?: boolean): Lambda;
         clear(): T[];
         replace(newItems: T[]): T[];
-        find(predicate: (item: T,index: number,array: IObservableArray<T>)=>boolean,thisArg?: any,fromIndex?: number): T;
+        find(predicate: (item: T,index: number,array: IObservableArray<T>) => boolean,thisArg?: any,fromIndex?: number): T;
         remove(value: T): boolean;
     }
 

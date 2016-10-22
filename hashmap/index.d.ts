@@ -22,7 +22,7 @@ declare class HashMap<TKey, TValue> {
      *
      * @param keysAndValues key1, value1, key2, value2...
      */
-    constructor(...keysAndValues:(TKey|TValue)[]);
+    constructor(...keysAndValues: (TKey|TValue)[]);
 
     /**
      * Return value from hashmap.
@@ -47,7 +47,7 @@ declare class HashMap<TKey, TValue> {
      * @param keysAndValues key1, value1, key2, value2...
      * @return Self.
      */
-    multi(...keysAndValues:(TKey|TValue)[]): HashMap<TKey, TValue>;
+    multi(...keysAndValues: (TKey|TValue)[]): HashMap<TKey, TValue>;
 
     /**
      * Copy all key-value pairs from other to this instance.
@@ -122,7 +122,7 @@ declare class HashMap<TKey, TValue> {
      * @param callback Function to be invoked for every hashmap entry.
      * @return Self.
      */
-    forEach(callback:(value: TValue, key: TKey) => void): HashMap<TKey, TValue>;
+    forEach(callback: (value: TValue, key: TKey) => void): HashMap<TKey, TValue>;
 }
 
 export = HashMap;

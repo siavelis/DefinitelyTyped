@@ -10,7 +10,7 @@ declare module "istanbul-middleware" {
 
     type Matcher = (file: string)=> boolean;
     type PostLoadHookFn = (file: any)=> {};
-    type PostLoadHook = (matcherfn: Matcher,transformer: any,verbose: boolean)=>PostLoadHookFn;
+    type PostLoadHook = (matcherfn: Matcher, transformer: any, verbose: boolean) => PostLoadHookFn;
 
     export function hookLoader(matcherOrRoot: Matcher|string, opts?:{
         postLoadHook?: PostLoadHook,

@@ -295,7 +295,7 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the listener is added.
          * @param fail The callback that is called if there was an error.
          */
-        addTagDiscoveredListener(callback:(event: TagEvent) => void, win?:() => void, fail?:() => void): void;
+        addTagDiscoveredListener(callback: (event: TagEvent) => void, win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.addMimeTypeListener registers the callback for ndef-mime events.
@@ -306,7 +306,7 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the listener is added.
          * @param fail The callback that is called if there was an error.
          */
-        addMimeTypeListener(mimeType: string, callback:() => void, win?:() => void, fail?:() => void): void;
+        addMimeTypeListener(mimeType: string, callback: () => void, win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.addNdefListener registers the callback for ndef events.
@@ -317,7 +317,7 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the listener is added.
          * @param fail The callback that is called if there was an error.
          */
-        addNdefListener(callback:(event: NdefTagEvent) => void, win?:() => void, fail?:() => void): void;
+        addNdefListener(callback: (event: NdefTagEvent) => void, win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.addNdefFormatableListener registers the callback for ndef-formatable events.
@@ -328,7 +328,7 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the listener is added.
          * @param fail The callback that is called if there was an error.
          */
-        addNdefFormatableListener(callback:(event: NdefTagEvent) => void, win?:() => void, fail?:() => void): void;
+        addNdefFormatableListener(callback: (event: NdefTagEvent) => void, win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.write writes an NdefMessage to a NFC tag.
@@ -340,7 +340,7 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the tag is written.
          * @param fail The callback that is called if there was an error.
          */
-        write(ndefMessage: Array<NdefRecord>, win?:() => void, fail?:() => void): void;
+        write(ndefMessage: Array<NdefRecord>, win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.makeReadOnly make a NFC tag read only.
@@ -349,7 +349,7 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the tag is locked.
          * @param fail The callback that is called if there was an error.
          */
-        makeReadOnly(win?:() => void, fail?:() => void): void;
+        makeReadOnly(win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.share writes an NdefMessage via peer-to-peer.
@@ -358,14 +358,14 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the message is pushed.
          * @param fail The callback that is called if there was an error.
          */
-        share(ndefMessage: Array<NdefRecord>, win?:() => void, fail?:() => void): void;
+        share(ndefMessage: Array<NdefRecord>, win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.unshare stops sharing data via peer-to-peer.
          * @param win The callback that is called when sharing stops.
          * @param fail The callback that is called if there was an error.
          */
-        unshare(win?:() => void, fail?:() => void): void;
+        unshare(win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.handover shares files to a NFC peer using handover. Files are sent by specifying a file:// or context:// URI or a list of URIs.
@@ -376,14 +376,14 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the message is pushed.
          * @param fail The callback that is called if there was an error.
          */
-        handover(uris: string|Array<string>, win?:() => void, fail?:() => void): void;
+        handover(uris: string|Array<string>, win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.stopHandover stops sharing data via peer-to-peer.
          * @param win The callback that is called when sharing stops.
          * @param fail The callback that is called if there was an error.
          */
-        stopHandover(win?:() => void, fail?:() => void): void;
+        stopHandover(win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.erase erases a tag by writing an empty message.
@@ -392,7 +392,7 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when sharing stops.
          * @param fail The callback that is called if there was an error.
          */
-        erase(win?:() => void, fail?:() => void): void;
+        erase(win?: () => void, fail?: () => void): void;
 
         /**
          * Function nfc.enabled explicitly checks to see if the phone has NFC and if NFC is enabled.
@@ -406,7 +406,7 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when NFC is enabled.
          * @param fail The callback that is called when NFC is disabled or missing.
          */
-        enabled(win?:(status: String) => void, fail?:(status: String) => void): void;
+        enabled(win?: (status: String) => void, fail?: (status: String) => void): void;
 
         /**
          * Removes the previously registered event listener added via nfc.addTagDiscoveredListener
@@ -414,7 +414,7 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the listener is successfully removed.
          * @param fail The callback that is called if there was an error during removal.
          */
-        removeTagDiscoveredListener(callback:(event: TagEvent) => void, win?:() => void, fail?:() => void): void;
+        removeTagDiscoveredListener(callback: (event: TagEvent) => void, win?: () => void, fail?: () => void): void;
 
         /**
          * Removes the previously registered event listener added via nfc.addMimeTypeListener
@@ -423,7 +423,7 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the listener is successfully removed.
          * @param fail The callback that is called if there was an error during removal.
          */
-        removeMimeTypeListener(mimeType: string, callback:(event: TagEvent) => void, win?:() => void, fail?:() => void): void;
+        removeMimeTypeListener(mimeType: string, callback: (event: TagEvent) => void, win?: () => void, fail?: () => void): void;
 
         /**
          * Removes the previously registered event listener for NDEF tags added via nfc.addNdefListener.
@@ -431,14 +431,14 @@ declare namespace PhoneGapNfc {
          * @param win The callback that is called when the listener is successfully removed.
          * @param fail The callback that is called if there was an error during removal.
          */
-        removeNdefListener(callback:(event: TagEvent) => void, win?:() => void, fail?:() => void): void;
+        removeNdefListener(callback: (event: TagEvent) => void, win?: () => void, fail?: () => void): void;
 
         /**
          * Function showSettings opens the NFC settings for the operating system.
          * @param win Success callback function
          * @param fail Error callback function, invoked when error occurs.
          */
-        showSettings(win?:() => void, fail?:() => void): void;
+        showSettings(win?: () => void, fail?: () => void): void;
     }
 }
 

@@ -166,7 +166,7 @@ interface Firebase extends FirebaseQuery {
 	 * @deprecated Use authWithCustomToken() instead.
 	 * Authenticates a Firebase client using the provided authentication token or Firebase Secret.
 	 */
-	auth(authToken: string, onComplete: (error: any, result: FirebaseAuthResult) => void, onCancel?:(error: any) => void): void;
+	auth(authToken: string, onComplete: (error: any, result: FirebaseAuthResult) => void, onCancel?: (error: any) => void): void;
 	auth(authToken: string): Promise<FirebaseAuthResult>;
 	/**
 	 * Authenticates a Firebase client using an authentication token or Firebase Secret.
@@ -186,7 +186,7 @@ interface Firebase extends FirebaseQuery {
 	/**
 	 * Authenticates a Firebase client using a popup-based OAuth flow.
 	 */
-	authWithOAuthPopup(provider: string, onComplete:(error: any, authData: FirebaseAuthData) => void, options?: Object): void;
+	authWithOAuthPopup(provider: string, onComplete: (error: any, authData: FirebaseAuthData) => void, options?: Object): void;
 	authWithOAuthPopup(provider: string, options?: Object): Promise<FirebaseAuthData>;
 	/**
 	 * Authenticates a Firebase client using a redirect-based OAuth flow.

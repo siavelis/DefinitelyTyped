@@ -57,7 +57,7 @@ declare namespace QtyModule {
 
     toString(targetUnitsOrMaxDecimalsOrPrec?: number|string|Qty, maxDecimals?: number): string;
 
-    format(targetUnits?: string, formatter?:(scalar: number, units: string) => string): string;
+    format(targetUnits?: string, formatter?: (scalar: number, units: string) => string): string;
 
     compareTo(other: Qty|string): number;
 

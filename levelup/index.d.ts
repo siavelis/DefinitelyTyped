@@ -22,8 +22,8 @@ interface LevelUp {
     del(key: any, options ?: { keyEncoding?: string; sync?: boolean }, callback ?: (error: any) => any): void;
 
 
-    batch(array: Batch[], options?: { keyEncoding?: string; valueEncoding?: string; sync?: boolean }, callback?: (error?: any)=>any): void;
-    batch(array: Batch[], callback?: (error?: any)=>any): void;
+    batch(array: Batch[], options?: { keyEncoding?: string; valueEncoding?: string; sync?: boolean }, callback?: (error?: any) => any): void;
+    batch(array: Batch[], callback?: (error?: any) => any): void;
     batch(): LevelUpChain;
     isOpen(): boolean;
     isClosed(): boolean;
@@ -41,7 +41,7 @@ interface LevelUpChain {
     del(key: any): LevelUpChain;
     del(key: any, options ?: { keyEncoding?: string; sync?: boolean }): LevelUpChain;
     clear(): LevelUpChain;
-    write(callback?: (error?: any)=>any) : LevelUpChain;
+    write(callback?: (error?: any) => any) : LevelUpChain;
 }
 
 interface levelupOptions {

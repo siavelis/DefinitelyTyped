@@ -4829,7 +4829,7 @@ declare interface nlobjPortlet {
      * @param showHref?
      * @return
      */
-    addEditColumn(column:() => void, showView:boolean, showHref?:string): () => void;
+    addEditColumn(column: () => void, showView:boolean, showHref?:string): () => void;
 
     /**
      * add a row (nlobjSearchResult or Array of name-value pairs) to this LIST portlet.
@@ -4966,7 +4966,7 @@ declare interface nlobjList {
      * @param showHref?
      * @return
      */
-    addEditColumn(column:() => void, showView:boolean, showHref?:string): () => void;
+    addEditColumn(column: () => void, showView:boolean, showHref?:string): () => void;
 
     /**
      * add a row (Array of name-value pairs or nlobjSearchResult) to this portlet.
@@ -5221,7 +5221,7 @@ declare interface nlobjForm {
      * @param nexttab
      * @return
      */
-    insertTab(tab:() => void, nexttab:string): nlobjTab;
+    insertTab(tab: () => void, nexttab:string): nlobjTab;
 
     /**
      * insert a field (nlobjField) before another field (name).
@@ -5235,7 +5235,7 @@ declare interface nlobjForm {
      * @param nextfld
      * @return
      */
-    insertField(field:() => void, nextfld:string): nlobjField;
+    insertField(field: () => void, nextfld:string): nlobjField;
 
     /**
      * insert a subtab (nlobjTab) before another subtab or sublist (name).
@@ -5249,7 +5249,7 @@ declare interface nlobjForm {
      * @param nextsubtab
      * @return
      */
-    insertSubTab(subtab:() => void, nextsubtab:string): nlobjTab;
+    insertSubTab(subtab: () => void, nextsubtab:string): nlobjTab;
 
     /**
      * insert a sublist (nlobjSubList) before another subtab or sublist (name).
@@ -5263,7 +5263,7 @@ declare interface nlobjForm {
      * @param nextsublist
      * @return
      */
-    insertSubList(sublist:() => void, nextsublist:string): nlobjSubList;
+    insertSubList(sublist: () => void, nextsublist:string): nlobjSubList;
 
     /**
      * return a tab (nlobjTab) on this form.
@@ -5531,7 +5531,7 @@ declare interface nlobjAssistant {
      * @param step
      * @return
      */
-    setCurrentStep(step:() => void): any;
+    setCurrentStep(step: () => void): any;
 
     /**
      * add a step to the assistant.
@@ -5780,7 +5780,7 @@ declare interface nlobjAssistant {
      * @param response
      * @return
      */
-    sendRedirect(response:() => void): any;
+    sendRedirect(response: () => void): any;
 }
 
 /**

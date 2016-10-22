@@ -26,13 +26,13 @@ declare namespace jsf {
              * function to callback for event
              * @param callback the callback function
              */
-            onevent?(callback:(data: RequestData) => void): void;
+            onevent?(callback: (data: RequestData) => void): void;
 
             /**
              * function to callback for error
              * @param callback the callback function
              */
-            onerror?(callback:(data: RequestData) => void): void;
+            onerror?(callback: (data: RequestData) => void): void;
 
             /**
              * object containing parameters to include in the request
@@ -49,13 +49,13 @@ declare namespace jsf {
          * Register a callback for event handling.
          * @param callback a reference to a function to call on an event
          */
-        function addOnEvent(callback:(data: RequestData) => void): void;
+        function addOnEvent(callback: (data: RequestData) => void): void;
 
         /**
          * Register a callback for error handling.
          * @param callback a reference to a function to call on an error
          */
-        function addOnError(callback:(data: RequestData) => void): void;
+        function addOnError(callback: (data: RequestData) => void): void;
 
         /**
          * Send an asynchronous Ajax request to the server.

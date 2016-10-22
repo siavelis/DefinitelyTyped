@@ -1319,16 +1319,16 @@ declare namespace jax {
         /*A function that tells MathJax what tag to use for equation number n. This could be used to have the equations
         * labeled by a sequence of symbols rather than numbers, or to use section and subsection numbers instead.
         */
-        formatNumber?:(n:number)=>string;
+        formatNumber?: (n:number) => string;
         /*A function that tells MathJax how to format an equation number for displaying as a tag for an equation. This
         * is what appears in the margin of a tagged or numbered equation.*/
-        formatTag?:(n:number)=>string;
+        formatTag?: (n:number) => string;
         /*A function that tells MathJax what ID to use as an anchor for the equation (so that it can be used in URL
         * references).
         */
-        formatID?:()=>string;
+        formatID?: () => string;
         /*A function that takes an equation ID and returns the URL to link to it.*/
-        formatURL?:(id:string)=>string;
+        formatURL?: (id:string) => string;
         /*This controls whether element ID’s use the \label name or the equation number. When true, use the label, when
         * false, use the equation number.
         */

@@ -23,7 +23,7 @@ interface RangyRange extends Range {
     collapseToPoint(node: Node, offset: number): any;
     collapseBefore(node: Node): any;
     collapseAfter(node: Node): any;
-    getNodes(nodeTypes?: any[], filter?:(node: Node) => boolean): Node[];
+    getNodes(nodeTypes?: any[], filter?: (node: Node) => boolean): Node[];
     getBookmark(containerNode?: Node):{start: number, end: number};
     moveToBookmark(bookmark: Object): any;
     getDocument(): Document;
@@ -56,7 +56,7 @@ interface RangyStatic {
     createRangyRange(doc?: Document|Window|HTMLIFrameElement): RangyRange;
     getNativeSelection(win?: Window): Selection;
     getSelection(): RangySelection;
-    addInitListener(listener:(rangy: RangyStatic) => void): any;
+    addInitListener(listener: (rangy: RangyStatic) => void): any;
     shim(): any;
     createMissingNativeApi(): any;
     initialized: boolean;

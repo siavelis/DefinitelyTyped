@@ -46,7 +46,7 @@ export interface ILegendwidget {
     expireCache: () => void;
     legend: (l: ILegendwidget) => T;
     chartID: () => number;
-    options: (o: Object)=>void ;
+    options: (o: Object) => void ;
     select: (selector: d3.Selection<any>) => d3.Selection<any>;
     selectAll: (selector: d3.Selection<any>) => d3.Selection<any>;
   }
@@ -78,7 +78,7 @@ export interface ILegendwidget {
     colorDomain: IGetSet<number[], T>;
   }
   export interface IAbstractStackableChart<T> {
-    stack: (group: IChartGroup, name?: string, retriever?: (d: Object)=>number) => T;
+    stack: (group: IChartGroup, name?: string, retriever?: (d: Object) => number) => T;
   }
 
   export interface IAbstractCoordinateGridChart<T> {

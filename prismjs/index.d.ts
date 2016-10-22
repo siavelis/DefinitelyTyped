@@ -18,7 +18,7 @@ declare namespace PrismJS {
          * This is the most high-level function in Prism’s API. It fetches all the elements that have a .language-xxxx class and then calls Prism.highlightElement() on each one of them.
          *
 		 * @param  {boolean} async - Whether to use Web Workers to improve performance and avoid blocking the UI when highlighting very large chunks of code. False by default.
-		 * @param  {(element:Element)=>void} callback? - An optional callback to be invoked after the highlighting is done. Mostly useful when async is true, since in that case, the highlighting is done asynchronously.
+		 * @param  {(element:Element) => void} callback? - An optional callback to be invoked after the highlighting is done. Mostly useful when async is true, since in that case, the highlighting is done asynchronously.
 		 * @returns void
 		 */
 		highlightAll(async: boolean, callback?: (element: Element) => void): void;
@@ -28,7 +28,7 @@ declare namespace PrismJS {
          *
 		 * @param  {Element} element - The element containing the code. It must have a class of language-xxxx to be processed, where xxxx is a valid language identifier.
 		 * @param  {boolean} async - Whether to use Web Workers to improve performance and avoid blocking the UI when highlighting very large chunks of code. False by default.
-		 * @param  {(element:Element)=>void} callback? - An optional callback to be invoked after the highlighting is done. Mostly useful when async is true, since in that case, the highlighting is done asynchronously.
+		 * @param  {(element:Element) => void} callback? - An optional callback to be invoked after the highlighting is done. Mostly useful when async is true, since in that case, the highlighting is done asynchronously.
 		 * @returns void
 		 */
 		highlightElement(element: Element, async: boolean, callback?: (element: Element) => void): void;

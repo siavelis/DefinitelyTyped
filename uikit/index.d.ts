@@ -70,14 +70,14 @@ declare namespace UIkit {
          * @param  {string} message The message to display. Can be Html
          * @param  {function}      fn      A function to execute on confirmation
          */
-        confirm(message:string, fn:() => any): void;
+        confirm(message:string, fn: () => any): void;
         /**
          * Create a prompt dialog, where the user enter information
          * @param  {string} message The message to display. Can be Html
          * @param  {function} fn  A function to execute on confirmation. The function
          * receive the new value as a parameter
          */
-        prompt(message:string, fn:(newValue:string) => any): void;
+        prompt(message:string, fn: (newValue:string) => any): void;
         /**
          * Create a prompt dialog, where the user enter information
          * @param  {string} message The message to display. Can be Html
@@ -85,7 +85,7 @@ declare namespace UIkit {
          * @param  {function} fn  A function to execute on confirmation. The function
          * receive the new value as a parameter
          */
-        prompt(message:string, value:string, fn:(newValue:string) => any): void;
+        prompt(message:string, value:string, fn: (newValue:string) => any): void;
         /**
          * Create a modal that blocks the entire page
          * @param {string} content A content to display. Can be Html

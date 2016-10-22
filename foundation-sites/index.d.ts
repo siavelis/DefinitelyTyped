@@ -409,7 +409,7 @@ declare namespace FoundationSites {
         transitionend(): string;
 
         util : {
-            throttle(func:(...args:any[]) => any, delay:number): (...args:any[]) => any;
+            throttle(func: (...args:any[]) => any, delay:number): (...args:any[]) => any;
         };
 
         Abide(element:Object, options?:IAbideOptions): Abide;

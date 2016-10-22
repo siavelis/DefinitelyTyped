@@ -102,9 +102,9 @@ declare namespace Microsoft.Maps.Search {
      }
 
      export interface SearchRequestOptions {
-         callback?:(result: SearchResponse, userData: any)=>any;
+         callback?: (result: SearchResponse, userData: any) => any;
          count: number;
-         errorCallback?:(options: SearchRequestOptions)=>any;
+         errorCallback?: (options: SearchRequestOptions) => any;
          query?: string;
          startIndex?: number;
          timeout?: number;

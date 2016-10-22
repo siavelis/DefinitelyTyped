@@ -197,10 +197,10 @@ interface Slider extends JQuery {
      */
     relayout(): void;
     on: {
-        (eventType:string, callback:(eventObject:JQueryEventObject, ...args:any[]) => any): Slider;
-        (eventType:string, data:any, callback:(eventObject:JQueryEventObject, ...args:any[]) => any): Slider;
-        (eventType:string, selector:string, callback:(eventObject:JQueryEventObject, ...eventData:any[]) => any): Slider;
-        (eventType:string, selector:string, data:any, callback:(eventObject:JQueryEventObject, ...eventData:any[]) => any): Slider;
+        (eventType:string, callback: (eventObject:JQueryEventObject, ...args:any[]) => any): Slider;
+        (eventType:string, data:any, callback: (eventObject:JQueryEventObject, ...args:any[]) => any): Slider;
+        (eventType:string, selector:string, callback: (eventObject:JQueryEventObject, ...eventData:any[]) => any): Slider;
+        (eventType:string, selector:string, data:any, callback: (eventObject:JQueryEventObject, ...eventData:any[]) => any): Slider;
         (eventType:{ [key: string]: any; }, selector?:string, data?:any): Slider;
         (eventType:{ [key: string]: any; }, data?:any): Slider;
     }

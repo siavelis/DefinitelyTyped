@@ -7,7 +7,7 @@ interface IDOMPurify {
   sanitize(s: string): string;
   sanitize(s: string, config: IDOMPurifyConfig): any;
 
-  addHook(hook: string, cb:(currentNode: Element, data: any, config: IDOMPurifyConfig) => Element): void;
+  addHook(hook: string, cb: (currentNode: Element, data: any, config: IDOMPurifyConfig) => Element): void;
 }
 
 interface IDOMPurifyConfig {

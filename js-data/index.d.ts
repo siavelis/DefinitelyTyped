@@ -10,12 +10,12 @@
 declare namespace JSData {
 
     interface JSDataPromise<R> {
-        then<U>(onFulfilled?:(value: R) => U | JSDataPromise<U>, onRejected?:(error: any) => U | JSDataPromise<U>): JSDataPromise<U>;
+        then<U>(onFulfilled?: (value: R) => U | JSDataPromise<U>, onRejected?: (error: any) => U | JSDataPromise<U>): JSDataPromise<U>;
 
-        catch<U>(onRejected?:(error: any) => U | JSDataPromise<U>): JSDataPromise<U>;
+        catch<U>(onRejected?: (error: any) => U | JSDataPromise<U>): JSDataPromise<U>;
 
         // enhanced with finally
-        finally(finallyCb?:() => any): JSDataPromise<R>;
+        finally(finallyCb?: () => any): JSDataPromise<R>;
     }
 
     interface DSConfiguration extends IDSResourceLifecycleEventHandlers {
@@ -27,7 +27,7 @@ declare namespace JSData {
         clearEmptyQueries?: boolean;
         debug?: boolean;
         defaultAdapter?: string;
-        defaultFilter?: (collection: Array<any>, resourceName: string, params: DSFilterArg, options: DSConfiguration)=>Array<any>;
+        defaultFilter?: (collection: Array<any>, resourceName: string, params: DSFilterArg, options: DSConfiguration) => Array<any>;
         defaultValues?: Object;
         eagerEject?: boolean;
         endpoint?: string;
@@ -106,8 +106,8 @@ declare namespace JSData {
     }
 
     interface DSEvents {
-        on(name: string, handler:(...args: any[])=>void): void;
-        off(name: string, handler:(...args: any[])=>void): void;
+        on(name: string, handler: (...args: any[]) => void): void;
+        off(name: string, handler: (...args: any[]) => void): void;
         emit(name: string, ...args: any[]): void;
     }
 
@@ -216,7 +216,7 @@ declare namespace JSData {
 
     type DSSyncLifecycleHookHandler = (resource: DSResourceDefinition<any>, data: any) => void;
     type DSAsyncLifecycleHookHandler = (resource: DSResourceDefinition<any>, data: any) => JSDataPromise<any>;
-    type DSAsyncLifecycleHookHandlerCb = (resource: DSResourceDefinition<any>, data: any, cb:(err: Error, data: any)=>void) => void
+    type DSAsyncLifecycleHookHandlerCb = (resource: DSResourceDefinition<any>, data: any, cb: (err: Error, data: any) => void) => void
 
     interface IDSResourceLifecycleValidateEventHandlers {
         beforeValidate?: DSAsyncLifecycleHookHandler | DSAsyncLifecycleHookHandlerCb;

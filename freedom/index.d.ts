@@ -38,7 +38,7 @@ declare namespace freedom {
     interface ModuleSelfConstructor {
         // Identifies a named API's provider class.
         provideSynchronous: (classFn?: Function) => void;
-        provideAsynchronous :(classFn?: Function) => void;
+        provideAsynchronous: (classFn?: Function) => void;
         providePromises: (classFn?: Function) => void;
     }
 

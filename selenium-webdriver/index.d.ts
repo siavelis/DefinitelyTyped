@@ -2496,7 +2496,7 @@ declare namespace webdriver {
              * @param {ControlFlow=} opt_flow The control flow
              *     this instance was created under. Defaults to the currently active flow.
              */
-            constructor(resolver: (onFulfilled: IFulfilledCallback<T>, onRejected: IRejectedCallback)=>void, opt_flow?: ControlFlow);
+            constructor(resolver: (onFulfilled: IFulfilledCallback<T>, onRejected: IRejectedCallback) => void, opt_flow?: ControlFlow);
             constructor(); // For angular-protractor/angular-protractor-tests.ts
 
             //region Methods
@@ -2901,7 +2901,7 @@ declare namespace webdriver {
          *     The frame identifier.
          * @return {!Condition<boolean>} A new condition.
          */
-        function ableToSwitchToFrame(frame: number|WebElement|By|((webdriver: WebDriver)=>WebElement)): Condition<boolean>;
+        function ableToSwitchToFrame(frame: number|WebElement|By|((webdriver: WebDriver) => WebElement)): Condition<boolean>;
 
         /**
          * Creates a condition that waits for an alert to be opened. Upon success, the
@@ -5468,7 +5468,7 @@ declare namespace webdriver {
          *     rejected if the condition times out.
          * @template T
          */
-        wait<T>(condition: webdriver.promise.Promise<T>|webdriver.until.Condition<T>|((driver: WebDriver)=>T), timeout?: number, opt_message?: string): webdriver.promise.Promise<T>;
+        wait<T>(condition: webdriver.promise.Promise<T>|webdriver.until.Condition<T>|((driver: WebDriver) => T), timeout?: number, opt_message?: string): webdriver.promise.Promise<T>;
 
         /**
          * Schedules a command to make the driver sleep for the given amount of time.

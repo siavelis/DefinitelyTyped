@@ -15,17 +15,17 @@ declare namespace __Combinatorics {
 		/**
 		 * Applies the callback function for each element.
 		 */
-		forEach(f:(item: T) => void): void;
+		forEach(f: (item: T) => void): void;
 
 		/**
 		 * All elements at once with function applied to each element.
 		 */
-		map<TResult>(f:(item: T) => TResult): TResult[];
+		map<TResult>(f: (item: T) => TResult): TResult[];
 
 		/**
 		 * Returns an array with elements that passes the filter function.
 		 */
-		filter(predicate:(item: T) => boolean): T[];
+		filter(predicate: (item: T) => boolean): T[];
 
 		/**
 		 * All elements at once.

@@ -302,7 +302,7 @@ interface RTCPeerConnection {
             constraints?: RTCMediaConstraints): void;
   addIceCandidate(candidate: RTCIceCandidate): Promise<void>;
   addIceCandidate(candidate:RTCIceCandidate,
-                  successCallback:() => void,
+                  successCallback: () => void,
                   failureCallback:RTCPeerConnectionErrorCallback): void;
   iceGatheringState: string;  // RTCIceGatheringState; see TODO(1)
   iceConnectionState: string;  // RTCIceConnectionState; see TODO(1)

@@ -125,7 +125,7 @@ declare namespace ng {
     ///////////////////////////////////////////////////////////////////////////
     interface IAttributes {
         $set(name: string, value: any): void;
-        $observe(name: string, fn:(value?:any)=>any):void;
+        $observe(name: string, fn: (value?:any) => any):void;
         $attr: any;
     }
 

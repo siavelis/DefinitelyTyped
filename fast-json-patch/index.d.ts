@@ -15,7 +15,7 @@ declare namespace fastjsonpatch {
         /**
          * Observes changes made to an object, which can then be retieved using generate
          */
-        observe<T>(object: T, callback?:()=>void): Observer<T>
+        observe<T>(object: T, callback?: () => void): Observer<T>
 
         /**
          * Detach an observer from an object

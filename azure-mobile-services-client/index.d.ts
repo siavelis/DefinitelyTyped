@@ -27,7 +27,7 @@ declare namespace Microsoft.WindowsAzure {
          * @param options Contains additional parameter information, valid values are:
          *     body: The body of the HTTP request.
          *     method: The HTTP method to use in the request, with the default being POST,
-         *     parameters: Any additional query string parameters, 
+         *     parameters: Any additional query string parameters,
          *     headers: HTTP request headers, specified as an object.
          * @param callback Optional callback accepting (error, results) parameters.
          */
@@ -65,7 +65,7 @@ declare namespace Microsoft.WindowsAzure {
 
     // User object based on Microsoft Azure documentation: http://msdn.microsoft.com/en-us/library/windowsazure/jj554220.aspx
     interface User {
-        getIdentities(): any;// { [providerName: string]: { userId: string, accessToken: string, accessTokenSecret?: string }; };
+        getIdentities(): any; // { [providerName: string]: { userId: string, accessToken: string, accessTokenSecret?: string }; };
         accessTokens: any;   // { [providerName: string]: string; }
         level: string; //for level:string use one of LevelEnum: 'admin','anonymous','authenticated'
         userId: string;

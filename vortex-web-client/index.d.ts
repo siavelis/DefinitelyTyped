@@ -205,7 +205,7 @@ declare namespace DDS {
 		 * @param l - listener code
 		 * @returns listener handle
 		 */
-		addListener(l:(msg: any) => void): number;
+		addListener(l: (msg: any) => void): number;
 
 		/**
 		 * removes a listener from this data reader.
@@ -272,7 +272,7 @@ declare namespace DDS {
 		 * @param l - listener function
 		 * @param p - predicate
 		 */
-		addListener(l:(data: any) => void, p?:(data: any) => boolean): void;
+		addListener(l: (data: any) => void, p?: (data: any) => boolean): void;
 
 		/**
 		 * Write the element `data` with key `k` into the cache.
@@ -289,7 +289,7 @@ declare namespace DDS {
 		 * @param f - the function to be applied
 		 * @param n - samples set size
 		 */
-		forEachN(f:(data: any) => any, n: number): any[];
+		forEachN(f: (data: any) => any, n: number): any[];
 
 		/**
 		 * Execute the function `f` for each element of the cache.
@@ -298,7 +298,7 @@ declare namespace DDS {
 		 * @param f - the function to be applied
 		 * @returns results of the function execution
 		 */
-		forEach(f:(data: any) => any): any[];
+		forEach(f: (data: any) => any): any[];
 
 		/**
 		 * Returns a cache that is the result of applying `f` to each element of the cache.
@@ -306,7 +306,7 @@ declare namespace DDS {
 		 * @param f - the function to be applied
 		 * @returns A cache holding the results of the function execution
 		 */
-		map(f:(data: any) => any): DataCache;
+		map(f: (data: any) => any): DataCache;
 
 		/**
 		 * Returns the list of elements in the cache that satisfy the predicate `f`.
@@ -314,7 +314,7 @@ declare namespace DDS {
 		 * @param f - the predicate to be applied to filter the cache values
 		 * @returns An array holding the filtered values
 		 */
-		filter(f:(data: any) => boolean): any[];
+		filter(f: (data: any) => boolean): any[];
 
 		/**
 		 * Returns the list of elements in the cache that doesn't satisfy the predicate `f`.
@@ -322,7 +322,7 @@ declare namespace DDS {
 		 * @returns An array holding the filtered values
 		 * @see DataCache#filter
 		 */
-		filterNot(f:(data: any) => boolean): any[];
+		filterNot(f: (data: any) => boolean): any[];
 
 		/**
 		 * Returns the values included in the cache as an array.
@@ -358,7 +358,7 @@ declare namespace DDS {
 		 * @param f - the predicate
 		 * @return taken cache values
 		 */
-		takeWithFilter(f:(data: any) => boolean): any[];
+		takeWithFilter(f: (data: any) => boolean): any[];
 
 		/**
 		 * Return `coffez.Some(v)` if there is an element in the cache corresponding to the
@@ -375,7 +375,7 @@ declare namespace DDS {
 		 * @param k - key
 		 * @param f - the function to apply
 		 */
-		getOrElse(k: any, f:(data: any)=> any): any;
+		getOrElse(k: any, f: (data: any)=> any): any;
 
 		/**
 		 * folds the element of the cache using `z` as the `zero` element and
@@ -384,7 +384,7 @@ declare namespace DDS {
 		 * @param z - initial value
 		 * @param {function} f - reduce function
 		 */
-		fold(z: any, f:(data: any) => any): void;
+		fold(z: any, f: (data: any) => any): void;
 
 		/**
 		 * clears the data cache

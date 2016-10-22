@@ -137,7 +137,7 @@ declare namespace Giraffe {
   class App extends View<Model> {
     routes: StringMap;
 
-    addInitializer( initializer:( options?:any, callback?:()=>void )=>void ): App;
+    addInitializer(initializer: (options?:any, callback?: () => void) => void): App;
 
     start( options?:any ): App;
   }

@@ -279,15 +279,15 @@ declare namespace AtomCore {
 
 		screenRangeForBufferRange(bufferRange: {start: TextBuffer.IPoint; end: TextBuffer.IPoint}): TextBuffer.IRange;
 		screenRangeForBufferRange(bufferRange: {start: number[]; end: TextBuffer.IPoint}): TextBuffer.IRange;
-		screenRangeForBufferRange(bufferRange: {start: {row: number; col: number;}; end: TextBuffer.IPoint}): TextBuffer.IRange;
+		screenRangeForBufferRange(bufferRange: {start: {row: number; col: number}; end: TextBuffer.IPoint}): TextBuffer.IRange;
 
 		screenRangeForBufferRange(bufferRange: {start: TextBuffer.IPoint; end: number[]}): TextBuffer.IRange;
 		screenRangeForBufferRange(bufferRange: {start: number[]; end: number[]}): TextBuffer.IRange;
-		screenRangeForBufferRange(bufferRange: {start: {row: number; col: number;}; end: number[]}): TextBuffer.IRange;
+		screenRangeForBufferRange(bufferRange: {start: {row: number; col: number}; end: number[]}): TextBuffer.IRange;
 
-		screenRangeForBufferRange(bufferRange: {start: TextBuffer.IPoint; end: {row: number; col: number;}}): TextBuffer.IRange;
-		screenRangeForBufferRange(bufferRange: {start: number[]; end: {row: number; col: number;}}): TextBuffer.IRange;
-		screenRangeForBufferRange(bufferRange: {start: {row: number; col: number;}; end: {row: number; col: number;}}): TextBuffer.IRange;
+		screenRangeForBufferRange(bufferRange: {start: TextBuffer.IPoint; end: {row: number; col: number}}): TextBuffer.IRange;
+		screenRangeForBufferRange(bufferRange: {start: number[]; end: {row: number; col: number}}): TextBuffer.IRange;
+		screenRangeForBufferRange(bufferRange: {start: {row: number; col: number}; end: {row: number; col: number}}): TextBuffer.IRange;
 
 		bufferRangeForScreenRange(screenRange: TextBuffer.IPoint[]): TextBuffer.IRange;
 
@@ -295,15 +295,15 @@ declare namespace AtomCore {
 
 		bufferRangeForScreenRange(screenRange: {start: TextBuffer.IPoint; end: TextBuffer.IPoint}): TextBuffer.IRange;
 		bufferRangeForScreenRange(screenRange: {start: number[]; end: TextBuffer.IPoint}): TextBuffer.IRange;
-		bufferRangeForScreenRange(screenRange: {start: {row: number; col: number;}; end: TextBuffer.IPoint}): TextBuffer.IRange;
+		bufferRangeForScreenRange(screenRange: {start: {row: number; col: number}; end: TextBuffer.IPoint}): TextBuffer.IRange;
 
 		bufferRangeForScreenRange(screenRange: {start: TextBuffer.IPoint; end: number[]}): TextBuffer.IRange;
 		bufferRangeForScreenRange(screenRange: {start: number[]; end: number[]}): TextBuffer.IRange;
-		bufferRangeForScreenRange(screenRange: {start: {row: number; col: number;}; end: number[]}): TextBuffer.IRange;
+		bufferRangeForScreenRange(screenRange: {start: {row: number; col: number}; end: number[]}): TextBuffer.IRange;
 
-		bufferRangeForScreenRange(screenRange: {start: TextBuffer.IPoint; end: {row: number; col: number;}}): TextBuffer.IRange;
-		bufferRangeForScreenRange(screenRange: {start: number[]; end: {row: number; col: number;}}): TextBuffer.IRange;
-		bufferRangeForScreenRange(screenRange: {start: {row: number; col: number;}; end: {row: number; col: number;}}): TextBuffer.IRange;
+		bufferRangeForScreenRange(screenRange: {start: TextBuffer.IPoint; end: {row: number; col: number}}): TextBuffer.IRange;
+		bufferRangeForScreenRange(screenRange: {start: number[]; end: {row: number; col: number}}): TextBuffer.IRange;
+		bufferRangeForScreenRange(screenRange: {start: {row: number; col: number}; end: {row: number; col: number}}): TextBuffer.IRange;
 
 		pixelRangeForScreenRange(screenRange: TextBuffer.IPoint[], clip?: boolean): TextBuffer.IRange;
 
@@ -311,19 +311,19 @@ declare namespace AtomCore {
 
 		pixelRangeForScreenRange(screenRange: {start: TextBuffer.IPoint; end: TextBuffer.IPoint}, clip?: boolean): TextBuffer.IRange;
 		pixelRangeForScreenRange(screenRange: {start: number[]; end: TextBuffer.IPoint}, clip?: boolean): TextBuffer.IRange;
-		pixelRangeForScreenRange(screenRange: {start: {row: number; col: number;}; end: TextBuffer.IPoint}, clip?: boolean): TextBuffer.IRange;
+		pixelRangeForScreenRange(screenRange: {start: {row: number; col: number}; end: TextBuffer.IPoint}, clip?: boolean): TextBuffer.IRange;
 
 		pixelRangeForScreenRange(screenRange: {start: TextBuffer.IPoint; end: number[]}, clip?: boolean): TextBuffer.IRange;
 		pixelRangeForScreenRange(screenRange: {start: number[]; end: number[]}, clip?: boolean): TextBuffer.IRange;
-		pixelRangeForScreenRange(screenRange: {start: {row: number; col: number;}; end: number[]}, clip?: boolean): TextBuffer.IRange;
+		pixelRangeForScreenRange(screenRange: {start: {row: number; col: number}; end: number[]}, clip?: boolean): TextBuffer.IRange;
 
-		pixelRangeForScreenRange(screenRange: {start: TextBuffer.IPoint; end: {row: number; col: number;}}, clip?: boolean): TextBuffer.IRange;
-		pixelRangeForScreenRange(screenRange: {start: number[]; end: {row: number; col: number;}}, clip?: boolean): TextBuffer.IRange;
-		pixelRangeForScreenRange(screenRange: {start: {row: number; col: number;}; end: {row: number; col: number;}}, clip?: boolean): TextBuffer.IRange;
+		pixelRangeForScreenRange(screenRange: {start: TextBuffer.IPoint; end: {row: number; col: number}}, clip?: boolean): TextBuffer.IRange;
+		pixelRangeForScreenRange(screenRange: {start: number[]; end: {row: number; col: number}}, clip?: boolean): TextBuffer.IRange;
+		pixelRangeForScreenRange(screenRange: {start: {row: number; col: number}; end: {row: number; col: number}}, clip?: boolean): TextBuffer.IRange;
 
 		pixelPositionForScreenPosition(screenPosition: TextBuffer.IPoint, clip?: boolean): TextBuffer.IPoint;
 		pixelPositionForScreenPosition(screenPosition: number[], clip?: boolean): TextBuffer.IPoint;
-		pixelPositionForScreenPosition(screenPosition: {row: number; col: number;}, clip?: boolean): TextBuffer.IPoint;
+		pixelPositionForScreenPosition(screenPosition: {row: number; col: number}, clip?: boolean): TextBuffer.IPoint;
 
 		screenPositionForPixelPosition(pixelPosition: any): TextBuffer.IPoint;
 
@@ -376,7 +376,7 @@ declare namespace AtomCore {
 	}
 
 	interface ICursorStatic {
-		new (arg: {editor: IEditor; marker: IDisplayBufferMarker; id: number;}): ICursor;
+		new (arg: {editor: IEditor; marker: IDisplayBufferMarker; id: number}): ICursor;
 	}
 
 	interface ScopeDescriptor {
@@ -587,7 +587,7 @@ declare namespace AtomCore {
 		getMarker(): IDisplayBufferMarker;
 		getParams(): IDecorationParams;
 		isType(type: string): boolean;
-		matchesPattern(decorationPattern: {[key: string]: IDecorationParams;}): boolean;
+		matchesPattern(decorationPattern: {[key: string]: IDecorationParams}): boolean;
 		flash(klass: string, duration?: number): void;
 		consumeNextFlash(): any;
 	}
@@ -622,7 +622,7 @@ declare namespace AtomCore {
 
 		mini: any;
 
-		serializeParams(): {id: number; softTabs: boolean; scrollTop: number; scrollLeft: number; displayBuffer: any;};
+		serializeParams(): {id: number; softTabs: boolean; scrollTop: number; scrollLeft: number; displayBuffer: any};
 		deserializeParams(params: any): any;
 		subscribeToBuffer(): void;
 		subscribeToDisplayBuffer(): void;
@@ -744,10 +744,10 @@ declare namespace AtomCore {
 		moveLineDown(): ISelection[];
 		duplicateLines(): any[][];
 		// duprecated duplicateLine(): any[][];
-		mutateSelectedText(fn: (selection: ISelection)=>any): any;
-		replaceSelectedText(options: any, fn: (selection: string)=>any): any;
+		mutateSelectedText(fn: (selection: ISelection) => any): any;
+		replaceSelectedText(options: any, fn: (selection: string) => any): any;
 		decorationsForScreenRowRange(startScreenRow: any, endScreenRow: any): {[id: number]: IDecoration[]};
-		decorateMarker(marker: IDisplayBufferMarker, decorationParams: {type: string; class: string;}): IDecoration;
+		decorateMarker(marker: IDisplayBufferMarker, decorationParams: {type: string; class: string}): IDecoration;
 		decorationForId(id: number): IDecoration;
 		getMarker(id: number): IDisplayBufferMarker;
 		getMarkers(): IDisplayBufferMarker[];
@@ -817,7 +817,7 @@ declare namespace AtomCore {
 		selectPageUp(): void;
 		selectPageDown(): void;
 		getRowsPerPage(): number;
-		moveCursors(fn: (cursor: ICursor)=>any): any;
+		moveCursors(fn: (cursor: ICursor) => any): any;
 		cursorMoved(event: any): void;
 		selectToScreenPosition(position: TextBuffer.IPoint): any;
 		selectRight(): ISelection[];
@@ -850,7 +850,7 @@ declare namespace AtomCore {
 		selectMarker(marker: any): any;
 		mergeCursors(): number[];
 		expandSelectionsForward(): any;
-		expandSelectionsBackward(fn: (selection: ISelection)=>any): ISelection[];
+		expandSelectionsBackward(fn: (selection: ISelection) => any): ISelection[];
 		finalizeSelections(): boolean[];
 		mergeIntersectingSelections(): any;
 		preserveCursorPositionOnBufferReload(): Emissary.ISubscription;
@@ -869,7 +869,7 @@ declare namespace AtomCore {
 		handleTokenization(): void;
 		handleGrammarChange(): void;
 		handleMarkerCreated(marker: any): any;
-		getSelectionMarkerAttributes(): {type: string; editorId: number; invalidate: string; };
+		getSelectionMarkerAttributes(): {type: string; editorId: number; invalidate: string};
 		getVerticalScrollMargin(): number;
 		setVerticalScrollMargin(verticalScrollMargin: number): void;
 		getHorizontalScrollMargin(): number;
@@ -956,7 +956,7 @@ declare namespace AtomCore {
   	}
 
 	interface IPane /* extends Theorist.Model */ {
-		itemForURI: (uri: string)=>IEditor;
+		itemForURI: (uri: string) => IEditor;
 		items: any[];
 		activeItem: any;
 
@@ -1035,7 +1035,7 @@ declare namespace AtomCore {
 	interface IProjectStatic {
 		pathForRepositoryUrl(repoUrl: string): string;
 
-		new (arg?: {path: any; buffers: any[];}): IProject;
+		new (arg?: {path: any; buffers: any[]}): IProject;
 	}
 
 	interface IProject /* extends Theorist.Model */ {
@@ -1105,7 +1105,7 @@ declare namespace AtomCore {
 		addOpener(opener: Function): any;
 
 		deserializeParams(params: any): any;
-		serializeParams(): {paneContainer: any;fullScreen: boolean;};
+		serializeParams(): {paneContainer: any; fullScreen: boolean};
 		eachEditor(callback: Function): void;
 		getTextEditors(): IEditor[];
 		open(uri: string, options: any): Q.Promise<View>;
@@ -1114,7 +1114,7 @@ declare namespace AtomCore {
 		openUriInPane(uri: string, pane: any, options: any): Q.Promise<View>;
 		observeTextEditors(callback: Function): Disposable;
 		reopenItemSync(): any;
-		registerOpener(opener: (urlToOpen: string)=>any): void;
+		registerOpener(opener: (urlToOpen: string) => any): void;
 		unregisterOpener(opener: Function): void;
 		getOpeners(): any;
 		getActivePane(): IPane;
@@ -1274,9 +1274,9 @@ declare namespace AtomCore {
 		loadSettings: IAtomSettings;
 
 		/* Load or create the Atom environment in the given mode */
-		loadOrCreate(mode:'editor'): IAtom;
+		loadOrCreate(mode: 'editor'): IAtom;
 		/* Load or create the Atom environment in the given mode */
-		loadOrCreate(mode:'spec'): IAtom;
+		loadOrCreate(mode: 'spec'): IAtom;
 		/* Load or create the Atom environment in the given mode */
 		loadOrCreate(mode: string): IAtom;
 
@@ -1831,7 +1831,7 @@ declare module "atom" {
 
 		buildEmptyLineHtml(showIndentGuide: any, eolInvisibles: any, htmlEolInvisibles: any, indentation: any, editor: any, mini: any): any;
 
-		replaceSelectedText(replaceFn: (str: string)=>string): any;
+		replaceSelectedText(replaceFn: (str: string) => string): any;
 
 		consolidateSelections(e: any): any;
 

@@ -212,20 +212,20 @@ declare namespace gapi.client {
             /**
          * HttpRequest supports promises.
          */
-        then(success:(response:{
+        then(success: (response:{
                 result:T;
                 body:string;
                 headers?: any[];
                 status?: number;
                 statusText?: string
-            })=>void,
-            failure:(response:{
+            }) => void,
+            failure: (response:{
                 result:T;
                 body:string;
                 headers?: any[];
                 status?: number;
                 statusText?: string
-            })=>void): void;
+            }) => void): void;
     }
     /**
      * Represents an HTTP Batch operation. Individual HTTP requests are added with the add method and the batch is executed using execute.

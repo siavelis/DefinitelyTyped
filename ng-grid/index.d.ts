@@ -623,7 +623,7 @@ declare namespace ngGrid {
             colSortFnCache:any;
             isCustomSort:boolean;
             isSorting:boolean;
-            guessSortFn(item:any):(a:any, b:any)=>number;
+            guessSortFn(item:any): (a:any, b:any) => number;
             basicSort(a:any, b:any):number;
             sortNumber(a:number, b:number):number;
             sortNumberStr(a:string, b:string):number;
@@ -632,12 +632,12 @@ declare namespace ngGrid {
             sortBool(a:boolean, b:boolean):number;
             sortData(sortInfo:ISortInfo, data:any):void;
             Sort(sortInfo:ISortInfo, data:any):void;
-            getSortFn(col:IColumn, data:any):(a:any, b:any)=>number;
+            getSortFn(col:IColumn, data:any): (a:any, b:any) => number;
         }
 
         export interface IUtilityService {
             visualLength(node:any):number;
-            forIn(obj:any, action:(value:any, property:string)=>{}):void;
+            forIn(obj:any, action: (value:any, property:string)=>{}):void;
             evalProperty(entity:any, path:string):any;
             endsWith(str:string, suffix:string):boolean;
             isNullOrUndefined(obj:any):boolean;

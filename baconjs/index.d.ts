@@ -43,7 +43,7 @@ interface JQuery {
      * @example
      * $("#my-div").asEventStream("click", (event, args) => args[0]);
      */
-    asEventStream<A>(eventName: string, f:(event: JQueryEventObject, args: any[]) => A): Bacon.EventStream<ErrorEvent, A>;
+    asEventStream<A>(eventName: string, f: (event: JQueryEventObject, args: any[]) => A): Bacon.EventStream<ErrorEvent, A>;
 
     /**
      * @callback JQuery#asEventStream2~f
@@ -61,7 +61,7 @@ interface JQuery {
      * @example
      * $("#my-div").asEventStream("click", ".more-specific-selector", (event, args) => args[0]);
      */
-    asEventStream<A>(eventName: string, selector: string, f:(event: JQueryEventObject, args: any[]) => A): Bacon.EventStream<ErrorEvent, A>;
+    asEventStream<A>(eventName: string, selector: string, f: (event: JQueryEventObject, args: any[]) => A): Bacon.EventStream<ErrorEvent, A>;
 }
 
 /** @module Bacon */
@@ -100,7 +100,7 @@ declare namespace Bacon {
      *     return [new Bacon.Next(n), new Bacon.Next(() => n), new Bacon.End()];
      * });
      */
-    function fromPromise<E, A, B>(promise: Promise<A>|JQueryXHR, abort: boolean, eventTransformer:(value: A) => (Initial<B>|Next<B>|End<B>|Error<E>)[]): EventStream<E, B>;
+    function fromPromise<E, A, B>(promise: Promise<A>|JQueryXHR, abort: boolean, eventTransformer: (value: A) => (Initial<B>|Next<B>|End<B>|Error<E>)[]): EventStream<E, B>;
 
     /**
      * @function
@@ -138,7 +138,7 @@ declare namespace Bacon {
      *     alert("Bacon!");
      * });
      */
-    function fromEvent<E, A, B>(target: EventTarget|NodeJS.EventEmitter|JQuery, eventName: string, eventTransformer:(event: A) => B): EventStream<E, B>;
+    function fromEvent<E, A, B>(target: EventTarget|NodeJS.EventEmitter|JQuery, eventName: string, eventTransformer: (event: A) => B): EventStream<E, B>;
 
     /**
      * @callback Bacon.fromCallback1~f
@@ -163,7 +163,7 @@ declare namespace Bacon {
      *     }, 1000);
      * });
      */
-    function fromCallback<E, A>(f:(callback:(...args: any[]) => void) => void): EventStream<E, A>;
+    function fromCallback<E, A>(f: (callback: (...args: any[]) => void) => void): EventStream<E, A>;
 
     /**
      * @callback Bacon.fromCallback2~f
@@ -182,7 +182,7 @@ declare namespace Bacon {
      *     callback(a + " " + b);
      * }, Bacon.constant("bacon"), "rules").log();
      */
-    function fromCallback<E, A>(f:(...args: any[]) => void, ...args: any[]): EventStream<E, A>;
+    function fromCallback<E, A>(f: (...args: any[]) => void, ...args: any[]): EventStream<E, A>;
 
     /**
      * @function
@@ -223,7 +223,7 @@ declare namespace Bacon {
      *     });
      * }
      */
-    function fromNodeCallback<E, A>(f:(callback:(error: E, data: A) => void) => void, ...args: any[]): EventStream<E, A>;
+    function fromNodeCallback<E, A>(f: (callback: (error: E, data: A) => void) => void, ...args: any[]): EventStream<E, A>;
 
     /**
      * @function
@@ -246,7 +246,7 @@ declare namespace Bacon {
      * @param {Bacon.fromPoll~f} f
      * @returns {EventStream<E, A>}
      */
-    function fromPoll<E, A>(interval: number, f:() => Next<A>|End<A>): EventStream<E, A>;
+    function fromPoll<E, A>(interval: number, f: () => Next<A>|End<A>): EventStream<E, A>;
 
     /**
      * @function Bacon.once
@@ -266,7 +266,7 @@ declare namespace Bacon {
      * @example
      * Bacon.fromArray([1, new Bacon.Error("")]);
      */
-    function fromArray<E, A>(values:(A|Error<E>)[]): EventStream<E, A>;
+    function fromArray<E, A>(values: (A|Error<E>)[]): EventStream<E, A>;
 
     /**
      * @function
@@ -318,7 +318,7 @@ declare namespace Bacon {
      *     }
      * }).log();
      */
-    function repeat<E, A>(f:(iteration: number) => boolean|Observable<E, A>): EventStream<E, A>;
+    function repeat<E, A>(f: (iteration: number) => boolean|Observable<E, A>): EventStream<E, A>;
 
     /**
      * @function Bacon.never
@@ -378,7 +378,7 @@ declare namespace Bacon {
      * });
      * stream.log();
      */
-    function fromBinder<E, A>(subscribe:(sink:(value: More|NoMore|(A|Initial<A>|Next<A>|End<A>|Error<E>)|(A|Initial<A>|Next<A>|End<A>|Error<E>)[]) => void) => (() => void)): EventStream<E, A>;
+    function fromBinder<E, A>(subscribe: (sink: (value: More|NoMore|(A|Initial<A>|Next<A>|End<A>|Error<E>)|(A|Initial<A>|Next<A>|End<A>|Error<E>)[]) => void) => (() => void)): EventStream<E, A>;
 
     /**
      * @interface
@@ -426,7 +426,7 @@ declare namespace Bacon {
          * @param {Observable#onValue~f} f
          * @returns {Observable#onValue~unsubscribe}
          */
-        onValue(f:(value: A) => void):() => void;
+        onValue(f: (value: A) => void): () => void;
 
         /**
          * @callback Observable#onError~f
@@ -443,7 +443,7 @@ declare namespace Bacon {
          * @param {Observable#onError~f} f
          * @returns {Observable#onError~unsubscribe}
          */
-        onError(f:(error: E) => void):() => void;
+        onError(f: (error: E) => void): () => void;
 
         /**
          * @callback Observable#onEnd~f
@@ -459,7 +459,7 @@ declare namespace Bacon {
          * @param {Observable#onEnd~f} f
          * @returns {Observable#onEnd~unsubscribe}
          */
-        onEnd(f:() => void):() => void;
+        onEnd(f: () => void): () => void;
 
         /**
          * @callback Observable#toPromise~promiseCtr
@@ -472,7 +472,7 @@ declare namespace Bacon {
          * @param {Observable#toPromise~promiseCtr} [promiseCtr]
          * @returns {Promise<A>}
          */
-        toPromise(promiseCtr?:(value: A) => Promise<A>): Promise<A>;
+        toPromise(promiseCtr?: (value: A) => Promise<A>): Promise<A>;
 
         /**
          * @callback Observable#firstToPromise~promiseCtr
@@ -485,7 +485,7 @@ declare namespace Bacon {
          * @param {Observable#firstToPromise~promiseCtr} [promiseCtr]
          * @returns {Promise<A>}
          */
-        firstToPromise(promiseCtr?:(value: A) => Promise<A>): Promise<A>;
+        firstToPromise(promiseCtr?: (value: A) => Promise<A>): Promise<A>;
 
         /**
          * @method
@@ -511,7 +511,7 @@ declare namespace Bacon {
          *     return text != "" ? parseInt(text) : Bacon.never();
          * });
          */
-        flatMap<B>(f:(value: A) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
+        flatMap<B>(f: (value: A) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
 
         /**
          * @callback Observable#flatMapLatest~f
@@ -524,7 +524,7 @@ declare namespace Bacon {
          * @param {Observable#flatMapLatest~f} f
          * @returns {EventStream<E, B>}
          */
-        flatMapLatest<B>(f:(value: A) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
+        flatMapLatest<B>(f: (value: A) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
 
         /**
          * @callback Observable#flatMapFirst~f
@@ -537,7 +537,7 @@ declare namespace Bacon {
          * @param {Observable#flatMapFirst~f} f
          * @returns {EventStream<E, B>}
          */
-        flatMapFirst<B>(f:(value: A) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
+        flatMapFirst<B>(f: (value: A) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
 
         /**
          * @callback Observable#flatMapError~f
@@ -550,7 +550,7 @@ declare namespace Bacon {
          * @param {Observable#flatMapError~f} f
          * @returns {EventStream<E, B>}
          */
-        flatMapError<B>(f:(error: E) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
+        flatMapError<B>(f: (error: E) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
 
         /**
          * @callback Observable#flatMapWithConcurrencyLimit~f
@@ -564,7 +564,7 @@ declare namespace Bacon {
          * @param {Observable#flatMapWithConcurrencyLimit~f} f
          * @returns {EventStream<E, B>}
          */
-        flatMapWithConcurrencyLimit<B>(limit: number, f:(value: A) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
+        flatMapWithConcurrencyLimit<B>(limit: number, f: (value: A) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
 
         /**
          * @callback Observable#flatMapConcat~f
@@ -577,7 +577,7 @@ declare namespace Bacon {
          * @param {Observable#flatMapConcat~f} f
          * @returns {EventStream<E, B>}
          */
-        flatMapConcat<B>(f:(value: A) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
+        flatMapConcat<B>(f: (value: A) => B|Initial<B>|Next<B>|End<B>|Error<E>|Observable<E, B>): EventStream<E, B>;
 
         /**
          * @callback Observable#scan~f
@@ -594,7 +594,7 @@ declare namespace Bacon {
          * @example
          * Bacon.sequentially(1, [1, 2, 3]).scan(0, (a, b) => a + b);
          */
-        scan<B>(seed: B, f:(acc: B, next: A) => B): Property<E, B>;
+        scan<B>(seed: B, f: (acc: B, next: A) => B): Property<E, B>;
 
         /**
          * @callback Observable#fold~f
@@ -609,7 +609,7 @@ declare namespace Bacon {
          * @param {Observable#fold~f} f
          * @returns {Property<E, B>}
          */
-        fold<B>(seed: B, f:(acc: B, next: A) => B): Property<E, B>;
+        fold<B>(seed: B, f: (acc: B, next: A) => B): Property<E, B>;
 
         /**
          * @callback Observable#reduce~f
@@ -624,7 +624,7 @@ declare namespace Bacon {
          * @param {Observable#reduce~f} f
          * @returns {Property<E, B>}
          */
-        reduce<B>(seed: B, f:(acc: B, next: A) => B): Property<E, B>;
+        reduce<B>(seed: B, f: (acc: B, next: A) => B): Property<E, B>;
 
         /**
          * @callback Observable#diff~f
@@ -641,7 +641,7 @@ declare namespace Bacon {
          * @example
          * Bacon.sequentially(1, [1, 2, 3]).diff(0, (a, b) => Math.abs(b - a));
          */
-        diff<B>(start: A, f:(a: A, b: A) => B): Property<E, B>;
+        diff<B>(start: A, f: (a: A, b: A) => B): Property<E, B>;
 
         /**
          * @callback Observable#zip~f
@@ -662,7 +662,7 @@ declare namespace Bacon {
          *     x.zip(y, (x, y) => x + y);
          * }
          */
-        zip<B, C>(other: EventStream<E, B>, f:(a: A, b: B) => C): EventStream<E, C>;
+        zip<B, C>(other: EventStream<E, B>, f: (a: A, b: B) => C): EventStream<E, C>;
 
         /**
          * @method
@@ -691,7 +691,7 @@ declare namespace Bacon {
          * @param {Observable#combine~f} f
          * @returns {Property<E, C>}
          */
-        combine<B, C>(property2: Property<E, B>, f:(a: A, b: B) => C): Property<E, C>;
+        combine<B, C>(property2: Property<E, B>, f: (a: A, b: B) => C): Property<E, C>;
 
         /**
          * @callback Observable#withStateMachine~f
@@ -718,7 +718,7 @@ declare namespace Bacon {
     	 *     }
     	 * });
          */
-        withStateMachine<B, C>(initState: B, f:(state: B, event: Initial<A>|Next<A>|End<A>|Error<E>) => [B, (Initial<C>|Next<C>|End<C>|Error<E>)[]]): EventStream<E, C>;
+        withStateMachine<B, C>(initState: B, f: (state: B, event: Initial<A>|Next<A>|End<A>|Error<E>) => [B, (Initial<C>|Next<C>|End<C>|Error<E>)[]]): EventStream<E, C>;
 
         /**
          * @method
@@ -770,7 +770,7 @@ declare namespace Bacon {
          * @param {EventStream#map~f} f
          * @returns {EventStream<E, B>}
          * */
-        map<B>(f:(value: A) => B): EventStream<E, B>;
+        map<B>(f: (value: A) => B): EventStream<E, B>;
 
         /**
          * @method
@@ -807,7 +807,7 @@ declare namespace Bacon {
          * @param {EventStream#mapError~f} f
          * @returns {EventStream<E, A|B>}
          */
-        mapError<B>(f:(error: E) => B): EventStream<E, A|B>;
+        mapError<B>(f: (error: E) => B): EventStream<E, A|B>;
 
         /**
          * @method
@@ -833,7 +833,7 @@ declare namespace Bacon {
          * @param {EventStream#mapEnd~f} f
          * @returns {EventStream<E, A>}
          */
-        mapEnd(f:() => A): EventStream<E, A>;
+        mapEnd(f: () => A): EventStream<E, A>;
 
         /**
          * @method
@@ -854,7 +854,7 @@ declare namespace Bacon {
          * @param {EventStream#filter~f} f
          * @returns {EventStream<E, A>}
          */
-        filter(f:(value: A) => boolean): EventStream<E, A>;
+        filter(f: (value: A) => boolean): EventStream<E, A>;
 
         /**
          * @method
@@ -891,7 +891,7 @@ declare namespace Bacon {
          * @param {EventStream#takeWhile} f
          * @returns {EventStream<E, A>}
          */
-        takeWhile(f:(value: A) => boolean): EventStream<E, A>;
+        takeWhile(f: (value: A) => boolean): EventStream<E, A>;
 
         /**
          * @method
@@ -985,7 +985,7 @@ declare namespace Bacon {
          * @param {EventStream#doAction~f} f
          * @returns {EventStream<E, A>}
          */
-        doAction(f:(value: A) => void): EventStream<E, A>;
+        doAction(f: (value: A) => void): EventStream<E, A>;
 
         /**
          * @method
@@ -1006,7 +1006,7 @@ declare namespace Bacon {
          * @param {EventStream#doError~f} f
          * @returns {EventStream<E, A>}
          */
-        doError(f:(error: E) => void): EventStream<E, A>;
+        doError(f: (error: E) => void): EventStream<E, A>;
 
         /**
          * @method
@@ -1048,7 +1048,7 @@ declare namespace Bacon {
          * @param {EventStream#endOnError} f
          * @returns {EventStream<E, A>}
          */
-        endOnError(f:(error: E) => boolean): EventStream<E, A>;
+        endOnError(f: (error: E) => boolean): EventStream<E, A>;
 
         /**
          * @callback EventStream#withHandler~f
@@ -1071,7 +1071,7 @@ declare namespace Bacon {
     	 *     }
     	 * });
          */
-        withHandler(f:(event: Initial<A>|Next<A>|End<A>|Error<E>) => any): EventStream<E, A>;
+        withHandler(f: (event: Initial<A>|Next<A>|End<A>|Error<E>) => any): EventStream<E, A>;
 
         /**
          * @method
@@ -1111,7 +1111,7 @@ declare namespace Bacon {
          * @param {EventStream#groupBy1~keyF} keyF
          * @returns {EventStream<E, EventStream<E, A>>}
          */
-        groupBy<B>(keyF:(value: A) => B): EventStream<E, EventStream<E, A>>;
+        groupBy<B>(keyF: (value: A) => B): EventStream<E, EventStream<E, A>>;
 
         /**
          * @callback keyF
@@ -1130,7 +1130,7 @@ declare namespace Bacon {
          * @param {limitF} limitF
          * @returns {EventStream<E, EventStream<E, C>>} Grouped streams.
          */
-        groupBy<B, C>(keyF:(value: A) => B, limitF:(groupedStream: EventStream<E, A>, groupStartingEvent: Initial<A>|Next<A>|End<A>|Error<E>) => EventStream<E, C>): EventStream<E, EventStream<E, C>>;
+        groupBy<B, C>(keyF: (value: A) => B, limitF: (groupedStream: EventStream<E, A>, groupStartingEvent: Initial<A>|Next<A>|End<A>|Error<E>) => EventStream<E, C>): EventStream<E, EventStream<E, C>>;
 
         /**
          * @callback EventStream#subscribe~f
@@ -1147,7 +1147,7 @@ declare namespace Bacon {
          * @param {EventStream#subscribe~f} f
          * @returns {EventStream#subscribe~unsubscribe}
          */
-        subscribe(f:(event: Event<A>) => void|NoMore):() => void;
+        subscribe(f: (event: Event<A>) => void|NoMore): () => void;
 
         /**
          * @callback EventStream#onValue~f
@@ -1164,7 +1164,7 @@ declare namespace Bacon {
          * @param {EventStream#onValue~f} f
          * @returns {EventStream#onValue~unsubscribe}
          */
-        onValue(f:(value: A) => void):() => void;
+        onValue(f: (value: A) => void): () => void;
 
         /**
          * @callback EventStream#onValues~f
@@ -1181,7 +1181,7 @@ declare namespace Bacon {
          * @param {EventStream#onValues~f} f
          * @returns {EventStream#onValues~unsubscribe}
          */
-        onValues(f:(...args: any[]) => void):() => void;
+        onValues(f: (...args: any[]) => void): () => void;
 
         /**
          * @callback EventStream#skipDuplicates~isEqual
@@ -1198,7 +1198,7 @@ declare namespace Bacon {
          * Bacon.fromArray([1, 2, 2, 1]).skipDuplicates().log();
          * // > returns [1, 2, 1] in an order
          */
-        skipDuplicates(isEqual?:(oldValue: A, newValue: A) => boolean): EventStream<E, A>;
+        skipDuplicates(isEqual?: (oldValue: A, newValue: A) => boolean): EventStream<E, A>;
 
         /**
          * @method
@@ -1243,7 +1243,7 @@ declare namespace Bacon {
          * @param {EventStream#skipWhile~f} f
          * @returns {EventStream<E, A>}
          */
-        skipWhile(f:(value: A) => boolean): EventStream<E, A>;
+        skipWhile(f: (value: A) => boolean): EventStream<E, A>;
 
         /**
          * @method
@@ -1292,7 +1292,7 @@ declare namespace Bacon {
          * let stream = Bacon.fromArray([1, 2, 3, 4, 5, 6, 7]);
          * stream.bufferWithTime(f => { setTimeout(f, 10); }); }
          */
-        bufferWithTime(f:(defer:(...args: any[]) => void) => void): EventStream<E, A[]>;
+        bufferWithTime(f: (defer: (...args: any[]) => void) => void): EventStream<E, A[]>;
 
         /**
          * @method
@@ -1345,7 +1345,7 @@ declare namespace Bacon {
          * @param {EventStream#new~subscribe} subscribe
          * @returns {EventStream<E, A>}
          */
-        new<E, A>(subscribe:(sink:(value: More|NoMore|(A|Initial<A>|Next<A>|End<A>|Error<E>)|(A|Initial<A>|Next<A>|End<A>|Error<E>)[]) => void) => (() => void)): EventStream<E, A>;
+        new<E, A>(subscribe: (sink: (value: More|NoMore|(A|Initial<A>|Next<A>|End<A>|Error<E>)|(A|Initial<A>|Next<A>|End<A>|Error<E>)[]) => void) => (() => void)): EventStream<E, A>;
     };
 
     /**
@@ -1365,7 +1365,7 @@ declare namespace Bacon {
          * @param {Property#map~f} f
          * @returns {Property<E, B>}
          * */
-        map<B>(f:(value: A) => B): Property<E, B>;
+        map<B>(f: (value: A) => B): Property<E, B>;
 
         /**
          * @method
@@ -1394,7 +1394,7 @@ declare namespace Bacon {
          * @param {Property#mapError~f} f
          * @returns {Property<E, A|B>}
          */
-        mapError<B>(f:(error: E) => B): Property<E, A|B>;
+        mapError<B>(f: (error: E) => B): Property<E, A|B>;
 
         /**
          * @method
@@ -1420,7 +1420,7 @@ declare namespace Bacon {
          * @param {Property#mapEnd~f} f
          * @returns {Property<E, A>}
          */
-        mapEnd(f:() => A): Property<E, A>;
+        mapEnd(f: () => A): Property<E, A>;
 
         /**
          * @method
@@ -1441,7 +1441,7 @@ declare namespace Bacon {
          * @param {Property#filter~f} f
          * @returns {Property<E, A>}
          */
-        filter(f:(value: A) => boolean): Property<E, A>;
+        filter(f: (value: A) => boolean): Property<E, A>;
 
         /**
          * @method
@@ -1478,7 +1478,7 @@ declare namespace Bacon {
          * @param {Property#takeWhile~f} f
          * @returns {Property<E, A>}
          */
-        takeWhile(f:(value: A) => boolean): Property<E, A>;
+        takeWhile(f: (value: A) => boolean): Property<E, A>;
 
         /**
          * @method
@@ -1572,7 +1572,7 @@ declare namespace Bacon {
          * @param {Property#doAction~f} f
          * @returns {Property<E, A>}
          */
-        doAction(f:(value: A) => void): Property<E, A>;
+        doAction(f: (value: A) => void): Property<E, A>;
 
         /**
          * @method
@@ -1593,7 +1593,7 @@ declare namespace Bacon {
          * @param {Property#doError~f} f
          * @returns {Property<E, A>}
          */
-        doError(f:(error: E) => void): Property<E, A>;
+        doError(f: (error: E) => void): Property<E, A>;
 
         /**
          * @method
@@ -1635,7 +1635,7 @@ declare namespace Bacon {
          * @param {Property#endOnError~f} f
          * @returns {Property<E, A>}
          */
-        endOnError(f:(error: E) => boolean): Property<E, A>;
+        endOnError(f: (error: E) => boolean): Property<E, A>;
 
         /**
          * @callback Property#withHandler~f
@@ -1658,7 +1658,7 @@ declare namespace Bacon {
     	 *     }
     	 * });
          */
-        withHandler(f:(event: Initial<A>|Next<A>|End<A>|Error<E>) => any): Property<E, A>;
+        withHandler(f: (event: Initial<A>|Next<A>|End<A>|Error<E>) => any): Property<E, A>;
 
         /**
          * @method
@@ -1708,7 +1708,7 @@ declare namespace Bacon {
          * @param {Property#subscribe~f} f
          * @returns {Property#subscribe~unsubscribe}
          */
-        subscribe(f:(event: Event<A>) => void):() => void;
+        subscribe(f: (event: Event<A>) => void): () => void;
 
         /**
          * @callback Property#onValue~f
@@ -1725,7 +1725,7 @@ declare namespace Bacon {
          * @param {Property#onValue~f} f
          * @returns {Property#onValue~unsubscribe}
          */
-        onValue(f:(value: A) => void):() => void;
+        onValue(f: (value: A) => void): () => void;
 
         /**
          * @callback Property#onValues~f
@@ -1742,7 +1742,7 @@ declare namespace Bacon {
          * @param {Property#onValues~f} f
          * @returns {Property#onValues~unsubscribe}
          */
-        onValues(f:(...args: any[]) => void):() => void;
+        onValues(f: (...args: any[]) => void): () => void;
 
         /**
          * @method Property#assign
@@ -1797,7 +1797,7 @@ declare namespace Bacon {
          * @param {Property#sampledBy~f} f
          * @returns {EventStream<E, C>}
          */
-        sampledBy<B, C>(streamOrProperty: Observable<E, B>, f:(propertyValue: A, samplerValue: B) => C): EventStream<E, C>;
+        sampledBy<B, C>(streamOrProperty: Observable<E, B>, f: (propertyValue: A, samplerValue: B) => C): EventStream<E, C>;
 
         /**
          * @callback Property#skipDuplicates~isEqual
@@ -1811,7 +1811,7 @@ declare namespace Bacon {
          * @param {Property#skipDuplicates~isEqual} [isEqual]
          * @returns {Property<E, A>}
          */
-        skipDuplicates(isEqual?:(oldValue: A, newValue: A) => boolean): Property<E, A>;
+        skipDuplicates(isEqual?: (oldValue: A, newValue: A) => boolean): Property<E, A>;
 
         /**
          * @method Property#changes
@@ -1851,7 +1851,7 @@ declare namespace Bacon {
      * @param {(A|Observable<E, A>)[]} streams
      * @returns {Property<E, A[]>}
      */
-    function combineAsArray<E, A>(streams:(A|Observable<E, A>)[]): Property<E, A[]>;
+    function combineAsArray<E, A>(streams: (A|Observable<E, A>)[]): Property<E, A[]>;
 
     /**
      * @function
@@ -1859,7 +1859,7 @@ declare namespace Bacon {
      * @param {...(A|Observable<E, A>)} streams
      * @returns {Property<E, A[]>}
      */
-    function combineAsArray<E, A>(...streams:(A|Observable<E, A>)[]): Property<E, A[]>;
+    function combineAsArray<E, A>(...streams: (A|Observable<E, A>)[]): Property<E, A[]>;
 
     /**
      * @callback Property#combineWith~f
@@ -1873,7 +1873,7 @@ declare namespace Bacon {
      * @param {...(A|Observable<E, A>)} streams
      * @returns {Property<E, B>}
      */
-    function combineWith<A, B>(f:(...args: A[]) => B, ...streams:(A|Observable<ErrorEvent, A>)[]): Property<ErrorEvent, B>;
+    function combineWith<A, B>(f: (...args: A[]) => B, ...streams: (A|Observable<ErrorEvent, A>)[]): Property<ErrorEvent, B>;
 
     /**
      * @function
@@ -1927,7 +1927,7 @@ declare namespace Bacon {
      * @param {Bacon.zipWith1~f} f
      * @returns {EventStream<E, B>}
      */
-    function zipWith<E, A, B>(streams: EventStream<E, A>[], f:(...args: A[]) => B): EventStream<E, B>;
+    function zipWith<E, A, B>(streams: EventStream<E, A>[], f: (...args: A[]) => B): EventStream<E, B>;
 
     /**
      * @callback Bacon.zipWith2~f
@@ -1941,7 +1941,7 @@ declare namespace Bacon {
      * @param {...EventStream<E, A>} streams
      * @returns {EventStream<E, B>}
      */
-    function zipWith<E, A, B>(f:(...args: A[]) => B, ...streams: EventStream<E, A>[]): EventStream<E, B>;
+    function zipWith<E, A, B>(f: (...args: A[]) => B, ...streams: EventStream<E, A>[]): EventStream<E, B>;
 
     /**
      * @function
@@ -1990,7 +1990,7 @@ declare namespace Bacon {
          * @param {EventStream<A>} stream
          * @returns {Bus#plug~unplug}
          */
-        plug(stream: EventStream<E, A>):() => void;
+        plug(stream: EventStream<E, A>): () => void;
     }
 
     var Bus:{
@@ -2151,7 +2151,7 @@ declare namespace Bacon {
          * @example
          * new Bacon.Next(() => "value");
          * */
-        constructor(f:() => A);
+        constructor(f: () => A);
     }
 
     /**
@@ -2184,10 +2184,10 @@ declare namespace Bacon {
      * @returns {EventStream<E, A>}
      */
     function retry<E, A>(options:{
-        source:() => EventStream<E, A>;
+        source: () => EventStream<E, A>;
         retries: number;
-        isRetryable?:(error: E) => boolean;
-        delay?:(context:{error: E; retriesDone: number}) => number;
+        isRetryable?: (error: E) => boolean;
+        delay?: (context:{error: E; retriesDone: number}) => number;
     }): EventStream<E, A>;
 
     /**
@@ -2220,10 +2220,10 @@ declare namespace Bacon {
      * @returns {Property<E, A>}
      */
     function retry<E, A>(options:{
-        source:() => Property<E, A>;
+        source: () => Property<E, A>;
         retries: number;
-        isRetryable?:(error: E) => boolean;
-        delay?:(context:{error: E; retriesDone: number}) => number;
+        isRetryable?: (error: E) => boolean;
+        delay?: (context:{error: E; retriesDone: number}) => number;
     }): Property<E, A>;
 
     /**
@@ -2332,7 +2332,7 @@ declare namespace Bacon {
      *     }
      * }
      */
-    function when<E, A1, B>(pattern1: Observable<E, A1>[], f1:(...args: A1[]) => B): EventStream<E, B>;
+    function when<E, A1, B>(pattern1: Observable<E, A1>[], f1: (...args: A1[]) => B): EventStream<E, B>;
 
     /**
      * @callback Bacon.when2~f1
@@ -2447,7 +2447,7 @@ declare namespace Bacon {
      *     }
      * }
      */
-    function when<E, A1, A2, B>(pattern1: Observable<E, A1>[], f1:(...args: A1[]) => B, pattern2: Observable<E, A2>[], f2:(...args: A2[]) => B): EventStream<E, B>;
+    function when<E, A1, A2, B>(pattern1: Observable<E, A1>[], f1: (...args: A1[]) => B, pattern2: Observable<E, A2>[], f2: (...args: A2[]) => B): EventStream<E, B>;
 
     /**
      * @callback Bacon.when3~f1
@@ -2569,7 +2569,7 @@ declare namespace Bacon {
      *     }
      * }
      */
-    function when<E, A1, A2, A3, B>(pattern1: Observable<E, A1>[], f1:(...args: A1[]) => B, pattern2: Observable<E, A2>[], f2:(...args: A2[]) => B, pattern3: Observable<E, A3>[], f3:(...args: A3[]) => B): EventStream<E, B>;
+    function when<E, A1, A2, A3, B>(pattern1: Observable<E, A1>[], f1: (...args: A1[]) => B, pattern2: Observable<E, A2>[], f2: (...args: A2[]) => B, pattern3: Observable<E, A3>[], f3: (...args: A3[]) => B): EventStream<E, B>;
 
     /**
      * @callback Bacon.when4~f1
@@ -2698,7 +2698,7 @@ declare namespace Bacon {
      *     }
      * }
      */
-    function when<E, A1, A2, A3, A4, B>(pattern1: Observable<E, A1>[], f1:(...args: A1[]) => B, pattern2: Observable<E, A2>[], f2:(...args: A2[]) => B, pattern3: Observable<E, A3>[], f3:(...args: A3[]) => B, pattern4: Observable<E, A4>[], f4:(...args: A4[]) => B): EventStream<E, B>;
+    function when<E, A1, A2, A3, A4, B>(pattern1: Observable<E, A1>[], f1: (...args: A1[]) => B, pattern2: Observable<E, A2>[], f2: (...args: A2[]) => B, pattern3: Observable<E, A3>[], f3: (...args: A3[]) => B, pattern4: Observable<E, A4>[], f4: (...args: A4[]) => B): EventStream<E, B>;
 
     /**
      * @callback Bacon.when5~f1
@@ -2834,7 +2834,7 @@ declare namespace Bacon {
      *     }
      * }
      */
-    function when<E, A1, A2, A3, A4, A5, B>(pattern1: Observable<E, A1>[], f1:(...args: A1[]) => B, pattern2: Observable<E, A2>[], f2:(...args: A2[]) => B, pattern3: Observable<E, A3>[], f3:(...args: A3[]) => B, pattern4: Observable<E, A4>[], f4:(...args: A4[]) => B, pattern5: Observable<E, A5>[], f5:(...args: A5[]) => B): EventStream<E, B>;
+    function when<E, A1, A2, A3, A4, A5, B>(pattern1: Observable<E, A1>[], f1: (...args: A1[]) => B, pattern2: Observable<E, A2>[], f2: (...args: A2[]) => B, pattern3: Observable<E, A3>[], f3: (...args: A3[]) => B, pattern4: Observable<E, A4>[], f4: (...args: A4[]) => B, pattern5: Observable<E, A5>[], f5: (...args: A5[]) => B): EventStream<E, B>;
 
     /**
      * @callback Bacon.update1~f1
@@ -2876,7 +2876,7 @@ declare namespace Bacon {
      *     // In the example, the `score` property is updated when either `hitUfo` or `hitMotherShip` occur. The `scoreMultiplier` Property is sampled to take multiplier into account when `hitUfo` occurs.
      * }
      */
-    function update<E, A1, B>(initial: B, pattern1: Observable<E, A1>[], f1:(initial: B, ...args: A1[]) => B): Property<E, B>;
+    function update<E, A1, B>(initial: B, pattern1: Observable<E, A1>[], f1: (initial: B, ...args: A1[]) => B): Property<E, B>;
 
     /**
      * @callback Bacon.update2~f1
@@ -2926,7 +2926,7 @@ declare namespace Bacon {
      *     // In the example, the `score` property is updated when either `hitUfo` or `hitMotherShip` occur. The `scoreMultiplier` Property is sampled to take multiplier into account when `hitUfo` occurs.
      * }
      */
-    function update<E, A1, A2, B>(initial: B, pattern1: Observable<E, A1>[], f1:(initial: B, ...args: A1[]) => B, pattern2: Observable<E, A2>[], f2:(initial: B, ...args: A2[]) => B): Property<E, B>;
+    function update<E, A1, A2, B>(initial: B, pattern1: Observable<E, A1>[], f1: (initial: B, ...args: A1[]) => B, pattern2: Observable<E, A2>[], f2: (initial: B, ...args: A2[]) => B): Property<E, B>;
 
     /**
      * @callback Bacon.update3~f1
@@ -2984,7 +2984,7 @@ declare namespace Bacon {
      *     // In the example, the `score` property is updated when either `hitUfo` or `hitMotherShip` occur. The `scoreMultiplier` Property is sampled to take multiplier into account when `hitUfo` occurs.
      * }
      */
-    function update<E, A1, A2, A3, B>(initial: B, pattern1: Observable<E, A1>[], f1:(initial: B, ...args: A1[]) => B, pattern2: Observable<E, A2>[], f2:(initial: B, ...args: A2[]) => B, pattern3: Observable<E, A3>[], f3:(initial: B, ...args: A3[]) => B): Property<E, B>;
+    function update<E, A1, A2, A3, B>(initial: B, pattern1: Observable<E, A1>[], f1: (initial: B, ...args: A1[]) => B, pattern2: Observable<E, A2>[], f2: (initial: B, ...args: A2[]) => B, pattern3: Observable<E, A3>[], f3: (initial: B, ...args: A3[]) => B): Property<E, B>;
 
     /**
      * @callback Bacon.update4~f1
@@ -3050,7 +3050,7 @@ declare namespace Bacon {
      *     // In the example, the `score` property is updated when either `hitUfo` or `hitMotherShip` occur. The `scoreMultiplier` Property is sampled to take multiplier into account when `hitUfo` occurs.
      * }
      */
-    function update<E, A1, A2, A3, A4, B>(initial: B, pattern1: Observable<E, A1>[], f1:(initial: B, ...args: A1[]) => B, pattern2: Observable<E, A2>[], f2:(initial: B, ...args: A2[]) => B, pattern3: Observable<E, A3>[], f3:(initial: B, ...args: A3[]) => B, pattern4: Observable<E, A4>[], f4:(initial: B, ...args: A4[]) => B): Property<E, B>;
+    function update<E, A1, A2, A3, A4, B>(initial: B, pattern1: Observable<E, A1>[], f1: (initial: B, ...args: A1[]) => B, pattern2: Observable<E, A2>[], f2: (initial: B, ...args: A2[]) => B, pattern3: Observable<E, A3>[], f3: (initial: B, ...args: A3[]) => B, pattern4: Observable<E, A4>[], f4: (initial: B, ...args: A4[]) => B): Property<E, B>;
 
     /**
      * @callback Bacon.update5~f1
@@ -3124,7 +3124,7 @@ declare namespace Bacon {
      *     // In the example, the `score` property is updated when either `hitUfo` or `hitMotherShip` occur. The `scoreMultiplier` Property is sampled to take multiplier into account when `hitUfo` occurs.
      * }
      */
-    function update<E, A1, A2, A3, A4, A5, B>(initial: B, pattern1: Observable<E, A1>[], f1:(initial: B, ...args: A1[]) => B, pattern2: Observable<E, A2>[], f2:(initial: B, ...args: A2[]) => B, pattern3: Observable<E, A3>[], f3:(initial: B, ...args: A3[]) => B, pattern4: Observable<E, A4>[], f4:(initial: B, ...args: A4[]) => B, pattern5: Observable<E, A5>[], f5:(initial: B, ...args: A5[]) => B): Property<E, B>;
+    function update<E, A1, A2, A3, A4, A5, B>(initial: B, pattern1: Observable<E, A1>[], f1: (initial: B, ...args: A1[]) => B, pattern2: Observable<E, A2>[], f2: (initial: B, ...args: A2[]) => B, pattern3: Observable<E, A3>[], f3: (initial: B, ...args: A3[]) => B, pattern4: Observable<E, A4>[], f4: (initial: B, ...args: A4[]) => B, pattern5: Observable<E, A5>[], f5: (initial: B, ...args: A5[]) => B): Property<E, B>;
 }
 
 declare module "baconjs" {

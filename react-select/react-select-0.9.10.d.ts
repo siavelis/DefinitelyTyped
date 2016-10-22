@@ -31,8 +31,8 @@ declare module "react-select" {
         clearValueText? : string;
         delimiter? : string;
         disabled? : boolean;
-        filterOption? : (option : Option,filterString : string)=>Option;
-        filterOptions? : (options: Array<Option>,filterString : string,values : Array<Object>)=>Array<Option>;
+        filterOption? : (option : Option,filterString : string) => Option;
+        filterOptions? : (options: Array<Option>,filterString : string,values : Array<Object>) => Array<Option>;
         ignoreCase? : boolean; // default true	whether to perform case-insensitive filtering
         inputProps? : Object;
         isLoading? : boolean;
@@ -41,14 +41,14 @@ declare module "react-select" {
         matchProp? : string;
         multi? : boolean;
         name? : string;
-        newOptionCreator? : ()=>Option;
+        newOptionCreator? : () => Option;
         noResultsText? : string;
-        onBlur? : (event : Event)=>void;
-        onChange? : (newValue : string)=>void;
-        onFocus? : (event : Event)=>void;
-        onInputChange? : (inputValue : string)=>void;
-        onOptionLabelClick? : (value : string, event : Event)=>void;
-        optionRenderer? : ()=>void;
+        onBlur? : (event : Event) => void;
+        onChange? : (newValue : string) => void;
+        onFocus? : (event : Event) => void;
+        onInputChange? : (inputValue : string) => void;
+        onOptionLabelClick? : (value : string, event : Event) => void;
+        optionRenderer? : () => void;
         options? : Array<Option>;
         placeholder? : string;
         searchable? : boolean;
@@ -56,12 +56,12 @@ declare module "react-select" {
         searchPromptText? : string;
         value? : Option;
         valueKey? : string;
-        valueRenderer? : ()=>void;
+        valueRenderer? : () => void;
     }
 
     interface ReactAsyncSelectProps extends React.Props<ReactSelectClass>{
         cache? : any;
-        loadOptions? : ()=>void;
+        loadOptions? : () => void;
         ignoreAccents? : boolean;
         isLoading? : boolean;
         loadingPlaceholder? : string;
