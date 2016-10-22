@@ -8,8 +8,8 @@
 declare module "istanbul-middleware" {
     import * as express from "express";
 
-    type Matcher = (file: string)=> boolean;
-    type PostLoadHookFn = (file: any)=> {};
+    type Matcher = (file: string) => boolean;
+    type PostLoadHookFn = (file: any) => {};
     type PostLoadHook = (matcherfn: Matcher, transformer: any, verbose: boolean) => PostLoadHookFn;
 
     export function hookLoader(matcherOrRoot: Matcher|string, opts?: {
@@ -22,8 +22,8 @@ declare module "istanbul-middleware" {
         resetOnGet?: boolean
     }): any;
 
-    type ClientMatcher = (req: express.Request)=> boolean;
-    type PathTransformer = (req: express.Request)=> string;
+    type ClientMatcher = (req: express.Request) => boolean;
+    type PathTransformer = (req: express.Request) => string;
 
     export function createClientHandler(root: string,opts?: {
         matcher?: ClientMatcher,

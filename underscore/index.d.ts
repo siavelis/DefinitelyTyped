@@ -7,7 +7,7 @@ declare var _: _.UnderscoreStatic;
 export = _;
 export as namespace _;
 
-declare module _ {
+declare namespace _ {
     /**
     * underscore.js _.throttle options.
     **/

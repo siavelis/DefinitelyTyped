@@ -71,7 +71,7 @@ interface ArgsCheck {
 
 // cordova/urlutil module
 interface UrlUtil {
-    makeAbsolute(url: string): string
+    makeAbsolute(url: string): string;
 }
 
 /** Apache Cordova instance */

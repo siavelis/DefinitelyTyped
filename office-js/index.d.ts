@@ -112,7 +112,7 @@ declare namespace Office {
     }
 }
 
-declare module OfficeExtension {
+declare namespace OfficeExtension {
     /** An abstract proxy object that represents an object in an Office document. You create proxy objects from the context (or from other proxy objects), add commands to a queue to act on the object, and then synchronize the proxy object state with the document by calling "context.sync()". */
     class ClientObject {
         /** The request context associated with the object */
@@ -121,7 +121,7 @@ declare module OfficeExtension {
         isNull: boolean;
     }
 }
-declare module OfficeExtension {
+declare namespace OfficeExtension {
     interface LoadOption {
         select?: string | string[];
         expand?: string | string[];
@@ -141,14 +141,14 @@ declare module OfficeExtension {
         sync<T>(passThroughValue?: T): IPromise<T>;
     }
 }
-declare module OfficeExtension {
+declare namespace OfficeExtension {
     /** Contains the result for methods that return primitive types. The object's value property is retrieved from the document after "context.sync()" is invoked. */
     class ClientResult<T> {
         /** The value of the result that is retrieved from the document after "context.sync()" is invoked. */
         value: T;
     }
 }
-declare module OfficeExtension {
+declare namespace OfficeExtension {
     /** The error object returned by "context.sync()", if a promise is rejected due to an error while processing the request. */
     class Error {
         /** Error name: "OfficeExtension.Error".*/
@@ -168,7 +168,7 @@ declare module OfficeExtension {
         };
     }
 }
-declare module OfficeExtension {
+declare namespace OfficeExtension {
     class ErrorCodes {
         static accessDenied: string;
         static generalException: string;
@@ -182,7 +182,7 @@ declare module OfficeExtension {
         static cannotRegisterEvent: string;
     }
 }
-declare module OfficeExtension {
+declare namespace OfficeExtension {
     /** An IPromise object that represents a deferred interaction with the host Office application. */
     interface IPromise<R> {
         /**
@@ -356,7 +356,7 @@ declare module OfficeExtension {
     }
 }
 
-declare module OfficeExtension {
+declare namespace OfficeExtension {
     /** Collection of tracked objects, contained within a request context. See "context.trackedObjects" for more information. */
     class TrackedObjects {
         /** Track a new object for automatic adjustment based on surrounding changes in the document. Only some object types require this. If you are using an object across ".sync" calls and outside the sequential execution of a ".run" batch, and get an "InvalidObjectPath" error when setting a property or invoking a method on the object, you needed to have added the object to the tracked object collection when the object was first created. */
@@ -370,7 +370,7 @@ declare module OfficeExtension {
     }
 }
 
-declare module OfficeExtension {
+declare namespace OfficeExtension {
     export class EventHandlers<T> {
         constructor(context: ClientRequestContext, parentObject: ClientObject, name: string, eventInfo: EventInfo<T>);
         add(handler: (args: T) => IPromise<any>): EventHandlerResult<T>;
@@ -1660,7 +1660,7 @@ declare namespace Office {
         getWSSUrlAsync(options?: any, callback?: (result: AsyncResult) => void): void;
     }
 }
-declare module Excel {
+declare namespace Excel {
     interface ThreeArrowsSet {
         [index: number]: Icon;
         redDownArrow: Icon;
@@ -9493,7 +9493,7 @@ declare module Excel {
         var unsupportedOperation: string;
     }
 }
-declare module Excel {
+declare namespace Excel {
     /**
      * The RequestContext object facilitates requests to the Excel application. Since the Office add-in and the Excel application run in two different processes, the request context is required to get access to the Excel object model from the add-in.
      */

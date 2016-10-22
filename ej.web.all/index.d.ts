@@ -3,6 +3,8 @@
 // Definitions by: Syncfusion <https://github.com/syncfusion/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+// tslint:disable
+
 /// <reference types="jquery"/>
 
 /*!
@@ -14,7 +16,7 @@
 *  licensing@syncfusion.com. Any infringement will be prosecuted under
 *  applicable laws.
 */
-declare module ej {
+declare namespace ej {
 
 	var dataUtil: dataUtil;
     function isMobile(): boolean;
@@ -36530,7 +36532,7 @@ enum LinkTarget{
 }
 
 }
-declare module ej.datavisualization {
+declare namespace ej.datavisualization {
 
 class SymbolPalette extends ej.Widget {
 	static fn: SymbolPalette;

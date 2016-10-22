@@ -637,7 +637,7 @@ declare namespace ngGrid {
 
         export interface IUtilityService {
             visualLength(node:any):number;
-            forIn(obj:any, action: (value:any, property:string)=>{}):void;
+            forIn(obj:any, action: (value:any, property:string) =>{}):void;
             evalProperty(entity:any, path:string):any;
             endsWith(str:string, suffix:string):boolean;
             isNullOrUndefined(obj:any):boolean;

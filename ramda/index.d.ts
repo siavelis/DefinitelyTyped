@@ -251,7 +251,7 @@ declare namespace R {
          * as a converging function for R.converge: the left branch can produce a function while the right branch
          * produces a value to be passed to that function as an argument.
          */
-        call(fn: (...args: any[])=> (...args: any[]) => any, ...args: any[]): any;
+        call(fn: (...args: any[]) => (...args: any[]) => any, ...args: any[]): any;
 
         /**
          * `chain` maps a function over a list and concatenates the results.

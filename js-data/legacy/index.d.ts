@@ -82,7 +82,7 @@ declare namespace JSData {
         defaultFilter?: (collection:Array<any>, resourceName:string, params:DSFilterArg, options:DSConfiguration) => Array<any>;
         eagerEject?: boolean;
         endpoint?: string;
-        error?: boolean | ((message?:any, ...optionalParams:any[])=> void);
+        error?: boolean | ((message?:any, ...optionalParams:any[]) => void);
         fallbackAdapters?: Array<string>;
         findAllFallbackAdapters?: Array<string>;
         findAllStrategy?: string;
@@ -96,7 +96,7 @@ declare namespace JSData {
         ignoredChanges?: Array<RegExp | string>;
         keepChangeHistory?: boolean;
         loadFromServer?: boolean;
-        log?: boolean | ((message?: any, ...optionalParams: any[])=> void);
+        log?: boolean | ((message?: any, ...optionalParams: any[]) => void);
         maxAge?: number;
         notify?: boolean;
         reapAction?: string;

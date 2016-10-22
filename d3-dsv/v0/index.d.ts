@@ -14,7 +14,7 @@ declare var loader: (
 export = loader;
 export as namespace d3_dsv;
 
-declare module _d3dsv {
+declare namespace _d3dsv {
 	/** A parser and formatter for DSV (CSV and TSV) files.
 Extracted from D3. */
 	export class D3Dsv {

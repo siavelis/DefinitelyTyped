@@ -5,7 +5,7 @@
 
 /// <reference types="leaflet" />
 
-declare module L {
+declare namespace L {
     module AwesomeMarkers {
         var version: string;
 

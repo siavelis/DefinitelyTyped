@@ -13,5 +13,5 @@ interface Navigator {
         hide(): void;
         /** Displays the splash screen. */
         show(): void;
-    }
+    };
 }

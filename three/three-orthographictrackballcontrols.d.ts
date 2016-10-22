@@ -5,7 +5,7 @@
 
 
 
-declare module THREE {
+declare namespace THREE {
 	class OrthographicTrackballControls extends EventDispatcher {
 		constructor(object: Camera, domElement?: HTMLElement);
 

@@ -3,7 +3,7 @@
 // Definitions by: Casper Skydt <https://github.com/CasperSkydt>, Blake Smith <https://github.com/bfsmith>, Dave Dunkin <https://github.com/ddunkin>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module Elasticsearch {
+declare namespace Elasticsearch {
     export class Client {
         constructor(params: ConfigOptions);
         indices: Indices;

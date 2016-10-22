@@ -83,5 +83,5 @@ declare namespace JsDiff {
 
     function convertChangesToXML(changes: IDiffResult[]): string;
 
-    function convertChangesToDMP(changes: IDiffResult[]): {0: number; 1: string;}[];
+    function convertChangesToDMP(changes: IDiffResult[]): {0: number; 1: string}[];
 }

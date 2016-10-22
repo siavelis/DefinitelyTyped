@@ -15,8 +15,8 @@ declare module 'js-data' {
         queryTransform?: (resourceName: string, params: DSFilterParams) => any;
         httpConfig?: any;
         forceTrailingSlash?: boolean;
-        log?: boolean | ((message?: any, ...optionalParams: any[])=> void);
-        error?: boolean | ((message?: any, ...optionalParams: any[])=> void);
+        log?: boolean | ((message?: any, ...optionalParams: any[]) => void);
+        error?: boolean | ((message?: any, ...optionalParams: any[]) => void);
         basePath?: string;
         verbsUseBasePath?: string;
     }

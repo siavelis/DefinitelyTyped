@@ -9,7 +9,7 @@ declare namespace cucumber {
 
 	export interface CallbackStepDefinition{
 		pending: () => PromiseLike<any>;
-		(errror?:any, pending?: string):void;
+		(errror?: any, pending?: string): void;
 	}
 
 	export interface TableDefinition{
@@ -36,24 +36,24 @@ declare namespace cucumber {
 		When(pattern: RegExp | string,  code: StepDefinitionCode): void;
 		Then(pattern: RegExp | string,  options: StepDefinitionOptions, code: StepDefinitionCode): void;
 		Then(pattern: RegExp | string,  code: StepDefinitionCode): void;
-		setDefaultTimeout(time:number): void;
+		setDefaultTimeout(time: number): void;
 	}
 
 	interface HookScenario{
-		getKeyword():string;
-		getName():string;
-		getDescription():string;
-		getUri():string;
-		getLine():number;
-		getTags():string[];
-		getException():Error;
-		getAttachments():any[];
-		attach(data:any, mimeType?:string, callback?: (err?:any) => void):void;
-		isSuccessful():boolean;
-		isFailed():boolean;
-		isPending():boolean;
-		isUndefined():boolean;
-		isSkipped():boolean;
+		getKeyword(): string;
+		getName(): string;
+		getDescription(): string;
+		getUri(): string;
+		getLine(): number;
+		getTags(): string[];
+		getException(): Error;
+		getAttachments(): any[];
+		attach(data: any, mimeType?: string, callback?: (err?: any) => void): void;
+		isSuccessful(): boolean;
+		isFailed(): boolean;
+		isPending(): boolean;
+		isUndefined(): boolean;
+		isSkipped(): boolean;
 	}
 
 	interface HookCode {
@@ -61,14 +61,14 @@ declare namespace cucumber {
 	}
 
 	interface AroundCode{
-		(scenario: HookScenario, runScenario?: (error:string, callback?:Function) => void): void;
+		(scenario: HookScenario, runScenario?: (error: string, callback?: Function) => void): void;
 	}
 
 	export interface Hooks {
 		Before(code: HookCode): void;
 		After(code: HookCode): void;
-		Around(code: AroundCode):void;
-		setDefaultTimeout(time:number): void;
-		registerHandler(handlerOption:string, code: (event:any, callback:CallbackStepDefinition) =>void): void;
+		Around(code: AroundCode): void;
+		setDefaultTimeout(time: number): void;
+		registerHandler(handlerOption: string, code: (event: any, callback: CallbackStepDefinition) => void): void;
 	}
 }

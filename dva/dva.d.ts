@@ -29,16 +29,16 @@ declare module 'dva' {
  */
 declare module 'dva/router' {
     interface RouterProps {
-        history?: Object
+        history?: Object;
     }
     export class Router extends React.Component<RouterProps, {}> {
-        render(): JSX.Element
+        render(): JSX.Element;
     }
 
 
     interface RouteProps {
-        path?: string,
-        component?: React.ReactNode
+        path?: string;
+        component?: React.ReactNode;
     }
     export class Route extends React.Component<RouteProps, {}> {
         render(): JSX.Element

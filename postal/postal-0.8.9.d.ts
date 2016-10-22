@@ -11,7 +11,7 @@ interface IConfiguration{
 
 interface ISubscriptionDefinition{
 	unsubscribe(): void;
-	subscribe(callback: (data: any, envelope: IEnvelope)=> void): void;
+	subscribe(callback: (data: any, envelope: IEnvelope) => void): void;
 	defer(): ISubscriptionDefinition;
 	disposeAfter(maxCalls: number): ISubscriptionDefinition;
 	distinctUntilChanged(): ISubscriptionDefinition;
@@ -38,7 +38,7 @@ interface IEnvelope{
 
 interface IChannelDefinition {
 	subscribe(topic: string): ISubscriptionDefinition;
-	subscribe(topic: string, callback: (data: any, envelope: IEnvelope)=> void): ISubscriptionDefinition;
+	subscribe(topic: string, callback: (data: any, envelope: IEnvelope) => void): ISubscriptionDefinition;
 
 	publish(topic: string, data?: any): void;
 	publish(envelope: IEnvelope): void;

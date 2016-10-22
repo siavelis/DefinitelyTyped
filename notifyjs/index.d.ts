@@ -17,7 +17,7 @@ declare var Notify: {
      * @param onPermissionGrantedCallback A callback for permission is granted.
      * @param onPermissionDeniedCallback  A callback for permission is denied.
      */
-    requestPermission(onPermissionGrantedCallback?: ()=> any, onPermissionDeniedCallback?: ()=> any): void;
+    requestPermission(onPermissionGrantedCallback?: () => any, onPermissionDeniedCallback?: () => any): void;
 
     /**
      * return true if the browser supports HTML5 Notification

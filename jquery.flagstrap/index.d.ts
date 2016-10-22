@@ -5,7 +5,7 @@
 
 ///<reference types="jquery" />
 
-declare module jQueryFlagStrap {
+declare namespace jQueryFlagStrap {
     interface FlagStrapOptions {
         /**
          * Default: uniquely generated

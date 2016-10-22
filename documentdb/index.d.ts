@@ -99,7 +99,7 @@ interface QueryIterator<TResultRow> {
     hasMoreResults(): boolean;
     nextItem(callback: (error: QueryError, item: TResultRow, responseHeaders?: any) => void): void;
     reset(): void;
-    toArray(callback: (error: QueryError, result: TResultRow[], responseHeaders?: any) => void): void
+    toArray(callback: (error: QueryError, result: TResultRow[], responseHeaders?: any) => void): void;
 }
 
 /** Reprents an object with a unique identifier. */

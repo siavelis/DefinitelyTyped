@@ -556,7 +556,7 @@ interface ChocolateChipStatic {
       hasKey: Function;
       _delete: Function;
     }
-  }
+  };
 
 }
 
@@ -1408,7 +1408,7 @@ interface Request {
 }
 
 interface URLSearchParams {
-  ():URLSearchParams;
+  (): URLSearchParams;
 }
 
 /**
@@ -1470,7 +1470,7 @@ interface ChocolateChipStatic {
      * This value determines whether the callbacks and script associate with JSONP persist or are purged after the request returns. By default this is set to true, meaning that they will be purged.
      */
     clear?: boolean;
-  }): any
+  }): any;
 }
 
 interface Window {

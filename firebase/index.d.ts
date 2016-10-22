@@ -272,7 +272,7 @@ interface Firebase extends FirebaseQuery {
 	/**
 	 * Atomically modifies the data at this location.
 	 */
-	transaction(updateFunction: (currentData: any)=> any, onComplete?: (error: any, committed: boolean, snapshot: FirebaseDataSnapshot) => void, applyLocally?: boolean): void;
+	transaction(updateFunction: (currentData: any) => any, onComplete?: (error: any, committed: boolean, snapshot: FirebaseDataSnapshot) => void, applyLocally?: boolean): void;
 	/**
 	 * Creates a new user account using an email / password combination.
 	 */

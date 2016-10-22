@@ -123,7 +123,7 @@ declare var CaptureError: {
     CAPTURE_INVALID_ARGUMENT: number;
     CAPTURE_NO_MEDIA_FILES: number;
     CAPTURE_NOT_SUPPORTED: number;
-}
+};
 
 /** Encapsulates audio capture configuration options. */
 interface AudioOptions {

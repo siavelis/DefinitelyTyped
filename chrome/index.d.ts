@@ -1272,7 +1272,7 @@ declare namespace chrome.cookies {
  * Permissions:  "debugger"
  */
 // TODO: Uncomment when Microsoft/TypeScript#8312 is merged in
-// declare module chrome.debugger {
+// declare namespace chrome.debugger {
 // 	/** Debuggee identifier. Either tabId or extensionId must be specified */
 //     interface Debuggee {
 // 		/** Optional. The id of the tab which you intend to debug.  */

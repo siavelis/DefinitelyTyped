@@ -53,7 +53,7 @@ declare var Database: {
         version: string,
         displayname: string,
         size: number,
-        creationCallback: (database: Database)=> void): Database;
+        creationCallback: (database: Database) => void): Database;
 };
 
 interface SqlTransaction {

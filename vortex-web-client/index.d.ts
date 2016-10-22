@@ -375,7 +375,7 @@ declare namespace DDS {
 		 * @param k - key
 		 * @param f - the function to apply
 		 */
-		getOrElse(k: any, f: (data: any)=> any): any;
+		getOrElse(k: any, f: (data: any) => any): any;
 
 		/**
 		 * folds the element of the cache using `z` as the `zero` element and

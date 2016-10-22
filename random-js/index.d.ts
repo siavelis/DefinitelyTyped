@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 
-declare module TemporaryName {
+declare namespace TemporaryName {
 
 	export interface Engine {
 

@@ -5,7 +5,7 @@
 
 /// <reference types="rx" />
 
-declare module Rx.DOM {
+declare namespace Rx.DOM {
     export interface AjaxSettings {
         async?: boolean;
         body?: string;

@@ -13,7 +13,7 @@
 
 import * as Koa from "koa";
 
-declare module Layer {
+declare namespace Layer {
 
     export interface ILayerOptions {
         name: string;
@@ -23,7 +23,7 @@ declare module Layer {
 
 }
 
-declare module Router {
+declare namespace Router {
 
     export interface IRouterOptions {
         /**

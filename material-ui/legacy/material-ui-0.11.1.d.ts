@@ -1090,7 +1090,7 @@ declare namespace __MaterialUI {
             onCellHoverExit?: (row: number, column: number) => void;
             onRowHover?: (row: number) => void;
             onRowHoverExit?: (row: number) => void;
-            onRowSelection?: (selectedRows: number[])=> void;
+            onRowSelection?: (selectedRows: number[]) => void;
             selectable?: boolean;
         }
         export class Table extends React.Component<TableProps, {}> {
@@ -1106,7 +1106,7 @@ declare namespace __MaterialUI {
             onCellHoverExit?: (row: number, column: number) => void;
             onRowHover?: (row: number) => void;
             onRowHoverExit?: (row: number) => void;
-            onRowSelection?: (selectedRows: number[])=> void;
+            onRowSelection?: (selectedRows: number[]) => void;
             preScanRows?: boolean;
             selectable?: boolean;
             showRowHover?: boolean;

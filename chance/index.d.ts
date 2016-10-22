@@ -6,9 +6,9 @@
 declare namespace Chance {
 
     interface ChanceStatic {
-        (): Chance
-        (seed: number): Chance
-        (generator: () => any): Chance
+        (): Chance;
+        (seed: number): Chance;
+        (generator: () => any): Chance;
 
         new(): Chance;
         new(seed: number): Chance;

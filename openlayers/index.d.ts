@@ -9,7 +9,7 @@ declare type GlobalObject = Object;
 /**
  * @namespace ol
  */
-declare module ol {
+declare namespace ol {
     /**
      * The animation static methods are designed to be used with the
      * {@link ol.Map#beforeRender} method.  For example:
@@ -11675,7 +11675,7 @@ declare module ol {
 /**
  * @namespace olx
  */
-declare module olx {
+declare namespace olx {
 
     /**
      * @namespace olx.animation

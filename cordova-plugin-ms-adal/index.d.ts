@@ -8,26 +8,26 @@ declare namespace Microsoft {
     namespace ADAL {
 
         interface UserInfo {
-            displayableId: string,
-            userId: string,
-            familyName: string,
-            givenName: string,
-            identityProvider: string,
-            passwordChangeUrl: string,
-            passwordExpiresOn: Date,
-            uniqueId: string,
+            displayableId: string;
+            userId: string;
+            familyName: string;
+            givenName: string;
+            identityProvider: string;
+            passwordChangeUrl: string;
+            passwordExpiresOn: Date;
+            uniqueId: string;
         }
 
         interface TokenCacheItem {
-            accessToken: string,
-            authority: string,
-            clientId: string,
-            displayableId: string,
-            expiresOn: Date,
-            isMultipleResourceRefreshToken: boolean,
-            resource: string,
-            tenantId: string,
-            userInfo: UserInfo
+            accessToken: string;
+            authority: string;
+            clientId: string;
+            displayableId: string;
+            expiresOn: Date;
+            isMultipleResourceRefreshToken: boolean;
+            resource: string;
+            tenantId: string;
+            userInfo: UserInfo;
         }
 
         interface Promise {
@@ -39,7 +39,7 @@ declare namespace Microsoft {
         }
 
         class TokenCache {
-            contextAuthority: string
+            contextAuthority: string;
 
             /**
             * Clears the cache by deleting all the items.

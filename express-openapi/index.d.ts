@@ -38,7 +38,7 @@ export interface InitializedApi {
     apiDoc: OpenApi.ApiDefinition;
 }
 
-export declare module OpenApi {
+export declare namespace OpenApi {
     export interface ApiDefinition {
         swagger: string
         info: InfoObject

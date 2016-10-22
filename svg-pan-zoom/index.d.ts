@@ -53,9 +53,9 @@ declare namespace SvgPanZoom {
         isPanEnabled(): boolean;
 
 
-        setBeforePan(fn: (point: IPoint)=> void): void;
+        setBeforePan(fn: (point: IPoint) => void): void;
 
-        setOnPan(fn: (x: number, y: number)=> void): void;
+        setOnPan(fn: (x: number, y: number) => void): void;
 
         enableZoom(): void;
 

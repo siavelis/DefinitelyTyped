@@ -31,7 +31,7 @@ declare namespace JSData {
         defaultValues?: Object;
         eagerEject?: boolean;
         endpoint?: string;
-        error?: boolean | ((message?: any, ...optionalParams: any[])=> void);
+        error?: boolean | ((message?: any, ...optionalParams: any[]) => void);
         fallbackAdapters?: Array<string>;
         findAllFallbackAdapters?: Array<string>;
         findAllStrategy?: string;
@@ -44,7 +44,7 @@ declare namespace JSData {
         instanceEvents?: boolean;
         keepChangeHistory?: boolean;
         linkRelations?: boolean;
-        log?: boolean | ((message?: any, ...optionalParams: any[])=> void);
+        log?: boolean | ((message?: any, ...optionalParams: any[]) => void);
         maxAge?: number;
         notify?: boolean;
         omit?: Array<string|RegExp>;

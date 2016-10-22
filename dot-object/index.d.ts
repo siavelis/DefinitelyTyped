@@ -45,7 +45,7 @@ declare namespace DotObject {
          * @param {Object} obj source object
          * @param {Object} tgt target object
          */
-        dot(obj: any, tgt: any): void
+        dot(obj: any, tgt: any): void;
         /**
          *
          * Remove value from an object using dot notation.

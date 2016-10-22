@@ -577,4 +577,4 @@ declare namespace freedom.Social {
         // userId.
         clearCachedCredentials(): Promise<void>;
     }
-} // declare module Social
+} // declare namespace Social

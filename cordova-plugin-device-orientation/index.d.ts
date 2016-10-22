@@ -83,4 +83,4 @@ declare var CompassError: {
     new(code: number): CompassError;
     COMPASS_INTERNAL_ERR: number;
     COMPASS_NOT_SUPPORTED: number
-}
+};

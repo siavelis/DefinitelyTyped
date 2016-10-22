@@ -167,7 +167,7 @@ declare namespace SinonChrome.cookies {
 }
 
 /* TODO: Uncomment once https://github.com/Microsoft/TypeScript/issues/7840 is fixed
-declare module SinonChrome.debugger {
+declare namespace SinonChrome.debugger {
     export var attach: Sinon.SinonStub;
     export var detach: Sinon.SinonStub;
     export var getTargets: Sinon.SinonStub;

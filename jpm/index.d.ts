@@ -1078,7 +1078,7 @@ declare namespace FFAddonSDK {
     isPinned: boolean;
     window: BrowserWindow;
     readyState: "uninitialized" | "loading" | "interactive" | "complete";
-    on: (event: "ready" | "load" | "pageshow" | "activate" | "deactivate" | "close", handler: (tab: Tab) => any)=> void;
+    on: (event: "ready" | "load" | "pageshow" | "activate" | "deactivate" | "close", handler: (tab: Tab) => any) => void;
     attach: (options: {contentScript?: string | string[], contentScriptFile?: string | string[], contentScriptOptions?: Object,
       onMessage?: (message: string) => any, onError?: (error: Error) => any}) => ContentWorker;
     activate: () => void;

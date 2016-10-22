@@ -31,6 +31,7 @@ interface Device {
 	/** Whether the device is running on a simulator. */
 	isVirtual: boolean;
 	/** Get the device hardware serial number. */
-	serial: string;}
+	serial: string;
+}
 
 declare var device: Device;

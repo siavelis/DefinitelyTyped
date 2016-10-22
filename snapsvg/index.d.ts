@@ -182,7 +182,7 @@ declare namespace Snap {
         after(el: Snap.Element): Snap.Element;
         align(el: Snap.Element, way: string): Snap.Element;
         animate(animation: any): Snap.Element;
-        animate(attrs: {[attr: string]: string|number|boolean|any},duration: number,easing?: (num: number)=> number,callback?: () => void): Snap.Element;
+        animate(attrs: {[attr: string]: string|number|boolean|any},duration: number,easing?: (num: number) => number,callback?: () => void): Snap.Element;
         append(el: Snap.Element): Snap.Element;
         appendTo(el: Snap.Element): Snap.Element;
         asPX(attr: string,value?: string): number;            //TODO: check what is really returned

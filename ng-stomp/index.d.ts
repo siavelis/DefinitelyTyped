@@ -11,9 +11,9 @@ interface ngStomp {
         debug: any;
         off: any;
 
-        setDebug: (callback: Function)=> void;
+        setDebug: (callback: Function) => void;
 
-        connect: (endpoint: string, headers?: Headers)=> angular.IHttpPromise<any>;
+        connect: (endpoint: string, headers?: Headers) => angular.IHttpPromise<any>;
 
         disconnect: (callback: () => void) => angular.IHttpPromise<any>;
 
@@ -21,7 +21,7 @@ interface ngStomp {
 
         unsubscribe: () => any;
 
-        send: (destination: string, body: any, headers: Headers)=> any;
+        send: (destination: string, body: any, headers: Headers) => any;
 
     }
 

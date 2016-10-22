@@ -2807,7 +2807,7 @@ declare namespace webdriver {
              *     with the result of the action.
              * @template T
              */
-            execute<T>(fn: ()=>(T|Promise<T>), opt_description?: string): Promise<T>;
+            execute<T>(fn: () =>(T|Promise<T>), opt_description?: string): Promise<T>;
 
             /**
              * Inserts a {@code setTimeout} into the command queue. This is equivalent to
@@ -5420,7 +5420,7 @@ declare namespace webdriver {
          *     with the function's result.
          * @template T
          */
-        call<T>(fn: (...var_args: any[])=>(T|webdriver.promise.Promise<T>), opt_scope?: any, ...var_args: any[]): webdriver.promise.Promise<T>;
+        call<T>(fn: (...var_args: any[]) =>(T|webdriver.promise.Promise<T>), opt_scope?: any, ...var_args: any[]): webdriver.promise.Promise<T>;
 
         /**
          * Schedules a command to wait for a condition to hold. The condition may be

@@ -1403,7 +1403,7 @@ declare namespace mathjs {
                 * @param  {MathNode} callback=(node [description]
                 * @return {[type]}                  [description]
                 */
-                traverse(callback: (node: MathNode, path: string, parent: MathNode)=> void): any;
+                traverse(callback: (node: MathNode, path: string, parent: MathNode) => void): any;
 //addEventListener(ev: 'change', callback: (ev: EditorChangeEvent) => any);
 
                 transform(callback: (node: MathNode, path: string, parent: MathNode) => boolean): MathNode[];

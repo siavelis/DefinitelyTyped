@@ -3,7 +3,7 @@
 // Definitions by: zivni <https://github.com/zivni>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module __ScrollIntoView {
+declare namespace __ScrollIntoView {
 
     interface Settings {
         time?: number;

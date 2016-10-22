@@ -20,7 +20,7 @@ interface Navigator {
          * It provides information about the device's cellular and wifi connection, and whether the device has an internet connection.
          */
         connection: Connection
-    }
+    };
 }
 
 interface Document {
@@ -59,4 +59,4 @@ declare var Connection: {
     CELL_4G: string;
     CELL: string;
     NONE: string;
-}
+};

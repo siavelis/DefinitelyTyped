@@ -42,9 +42,9 @@ declare namespace DevExpress {
             reset(): void;
         }
         /** Provides access to the object that represents the specified validation group. */
-        export function getGroupConfig(group: any): GroupConfig
+        export function getGroupConfig(group: any): GroupConfig;
         /** Provides access to the object that represents the default validation group. */
-        export function getGroupConfig(): GroupConfig
+        export function getGroupConfig(): GroupConfig;
         /** Validates rules of the validators that belong to the specified validation group. */
         export function validateGroup(group: any): ValidationGroupValidationResult;
         /** Validates rules of the validators that belong to the default validation group. */
@@ -666,7 +666,7 @@ declare namespace DevExpress {
                     Decimal(value: any): EdmLiteral;
                 };
             }
-        }
+        };
     }
     /** An object that serves as a namespace for DevExtreme UI widgets as well as for methods implementing UI logic in DevExtreme sites/applications. */
     export namespace ui {
@@ -1391,7 +1391,7 @@ declare namespace DevExpress.ui {
             google?: string;
             /** A key used to authenticate the application within the "Google Static" map provider. */
             googleStatic?: string;
-        }
+        };
         /** A handler for the markerAdded event. */
         onMarkerAdded?: Function;
         /** A URL pointing to the custom icon to be used for map markers. */
@@ -2887,7 +2887,7 @@ declare namespace DevExpress.ui {
             allowResizing?: boolean;
             /** Specifies whether or not an end-user can drag appointments. */
             allowDragging?: boolean;
-        }
+        };
         /** Specifies an array of resources available in the scheduler. */
         resources?: Array<{
             /** Indicates whether or not several resources of this kind can be assigned to an appointment. */
@@ -4013,7 +4013,7 @@ declare namespace DevExpress.ui {
                 /** The string to display instead of All Fields. */
                 allFields?: string;
             };
-        }
+        };
         /** Strings that can be changed or localized in the dxPivotGrid widget. */
         texts?: {
             /** The string to display as a header of the Grand Total row and column. */
@@ -4261,7 +4261,7 @@ declare namespace DevExpress.framework {
         export var layoutSets: Array<string>;
         export var animationSets: { [animationSetName: string]: AnimationSet };
         export interface AnimationSet {
-            [animationName: string]: any
+            [animationName: string]: any;
         }
         export interface HtmlApplicationOptions {
             /** Specifies where the commands that are defined in the application's views must be displayed. */
@@ -4574,7 +4574,7 @@ declare namespace DevExpress.viz.core {
             font?: viz.core.Font;
            /** Specifies text for the subtitle. */
             text?: string;
-        }
+        };
     }
     export interface Tooltip {
         /** Specifies the length of the tooltip's arrow in pixels. */
@@ -5563,7 +5563,7 @@ declare namespace DevExpress.viz.charts {
         minValueMargin?: number;
         tick?: {
             visible?: boolean;
-        }
+        };
     }
     export interface CommonPane {
         /** Specifies a background color in a pane. */
@@ -5861,7 +5861,7 @@ declare namespace DevExpress.viz.charts {
             precision?: number;
             /** Customizes the text displayed by the crosshair label that accompany the horizontal line. */
             customizeText?: (info: { value: any; valueText: string; point: ChartPoint; }) => string;
-        }
+        };
     }
     export interface PolarChartTooltip extends BaseChartTooltip {
         /** Specifies the kind of information to display in a tooltip. */
@@ -7232,7 +7232,7 @@ declare namespace DevExpress.viz.map {
             layer?: string;
             /** Specifies the type of the legend grouping. */
             grouping?: string;
-        }
+        };
     }
     /** A vector map widget. */
     export class dxVectorMap extends viz.core.BaseWidget {

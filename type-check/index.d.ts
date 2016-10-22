@@ -9,7 +9,7 @@ declare namespace TypeCheck {
   export interface CustomType {
     [typeName: string]: {
       typeOf: string;
-      validate: (x: any)=> any;
+      validate: (x: any) => any;
     };
   }
 

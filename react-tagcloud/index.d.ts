@@ -33,7 +33,7 @@ declare namespace ReactTagCloud {
 
 
 // export = TagCloud
-declare module reactTagCloud {
+declare namespace reactTagCloud {
     const TagCloud: ReactTagCloud.TagCloudClass;
     const DefaultRenderer: ReactTagCloud.DefaultRendererFactory;
 }

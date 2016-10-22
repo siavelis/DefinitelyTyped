@@ -274,7 +274,7 @@ declare namespace dygraphs {
          * times on each zoom. If you set a zoomCallback, it will only be called after the animation
          * is complete.
          */
-        animatedZooms?: boolean
+        animatedZooms?: boolean;
 
         /**
          * If provided, this function is called whenever the user clicks on an annotation.
@@ -344,7 +344,7 @@ declare namespace dygraphs {
          * When set, parse each CSV cell as "low;middle;high". Error bars will be drawn for each
          * point between low and high, with the series itself going through middle.
          */
-        customBars?: boolean
+        customBars?: boolean;
 
         /**
          * Custom DataHandler. This is an advanced customization. See http://bit.ly/151E7Aq.
@@ -1262,7 +1262,7 @@ declare class Dygraph {
         errorPlotter: any;
         linePlotter: any;
         fillPlotter: any;
-    }
+    };
 }
 
 declare module "dygraphs" {

@@ -959,7 +959,7 @@ id(value: number|string): this;
         /*pie/donut charts only: what kind of data to display for the slice labels. Options are key, value, or percent. */
         labelType(value: string): this;
         /*pie/donut charts only: what kind of data to display for the slice labels. Options are key, value, or percent. */
-        labelType(func: (d: any, i: number, values: any)=> string): this;
+        labelType(func: (d: any, i: number, values: any) => string): this;
         /*Whether pie/donut chart labels should be outside the slices instead of inside them*/
         labelsOutside(): boolean;
         /*Whether pie/donut chart labels should be outside the slices instead of inside them*/

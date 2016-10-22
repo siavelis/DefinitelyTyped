@@ -96,7 +96,7 @@ declare interface OptionsRandom {
     max_radial_length?: number;
 }
 declare type PropReduceCallback = (memo: any, coord: GeoJSON.Feature<any> | GeoJSON.FeatureCollection<any>) => any;
-declare module turf {
+declare namespace turf {
   interface TurfStatic {
     //////////////////////////////////////////////////////
     // Aggregation

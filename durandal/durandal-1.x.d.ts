@@ -468,14 +468,14 @@ declare module "durandal/plugins/router" {
     export var mapRoute: {
         (route: IRouteInfoParameters): IRouteInfo;
         (url: string, moduleId?: string, name?: string, visible?: boolean): IRouteInfo;
-    }
+    };
     /**
       * This function takes an array of routeInfo objects or a single routeInfo object and uses it to configure the router. The finalized routeInfo (or array of infos) is returned.
       */
     export var map: {
         (routeOrRouteArray: IRouteInfoParameters): IRouteInfo;
         (routeOrRouteArray: IRouteInfoParameters[]): IRouteInfo[];
-    }
+    };
     /**
       * After you've configured the router, you need to activate it. This is usually done in your shell. The activate function of the router returns a promise that resolves when the router is ready to start. To use the router, you should add an activate function to your shell and return the result from that. The application startup infrastructure of Durandal will detect your shell's activate function and call it at the appropriate time, waiting for it's promise to resolve. This allows Durandal to properly orchestrate the timing of composition and databinding along with animations and splash screen display.
       */
