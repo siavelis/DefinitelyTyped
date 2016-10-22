@@ -66,7 +66,7 @@ export type GifBufferParams = {
     interlaced?: boolean;
     transparency?: boolean | string;
     threshold: number;
-}
+};
 
 export interface Image {
     // Image operations

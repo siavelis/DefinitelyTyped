@@ -899,8 +899,8 @@ declare namespace __MaterialUI {
             inputStyle?: React.CSSProperties;
             onBlur?: React.FocusEventHandler<{}>;
             onKeyDown?: React.KeyboardEventHandler<{}>;
-            rows?: number,
-            rowsMax?: number,
+            rows?: number;
+            rowsMax?: number;
             name?: string;
             type?: string;
             underlineDisabledStyle?: React.CSSProperties;
@@ -1783,8 +1783,8 @@ declare namespace __MaterialUI {
         onEnterKeyDown?: React.KeyboardEventHandler<{}>;
         onFocus?: React.FocusEventHandler<{}>;
         onKeyDown?: React.KeyboardEventHandler<{}>;
-        rows?: number,
-        rowsMax?: number,
+        rows?: number;
+        rowsMax?: number;
         style?: React.CSSProperties;
         textareaStyle?: React.CSSProperties;
         type?: string;
@@ -1840,8 +1840,8 @@ declare namespace __MaterialUI {
         name?: string;
         onBlur?: React.FocusEventHandler<{}>;
         onKeyDown?: React.KeyboardEventHandler<{}>;
-        rows?: number,
-        rowsMax?: number,
+        rows?: number;
+        rowsMax?: number;
         textareaStyle?: React.CSSProperties;
         type?: string;
         underlineDisabledStyle?: React.CSSProperties;
@@ -8549,12 +8549,12 @@ declare module 'material-ui/internal/AutoLockScrolling' {
 }
 declare module 'material-ui/internal/BeforeAfterWrapper' {
   interface BeforeAfterWrapperProps extends React.Props<BeforeAfterWrapper> {
-    afterElementType?: string,
-    afterStyle?: React.CSSProperties,
-    beforeElementType?: string,
-    beforeStyle?: React.CSSProperties,
-    elementType?: string,
-    style?: React.CSSProperties,
+    afterElementType?: string;
+    afterStyle?: React.CSSProperties;
+    beforeElementType?: string;
+    beforeStyle?: React.CSSProperties;
+    elementType?: string;
+    style?: React.CSSProperties;
   }
   class BeforeAfterWrapper extends React.Component<BeforeAfterWrapperProps, {}> { }
   export default BeforeAfterWrapper;
@@ -8578,7 +8578,7 @@ declare module 'material-ui/internal/ClearFix' {
 }
 declare module 'material-ui/internal/ClickAwayListener' {
   interface ClickAwayListenerProps extends React.Props<ClickAwayListener> {
-    onClickAway?: any,
+    onClickAway?: any;
   }
   class ClickAwayListener extends React.Component<ClickAwayListenerProps, {}> { }
   export default ClickAwayListener;
@@ -8617,11 +8617,11 @@ declare module 'material-ui/internal/ExpandTransitionChild' {
 }
 declare module 'material-ui/internal/FocusRipple' {
   interface FocusRippleProps extends React.Props<FocusRipple> {
-    color?: string,
-    innerStyle?: React.CSSProperties,
-    opacity?: number,
-    show?: boolean,
-    style?: React.CSSProperties
+    color?: string;
+    innerStyle?: React.CSSProperties;
+    opacity?: number;
+    show?: boolean;
+    style?: React.CSSProperties;
   }
   class FocusRipple extends React.Component<FocusRippleProps, {}> { }
   export default FocusRipple;
@@ -8678,7 +8678,7 @@ declare module 'material-ui/internal/SlideIn' {
 }
 declare module 'material-ui/internal/SlideInChild' {
   interface SlideInChildProps extends React.Props<SlideInChild> {
-    direction?: string,
+    direction?: string;
     enterDelay?: number;
     getLeaveDirection: Function;
     style?: React.CSSProperties;
@@ -8701,11 +8701,11 @@ declare module 'material-ui/internal/Tooltip' {
 }
 declare module 'material-ui/internal/TouchRipple' {
   interface TouchRippleProps extends React.Props<TouchRipple> {
-    abortOnScroll?: boolean,
+    abortOnScroll?: boolean;
     centerRipple?: boolean;
     color?: string;
     opacity?: number;
-    style?: React.CSSProperties
+    style?: React.CSSProperties;
   }
   class TouchRipple extends React.Component<TouchRippleProps, {}> { }
   export default TouchRipple;

@@ -5,18 +5,18 @@
 
 declare module "monk" {
   function m(database: string): m.Monk;
-  module m {
+  namespace m {
     export interface promise {
-      type: string
+      type: string;
       on(eventName: string, fn: Function): void;
       error(fn: Function): promise;
       success(fn: Function): promise;
     }
 
     export interface Collection {
-      id(hexstring: string): string // returns ObjectId
-      id(obj: Object): string // returns ObjectId
-      id(): string // returns new generated ObjectId
+      id(hexstring: string): string; // returns ObjectId
+      id(obj: Object): string; // returns ObjectId
+      id(): string; // returns new generated ObjectId
 
       /*
       * All commands accept the simple data[, …], options and a callback.

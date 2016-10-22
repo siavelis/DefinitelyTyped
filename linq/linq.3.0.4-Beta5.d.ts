@@ -236,8 +236,8 @@ declare namespace linqjs {
 
     interface IOrderedEnumerable<T> extends IEnumerable<T> {
         createOrderedEnumerable<TKey>(keySelector: (element: T) => TKey, comparison: (x: TKey, y: TKey) => number, descending: boolean): IOrderedEnumerable<T>;
-        thenBy<TKey>(keySelector: (element: T) => TKey) : IOrderedEnumerable<T>;
-        thenBy<TKey>(keySelector: (element: T) => TKey, comparison: (x: TKey, y: TKey) => number) : IOrderedEnumerable<T>;
+        thenBy<TKey>(keySelector: (element: T) => TKey): IOrderedEnumerable<T>;
+        thenBy<TKey>(keySelector: (element: T) => TKey, comparison: (x: TKey, y: TKey) => number): IOrderedEnumerable<T>;
         thenByDescending<TKey>(keySelector: (element: T) => TKey): IOrderedEnumerable<T>;
         thenByDescending<TKey>(keySelector: (element: T) => TKey, comparison: (x: TKey, y: TKey) => number): IOrderedEnumerable<T>;
     }

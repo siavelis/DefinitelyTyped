@@ -21,7 +21,7 @@ interface ObloUtilStatic {
   showTime(date: Date): string;
   showDate(date: Date): string;
   readDate(dateStr: string): Date;
-  setAttr($elt: JQuery, attrName: string, isSet: boolean):void;
+  setAttr($elt: JQuery, attrName: string, isSet: boolean): void;
 }
 
 declare var util: ObloUtilStatic;

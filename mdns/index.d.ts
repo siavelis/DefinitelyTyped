@@ -50,13 +50,13 @@ declare namespace MDNS {
         start(): any;
         stop(): any;
         on(event: string, listener: Function): this;
-        on(event:'serviceUp', listener: (info: Service) => void): this;
-        on(event:'serviceDown', listener: (info: Service) => void): this;
+        on(event: 'serviceUp', listener: (info: Service) => void): this;
+        on(event: 'serviceDown', listener: (info: Service) => void): this;
     }
 
     interface BrowserStatic {
         new(serviceType: ServiceType, options?: BrowserOptions): Browser;
-        defaultResolverSequence: Array<(service: Service, next: () => void) => boolean>
+        defaultResolverSequence: Array<(service: Service, next: () => void) => boolean>;
     }
 
     // --- Services ---

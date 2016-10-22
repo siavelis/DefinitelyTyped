@@ -30,7 +30,7 @@ declare var Notify: {
      * @return 'granted' : permission has been given, 'denied' : permission has been denied, 'default' : permission has not yet been set, null : notifications are not supported
      */
     permissionLevel: string;
-}
+};
 
 declare namespace notifyjs {
 

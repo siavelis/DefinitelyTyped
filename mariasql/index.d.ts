@@ -5,31 +5,31 @@
 
 declare namespace mariasql {
     export interface MariaCallBackError {
-        (error: Error): void
+        (error: Error): void;
     }
 
     export interface MariaCallBackResult {
-        (result: MariaResult): void
+        (result: MariaResult): void;
     }
 
     export interface MariaCallBackRow {
-        (result: Array<any>): void
+        (result: Array<any>): void;
     }
 
     export interface MariaCallBackBoolean {
-        (result: boolean): void
+        (result: boolean): void;
     }
 
     export interface MariaCallBackObject {
-        (result: Object): void
+        (result: Object): void;
     }
 
     export interface MariaCallBackInfo {
-        (result: MariaInfo): void
+        (result: MariaInfo): void;
     }
 
     export interface MariaCallBackVoid {
-        (): void
+        (): void;
     }
 
     export interface Dictionary {
@@ -39,7 +39,7 @@ declare namespace mariasql {
     export interface MariaInfo {
         affectedRows: number;
         insertId: number;
-        numRows: number
+        numRows: number;
     }
 
     export interface MariaPreparedQuery {
@@ -67,19 +67,19 @@ declare namespace mariasql {
     }
 
     export interface MariaResult {
-        on(signal:'end', cb: MariaCallBackInfo): MariaResult;
-        on(signal:'error', cb: MariaCallBackError): MariaResult;
-        on(signal:'row', cb: MariaCallBackRow): MariaResult;
-        on(signal:'abort', cb: MariaCallBackVoid): MariaResult;
+        on(signal: 'end', cb: MariaCallBackInfo): MariaResult;
+        on(signal: 'error', cb: MariaCallBackError): MariaResult;
+        on(signal: 'row', cb: MariaCallBackRow): MariaResult;
+        on(signal: 'abort', cb: MariaCallBackVoid): MariaResult;
         on(signal: string, cb: MariaCallBackVoid): MariaResult;
         abort(): void;
     }
 
     export interface MariaQuery {
-        on(signal:'result', cb: MariaCallBackResult): MariaQuery;
-        on(signal:'end', cb: MariaCallBackVoid): MariaQuery;
-        on(signal:'abort', cb: MariaCallBackVoid): MariaQuery;
-        on(signal:'error', cb: MariaCallBackError): MariaQuery;
+        on(signal: 'result', cb: MariaCallBackResult): MariaQuery;
+        on(signal: 'end', cb: MariaCallBackVoid): MariaQuery;
+        on(signal: 'abort', cb: MariaCallBackVoid): MariaQuery;
+        on(signal: 'error', cb: MariaCallBackError): MariaQuery;
         on(signal: string, cb: MariaCallBackVoid): MariaQuery;
         abort(): void;
     }
@@ -94,9 +94,9 @@ declare namespace mariasql {
         query(q: string, useArray?: boolean): MariaQuery;
         prepare(query: string): MariaPreparedQuery;
         isMariaDB(): boolean;
-        on(signal:'error', cb: MariaCallBackError): MariaClient;
-        on(signal:'close', cb: MariaCallBackObject): MariaClient;
-        on(signal:'connect', cb: MariaCallBackVoid): MariaClient;
+        on(signal: 'error', cb: MariaCallBackError): MariaClient;
+        on(signal: 'close', cb: MariaCallBackObject): MariaClient;
+        on(signal: 'connect', cb: MariaCallBackVoid): MariaClient;
         on(signal: string, cb: MariaCallBackVoid): MariaClient;
         connected: boolean;
         threadId: string;

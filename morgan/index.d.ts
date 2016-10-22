@@ -205,6 +205,6 @@ declare function morgan(format: 'tiny', options?: morgan.Options): express.Reque
  * @param format
  * @param options
  */
-declare function morgan(custom: (req: express.Request, res: express.Response) => string): express.RequestHandler
+declare function morgan(custom: (req: express.Request, res: express.Response) => string): express.RequestHandler;
 
 export = morgan;

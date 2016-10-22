@@ -32,7 +32,7 @@ declare namespace lunr
         (obj: any): string[];
     }
 
-    module tokenizer {
+    namespace tokenizer {
         /**
          * The sperator used to split a string into tokens. Override this property to change the behaviour of
          * `lunr.tokenizer` behaviour when tokenizing strings. By default this splits on whitespace and hyphens.
@@ -863,7 +863,7 @@ declare namespace lunr
     /**
      * A namespace containing utils for the rest of the lunr library
      */
-    module utils {
+    namespace utils {
         /**
          * Print a warning message to the console.
          *

@@ -105,7 +105,7 @@ declare namespace maquette {
     transitions?: {
       enter: (element: Element, properties: VNodeProperties, enterAnimation: string) => void;
       exit: (element: Element, properties: VNodeProperties, exitAnimation: string, removeElement: () => void) => void;
-    }
+    };
   }
 
   // The following line is not possible in Typescript, hence the workaround in the two lines below
@@ -294,7 +294,7 @@ declare namespace maquette {
        * Updates the projection with the new virtual DOM tree.
        * @param {VNode} updatedVnode - The updated virtual DOM tree. Note: The selector for the root of the tree must remain constant.
        */
-    update(updatedVnode:VNode): void;
+    update(updatedVnode: VNode): void;
       /**
        * The DOM node that is used as the root of this {@link Projection}.
        * @type {Element}

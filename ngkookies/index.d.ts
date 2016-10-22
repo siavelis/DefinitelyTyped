@@ -22,7 +22,7 @@ declare namespace angular.kookies {
 		remove(name: string, options?: Options): boolean;
 	}
 
-	type Config = { raw?: boolean, json?: boolean }
+	type Config = { raw?: boolean, json?: boolean };
 
 	interface IKookiesProvider {
 

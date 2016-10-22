@@ -17,7 +17,7 @@ declare namespace MomentTimezone {
 
         abbr(timestamp: number): string;
         offset(timestamp: number): number;
-        parse(timestamp: number): number
+        parse(timestamp: number): number;
     }
 
     interface MomentTimezone {

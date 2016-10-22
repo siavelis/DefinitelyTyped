@@ -101,7 +101,7 @@ declare namespace Meshblu {
 		 * @param fn The callback to be called. It should take one parameter, result.
 		 * @returns This Connection.
 		 */
-		device(data: Device, fn: (result: DeviceResponse) => void): Connection
+		device(data: Device, fn: (result: DeviceResponse) => void): Connection;
 
 		/**
 		 * Find Meshblu devices.
@@ -109,7 +109,7 @@ declare namespace Meshblu {
 		 * @param fn The callback to be called. It should take one parameter, result.
 		 * @returns This Connection.
 		 */
-		devices(data: Color, fn: (result: DeviceResponse[]) => void): Connection
+		devices(data: Color, fn: (result: DeviceResponse[]) => void): Connection;
 
 		/**
 		 * Returns device messages as they are sent and received.
@@ -117,7 +117,7 @@ declare namespace Meshblu {
 		 * @param fn The callback to be called. It should take one parameter, result.
 		 * @returns This Connection.
 		 */
-		subscribe(data: SubscribeData, fn: (result: any) => void): Connection
+		subscribe(data: SubscribeData, fn: (result: any) => void): Connection;
 
 		/**
 		 * Cancels device subscription.
@@ -125,7 +125,7 @@ declare namespace Meshblu {
 		 * @param fn The callback to be called. It should take one parameter, result.
 		 * @returns This Connection.
 		 */
-		unsubscribe(data: UnsubscribeData, fn: (result: any) => void): Connection
+		unsubscribe(data: UnsubscribeData, fn: (result: any) => void): Connection;
 
 		/**
 		 * Send a meshblu data message.
@@ -133,7 +133,7 @@ declare namespace Meshblu {
 		 * @param fn The callback to be called. It should take one parameter, result.
 		 * @returns This Connection.
 		 */
-		data(data: DataInput, fn: (result: any) => void): Connection
+		data(data: DataInput, fn: (result: any) => void): Connection;
 
 		/**
 		 * Get a meshblu data for a device.
@@ -141,21 +141,21 @@ declare namespace Meshblu {
 		 * @param fn The callback to be called. It should take one parameter, result.
 		 * @returns This Connection.
 		 */
-		getdata(data: GetDataInput, fn: (result: any) => void): Connection
+		getdata(data: GetDataInput, fn: (result: any) => void): Connection;
 
 		/**
 		 * Generate a new session token for a device.
 		 * @param data
 		 * @param fn The callback to be called. It should take one parameter, result.
 		 */
-		generateAndStoreToken(data: Device, fn: (result: ConnectionOptions) => void): void
+		generateAndStoreToken(data: Device, fn: (result: ConnectionOptions) => void): void;
 
 		/**
 		 * Remove a session token from a device.
 		 * @param data
 		 * @param fn The callback to be called. It should take one parameter, result.
 		 */
-		revokeToken(data: ConnectionOptions, fn: (result: Device) => void): void
+		revokeToken(data: ConnectionOptions, fn: (result: Device) => void): void;
 
 		/**
 		 *
@@ -178,18 +178,18 @@ declare namespace Meshblu {
 		connect(): void;
 		reconnect(): void;
 		claimdevice(data: Device, fn: (result: Device) => void): Connection;
-		mydevices(data: any, fn: (result: any) => void): Connection
-		status(data: any): Connection
-		authenticate(data: any, fn: (result: any) => void): Connection
-		events(data: any, fn: (result: any) => void): Connection
-		localdevices(fn: (result: any) => void): Connection
-		unclaimeddevices(data: any, fn: (result: any) => void): Connection
-		textBroadcast(data: any): Connection
-		directText(data: any): Connection
-		subscribeText(data: any, fn: (result: any) => void): Connection
-		unsubscribeText(data: any, fn: (result: any) => void): Connection
-		close(fn: (result: any) => void): Connection
-		resetToken(data: any, fn: (result: any) => void): void
+		mydevices(data: any, fn: (result: any) => void): Connection;
+		status(data: any): Connection;
+		authenticate(data: any, fn: (result: any) => void): Connection;
+		events(data: any, fn: (result: any) => void): Connection;
+		localdevices(fn: (result: any) => void): Connection;
+		unclaimeddevices(data: any, fn: (result: any) => void): Connection;
+		textBroadcast(data: any): Connection;
+		directText(data: any): Connection;
+		subscribeText(data: any, fn: (result: any) => void): Connection;
+		unsubscribeText(data: any, fn: (result: any) => void): Connection;
+		close(fn: (result: any) => void): Connection;
+		resetToken(data: any, fn: (result: any) => void): void;
 	}
 
 	/**

@@ -258,8 +258,8 @@ declare namespace MsPortalTestFx {
             chromeOptions: {
                 args: string[]
             }
-        },
-        chromeDriverPath?: string,
+        };
+        chromeDriverPath?: string;
         portalUrl: string;
         signInUrl?: string;
         signInEmail?: string;

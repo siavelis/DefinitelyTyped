@@ -19,12 +19,12 @@ declare namespace MCustomScrollbar {
         * Set the initial css top property of content, accepts string values (css top position).
         * Example: setTop: "-100px".
         */
-        setTop? : number|string;
+        setTop?: number|string;
         /**
         * Set the initial css top property of content, accepts string values (css top position).
         * Example: setTop: "-100px".
         */
-        setLeft? : number|string;
+        setLeft?: number|string;
         /**
          * Define content’s scrolling axis (the type of scrollbars added to the element: vertical and/of horizontal).
          * Available values: "y", "x", "yx". y -vertical, x - horizontal, yx - vertical and horizontal
@@ -52,7 +52,7 @@ declare namespace MCustomScrollbar {
         * Note that your elements must be of equal width or height in order for this to work properly.
         * To set different values for vertical and horizontal scrolling, use an array: [y,x]
         */
-        snapAmount?: number|[number,number];
+        snapAmount?: number|[number, number];
         /**
         * Set an offset (in pixels) for the snapAmount option. Useful when for example you need to offset the
         * snap amount of table rows by the table header.
@@ -108,7 +108,7 @@ declare namespace MCustomScrollbar {
              * Default value: ["select","option","keygen","datalist","textarea"]
              */
             disableOver?: string[];
-        }
+        };
         /**
         * Keyboard support
         */
@@ -128,7 +128,7 @@ declare namespace MCustomScrollbar {
             * scrollType: "stepped" – each button click scrolls content by a certain amount (defined in scrollAmount option above)
             */
             scrollType?: "stepless"|"stepped";
-        }
+        };
         /**
         * Mouse wheel scrolling pixels amount, value in pixels (integer) or "auto" (script calculates and sets pixels amount according to content length)
         */
@@ -160,7 +160,7 @@ declare namespace MCustomScrollbar {
             * Scroll buttons pixels scrolling amount, value in pixels or "auto"
             */
             scrollAmount?: "auto"|number ;
-        }
+        };
     advanced?: {
             /**
             * Update scrollbars on browser resize (for fluid content blocks and layouts based on percentages), values: true, false. Set to false only when you content has fixed dimensions
@@ -218,7 +218,7 @@ declare namespace MCustomScrollbar {
             * Normalize mouse wheel delta (-1/1), values: true, false
             */
             normalizeMouseWheelDelta?: boolean;
-        }
+        };
     /**
         * Enable or disable content touch-swipe scrolling for touch-enabled devices.
         * To completely disable, set contentTouchScroll: false.
@@ -309,7 +309,7 @@ declare namespace MCustomScrollbar {
             * A function to call each time a type of element is added, removed or changes its size and scrollbar(s) are updated.
             */
             onSelectorChange?: () => void;
-        }
+        };
     /**
     * Set a scrollbar ready-to-use theme. See themes demo for all themes - http://manos.malihu.gr/tuts/custom-scrollbar-plugin/scrollbar_themes_demo.html
     */

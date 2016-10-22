@@ -28,9 +28,9 @@ declare module "orientjs" {
 	import Promise = require('bluebird');
     function ojs(config: any): ojs.OrientJs;
 
-    module ojs {
+    namespace ojs {
 
-        module errors {
+        namespace errors {
             interface BaseError {
                 name: string;
                 init(name: string): void;
@@ -42,7 +42,7 @@ declare module "orientjs" {
             interface RequestError extends OperationError { }
         }
 
-        module Migration {
+        namespace Migration {
             function Manager(config: any): void ;
             interface Migration {
                 name: string;
@@ -207,7 +207,7 @@ declare module "orientjs" {
         interface Record {
             rid: RID;
             create(record: any, options?: any): Promise<Record> ;
-            get(record:  Record | RID | string, options?: any): Promise<Record | Buffer>;
+            get(record: Record | RID | string, options?: any): Promise<Record | Buffer>;
             resolveReferences(records: Record[] &  any[]): any;
             meta(record: Record | RID | string, options?: any): Promise<RecordMeta> ;
             update(): Promise<Record> & Promise<any>;

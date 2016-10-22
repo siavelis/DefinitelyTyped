@@ -21,7 +21,7 @@ declare namespace __ONOFF {
         constructor(gpio: number, direction: string, edge: string, options: GpioOptions);
         constructor(gpio: number, direction: string, options: GpioOptions);
 
-        gpio: number
+        gpio: number;
         gpioPath: string;
         opts: GpioOptions;
         readBuffer: Buffer;

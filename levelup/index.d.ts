@@ -51,7 +51,7 @@ interface levelupOptions {
     cacheSize?: number;
     keyEncoding?: string;
     valueEncoding?: string;
-    db?: string
+    db?: string;
 }
 
 declare module "levelup" {

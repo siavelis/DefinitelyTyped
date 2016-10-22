@@ -252,95 +252,95 @@ declare namespace ngGrid {
     }
 
     export interface IGridScope extends angular.IScope {
-        elementsNeedMeasuring:boolean;
-        columns:any[];
-        renderedRows:any[];
-        renderedColumns:any[];
-        headerRow:any;
-        rowHeight:number;
-        jqueryUITheme:any;
-        showSelectionCheckbox:boolean;
-        enableCellSelection:boolean;
-        enableCellEditOnFocus:boolean;
-        footer:IFooter;
-        selectedItems:any[];
-        multiSelect:boolean;
-        showFooter:boolean;
-        footerRowHeight:number;
-        showColumnMenu:boolean;
-        forceSyncScrolling:boolean;
-        showMenu:boolean;
-        configGroups:any[];
-        gridId:string;
-        enablePaging:boolean;
-        pagingOptions:IPagingOptions;
-        i18n:any;
-        selectionProvider:ISelectionProvider;
-        adjustScrollLeft(scrollLeft:number):void;
-        adjustScrollTop(scrollTop:number, force:boolean):void;
-        toggleShowMenu():void;
-        toggleSelectAll():void;
-        totalFilteredItemsLength():number;
-        showGroupPanel():any;
-        topPanelHeight():number;
-        viewportDimHeight():number;
-        groupBy(col:IColumn):void;
-        removeGroup(index:number):void;
-        togglePin(col:IColumn):void;
-        totalRowWidth():number;
-        headerScrollerDim():any;
+        elementsNeedMeasuring: boolean;
+        columns: any[];
+        renderedRows: any[];
+        renderedColumns: any[];
+        headerRow: any;
+        rowHeight: number;
+        jqueryUITheme: any;
+        showSelectionCheckbox: boolean;
+        enableCellSelection: boolean;
+        enableCellEditOnFocus: boolean;
+        footer: IFooter;
+        selectedItems: any[];
+        multiSelect: boolean;
+        showFooter: boolean;
+        footerRowHeight: number;
+        showColumnMenu: boolean;
+        forceSyncScrolling: boolean;
+        showMenu: boolean;
+        configGroups: any[];
+        gridId: string;
+        enablePaging: boolean;
+        pagingOptions: IPagingOptions;
+        i18n: any;
+        selectionProvider: ISelectionProvider;
+        adjustScrollLeft(scrollLeft: number): void;
+        adjustScrollTop(scrollTop: number, force: boolean): void;
+        toggleShowMenu(): void;
+        toggleSelectAll(): void;
+        totalFilteredItemsLength(): number;
+        showGroupPanel(): any;
+        topPanelHeight(): number;
+        viewportDimHeight(): number;
+        groupBy(col: IColumn): void;
+        removeGroup(index: number): void;
+        togglePin(col: IColumn): void;
+        totalRowWidth(): number;
+        headerScrollerDim(): any;
     }
 
     export interface IGridInstance {
-        $canvas:angular.IAugmentedJQuery;
-        $viewport:angular.IAugmentedJQuery;
-        $groupPanel:angular.IAugmentedJQuery;
-        $footerPanel:angular.IAugmentedJQuery;
-        $headerScroller:angular.IAugmentedJQuery;
-        $headerContainer:angular.IAugmentedJQuery;
-        $headers:angular.IAugmentedJQuery;
-        $topPanel:angular.IAugmentedJQuery;
-        $root:angular.IAugmentedJQuery;
-        config:IGridOptions;
-        data:any;
-        elementDims:IElementDimension;
-        eventProvider:IEventProvider;
-        filteredRows:IRow[];
-        footerController:any;
-        gridId:string;
-        lastSortedColumns:IColumn[];
-        lateBindColumns:boolean;
-        maxCanvasHt:number;
-        prevScrollIndex:number;
-        prevScrollTop:number;
-        rootDim:IDimension;
-        rowCache:IRow[];
-        rowFactory:IRowFactory;
-        rowMap:IRow[];
-        searchProvider:ISearchProvider;
-        styleProvider:IStyleProvider;
+        $canvas: angular.IAugmentedJQuery;
+        $viewport: angular.IAugmentedJQuery;
+        $groupPanel: angular.IAugmentedJQuery;
+        $footerPanel: angular.IAugmentedJQuery;
+        $headerScroller: angular.IAugmentedJQuery;
+        $headerContainer: angular.IAugmentedJQuery;
+        $headers: angular.IAugmentedJQuery;
+        $topPanel: angular.IAugmentedJQuery;
+        $root: angular.IAugmentedJQuery;
+        config: IGridOptions;
+        data: any;
+        elementDims: IElementDimension;
+        eventProvider: IEventProvider;
+        filteredRows: IRow[];
+        footerController: any;
+        gridId: string;
+        lastSortedColumns: IColumn[];
+        lateBindColumns: boolean;
+        maxCanvasHt: number;
+        prevScrollIndex: number;
+        prevScrollTop: number;
+        rootDim: IDimension;
+        rowCache: IRow[];
+        rowFactory: IRowFactory;
+        rowMap: IRow[];
+        searchProvider: ISearchProvider;
+        styleProvider: IStyleProvider;
 
-        buildColumnDefsFromData():void;
-        buildColumns():void;
-        calcMaxCanvasHeight():void;
-        clearSortingData():void;
-        configureColumnWidths():void;
-        fixColumnIndexes():void;
-        fixGroupIndexes():void;
-        getTemplate(key:string):angular.IPromise<any>;
-        init():angular.IPromise<any>;
-        initTemplates():angular.IPromise<any>;
-        minRowsToRender():void;
-        refreshDomSizes():void;
-        resizeOnData(col:IColumn):void;
-        setRenderedRows(newRows:IRow[]):void;
-        sortActual():void;
-        sortColumnsInit():void;
-        sortData(col:IColumn, event:any):void;
+        buildColumnDefsFromData(): void;
+        buildColumns(): void;
+        calcMaxCanvasHeight(): void;
+        clearSortingData(): void;
+        configureColumnWidths(): void;
+        fixColumnIndexes(): void;
+        fixGroupIndexes(): void;
+        getTemplate(key: string): angular.IPromise<any>;
+        init(): angular.IPromise<any>;
+        initTemplates(): angular.IPromise<any>;
+        minRowsToRender(): void;
+        refreshDomSizes(): void;
+        resizeOnData(col: IColumn): void;
+        setRenderedRows(newRows: IRow[]): void;
+        sortActual(): void;
+        sortColumnsInit(): void;
+        sortData(col: IColumn, event: any): void;
     }
 
     export interface IFooterStatic {
-        new($scope:IGridScope, grid:IGridInstance):IFooter;
+        new($scope: IGridScope, grid: IGridInstance): IFooter;
     }
 
     export interface IFooter {
@@ -466,7 +466,7 @@ declare namespace ngGrid {
         selectedItems?: any[];
 
         /** Select deselect an item by index. */
-        selectItem?: (idx:number, state:boolean) =>any;
+        selectItem?: (idx: number, state: boolean) => any;
 
         /** Disable row selections by clicking on the row and only when the checkbox is clicked. */
         selectWithCheckboxOnly?: boolean;
@@ -593,58 +593,58 @@ declare namespace ngGrid {
     }
 
     export interface IPlugin {
-        init(childScope:IGridScope, gridInstance:IGridInstance, services:any):void;
+        init(childScope: IGridScope, gridInstance: IGridInstance, services: any): void;
     }
 
     export namespace service {
 
         export interface IDomUtilityService {
-            eventStorage:any;
-            numberOfGrids:number;
-            immediate:number;
-            AssignGridContainers($scope:IGridScope, rootel:angular.IAugmentedJQuery, grid:IGridInstance):void;
-            getRealWidth(obj:IDimension):number;
-            UpdateGridLayout($scope:IGridScope, grid:IGridInstance):void;
-            setStyleText(grid:IGridInstance, css:string):void;
-            BuildStyles($scope:IGridScope, grid:IGridInstance, digest:boolean):void;
-            setColLeft(col:IColumn, colLeft:number, grid:IGridInstance):void;
-            RebuildGrid($scope:IGridScope, grid:IGridInstance):void;
-            digest($scope:IGridScope):void;
-            ScrollH:number;
-            ScrollW:number;
-            LetterW:number;
+            eventStorage: any;
+            numberOfGrids: number;
+            immediate: number;
+            AssignGridContainers($scope: IGridScope, rootel: angular.IAugmentedJQuery, grid: IGridInstance): void;
+            getRealWidth(obj: IDimension): number;
+            UpdateGridLayout($scope: IGridScope, grid: IGridInstance): void;
+            setStyleText(grid: IGridInstance, css: string): void;
+            BuildStyles($scope: IGridScope, grid: IGridInstance, digest: boolean): void;
+            setColLeft(col: IColumn, colLeft: number, grid: IGridInstance): void;
+            RebuildGrid($scope: IGridScope, grid: IGridInstance): void;
+            digest($scope: IGridScope): void;
+            ScrollH: number;
+            ScrollW: number;
+            LetterW: number;
         }
 
         export interface ISortInfo {
-            fields:string[];
+            fields: string[];
         }
 
         export interface ISortService {
-            colSortFnCache:any;
-            isCustomSort:boolean;
-            isSorting:boolean;
-            guessSortFn(item:any): (a:any, b:any) => number;
-            basicSort(a:any, b:any):number;
-            sortNumber(a:number, b:number):number;
-            sortNumberStr(a:string, b:string):number;
-            sortAlpha(a:string, b:string):number;
-            sortDate(a:Date, b:Date):number;
-            sortBool(a:boolean, b:boolean):number;
-            sortData(sortInfo:ISortInfo, data:any):void;
-            Sort(sortInfo:ISortInfo, data:any):void;
-            getSortFn(col:IColumn, data:any): (a:any, b:any) => number;
+            colSortFnCache: any;
+            isCustomSort: boolean;
+            isSorting: boolean;
+            guessSortFn(item: any): (a: any, b: any) => number;
+            basicSort(a: any, b: any): number;
+            sortNumber(a: number, b: number): number;
+            sortNumberStr(a: string, b: string): number;
+            sortAlpha(a: string, b: string): number;
+            sortDate(a: Date, b: Date): number;
+            sortBool(a: boolean, b: boolean): number;
+            sortData(sortInfo: ISortInfo, data: any): void;
+            Sort(sortInfo: ISortInfo, data: any): void;
+            getSortFn(col: IColumn, data: any): (a: any, b: any) => number;
         }
 
         export interface IUtilityService {
-            visualLength(node:any):number;
-            forIn(obj:any, action: (value:any, property:string) =>{}):void;
-            evalProperty(entity:any, path:string):any;
-            endsWith(str:string, suffix:string):boolean;
-            isNullOrUndefined(obj:any):boolean;
-            getElementsByClassName(cl:string):any[];
-            newId():string;
-            seti18n($scope:IGridScope, language:string):void;
-            getInstanceType(o:any):string;
+            visualLength(node: any): number;
+            forIn(obj: any, action: (value: any, property: string) => {}): void;
+            evalProperty(entity: any, path: string): any;
+            endsWith(str: string, suffix: string): boolean;
+            isNullOrUndefined(obj: any): boolean;
+            getElementsByClassName(cl: string): any[];
+            newId(): string;
+            seti18n($scope: IGridScope, language: string): void;
+            getInstanceType(o: any): string;
         }
     }
 }

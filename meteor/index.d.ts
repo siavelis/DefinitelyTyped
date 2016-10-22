@@ -163,7 +163,7 @@ declare namespace Meteor {
 	interface LoginWithExternalServiceOptions {
 		requestPermissions?: string[];
 		requestOfflineToken?: boolean;
-		loginUrlParameters?: {[param: string]: any}
+		loginUrlParameters?: {[param: string]: any};
 		loginHint?: string;
 		loginStyle?: string;
 		redirectUrl?: "popup" | "redirect";
@@ -264,8 +264,8 @@ declare namespace Meteor {
 		siteName?: string;
 		headers?: { [id: string]: string };  // TODO: should define IHeaders interface
 		resetPassword?: Meteor.EmailFields;
-		enrollAccount?:  Meteor.EmailFields;
-		verifyEmail?:  Meteor.EmailFields;
+		enrollAccount?: Meteor.EmailFields;
+		verifyEmail?: Meteor.EmailFields;
 	}
 
 	interface Connection {
@@ -342,10 +342,10 @@ interface ITinytestAssertions {
 	runId(): string;
 	equal<T>(actual: T, expected: T, message?: string, not?: boolean): void;
 	notEqual<T>(actual: T, expected: T, message?: string): void;
-	instanceOf(obj : Object, klass: Function, message?: string): void;
-	notInstanceOf(obj : Object, klass: Function, message?: string): void;
-	matches(actual : any, regexp: RegExp, message?: string): void;
-	notMatches(actual : any, regexp: RegExp, message?: string): void;
+	instanceOf(obj: Object, klass: Function, message?: string): void;
+	notInstanceOf(obj: Object, klass: Function, message?: string): void;
+	matches(actual: any, regexp: RegExp, message?: string): void;
+	notMatches(actual: any, regexp: RegExp, message?: string): void;
 	throws(f: Function, expected?: string|RegExp): void;
 	isTrue(v: boolean, msg?: string): void;
 	isFalse(v: boolean, msg?: string): void;
@@ -363,15 +363,15 @@ interface ITinytestAssertions {
 }
 
 declare namespace Tinytest {
-	function add(description : string , func : (test : ITinytestAssertions) => void) : void;
-	function addAsync(description : string , func : (test : ITinytestAssertions) => void) : void;
+	function add(description: string , func: (test: ITinytestAssertions) => void): void;
+	function addAsync(description: string , func: (test: ITinytestAssertions) => void): void;
 }
 
 // Kept in for backwards compatibility
 declare namespace Meteor {
 	interface Tinytest {
-		add(description : string , func : (test : ITinytestAssertions) => void) : void;
-		addAsync(description : string , func : (test : ITinytestAssertions) => void) : void;
+		add(description: string , func: (test: ITinytestAssertions) => void): void;
+		addAsync(description: string , func: (test: ITinytestAssertions) => void): void;
 	}
 }
 
@@ -664,7 +664,7 @@ declare namespace Mongo {
 		}, callback?: Function): number;
 		upsert(selector: Mongo.Selector | Mongo.ObjectID | string, modifier: Mongo.Modifier, options?: {
 			multi?: boolean;
-		}, callback?: Function): {numberAffected?: number; insertedId?: string;};
+		}, callback?: Function): {numberAffected?: number; insertedId?: string};
 		_ensureIndex(indexName: string, options?: {[key: string]: any}): void;
 	}
 

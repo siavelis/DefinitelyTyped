@@ -7,7 +7,7 @@
 
 interface ILaddaButton {
     start(): ILaddaButton;
-    startAfter(delay: number): ILaddaButton
+    startAfter(delay: number): ILaddaButton;
     stop(): ILaddaButton;
     toggle(): ILaddaButton;
     setProgress(progress: number): ILaddaButton;

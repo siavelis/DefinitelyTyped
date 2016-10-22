@@ -228,7 +228,7 @@ declare class CriteriaBuilder<T>{
     private parentBuilder: CriteriaBuilder<any>;
 
     constructor(primaryTable: Table<T>); //to arxiko apo to Table.ts 9a benei
-    constructor(primaryTable: Table<T>, tableName: string, parentBuilder: CriteriaBuilder<any>);// auta 9a benoun apo to parent select query.
+    constructor(primaryTable: Table<T>, tableName: string, parentBuilder: CriteriaBuilder<any>); // auta 9a benoun apo to parent select query.
     constructor(primaryTable: Table<T>, tablePropertyName?: string, parentBuilder?: CriteriaBuilder<any>);
 
     except(...columns: string[]): CriteriaBuilder<T>;
@@ -267,7 +267,7 @@ declare class CriteriaBuilder<T>{
 
 declare class SelectQuery<T> implements IQuery<T> { // T for Table's result type.
 
-    _table: Table<T>
+    _table: Table<T>;
     constructor(_table: Table<T>);
 
     private parseQueryResult(result: any, criteria: ICriteriaParts): Promise<any>;
@@ -285,13 +285,13 @@ declare class SelectQuery<T> implements IQuery<T> { // T for Table's result type
 }
 
 declare class SaveQuery<T> implements IQuery<T> {
-    _table: Table<T>
+    _table: Table<T>;
     constructor(_table: Table<T>);
     execute(criteriaRawJsObject: any, callback?: (_result: T | any) => any): Promise<T | any>;
 }
 
 declare class DeleteQuery<T> implements IQuery<T>{
-    _table: Table<T>
+    _table: Table<T>;
     constructor(_table: Table<T>);
     execute(criteriaOrID: any | number | string, callback?: (_result: DeleteAnswer) => any): Promise<DeleteAnswer>;
 }
@@ -612,7 +612,7 @@ declare class Table<T>  {
     private _primaryKey: string;
     private _criteriaDivider: CriteriaDivider<T>;
     private _rules: SelectQueryRules;
-    private _selectQuery: SelectQuery<T>
+    private _selectQuery: SelectQuery<T>;
     private _saveQuery: SaveQuery<T>;
     private _deleteQuery: DeleteQuery<T>;
     constructor(tableName: string, connection: Connection);

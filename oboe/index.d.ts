@@ -58,7 +58,7 @@ declare namespace oboe {
 	}
 
 	interface PatternMap {
-	  [pattern: string]: CallbackSignature
+	  [pattern: string]: CallbackSignature;
 	}
 }
 

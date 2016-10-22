@@ -1300,7 +1300,7 @@ declare module "locutus/golang/strings" {
 	import Count = require("locutus/golang/strings/Count");
 	import Index = require("locutus/golang/strings/Index");
 	import LastIndex = require("locutus/golang/strings/LastIndex");
-	export {Contains,Count,Index,LastIndex};
+	export {Contains, Count, Index, LastIndex};
 }
 declare module "locutus/php/array" {
 	import array_change_key_case = require("locutus/php/array/array_change_key_case");
@@ -1374,7 +1374,7 @@ declare module "locutus/php/array" {
 	import uasort = require("locutus/php/array/uasort");
 	import uksort = require("locutus/php/array/uksort");
 	import usort = require("locutus/php/array/usort");
-	export {array_change_key_case,array_chunk,array_combine,array_count_values,array_diff,array_diff_assoc,array_diff_key,array_diff_uassoc,array_diff_ukey,array_fill,array_fill_keys,array_filter,array_flip,array_intersect,array_intersect_assoc,array_intersect_key,array_intersect_uassoc,array_intersect_ukey,array_key_exists,array_keys,array_map,array_merge,array_merge_recursive,array_multisort,array_pad,array_pop,array_product,array_push,array_rand,array_reduce,array_replace,array_replace_recursive,array_reverse,array_search,array_shift,array_slice,array_splice,array_sum,array_udiff,array_udiff_assoc,array_udiff_uassoc,array_uintersect,array_uintersect_uassoc,array_unique,array_unshift,array_values,array_walk,arsort,asort,count,current,each,end,in_array,key,krsort,ksort,natcasesort,natsort,next,pos,prev,range,reset,rsort,shuffle,sizeof,sort,uasort,uksort,usort};
+	export {array_change_key_case, array_chunk, array_combine, array_count_values, array_diff, array_diff_assoc, array_diff_key, array_diff_uassoc, array_diff_ukey, array_fill, array_fill_keys, array_filter, array_flip, array_intersect, array_intersect_assoc, array_intersect_key, array_intersect_uassoc, array_intersect_ukey, array_key_exists, array_keys, array_map, array_merge, array_merge_recursive, array_multisort, array_pad, array_pop, array_product, array_push, array_rand, array_reduce, array_replace, array_replace_recursive, array_reverse, array_search, array_shift, array_slice, array_splice, array_sum, array_udiff, array_udiff_assoc, array_udiff_uassoc, array_uintersect, array_uintersect_uassoc, array_unique, array_unshift, array_values, array_walk, arsort, asort, count, current, each, end, in_array, key, krsort, ksort, natcasesort, natsort, next, pos, prev, range, reset, rsort, shuffle, sizeof, sort, uasort, uksort, usort};
 }
 declare module "locutus/php/bc" {
 	import bcadd = require("locutus/php/bc/bcadd");
@@ -1384,7 +1384,7 @@ declare module "locutus/php/bc" {
 	import bcround = require("locutus/php/bc/bcround");
 	import bcscale = require("locutus/php/bc/bcscale");
 	import bcsub = require("locutus/php/bc/bcsub");
-	export {bcadd,bccomp,bcdiv,bcmul,bcround,bcscale,bcsub};
+	export {bcadd, bccomp, bcdiv, bcmul, bcround, bcscale, bcsub};
 }
 declare module "locutus/php/ctype" {
 	import ctype_alnum = require("locutus/php/ctype/ctype_alnum");
@@ -1398,7 +1398,7 @@ declare module "locutus/php/ctype" {
 	import ctype_space = require("locutus/php/ctype/ctype_space");
 	import ctype_upper = require("locutus/php/ctype/ctype_upper");
 	import ctype_xdigit = require("locutus/php/ctype/ctype_xdigit");
-	export {ctype_alnum,ctype_alpha,ctype_cntrl,ctype_digit,ctype_graph,ctype_lower,ctype_print,ctype_punct,ctype_space,ctype_upper,ctype_xdigit};
+	export {ctype_alnum, ctype_alpha, ctype_cntrl, ctype_digit, ctype_graph, ctype_lower, ctype_print, ctype_punct, ctype_space, ctype_upper, ctype_xdigit};
 }
 declare module "locutus/php/datetime" {
 	import checkdate = require("locutus/php/datetime/checkdate");
@@ -1416,7 +1416,7 @@ declare module "locutus/php/datetime" {
 	import strptime = require("locutus/php/datetime/strptime");
 	import strtotime = require("locutus/php/datetime/strtotime");
 	import time = require("locutus/php/datetime/time");
-	export {checkdate,date,date_parse,getdate,gettimeofday,gmdate,gmmktime,gmstrftime,idate,microtime,mktime,strftime,strptime,strtotime,time};
+	export {checkdate, date, date_parse, getdate, gettimeofday, gmdate, gmmktime, gmstrftime, idate, microtime, mktime, strftime, strptime, strtotime, time};
 }
 declare module "locutus/php/exec" {
 	import escapeshellarg = require("locutus/php/exec/escapeshellarg");
@@ -1428,7 +1428,7 @@ declare module "locutus/php/filesystem" {
 	import file_get_contents = require("locutus/php/filesystem/file_get_contents");
 	import pathinfo = require("locutus/php/filesystem/pathinfo");
 	import realpath = require("locutus/php/filesystem/realpath");
-	export {basename,dirname,file_get_contents,pathinfo,realpath};
+	export {basename, dirname, file_get_contents, pathinfo, realpath};
 }
 declare module "locutus/php/funchand" {
 	import call_user_func = require("locutus/php/funchand/call_user_func");
@@ -1436,12 +1436,12 @@ declare module "locutus/php/funchand" {
 	import create_function = require("locutus/php/funchand/create_function");
 	import function_exists = require("locutus/php/funchand/function_exists");
 	import get_defined_functions = require("locutus/php/funchand/get_defined_functions");
-	export {call_user_func,call_user_func_array,create_function,function_exists,get_defined_functions};
+	export {call_user_func, call_user_func_array, create_function, function_exists, get_defined_functions};
 }
 declare module "locutus/php/i18n" {
 	import i18n_loc_get_default = require("locutus/php/i18n/i18n_loc_get_default");
 	import i18n_loc_set_default = require("locutus/php/i18n/i18n_loc_set_default");
-	export {i18n_loc_get_default,i18n_loc_set_default};
+	export {i18n_loc_get_default, i18n_loc_set_default};
 }
 declare module "locutus/php/info" {
 	import assert_options = require("locutus/php/info/assert_options");
@@ -1450,13 +1450,13 @@ declare module "locutus/php/info" {
 	import ini_set = require("locutus/php/info/ini_set");
 	import set_time_limit = require("locutus/php/info/set_time_limit");
 	import version_compare = require("locutus/php/info/version_compare");
-	export {assert_options,getenv,ini_get,ini_set,set_time_limit,version_compare};
+	export {assert_options, getenv, ini_get, ini_set, set_time_limit, version_compare};
 }
 declare module "locutus/php/json" {
 	import json_decode = require("locutus/php/json/json_decode");
 	import json_encode = require("locutus/php/json/json_encode");
 	import json_last_error = require("locutus/php/json/json_last_error");
-	export {json_decode,json_encode,json_last_error};
+	export {json_decode, json_encode, json_last_error};
 }
 declare module "locutus/php/math" {
 	import abs = require("locutus/php/math/abs");
@@ -1505,12 +1505,12 @@ declare module "locutus/php/math" {
 	import sqrt = require("locutus/php/math/sqrt");
 	import tan = require("locutus/php/math/tan");
 	import tanh = require("locutus/php/math/tanh");
-	export {abs,acos,acosh,asin,asinh,atan,atan2,atanh,base_convert,bindec,ceil,cos,cosh,decbin,dechex,decoct,deg2rad,exp,expm1,floor,fmod,getrandmax,hexdec,hypot,is_finite,is_infinite,is_nan,lcg_value,log,log10,log1p,max,min,mt_getrandmax,mt_rand,octdec,pi,pow,rad2deg,rand,round,sin,sinh,sqrt,tan,tanh};
+	export {abs, acos, acosh, asin, asinh, atan, atan2, atanh, base_convert, bindec, ceil, cos, cosh, decbin, dechex, decoct, deg2rad, exp, expm1, floor, fmod, getrandmax, hexdec, hypot, is_finite, is_infinite, is_nan, lcg_value, log, log10, log1p, max, min, mt_getrandmax, mt_rand, octdec, pi, pow, rad2deg, rand, round, sin, sinh, sqrt, tan, tanh};
 }
 declare module "locutus/php/misc" {
 	import pack = require("locutus/php/misc/pack");
 	import uniqid = require("locutus/php/misc/uniqid");
-	export {pack,uniqid};
+	export {pack, uniqid};
 }
 declare module "locutus/php/net-gopher" {
 	import gopher_parsedir = require("locutus/php/net-gopher/gopher_parsedir");
@@ -1523,12 +1523,12 @@ declare module "locutus/php/network" {
 	import long2ip = require("locutus/php/network/long2ip");
 	import setcookie = require("locutus/php/network/setcookie");
 	import setrawcookie = require("locutus/php/network/setrawcookie");
-	export {inet_ntop,inet_pton,ip2long,long2ip,setcookie,setrawcookie};
+	export {inet_ntop, inet_pton, ip2long, long2ip, setcookie, setrawcookie};
 }
 declare module "locutus/php/pcre" {
 	import preg_quote = require("locutus/php/pcre/preg_quote");
 	import sql_regcase = require("locutus/php/pcre/sql_regcase");
-	export {preg_quote,sql_regcase};
+	export {preg_quote, sql_regcase};
 }
 declare module "locutus/php/strings" {
 	import addcslashes = require("locutus/php/strings/addcslashes");
@@ -1622,7 +1622,7 @@ declare module "locutus/php/strings" {
 	import vprintf = require("locutus/php/strings/vprintf");
 	import vsprintf = require("locutus/php/strings/vsprintf");
 	import wordwrap = require("locutus/php/strings/wordwrap");
-	export {addcslashes,addslashes,bin2hex,chop,chr,chunk_split,convert_cyr_string,convert_uuencode,count_chars,crc32,echo,explode,get_html_translation_table,hex2bin,html_entity_decode,htmlentities,htmlspecialchars,htmlspecialchars_decode,implode,join,lcfirst,levenshtein,localeconv,ltrim,md5,md5_file,metaphone,money_format,nl2br,nl_langinfo,number_format,ord,parse_str,printf,quoted_printable_decode,quoted_printable_encode,quotemeta,rtrim,setlocale,sha1,sha1_file,similar_text,soundex,split,sprintf,sscanf,str_getcsv,str_ireplace,str_pad,str_repeat,str_replace,str_rot13,str_shuffle,str_split,str_word_count,strcasecmp,strchr,strcmp,strcoll,strcspn,strip_tags,stripos,stripslashes,stristr,strlen,strnatcasecmp,strnatcmp,strncasecmp,strncmp,strpbrk,strpos,strrchr,strrev,strripos,strrpos,strspn,strstr,strtok,strtolower,strtoupper,strtr,substr,substr_compare,substr_count,substr_replace,trim,ucfirst,ucwords,vprintf,vsprintf,wordwrap};
+	export {addcslashes, addslashes, bin2hex, chop, chr, chunk_split, convert_cyr_string, convert_uuencode, count_chars, crc32, echo, explode, get_html_translation_table, hex2bin, html_entity_decode, htmlentities, htmlspecialchars, htmlspecialchars_decode, implode, join, lcfirst, levenshtein, localeconv, ltrim, md5, md5_file, metaphone, money_format, nl2br, nl_langinfo, number_format, ord, parse_str, printf, quoted_printable_decode, quoted_printable_encode, quotemeta, rtrim, setlocale, sha1, sha1_file, similar_text, soundex, split, sprintf, sscanf, str_getcsv, str_ireplace, str_pad, str_repeat, str_replace, str_rot13, str_shuffle, str_split, str_word_count, strcasecmp, strchr, strcmp, strcoll, strcspn, strip_tags, stripos, stripslashes, stristr, strlen, strnatcasecmp, strnatcmp, strncasecmp, strncmp, strpbrk, strpos, strrchr, strrev, strripos, strrpos, strspn, strstr, strtok, strtolower, strtoupper, strtr, substr, substr_compare, substr_count, substr_replace, trim, ucfirst, ucwords, vprintf, vsprintf, wordwrap};
 }
 declare module "locutus/php/url" {
 	import base64_decode = require("locutus/php/url/base64_decode");
@@ -1633,7 +1633,7 @@ declare module "locutus/php/url" {
 	import rawurlencode = require("locutus/php/url/rawurlencode");
 	import urldecode = require("locutus/php/url/urldecode");
 	import urlencode = require("locutus/php/url/urlencode");
-	export {base64_decode,base64_encode,http_build_query,parse_url,rawurldecode,rawurlencode,urldecode,urlencode};
+	export {base64_decode, base64_encode, http_build_query, parse_url, rawurldecode, rawurlencode, urldecode, urlencode};
 }
 declare module "locutus/php/var" {
 	import doubleval = require("locutus/php/var/doubleval");
@@ -1665,17 +1665,17 @@ declare module "locutus/php/var" {
 	import unserialize = require("locutus/php/var/unserialize");
 	import var_dump = require("locutus/php/var/var_dump");
 	import var_export = require("locutus/php/var/var_export");
-	export {doubleval,empty,floatval,gettype,intval,is_array,is_binary,is_bool,is_buffer,is_callable,is_double,is_float,is_int,is_integer,is_long,is_null,is_numeric,is_object,is_real,is_scalar,is_string,is_unicode,isset,print_r,serialize,strval,unserialize,var_dump,var_export};
+	export {doubleval, empty, floatval, gettype, intval, is_array, is_binary, is_bool, is_buffer, is_callable, is_double, is_float, is_int, is_integer, is_long, is_null, is_numeric, is_object, is_real, is_scalar, is_string, is_unicode, isset, print_r, serialize, strval, unserialize, var_dump, var_export};
 }
 declare module "locutus/php/xdiff" {
 	import xdiff_string_diff = require("locutus/php/xdiff/xdiff_string_diff");
 	import xdiff_string_patch = require("locutus/php/xdiff/xdiff_string_patch");
-	export {xdiff_string_diff,xdiff_string_patch};
+	export {xdiff_string_diff, xdiff_string_patch};
 }
 declare module "locutus/php/xml" {
 	import utf8_decode = require("locutus/php/xml/utf8_decode");
 	import utf8_encode = require("locutus/php/xml/utf8_encode");
-	export {utf8_decode,utf8_encode};
+	export {utf8_decode, utf8_encode};
 }
 declare module "locutus/python/string" {
 	import capwords = require("locutus/python/string/capwords");
@@ -1714,7 +1714,7 @@ declare module "locutus/php" {
 	// import Var = require("locutus/php/var");
 	import xdiff = require("locutus/php/xdiff");
 	import xml = require("locutus/php/xml");
-	export {array,bc,ctype,datetime,exec,filesystem,funchand,i18n,info,json,math,misc,network,pcre,strings,url,xdiff,xml /* ,"net-gopher": net_gopher */ /* ,"var": Var */};
+	export {array, bc, ctype, datetime, exec, filesystem, funchand, i18n, info, json, math, misc, network, pcre, strings, url, xdiff, xml /* ,"net-gopher": net_gopher */ /* ,"var": Var */};
 }
 declare module "locutus/python" {
 	import string = require("locutus/python/string");
@@ -1730,5 +1730,5 @@ declare module "locutus" {
 	import php = require("locutus/php");
 	import python = require("locutus/python");
 	import ruby = require("locutus/ruby");
-	export {c,golang,php,python,ruby};
+	export {c, golang, php, python, ruby};
 }

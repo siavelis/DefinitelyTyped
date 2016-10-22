@@ -80,7 +80,7 @@ declare namespace mathjs {
 		 * @param b A column vector with the b values
 		 * @returns A column vector with the linear system solution (x)
 		 */
-		usolve(U: Matrix|MathArray, b:Matrix|MathArray): Matrix|MathArray;
+		usolve(U: Matrix|MathArray, b: Matrix|MathArray): Matrix|MathArray;
 
 		/**
 		 * Calculate the absolute value of a number. For matrices, the function is evaluated element wise.
@@ -151,7 +151,7 @@ declare namespace mathjs {
 		 */
 		divide(x: Unit, y: Unit): Unit;
 		divide(x: number, y: number): number;
-		divide(x:MathType, y:MathType): MathType;
+		divide(x: MathType, y: MathType): MathType;
 
 		/**
 		 * Divide two matrices element wise. The function accepts both matrices and scalar values.
@@ -444,7 +444,7 @@ declare namespace mathjs {
 		 * @param k Number of objects in the subset
 		 * @returns Returns the composition counts of n into k parts.
 		 */
-		composition(n: Number|BigNumber, k: Number|BigNumber): Number|BigNumber
+		composition(n: Number|BigNumber, k: Number|BigNumber): Number|BigNumber;
 
 		/**
 		 * The Stirling numbers of the second kind, counts the number of ways to partition a set of n labelled objects into k nonempty unlabelled subsets. stirlingS2 only takes integer arguments. The following condition must be enforced: k <= n.
@@ -527,7 +527,7 @@ declare namespace mathjs {
 		 * storage formats are 'dense' and 'sparse'.
 		 */
 		matrix(format?: string): Matrix;
-		matrix(data: MathArray|Matrix, format?: string, dataType?:string): Matrix;
+		matrix(data: MathArray|Matrix, format?: string, dataType?: string): Matrix;
 
 		/**
 		 * Create a number or convert a string, boolean, or unit to a number. When value is a matrix, all elements will be converted to number.
@@ -540,7 +540,7 @@ declare namespace mathjs {
 		 * functions to manipulate the data in the matrix, like getting the size and getting or setting values in the matrix.
 		 * @param data A two dimensional array
 		 */
-		sparse(data?: MathArray|Matrix, dataType?:string): Matrix;
+		sparse(data?: MathArray|Matrix, dataType?: string): Matrix;
 
 		/**
 		 * Create a string or convert any object into a string. Elements of Arrays and Matrices are processed element wise.
@@ -695,8 +695,8 @@ declare namespace mathjs {
 		 * @returns Parameters describing the ranges start, end, and optional step.
 		 */
 		range(str: string, includeEnd?: boolean): Matrix;
-		range(start: number|BigNumber, end:number|BigNumber, includeEnd?:boolean): Matrix;
-		range(start: number|BigNumber, end: number|BigNumber, step: number|BigNumber, includeEnd?:boolean): Matrix;
+		range(start: number|BigNumber, end: number|BigNumber, includeEnd?: boolean): Matrix;
+		range(start: number|BigNumber, end: number|BigNumber, step: number|BigNumber, includeEnd?: boolean): Matrix;
 
 		/**
 		 * Resize a matrix
@@ -784,7 +784,7 @@ declare namespace mathjs {
 		 * @param n The number of objects in total
 		 * @param k The number of objects in the subset
 		 */
-		permutations(n: number|BigNumber, k?:number|BigNumber): number|BigNumber;
+		permutations(n: number|BigNumber, k?: number|BigNumber): number|BigNumber;
 
 		/**
 		 * Random pick a value from a one dimensional array. Array element is picked using a random function with uniform distribution.
@@ -798,7 +798,7 @@ declare namespace mathjs {
 		random(max: number): number;
 		random(min: number, max: number): number;
 		random(size: MathArray|Matrix, max?: number): MathArray|Matrix;
-		random(size: MathArray|Matrix, min:number, max: number): MathArray|Matrix;
+		random(size: MathArray|Matrix, min: number, max: number): MathArray|Matrix;
 
 		/**
 		 * Return a random integer number larger or equal to min and smaller than max using a uniform distribution.
@@ -806,7 +806,7 @@ declare namespace mathjs {
 		randomInt(max: number): number;
 		randomInt(min: number, max: number): number;
 		randomInt(size: MathArray|Matrix, max?: number): MathArray|Matrix;
-		randomInt(size: MathArray|Matrix, min:number, max: number): MathArray|Matrix;
+		randomInt(size: MathArray|Matrix, min: number, max: number): MathArray|Matrix;
 
 		/**
 		 * Compare two values. Returns 1 when x > y, -1 when x < y, and 0 when x == y.
@@ -1198,7 +1198,7 @@ declare namespace mathjs {
 		 * @param x The unit to be converted.
 		 * @param unit New unit. Can be a string like "cm" or a unit without value.
 		 */
-		to(x: Unit|MathArray|Matrix, unit: Unit|string): Unit|MathArray|Matrix
+		to(x: Unit|MathArray|Matrix, unit: Unit|string): Unit|MathArray|Matrix;
 
 		/**
 		 * Clone an object.
@@ -1276,7 +1276,7 @@ declare namespace mathjs {
 		 * @param values An object containing variables which will be filled in in the template.
 		 * @param precision Number of digits to format numbers. If not provided, the value will not be rounded.
 		 */
-		print(template:string, values: any, precision?: number): void;
+		print(template: string, values: any, precision?: number): void;
 
 		/**
 		 * Sort the items in a matrix.
@@ -1503,7 +1503,7 @@ declare namespace mathjs {
 		 * @param b A column vector with the b values
 		 * @returns A column vector with the linear system solution (x)
 		 */
-		usolve(b:Matrix|MathArray): IMathJsChain;
+		usolve(b: Matrix|MathArray): IMathJsChain;
 
 		/**
 		 * Calculate the absolute value of a number. For matrices, the function is evaluated element wise.
@@ -1536,7 +1536,7 @@ declare namespace mathjs {
 		 * Divide two values, x / y. To divide matrices, x is multiplied with the inverse of y: x * inv(y).
 		 * @param y Denominator
 		 */
-		divide(y:MathType): IMathJsChain;
+		divide(y: MathType): IMathJsChain;
 
 		/**
 		 * Divide two matrices element wise. The function accepts both matrices and scalar values.
@@ -1883,13 +1883,13 @@ declare namespace mathjs {
 		 */
 		random(): IMathJsChain;
 		random(max?: number): IMathJsChain;
-		random(min:number, max: number): IMathJsChain;
+		random(min: number, max: number): IMathJsChain;
 
 		/**
 		 * Return a random integer number larger or equal to min and smaller than max using a uniform distribution.
 		 */
 		randomInt(max?: number): IMathJsChain;
-		randomInt(min:number, max: number): IMathJsChain;
+		randomInt(min: number, max: number): IMathJsChain;
 
 		/**
 		 * Compare two values. Returns 1 when x > y, -1 when x < y, and 0 when x == y.

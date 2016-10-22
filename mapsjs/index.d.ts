@@ -1465,7 +1465,7 @@ export namespace tile {
      * @class renderer
 	 */
     export class renderer {
-        constructor(options? : {
+        constructor(options?: {
             renderPoint?: (pt: point, context: CanvasRenderingContext2D) => void;
 			renderGeometry?: (shape: geometry, context: CanvasRenderingContext2D) => void;
             renderBitmap?: (img: HTMLElement, context: CanvasRenderingContext2D, contextSize: number, bleed: number) => void;
@@ -1921,7 +1921,7 @@ export namespace tile {
 		 * @param {number} g Green level.
 		 * @param {number} b Blue level.
 		 */
-		setBackgroundColor(a: number, r: number, g:number, b:number): void;
+		setBackgroundColor(a: number, r: number, g: number, b: number): void;
 
 		/**
 		 * Checks whether or not the map background is transparent.
@@ -2281,7 +2281,7 @@ interface styleObj {
     fillOpacity?: number;
     outlineColor?: string;
     outlineOpacity?: number;
-    outlineThicknessPix?: number
+    outlineThicknessPix?: number;
     dashArray?: string;
 }
 

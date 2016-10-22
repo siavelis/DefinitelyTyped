@@ -62,11 +62,11 @@ interface MarkedStatic {
 
     Renderer: {
         new(): MarkedRenderer;
-    }
+    };
 
     Parser: {
         new(options: MarkedOptions): MarkedParser;
-    }
+    };
 }
 
 interface MarkedRenderer {
@@ -95,7 +95,7 @@ interface MarkedRenderer {
 }
 
 interface MarkedParser {
-    parse(source: any[]): string
+    parse(source: any[]): string;
 }
 
 interface MarkedOptions {
