@@ -92,8 +92,8 @@ declare namespace BabyParse {
     }
 
     interface FileObject {
-        file: string
-        config?: ParseConfig
+        file: string;
+        config?: ParseConfig;
     }
 
     interface ParseError {

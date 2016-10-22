@@ -7,7 +7,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Maps {
+  export namespace Maps {
     /**
      * An enum representing the types of restrictions to avoid when finding directions.
      */

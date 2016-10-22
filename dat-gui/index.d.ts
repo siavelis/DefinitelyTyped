@@ -21,7 +21,7 @@ declare namespace dat {
         addColor(target: Object, propName:string): GUIController;
         addColor(target: Object, propName:string, color: string): GUIController;
         addColor(target: Object, propName:string, rgba: number[]): GUIController; // rgb or rgba
-        addColor(target: Object, propName:string, hsv:{h:number; s:number; v:number}): GUIController;
+        addColor(target: Object, propName:string, hsv: {h:number; s:number; v:number}): GUIController;
 
         addFolder(propName:string): GUI;
 

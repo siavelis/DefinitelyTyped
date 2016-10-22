@@ -12,20 +12,20 @@ declare module "istanbul-middleware" {
     type PostLoadHookFn = (file: any)=> {};
     type PostLoadHook = (matcherfn: Matcher, transformer: any, verbose: boolean) => PostLoadHookFn;
 
-    export function hookLoader(matcherOrRoot: Matcher|string, opts?:{
+    export function hookLoader(matcherOrRoot: Matcher|string, opts?: {
         postLoadHook?: PostLoadHook,
         verbose?: boolean
         //and istanbul.Instrumenter(...opts)
     }): void;
 
-    export function createHandler(opts?:{
+    export function createHandler(opts?: {
         resetOnGet?: boolean
     }): any;
 
     type ClientMatcher = (req: express.Request)=> boolean;
     type PathTransformer = (req: express.Request)=> string;
 
-    export function createClientHandler(root: string,opts?:{
+    export function createClientHandler(root: string,opts?: {
         matcher?: ClientMatcher,
         pathTransformer?: PathTransformer,
         verbose?: boolean

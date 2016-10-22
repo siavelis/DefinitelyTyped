@@ -7,16 +7,16 @@
 declare namespace jsSHA {
 
     export interface EncodingOptions {
-        encoding? : string;
+        encoding?: string;
     }
 
     export interface Options extends EncodingOptions {
-        numRounds? : number;
+        numRounds?: number;
     }
 
     export interface OutputFormatOptions {
-        outputUpper? : boolean;
-        b64Pad? : string;
+        outputUpper?: boolean;
+        b64Pad?: string;
     }
 
     export interface jsSHA {

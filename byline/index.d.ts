@@ -16,7 +16,7 @@ export interface LineStream extends stream.Transform {
 }
 
 export interface LineStreamCreatable extends LineStream {
-    new (options?: LineStreamOptions): LineStream
+    new (options?: LineStreamOptions): LineStream;
 }
 
 //TODO is it possible to declare static factory functions without name (directly on the module)

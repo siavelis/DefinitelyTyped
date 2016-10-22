@@ -407,7 +407,7 @@ declare namespace Vega {
     properties?: PropertySets;
   }
 
-  export module Mark {
+  export namespace Mark {
     export interface From {
       // TODO docs
       data?: string;

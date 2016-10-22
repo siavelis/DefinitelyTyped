@@ -124,7 +124,7 @@ declare namespace JSData {
         defaults: DSConfiguration;
 
         changeHistory(resourceName: string, id: string | number): Array<Object>;
-        changes(resourceName: string, id: string | number, options?:{ignoredChanges: Array<string|RegExp>}): Object;
+        changes(resourceName: string, id: string | number, options?: {ignoredChanges: Array<string|RegExp>}): Object;
         clear<T>(): Array<T & DSInstanceShorthands<T>>;
         compute<T>(resourceName: string, idOrInstance: number | string | T): T & DSInstanceShorthands<T>;
         create<T>(resourceName: string, attrs: Object, options?: DSConfiguration): JSDataPromise<T & DSInstanceShorthands<T>>;
@@ -158,12 +158,12 @@ declare namespace JSData {
 
         defineResource<T>(resourceNameOrDefinition: string | DSResourceDefinitionConfiguration): DSResourceDefinition<T>;
         defineResource<T, TActions>(resourceNameOrDefinition: string | DSResourceDefinitionConfiguration): DSResourceDefinition<T> & TActions;
-        registerAdapter(adapterId: string, adapter: IDSAdapter, options?:{default: boolean}): void;
+        registerAdapter(adapterId: string, adapter: IDSAdapter, options?: {default: boolean}): void;
     }
 
     interface DSResourceDefinition<T> extends DSResourceDefinitionConfiguration, DSEvents {
         changeHistory(id: string | number): Array<Object>;
-        changes(id: string | number, options?:{ignoredChanges: Array<string|RegExp>}): Object;
+        changes(id: string | number, options?: {ignoredChanges: Array<string|RegExp>}): Object;
         clear(): Array<T & DSInstanceShorthands<T>>;
         compute(idOrInstance: number | string | T): T & DSInstanceShorthands<T>;
         create(attrs: Object, options?: DSConfiguration): JSDataPromise<T & DSInstanceShorthands<T>>;
@@ -339,7 +339,7 @@ declare namespace JSData {
 }
 
 // declaring the existing global js object
-declare var JSData:{
+declare var JSData: {
     DS: JSData.DS;
     DSErrors: JSData.DSErrors;
     DSUtils: any;

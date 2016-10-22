@@ -6,7 +6,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Optimization {
+  export namespace Optimization {
     /**
      * Object storing a linear constraint of the form lowerBound ≤ Sum(a(i) x(i)) ≤ upperBound
      *  where lowerBound and upperBound are constants, a(i) are constant

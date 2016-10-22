@@ -6,7 +6,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Base {
+  export namespace Base {
     /**
      * A data interchange object for Apps Script services.
      */

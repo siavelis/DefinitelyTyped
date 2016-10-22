@@ -78,7 +78,7 @@ declare namespace MDNS {
         new(serviceTypeIdentifier: string): ServiceType;
         new(name: string, protocol: string, ...subtypes: string[]): ServiceType;
         new(serviceTypeIdentifier: Array<string>): ServiceType;
-        new(serviceTypeIdentifier:{name: string; protocol: string; subtypes?: Array<string>}): ServiceType;
+        new(serviceTypeIdentifier: {name: string; protocol: string; subtypes?: Array<string>}): ServiceType;
         new(serviceType: ServiceType): ServiceType;
 
         fullyQualified: boolean;
@@ -92,7 +92,7 @@ declare namespace MDNS {
         toArray(): Array<string>;
         fromArray(serviceTypeIdentifier: Array<string>): ServiceType;
 
-        fromJSON(serviceTypeIdentifier:{name: string; protocol: string; subtypes?: Array<string>}): ServiceType;
+        fromJSON(serviceTypeIdentifier: {name: string; protocol: string; subtypes?: Array<string>}): ServiceType;
         fromJSON(serviceType: ServiceType): ServiceType;
     }
 
@@ -102,7 +102,7 @@ declare namespace MDNS {
     }
 
     interface DefaultResolverSequenceTasks extends MDNSResolverSequenceTasks {
-        DNSServiceResolve(options?:{flags: any}): (service: Service, next: () => void) => boolean;
+        DNSServiceResolve(options?: {flags: any}): (service: Service, next: () => void) => boolean;
         DNSServiceGetAddrInfo(options?: any): (service: Service, next: () => void) => boolean;
         getaddrinfo(options?: any): (service: Service, next: () => void) => boolean;
         makeAddressesUnique(): (service: Service, next: () => void) => boolean;
@@ -129,7 +129,7 @@ declare namespace MDNS {
 
     function makeServiceType(serviceTypeIdentifier: Array<string>): ServiceType;
 
-    function makeServiceType(serviceTypeIdentifier:{name: string; protocol: string; subtypes?: Array<string>}): ServiceType;
+    function makeServiceType(serviceTypeIdentifier: {name: string; protocol: string; subtypes?: Array<string>}): ServiceType;
 
     function makeServiceType(serviceType: ServiceType): ServiceType;
 

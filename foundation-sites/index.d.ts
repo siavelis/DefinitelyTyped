@@ -396,7 +396,7 @@ declare namespace FoundationSites {
     }
 
     interface FoundationSitesStatic {
-        version : string;
+        version: string;
 
         rtl(): boolean;
         plugin(plugin:Object, name:string): void;
@@ -408,7 +408,7 @@ declare namespace FoundationSites {
         getFnName(fn:string): string;
         transitionend(): string;
 
-        util : {
+        util: {
             throttle(func: (...args:any[]) => any, delay:number): (...args:any[]) => any;
         };
 
@@ -446,7 +446,7 @@ declare namespace FoundationSites {
 }
 
 interface JQuery {
-    foundation(method?:string|Array<any>) : JQuery;
+    foundation(method?:string|Array<any>): JQuery;
 }
 
 declare var Foundation:FoundationSites.FoundationSitesStatic;

@@ -33,7 +33,7 @@ interface _IMobservableStatic {
      * Future assignments to the same property will inherit this behavior.
      * @param value initial value of the reactive property that is being defined.
      */
-    asReference<T>(value: any):{value:T};
+    asReference<T>(value: any): {value:T};
 
     /**
      * ES6 / Typescript decorator which can to make class properties and getter functions reactive.
@@ -88,7 +88,7 @@ interface _IMobservableStatic {
 
         getObserverTree(thing:any, property?:string): Mobservable.IObserverTree;
 
-        trackTransitions(extensive?:boolean, onReport?: (lines:Mobservable.ITransitionEvent) => void) : Mobservable.Lambda;
+        trackTransitions(extensive?:boolean, onReport?: (lines:Mobservable.ITransitionEvent) => void): Mobservable.Lambda;
     }
 }
 
@@ -184,6 +184,6 @@ declare namespace Mobservable {
 }
 
 declare module "mobservable" {
-	var m : IMobservableStatic;
+	var m: IMobservableStatic;
 	export = m;
 }

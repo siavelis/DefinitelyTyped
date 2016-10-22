@@ -827,7 +827,7 @@ declare namespace Ember {
         replaceRoute(name: string, ...args: any[]): void;
         transitionToRoute(name: string, ...args: any[]): void;
         controllers: {};
-        model : any;
+        model: any;
         needs: string[];
         queryParams: any;
         target: any;
@@ -932,7 +932,7 @@ declare namespace Ember {
         @param {Object} [args] - Object containing values to use within the new class
         Non-static method because Ember classes aren't currently 'real' TypeScript classes.
         **/
-        extend<T>(mixins ? : Mixin, args ?: CoreObjectArguments): T;
+        extend<T>(mixins ?: Mixin, args ?: CoreObjectArguments): T;
 
         /**
         Equivalent to doing extend(arguments).create(). If possible use the normal create method instead.
@@ -1863,7 +1863,7 @@ declare namespace Ember {
         @method paramsFor
         @param {String} name
         */
-        paramsFor(name: string) : any;
+        paramsFor(name: string): any;
 
         /**
         Configuration hash for this route's queryParams.
@@ -2557,12 +2557,12 @@ declare namespace Ember {
     function watchPath(obj: any, keyPath: string): void;
     function watchedEvents(obj: {}): any[];
     function wrap(func: Function, superFunc: Function): Function;
-    var _ContainerProxyMixin : Mixin;
+    var _ContainerProxyMixin: Mixin;
     var _RegistryProxyMixin: Mixin;
     function getOwner(object: any): any;
     function setOwner(object: any, owner: any): void;
-    var testing : boolean;
-    var MODEL_FACTORY_INJECTIONS : boolean;
+    var testing: boolean;
+    var MODEL_FACTORY_INJECTIONS: boolean;
     function assign(original: any, ...sources: any[]): any;
 }
 
@@ -2586,7 +2586,7 @@ declare namespace Em {
     class Copyable extends Ember.Copyable {}
     class CoreObject extends Ember.CoreObject { }
     class DAG extends Ember.DAG {}
-    var DEFAULT_GETTER_FUNCTION : typeof Ember.DEFAULT_GETTER_FUNCTION;
+    var DEFAULT_GETTER_FUNCTION: typeof Ember.DEFAULT_GETTER_FUNCTION;
     class DefaultResolver extends Ember.DefaultResolver { }
     class Descriptor extends Ember.Descriptor { }
     var ENV: typeof Ember.ENV;
@@ -2653,7 +2653,7 @@ declare namespace Em {
     var STRINGS: typeof Ember.STRINGS;
     class State extends Ember.State { }
     class StateManager extends Ember.StateManager { }
-    var String : typeof Ember.String;
+    var String: typeof Ember.String;
     var TEMPLATES: typeof Ember.TEMPLATES;
     class TargetActionSupport extends Ember.TargetActionSupport {}
     namespace Test {
@@ -2768,7 +2768,7 @@ declare namespace Em {
     var watchPath: typeof Ember.watchPath;
     var watchedEvents: typeof Ember.watchedEvents;
     var wrap: typeof Ember.wrap;
-    var _ContainerProxyMixin : typeof Ember._ContainerProxyMixin;
+    var _ContainerProxyMixin: typeof Ember._ContainerProxyMixin;
     var _RegistryProxyMixin: typeof Ember._RegistryProxyMixin;
     var getOwner: typeof Ember.getOwner;
     var setOwner: typeof Ember.setOwner;

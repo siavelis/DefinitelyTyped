@@ -24,7 +24,7 @@ interface RangyRange extends Range {
     collapseBefore(node: Node): any;
     collapseAfter(node: Node): any;
     getNodes(nodeTypes?: any[], filter?: (node: Node) => boolean): Node[];
-    getBookmark(containerNode?: Node):{start: number, end: number};
+    getBookmark(containerNode?: Node): {start: number, end: number};
     moveToBookmark(bookmark: Object): any;
     getDocument(): Document;
     inspect(): string;

@@ -213,7 +213,7 @@ interface ContactFindOptions {
     filter?: string;
     multiple?: boolean;
 }
-declare var ContactFindOptions : {
+declare var ContactFindOptions: {
     new(): ContactFindOptions;
 }
 

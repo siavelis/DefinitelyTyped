@@ -596,7 +596,7 @@ declare namespace ngGrid {
         init(childScope:IGridScope, gridInstance:IGridInstance, services:any):void;
     }
 
-    export module service {
+    export namespace service {
 
         export interface IDomUtilityService {
             eventStorage:any;

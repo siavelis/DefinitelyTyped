@@ -9,12 +9,12 @@ interface PopcornStatic {
     (callback: Function): PopcornImpl;
     (selector: string, options?: any): PopcornImpl;
 
-    plugin:{
+    plugin: {
         (pluginName: string, info: PopcornPlugin, manifest?: any);
         debug: boolean;
         errors: any[];
     };
-    util:{
+    util: {
         toSeconds(smpte: string, fps?: number): number;
     };
 

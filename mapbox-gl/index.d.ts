@@ -757,7 +757,7 @@ declare namespace mapboxgl {
 		moveend?: {data: mapboxgl.MapMouseEvent | mapboxgl.MapTouchEvent};
 		move?: {data: mapboxgl.MapMouseEvent | mapboxgl.MapTouchEvent};
 		movestart?: {data: mapboxgl.MapMouseEvent | mapboxgl.MapTouchEvent};
-		mouseout?:{data: mapboxgl.MapMouseEvent};
+		mouseout?: {data: mapboxgl.MapMouseEvent};
 		load?: void;
 		zoomend?: {data: mapboxgl.MapMouseEvent | mapboxgl.MapTouchEvent};
 		zoom?: {data: mapboxgl.MapMouseEvent | mapboxgl.MapTouchEvent};

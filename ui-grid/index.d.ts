@@ -1141,7 +1141,7 @@ declare namespace uiGrid {
         (grid: IGridInstanceOf<TEntity>, columns: Array<IGridColumnOf<TEntity>>): void;
     }
 
-    export module cellNav {
+    export namespace cellNav {
         /**
          * Column Definitions for cellNav feature, these are available to be set using the ui-grid
          * gridOptions.columnDefs
@@ -1303,7 +1303,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module edit {
+    export namespace edit {
         /**
          * Edit related Column Definition
          */
@@ -1502,7 +1502,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module expandable {
+    export namespace expandable {
         /**
          * Options for configuring the expandable feature, these are available to be set using the ui-grid gridOptions
          */
@@ -1593,7 +1593,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module exporter {
+    export namespace exporter {
         /**
          * ColumnDef settings for exporter
          */
@@ -1847,7 +1847,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module grouping {
+    export namespace grouping {
         /**
          * ColumnDef for grouping feature, these are available to be set using the ui-grid gridOptions.columnDefs
          */
@@ -2055,7 +2055,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module importer {
+    export namespace importer {
         /**
          * GridOptions for importer feature, these are available to be set using the ui-grid gridOptions
          */
@@ -2171,7 +2171,7 @@ declare namespace uiGrid {
     /**
      * This module provides infinite scroll functionality to ui-grid
      */
-    export module infiniteScroll {
+    export namespace infiniteScroll {
         /**
          * GridOptions for infinite scroll feature, these are available to be set using the ui-grid gridOptions
          */
@@ -2279,7 +2279,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module moveColumns {
+    export namespace moveColumns {
         /**
          * Column Definition for move column features.
          * These are available to be set using the ui-grid `gridOptions.columnDefs`
@@ -2328,7 +2328,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module pagination {
+    export namespace pagination {
         /**
          * Pagination related grid options
          */
@@ -2421,7 +2421,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module pinning {
+    export namespace pinning {
         /**
          * ColumnDef for pinning feature, these are available to be set using the ui-grid gridOptions.columnDefs
          */
@@ -2494,7 +2494,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module resizeColumns {
+    export namespace resizeColumns {
         /**
          * ColumnDef for resizeColumns feature, these are available to be set using the ui-grid gridOptions.columnDefs
          */
@@ -2542,7 +2542,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module rowEdit {
+    export namespace rowEdit {
         /**
          * Row Edit Grid Options
          */
@@ -2627,7 +2627,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module saveState {
+    export namespace saveState {
         /**
          * Save State Grid Options
          */
@@ -2796,7 +2796,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module selection {
+    export namespace selection {
         /**
          * GridOptions for selection feature, these are available to be set using the ui-grid gridOptions
          */
@@ -3015,7 +3015,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module treeBase {
+    export namespace treeBase {
         /**
          * ColumnDef for tree feature, these are available to be set using the ui-grid gridOptions.columnDefs
          */
@@ -3266,7 +3266,7 @@ declare namespace uiGrid {
         }
     }
 
-    export module treeView {
+    export namespace treeView {
         /**
          * GridOptions for treeView feature, these are available to be set using the ui-grid gridOptions
          *

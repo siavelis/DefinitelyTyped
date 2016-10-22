@@ -190,7 +190,7 @@ declare namespace lunr
      */
     class Pipeline
     {
-        registeredFunctions:{[label: string]: Function};
+        registeredFunctions: {[label: string]: Function};
 
 
         /**
@@ -503,7 +503,7 @@ declare namespace lunr
 
         _ref: string;
 
-        _idfCache:{[key: string]: string};
+        _idfCache: {[key: string]: string};
 
 
         /**
@@ -543,7 +543,7 @@ declare namespace lunr
          * @param fieldName  The name of the field within the document that
          * @param options    An optional boost that can be applied to terms in this field.
          */
-        field(fieldName: string, options?:{boost?: number}): Index;
+        field(fieldName: string, options?: {boost?: number}): Index;
 
 
         /**
@@ -709,7 +709,7 @@ declare namespace lunr
      */
     class Store<T>
     {
-        store:{[id: string]: SortedSet<T>};
+        store: {[id: string]: SortedSet<T>};
 
         length: number;
 
@@ -776,9 +776,9 @@ declare namespace lunr
      */
     class TokenStore
     {
-        root:{[token: string]: TokenStore};
+        root: {[token: string]: TokenStore};
 
-        docs:{[ref: string]: ITokenDocument};
+        docs: {[ref: string]: ITokenDocument};
 
         length: number;
 
@@ -821,7 +821,7 @@ declare namespace lunr
          * @param token  The token to get the documents for.
          * @param root   An optional node at which to start.
          */
-        get(token: string, root: TokenStore):{[ref: string]: ITokenDocument};
+        get(token: string, root: TokenStore): {[ref: string]: ITokenDocument};
 
 
         count(token: string, root: TokenStore): number;

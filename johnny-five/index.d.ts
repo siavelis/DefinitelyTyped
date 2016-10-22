@@ -212,7 +212,7 @@ export declare module IR {
         max: Array<number>;
     }
 
-    export module Reflect {
+    export namespace Reflect {
         export class Array {
             constructor(option: ArrayOption);
             enable(): void;

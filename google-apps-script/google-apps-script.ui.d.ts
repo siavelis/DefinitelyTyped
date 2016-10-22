@@ -6,7 +6,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module UI {
+  export namespace UI {
     /**
      *
      * Deprecated. The UI service was

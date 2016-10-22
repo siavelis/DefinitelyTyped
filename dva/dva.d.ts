@@ -8,7 +8,7 @@ declare module 'dva' {
     /** connecting Container Components */
     export function connect(maps: Object): Function;
 
-    export default function dva(opts?: Object):{
+    export default function dva(opts?: Object): {
 
         /** dva plugin */
         use: (hooks: Object) => void,

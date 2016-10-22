@@ -102,7 +102,7 @@ declare namespace QioFS {
 	//this should return a q-io/fs-mock MockFS
 	export function reroot(path: string): typeof QioFS;
 
-	export function toObject(path: string):{[path: string]: Buffer};
+	export function toObject(path: string): {[path: string]: Buffer};
 
 	//listed but not implemented by Q-io
 	//export function glob(pattern): Q.Promise<string[]>;

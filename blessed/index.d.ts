@@ -16,9 +16,9 @@ declare namespace Blessed {
         showCursor: any;
     }
 
-    export module Widgets {
+    export namespace Widgets {
 
-        export module Types {
+        export namespace Types {
 
             export type TTopLeft = string | number | "center";
 
@@ -41,9 +41,9 @@ declare namespace Blessed {
                 hover?: boolean;
                 focus?: boolean;
                 label?: string;
-                track?: {bg?: string; fg?: string;};
-                scrollbar?: {bg?: string; fg?: string;};
-            }
+                track?: {bg?: string; fg?: string};
+                scrollbar?: {bg?: string; fg?: string};
+            };
 
             export type TBorder = {
                 /**
@@ -64,7 +64,7 @@ declare namespace Blessed {
                 */
                 bold?: string;
                 underline?: string;
-            }
+            };
 
             export type TCursor = {
                 /**
@@ -83,7 +83,7 @@ declare namespace Blessed {
                  * Color of the color. Accepts any valid color value (null is default).
                 */
                 color: string;
-            }
+            };
 
             export type TAlign = "left" | "center" | "right";
 
@@ -128,10 +128,10 @@ declare namespace Blessed {
                  * Color of the color. Accepts any valid color value (null is default).
                 */
                 color: string;
-            }
+            };
         }
 
-        export module Events {
+        export namespace Events {
 
             export interface IMouseEventArg {
                 x: number;
@@ -261,15 +261,15 @@ declare namespace Blessed {
             /**
              * An object for any miscellanous user data.
             */
-            data: {[index: string]: any;};
+            data: {[index: string]: any};
             /**
              * An object for any miscellanous user data.
             */
-            _: {[index: string]: any;};
+            _: {[index: string]: any};
             /**
              * An object for any miscellanous user data.
             */
-            $: {[index: string]: any;};
+            $: {[index: string]: any};
             /**
              * Type of the node (e.g. box).
             */
@@ -1156,7 +1156,7 @@ declare namespace Blessed {
             yl: number;
             yi: number;
             base: number;
-            _contentEnd: {x: number; y: number;};
+            _contentEnd: {x: number; y: number};
             notop: Types.TTopLeft;
             noleft: Types.TTopLeft;
             noright: Types.TPosition;
@@ -1496,7 +1496,7 @@ declare namespace Blessed {
              * Object enabling a scrollbar.
              * Style of the scrollbar track if present (takes regular style options).
             */
-            scrollbar?: { style?: any; track?: any; ch?: string; }
+            scrollbar?: { style?: any; track?: any; ch?: string; };
         }
 
         export interface ScrollableTextOptions extends ScrollableBoxOptions {
@@ -1837,18 +1837,18 @@ declare namespace Blessed {
             /**
              * Refresh the file list (perform a readdir on cwd and update the list items).
             */
-            refresh(cwd:string, callback: () => void): void;
+            refresh(cwd: string, callback: () => void): void;
             refresh(callback: () => void): void;
             refresh(): void;
             /**
              * Pick a single file and return the path in the callback.
             */
-            pick(cwd:string, callback: () => void): void;
+            pick(cwd: string, callback: () => void): void;
             pick(callback: () => void): void;
             /**
              * Reset back to original cwd.
             */
-            reset(cwd:string, callback: () => void): void;
+            reset(cwd: string, callback: () => void): void;
             reset(callback: () => void): void;
             reset(): void;
 
@@ -2397,11 +2397,11 @@ declare namespace Blessed {
             /**
              * progress the bar by a fill amount.
              * */
-            progress(amount:number): void;
+            progress(amount: number): void;
             /**
              * set progress to specific amount.
              * */
-            setProgress(amount:number): void;
+            setProgress(amount: number): void;
             /**
              * reset the bar.
              * */
@@ -2449,11 +2449,11 @@ declare namespace Blessed {
             /**
              * add a log line.
              * */
-            log(text:string): void;
+            log(text: string): void;
             /**
              * add a log line.
              * */
-            add(text:string): void;
+            add(text: string): void;
         }
 
         export interface TableOptions extends BoxOptions {
@@ -2501,15 +2501,15 @@ declare namespace Blessed {
             /**
              * handler for input data.
              * */
-            handler?: (userInput:Buffer) => void;
+            handler?: (userInput: Buffer) => void;
             /**
              * name of shell. $SHELL by default.
              * */
-            shell?:string;
+            shell?: string;
             /**
              * args for shell.
              * */
-            args?:any;
+            args?: any;
             /**
              * can be line, underline, and block.
              * */
@@ -2540,12 +2540,12 @@ declare namespace Blessed {
             /**
              * write data to the terminal.
              * */
-            write(data:string): void;
+            write(data: string): void;
 
             /**
              * nearly identical to `element.screenshot`, however, the specified region includes the terminal's _entire_ scrollback, rather than just what is visible on the screen.
              * */
-            screenshot(xi?:number, xl?:number, yi?:number, yl?:number): string;
+            screenshot(xi?: number, xl?: number, yi?: number, yl?: number): string;
         }
 
         export interface ImageOptions extends BoxOptions {
@@ -2609,7 +2609,7 @@ declare namespace Blessed {
          * Convert any .png file (or .gif, see below) to an ANSI image and display it as an element.
          * */
         export class ANSIImageElement extends BoxElement implements IHasOptions<ANSIImageOptions> {
-            constructor(options?:ANSIImageOptions);
+            constructor(options?: ANSIImageOptions);
 
             options: ANSIImageOptions;
 
@@ -2678,7 +2678,7 @@ declare namespace Blessed {
             /**
              * get the size of an image file in pixels.
              * */
-            imageSize(img:string, callback: () => void): void;
+            imageSize(img: string, callback: () => void): void;
             /**
              * get the size of the terminal in pixels.
              * */
@@ -2759,11 +2759,11 @@ declare namespace Blessed {
                 name. The `attr` string can be of the form `red fg` or `52 bg` where `52` is a 0-255
                 integer color number.
             */
-            text (text:string, attr:string): string;
+            text (text: string, attr: string): string;
         }
     }
 
-    export module widget {
+    export namespace widget {
         export class Element extends Widgets.BlessedElement { }
         export class Node extends Widgets.Node { }
         export class Screen extends Widgets.Screen { }
@@ -2830,7 +2830,7 @@ declare namespace Blessed {
     export function escape(item: any): any;
     export const colors: {
         match: (hexColor: string) => string
-    }
+    };
 }
 
 export = Blessed;

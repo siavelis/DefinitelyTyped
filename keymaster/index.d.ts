@@ -14,7 +14,7 @@ interface KeymasterEvent {
 }
 
 interface KeyHandler {
-    (keyboardEvent: KeyboardEvent, keymasterEvent: KeymasterEvent) : void;
+    (keyboardEvent: KeyboardEvent, keymasterEvent: KeymasterEvent): void;
 }
 
 interface FilterEvent {

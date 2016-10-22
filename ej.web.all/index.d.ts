@@ -34,8 +34,8 @@ declare module ej {
     function cancelEvent(): string;
     function copyObject(): string;
     function createObject(nameSpace: string, value: Object, initIn: any): JQuery;
-    function createObject(element : any , eventEmitter : any, model : any): any;
-	function getObject<T>(element : string, model : any ): T;
+    function createObject(element: any , eventEmitter: any, model: any): any;
+	function getObject<T>(element: string, model: any ): T;
     function defineClass(className: string, constructor: any, proto: Object, replace: boolean): Object;
     function destroyWidgets(element: Object): void;
     function endEvent(): string;
@@ -116,14 +116,14 @@ declare module ej {
 	var util: {
         valueFunction(val: string): any;
     }
-    export module device {
+    export namespace device {
         function isAndroid(): boolean;
         function isIOS(): boolean;
         function isFlat(): boolean;
         function isIOS7(): boolean;
         function isWindows(): boolean;
     }
-    export module widget {
+    export namespace widget {
         var autoInit: boolean;
         var registeredInstances: Array<any>;
         var registeredWidgets: Array<any>;
@@ -512,7 +512,7 @@ class Draggable extends ej.Widget {
 	*/
 	_destroy(): void;
 }
-export module Draggable{
+export namespace Draggable{
 
 export interface Model {
 
@@ -670,7 +670,7 @@ class Droppable extends ej.Widget {
 	*/
 	_destroy(): void;
 }
-export module Droppable{
+export namespace Droppable{
 
 export interface Model {
 
@@ -764,7 +764,7 @@ class Resizable extends ej.Widget {
 	*/
 	_destroy(): void;
 }
-export module Resizable{
+export namespace Resizable{
 
 export interface Model {
 
@@ -973,7 +973,7 @@ class Scroller extends ej.Widget {
 	*/
 	scrollY(): void;
 }
-export module Scroller{
+export namespace Scroller{
 
 export interface Model {
 
@@ -1236,7 +1236,7 @@ class Accordion extends ej.Widget {
 	*/
 	show(): void;
 }
-export module Accordion{
+export namespace Accordion{
 
 export interface Model {
 
@@ -1723,7 +1723,7 @@ class Autocomplete extends ej.Widget {
 	*/
 	selectValueByText(Text: string): void;
 }
-export module Autocomplete{
+export namespace Autocomplete{
 
 export interface Model {
 
@@ -2263,7 +2263,7 @@ class Button extends ej.Widget {
 	*/
 	enable(): void;
 }
-export module Button{
+export namespace Button{
 
 export interface Model {
 
@@ -2463,7 +2463,7 @@ class Captcha extends ej.Widget {
 	model: Captcha.Model;
 	defaults: Captcha.Model;
 }
-export module Captcha{
+export namespace Captcha{
 
 export interface Model {
 
@@ -2993,7 +2993,7 @@ class ListBox extends ej.Widget {
 	*/
 	showAllItems(): void;
 }
-export module ListBox{
+export namespace ListBox{
 
 export interface Model {
 
@@ -3763,7 +3763,7 @@ class Calculate {
 	*/
 	computeFormula(Formula: string): string;
 }
-export module Calculate{
+export namespace Calculate{
 
 export interface Model {
 }
@@ -3796,7 +3796,7 @@ class CheckBox extends ej.Widget {
 	*/
 	isChecked(): boolean;
 }
-export module CheckBox{
+export namespace CheckBox{
 
 export interface Model {
 
@@ -4050,7 +4050,7 @@ class ColorPicker extends ej.Widget {
 	*/
 	show(): void;
 }
-export module ColorPicker{
+export namespace ColorPicker{
 
 export interface Model {
 
@@ -4474,7 +4474,7 @@ class FileExplorer extends ej.Widget {
 	*/
 	removeToolbarItem(item: string|HTMLElement): void;
 }
-export module FileExplorer{
+export namespace FileExplorer{
 
 export interface Model {
 
@@ -5210,7 +5210,7 @@ class DatePicker extends ej.Widget {
 	*/
 	show(): void;
 }
-export module DatePicker{
+export namespace DatePicker{
 
 export interface Model {
 
@@ -5829,7 +5829,7 @@ class DateTimePicker extends ej.Widget {
 	*/
 	show(): void;
 }
-export module DateTimePicker{
+export namespace DateTimePicker{
 
 export interface Model {
 
@@ -6339,7 +6339,7 @@ class Dialog extends ej.Widget {
 	*/
 	focus(): void;
 }
-export module Dialog{
+export namespace Dialog{
 
 export interface Model {
 
@@ -6999,7 +6999,7 @@ class DropDownList extends ej.Widget {
 	*/
 	unselectItemByValue(index: string|number|Array<any>): void;
 }
-export module DropDownList{
+export namespace DropDownList{
 
 export interface Model {
 
@@ -7897,7 +7897,7 @@ class Tooltip extends ej.Widget {
 	*/
 	show(effect?: string, func?: Function, target?: JQuery): void;
 }
-export module Tooltip{
+export namespace Tooltip{
 
 export interface Model {
 
@@ -8351,7 +8351,7 @@ class Editor extends ej.Widget {
 
  class PercentageTextbox extends Editor{
 }
-export module Editor{
+export namespace Editor{
 
 export interface Model {
 
@@ -8745,7 +8745,7 @@ class ListView extends ej.Widget {
 	*/
 	unCheckItem(index: number): void;
 }
-export module ListView{
+export namespace ListView{
 
 export interface Model {
 
@@ -9125,7 +9125,7 @@ class MaskEdit extends ej.Widget {
 	*/
 	get_UnstrippedValue(): string;
 }
-export module MaskEdit{
+export namespace MaskEdit{
 
 export interface Model {
 
@@ -9584,7 +9584,7 @@ class Menu extends ej.Widget {
 	*/
 	showItems(): void;
 }
-export module Menu{
+export namespace Menu{
 
 export interface Model {
 
@@ -9984,7 +9984,7 @@ class Pager extends ej.Widget {
 	*/
 	refreshPager(): void;
 }
-export module Pager{
+export namespace Pager{
 
 export interface Model {
 
@@ -10106,7 +10106,7 @@ class ProgressBar extends ej.Widget {
 	*/
 	getValue(): number;
 }
-export module ProgressBar{
+export namespace ProgressBar{
 
 export interface Model {
 
@@ -10308,7 +10308,7 @@ class RadioButton extends ej.Widget {
 	*/
 	enable(): void;
 }
-export module RadioButton{
+export namespace RadioButton{
 
 export interface Model {
 
@@ -10520,7 +10520,7 @@ class Rating extends ej.Widget {
 	*/
 	show(): void;
 }
-export module Rating{
+export namespace Rating{
 
 export interface Model {
 
@@ -10911,7 +10911,7 @@ class Ribbon extends ej.Widget {
 	*/
 	removeBackStageItem(index: number): void;
 }
-export module Ribbon{
+export namespace Ribbon{
 
 export interface Model {
 
@@ -11987,7 +11987,7 @@ class Kanban extends ej.Widget {
 
 	KanbanEdit: Kanban.KanbanEdit;
 }
-export module Kanban{
+export namespace Kanban{
 
 export interface KanbanSelection {
 
@@ -13219,7 +13219,7 @@ class Rotator extends ej.Widget {
 	*/
 	updateTemplateById(index: number, id: string): void;
 }
-export module Rotator{
+export namespace Rotator{
 
 export interface Model {
 
@@ -13735,7 +13735,7 @@ class RTE extends ej.Widget {
 	*/
 	show(): void;
 }
-export module RTE{
+export namespace RTE{
 
 export interface Model {
 
@@ -14379,7 +14379,7 @@ class Slider extends ej.Widget {
 	*/
 	setValue(): void;
 }
-export module Slider{
+export namespace Slider{
 
 export interface Model {
 
@@ -14714,7 +14714,7 @@ class SplitButton extends ej.Widget {
 	*/
 	show(): void;
 }
-export module SplitButton{
+export namespace SplitButton{
 
 export interface Model {
 
@@ -15068,7 +15068,7 @@ class Splitter extends ej.Widget {
 	*/
 	removeItem(index: number): void;
 }
-export module Splitter{
+export namespace Splitter{
 
 export interface Model {
 
@@ -15315,7 +15315,7 @@ class Tab extends ej.Widget {
 	*/
 	showItem(index: number): void;
 }
-export module Tab{
+export namespace Tab{
 
 export interface Model {
 
@@ -15858,7 +15858,7 @@ class TagCloud extends ej.Widget {
 	*/
 	removeAt(position: number): void;
 }
-export module TagCloud{
+export namespace TagCloud{
 
 export interface Model {
 
@@ -16100,7 +16100,7 @@ class TimePicker extends ej.Widget {
 	*/
 	show(): void;
 }
-export module TimePicker{
+export namespace TimePicker{
 
 export interface Model {
 
@@ -16489,7 +16489,7 @@ class ToggleButton extends ej.Widget {
 	*/
 	enable(): void;
 }
-export module ToggleButton{
+export namespace ToggleButton{
 
 export interface Model {
 
@@ -16766,7 +16766,7 @@ class Toolbar extends ej.Widget {
 	*/
 	show(): void;
 }
-export module Toolbar{
+export namespace Toolbar{
 
 export interface Model {
 
@@ -17341,7 +17341,7 @@ class TreeView extends ej.Widget {
 	*/
 	updateText(target: string|any, newText: string): void;
 }
-export module TreeView{
+export namespace TreeView{
 
 export interface Model {
 
@@ -18719,7 +18719,7 @@ class Uploadbox extends ej.Widget {
 	*/
 	refresh(): void;
 }
-export module Uploadbox{
+export namespace Uploadbox{
 
 export interface Model {
 
@@ -19216,7 +19216,7 @@ class WaitingPopup extends ej.Widget {
 	*/
 	show(): void;
 }
-export module WaitingPopup{
+export namespace WaitingPopup{
 
 export interface Model {
 
@@ -19852,7 +19852,7 @@ class Grid extends ej.Widget {
 	*/
 	windowonresize(): void;
 }
-export module Grid{
+export namespace Grid{
 
 export interface Model {
 
@@ -22876,7 +22876,7 @@ class Sparkline extends ej.Widget {
 	*/
 	redraw(): void;
 }
-export module Sparkline{
+export namespace Sparkline{
 
 export interface Model {
 
@@ -23502,7 +23502,7 @@ class PivotGrid extends ej.Widget {
 	*/
 	renderControlFromJSON(): void;
 }
-export module PivotGrid{
+export namespace PivotGrid{
 
 export interface Model {
 
@@ -24440,7 +24440,7 @@ class PivotSchemaDesigner extends ej.Widget {
 	*/
 	doAjaxPost(): void;
 }
-export module PivotSchemaDesigner{
+export namespace PivotSchemaDesigner{
 
 export interface Model {
 
@@ -24663,7 +24663,7 @@ class PivotPager extends ej.Widget {
 	*/
 	initPagerProperties(): void;
 }
-export module PivotPager{
+export namespace PivotPager{
 
 export interface Model {
 
@@ -24749,7 +24749,7 @@ class PivotChart extends ej.Widget {
 	*/
 	renderControlSuccess(): void;
 }
-export module PivotChart{
+export namespace PivotChart{
 
 export interface Model {
 
@@ -25189,7 +25189,7 @@ class PivotClient extends ej.Widget {
 	*/
 	doPostBack(): void;
 }
-export module PivotClient{
+export namespace PivotClient{
 
 export interface Model {
 
@@ -25670,7 +25670,7 @@ class PivotGauge extends ej.Widget {
 	*/
 	renderControlFromJSON(): void;
 }
-export module PivotGauge{
+export namespace PivotGauge{
 
 export interface Model {
 
@@ -26121,7 +26121,7 @@ class PivotTreeMap extends ej.Widget {
 	*/
 	renderControlSuccess(): void;
 }
-export module PivotTreeMap{
+export namespace PivotTreeMap{
 
 export interface Model {
 
@@ -26541,7 +26541,7 @@ class Schedule extends ej.Widget {
 	*/
 	refreshAppointments(): void;
 }
-export module Schedule{
+export namespace Schedule{
 
 export interface Model {
 
@@ -28198,7 +28198,7 @@ class RecurrenceEditor extends ej.Widget {
 	*/
 	recurrenceRuleSplit(recurrenceRule: string, exDate: any): void;
 }
-export module RecurrenceEditor{
+export namespace RecurrenceEditor{
 
 export interface Model {
 
@@ -28386,7 +28386,7 @@ class Gantt extends ej.Widget {
 	*/
 	showColumn(headerText: string): void;
 }
-export module Gantt{
+export namespace Gantt{
 
 export interface Model {
 
@@ -29915,7 +29915,7 @@ class ReportViewer extends ej.Widget {
 	*/
 	refresh(): void;
 }
-export module ReportViewer{
+export namespace ReportViewer{
 
 export interface Model {
 
@@ -30581,7 +30581,7 @@ class TreeGrid extends ej.Widget {
 	*/
 	sortColumn(columnName: string, columnSortDirection: string): void;
 }
-export module TreeGrid{
+export namespace TreeGrid{
 
 export interface Model {
 
@@ -31982,7 +31982,7 @@ class GroupButton extends ej.Widget {
 	*/
 	showItem(element: JQuery): void;
 }
-export module GroupButton{
+export namespace GroupButton{
 
 export interface Model {
 
@@ -32247,7 +32247,7 @@ class NavigationDrawer extends ej.Widget {
 	*/
 	toggle(): void;
 }
-export module NavigationDrawer{
+export namespace NavigationDrawer{
 
 export interface Model {
 
@@ -32436,7 +32436,7 @@ class RadialMenu extends ej.Widget {
 	*/
 	hideBadge(): void;
 }
-export module RadialMenu{
+export namespace RadialMenu{
 
 export interface Model {
 
@@ -32615,7 +32615,7 @@ class Tile extends ej.Widget {
 	*/
 	updateTemplate(id: string, index: number): void;
 }
-export module Tile{
+export namespace Tile{
 
 export interface Model {
 
@@ -32962,7 +32962,7 @@ class RadialSlider extends ej.Widget {
 	*/
 	hide(): void;
 }
-export module RadialSlider{
+export namespace RadialSlider{
 
 export interface Model {
 
@@ -33714,7 +33714,7 @@ class Spreadsheet extends ej.Widget {
 
 	XLValidate: Spreadsheet.XLValidate;
 }
-export module Spreadsheet{
+export namespace Spreadsheet{
 
 export interface XLCellType {
 
@@ -36288,7 +36288,7 @@ class PdfViewer extends ej.Widget {
 	*/
 	zoomTo(): void;
 }
-export module PdfViewer{
+export namespace PdfViewer{
 
 export interface Model {
 
@@ -36539,7 +36539,7 @@ class SymbolPalette extends ej.Widget {
 	model: SymbolPalette.Model;
 	defaults: SymbolPalette.Model;
 }
-export module SymbolPalette{
+export namespace SymbolPalette{
 
 export interface Model {
 
@@ -37081,7 +37081,7 @@ class LinearGauge extends ej.Widget {
 	*/
 	setTickYDistanceFromScale(): void;
 }
-export module LinearGauge{
+export namespace LinearGauge{
 
 export interface Model {
 
@@ -39122,7 +39122,7 @@ class CircularGauge extends ej.Widget {
 	*/
 	setTickWidth(): void;
 }
-export module CircularGauge{
+export namespace CircularGauge{
 
 export interface Model {
 
@@ -40756,7 +40756,7 @@ class DigitalGauge extends ej.Widget {
 	*/
 	setValue(itemIndex: number, value: string): void;
 }
-export module DigitalGauge{
+export namespace DigitalGauge{
 
 export interface Model {
 
@@ -41151,7 +41151,7 @@ class Chart extends ej.Widget {
 	*/
 	redraw(): void;
 }
-export module Chart{
+export namespace Chart{
 
 export interface Model {
 
@@ -47163,7 +47163,7 @@ class RangeNavigator extends ej.Widget {
 	*/
 	_destroy(): void;
 }
-export module RangeNavigator{
+export namespace RangeNavigator{
 
 export interface Model {
 
@@ -48292,7 +48292,7 @@ class BulletGraph extends ej.Widget {
 	*/
 	setFeatureMeasureBarValue(): void;
 }
-export module BulletGraph{
+export namespace BulletGraph{
 
 export interface Model {
 
@@ -49321,7 +49321,7 @@ class Barcode extends ej.Widget {
 	*/
 	enable(): void;
 }
-export module Barcode{
+export namespace Barcode{
 
 export interface Model {
 
@@ -49502,7 +49502,7 @@ class Map extends ej.Widget {
 	*/
 	zoom(level: number, isAnimate: boolean): void;
 }
-export module Map{
+export namespace Map{
 
 export interface Model {
 
@@ -50253,7 +50253,7 @@ class TreeMap extends ej.Widget {
 	*/
 	refresh(): void;
 }
-export module TreeMap{
+export namespace TreeMap{
 
 export interface Model {
 
@@ -51085,7 +51085,7 @@ class Diagram extends ej.Widget {
 	*/
 	zoomTo(zoom: any): void;
 }
-export module Diagram{
+export namespace Diagram{
 
 export interface Options {
 
@@ -54750,7 +54750,7 @@ class HeatMap extends ej.Widget {
 	model: HeatMap.Model;
 	defaults: HeatMap.Model;
 }
-export module HeatMap{
+export namespace HeatMap{
 
 export interface Model {
 
@@ -55101,7 +55101,7 @@ class HeatMapLegend extends ej.Widget {
 	model: HeatMapLegend.Model;
 	defaults: HeatMapLegend.Model;
 }
-export module HeatMapLegend{
+export namespace HeatMapLegend{
 
 export interface Model {
 
@@ -55229,7 +55229,7 @@ class Sparkline extends ej.Widget {
 	*/
 	redraw(): void;
 }
-export module Sparkline{
+export namespace Sparkline{
 
 export interface Model {
 
@@ -55820,7 +55820,7 @@ class Overview extends ej.Widget {
 	model: Overview.Model;
 	defaults: Overview.Model;
 }
-export module Overview{
+export namespace Overview{
 
 export interface Model {
 

@@ -327,7 +327,7 @@ declare namespace Materialize {
     }
 }
 
-declare var Materialize : Materialize.Materialize;
+declare var Materialize: Materialize.Materialize;
 
 interface JQuery {
 

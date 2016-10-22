@@ -38,7 +38,7 @@ declare namespace gapi {
     /**
      * Pragmatically initialize gapi class member.
      */
-    export function load(object: string, fn: any) : any;
+    export function load(object: string, fn: any): any;
 
 }
 
@@ -212,14 +212,14 @@ declare namespace gapi.client {
             /**
          * HttpRequest supports promises.
          */
-        then(success: (response:{
+        then(success: (response: {
                 result:T;
                 body:string;
                 headers?: any[];
                 status?: number;
                 statusText?: string
             }) => void,
-            failure: (response:{
+            failure: (response: {
                 result:T;
                 body:string;
                 headers?: any[];

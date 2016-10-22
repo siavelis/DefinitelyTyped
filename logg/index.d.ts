@@ -31,7 +31,7 @@ interface loggingLevels {
 declare module "logg" {
     export function getLogger(name: string): Logger;
     export function getTransientLogger(name: string): Logger;
-    export var Level : loggingLevels;
+    export var Level: loggingLevels;
     export var rootLogger: Logger;
     export var registerWatcher: (watcher: (logRecord: string)=> void)=> void;
 }

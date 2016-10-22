@@ -45,7 +45,7 @@ declare module "spectacle" {
 	}
 
 	export interface SpectacleProps {
-		theme?:{ [key: string ]: string | number };
+		theme?: { [key: string ]: string | number };
 	}
 
 	export interface DeckProps {
@@ -65,7 +65,7 @@ declare module "spectacle" {
 
 	export interface MarkdownProps {
 		source?: string;
-		mdastConfig?:{ [key: string ]: string | number };
+		mdastConfig?: { [key: string ]: string | number };
 	}
 
 	export interface CodePaneProps extends BaseProps {

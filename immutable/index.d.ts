@@ -132,7 +132,7 @@ declare namespace Immutable {
    * "unset" index and an index set to `undefined`. `List#forEach` visits all
    * indices from 0 to size, regardless of whether they were explicitly defined.
    */
-  export module List {
+  export namespace List {
 
     /**
      * True if the provided value is a List
@@ -423,7 +423,7 @@ declare namespace Immutable {
    *
    * Implemented by a hash-array mapped trie.
    */
-  export module Map {
+  export namespace Map {
 
     /**
      * True if the provided value is a Map
@@ -750,7 +750,7 @@ declare namespace Immutable {
    * stable.
    */
 
-  export module OrderedMap {
+  export namespace OrderedMap {
 
     /**
      * True if the provided value is an OrderedMap.
@@ -793,7 +793,7 @@ declare namespace Immutable {
    * `Immutable.is`, enabling Sets to uniquely include other Immutable
    * collections, custom value types, and NaN.
    */
-  export module Set {
+  export namespace Set {
 
     /**
      * True if the provided value is a Set
@@ -905,7 +905,7 @@ declare namespace Immutable {
    * consume more memory. `OrderedSet#add` is amortized O(log32 N), but not
    * stable.
    */
-  export module OrderedSet {
+  export namespace OrderedSet {
 
     /**
      * True if the provided value is an OrderedSet.
@@ -953,7 +953,7 @@ declare namespace Immutable {
    *
    * Stack is implemented with a Single-Linked List.
    */
-  export module Stack {
+  export namespace Stack {
 
     /**
      * True if the provided value is a Stack
@@ -1139,7 +1139,7 @@ declare namespace Immutable {
    *     myRecord.getAB() // 4
    *
    */
-  export module Record {
+  export namespace Record {
     export interface Class {
       new (): Map<string, any>;
       new (values: {[key: string]: any}): Map<string, any>;
@@ -1204,7 +1204,7 @@ declare namespace Immutable {
    *     // { x: 0, y: 2, z: 4 }
    */
 
-  export module Seq {
+  export namespace Seq {
     /**
      * True if `maybeSeq` is a Seq, it is not backed by a concrete
      * structure such as Map, List, or Set.
@@ -1220,7 +1220,7 @@ declare namespace Immutable {
     /**
      * `Seq` which represents key-value pairs.
      */
-    export module Keyed {}
+    export namespace Keyed {}
 
     /**
      * Always returns a Seq.Keyed, if input is not keyed, expects an
@@ -1281,7 +1281,7 @@ declare namespace Immutable {
      * Because `Seq` are often lazy, `Seq.Set` does not provide the same guarantee
      * of value uniqueness as the concrete `Set`.
      */
-    export module Set {
+    export namespace Set {
 
       /**
        * Returns a Seq.Set of the provided values
@@ -1379,7 +1379,7 @@ declare namespace Immutable {
    * Note: An iterable is always iterated in the same order, however that order
    * may not always be well defined, as is the case for the `Map` and `Set`.
    */
-  export module Iterable {
+  export namespace Iterable {
     /**
      * True if `maybeIterable` is an Iterable, or any of its subclasses.
      */
@@ -1414,7 +1414,7 @@ declare namespace Immutable {
      * tuple, in other words, `Iterable#entries` is the default iterator for
      * Keyed Iterables.
      */
-    export module Keyed {}
+    export namespace Keyed {}
 
     /**
      * Creates an Iterable.Keyed
@@ -1498,7 +1498,7 @@ declare namespace Immutable {
      * preserve indices, using them as keys, convert to a Iterable.Keyed by
      * calling `toKeyedSeq`.
      */
-    export module Indexed {}
+    export namespace Indexed {}
 
     /**
      * Creates a new Iterable.Indexed.
@@ -1668,7 +1668,7 @@ declare namespace Immutable {
      *     assert.equal(seq.every((v, k) => v === k), true);
      *
      */
-    export module Set {}
+    export namespace Set {}
 
     /**
      * Similar to `Iterable()`, but always returns a Iterable.Set.
@@ -2469,13 +2469,13 @@ declare namespace Immutable {
    * Implementations should extend one of the subclasses, `Collection.Keyed`,
    * `Collection.Indexed`, or `Collection.Set`.
    */
-  export module Collection {
+  export namespace Collection {
 
 
     /**
      * `Collection` which represents key-value pairs.
      */
-    export module Keyed {}
+    export namespace Keyed {}
 
     export interface Keyed<K, V> extends Collection<K, V>, Iterable.Keyed<K, V> {
 
@@ -2490,7 +2490,7 @@ declare namespace Immutable {
     /**
      * `Collection` which represents ordered indexed values.
      */
-    export module Indexed {}
+    export namespace Indexed {}
 
     export interface Indexed<T> extends Collection<number, T>, Iterable.Indexed<T> {
 
@@ -2507,7 +2507,7 @@ declare namespace Immutable {
      *
      * `Collection.Set` implementations should guarantee value uniqueness.
      */
-    export module Set {}
+    export namespace Set {}
 
     export interface Set<T> extends Collection<T, T>, Iterable.Set<T> {
 

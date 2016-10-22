@@ -287,8 +287,8 @@ interface Canvas{
 }
 var Canvas: Canvas;
 interface CodeParser{
-	collapseNames(obj: any):{ [key: string]: any; };
-	expandNames(obj:{ [key: string]: any; }): any;
+	collapseNames(obj: any): { [key: string]: any; };
+	expandNames(obj: { [key: string]: any; }): any;
 }
 var CodeParser: CodeParser;
 interface CollectionBind{
@@ -776,9 +776,9 @@ interface TreeAPI{
 }
 var TreeAPI: TreeAPI;
 interface TreeClick{
-	webix_tree_checkbox(obj: any, common:{ [key: string]: any; }): string;
-	webix_tree_close(obj: any, common:{ [key: string]: any; }): string;
-	webix_tree_open(obj: any, common:{ [key: string]: any; }): string;
+	webix_tree_checkbox(obj: any, common: { [key: string]: any; }): string;
+	webix_tree_close(obj: any, common: { [key: string]: any; }): string;
+	webix_tree_open(obj: any, common: { [key: string]: any; }): string;
 }
 var TreeClick: TreeClick;
 interface TreeCollection{
@@ -953,7 +953,7 @@ interface Values{
 	focus(item: string): void;
 	getCleanValues(): any;
 	getDirtyValues(): any;
-	getValues(details?: any):{ [key: string]: any; };
+	getValues(details?: any): { [key: string]: any; };
 	isDirty(): boolean;
 	markInvalid(name: string, state?: boolean|string): void;
 	setDirty(mark?: boolean): void;
@@ -2965,7 +2965,7 @@ interface datatable extends webix.ui.baseview{
 	getFilter(columnID:string|number):any;
 	getFirstId():string|number;
 	getFormView():webix.ui.baseview;
-	getHeaderContent(id:string|number):{ [key: string]: any; };
+	getHeaderContent(id:string|number): { [key: string]: any; };
 	getHeaderNode(columnId:string, rowIndex?:number):HTMLElement;
 	getIdByIndex(index:number):string|number;
 	getIndexById(id:string|number):number;
@@ -3452,7 +3452,7 @@ interface form extends webix.ui.baseview{
 	getParentView():any;
 	getScrollState():any;
 	getTopParentView():webix.ui.baseview;
-	getValues(details?:any):{ [key: string]: any; };
+	getValues(details?:any): { [key: string]: any; };
 	hasEvent(name:string):boolean;
 	hide():void;
 	index(obj:any):number;
@@ -3861,7 +3861,7 @@ interface htmlform extends webix.ui.baseview{
 	getParentView():any;
 	getScrollState():any;
 	getTopParentView():webix.ui.baseview;
-	getValues(details?:any):{ [key: string]: any; };
+	getValues(details?:any): { [key: string]: any; };
 	hasEvent(name:string):boolean;
 	hide():void;
 	isDirty():boolean;
@@ -5430,7 +5430,7 @@ interface property extends webix.ui.baseview{
 	getParentView():any;
 	getScrollState():any;
 	getTopParentView():webix.ui.baseview;
-	getValues():{ [key: string]: any; };
+	getValues(): { [key: string]: any; };
 	hasEvent(name:string):boolean;
 	hide():void;
 	isEnabled():boolean;
@@ -7567,7 +7567,7 @@ interface toolbar extends webix.ui.baseview{
 	getParentView():any;
 	getScrollState():any;
 	getTopParentView():webix.ui.baseview;
-	getValues(details?:any):{ [key: string]: any; };
+	getValues(details?:any): { [key: string]: any; };
 	hasEvent(name:string):boolean;
 	hide():void;
 	index(obj:any):number;
@@ -8129,7 +8129,7 @@ interface treetable extends webix.ui.baseview{
 	getFirstChildId(id:string|number):string;
 	getFirstId():string|number;
 	getFormView():webix.ui.baseview;
-	getHeaderContent(id:string|number):{ [key: string]: any; };
+	getHeaderContent(id:string|number): { [key: string]: any; };
 	getHeaderNode(columnId:string, rowIndex?:number):HTMLElement;
 	getIdByIndex(index:number):string|number;
 	getIndexById(id:string|number):number;

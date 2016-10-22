@@ -7,7 +7,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Groups {
+  export namespace Groups {
     /**
      * A group object whose members and those members' roles within the group
      *  can be queried.

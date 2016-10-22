@@ -14,9 +14,9 @@ interface TruncateOptions{
 }
 
 interface JQuery{
-    truncate(options: TruncateOptions) : JQuery;
+    truncate(options: TruncateOptions): JQuery;
 }
 
 interface JQueryStatic {
-    truncate(html: string, options: TruncateOptions) : string;
+    truncate(html: string, options: TruncateOptions): string;
 }

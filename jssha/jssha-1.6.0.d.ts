@@ -6,8 +6,8 @@
 
 declare namespace jsSHA {
     export interface OutputFormatOptions {
-        outputUpper? : boolean;
-        b64Pad? : string;
+        outputUpper?: boolean;
+        b64Pad?: string;
     }
 
     export interface jsSHA {

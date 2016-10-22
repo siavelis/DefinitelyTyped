@@ -113,13 +113,13 @@ declare namespace SP {
         fromJson(json: { High: number; Low: number; }): void;
     }
 
-    export module ListOperation {
-        export module ViewOperation {
+    export namespace ListOperation {
+        export namespace ViewOperation {
             export function getSelectedView(): string;
             export function navigateUp(viewId: string): void;
             export function refreshView(viewId: string): void;
         }
-        export module Selection {
+        export namespace Selection {
             export function selectListItem(iid: string, bSelect: boolean): void;
             export function getSelectedItems(): { id: number; fsObjType: FileSystemObjectType; }[];
             export function getSelectedList(): string;
@@ -127,7 +127,7 @@ declare namespace SP {
             export function navigateUp(viewId: string): void;
             export function deselectAllListItems(iid: string): void;
         }
-        export module Overrides {
+        export namespace Overrides {
             export function overrideDeleteConfirmation(listId: string, overrideText: string): void;
         }
     }
@@ -4972,8 +4972,8 @@ declare namespace SP {
         getByName(name: string): SP.WebTemplate;
     }
 
-    export module Application {
-        export module UI {
+    export namespace Application {
+        export namespace UI {
             export interface DefaultFormsInformationRequestor {
                 onDefaultFormsInformationRetrieveSuccess(defaultForms: SP.Application.UI.DefaultFormsInformation): void;
                 onDefaultFormsInformationRetrieveFailure(): void;
@@ -5074,7 +5074,7 @@ declare namespace SP {
     }
 
 
-    export module Analytics {
+    export namespace Analytics {
         export class AnalyticsUsageEntry extends SP.ClientObject {
             static logAnalyticsEvent(context: SP.ClientRuntimeContext, eventTypeId: number, itemId: string): void;
             static logAnalyticsEvent2(context: SP.ClientRuntimeContext, eventTypeId: number, itemId: string, rollupScopeId: SP.Guid, siteId: SP.Guid, userId: string): void;
@@ -5091,7 +5091,7 @@ declare namespace SP {
         }
     }
 
-    export module SiteHealth {
+    export namespace SiteHealth {
         export class SiteHealthResult extends SP.ClientValueObject {
             get_messageAsText(): string;
             get_ruleHelpLink(): string;
@@ -5679,7 +5679,7 @@ declare namespace Microsoft.SharePoint.Client.Search {
 }
 
 declare namespace SP {
-    export module BusinessData {
+    export namespace BusinessData {
         export class AppBdcCatalog extends SP.ClientObject {
             getEntity(namespace: string, name: string): SP.BusinessData.Entity;
             getLobSystemProperty(lobSystemName: string, propertyName: string): SP.StringResult;
@@ -5773,7 +5773,7 @@ declare namespace SP {
             getChildTypeDescriptors(): SP.BusinessData.Collections.TypeDescriptorCollection;
             getParentTypeDescriptor(): SP.BusinessData.TypeDescriptor;
         }
-        export module Collections {
+        export namespace Collections {
             export class EntityFieldCollection extends SP.ClientObjectCollection<SP.BusinessData.EntityField> {
                 itemAt(index: number): SP.BusinessData.EntityField;
                 get_item(index: number): SP.BusinessData.EntityField;
@@ -5801,7 +5801,7 @@ declare namespace SP {
             }
         }
 
-        export module Infrastructure {
+        export namespace Infrastructure {
             export class ExternalSubscriptionStore extends SP.ClientObject {
                 constructor(context: SP.ClientRuntimeContext, web: SP.Web);
                 static newObject(context: SP.ClientRuntimeContext, web: SP.Web): SP.BusinessData.Infrastructure.ExternalSubscriptionStore;
@@ -5809,7 +5809,7 @@ declare namespace SP {
             }
         }
 
-        export module Runtime {
+        export namespace Runtime {
             export enum EntityEventType {
                 none,
                 itemAdded,
@@ -5868,7 +5868,7 @@ declare namespace SP {
 }
 
 declare namespace SP {
-    export module Sharing {
+    export namespace Sharing {
         export class DocumentSharingManager {
             static getRoleDefinition(context: SP.ClientRuntimeContext, role: SP.Sharing.Role): SP.RoleDefinition;
             static isDocumentSharingEnabled(context: SP.ClientRuntimeContext, list: SP.List): SP.BooleanResult;
@@ -5906,7 +5906,7 @@ declare namespace SP {
 
 declare namespace SP {
 
-    export module Social {
+    export namespace Social {
         /** Identifies an actor as a user, document, site, or tag. */
         export enum SocialActorType {
             user,
@@ -6958,13 +6958,13 @@ declare namespace SP {
 }
 
 declare namespace SP {
-    export module DocumentSet {
+    export namespace DocumentSet {
         export class DocumentSet extends ClientObject {
             static create(context: ClientContext, parentFolder: Folder, name: string, ctid: ContentTypeId): StringResult;
         }
     }
 
-    export module Video {
+    export namespace Video {
         export class EmbedCodeConfiguration extends ClientValueObject {
             public get_autoPlay(): boolean;
             public set_autoPlay(value: boolean): boolean;
@@ -7005,8 +7005,8 @@ declare namespace SP {
 
 
 declare namespace SP {
-    export module UI {
-        export module ApplicationPages {
+    export namespace UI {
+        export namespace ApplicationPages {
             export class SelectorSelectionEventArgs extends Sys.EventArgs {
                 constructor(entities: any);
                 get_entities(): any;
@@ -7139,7 +7139,7 @@ declare namespace SP {
 }
 
 declare namespace SP {
-    export module UI {
+    export namespace UI {
         export class PopoutMenu implements Sys.IDisposable {
             constructor(launcherId: string, menuId: string, iconId: string, launcherOpenCssClass: string, textDirection: string, closeIconUrl: string, isClustered: boolean, closeIconOffsetLeft: number, closeIconOffsetTop: number, closeIconHeight: number, closeIconWidth: number);
             launchMenu(): void;
@@ -7161,7 +7161,7 @@ declare namespace SP {
             constructor();
         }
 
-        export module Notify {
+        export namespace Notify {
             export function addNotification(strHtml: string, bSticky: boolean): string;
             export function removeNotification(nid: string): void;
             export function showLoadingNotification(bSticky: boolean): string;
@@ -7191,7 +7191,7 @@ declare namespace SP {
             constructor();
         }
 
-        export module Workspace {
+        export namespace Workspace {
             export function add_resized(handler: () => void): void;
             export function remove_resized(handler: () => void): void;
         }
@@ -7410,12 +7410,12 @@ declare namespace SP {
             };
         }
 
-        export module Workplace {
+        export namespace Workplace {
             export function add_resized(handler: Function): void;
             export function remove_resized(handler: Function): void;
         }
 
-        export module UIUtility {
+        export namespace UIUtility {
             export function generateRandomElementId(): string;
             export function cancelEvent(evt: Event): void;
             export function clearChildNodes(elem: HTMLElement): void;
@@ -7459,8 +7459,8 @@ declare class SPStatusNotificationData {
 declare function RefreshCommandUI():void;
 
 declare namespace SP {
-    export module UI {
-        export module Controls {
+    export namespace UI {
+        export namespace Controls {
 
             export interface INavigationOptions {
                 assetId?: string;
@@ -7547,7 +7547,7 @@ declare namespace SP {
 
 declare namespace SP {
 
-    export module UserProfiles {
+    export namespace UserProfiles {
         /** Specifies types of changes made in the user profile store. */
         export enum ChangeTypes {
             /** No change was made */
@@ -7976,7 +7976,7 @@ declare namespace SP {
 
 declare namespace SP {
 
-    export module Utilities {
+    export namespace Utilities {
         export class Utility {
             lAYOUTS_LATESTVERSION_RELATIVE_URL: string;
             lAYOUTS_LATESTVERSION_URL: string;
@@ -8134,7 +8134,7 @@ declare namespace SP {
 
     }
 
-    export module DateTimeUtil {
+    export namespace DateTimeUtil {
         export class SimpleDate {
             constructor(year: number, month: number, day: number, era: number);
             get_year(): number;
@@ -8155,7 +8155,7 @@ declare namespace SP {
 }
 
 declare namespace SP {
-    export module WebParts {
+    export namespace WebParts {
         export class LimitedWebPartManager extends SP.ClientObject {
             get_hasPersonalizedParts(): boolean;
             get_scope(): SP.WebParts.PersonalizationScope;
@@ -8215,7 +8215,7 @@ declare namespace SP {
 }
 
 declare namespace SP {
-    export module Workflow {
+    export namespace Workflow {
         export class WorkflowAssociation extends SP.ClientObject {
             get_allowManual(): boolean;
             set_allowManual(value: boolean): void;
@@ -8613,7 +8613,7 @@ declare namespace SP.WorkflowServices {
 
 
 declare namespace SP {
-    export module Publishing {
+    export namespace Publishing {
         export class PublishingWeb extends ClientObject {
             static getPublishingWeb(context: ClientContext, web: Web): PublishingWeb;
 
@@ -8805,7 +8805,7 @@ declare namespace SP {
         }
 
 
-        export module Navigation {
+        export namespace Navigation {
             export enum NavigationLinkType {
                 root,
                 friendlyUrl,
@@ -9013,7 +9013,7 @@ declare namespace SP {
 }
 
 declare namespace SP {
-    export module CompliancePolicy {
+    export namespace CompliancePolicy {
         export enum SPContainerType {
             site,//: 0,
             web,//: 1,
@@ -9279,7 +9279,7 @@ declare namespace SP {
 
     }
 
-    export module Discovery {
+    export namespace Discovery {
 
         export enum ExportStatus {
             notStarted,//: 0,
@@ -9301,7 +9301,7 @@ declare namespace SP {
         }
     }
 
-    export module InformationPolicy {
+    export namespace InformationPolicy {
         export class ProjectPolicy extends SP.ClientObject {
             constructor(context: ClientRuntimeContext, objectPath: ObjectPath);
             get_description(): string;
@@ -9616,9 +9616,9 @@ declare class SPClientPeoplePickerProcessedUser {
 }
 
 declare namespace Microsoft {
-    export module Office {
-        export module Server {
-            export module ReputationModel {
+    export namespace Office {
+        export namespace Server {
+            export namespace ReputationModel {
                 export class Reputation {
                     constructor();
                     static setLike(context: SP.ClientContext, listId: string, itemId: number, like: boolean): void;
@@ -9764,7 +9764,7 @@ interface IListItem {
 
 /** Available only in SharePoint Online*/
 declare namespace ListModule {
-    export module Util {
+    export namespace Util {
         export function createViewEditUrl(renderCtx: SPClientTemplates.RenderContext, listItem: IListItem, useEditFormUrl?: boolean, appendSource?: boolean): string;
         export function createItemPropertiesTitle(renderCtx: SPClientTemplates.RenderContext, listItem: IListItem): string;
         export function clearSelectedItemsDict(context: any): void;
@@ -9786,7 +9786,7 @@ declare namespace SPThemeUtils {
 }
 
 declare namespace SP {
-    export module JsGrid {
+    export namespace JsGrid {
 
         export enum TextDirection {
             Default, //0,
@@ -9860,13 +9860,13 @@ declare namespace SP {
             None //0
         }
 
-        export module RowHeaderStyleId {
+        export namespace RowHeaderStyleId {
             export var Transfer: string; //'Transfer',
             export var Conflict: string; //'Conflict'
 
         }
 
-        export module RowHeaderAutoStyleId {
+        export namespace RowHeaderAutoStyleId {
             export var Dirty: string; //'Dirty',
             export var Error: string; //'Error',
             export var NewRow: string; //'NewRow'
@@ -9895,7 +9895,7 @@ declare namespace SP {
             PropBoth //4
         }
 
-        export module UserAction {
+        export namespace UserAction {
             export var UserEdit: string; //'User Edit':string;
             export var DeleteRecord: string; //'Delete Record':string;
             export var InsertRecord: string; //'Insert Record':string;
@@ -10299,7 +10299,7 @@ declare namespace SP {
         }
 
         export interface IEventArgs { }
-        export module EventArgs {
+        export namespace EventArgs {
             export class OnEntryRecordAdded implements IEventArgs {
                 constructor(recordKey: number);
                 recordKey: number;
@@ -10438,7 +10438,7 @@ declare namespace SP {
 
         }
 
-        export module JsGridControl {
+        export namespace JsGridControl {
             export class Parameters {
                 tableCache: SP.JsGrid.TableCache;
                 name: any; // TODO
@@ -10574,7 +10574,7 @@ declare namespace SP {
         }
 
         export interface IStyleType { }
-        export module IStyleType {
+        export namespace IStyleType {
             export interface Splitter extends IStyleType {
                 outerBorderColor: any;
                 leftInnerBorderColor: any;
@@ -10897,7 +10897,7 @@ declare namespace SP {
             static RegisterNewDerivedCustomPropType(propType: IPropertyType, baseTypeName: string): void;
         }
 
-        export module PropertyType {
+        export namespace PropertyType {
             export class String implements IPropertyType {
                 constructor();
                 ID: string;
@@ -10965,7 +10965,7 @@ declare namespace SP {
             }
         }
 
-        export module WidgetControl {
+        export namespace WidgetControl {
             export class Type {
                 static Demo: string;
                 static Date: string;
@@ -10974,7 +10974,7 @@ declare namespace SP {
             }
         }
 
-        export module Internal {
+        export namespace Internal {
             export class DiffTracker {
                 constructor(objBag: any, fnGetChange: Function);
                 ExternalAPI: {
@@ -11024,7 +11024,7 @@ declare namespace SP {
         }
 
 
-        export module EditControl {
+        export namespace EditControl {
 
         }
 
@@ -11155,7 +11155,7 @@ declare namespace SP {
 
     }
 
-    export module Utilities {
+    export namespace Utilities {
         export class Set {
             constructor(items?: { [item: string]: number });
             constructor(items?: { [item: number]: number });
@@ -12032,7 +12032,7 @@ declare namespace Srch
         static contentFixedWidthLength: number;
     }
 
-    export module U {
+    export namespace U {
         export class PropNames
         {
             static renderTemplates: 'RenderTemplates';

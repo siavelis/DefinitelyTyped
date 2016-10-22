@@ -5,7 +5,7 @@
 
 
 interface FinchCallback {
-    (bindings?: any, childCallback? : () => void): any;
+    (bindings?: any, childCallback?: () => void): any;
 }
 
 interface ExpandedCallback {

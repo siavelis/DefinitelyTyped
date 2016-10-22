@@ -16,7 +16,7 @@ declare module "ssh2-sftp-client" {
       size: number;
       modifyTime: number;
       accessTime: number;
-      rights:{
+      rights: {
         user: string;
         group: string;
         other: string;

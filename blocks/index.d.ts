@@ -385,7 +385,7 @@ interface BlocksArray extends BlocksObservable {
 	 *
 	 * @param arrays The arrays to be joined
 	 */
-	concat(...arrays: any[]): any[]
+	concat(...arrays: any[]): any[];
 
 	/**
 	 * The slice() method returns the selected elements in an array, as a new array object
@@ -429,7 +429,7 @@ interface BlocksArray extends BlocksObservable {
 	/**
 	 * Removes the first element of a observable array, and returns that element
 	 */
-	shift(): any
+	shift(): any;
 
 	/**
 	 * Sorts the elements of an array
@@ -516,7 +516,7 @@ interface PropertyPrototype {
 	value?: any;
 	validateOnChange?: boolean;
 	maxErrors?: number;
-	validateInitially?: boolean
+	validateInitially?: boolean;
 
 	// Validators
 	required?: Validator;

@@ -23,7 +23,7 @@ declare namespace assert {
         operator:string;
         generatedMessage:boolean;
 
-        constructor(options?:{message?: string; actual?: any; expected?: any; operator?: string; stackStartFunction?: Function});
+        constructor(options?: {message?: string; actual?: any; expected?: any; operator?: string; stackStartFunction?: Function});
     }
 
     export function fail(actual?:any, expected?:any, message?:string, operator?:string):void;
@@ -46,14 +46,14 @@ declare namespace assert {
 
     export function notDeepStrictEqual(actual:any, expected:any, message?:string):void;
 
-    export var throws:{
+    export var throws: {
         (block:Function, message?:string): void;
         (block:Function, error:Function, message?:string): void;
         (block:Function, error:RegExp, message?:string): void;
         (block:Function, error: (err:any) => boolean, message?:string): void;
     };
 
-    export var doesNotThrow:{
+    export var doesNotThrow: {
         (block:Function, message?:string): void;
         (block:Function, error:Function, message?:string): void;
         (block:Function, error:RegExp, message?:string): void;

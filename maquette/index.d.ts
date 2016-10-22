@@ -143,7 +143,7 @@ declare namespace maquette {
      * A transition strategy is not needed when enterAnimation and exitAnimation properties are provided as functions.
      * @returns {Projector}
      */
-  export function createProjector(projectionOptions? : ProjectionOptions) : Projector;
+  export function createProjector(projectionOptions?: ProjectionOptions): Projector;
 
     /**
      * Creates a virtual DOM node, used to render a real DOM later.
@@ -198,7 +198,7 @@ declare namespace maquette {
 
   // Not used anywhere in the maquette sourcecode, but it is a widely used pattern.
   export interface Component {
-    renderMaquette() : VNode;
+    renderMaquette(): VNode;
   }
 
   /**

@@ -256,7 +256,7 @@ declare namespace commander {
          * @param {String} flag
          * @api private
          */
-        optionMissingArgument(option:{flags: string;}, flag?: string): void;
+        optionMissingArgument(option: {flags: string;}, flag?: string): void;
 
         /**
          * Unknown option `flag`.

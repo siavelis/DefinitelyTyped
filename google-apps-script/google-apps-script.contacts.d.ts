@@ -7,7 +7,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Contacts {
+  export namespace Contacts {
     /**
      * Address field in a contact.
      */

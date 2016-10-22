@@ -72,7 +72,7 @@ declare namespace OData {
     // Also, static calls always return the IResource (or IResourceArray) retrieved
     // https://github.com/angular/angular.js/blob/v1.2.0/src/ngResource/resource.js#L538-L549
     interface IResourceClass<T> {
-        new(dataOrParams?: any) : IResource<T>;
+        new(dataOrParams?: any): IResource<T>;
         get(): IResource<T>;
         get(params: Object): IResource<T>;
         get(success: Function, error?: Function): IResource<T>;

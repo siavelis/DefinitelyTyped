@@ -8,7 +8,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Charts {
+  export namespace Charts {
     /**
      * Builder for area charts. For more details, see the
      *  Google Charts documentation.

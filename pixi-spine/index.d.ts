@@ -8,7 +8,7 @@ import * as PIXI from 'pixi.js';
 
 declare module 'pixi.js' {
 
-    export module spine {
+    export namespace spine {
 
         export interface Timeline {
 

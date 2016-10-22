@@ -112,7 +112,7 @@ declare namespace MCustomScrollbar {
         /**
         * Keyboard support
         */
-        keyboard?:{
+        keyboard?: {
             /**
              * Enable or disable content scrolling via keyboard.
              */

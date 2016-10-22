@@ -144,7 +144,7 @@ declare namespace nv {
         showYAxis(): boolean;
         showYAxis(value: boolean): this;
         brushExtent(): [number, number] | [[number, number], [number, number]];
-        brushExtent(value: [number, number] | [[number, number], [number, number]]) : this;
+        brushExtent(value: [number, number] | [[number, number], [number, number]]): this;
         duration(): number;
         duration(value: number): this;
         xTickFormat(): (d: any) => string;
@@ -1206,10 +1206,10 @@ id(value: number|string): this;
         showLastValue(value: boolean): this;
         xTickFormat(format: (d: any) => string): this;
         xTickFormat(format: string): this;
-        xTickFormat(format: (d: any, i: any) => string) : this;
+        xTickFormat(format: (d: any, i: any) => string): this;
         yTickFormat(format: (d: any) => string): this;
         yTickFormat(format: string): this;
-        yTickFormat(format: (d: any, i: any) => string) : this;
+        yTickFormat(format: (d: any, i: any) => string): this;
     }
 
     interface StackedArea extends Scatter {
@@ -2034,7 +2034,7 @@ id(value: number|string): this;
         tooltip: Tooltip;
 
         brushExtent(): [number, number] | [[number, number], [number, number]];
-        brushExtent(value: [number, number] | [[number, number], [number, number]]) : this;
+        brushExtent(value: [number, number] | [[number, number], [number, number]]): this;
         clearHighlights(): this;
         /*If true, masks lines within the X and Y scales using a clip-path*/
         clipEdge(): boolean;
@@ -2890,7 +2890,7 @@ id(value: number|string): this;
         /*No longer used.Use chart.dispatch.changeState(...) instead*/
         defaultState(value: any): this;
         dimensionData(): any
-        dimensionData(d: any) : this
+        dimensionData(d: any): this
         /*D3 format for each x axis*/
         dimensionFormats(): string[];
         /*D3 format for each x axis*/
@@ -3029,7 +3029,7 @@ id(value: number|string): this;
         /*Message to display if no data is provided*/
         noData(): string;
         /*Message to display if no data is provided*/
-        noData(value : string): this;
+        noData(value: string): this;
         /*D3 3.4+, For donut charts only, the percent of the chart that should be spacing between slices.*/
         padAngle(): number;
         /*D3 3.4+, For donut charts only, the percent of the chart that should be spacing between slices.*/
@@ -3324,7 +3324,7 @@ id(value: number|string): this;
         showControls(): boolean;
         showControls(value: boolean): this;
         brushExtent(): [number, number] | [[number, number], [number, number]];
-        brushExtent(value: [number, number] | [[number, number], [number, number]]) : this;
+        brushExtent(value: [number, number] | [[number, number], [number, number]]): this;
     }
 
     interface SunburstChart extends Sunburst, Chart {
@@ -3403,7 +3403,7 @@ id(value: number|string): this;
         log(arg: any[]): any //returns last argument
 	}
 }
-declare var nv : nv.Nvd3Static;
+declare var nv: nv.Nvd3Static;
 
 declare module "nvd3" {
     export = nv;

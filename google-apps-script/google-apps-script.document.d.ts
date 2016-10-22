@@ -7,7 +7,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Document {
+  export namespace Document {
     /**
      * An enumeration of the element attributes.
      *

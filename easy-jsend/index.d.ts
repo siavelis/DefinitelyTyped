@@ -34,5 +34,5 @@ declare namespace Express {
 }
 
 declare module "easy-jsend" {
-    export function init(conf?:{partial: boolean}): void;
+    export function init(conf?: {partial: boolean}): void;
 }

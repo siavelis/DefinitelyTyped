@@ -14,8 +14,8 @@ declare namespace oracledb {
 	type TFunc<T, R> = (value: T) => TRet<R>;
 
 	interface IPromise<T> {
-		catch<R>(onReject: TFunc<any, R>) : IPromise<R>;
-		then<R>(onResolve?: TFunc<T, R>, onReject?: TFunc<any, R>) : IPromise<R>;
+		catch<R>(onReject: TFunc<any, R>): IPromise<R>;
+		then<R>(onResolve?: TFunc<T, R>, onReject?: TFunc<any, R>): IPromise<R>;
 	}
 
 	interface ILob {

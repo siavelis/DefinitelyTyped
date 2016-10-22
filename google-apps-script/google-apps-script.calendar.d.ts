@@ -7,7 +7,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Calendar {
+  export namespace Calendar {
     /**
      * Represents a calendar that the user owns or is subscribed to.
      */

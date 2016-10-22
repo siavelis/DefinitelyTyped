@@ -28,7 +28,7 @@ declare namespace ROSLIB {
 		 * @param options - possible keys include:
 		 *   * url (optional) - the WebSocket URL for rosbridge (can be specified later with `connect`)
 		 */
-		constructor(options:{
+		constructor(options: {
 			url?: string
 		});
 
@@ -188,7 +188,7 @@ declare namespace ROSLIB {
 		 *   * ros - the ROSLIB.Ros connection handle
 		 *   * name - the param name, like max_vel_x
 		 */
-		constructor(options:{
+		constructor(options: {
 			ros: Ros,
 			name: string
 		});
@@ -228,7 +228,7 @@ declare namespace ROSLIB {
 		 *   * name - the service name, like /add_two_ints
 		 *   * serviceType - the service type, like 'rospy_tutorials/AddTwoInts'
 		 */
-		constructor(data:{
+		constructor(data: {
 			ros: Ros,
 			name: string,
 			serviceType: string
@@ -305,7 +305,7 @@ declare namespace ROSLIB {
 		 *   * latch - latch the topic when publishing
 		 *   * queue_length - the queue length at bridge side used when subscribing (defaults to 0, no queueing).
 		 */
-		constructor(options:{
+		constructor(options: {
 			ros: Ros,
 			name: string,
 			messageType: string,
@@ -376,7 +376,7 @@ declare namespace ROSLIB {
 		 *   * actionName - the action message name, like 'actionlib_tutorials/FibonacciAction'
 		 *   * timeout - the timeout length when connecting to the action server
 		 */
-		constructor(options:{
+		constructor(options: {
 			ros: Ros,
 			serverName: string,
 			actionName: string,
@@ -401,7 +401,7 @@ declare namespace ROSLIB {
 		 *   * actionClient - the ROSLIB.ActionClient to use with this goal
 		 *   * goalMessage - The JSON object containing the goal for the action server
 		 */
-		constructor(options:{
+		constructor(options: {
 			actionClient: ActionClient,
 			goalMessage: any
 		});

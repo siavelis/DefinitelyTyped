@@ -24,7 +24,7 @@ declare namespace Ti {
 	export function removeEventListener (name: string, callback: (...args : any[]) => any) : void;
 	export function setBubbleParent (bubbleParent: boolean) : void;
 	export function setUserAgent (userAgent: string) : void;
-	export module XML {
+	export namespace XML {
 		export var apiName : string;
 		export var bubbleParent : boolean;
 		export function addEventListener (name: string, callback: (...args : any[]) => any) : void;
@@ -240,7 +240,7 @@ declare namespace Ti {
 		read (buffer: Ti.Buffer, offset?: number, length?: number) : number;
 		write (buffer: Ti.Buffer, offset?: number, length?: number) : number;
 	}
-	export module UI {
+	export namespace UI {
 		export var ANIMATION_CURVE_EASE_IN : number;
 		export var ANIMATION_CURVE_EASE_IN_OUT : number;
 		export var ANIMATION_CURVE_EASE_OUT : number;
@@ -444,7 +444,7 @@ declare namespace Ti {
 		export function setBubbleParent (bubbleParent: boolean) : void;
 		export function setCurrentTab (currentTab: Ti.UI.Tab) : void;
 		export function setOrientation (orientation: number) : void;
-		export module iPad {
+		export namespace iPad {
 			export var POPOVER_ARROW_DIRECTION_ANY : number;
 			export var POPOVER_ARROW_DIRECTION_DOWN : number;
 			export var POPOVER_ARROW_DIRECTION_LEFT : number;
@@ -509,7 +509,7 @@ declare namespace Ti {
 				show (params: PopoverParams) : void;
 			}
 		}
-		export module iOS {
+		export namespace iOS {
 			export var AD_SIZE_LANDSCAPE : string;
 			export var AD_SIZE_PORTRAIT : string;
 			export var ANIMATION_CURVE_EASE_IN : number;
@@ -916,7 +916,7 @@ declare namespace Ti {
 				setAdSize (adSize: string) : void;
 			}
 		}
-		export module iPhone {
+		export namespace iPhone {
 			export var MODAL_PRESENTATION_CURRENT_CONTEXT : number;
 			export var MODAL_PRESENTATION_FORMSHEET : number;
 			export var MODAL_PRESENTATION_FULLSCREEN : number;
@@ -1569,7 +1569,7 @@ declare namespace Ti {
 			setThumbImage (thumbImage: Ti.Blob) : void;
 			setValue (value: number, options?: Dictionary<Object>) : void;
 		}
-		export module Android {
+		export namespace Android {
 			export var LINKIFY_ALL : number;
 			export var LINKIFY_EMAIL_ADDRESSES : number;
 			export var LINKIFY_MAP_ADDRESSES : number;
@@ -2852,7 +2852,7 @@ declare namespace Ti {
 			setStyle (style: number) : void;
 			setValue (value: number) : void;
 		}
-		export module MobileWeb {
+		export namespace MobileWeb {
 			export var apiName : string;
 			export function addEventListener (name: string, callback: (...args : any[]) => any) : void;
 			export function applyProperties (props: Dictionary<Object>) : void;
@@ -3254,7 +3254,7 @@ declare namespace Ti {
 		warn (message: Array<String>) : void;
 		warn (message: string) : void;
 	}
-	export module Geolocation {
+	export namespace Geolocation {
 		export var ACCURACY_BEST : number;
 		export var ACCURACY_BEST_FOR_NAVIGATION : number;
 		export var ACCURACY_HIGH : number;
@@ -3336,7 +3336,7 @@ declare namespace Ti {
 		export function setPurpose (purpose: string) : void;
 		export function setShowCalibration (showCalibration: boolean) : void;
 		export function setTrackSignificantLocationChange (trackSignificantLocationChange: boolean) : void;
-		export module Android {
+		export namespace Android {
 			export var apiName : string;
 			export var bubbleParent : boolean;
 			export var manualMode : boolean;
@@ -3410,7 +3410,7 @@ declare namespace Ti {
 		removeEventListener (name: string, callback: (...args : any[]) => any) : void;
 		setBubbleParent (bubbleParent: boolean) : void;
 	}
-	export module Map {
+	export namespace Map {
 		export var ANNOTATION_DRAG_STATE_CANCEL : number;
 		export var ANNOTATION_DRAG_STATE_DRAG : number;
 		export var ANNOTATION_DRAG_STATE_END : number;
@@ -3540,7 +3540,7 @@ declare namespace Ti {
 			setTitleid (titleid: string) : void;
 		}
 	}
-	export module Cloud {
+	export namespace Cloud {
 		export var accessToken : string;
 		export var apiName : string;
 		export var bubbleParent : boolean;
@@ -3807,7 +3807,7 @@ declare namespace Ti {
 		getLocaleCurrencySymbol (locale: string) : string;
 		getString (key: string, hint?: string) : string;
 	}
-	export module App {
+	export namespace App {
 		export var EVENT_ACCESSIBILITY_ANNOUNCEMENT : string;
 		export var EVENT_ACCESSIBILITY_CHANGED : string;
 		export var accessibilityEnabled : boolean;
@@ -3863,7 +3863,7 @@ declare namespace Ti {
 		export function setForceSplashAsSnapshot (forceSplashAsSnapshot: boolean) : void;
 		export function setIdleTimerDisabled (idleTimerDisabled: boolean) : void;
 		export function setProximityDetection (proximityDetection: boolean) : void;
-		export module Android {
+		export namespace Android {
 			export var R : Ti.App.Android.R;
 			export var apiName : string;
 			export var appVersionCode : number;
@@ -3884,7 +3884,7 @@ declare namespace Ti {
 
 			}
 		}
-		export module iOS {
+		export namespace iOS {
 			export var BACKGROUNDFETCHINTERVAL_MIN : number;
 			export var BACKGROUNDFETCHINTERVAL_NEVER : number;
 			export var EVENT_ACCESSIBILITY_LAYOUT_CHANGED : string;
@@ -3984,7 +3984,7 @@ declare namespace Ti {
 			hide () : void;
 		}
 	}
-	export module Android {
+	export namespace Android {
 		export var ACTION_AIRPLANE_MODE_CHANGED : string;
 		export var ACTION_ALL_APPS : string;
 		export var ACTION_ANSWER : string;
@@ -4281,7 +4281,7 @@ declare namespace Ti {
 			setWhen (when: Date) : void;
 			setWhen (when: number) : void;
 		}
-		export module Calendar {
+		export namespace Calendar {
 			export var METHOD_ALERT : number;
 			export var METHOD_DEFAULT : number;
 			export var METHOD_EMAIL : number;
@@ -4586,7 +4586,7 @@ declare namespace Ti {
 			getUpdateCurrentIntent () : boolean;
 		}
 	}
-	export module Database {
+	export namespace Database {
 		export var FIELD_TYPE_DOUBLE : number;
 		export var FIELD_TYPE_FLOAT : number;
 		export var FIELD_TYPE_INT : number;
@@ -4637,7 +4637,7 @@ declare namespace Ti {
 			setRowsAffected (rowsAffected: number) : void;
 		}
 	}
-	export module Contacts {
+	export namespace Contacts {
 		export var AUTHORIZATION_AUTHORIZED : number;
 		export var AUTHORIZATION_DENIED : number;
 		export var AUTHORIZATION_RESTRICTED : number;
@@ -4670,7 +4670,7 @@ declare namespace Ti {
 		export function save (contacts: Array<Ti.Contacts.Person>) : void;
 		export function setBubbleParent (bubbleParent: boolean) : void;
 		export function showContacts (params: showContactsParams) : void;
-		export module Tizen {
+		export namespace Tizen {
 			export var apiName : string;
 			export function addEventListener (name: string, callback: (...args : any[]) => any) : void;
 			export function applyProperties (props: Dictionary<Object>) : void;
@@ -4805,7 +4805,7 @@ declare namespace Ti {
 		setShowTrayNotificationsWhenFocused (showTrayNotificationsWhenFocused: boolean) : void;
 		setSingleCallback (singleCallback: boolean) : void;
 	}
-	export module Media {
+	export namespace Media {
 		export var AUDIO_FILEFORMAT_3GP2 : number;
 		export var AUDIO_FILEFORMAT_3GPP : number;
 		export var AUDIO_FILEFORMAT_AIFF : number;
@@ -5266,7 +5266,7 @@ declare namespace Ti {
 			setSystemWallpaper (image: Ti.Blob, scale: boolean) : void;
 		}
 	}
-	export module Platform {
+	export namespace Platform {
 		export var BATTERY_STATE_CHARGING : number;
 		export var BATTERY_STATE_FULL : number;
 		export var BATTERY_STATE_UNKNOWN : number;
@@ -5375,7 +5375,7 @@ declare namespace Ti {
 	export enum BufferStream {
 
 	}
-	export module Calendar {
+	export namespace Calendar {
 		export var AUTHORIZATION_AUTHORIZED : number;
 		export var AUTHORIZATION_DENIED : number;
 		export var AUTHORIZATION_RESTRICTED : number;
@@ -5555,7 +5555,7 @@ declare namespace Ti {
 			setRelativeOffset (relativeOffset: number) : void;
 		}
 	}
-	export module Filesystem {
+	export namespace Filesystem {
 		export var MODE_APPEND : number;
 		export var MODE_READ : number;
 		export var MODE_WRITE : number;
@@ -5647,7 +5647,7 @@ declare namespace Ti {
 
 		}
 	}
-	export module Network {
+	export namespace Network {
 		export var INADDR_ANY : string;
 		export var NETWORK_LAN : number;
 		export var NETWORK_MOBILE : number;
@@ -5739,7 +5739,7 @@ declare namespace Ti {
 			write (data: any, sendTo: number) : void;
 			write (data: string, sendTo: number) : void;
 		}
-		export module Socket {
+		export namespace Socket {
 			export var CLOSED : number;
 			export var CONNECTED : number;
 			export var ERROR : number;
@@ -5986,7 +5986,7 @@ declare namespace Ti {
 		timedEvent (name: string, start: Date, stop: Date, duration: number, data?: any) : void;
 		userEvent (name: string, data?: any) : void;
 	}
-	export module Facebook {
+	export namespace Facebook {
 		export var BUTTON_STYLE_NORMAL : number;
 		export var BUTTON_STYLE_WIDE : number;
 		export var accessToken : string;

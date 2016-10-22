@@ -32,15 +32,15 @@ declare namespace gapi.drive.realtime {
 		isAnonymous	: boolean
 
 		// True if this collaborator is the local user, false otherwise.
-		isMe :	boolean;
+		isMe:	boolean;
 
 		// The permission ID for this collaborator. This ID is stable for a given user and is compatible with the
 		// Drive API permissions APIs. Use the userId property for all other uses.
-		permissionId : string;
+		permissionId: string;
 
 		// A URL that points to the profile photo for this collaborator, or to a generic profile photo for
 		// anonymous collaborators.
-		photoUrl : string;
+		photoUrl: string;
 
 		// The session ID for this collaborator. A single user may have multiple sessions if they have the same document
 		// open on multiple devices or in multiple browser tabs.
@@ -49,10 +49,10 @@ declare namespace gapi.drive.realtime {
 		// The user ID for this collaborator. This ID is stable for a given user and is compatible with most Google APIs
 		// except the Drive API permission APIs. For an ID which is compatible with the Drive API permission APIs,
 		// use the permissionId property.
-		userId : string;
+		userId: string;
 
 		new (sessionId: string, userId: string, displayName: string, color: string, isMe: boolean, isAnonymous: boolean,
-		     photoUrl: string, permissionId: string) : Collaborator;
+		     photoUrl: string, permissionId: string): Collaborator;
 	}
 
 	// Complete
@@ -87,7 +87,7 @@ declare namespace gapi.drive.realtime {
 	// https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime.IndexReference
 	export class IndexReference<V> extends CollaborativeObject {
 		// (Categories of) the shift behavior of an index reference when the element it points at is deleted.
-		static DeleteMode:{
+		static DeleteMode: {
 			SHIFT_AFTER_DELETE: string
 			SHIFT_BEFORE_DELETE: string
 			SHIFT_TO_INVALID: string
@@ -348,38 +348,38 @@ declare namespace gapi.drive.realtime {
 	// https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime.BaseModelEvent
 	interface BaseModelEvent {
 		// Whether this event bubbles.
-		bubbles :  boolean;
+		bubbles: boolean;
 
 		// The list of names from the hierarchy of compound operations that initiated this event.
-		compoundOperationNames : string[];
+		compoundOperationNames: string[];
 
 		// True if this event originated in the local session.
-		isLocal  : boolean;
+		isLocal: boolean;
 
 		// True if this event originated from a redo call.
-		isRedo : boolean;
+		isRedo: boolean;
 
 		// True if this event originated from an undo call.
-		isUndo : boolean;
+		isUndo: boolean;
 
 		// Prevents an event from performing its default action. In the Realtime API, this function is only present
 		// for compatibility with the DOM event interface and therefore it does nothing.
-		preventDefault()  : void;
+		preventDefault(): void;
 
 		// The id of the session that initiated this event.
-		sessionId :  string;
+		sessionId: string;
 
 		// The collaborative object that initiated this event.
-		target :  CollaborativeObject;
+		target: CollaborativeObject;
 
 		// The type of the event.
-		type :  string;
+		type: string;
 
 		// The user id of the user that initiated this event.
-		userId :  string;
+		userId: string;
 
 		// Stops an event which bubbles from propagating to the target's parent.
-		stopPropagation() :  void;
+		stopPropagation(): void;
 
 		/* Parameters:
 		 target
@@ -412,7 +412,7 @@ declare namespace gapi.drive.realtime {
 		 True if the event originated from a redo call.
 		 */
 		new (target:CollaborativeObject, sessionId:string, userId:string, compoundOperationNames:string[],
-		     isLocal:boolean, isUndo:boolean, isRedo:boolean) : BaseModelEvent;
+		     isLocal:boolean, isUndo:boolean, isRedo:boolean): BaseModelEvent;
 	}
 
 	// Complete
@@ -424,10 +424,10 @@ declare namespace gapi.drive.realtime {
 		// The specific events that document the changes that occurred on the object.
 		// Value must not be null.
 		new (target:CollaborativeObject, sessionId:string, userId:string, compoundOperationNames:string[],
-		     isLocal:boolean, isUndo:boolean, isRedo:boolean, events:BaseModelEvent[]) : ObjectChangedEvent;
+		     isLocal:boolean, isUndo:boolean, isRedo:boolean, events:BaseModelEvent[]): ObjectChangedEvent;
 
 		// The specific events that document the changes that occurred on the object.
-		events : BaseModelEvent[];
+		events: BaseModelEvent[];
 	}
 
 	// https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime.ValuesAddedEvent
@@ -467,12 +467,12 @@ declare namespace gapi.drive.realtime {
 	// https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime.Document
 	export class Document {
 		// Whether the document is closed. Read-only; call close() to close the document.
-		isClosed : boolean;
+		isClosed: boolean;
 
 		// Whether the document is stored in Google Drive. Read-only.
 		// This property is false for documents created using gapi.drive.realtime.newInMemoryDocument or
 		// gapi.drive.realtime.loadFromJson and true for all other documents.
-		isInGoogleDrive : boolean;
+		isInGoogleDrive: boolean;
 
 		// The approximate amount of time (in milliseconds) that changes have been waiting to be saved in Google Drive.
 		// If there are no unsaved changes or this is an in-memory document, this value is always 0.
@@ -480,12 +480,12 @@ declare namespace gapi.drive.realtime {
 		// changes are being saved as quickly as they are generated. If the network is unreliable or down, or if changes
 		// are being made to the model more quickly than they can be saved, this value will continue to grow until the
 		// network catches up and the changes are successfully saved.
-		saveDelay : number;
+		saveDelay: number;
 
 		// Adds an event listener to the event target. The same handler can only be added once per the type.
 		// Even if you add the same handler multiple times using the same type then it will only be called once when
 		// the event is dispatched.
-		addEventListener(type:string, listener:GoogEventHandler, opt_capture?:boolean) : void;
+		addEventListener(type:string, listener:GoogEventHandler, opt_capture?:boolean): void;
 
 		// Closes the document and disconnects from the server.
 		// After this function is called, event listeners will no longer fire and attempts to access the document, model,
@@ -495,7 +495,7 @@ declare namespace gapi.drive.realtime {
 
 		// Gets an array of collaborators active in this session. Each collaborator is a jsMap with these fields:
 		// sessionId, userId, displayName, color, isMe, isAnonymous.
-		getCollaborators() :	Collaborator[];
+		getCollaborators():	Collaborator[];
 
 		// Gets the collaborative model associated with this document.
 		// @return non-null Model
@@ -506,7 +506,7 @@ declare namespace gapi.drive.realtime {
 
 		// Removes an event listener from the event target. The handler must be the same object as the one added.
 		// If the handler has not been added then nothing is done.
-		removeEventListener(type:string, listener:GoogEventHandler, opt_capture?:boolean) :	void;
+		removeEventListener(type:string, listener:GoogEventHandler, opt_capture?:boolean):	void;
 
 		// Saves a copy of this document to a new file. After this function is called, all changes to this document no
 		// longer affect the old document and are instead saved to the new file.
@@ -523,7 +523,7 @@ declare namespace gapi.drive.realtime {
 	// Complete
 	// Opens the debugger application on the current page. The debugger shows all realtime documents that the
 	// page has loaded and is able to view, edit and debug all aspects of each realtime document.
-	export function debug() : void;
+	export function debug(): void;
 
 	/* Creates a new file with fake network communications. This file will not talk to the server and will only
 	   exist in memory for as long as the browser session persists.
@@ -541,10 +541,10 @@ declare namespace gapi.drive.realtime {
 	 loaded or edited. A gapi.drive.realtime.Error object describing the error will be passed to this function.
 	*/
 	export function newInMemoryDocument(
-		opt_onLoaded? : (d:Document) => void,
-		opt_initializerFn? : (m:Model) => void,
-		opt_errorFn? : (e:gapi.drive.realtime.Error) => void
-	) : Document;
+		opt_onLoaded?: (d:Document) => void,
+		opt_initializerFn?: (m:Model) => void,
+		opt_errorFn?: (e:gapi.drive.realtime.Error) => void
+	): Document;
 
 	/* Loads an existing file by id.
 	https://developers.google.com/google-apps/realtime/reference/gapi.drive.realtime#.load
@@ -565,9 +565,9 @@ declare namespace gapi.drive.realtime {
 	*/
 	export function load(
 		fileId:string,
-		onLoaded? : (d:Document) => void,
-		opt_initializerFn? : (m:Model) => void,
-		opt_errorFn? : (e:gapi.drive.realtime.Error) => void
+		onLoaded?: (d:Document) => void,
+		opt_initializerFn?: (m:Model) => void,
+		opt_errorFn?: (e:gapi.drive.realtime.Error) => void
 	):void;
 }
 
@@ -579,16 +579,16 @@ declare namespace gapi.drive.realtime.databinding {
 		// Throws gapi.drive.realtime.databinding.AlreadyBoundError If domElement has already been bound.
 
 		// The collaborative object to bind.
-		collaborativeObject : CollaborativeObject;
+		collaborativeObject: CollaborativeObject;
 
 		// The DOM element that the collaborative object is bound to. Value must not be null.
-		domElement : Element;
+		domElement: Element;
 
 		// Unbinds the domElement from collaborativeObject.
-		unbind() : void;
+		unbind(): void;
 	}
 
-	export function bindString(s:CollaborativeString, textinput:HTMLInputElement) : Binding
+	export function bindString(s:CollaborativeString, textinput:HTMLInputElement): Binding
 }
 
 
@@ -611,7 +611,7 @@ declare namespace rtclient {
 		load():void;
 	}
 	interface RealtimeLoaderFactory {
-		new (options:LoaderOptions) : RealtimeLoader;
+		new (options:LoaderOptions): RealtimeLoader;
 	}
 
 	// ***********************************
@@ -668,9 +668,9 @@ declare namespace rtclient {
 		// INCOMPLETE
 		params: {
 			// string containing one or more file ids separated by spaces.
-			fileIds : string
+			fileIds: string
 		};
-		RealtimeLoader : RealtimeLoaderFactory;
+		RealtimeLoader: RealtimeLoaderFactory;
 
 		/**
 		 * Creates a new Realtime file.
@@ -678,10 +678,10 @@ declare namespace rtclient {
 		 * @param mimeType {string} the MIME type of the new file.
 		 * @param callback {(file:DriveAPIFileResource) => void} the callback to call after creation.
 		 */
-		createRealtimeFile(title:string, mimeType:string, callback: (file:DriveAPIFileResource) => void) : void;
+		createRealtimeFile(title:string, mimeType:string, callback: (file:DriveAPIFileResource) => void): void;
 	}
 
-	export var RealtimeLoader : RealtimeLoaderFactory
+	export var RealtimeLoader: RealtimeLoaderFactory
 
 	/**
 	 * Creates a new Realtime file.
@@ -689,7 +689,7 @@ declare namespace rtclient {
 	 * @param mimeType {string} the MIME type of the new file.
 	 * @param callback {(file:DriveAPIFileResource) => void} the callback to call after creation.
 	 */
-	export function createRealtimeFile(title:string, mimeType:string, callback: (file:DriveAPIFileResource) => void) : void
+	export function createRealtimeFile(title:string, mimeType:string, callback: (file:DriveAPIFileResource) => void): void
 }
 
 // INCOMPLETE

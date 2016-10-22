@@ -7,7 +7,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Sites {
+  export namespace Sites {
     /**
      * A Sites Attachment such as a file attached to a page.
      *

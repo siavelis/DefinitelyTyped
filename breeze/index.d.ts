@@ -462,7 +462,7 @@ declare namespace breeze {
 
         static importEntities(exportedString: string, config?: { mergeStrategy?: MergeStrategySymbol; metadataVersionFn?: (any: any) => void }): EntityManager;
         static importEntities(exportedData: Object, config?: { mergeStrategy?: MergeStrategySymbol; metadataVersionFn?: (any: any) => void }): EntityManager;
-        importEntities(exportedString: string, config?: { mergeStrategy?: MergeStrategySymbol; metadataVersionFn?: (any: any) => void }): { entities: Entity[]; tempKeyMapping: { [key: string] : EntityKey } };
+        importEntities(exportedString: string, config?: { mergeStrategy?: MergeStrategySymbol; metadataVersionFn?: (any: any) => void }): { entities: Entity[]; tempKeyMapping: { [key: string]: EntityKey } };
         importEntities(exportedData: Object, config?: { mergeStrategy?: MergeStrategySymbol; metadataVersionFn?: (any: any) => void }): { entities: Entity[]; tempKeyMapping: { [key: string]: EntityKey } };
 
         rejectChanges(): Entity[];
@@ -495,7 +495,7 @@ declare namespace breeze {
     }
 
     export interface ExecuteQueryErrorCallback {
-        (error: { query: EntityQuery; httpResponse: HttpResponse; entityManager: EntityManager; message?: string; stack?:string }): void;
+        (error: { query: EntityQuery; httpResponse: HttpResponse; entityManager: EntityManager; message?: string; stack?: string }): void;
     }
 
     export interface SaveChangesSuccessCallback {
@@ -843,7 +843,7 @@ declare namespace breeze {
         fetchStrategy: FetchStrategySymbol;
         mergeStrategy: MergeStrategySymbol;
         /** Whether query should return cached deleted entities (false by default) */
-        includeDeleted: boolean
+        includeDeleted: boolean;
 
         constructor(config?: QueryOptionsConfiguration);
 
@@ -864,7 +864,7 @@ declare namespace breeze {
         error?: any;
         saveContext?: any;
         status: number;
-        getHeaders(headerName: string): string
+        getHeaders(headerName: string): string;
     }
 
     export interface QueryResult {
@@ -879,7 +879,7 @@ declare namespace breeze {
         /** Total number of results available on the server */
         inlineCount?: number;
         /** All entities returned by the query.  Differs from results when an expand is used. */
-        retrievedEntities?: Entity[]
+        retrievedEntities?: Entity[];
     }
 
     export class SaveOptions {
@@ -1046,7 +1046,7 @@ declare namespace breeze.config {
     export function getAdapterInstance(interfaceName: string, adapterName?: string): Object;
 
     export interface Adapter {
-        getRoutePrefix: Function
+        getRoutePrefix: Function;
     }
     /**
     Initializes a single adapter implementation. Initialization means either newing a instance of the

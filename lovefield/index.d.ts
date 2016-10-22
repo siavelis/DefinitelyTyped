@@ -123,7 +123,7 @@ declare namespace lf {
       dropTableColumn(tableName: string, columnName: string): Promise<void>
       renameTableColumn(
           tableName: string, oldColumnName: string,
-          newColumnName: string) : Promise<void>
+          newColumnName: string): Promise<void>
       createRow(payload: Object): Row
       getVersion(): number
       dump(): Array<Object>

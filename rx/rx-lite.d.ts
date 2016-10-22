@@ -4,7 +4,7 @@
 // Do not include the file separately.
 
 declare namespace Rx {
-	export module internals {
+	export namespace internals {
 		function isEqual(left: any, right: any): boolean;
 		function addRef<T>(xs: Observable<T>, r: { getDisposable(): IDisposable; }): Observable<T>;
 
@@ -43,11 +43,11 @@ declare namespace Rx {
 		}
 	}
 
-	export module config {
+	export namespace config {
 		export var Promise: { new <T>(resolver: (resolvePromise: (value: T) => void, rejectPromise: (reason: any) => void) => void): IPromise<T>; };
 	}
 
-	export module helpers {
+	export namespace helpers {
 		function noop(): void;
 		function notDefined(value: any): boolean;
 		function identity<T>(value: T): T;

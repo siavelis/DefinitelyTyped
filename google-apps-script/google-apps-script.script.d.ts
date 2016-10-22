@@ -10,7 +10,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Script {
+  export namespace Script {
     /**
      * An enumeration that identifies which categories of authorized services Apps Script
      *  is able to execute through a triggered function. These values are exposed in

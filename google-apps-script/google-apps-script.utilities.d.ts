@@ -7,7 +7,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Utilities {
+  export namespace Utilities {
     /**
      * A typesafe enum for character sets.
      */

@@ -457,7 +457,7 @@ declare namespace DDS {
 		isClosed() : boolean;
 	}
 
-	export var runtime:{
+	export var runtime: {
 		Runtime : Runtime;
 	};
 

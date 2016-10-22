@@ -24,7 +24,7 @@ declare namespace joint {
             getConnectedLinks(cell: Cell, opt?: any): Link[];
             disconnectLinks(cell: Cell) : void;
             removeLinks(cell: Cell) : void;
-            findModelsFromPoint(point:{x : number; y: number}): Element[];
+            findModelsFromPoint(point: {x : number; y: number}): Element[];
         }
 
         class Cell extends Backbone.Model {
@@ -76,8 +76,8 @@ declare namespace joint {
             rotate(deg: number, ox?: number, oy?: number): Paper;      // @todo not released yet though it's in the source code already
             findView(el: any): CellView;
             findViewByModel(modelOrId: any): CellView;
-            findViewsFromPoint(p:{ x: number; y: number; }): CellView[];
-            findViewsInArea(r:{ x: number; y: number; width: number; height: number; }): CellView[];
+            findViewsFromPoint(p: { x: number; y: number; }): CellView[];
+            findViewsInArea(r: { x: number; y: number; width: number; height: number; }): CellView[];
             fitToContent(opt?: any): void;
         }
 
@@ -86,7 +86,7 @@ declare namespace joint {
         }
 
         class CellView extends Backbone.View<Cell> {
-            getBBox():{ x: number; y: number; width: number; height: number; };
+            getBBox(): { x: number; y: number; width: number; height: number; };
             highlight(el?: any): void;
             unhighlight(el?: any): void;
             findMagnet(el: any): void;
@@ -101,7 +101,7 @@ declare namespace joint {
 
         class LinkView extends CellView {
             getConnectionLength(): number;
-            getPointAtLength(length: number):{ x: number; y: number; };
+            getPointAtLength(length: number): { x: number; y: number; };
         }
 
     }

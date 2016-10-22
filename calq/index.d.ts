@@ -8,16 +8,16 @@ interface Calq
     action: Calq.Action;
     user: Calq.User;
 
-    init(writeKey: string, options?:{[index: string]: any}): void;
+    init(writeKey: string, options?: {[index: string]: any}): void;
 }
 
 declare namespace Calq
 {
     interface Action
     {
-        track(action: string, params?:{[index: string]: any}): void;
-        trackSale(action: string, params:{[index: string]: any}, currency: string, amount: number): void;
-        trackHTMLLink(action: string, params?:{[index: string]: any}): void;
+        track(action: string, params?: {[index: string]: any}): void;
+        trackSale(action: string, params: {[index: string]: any}, currency: string, amount: number): void;
+        trackHTMLLink(action: string, params?: {[index: string]: any}): void;
         trackPageView(action?: string): void;
 
         setGlobalProperty(name: string, value: any): void;
@@ -28,7 +28,7 @@ declare namespace Calq
     {
         identify(userId: string): void;
         clear(): void;
-        profile(params:{[index: string]: any}): void;
+        profile(params: {[index: string]: any}): void;
 
     }
 }

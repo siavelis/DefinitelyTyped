@@ -1323,7 +1323,7 @@ declare namespace Bacon {
         toProperty(initialValue?: A): Property<E, A>;
     }
 
-    var EventStream:{
+    var EventStream: {
         /**
          * @callback EventStream#new~subscribe
          * @param {EventStream#new~sink} sink
@@ -1881,7 +1881,7 @@ declare namespace Bacon {
      * @param {{string: number|boolean|string|Object|Observable<E, *>}} template
      * @returns {Property<E, A>}
      */
-    function combineTemplate<E, A>(template:{[label: string]: number|boolean|string|Object|Observable<E, any>}): Property<E, A>;
+    function combineTemplate<E, A>(template: {[label: string]: number|boolean|string|Object|Observable<E, any>}): Property<E, A>;
 
     /**
      * @function
@@ -1993,7 +1993,7 @@ declare namespace Bacon {
         plug(stream: EventStream<E, A>): () => void;
     }
 
-    var Bus:{
+    var Bus: {
         /**
          * @constructor
          * @constructs Bacon.Bus
@@ -2183,11 +2183,11 @@ declare namespace Bacon {
      * @param {Bacon.retry1~delay} [options.delay] - function that returns the time in milliseconds to wait before retrying. Defaults to `0`.
      * @returns {EventStream<E, A>}
      */
-    function retry<E, A>(options:{
+    function retry<E, A>(options: {
         source: () => EventStream<E, A>;
         retries: number;
         isRetryable?: (error: E) => boolean;
-        delay?: (context:{error: E; retriesDone: number}) => number;
+        delay?: (context: {error: E; retriesDone: number}) => number;
     }): EventStream<E, A>;
 
     /**
@@ -2219,11 +2219,11 @@ declare namespace Bacon {
      * @param {Bacon.retry1~delay} [options.delay] - function that returns the time in milliseconds to wait before retrying. Defaults to `0`.
      * @returns {Property<E, A>}
      */
-    function retry<E, A>(options:{
+    function retry<E, A>(options: {
         source: () => Property<E, A>;
         retries: number;
         isRetryable?: (error: E) => boolean;
-        delay?: (context:{error: E; retriesDone: number}) => number;
+        delay?: (context: {error: E; retriesDone: number}) => number;
     }): Property<E, A>;
 
     /**

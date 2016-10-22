@@ -330,7 +330,7 @@ declare namespace fabric {
      * Observes specified event
      * @param eventName Object with key/value pairs (eg. {'after:render': handler, 'selection:cleared': handler})
      */
-    on(eventName: {[key:string] : Function}): T;
+    on(eventName: {[key:string]: Function}): T;
     /**
      * Fires event with an optional options object
      * @param {String} eventName Event name to fire

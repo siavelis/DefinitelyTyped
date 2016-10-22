@@ -155,7 +155,7 @@ declare namespace freedom {
         reckless: (a: T) => void;
     }
     interface Method2<T, U, R> {
-        (a: T, b: U) : Promise<R>;
+        (a: T, b: U): Promise<R>;
         reckless: (a: T, b: U) => void;
     }
     interface Method3<T, U, V, R> {
@@ -384,7 +384,7 @@ declare namespace freedom.UdpSocket {
     }
 
     interface Implementation {
-        bind(address: string, port: number, continuation: () => void) : void;
+        bind(address: string, port: number, continuation: () => void): void;
         sendTo(data: ArrayBuffer, address: string, port: number,
                continuation: (bytesWritten: number) => void): void;
         destroy(continuation: () => void): void;
@@ -546,7 +546,7 @@ declare namespace freedom.Social {
         //
         // Message type |onMessage| happens when the user receives a message from
         // another contact.
-        on(eventType: string, f: Function) : void;
+        on(eventType: string, f: Function): void;
         on(eventType: 'onMessage', f: (message: IncomingMessage) => void): void;
         // Message type |onRosterProfile| events are received when another user's
         // profile is received or when a client changes status.

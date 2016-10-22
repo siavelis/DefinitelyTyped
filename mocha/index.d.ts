@@ -153,7 +153,7 @@ declare namespace Mocha {
         state: "failed" | "passed";
     }
 
-    export module reporters {
+    export namespace reporters {
         export class Base {
             stats: {
                 suites: number;

@@ -156,7 +156,7 @@ declare namespace jo {
         // Math functions
         round(): jo.FilterClause;
         floor(): jo.FilterClause;
-        ceiling() : jo.FilterClause;
+        ceiling(): jo.FilterClause;
     }
 
     // Precedence groups

@@ -81,7 +81,7 @@ declare namespace Mithril {
 		*
 		* @see m.withAttr
 		*/
-		prop<T>(promise: Thennable<T>) : Promise<T>;
+		prop<T>(promise: Thennable<T>): Promise<T>;
 
 		/**
 		* Creates a getter-setter function that wraps a simple value. Useful

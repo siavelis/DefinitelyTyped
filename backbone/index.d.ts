@@ -119,7 +119,7 @@ declare namespace Backbone {
         collection: Collection<any>;
 
         private _changing: boolean;
-        private _previousAttributes : any;
+        private _previousAttributes: any;
         private _pending: boolean;
 
 
@@ -241,12 +241,12 @@ declare namespace Backbone {
         unshift(model: TModel, options?: AddOptions): TModel;
         where(properties: any): TModel[];
         findWhere(properties: any): TModel;
-        modelId(attrs: any) : any
+        modelId(attrs: any): any
 
         private _prepareModel(attributes?: any, options?: any): any;
         private _removeReference(model: TModel): void;
         private _onModelEvent(event: string, model: TModel, collection: Collection<TModel>, options: any): void;
-        private _isModel(obj: any) : obj is Model;
+        private _isModel(obj: any): obj is Model;
 
         /**
          * Return a shallow copy of this collection's models, using the same options as native Array#slice.
@@ -336,7 +336,7 @@ declare namespace Backbone {
         navigate(fragment: string, options?: NavigateOptions): Router;
         navigate(fragment: string, trigger?: boolean): Router;
 
-        execute(callback: Function, args: any[], name: string) : void;
+        execute(callback: Function, args: any[], name: string): void;
 
         private _bindRoutes(): void;
         private _routeToRegExp(route: string): RegExp;

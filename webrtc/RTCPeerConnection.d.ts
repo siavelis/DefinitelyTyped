@@ -370,7 +370,7 @@ interface RTCIceCandidateInit {
   sdpMid?: string;
   sdpMLineIndex?: number;
 }
-declare var RTCIceCandidateInit:{
+declare var RTCIceCandidateInit: {
   prototype: RTCIceCandidateInit;
   new (): RTCIceCandidateInit;
 };

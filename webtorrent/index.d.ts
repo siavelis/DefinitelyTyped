@@ -280,7 +280,7 @@ declare namespace WebTorrent {
      * You can pass opts to stream only a slice of a file.
      * Both start and end bytes are inclusive.
      */
-    createReadStream(opts?:{start: number, end: number}): NodeJS.ReadableStream;
+    createReadStream(opts?: {start: number, end: number}): NodeJS.ReadableStream;
 
     /**
      * Get the file contents as a Buffer.

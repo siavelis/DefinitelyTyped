@@ -13,7 +13,7 @@
 /**
  * Encoding type
  */
-declare type Encoding = "ascii" | "utf8" | "utf16le" | "ucs2" | "utf16le" | "base64" | "binary" | "hex"
+declare type Encoding = "ascii" | "utf8" | "utf16le" | "ucs2" | "utf16le" | "base64" | "binary" | "hex";
 
 interface IBase64Url {
     /**

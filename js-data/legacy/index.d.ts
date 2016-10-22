@@ -69,7 +69,7 @@ declare namespace JSData {
 
         defineResource<T>(resourceNameOrDefinition:string | DSResourceDefinitionConfiguration):DSResourceDefinition<T>;
         defineResource<T, TActions>(resourceNameOrDefinition:string | DSResourceDefinitionConfiguration):DSResourceDefinition<T> & TActions;
-        registerAdapter(adapterId:string, adapter:IDSAdapter, options?:{default: boolean}):void;
+        registerAdapter(adapterId:string, adapter:IDSAdapter, options?: {default: boolean}):void;
     }
 
     interface DSConfiguration extends IDSResourceLifecycleEventHandlers {
@@ -305,7 +305,7 @@ declare namespace JSData {
 }
 
 // declaring the existing global js object
-declare var JSData:{
+declare var JSData: {
     DS: JSData.DS;
     DSErrors: JSData.DSErrors;
 };

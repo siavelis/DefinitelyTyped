@@ -9,7 +9,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module Spreadsheet {
+  export namespace Spreadsheet {
     /**
      * The chart's position within a sheet.  Can be updated using the EmbeddedChart.modify()
      *  function.

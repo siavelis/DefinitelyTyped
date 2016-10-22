@@ -69,7 +69,7 @@ declare namespace ExpressValidator {
 		 * Alias for notRegex()
 		 */
 		not(): Validator;
-		isEmail(options?:{}): Validator;
+		isEmail(options?: {}): Validator;
 		/**
 		 * Accepts http, https, ftp
 		 */

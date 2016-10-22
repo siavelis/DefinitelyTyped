@@ -260,7 +260,7 @@ declare namespace TComb {
    * @param name - Useful for debugging purposes.
    */
 
-  export module enums {
+  export namespace enums {
     /**
      * @param keys - Array of enums.
      * @param name - Useful for debugging purposes.

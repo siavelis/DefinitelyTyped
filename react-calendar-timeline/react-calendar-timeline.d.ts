@@ -11,7 +11,7 @@ declare module "react-calendar-timeline" {
             id: number;
             title: any; // string | Element (React.ClassicComponentClass<any>);
         }[];
-        items:{
+        items: {
             id: number;
             group: number;
             title?: any; // string | Element (React.ClassicComponentClass<any>);
@@ -22,7 +22,7 @@ declare module "react-calendar-timeline" {
             canChangeGroup?: boolean;
             className?: string;
         }[];
-        keys?:{
+        keys?: {
             groupIdKey: string;
             groupTitleKey: string;
             itemIdKey: string;

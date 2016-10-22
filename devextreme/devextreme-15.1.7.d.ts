@@ -18,7 +18,7 @@ declare namespace DevExpress {
         off(eventName: string, eventHandler: Function): T;
     }
     /** An object that serves as a namespace for the methods required to perform validation. */
-    export module validationEngine {
+    export namespace validationEngine {
         export interface IValidator {
             validate(): ValidatorValidationResult;
             reset(): void;
@@ -87,7 +87,7 @@ declare namespace DevExpress {
         urlFor(key: string): string;
     }
     /** An object that serves as a namespace for the methods that are used to animate UI elements. */
-    export module fx {
+    export namespace fx {
         /** Defines animation options. */
         export interface AnimationOptions {
             /** A function called after animation is completed. */
@@ -252,7 +252,7 @@ declare namespace DevExpress {
             options?: any;
         }): void;
     }
-    export module data {
+    export namespace data {
         export interface ODataError extends Error {
             httpStatus?: number;
             errorDetails?: any;
@@ -678,7 +678,7 @@ declare namespace DevExpress {
         }
     }
     /** An object that serves as a namespace for DevExtreme UI widgets as well as for methods implementing UI logic in DevExtreme sites/applications. */
-    export module ui {
+    export namespace ui {
         export interface WidgetOptions extends DOMComponentOptions {
             /** A Boolean value specifying whether or not the widget changes its state when interacting with a user. */
             activeStateEnabled?: boolean;
@@ -833,7 +833,7 @@ declare namespace DevExpress {
         initMobileViewport(options: { allowZoom?: boolean; allowPan?: boolean; allowSelection?: boolean }): void;
     };
     /** An object that serves as a namespace for DevExtreme Data Visualization Widgets. */
-    export module viz {
+    export namespace viz {
         /** Applies a theme for the entire page with several DevExtreme visualization widgets. */
         export function currentTheme(theme: string): void;
         /** Applies a new theme (with the color scheme defined separately) for the entire page with several DevExtreme visualization widgets. */
@@ -3892,7 +3892,7 @@ declare namespace DevExpress.framework {
         /** Removes the application state that has been saved by the saveState() method to the state storage. */
         clearState(): void;
     }
-    export module html {
+    export namespace html {
         export var layoutSets: Array<string>;
         export var animationSets: { [animationSetName: string]: AnimationSet };
         export interface AnimationSet {

@@ -68,7 +68,7 @@ declare namespace polymer {
 
     // Properties
 
-    properties?:{[prop: string]: (PropConstructorType|PropObjectType);};
+    properties?: {[prop: string]: (PropConstructorType|PropObjectType);};
 
     getPropertyInfo?(property: string): Object;
 

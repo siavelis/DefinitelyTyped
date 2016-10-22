@@ -8,7 +8,7 @@ declare module 'common-tags' {
 
     type TemplateTransformer = {
         onSubstitution?: (substitution: string, resultSoFar: string) => string;
-        onEndResult?: (endResult : string) => string;
+        onEndResult?: (endResult: string) => string;
     }
 
     /* Built-in Tags */

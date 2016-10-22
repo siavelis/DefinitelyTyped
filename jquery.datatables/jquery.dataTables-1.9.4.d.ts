@@ -9,7 +9,7 @@
 
 interface JQuery
 {
-	dataTable(param? :DataTables.Options) : DataTables.DataTable;
+	dataTable(param?:DataTables.Options): DataTables.DataTable;
 }
 
 declare namespace DataTables
@@ -27,88 +27,88 @@ declare namespace DataTables
 		_(selector:JQuery, opts?:RowParams): any[];
 
 		/// Add a single new row or multiple rows of data to the table.
-		fnAddData(data:any, redraw?:boolean) : number[];
+		fnAddData(data:any, redraw?:boolean): number[];
 
 		/// This function will make DataTables recalculate the column sizes.
-		fnAdjustColumnSizing(redraw? : boolean) : void;
+		fnAdjustColumnSizing(redraw?: boolean): void;
 
 		/// Quickly and simply clear a table
-		fnClearTable(redraw? : boolean) : void;
+		fnClearTable(redraw?: boolean): void;
 
 		/// The exact opposite of 'opening' a row, this function will close any rows which are currently 'open'.
-		fnClose(node: Node) : number;
+		fnClose(node: Node): number;
 
 		///	Remove a row for the table
-		fnDeleteRow(index: number, callback?: () => void, redraw?: boolean) : any[];
-		fnDeleteRow(tr: Node, callback?: () => void, redraw?: boolean) : any[];
+		fnDeleteRow(index: number, callback?: () => void, redraw?: boolean): any[];
+		fnDeleteRow(tr: Node, callback?: () => void, redraw?: boolean): any[];
 
 		/// Restore the table to it's original state in the DOM by removing all of DataTables enhancements,
 		/// alterations to the DOM structure of the table and event listeners.
-		fnDestroy(remove?: boolean) : void;
+		fnDestroy(remove?: boolean): void;
 
 		/// Redraw the table
-		fnDraw(complete? : boolean) : void;
+		fnDraw(complete?: boolean): void;
 
 		/// Filter the input based on data
-		fnFilter(input: string, column? : number, regex?: boolean, smart? : boolean, showGlobal?: boolean, caseInsensitive? : boolean) : void;
+		fnFilter(input: string, column?: number, regex?: boolean, smart?: boolean, showGlobal?: boolean, caseInsensitive?: boolean): void;
 
 		/// Get the data for the whole table, an individual row or an individual cell based on the provided parameters.
-		fnGetData(row?: Node, col? : number) : any;
-		fnGetData(row?: number, col? : number) : any;
+		fnGetData(row?: Node, col?: number): any;
+		fnGetData(row?: number, col?: number):any;
 
 		/// Get an array of the TR nodes that are used in the table's body.
-		fnGetNodes(row? : number) : any; // Node[] | Node
+		fnGetNodes(row?: number): any; // Node[] | Node
 
 		/// Get the array indexes of a particular cell from it's DOM element and column index including hidden columns
-		fnGetPosition(node: Node) : any; // number | number[]
+		fnGetPosition(node: Node): any; // number | number[]
 
 		/// Check to see if a row is 'open' or not.
-		fnIsOpen(tr: Node) : boolean;
+		fnIsOpen(tr: Node): boolean;
 
 		/// This function will place a new row directly after a row which is currently on display on the page,
 		/// with the HTML contents that is passed into the function.
-		fnOpen(node: Node, html: string, clazz: string) : Node;
-		fnOpen(node: Node, html: Node, clazz: string) : Node;
-		fnOpen(node: Node, html: JQuery, clazz: string) : Node;
+		fnOpen(node: Node, html: string, clazz: string): Node;
+		fnOpen(node: Node, html: Node, clazz: string): Node;
+		fnOpen(node: Node, html: JQuery, clazz: string): Node;
 
 		/// Change the pagination - provides the internal logic for pagination in a simple API function.
-		fnPageChange(action: string, redraw?: boolean) : void;
-		fnPageChange(page: number, redraw?: boolean) : void;
+		fnPageChange(action: string, redraw?: boolean): void;
+		fnPageChange(page: number, redraw?: boolean): void;
 
 		/// Show a particular column
-		fnSetColumnVis(column: number, show: boolean, redraw?: boolean) : void;
+		fnSetColumnVis(column: number, show: boolean, redraw?: boolean): void;
 
 		/// Get the settings for a particular table for external manipulation
-		fnSettings() : Settings;
+		fnSettings(): Settings;
 
 		/// Sort the table by a particular column
-		fnSort(col: number) : void;
-		fnSort(col: any[][]) : void;
+		fnSort(col: number): void;
+		fnSort(col: any[][]): void;
 
 		/// Attach a sort listener to an element for a given column
-		fnSortListener(node: Node, column: number, callback? : () => void): void;
+		fnSortListener(node: Node, column: number, callback?: () => void): void;
 
 		/// Update a table cell or row - this method will accept either a single value to update the cell with,
 		/// an array of values with one element for each column or an object in the same format as the original data source.
-		fnUpdate(data: any, row: Node, column?:number, redraw?: boolean, action? : boolean) : number;
-		fnUpdate(data: any, dataIndex: number, column?:number, redraw?: boolean, action? : boolean) : number;
+		fnUpdate(data: any, row: Node, column?:number, redraw?: boolean, action?: boolean): number;
+		fnUpdate(data: any, dataIndex: number, column?:number, redraw?: boolean, action?: boolean): number;
 
 		/// Provide a common method for plug-ins to check the version of DataTables being used,
 		/// in order to ensure compatibility.
-		fnVersionCheck(version: string) : boolean;
+		fnVersionCheck(version: string): boolean;
 	}
 
 	export interface Static
 	{
 		/// Provide a common method for plug-ins to check the version of DataTables being used,
 		/// in order to ensure compatibility.
-		fnVersionCheck(version: string) : boolean;
+		fnVersionCheck(version: string): boolean;
 
 		/// Check if a TABLE node is a DataTable table already or not.
-		fnIsDataTable(table: Node) : boolean;
+		fnIsDataTable(table: Node): boolean;
 
 		/// Get all DataTable tables that have been initialised.
-		fnTables(visible? : boolean) : Node[];
+		fnTables(visible?: boolean): Node[];
 	}
 
 	export interface RowParams
@@ -188,13 +188,13 @@ declare namespace DataTables
 		sScrollX?: string;
 		sScrollXInner?: string;
 		sScrollY?: string;
-		sServerMethod? : string;
+		sServerMethod?: string;
 	}
 
 	export interface LanguageOptions
 	{
-		oAria? : AriaOptions;
-		oPaginate? : PaginateOptions;
+		oAria?: AriaOptions;
+		oPaginate?: PaginateOptions;
 		sEmptyTable?: string;
 		sInfo?: string;
 		sInfoEmpty?: string;
@@ -227,10 +227,10 @@ declare namespace DataTables
 	{
 		aDataSort?: number[];
 		asSorting?: string[];
-		bSearchable? : boolean;
-		bSortable? : boolean;
-		bVisible? : boolean;
-		_bAutoType? : boolean;
+		bSearchable?: boolean;
+		bSortable?: boolean;
+		bVisible?: boolean;
+		_bAutoType?: boolean;
 		fnCreatedCell?: CreatedCell;
 		iDataSort?: number;
 		mData?: any;
@@ -254,10 +254,10 @@ declare namespace DataTables
 
 	export interface Settings
 	{
-		oFeatures : Features;
+		oFeatures: Features;
 		oScroll: ScrollingSettings;
-		oLanguage : { fnInfoCallback : InfoCallback; };
-		oBrowser : { bScrollOversize : boolean; };
+		oLanguage: { fnInfoCallback: InfoCallback; };
+		oBrowser: { bScrollOversize: boolean; };
 		aanFeatures: Node[][];
 		aoData: Row[];
 		aiDisplay: number[];
@@ -327,7 +327,7 @@ declare namespace DataTables
 		fnRecordsTotal: () => number;
 		fnRecordsDisplay: () => number;
 		fnDisplayEnd: () => number;
-		oInstance : any;
+		oInstance: any;
 		sInstance: string;
 		iTabIndex: number;
 		nScrollHead: Node;
@@ -351,7 +351,7 @@ declare namespace DataTables
 
 	export interface ScrollingSettings
 	{
-		bAutoCss : boolean;
+		bAutoCss: boolean;
 		bCollapse: boolean;
 		bInfinite: boolean;
 		iBarWidth: number;
@@ -373,10 +373,10 @@ declare namespace DataTables
 	{
 		aDataSort: any;
 		asSorting: string[];
-		bSearchable : boolean;
-		bSortable : boolean;
-		bVisible : boolean;
-		_bAutoType : boolean;
+		bSearchable: boolean;
+		bSortable: boolean;
+		bVisible: boolean;
+		_bAutoType: boolean;
 		fnCreatedCell: CreatedCell;
 		fnGetData: (data: any, specific: string) => any;
 		fnSetData: (data: any, value: any) => void;
@@ -399,81 +399,81 @@ declare namespace DataTables
 
 	export interface CookieCallback
 	{
-		(name: string, data: any, expires: string, path: string, cookie: string) : void;
+		(name: string, data: any, expires: string, path: string, cookie: string): void;
 	}
 
 	export interface RowCreatedCallback
 	{
-		(row: Node, data: any[], dataIndex: number) : void;
+		(row: Node, data: any[], dataIndex: number): void;
 	}
 
 	export interface DrawCallback
 	{
-		(settings: Settings) : void;
+		(settings: Settings): void;
 	}
 
 	export interface FooterCallback
 	{
-		(foot: Element, data: any[], start:number, end:number, display: number[]) : void;
+		(foot: Element, data: any[], start:number, end:number, display: number[]): void;
 	}
 
 	export interface FormatNumber
 	{
-		(toFormat: number) : string;
+		(toFormat: number): string;
 	}
 
 	export interface HeaderCallback
 	{
-		(head: Element, data: any[], start:number, end:number, display: number[]) : void;
+		(head: Element, data: any[], start:number, end:number, display: number[]): void;
 	}
 
 	export interface InfoCallback
 	{
-		(settings: Settings, start: number, end: number, max:number, total: number, pre: string) : string;
+		(settings: Settings, start: number, end: number, max:number, total: number, pre: string): string;
 	}
 
 	export interface InitComplete
 	{
-		(settings: Settings, json: any) : void;
+		(settings: Settings, json: any): void;
 	}
 
 	export interface PreDrawCallback
 	{
-		(settings: Settings) : boolean;
+		(settings: Settings): boolean;
 	}
 
 	export interface RowCallback
 	{
-		(row : Settings, data: any[], displayIndex: number, displayIndexFull: number) : void;
+		(row: Settings, data: any[], displayIndex: number, displayIndexFull: number): void;
 	}
 
 	export interface StateLoadCallback
 	{
-		(settings: Settings) : any;
+		(settings: Settings): any;
 	}
 
 	export interface StateLoadParams
 	{
-		(settings: Settings, data: any) : void;
+		(settings: Settings, data: any): void;
 	}
 
 	export interface StateLoaded
 	{
-		(settings: Settings, data: any) : void;
+		(settings: Settings, data: any): void;
 	}
 
 	export interface StateSaveCallback
 	{
-		(settings: any, data:any) : void;
+		(settings: any, data:any): void;
 	}
 
 	export interface StateSaveParams
 	{
-		(settings: any, data:any) : void;
+		(settings: any, data:any): void;
 	}
 
 	export interface CreatedCell
 	{
-		(nTd: Node, cellData: any, rowData: any, row: number, col: number) : void;
+		(nTd: Node, cellData: any, rowData: any, row: number, col: number): void;
 	}
 }

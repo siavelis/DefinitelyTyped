@@ -6,7 +6,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module XML_Service {
+  export namespace XML_Service {
     /**
      * A representation of an XML attribute.
      *

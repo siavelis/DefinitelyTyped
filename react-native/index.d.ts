@@ -5453,7 +5453,7 @@ declare module "react" {
         inOut(easing: EasingFunction): EasingFunction;
     }
 
-    export module Animated {
+    export namespace Animated {
         // Most (all?) functions where AnimatedValue is used any subclass of Animated can be used as well.
         type AnimatedValue = Animated;
         type AnimatedValueXY = ValueXY;

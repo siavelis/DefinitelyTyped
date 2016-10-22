@@ -5,7 +5,7 @@
 
 declare module "confit" {
   interface ProtocolsSetPrivate {
-    [protocol: string] : (value: any, callback?: any) => void
+    [protocol: string]: (value: any, callback?: any) => void
   }
 
   interface ConfigStore {
@@ -20,7 +20,7 @@ declare module "confit" {
   }
 
   interface ConfigFactory {
-    create(callback: (err: any, config: ConfigStore) => any) : void;
+    create(callback: (err: any, config: ConfigStore) => any): void;
     addOverride(filepathOrSettingsObj: string|Object): this;
     addDefault(filepathOrSettingsObj: string|Object): this;
   }

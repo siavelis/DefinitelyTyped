@@ -14,7 +14,7 @@ declare module THREE {
 
 		// API
 		enabled: boolean;
-		screen:{ left: number; top: number; width: number; height: number };
+		screen: { left: number; top: number; width: number; height: number };
 		radius: number;
 		rotateSpeed: number;
 		zoomSpeed: number;

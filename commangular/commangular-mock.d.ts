@@ -40,24 +40,24 @@ declare module commangular {
 		 * The data that was passed into the command
 		 * @param key The property name that is in the object that was passed
 		 */
-		dataPassed( key : string ) : any;
+		dataPassed(key: string): any;
 
 		/**
 		 * The data that was returned by the command
 		 * @param key The result key that was defined in the command. If no result
 		 * 		was defined use 'lastResult' as the key
 		 */
-		resultKey( key: string ): any;
+		resultKey(key: string): any;
 
 		/**
 		 * Indicates if the command execution was cancelled.
 		 */
-		canceled( ): boolean;
+		canceled(): boolean;
 
 		/**
 		 * Indicates if the command was executed????
 		 */
-		commandExecuted( ): boolean;
+		commandExecuted(): boolean;
 	}
 
 }

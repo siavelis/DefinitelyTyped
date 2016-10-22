@@ -40,9 +40,9 @@ declare class Dexie {
 
     static deepClone(obj: Object): Object;
 
-    static delete(databaseName : string): Dexie.Promise<void>;
+    static delete(databaseName: string): Dexie.Promise<void>;
 
-    static exists(databaseName : string): Dexie.Promise<boolean>;
+    static exists(databaseName: string): Dexie.Promise<boolean>;
 
     version(versionNumber: Number): Dexie.Version
 
@@ -84,7 +84,7 @@ declare class Dexie {
 
     delete(): Dexie.Promise<void>;
 
-    exists(name : string) : Dexie.Promise<boolean>;
+    exists(name: string): Dexie.Promise<boolean>;
 
     isOpen(): boolean;
 

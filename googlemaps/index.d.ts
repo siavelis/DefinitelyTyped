@@ -189,7 +189,7 @@ declare namespace google.maps {
         toGeoJson(callback: (feature: Object) => void): void;
     }
 
-    export module Data {
+    export namespace Data {
         export interface DataOptions {
             controlPosition?: ControlPosition;
             controls?: string[];
@@ -1868,7 +1868,7 @@ declare namespace google.maps {
     }
 
     /***** Geometry Library *****/
-    export module geometry {
+    export namespace geometry {
         export class encoding {
             static decodePath(encodedPath: string): LatLng[];
             static encodePath(path: any[]): string; // LatLng[]|MVCArray<LatLng>
@@ -1933,7 +1933,7 @@ declare namespace google.maps {
     }
 
     /***** AdSense Library *****/
-    export module adsense {
+    export namespace adsense {
         export class AdUnit extends MVCObject {
             constructor(container: Element, opts: AdUnitOptions);
             getBackgroundColor(): string;
@@ -1994,7 +1994,7 @@ declare namespace google.maps {
     }
 
     /***** Places Library *****/
-    export module places {
+    export namespace places {
         export class Autocomplete extends MVCObject {
             constructor(inputField: HTMLInputElement, opts?: AutocompleteOptions);
             getBounds(): LatLngBounds;
@@ -2192,7 +2192,7 @@ declare namespace google.maps {
     }
 
     /***** Drawing Library *****/
-    export module drawing {
+    export namespace drawing {
         export class DrawingManager extends MVCObject {
             constructor(options?: DrawingManagerOptions);
             getDrawingMode(): OverlayType;
@@ -2234,7 +2234,7 @@ declare namespace google.maps {
     }
 
     /***** Visualization Library *****/
-    export module visualization {
+    export namespace visualization {
         export class MapsEngineLayer extends MVCObject {
             constructor(options: MapsEngineLayerOptions);
             getLayerId(): string;

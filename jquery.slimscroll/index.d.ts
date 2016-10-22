@@ -8,15 +8,15 @@ interface IJQuerySlimScrollOptions {
     /**
      * width in pixels of the visible scroll area
      */
-    width? : string;
+    width?: string;
     /**
      * height in pixels of the visible scroll area
      */
-    height? : string;
+    height?: string;
     /**
      * width in pixels of the scrollbar and rail
      */
-    size? : string;
+    size?: string;
     /**
      * scrollbar color, accepts any hex/color value
      */
@@ -36,7 +36,7 @@ interface IJQuerySlimScrollOptions {
     /**
      * sets scrollbar opacity
      */
-    opacity? : number;
+    opacity?: number;
     /**
      * enables always-on mode for the scrollbar
      */
@@ -108,7 +108,7 @@ interface IJQuerySlimScrollOptions {
 }
 
 interface JQuery {
-    slimScroll:{
+    slimScroll: {
         (): JQuery;
         (options: IJQuerySlimScrollOptions): JQuery;
     }

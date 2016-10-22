@@ -97,7 +97,7 @@ interface Stamp {
      * an .enclose() function is an anti-pattern that should be avoided, when possible.
      * @return A new object composed of the Stamps and prototypes provided.
      */
-    (state?:{}, ...encloseArgs: any[]): any | Promise<any>;
+    (state?: {}, ...encloseArgs: any[]): any | Promise<any>;
 
     /**
      * Just like calling stamp(), stamp.create() invokes the stamp and returns a new instance.
@@ -109,7 +109,7 @@ interface Stamp {
      * an .enclose() function is an anti-pattern that should be avoided, when possible.
      * @return A new object composed of the Stamps and prototypes provided.
      */
-    create(state?:{}, ...encloseArgs: any[]): any | Promise<any>;
+    create(state?: {}, ...encloseArgs: any[]): any | Promise<any>;
 
     /**
      * An object map containing the fixed prototypes.
@@ -121,14 +121,14 @@ interface Stamp {
      * @param methods Object(s) containing map of method names and bodies for delegation.
      * @return A new Stamp.
      */
-    methods(...methods:{}[]): Stamp;
+    methods(...methods: {}[]): Stamp;
 
     /**
      * Take n objects and add them to the state prototype. Creates and returns new Stamp. Chainable.
      * @param states Object(s) containing map of property names and values to clone for each new object.
      * @return A new Stamp.
      */
-    refs(...states:{}[]): Stamp;
+    refs(...states: {}[]): Stamp;
 
     /**
      * Take n objects and merge them (but safely, no data override) to the of any future created instance.
@@ -136,12 +136,12 @@ interface Stamp {
      * @param objects Object(s) to merge for each new object.
      * @return A new Stamp.
      */
-    props(...objects:{}[]): Stamp;
+    props(...objects: {}[]): Stamp;
 
     /**
      * @deprecated Use .refs() instead.
      */
-    state(...states:{}[]): Stamp;
+    state(...states: {}[]): Stamp;
 
     /**
      * @deprecated Use .init() instead.
@@ -151,7 +151,7 @@ interface Stamp {
     /**
      * @deprecated Use .init() instead.
      */
-    enclose(...functions:{}[]): Stamp;
+    enclose(...functions: {}[]): Stamp;
 
     /**
      * Take n functions, an array of functions, or n objects and add the functions to the enclose prototype.
@@ -171,7 +171,7 @@ interface Stamp {
      * @param functions Function properties of these objects will be treated as closure functions.
      * @return A new Stamp.
      */
-    init(...functions:{}[]): Stamp;
+    init(...functions: {}[]): Stamp;
 
     /**
      * Take n objects and add them to a new stamp and any future stamp it composes with.
@@ -179,7 +179,7 @@ interface Stamp {
      * @param statics Object(s) containing map of property names and values to mixin into each new stamp.
      * @return A new Stamp.
      */
-    static(...statics:{}[]): Stamp;
+    static(...statics: {}[]): Stamp;
 
     /**
      * Take one or more Stamps and
@@ -211,21 +211,21 @@ declare namespace stampit {
      * @param methods Object(s) containing map of method names and bodies for delegation.
      * @return A new Stamp.
      */
-    export function methods(...methods:{}[]): Stamp;
+    export function methods(...methods: {}[]): Stamp;
 
     /**
      * A shortcut methods for stampit().refs()
      * @param states Object(s) containing map of property names and values to clone for each new object.
      * @return A new Stamp.
      */
-    export function refs(...states:{}[]): Stamp;
+    export function refs(...states: {}[]): Stamp;
 
     /**
      * A shortcut methods for stampit().props()
      * @param states Object(s) to merge for each new object.
      * @return A new Stamp.
      */
-    export function props(...states:{}[]): Stamp;
+    export function props(...states: {}[]): Stamp;
 
     /**
      * A shortcut methods for stampit().init()
@@ -239,7 +239,7 @@ declare namespace stampit {
      * @param statics Object(s) containing map of property names and values to mixin into each new stamp (NOT OBJECT).
      * @return A new Stamp.
      */
-    export function static(...statics:{}[]): Stamp;
+    export function static(...statics: {}[]): Stamp;
 
     /**
      * Take two or more Stamps and combine them to produce a new Stamp.

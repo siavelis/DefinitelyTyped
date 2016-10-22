@@ -5,7 +5,7 @@
 
 declare namespace bip21 {
     export function decode(uri: string): {address: string, amount?: number};
-    export function encode(address: string,options?: any): string;
+    export function encode(address: string, options?: any): string;
 }
 
 export = bip21;

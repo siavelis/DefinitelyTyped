@@ -47,7 +47,7 @@ declare namespace WebFont {
 	export interface Custom {
 		families?: Array<string>;
 		urls?: Array<string>;
-		testStrings?:{[fontFamily: string]: string};
+		testStrings?: {[fontFamily: string]: string};
 	}
 	export interface Fontdeck {
 		id?: string;

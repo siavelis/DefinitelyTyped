@@ -18,7 +18,7 @@ declare module DevExpress {
         off(eventName: string, eventHandler: Function): T;
     }
     /** An object that serves as a namespace for the methods required to perform validation. */
-    export module validationEngine {
+    export namespace validationEngine {
         export interface IValidator {
             validate(): ValidatorValidationResult;
             reset(): void;
@@ -56,7 +56,7 @@ declare module DevExpress {
         /** Validates the rules that are defined within the dxValidator objects that are registered for the specified ViewModel. */
         export function validateModel(model: Object): ValidationGroupValidationResult;
         /** Registers all the dxValidator objects by which the fields of the specified ViewModel are extended. */
-        export function registerModelForValidation(model: Object) : void;
+        export function registerModelForValidation(model: Object): void;
     }
     export var hardwareBackButton: JQueryCallback;
     /** Processes the hardware back button click. */
@@ -85,7 +85,7 @@ declare module DevExpress {
         urlFor(key: string): string;
     }
     /** An object that serves as a namespace for the methods that are used to animate UI elements. */
-    export module fx {
+    export namespace fx {
         /** Defines animation options. */
         export interface AnimationOptions {
             /** A function called after animation is completed. */
@@ -256,7 +256,7 @@ declare module DevExpress {
             options?: any;
         }): void;
     }
-    export module data {
+    export namespace data {
         export interface ODataError extends Error {
             httpStatus?: number;
             errorDetails?: any;
@@ -673,7 +673,7 @@ declare module DevExpress {
         }
     }
     /** An object that serves as a namespace for DevExtreme UI widgets as well as for methods implementing UI logic in DevExtreme sites/applications. */
-    export module ui {
+    export namespace ui {
         export interface WidgetOptions extends DOMComponentOptions {
             /** A Boolean value specifying whether or not the widget changes its state when interacting with a user. */
             activeStateEnabled?: boolean;
@@ -820,7 +820,7 @@ declare module DevExpress {
         cancelAnimationFrame(requestID: number): void;
     };
     /** An object that serves as a namespace for DevExtreme Data Visualization Widgets. */
-    export module viz {
+    export namespace viz {
         /** Applies a theme for the entire page with several DevExtreme visualization widgets. */
         export function currentTheme(theme: string): void;
         /** Applies a new theme (with the color scheme defined separately) for the entire page with several DevExtreme visualization widgets. */
@@ -4267,7 +4267,7 @@ declare module DevExpress.framework {
         /** Removes the application state that has been saved by the saveState() method to the state storage. */
         clearState(): void;
     }
-    export module html {
+    export namespace html {
         export var layoutSets: Array<string>;
         export var animationSets: { [animationSetName: string]: AnimationSet };
         export interface AnimationSet {

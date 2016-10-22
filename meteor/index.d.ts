@@ -97,16 +97,16 @@ declare namespace HTTP {
 		content?: string;
 		data?: any;
 		query?: string;
-		params?:{[id: string]: string};
+		params?: {[id: string]: string};
 		auth?: string;
-		headers?:{[id: string]: string};
+		headers?: {[id: string]: string};
 		timeout?: number;
 		followRedirects?: boolean;
 	}
 
 	interface HTTPResponse {
 		statusCode?: number;
-		headers?:{[id: string]: string};
+		headers?: {[id: string]: string};
 		content?: string;
 		data?: any;
 	}
@@ -510,7 +510,7 @@ declare namespace Blaze {
 }
 
 declare namespace Cordova {
-	function depends(dependencies:{[id: string]: string}): void;
+	function depends(dependencies: {[id: string]: string}): void;
 }
 
 declare namespace DDP {
@@ -693,7 +693,7 @@ declare namespace Mongo {
 }
 
 declare namespace Npm {
-	function depends(dependencies:{[id: string]: string}): void;
+	function depends(dependencies: {[id: string]: string}): void;
 	function require(name: string): any;
 }
 
@@ -889,7 +889,7 @@ interface Template {
 	created: Function;
 	destroyed: Function;
 	events(eventMap: Meteor.EventMap): void;
-	helpers(helpers:{[id: string]: any}): void;
+	helpers(helpers: {[id: string]: any}): void;
 	onCreated: Function;
 	onDestroyed: Function;
 	onRendered: Function;

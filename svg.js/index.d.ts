@@ -42,7 +42,7 @@ declare namespace svgjs {
         gaussianBlur(values: string): Filter;
         colorMatrix(name: string, value: number): Filter;
         colorMatrix(name: string, matrix: number[]): Filter;
-        componentTransfer(components:{rgb?: FilterComponentTransfer; g?: FilterComponentTransfer;}): Filter;
+        componentTransfer(components: {rgb?: FilterComponentTransfer; g?: FilterComponentTransfer;}): Filter;
         offset(x: number, y: number): Filter;
         blend(): Filter;
         in(source: FilterSource): Filter;
@@ -71,7 +71,7 @@ declare namespace svgjs {
         nested(): Doc;
 
         animate(duration?: number, ease?: string, delay?: number): Animation;
-        animate(info:{ease?: string; duration?: number; delay?: number}): Animation;
+        animate(info: {ease?: string; duration?: number; delay?: number}): Animation;
 
         attr(name: string): any;
         attr(obj: Object): Element;
@@ -120,10 +120,10 @@ declare namespace svgjs {
         remember(name: string): any;
         forget(...keys: string[]): Element;
 
-        fill(fill:{color?: string; opacity?: number}): Element;
+        fill(fill: {color?: string; opacity?: number}): Element;
         fill(color: string): Element;
         fill(pattern: Element): Element;
-        stroke(data:{color?: string; opacity?: number; width?: number}): Element;
+        stroke(data: {color?: string; opacity?: number; width?: number}): Element;
         stroke(color: string): Element;
         opacity(o: number): Element;
         rotate(d: number, cx?: number, cy?: number): Element;
@@ -163,7 +163,7 @@ declare namespace svgjs {
 
     export interface Text {
         content: string;
-        font(font:{family?: string; size?: number; anchor?: string; leading?: string}): Element;
+        font(font: {family?: string; size?: number; anchor?: string; leading?: string}): Element;
         tspan(text: string): Element;
         path(data: string): Element;
         plot(data: string): Element;

@@ -112,8 +112,8 @@ interface KnockoutObservable<T> extends KnockoutSubscribable<T>, KnockoutObserva
 	(value: T | null): void;
 
 	peek(): T;
-	valueHasMutated?:{(): void;};
-	valueWillMutate?:{(): void;};
+	valueHasMutated?: {(): void;};
+	valueWillMutate?: {(): void;};
     extend(requestedExtenders: { [key: string]: any; }): KnockoutObservable<T>;
 }
 

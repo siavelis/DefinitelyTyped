@@ -133,7 +133,7 @@ declare namespace self {
          *
          * @returns {any} The cldr member.
          */
-        get(path: string) : any;
+        get(path: string): any;
 
         /**
          * @name get

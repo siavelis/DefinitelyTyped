@@ -1255,9 +1255,9 @@ declare namespace CKEDITOR {
     }
 
     interface buttonDefinition {
-        label : string;
-        command : string;
-        toolbar : string;
+        label: string;
+        command: string;
+        toolbar: string;
     }
 
     interface template {
@@ -1313,24 +1313,24 @@ declare namespace CKEDITOR {
     }
 
     class environmentConfig  {
-        air : boolean;
-        chrome : boolean;
-        cssClass : string;
-        edge : boolean;
-        gecko : boolean;
-        hc : boolean;
-        hidpi : boolean;
-        iOS : boolean;
-        ie : boolean;
-        isCompatible : boolean;
-        mac : boolean;
-        needsBrFiller : boolean;
-        needsNbspFiller : boolean;
-        quirks : boolean;
-        safari : boolean;
-        version : number;
-        webkit : boolean;
-        secure( ) : boolean;
+        air: boolean;
+        chrome: boolean;
+        cssClass: string;
+        edge: boolean;
+        gecko: boolean;
+        hc: boolean;
+        hidpi: boolean;
+        iOS: boolean;
+        ie: boolean;
+        isCompatible: boolean;
+        mac: boolean;
+        needsBrFiller: boolean;
+        needsNbspFiller: boolean;
+        quirks: boolean;
+        safari: boolean;
+        version: number;
+        webkit: boolean;
+        secure( ): boolean;
     }
 
     namespace ui {
@@ -1806,7 +1806,7 @@ declare namespace CKEDITOR {
 
     namespace tools {
         var callFunction: Function;
-        function enableHtml5Elements(doc: Object, withAppend? : Boolean) : void;
+        function enableHtml5Elements(doc: Object, withAppend?: Boolean): void;
     }
 
 

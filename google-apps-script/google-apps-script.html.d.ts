@@ -7,7 +7,7 @@
 
 
 declare namespace GoogleAppsScript {
-  export module HTML {
+  export namespace HTML {
     /**
      * An HtmlOutput object that can be served from a script. Due to security considerations,
      *  scripts cannot directly return HTML to a browser. Instead, they must sanitize it so that it

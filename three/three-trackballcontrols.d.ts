@@ -14,7 +14,7 @@ declare namespace THREE {
 
         // API
         enabled: boolean;
-        screen:{ left: number; top: number; width: number; height: number };
+        screen: { left: number; top: number; width: number; height: number };
         rotateSpeed: number;
         zoomSpeed: number;
         panSpeed: number;

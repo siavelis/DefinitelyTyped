@@ -14,7 +14,7 @@ interface ISatnavOptions {
 
 interface INavigationOptions {
     path?: string;
-    directions?: (params : any) => any;
+    directions?: (params: any) => any;
     title?: string | Callback;
 }
 

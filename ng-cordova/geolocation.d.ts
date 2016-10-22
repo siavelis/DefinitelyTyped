@@ -34,9 +34,9 @@ declare namespace ngCordova {
     }
 
     export interface IGeolocationService {
-        getCurrentPosition(options?: IGeolocationOptions) : ng.IPromise<IGeoPosition>;
-        watchPosition(options?: IGeolocationOptions)  : ng.IPromise<IGeoPosition>;
-        clearWatch(watchID: {[key: string]: any}) : void;
+        getCurrentPosition(options?: IGeolocationOptions): ng.IPromise<IGeoPosition>;
+        watchPosition(options?: IGeolocationOptions): ng.IPromise<IGeoPosition>;
+        clearWatch(watchID: {[key: string]: any}): void;
     }
 
 }

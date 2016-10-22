@@ -102,7 +102,7 @@ declare module Elasticsearch {
 
     export interface BulkIndexDocumentsParams extends GenericParams {
         refresh?: boolean;
-        routing? : string;
+        routing?: string;
         timeout?: number | Date;
         type?: string;
         fields?: string | string[] | boolean;

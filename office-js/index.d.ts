@@ -13017,7 +13017,7 @@ declare namespace Office.MailboxEnums {
     }
 }
 declare namespace Office {
-    export module Types {
+    export namespace Types {
         export interface ItemRead extends Office.Item {
             subject: any;
             /**
@@ -13229,8 +13229,8 @@ declare namespace Office {
             getRegExMatchesByName(name: string): string[];
         }
     }
-    export module cast {
-        export module item {
+    export namespace cast {
+        export namespace item {
             function toAppointmentCompose(item: Office.Item): Office.Types.AppointmentCompose;
             function toAppointmentRead(item: Office.Item): Office.Types.AppointmentRead;
             function toAppointment(item: Office.Item): Office.Appointment;

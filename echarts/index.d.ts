@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare namespace ECharts {
-    function init(dom: HTMLDivElement|HTMLCanvasElement, theme?: Object|string, opts?:{
+    function init(dom: HTMLDivElement|HTMLCanvasElement, theme?: Object|string, opts?: {
         devicePixelRatio?: number
         renderer?: string
     }): ECharts;
@@ -46,7 +46,7 @@ declare namespace ECharts {
 
         hideLoading(): void
 
-        getDataURL(opts:{
+        getDataURL(opts: {
             // 导出的格式，可选 png, jpeg
             type?: string,
             // 导出的图片分辨率比例，默认为 1。
@@ -55,7 +55,7 @@ declare namespace ECharts {
             backgroundColor?: string
         }): string
 
-        getConnectedDataURL(opts:{
+        getConnectedDataURL(opts: {
             // 导出的格式，可选 png, jpeg
             type: string,
             // 导出的图片分辨率比例，默认为 1。

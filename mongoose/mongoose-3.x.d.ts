@@ -236,7 +236,7 @@ declare module "mongoose" {
     get(fn: Function): VirtualType;
     set(fn: Function): VirtualType;
   }
-  export module Types {
+  export namespace Types {
     export class ObjectId {
       constructor(id?: string|number);
       toHexString(): string;

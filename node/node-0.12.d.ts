@@ -1447,7 +1447,7 @@ declare module "path" {
      */
     export function format(pathObject: ParsedPath): string;
 
-    export module posix {
+    export namespace posix {
       export function normalize(p: string): string;
       export function join(...paths: any[]): string;
       export function resolve(...pathSegments: any[]): string;
@@ -1462,7 +1462,7 @@ declare module "path" {
       export function format(pP: ParsedPath): string;
     }
 
-    export module win32 {
+    export namespace win32 {
       export function normalize(p: string): string;
       export function join(...paths: any[]): string;
       export function resolve(...pathSegments: any[]): string;

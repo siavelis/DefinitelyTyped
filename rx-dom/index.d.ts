@@ -131,7 +131,7 @@ declare module Rx.DOM {
     function fromMutationObserver(target: Node, options: MutationObserverInit): Rx.Observable<MutationEvent>;
 
     // Geolocation
-    export module geolocation {
+    export namespace geolocation {
         function getCurrentPosition(geolocationOptions?: GeolocationOptions): Rx.Observable<Position>;
         function watchPosition(geolocationOptions?: GeolocationOptions): Rx.Observable<Position>;
     }

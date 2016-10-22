@@ -15,7 +15,7 @@ declare module 'jspdf' {
 
         internal: {
             'pdfEscape'(text: string, flags: any): any;
-            'getStyle'(style: string) : any;
+            'getStyle'(style: string): any;
             'getFont'(): any;
             'getFontSize'(): number;
             'getLineHeight'(): number;

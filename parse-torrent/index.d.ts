@@ -29,10 +29,10 @@ declare namespace ParseTorrent {
 
   interface StaticInstance {
     (magnetUriOrInfoHash: string): ParsedTorrent;
-    (torrentFileOrInfoHash: Buffer):{ info: ParsedTorrent };
+    (torrentFileOrInfoHash: Buffer): { info: ParsedTorrent };
 
     toMagnetURI(parsedTorrent: ParsedTorrent): string;
-    toTorrentFile(parsedTorrent:{ info: ParsedTorrent }): Buffer;
+    toTorrentFile(parsedTorrent: { info: ParsedTorrent }): Buffer;
 
     remote(remoteURLorLocalTorrentPath: string, onTorrentCallback?: (err: Error, parsedTorrent: ParsedTorrent) => void): void;
     remote(torrentBlob: Blob, onTorrentCallback?: (err: Error, parsedTorrent: ParsedTorrent) => void): void;

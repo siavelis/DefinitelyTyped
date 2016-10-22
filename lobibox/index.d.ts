@@ -105,7 +105,7 @@ declare namespace LobiboxModule {
             title?: string,
             iconClass?: string // Change warning alert icon globally
         };
-        info?:{
+        info?: {
             title?: string,
             iconClass?: string  // Change info alert icon globally
         };

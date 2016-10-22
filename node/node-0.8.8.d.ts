@@ -1018,7 +1018,7 @@ declare module "util" {
 
 declare module "assert" {
     export function internal(booleanValue: boolean, message?: string): void;
-    export module internal {
+    export namespace internal {
         export function fail(actual: any, expected: any, message: string, operator: string): void;
         export function assert(value: any, message: string): void;
         export function ok(value: any, message?: string): void;
