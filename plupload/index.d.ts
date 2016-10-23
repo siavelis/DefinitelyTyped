@@ -5,11 +5,11 @@
 
 interface plupload_settings {
     /** Required Options */
-    browse_button: any,
-    url: string,
+    browse_button: any;
+    url: string;
 
     /** Filters */
-    filters?: plupload_filters,
+    filters?: plupload_filters;
 
     /** Control the request */
     headers?: any;

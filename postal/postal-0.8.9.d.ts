@@ -54,7 +54,7 @@ interface IPostalUtils{
 interface IPostal {
 	channel(name?: string): IChannelDefinition;
 
-	linkChannels(sources: IEnvelope | IEnvelope[], destinations:  IEnvelope | IEnvelope[]): ISubscriptionDefinition[];
+	linkChannels(sources: IEnvelope | IEnvelope[], destinations: IEnvelope | IEnvelope[]): ISubscriptionDefinition[];
 
 	utils: IPostalUtils;
 

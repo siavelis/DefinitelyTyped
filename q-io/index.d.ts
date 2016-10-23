@@ -171,7 +171,7 @@ declare namespace QioHTTP {
 	interface Response {
 		status: number;
 		headers: Headers;
-		body: Qio.Reader
+		body: Qio.Reader;
 		onclose: () => void;
 		node: any;
 	}
@@ -237,7 +237,7 @@ interface QioBufferWriter {
 	Writer: Qio.Writer;
 }
 interface QioBufferStream {
-	(buffer: Buffer, encoding: string): Qio.Stream
+	(buffer: Buffer, encoding: string): Qio.Stream;
 }
 
 declare module "q-io/http" {

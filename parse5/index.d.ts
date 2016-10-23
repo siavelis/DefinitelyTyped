@@ -204,7 +204,7 @@ export interface StartTagLocationInfo extends LocationInfo {
     /**
      * Start tag attributes' location info
      */
-    attrs: AttributesLocationInfo
+    attrs: AttributesLocationInfo;
 }
 
 export interface ElementLocationInfo {

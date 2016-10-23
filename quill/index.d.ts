@@ -6,26 +6,26 @@
 declare namespace QuillJS {
 
     export interface QuillOptionsStatic {
-        debug?: string,
-        modules?: { [key: string]: any },
-        placeholder?: string,
-        readOnly?: boolean,
-        theme?: string
+        debug?: string;
+        modules?: { [key: string]: any };
+        placeholder?: string;
+        readOnly?: boolean;
+        theme?: string;
     }
 
     export interface BoundsStatic {
-        left: number,
-        top: number,
-        height: number,
-        width: number
+        left: number;
+        top: number;
+        height: number;
+        width: number;
     }
 
     export interface DeltaStatic {
         ops?: Array<any>;
-        retain?: any,
-        delete?: any,
-        insert?: any,
-        attributes?: any
+        retain?: any;
+        delete?: any;
+        insert?: any;
+        attributes?: any;
     }
 
     export interface RangeStatic {
@@ -85,7 +85,7 @@ declare namespace QuillJS {
         register(path: string, def: any, suppressWarning?: boolean): void;
         register(defs: formatsType, suppressWarning?: boolean): void;
         addContainer(className: string, refNode?: any): any;
-        getModule(name: string): any
+        getModule(name: string): any;
     }
 }
 

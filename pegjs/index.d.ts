@@ -13,8 +13,8 @@ declare namespace PEG {
 	}
 
 	interface LocationRange {
-		start: Location,
-		end: Location
+		start: Location;
+		end: Location;
 	}
 
 	class SyntaxError {

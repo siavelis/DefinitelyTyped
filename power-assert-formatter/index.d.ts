@@ -17,7 +17,7 @@ declare namespace powerAssertFormatter {
         widthOf?: Function;
         stringify?: Function;
         diff?: Function;
-        writerClass?: {new (): any;};
+        writerClass?: {new (): any};
         renderers?: any[]; // { string | Function }[]
     }
 

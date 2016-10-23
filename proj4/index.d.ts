@@ -7,35 +7,35 @@ declare module "proj4" {
     const TemplateCoordinates: Array<number> | InterfaceCoordinates;
 
     interface InterfaceCoordinates {
-        x: number,
-        y: number,
-        z?: number,
-        m?: number
+        x: number;
+        y: number;
+        z?: number;
+        m?: number;
     }
 
     interface InterfaceDatum {
-        datum_type: number
-        a: number
-        b: number
-        es: number
-        ep2: number
+        datum_type: number;
+        a: number;
+        b: number;
+        es: number;
+        ep2: number;
     }
 
     interface Proj4Static {
-        forward(coordinates: typeof TemplateCoordinates): Array<number>
-        inverse(coordinates: typeof TemplateCoordinates): Array<number>
+        forward(coordinates: typeof TemplateCoordinates): Array<number>;
+        inverse(coordinates: typeof TemplateCoordinates): Array<number>;
     }
 
     interface InterfaceProjection {
-        datum: string
-        b: number
-        rf: number
-        sphere: number
-        es: number
-        e: number
-        ep2: number
-        forward(coordinates: typeof TemplateCoordinates): Array<number>
-        inverse(coordinates: typeof TemplateCoordinates): Array<number>
+        datum: string;
+        b: number;
+        rf: number;
+        sphere: number;
+        es: number;
+        e: number;
+        ep2: number;
+        forward(coordinates: typeof TemplateCoordinates): Array<number>;
+        inverse(coordinates: typeof TemplateCoordinates): Array<number>;
     }
 
     namespace proj4 {
@@ -98,5 +98,5 @@ declare module "proj4" {
     function proj4(fromProjection: string, toProjection: string): Proj4Static;
     function proj4(fromProjection: string, coordinates: typeof TemplateCoordinates): Array<number>;
     function proj4(fromProjection: string, toProjection: string, coordinates: typeof TemplateCoordinates): Array<number>;
-    export = proj4
+    export = proj4;
 }

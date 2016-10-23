@@ -161,4 +161,4 @@ declare namespace PrismJS {
 	}
 }
 
-declare var Prism : PrismJS.Prism;
+declare var Prism: PrismJS.Prism;

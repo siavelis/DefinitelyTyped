@@ -68,7 +68,7 @@ declare namespace polymer {
 
     // Properties
 
-    properties?: {[prop: string]: (PropConstructorType|PropObjectType);};
+    properties?: {[prop: string]: (PropConstructorType|PropObjectType)};
 
     getPropertyInfo?(property: string): Object;
 
@@ -105,7 +105,7 @@ declare namespace polymer {
 
     // Events
 
-    listeners?: {[key: string]: string;};
+    listeners?: {[key: string]: string};
 
     listen?(node: Element, eventName: string, methodName: string): void;
 
@@ -180,7 +180,7 @@ declare namespace polymer {
 
     isLightDescendant?(node: HTMLElement): boolean;
 
-    isLocalDescendant?(node: HTMLElement): boolean
+    isLocalDescendant?(node: HTMLElement): boolean;
 
     // XStyling
 

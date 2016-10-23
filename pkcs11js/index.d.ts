@@ -31,7 +31,7 @@ interface SlotInfo {
     manufacturerID: string;
     flags: number;
     hardwareVersion: Version;
-    firmwareVersion: Version
+    firmwareVersion: Version;
 }
 
 interface TokenInfo {
@@ -48,7 +48,7 @@ interface TokenInfo {
     minPinLen: number;
     hardwareVersion: Version;
     firmwareVersion: Version;
-    utcTime: string
+    utcTime: string;
     totalPublicMemory: number;
     freePublicMemory: number;
     totalPrivateMemory: number;
@@ -130,8 +130,8 @@ interface RsaPSS extends IParapms {
 }
 
 interface KeyPair {
-    privateKey: Handle,
-    publicKey: Handle,
+    privateKey: Handle;
+    publicKey: Handle;
 }
 
 export class PKCS11 {

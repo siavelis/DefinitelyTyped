@@ -59,7 +59,7 @@ declare namespace ProtoBuf {
     export interface Long {
       high: number;
       low: number;
-      unsigned : boolean;
+      unsigned: boolean;
 
       add(other: Long | number | string): Long;
       and(other: Long | number | string): Long;
@@ -268,7 +268,7 @@ declare namespace ProtoBuf {
     // protobufjs/src/ProtoBuf/Util.js
 
     export interface Util {
-        IS_NODE: boolean
+        IS_NODE: boolean;
         fetch(path: string, callback?: (data: string) => any): string;
         toCamelCase(str: string): string;
         XHR(): XMLHttpRequest;

@@ -19,11 +19,11 @@ interface IPathRoute{
 }
 
 interface IPathRoutes{
-	current: IPathRoute,
-    root: IPathRoute,
-	rescue: Function,
-	previous: IPathRoute,
-	defined: {}
+	current: IPathRoute;
+    root: IPathRoute;
+	rescue: Function;
+	previous: IPathRoute;
+	defined: {};
 }
 
 interface IPathCore{
@@ -51,7 +51,7 @@ interface IPath {
 
 	core: IPathCore;
 
-	routes: IPathRoutes
+	routes: IPathRoutes;
 }
 
 declare var Path: IPath;

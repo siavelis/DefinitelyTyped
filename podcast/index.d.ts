@@ -45,12 +45,12 @@ interface IItunesOwner
 interface IItunesCategory
 {
     name: string;
-    subcats: IItunesSubCategory[]
+    subcats: IItunesSubCategory[];
 }
 interface IItunesSubCategory
 {
     name: string;
-    subcat: string[] /* ? */
+    subcat: string[]; /* ? */
 }
 
 interface IItemOptions
@@ -69,7 +69,7 @@ interface IItemOptions
         file?: string;
         size?: number;
         mime?: string;
-    }
+    };
     itunesAuthor?: string;
     itunesExplicit?: boolean;
     itunesSubtitle?: string;
