@@ -29,5 +29,5 @@ declare namespace TypeCheck {
 declare var typecheck: TypeCheck.TC;
 
 declare module "type-check" {
-  export=typecheck;
+  export = typecheck;
 }

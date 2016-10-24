@@ -19,7 +19,7 @@ declare class Victor
      * @param x The X component
      * @param y The Y component
      */
-    constructor(x: number,y: number);
+    constructor(x: number, y: number);
 
     /**
      * Creates vector from array.

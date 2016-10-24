@@ -22,9 +22,9 @@ declare namespace tv4 {
         default?: any;
     }
 
-    export type SchemaMap = {[uri: string]: JsonSchema;};
+    export type SchemaMap = {[uri: string]: JsonSchema};
     // maps error codes/names to human readable error description for a single language
-    export type ErrorMap  = {[errorCode: string]: string;};
+    export type ErrorMap  = {[errorCode: string]: string};
 
 
     export interface ErrorCodes {
@@ -85,7 +85,7 @@ declare namespace tv4 {
         language(code: string): void;
         addLanguage(code: string, map: ErrorMap): void;
         addFormat(format: string, validationFunction: FormatValidationFunction): void;
-        addFormat(formats: {[formatName: string]: FormatValidationFunction;}): void;
+        addFormat(formats: {[formatName: string]: FormatValidationFunction}): void;
         defineKeyword(keyword: string, validationFunction: KeywordValidationFunction): void;
         defineError(codeName: string, codeNumber: number, defaultMessage: string): void;
 

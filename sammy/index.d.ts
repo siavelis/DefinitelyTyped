@@ -159,7 +159,7 @@ declare namespace Sammy {
         params: any;
         redirect(...params: any[]): void;
         render(location: string, data?: any, callback?: Function, partials?): RenderContext;
-        renderEach(location: any, data?: { name: string;data?: any}[],callback?: Function): RenderContext;
+        renderEach(location: any, data?: { name: string; data?: any}[], callback?: Function): RenderContext;
         send(...params: any[]): RenderContext;
         swap(contents: any, callback: Function): string;
         toString(): string;

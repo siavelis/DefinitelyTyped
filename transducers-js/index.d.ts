@@ -45,7 +45,7 @@ declare module 'transducers-js' {
   /**
    * Check if a value is reduced.
    */
-  export function isReduced (x : any) : Boolean;
+  export function isReduced (x: any): Boolean;
 
   /**
    * Function composition. Take N function and return their composition.

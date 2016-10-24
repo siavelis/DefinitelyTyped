@@ -1859,7 +1859,7 @@ declare namespace webdriver {
            * @param {string=} opt_type The log type, if known.
            * @constructor
            */
-          constructor(level: Level|string|number, message: string, opt_timestamp?:number, opt_type?:string|IType);
+          constructor(level: Level|string|number, message: string, opt_timestamp?: number, opt_type?: string|IType);
 
           /** @type {!webdriver.logging.Level} */
           level: Level;
@@ -2807,7 +2807,7 @@ declare namespace webdriver {
              *     with the result of the action.
              * @template T
              */
-            execute<T>(fn: () =>(T|Promise<T>), opt_description?: string): Promise<T>;
+            execute<T>(fn: () => (T|Promise<T>), opt_description?: string): Promise<T>;
 
             /**
              * Inserts a {@code setTimeout} into the command queue. This is equivalent to
@@ -4666,7 +4666,7 @@ declare namespace webdriver {
          * @return {!EventEmitter} A self reference.
          * @private
          */
-        addListener(type: string, fn: Function, opt_scope?:any, opt_oneshot?: boolean): EventEmitter;
+        addListener(type: string, fn: Function, opt_scope?: any, opt_oneshot?: boolean): EventEmitter;
 
 
         /**
@@ -4686,7 +4686,7 @@ declare namespace webdriver {
          * @param {Object=} opt_scope The object in whose scope to invoke the listener.
          * @return {!webdriver.EventEmitter} A self reference.
          */
-        on(type: string, fn: Function, opt_scope?:any): EventEmitter;
+        on(type: string, fn: Function, opt_scope?: any): EventEmitter;
 
         /**
          * Removes a previously registered event listener.
@@ -5420,7 +5420,7 @@ declare namespace webdriver {
          *     with the function's result.
          * @template T
          */
-        call<T>(fn: (...var_args: any[]) =>(T|webdriver.promise.Promise<T>), opt_scope?: any, ...var_args: any[]): webdriver.promise.Promise<T>;
+        call<T>(fn: (...var_args: any[]) => (T|webdriver.promise.Promise<T>), opt_scope?: any, ...var_args: any[]): webdriver.promise.Promise<T>;
 
         /**
          * Schedules a command to wait for a condition to hold. The condition may be
@@ -5632,7 +5632,7 @@ declare namespace webdriver {
     }
 
     interface IWebElementId {
-        [ELEMENT:string]: string;
+        [ELEMENT: string]: string;
     }
 
     /**

@@ -62,8 +62,6 @@ declare namespace SinonChrome.alarms {
 declare namespace SinonChrome.app {
     export var getDetails: Sinon.SinonStub;
     export var getDetailsForFrame: Sinon.SinonStub;
-    export var getDetails: Sinon.SinonStub;
-    export var getDetailsForFrame: Sinon.SinonStub;
     export var getIsInstalled: Sinon.SinonStub;
     export var installState: Sinon.SinonStub;
     export var runningState: Sinon.SinonStub;

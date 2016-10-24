@@ -126,7 +126,7 @@ declare namespace NodeJS {
 
         export var Client: {
             new (): ClientInstance
-        }
+        };
     }
 }
 

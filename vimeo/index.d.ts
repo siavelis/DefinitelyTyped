@@ -27,4 +27,5 @@ interface VimeoPlayer {
     getDomainFromUrl(url: string): string;
 }
 
-declare var $f: VimeoPlayerAPI;declare var Froogaloop: VimeoPlayerAPI;
+declare var $f: VimeoPlayerAPI;
+declare var Froogaloop: VimeoPlayerAPI;

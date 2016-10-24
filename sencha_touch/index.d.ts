@@ -893,7 +893,7 @@ declare namespace Ext.app {
 	}
 }
 declare namespace Ext.app {
-	export interface IController extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IController extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Ext.app.Application) */
 		application?: Ext.app.IApplication;
 		/** [Config Option] (Object) */
@@ -1174,7 +1174,7 @@ declare namespace Ext.app {
 	}
 }
 declare namespace Ext.app {
-	export interface IHistory extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IHistory extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Array) */
 		actions?: any[];
 		/** [Config Option] (String) */
@@ -1392,7 +1392,7 @@ declare namespace Ext.app {
 	}
 }
 declare namespace Ext.app {
-	export interface IProfile extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IProfile extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Ext.app.Application) */
 		application?: Ext.app.IApplication;
 		/** [Config Option] (Array) */
@@ -2734,7 +2734,7 @@ declare namespace Ext.chart {
 	}
 }
 declare namespace Ext.chart.axis {
-	export interface IAxis extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IAxis extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Object) */
 		background?: any;
 		/** [Config Option] (Ext.chart.AbstractChart) */
@@ -3505,7 +3505,7 @@ declare namespace Ext.chart.axis.segmenter {
 	}
 }
 declare namespace Ext.chart.axis.sprite {
-	export interface IAxis extends Ext.draw.sprite.ISprite,Ext.chart.IMarkerHolder {
+	export interface IAxis extends Ext.draw.sprite.ISprite, Ext.chart.IMarkerHolder {
 		/** [Config Option] (Number) */
 		The?: number;
 		/** [Config Option] (Ext.chart.axis.Axis) */
@@ -3795,7 +3795,7 @@ declare namespace Ext.chart.grid {
 	}
 }
 declare namespace Ext.chart.interactions {
-	export interface IAbstract extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IAbstract extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Ext.chart.AbstractChart) */
 		chart?: Ext.chart.IAbstractChart;
 		/** [Config Option] (Boolean) */
@@ -5120,7 +5120,7 @@ declare namespace Ext.chart.series {
 	}
 }
 declare namespace Ext.chart.series {
-	export interface ISeries extends Ext.IBase,Ext.mixin.IObservable {
+	export interface ISeries extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Object) */
 		animate?: any;
 		/** [Config Option] (Object) */
@@ -5597,7 +5597,7 @@ declare namespace Ext.chart.series.sprite {
 	}
 }
 declare namespace Ext.chart.series.sprite {
-	export interface ICartesian extends Ext.draw.sprite.ISprite,Ext.chart.IMarkerHolder {
+	export interface ICartesian extends Ext.draw.sprite.ISprite, Ext.chart.IMarkerHolder {
 		/** [Config Option] (Array) */
 		Data?: any[];
 		/** [Config Option] (Boolean) */
@@ -5683,7 +5683,7 @@ declare namespace Ext.chart.series.sprite {
 	}
 }
 declare namespace Ext.chart.series.sprite {
-	export interface IPie3DPart extends Ext.draw.sprite.IPath,Ext.chart.IMarkerHolder {
+	export interface IPie3DPart extends Ext.draw.sprite.IPath, Ext.chart.IMarkerHolder {
 		/** [Config Option] (Object) */
 		baseColor?: any;
 		/** [Config Option] (Number) */
@@ -5728,7 +5728,7 @@ declare namespace Ext.chart.series.sprite {
 	}
 }
 declare namespace Ext.chart.series.sprite {
-	export interface IPieSlice extends Ext.draw.sprite.ISector,Ext.chart.IMarkerHolder {
+	export interface IPieSlice extends Ext.draw.sprite.ISector, Ext.chart.IMarkerHolder {
 		/** [Config Option] (Boolean) */
 		doCallout?: boolean;
 		/** [Config Option] (String) */
@@ -5760,7 +5760,7 @@ declare namespace Ext.chart.series.sprite {
 	}
 }
 declare namespace Ext.chart.series.sprite {
-	export interface IPolar extends Ext.draw.sprite.ISprite,Ext.chart.IMarkerHolder {
+	export interface IPolar extends Ext.draw.sprite.ISprite, Ext.chart.IMarkerHolder {
 		/** [Config Option] (Array) */
 		Data?: any[];
 		/** [Config Option] (Number) */
@@ -5996,7 +5996,7 @@ declare namespace Ext {
 	}
 }
 declare namespace Ext {
-	export interface IComponent extends Ext.IAbstractComponent,Ext.mixin.ITraversable {
+	export interface IComponent extends Ext.IAbstractComponent, Ext.mixin.ITraversable {
 		/** [Config Option] (String) */
 		baseCls?: string;
 		/** [Config Option] (Number/String) */
@@ -6544,7 +6544,7 @@ declare namespace Ext {
 	}
 }
 declare namespace Ext.lib {
-	export interface IComponent extends Ext.IAbstractComponent,Ext.mixin.ITraversable {
+	export interface IComponent extends Ext.IAbstractComponent, Ext.mixin.ITraversable {
 		/** [Config Option] (String) */
 		baseCls?: string;
 		/** [Config Option] (Number/String) */
@@ -8183,7 +8183,7 @@ declare namespace Ext.data {
 	}
 }
 declare namespace Ext.data {
-	export interface IBatch extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IBatch extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Boolean) */
 		autoStart?: boolean;
 		/** [Config Option] (Boolean) */
@@ -8418,7 +8418,7 @@ declare namespace Ext.data {
 	}
 }
 declare namespace Ext.data {
-	export interface IConnection extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IConnection extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Object) */
 		defaultHeaders?: any;
 		/** [Config Option] (String) */
@@ -9151,7 +9151,7 @@ declare namespace Ext.data {
 	}
 }
 declare namespace Ext.data {
-	export interface IModel extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IModel extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Object[]) */
 		associations?: any[];
 		/** [Config Option] (String/Object/String[]/Object[]) */
@@ -9598,7 +9598,7 @@ declare namespace Ext.data {
 	}
 }
 declare namespace Ext.data {
-	export interface IRecord extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IRecord extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Object[]) */
 		associations?: any[];
 		/** [Config Option] (String/Object/String[]/Object[]) */
@@ -12786,7 +12786,7 @@ declare namespace Ext.data {
 	}
 }
 declare namespace Ext.data.reader {
-	export interface IReader extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IReader extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (String) */
 		clientIdProperty?: string;
 		/** [Config Option] (String) */
@@ -13066,7 +13066,7 @@ declare namespace Ext.data.reader {
 	}
 }
 declare namespace Ext.data {
-	export interface IReader extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IReader extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (String) */
 		clientIdProperty?: string;
 		/** [Config Option] (String) */
@@ -13346,7 +13346,7 @@ declare namespace Ext.data {
 	}
 }
 declare namespace Ext.data {
-	export interface IDataReader extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IDataReader extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (String) */
 		clientIdProperty?: string;
 		/** [Config Option] (String) */
@@ -16619,7 +16619,7 @@ declare namespace Ext.dataview.component {
 	}
 }
 declare namespace Ext.dataview {
-	export interface IDataView extends Ext.IContainer,Ext.mixin.ISelectable {
+	export interface IDataView extends Ext.IContainer, Ext.mixin.ISelectable {
 		/** [Config Option] (String) */
 		baseCls?: string;
 		/** [Config Option] (Boolean) */
@@ -16998,7 +16998,7 @@ declare namespace Ext.dataview {
 	}
 }
 declare namespace Ext {
-	export interface IDataView extends Ext.IContainer,Ext.mixin.ISelectable {
+	export interface IDataView extends Ext.IContainer, Ext.mixin.ISelectable {
 		/** [Config Option] (String) */
 		baseCls?: string;
 		/** [Config Option] (Boolean) */
@@ -17525,7 +17525,7 @@ declare namespace Ext {
 	}
 }
 declare namespace Ext.dataview {
-	export interface IList extends Ext.dataview.IDataView,Ext.mixin.IBindable {
+	export interface IList extends Ext.dataview.IDataView, Ext.mixin.IBindable {
 		/** [Config Option] (String) */
 		baseCls?: string;
 		/** [Config Option] (String) */
@@ -17733,7 +17733,7 @@ declare namespace Ext.dataview {
 	}
 }
 declare namespace Ext {
-	export interface IList extends Ext.dataview.IDataView,Ext.mixin.IBindable {
+	export interface IList extends Ext.dataview.IDataView, Ext.mixin.IBindable {
 		/** [Config Option] (String) */
 		baseCls?: string;
 		/** [Config Option] (String) */
@@ -18869,7 +18869,7 @@ declare namespace Ext.device.accelerometer {
 	}
 }
 declare namespace Ext.device {
-	export interface IAccelerometer extends Ext.IBase,Ext.device.accelerometer.IAbstract {
+	export interface IAccelerometer extends Ext.IBase, Ext.device.accelerometer.IAbstract {
 	}
 	export class Accelerometer {
 		/** [Property] (Ext.Class) */
@@ -18940,7 +18940,7 @@ declare namespace Ext.device.browser {
 	}
 }
 declare namespace Ext.device {
-	export interface IBrowser extends Ext.IBase,Ext.device.browser.IAbstract {
+	export interface IBrowser extends Ext.IBase, Ext.device.browser.IAbstract {
 	}
 	export class Browser {
 		/** [Property] (Ext.Class) */
@@ -19022,7 +19022,7 @@ declare namespace Ext.device.camera {
 	}
 }
 declare namespace Ext.device {
-	export interface ICamera extends Ext.IBase,Ext.device.camera.IAbstract {
+	export interface ICamera extends Ext.IBase, Ext.device.camera.IAbstract {
 	}
 	export class Camera {
 		/** [Property] (Ext.Class) */
@@ -19122,7 +19122,7 @@ declare namespace Ext.device.capture {
 	}
 }
 declare namespace Ext.device {
-	export interface ICapture extends Ext.IBase,Ext.device.capture.IAbstract {
+	export interface ICapture extends Ext.IBase, Ext.device.capture.IAbstract {
 	}
 	export class Capture {
 		/** [Property] (Ext.Class) */
@@ -19238,7 +19238,7 @@ declare namespace Ext.device.compass {
 	}
 }
 declare namespace Ext.device {
-	export interface ICompass extends Ext.IBase,Ext.device.compass.IAbstract {
+	export interface ICompass extends Ext.IBase, Ext.device.compass.IAbstract {
 	}
 	export class Compass {
 		/** [Property] (Ext.Class) */
@@ -19289,7 +19289,7 @@ declare namespace Ext.device.compass {
 	}
 }
 declare namespace Ext.device.connection {
-	export interface IAbstract extends Ext.IEvented,Ext.mixin.IObservable {
+	export interface IAbstract extends Ext.IEvented, Ext.mixin.IObservable {
 		/** [Property] (String) */
 		CELL_2G?: string;
 		/** [Property] (String) */
@@ -19528,7 +19528,7 @@ declare namespace Ext.device.connection {
 	}
 }
 declare namespace Ext.device {
-	export interface IConnection extends Ext.IBase,Ext.device.connection.IAbstract {
+	export interface IConnection extends Ext.IBase, Ext.device.connection.IAbstract {
 	}
 	export class Connection {
 		/** [Property] (String) */
@@ -19792,7 +19792,7 @@ declare namespace Ext.device.connection {
 	}
 }
 declare namespace Ext.device.contacts {
-	export interface IAbstract extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IAbstract extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Boolean) */
 		includeImages?: boolean;
 		/** [Method] Appends an after event handler
@@ -20016,7 +20016,7 @@ declare namespace Ext.device.contacts {
 	}
 }
 declare namespace Ext.device {
-	export interface IContacts extends Ext.IBase,Ext.device.contacts.IAbstract,Ext.device.contacts.ISencha,Ext.device.contacts.ICordova {
+	export interface IContacts extends Ext.IBase, Ext.device.contacts.IAbstract, Ext.device.contacts.ISencha, Ext.device.contacts.ICordova {
 	}
 	export class Contacts {
 		/** [Property] (Ext.Class) */
@@ -20276,7 +20276,7 @@ declare namespace Ext.device.contacts {
 	}
 }
 declare namespace Ext.device.device {
-	export interface IAbstract extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IAbstract extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Property] (String) */
 		name?: string;
 		/** [Property] (String) */
@@ -20489,7 +20489,7 @@ declare namespace Ext.device.device {
 	}
 }
 declare namespace Ext.device {
-	export interface IDevice extends Ext.IBase,Ext.device.device.IAbstract {
+	export interface IDevice extends Ext.IBase, Ext.device.device.IAbstract {
 	}
 	export class Device {
 		/** [Property] (String) */
@@ -20927,7 +20927,7 @@ declare namespace Ext.device.filesystem {
 	}
 }
 declare namespace Ext.device {
-	export interface IFileSystem extends Ext.IBase,Ext.device.filesystem.ISencha {
+	export interface IFileSystem extends Ext.IBase, Ext.device.filesystem.ISencha {
 	}
 	export class FileSystem {
 		/** [Property] (Ext.Class) */
@@ -21096,7 +21096,7 @@ declare namespace Ext.device.geolocation {
 	}
 }
 declare namespace Ext.device {
-	export interface IGeolocation extends Ext.IBase,Ext.device.geolocation.IAbstract {
+	export interface IGeolocation extends Ext.IBase, Ext.device.geolocation.IAbstract {
 	}
 	export class Geolocation {
 		/** [Property] (Ext.Class) */
@@ -21205,7 +21205,7 @@ declare namespace Ext.device.geolocation {
 	}
 }
 declare namespace Ext.device.globalization {
-	export interface IAbstract extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IAbstract extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Method] Appends an after event handler
 		* @param eventName String/String[]/Object The name of the event to listen for.
 		* @param fn Function/String The method the event invokes.
@@ -21485,7 +21485,7 @@ declare namespace Ext.device.globalization {
 	}
 }
 declare namespace Ext.device.media {
-	export interface IAbstract extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IAbstract extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Method] Appends an after event handler
 		* @param eventName String/String[]/Object The name of the event to listen for.
 		* @param fn Function/String The method the event invokes.
@@ -21686,7 +21686,7 @@ declare namespace Ext.device.media {
 	}
 }
 declare namespace Ext.device {
-	export interface IMedia extends Ext.IBase,Ext.device.media.IAbstract {
+	export interface IMedia extends Ext.IBase, Ext.device.media.IAbstract {
 	}
 	export class Media {
 		/** [Property] (Ext.Class) */
@@ -21946,7 +21946,7 @@ declare namespace Ext.device.notification {
 	}
 }
 declare namespace Ext.device {
-	export interface INotification extends Ext.IBase,Ext.device.notification.IAbstract {
+	export interface INotification extends Ext.IBase, Ext.device.notification.IAbstract {
 	}
 	export class Notification {
 		/** [Property] (Ext.Class) */
@@ -22007,7 +22007,7 @@ declare namespace Ext.device.notification {
 	}
 }
 declare namespace Ext.device.orientation {
-	export interface IAbstract extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IAbstract extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Method] Appends an after event handler
 		* @param eventName String/String[]/Object The name of the event to listen for.
 		* @param fn Function/String The method the event invokes.
@@ -22192,7 +22192,7 @@ declare namespace Ext.device.orientation {
 	}
 }
 declare namespace Ext.device {
-	export interface IOrientation extends Ext.IBase,Ext.device.orientation.IAbstract {
+	export interface IOrientation extends Ext.IBase, Ext.device.orientation.IAbstract {
 	}
 	export class Orientation {
 		/** [Property] (Ext.Class) */
@@ -22414,7 +22414,7 @@ declare namespace Ext.device.orientation {
 	}
 }
 declare namespace Ext.device {
-	export interface IPurchases extends Ext.IBase,Ext.device.purchases.ISencha {
+	export interface IPurchases extends Ext.IBase, Ext.device.purchases.ISencha {
 	}
 	export class Purchases {
 		/** [Property] (Ext.Class) */
@@ -22545,7 +22545,7 @@ declare namespace Ext.device.push {
 	}
 }
 declare namespace Ext.device {
-	export interface IPush extends Ext.IBase,Ext.device.push.IAbstract {
+	export interface IPush extends Ext.IBase, Ext.device.push.IAbstract {
 	}
 	export class Push {
 		/** [Property] (Number) */
@@ -22675,7 +22675,7 @@ declare namespace Ext.device.sqlite {
 	}
 }
 declare namespace Ext.device {
-	export interface ISQLite extends Ext.IBase,Ext.device.sqlite.ISencha {
+	export interface ISQLite extends Ext.IBase, Ext.device.sqlite.ISencha {
 	}
 	export class SQLite {
 		/** [Property] (Ext.Class) */
@@ -22971,7 +22971,7 @@ declare namespace Ext.direct {
 	}
 }
 declare namespace Ext.direct {
-	export interface IManager extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IManager extends Ext.IBase, Ext.mixin.IObservable {
 	}
 	export class Manager {
 		/** [Property] (Ext.Class) */
@@ -23209,7 +23209,7 @@ declare namespace Ext.direct {
 	}
 }
 declare namespace Ext {
-	export interface IDirect extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IDirect extends Ext.IBase, Ext.mixin.IObservable {
 	}
 	export class Direct {
 		/** [Property] (Ext.Class) */
@@ -23489,7 +23489,7 @@ declare namespace Ext.direct {
 	}
 }
 declare namespace Ext.direct {
-	export interface IProvider extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IProvider extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (String) */
 		id?: string;
 		/** [Property] (Boolean) */
@@ -23935,7 +23935,7 @@ declare namespace Ext {
 	}
 }
 declare namespace Ext.dom {
-	export interface ICompositeElementLite extends Ext.IBase,Ext.dom.IElement {
+	export interface ICompositeElementLite extends Ext.IBase, Ext.dom.IElement {
 		/** [Property] (HTMLElement[]) */
 		elements?: HTMLElement[];
 		/** [Method] Adds elements to this Composite object
@@ -24459,7 +24459,7 @@ declare namespace Ext.dom {
 	}
 }
 declare namespace Ext {
-	export interface ICompositeElementLite extends Ext.IBase,Ext.dom.IElement {
+	export interface ICompositeElementLite extends Ext.IBase, Ext.dom.IElement {
 		/** [Property] (HTMLElement[]) */
 		elements?: HTMLElement[];
 		/** [Method] Adds elements to this Composite object
@@ -24983,7 +24983,7 @@ declare namespace Ext {
 	}
 }
 declare namespace Ext {
-	export interface ICompositeElement extends Ext.IBase,Ext.dom.IElement {
+	export interface ICompositeElement extends Ext.IBase, Ext.dom.IElement {
 		/** [Property] (HTMLElement[]) */
 		elements?: HTMLElement[];
 		/** [Method] Adds elements to this Composite object
@@ -25507,7 +25507,7 @@ declare namespace Ext {
 	}
 }
 declare namespace Ext.dom {
-	export interface IElement extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IElement extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Property] (Number) */
 		DISPLAY?: number;
 		/** [Property] (Number) */
@@ -26271,7 +26271,7 @@ declare namespace Ext.dom {
 	}
 }
 declare namespace Ext {
-	export interface IElement extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IElement extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Property] (Number) */
 		DISPLAY?: number;
 		/** [Property] (Number) */
@@ -27892,7 +27892,7 @@ declare namespace Ext.draw.engine {
 	}
 }
 declare namespace Ext.draw.gradient {
-	export interface IGradient extends Ext.IBase,Ext.mixin.IIdentifiable {
+	export interface IGradient extends Ext.IBase, Ext.mixin.IIdentifiable {
 		/** [Config Option] (Array/Object) */
 		Defines?: any;
 		/** [Method] Generates the gradient for the given context
@@ -27950,7 +27950,7 @@ declare namespace Ext.draw.gradient {
 	}
 }
 declare namespace Ext.draw {
-	export interface IGroup extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IGroup extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Method] Add sprite to group
 		* @param sprite Ext.draw.sprite.Sprite
 		*/
@@ -28500,7 +28500,7 @@ declare namespace Ext.draw {
 	}
 }
 declare namespace Ext.draw.modifier {
-	export interface IAnimation extends Ext.draw.modifier.IModifier,Ext.mixin.IObservable {
+	export interface IAnimation extends Ext.draw.modifier.IModifier, Ext.mixin.IObservable {
 		/** [Config Option] (Object) */
 		customDuration?: any;
 		/** [Config Option] (Object) */
@@ -29453,7 +29453,7 @@ declare namespace Ext.draw.sprite {
 	}
 }
 declare namespace Ext.draw.sprite {
-	export interface ISprite extends Ext.IBase,Ext.mixin.IObservable {
+	export interface ISprite extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Number) */
 		A?: number;
 		/** [Config Option] (Array) */
@@ -30100,7 +30100,7 @@ declare namespace Ext.event {
 	}
 }
 declare namespace Ext.event {
-	export interface IEvent extends Ext.IBase,Ext.event.ITouch {
+	export interface IEvent extends Ext.IBase, Ext.event.ITouch {
 		/** [Property] (Number) */
 		angle?: number;
 		/** [Property] (Number) */
@@ -30122,7 +30122,7 @@ declare namespace Ext.event {
 	}
 }
 declare namespace Ext {
-	export interface IEventObject extends Ext.IBase,Ext.event.ITouch {
+	export interface IEventObject extends Ext.IBase, Ext.event.ITouch {
 		/** [Property] (Number) */
 		angle?: number;
 		/** [Property] (Number) */
@@ -30258,7 +30258,7 @@ declare namespace Ext.event.recognizer {
 	}
 }
 declare namespace Ext.event.recognizer {
-	export interface IRecognizer extends Ext.IBase,Ext.mixin.IIdentifiable {
+	export interface IRecognizer extends Ext.IBase, Ext.mixin.IIdentifiable {
 		/** [Method] Returns the value of callbackScope
 		* @returns Object
 		*/
@@ -30352,7 +30352,7 @@ declare namespace Ext.event {
 	}
 }
 declare namespace Ext {
-	export interface IEvented extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IEvented extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Method] Appends an after event handler
 		* @param eventName String/String[]/Object The name of the event to listen for.
 		* @param fn Function/String The method the event invokes.
@@ -30533,7 +30533,7 @@ declare namespace Ext {
 	}
 }
 declare namespace Ext {
-	export interface IEventedBase extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IEventedBase extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Method] Appends an after event handler
 		* @param eventName String/String[]/Object The name of the event to listen for.
 		* @param fn Function/String The method the event invokes.
@@ -35737,7 +35737,7 @@ declare namespace Ext {
 	}
 }
 declare namespace Ext.layout {
-	export interface IAbstract extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IAbstract extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Method] Appends an after event handler
 		* @param eventName String/String[]/Object The name of the event to listen for.
 		* @param fn Function/String The method the event invokes.
@@ -36858,7 +36858,7 @@ declare namespace Ext.mixin {
 	}
 }
 declare namespace Ext.mixin {
-	export interface IObservable extends Ext.mixin.IMixin,Ext.mixin.IIdentifiable {
+	export interface IObservable extends Ext.mixin.IMixin, Ext.mixin.IIdentifiable {
 		/** [Config Option] (String/String[]) */
 		bubbleEvents?: any;
 		/** [Config Option] (Object) */
@@ -37047,7 +37047,7 @@ declare namespace Ext.mixin {
 	}
 }
 declare namespace Ext.util {
-	export interface IObservable extends Ext.mixin.IMixin,Ext.mixin.IIdentifiable {
+	export interface IObservable extends Ext.mixin.IMixin, Ext.mixin.IIdentifiable {
 		/** [Config Option] (String/String[]) */
 		bubbleEvents?: any;
 		/** [Config Option] (Object) */
@@ -39525,7 +39525,7 @@ declare namespace Ext.picker {
 	}
 }
 declare namespace Ext.plugin {
-	export interface IBufferedList extends Ext.IBase,Ext.mixin.IBindable {
+	export interface IBufferedList extends Ext.IBase, Ext.mixin.IBindable {
 		/** [Method] Returns the value of list
 		* @returns Object
 		*/
@@ -39719,7 +39719,7 @@ declare namespace Ext.plugin {
 	}
 }
 declare namespace Ext.plugin {
-	export interface ISortableList extends Ext.IComponent,Ext.mixin.IBindable {
+	export interface ISortableList extends Ext.IComponent, Ext.mixin.IBindable {
 		/** [Method] Returns the value of handleSelector
 		* @returns String
 		*/
@@ -39739,7 +39739,7 @@ declare namespace Ext.plugin {
 	}
 }
 declare namespace Ext {
-	export interface IProgressIndicator extends Ext.IContainer,Ext.mixin.IProgressable {
+	export interface IProgressIndicator extends Ext.IContainer, Ext.mixin.IProgressable {
 		/** [Config Option] (String) */
 		baseCls?: string;
 		/** [Config Option] (Boolean) */
@@ -41371,7 +41371,7 @@ declare namespace Ext {
 	}
 }
 declare namespace Ext.util {
-	export interface IAbstractMixedCollection extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IAbstractMixedCollection extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Boolean) */
 		allowFunctions?: boolean;
 		/** [Method] Adds an item to the collection
@@ -41761,7 +41761,7 @@ declare namespace Ext.util {
 	}
 }
 declare namespace Ext.util {
-	export interface IBufferedCollection extends Ext.util.ICollection,Ext.util.IObservable {
+	export interface IBufferedCollection extends Ext.util.ICollection, Ext.util.IObservable {
 		/** [Method] Returns the value of autoFilter
 		* @returns Boolean
 		*/
@@ -41797,7 +41797,7 @@ declare namespace Ext.util {
 	}
 }
 declare namespace Ext.util {
-	export interface ICollection extends Ext.IBase,Ext.mixin.ISortable,Ext.mixin.IFilterable {
+	export interface ICollection extends Ext.IBase, Ext.mixin.ISortable, Ext.mixin.IFilterable {
 		/** [Config Option] (Object[]) */
 		filters?: any[];
 		/** [Config Option] (Object[]) */
@@ -42147,7 +42147,7 @@ declare namespace Ext.util {
 	}
 }
 declare namespace Ext.util {
-	export interface IDraggable extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IDraggable extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (String) */
 		direction?: string;
 		/** [Config Option] (Object/Number) */
@@ -42404,7 +42404,7 @@ declare namespace Ext.util {
 	}
 }
 declare namespace Ext.util {
-	export interface IDroppable extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IDroppable extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (String) */
 		activeCls?: string;
 		/** [Config Option] (String) */
@@ -42925,7 +42925,7 @@ declare namespace Ext.util {
 	}
 }
 declare namespace Ext.util {
-	export interface IHashMap extends Ext.IBase,Ext.mixin.IObservable {
+	export interface IHashMap extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Config Option] (Function) */
 		keyFn?: any;
 		/** [Method] Add a new item to the hash
@@ -43296,13 +43296,13 @@ declare namespace Ext.util {
 		*/
 		intersects?( lineSegment?: Ext.util.ILineSegment ): Ext.util.IPoint;
 		/** [Method] Returns string representation of the line
-		* @returns String For example Point[12,8] Point[0,0]
+		* @returns String For example Point[12, 8] Point[0, 0]
 		*/
 		toString?(): string;
 	}
 }
 declare namespace Ext.util {
-	export interface IMixedCollection extends Ext.util.IAbstractMixedCollection,Ext.util.ISortable {
+	export interface IMixedCollection extends Ext.util.IAbstractMixedCollection, Ext.util.ISortable {
 		/** [Method]  */
 		destroy?(): void;
 		/** [Method] Performs initialization of this mixin  */
@@ -43420,7 +43420,7 @@ declare namespace Ext.util {
 		*/
 		roundedEquals?( point?: any ): boolean;
 		/** [Method] Returns a human eye friendly string that represents this point useful for debugging
-		* @returns String For example Point[12,8].
+		* @returns String For example Point[12, 8].
 		*/
 		toString?(): string;
 		/** [Method] Translate this point by the given amounts
@@ -43562,7 +43562,7 @@ declare namespace Ext.util {
 		*/
 		round?(): Ext.util.IRegion;
 		/** [Method] Dump this to an eye friendly string great for debugging
-		* @returns String For example Region[0,1,3,2].
+		* @returns String For example Region[0, 1, 3, 2].
 		*/
 		toString?(): string;
 		/** [Method] Translate this region by the given offset amount
@@ -43621,7 +43621,7 @@ declare namespace Ext.util {
 	}
 }
 declare namespace Ext.util.sizemonitor {
-	export interface IAbstract extends Ext.IBase,Ext.mixin.ITemplatable {
+	export interface IAbstract extends Ext.IBase, Ext.mixin.ITemplatable {
 		/** [Method]  */
 		destroy?(): void;
 		/** [Method] Returns the value of args
@@ -43765,7 +43765,7 @@ declare namespace Ext.util {
 	}
 }
 declare namespace Ext.util {
-	export interface ITapRepeater extends Ext.IBase,Ext.mixin.IObservable {
+	export interface ITapRepeater extends Ext.IBase, Ext.mixin.IObservable {
 		/** [Method] Appends an after event handler
 		* @param eventName String/String[]/Object The name of the event to listen for.
 		* @param fn Function/String The method the event invokes.
@@ -44128,7 +44128,7 @@ declare namespace Ext.util {
 	}
 }
 declare namespace Ext.util {
-	export interface IWrapper extends Ext.IBase,Ext.mixin.IBindable {
+	export interface IWrapper extends Ext.IBase, Ext.mixin.IBindable {
 		/** [Method]  */
 		destroy?(): void;
 	}
@@ -44194,7 +44194,7 @@ declare namespace Ext.ux.device.analytics {
 	}
 }
 declare namespace Ext.ux.device {
-	export interface IAnalytics extends Ext.IBase,Ext.ux.device.analytics.IAbstract {
+	export interface IAnalytics extends Ext.IBase, Ext.ux.device.analytics.IAbstract {
 	}
 	export class Analytics {
 		/** [Property] (Ext.Class) */
@@ -44281,7 +44281,7 @@ declare namespace Ext.ux.device.twitter {
 	}
 }
 declare namespace Ext.ux.device {
-	export interface ITwitter extends Ext.IBase,Ext.ux.device.twitter.IAbstract {
+	export interface ITwitter extends Ext.IBase, Ext.ux.device.twitter.IAbstract {
 	}
 	export class Twitter {
 		/** [Property] (Ext.Class) */

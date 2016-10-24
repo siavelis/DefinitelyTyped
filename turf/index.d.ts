@@ -567,7 +567,7 @@ declare namespace turf {
      *
      * //=feature
      */
-    feature(geometry:GeoJSON.Feature<any>, properties?: any): GeoJSON.Feature<any>;
+    feature(geometry: GeoJSON.Feature<any>, properties?: any): GeoJSON.Feature<any>;
 
     /**
      * Creates a {@link LineString} based on a coordinate array. Properties can be added optionally.

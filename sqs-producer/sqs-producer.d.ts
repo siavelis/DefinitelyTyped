@@ -9,7 +9,7 @@ declare module "sqs-producer" {
 
   import { SQS } from "aws-sdk";
 
-  module SQSProducer {
+  namespace SQSProducer {
 
     interface ProducerOpts {
       queueUrl: string;

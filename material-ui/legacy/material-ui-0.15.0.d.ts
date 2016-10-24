@@ -1679,8 +1679,8 @@ declare namespace __MaterialUI {
         onEnterKeyDown?: React.KeyboardEventHandler;
         onFocus?: React.FocusEventHandler;
         onKeyDown?: React.KeyboardEventHandler;
-        rows?: number,
-        rowsMax?: number,
+        rows?: number;
+        rowsMax?: number;
         style?: React.CSSProperties;
         textareaStyle?: React.CSSProperties;
         type?: string;
@@ -1734,8 +1734,8 @@ declare namespace __MaterialUI {
         name?: string;
         onBlur?: React.FocusEventHandler;
         onKeyDown?: React.KeyboardEventHandler;
-        rows?: number,
-        rowsMax?: number,
+        rows?: number;
+        rowsMax?: number;
         textareaStyle?: React.CSSProperties;
         type?: string;
         underlineDisabledStyle?: React.CSSProperties;

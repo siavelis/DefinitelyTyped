@@ -472,8 +472,7 @@ declare namespace uiGrid {
          *        reset any existing sorting and sort by this column only
          * @returns {ng.IPromise<IGridColumn>} A resolved promise that supplies the column.
          */
-        sortColumn(column: IGridColumnOf<TEntity>, direction?: string, add?: boolean)
-            : ng.IPromise<IGridColumnOf<TEntity>>;
+        sortColumn(column: IGridColumnOf<TEntity>, direction?: string, add?: boolean): ng.IPromise<IGridColumnOf<TEntity>>;
         /**
          * flags all render containers to update their canvas height
          */
@@ -894,7 +893,7 @@ declare namespace uiGrid {
          * which is provided when you want to remove an item.  The id should be unique.
 
          */
-        addToGridMenu(grid: IGridInstanceOf<TEntity>, items: Array<IMenuItem>):  void;
+        addToGridMenu(grid: IGridInstanceOf<TEntity>, items: Array<IMenuItem>): void;
         /**
          * Clears all filters and optionally refreshes the visible rows.
          * @param {boolean} [refreshRows=true] Defaults to true.

@@ -731,7 +731,7 @@ interface IDataTypeResource{
          */
     getById(id: number): ng.IPromise<IResourcePromise>;
 
-        getAll() : any;
+        getAll(): any;
 
         /**
          * @ngdoc method

@@ -448,17 +448,17 @@ declare namespace DDS {
 		 * Checks whether the Runtime is connected.
 		 * @return `true` if connected, `false` if not
 		 */
-		isConnected() : boolean;
+		isConnected(): boolean;
 
 		/**
 		 * Checks whether the Runtime is closed.
 		 * @return `true` if connected, `false` if not
 		 */
-		isClosed() : boolean;
+		isClosed(): boolean;
 	}
 
 	export var runtime: {
-		Runtime : Runtime;
+		Runtime: Runtime;
 	};
 
 	export var VERSION: string;

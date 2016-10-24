@@ -97,7 +97,7 @@ declare namespace angularScenario {
     export interface Element {
         count(): Future;
         click(): any;
-        query(callback: (selectedDOMElements: any[], callbackWhenDone: (objNull: any, futureValue: any) => any) =>any): any;
+        query(callback: (selectedDOMElements: any[], callbackWhenDone: (objNull: any, futureValue: any) => any) => any): any;
         val(): Future;
         text(): Future;
         html(): Future;

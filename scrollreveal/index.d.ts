@@ -18,20 +18,20 @@ declare namespace scrollReveal {
     }
 
     interface ScrollRevealObjectOptions {
-        origin ? : string;
-        distance ? : string;
-        duration ? : number;
-        delay ? : number;
-        rotate ? : ScrollRevealRotateObject;
-        opacity ? : number;
-        scale ? : number;
-        easing ? : string;
-        container ? : any;
-        mobile ? : boolean;
-        reset ? : boolean;
-        useDelay ? : string;
-        viewFactor ? : number;
-        viewOffset ? : ScrollRevealPositionObject;
+        origin?: string;
+        distance?: string;
+        duration?: number;
+        delay?: number;
+        rotate?: ScrollRevealRotateObject;
+        opacity?: number;
+        scale?: number;
+        easing?: string;
+        container?: any;
+        mobile?: boolean;
+        reset?: boolean;
+        useDelay?: string;
+        viewFactor?: number;
+        viewOffset?: ScrollRevealPositionObject;
         beforeReveal ? (domEl: HTMLElement): void;
         afterReveal ? (domEl: HTMLElement): void;
         beforeReset ? (domEl: HTMLElement): void;

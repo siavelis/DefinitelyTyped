@@ -34,16 +34,16 @@ declare namespace SP {
     }
 
     export enum ListLevelPermissionMask {
-        viewListItems,//: 1,
-        insertListItems,//: 2,
-        editListItems,//: 4,
-        deleteListItems,//: 8,
-        approveItems,//: 16,
-        openItems,//: 32,
-        viewVersions,//: 64,
-        deleteVersions,//: 128,
-        breakCheckout,//: 256,
-        managePersonalViews,//: 512,
+        viewListItems, //: 1,
+        insertListItems, //: 2,
+        editListItems, //: 4,
+        deleteListItems, //: 8,
+        approveItems, //: 16,
+        openItems, //: 32,
+        viewVersions, //: 64,
+        deleteVersions, //: 128,
+        breakCheckout, //: 256,
+        managePersonalViews, //: 512,
         manageLists//: 2048
     }
 
@@ -268,7 +268,7 @@ interface ContextInfo extends SPClientTemplates.RenderContext {
     LastSelectedItemIID: number;
     LastRowIndexSelected: number;
     RowFocusTimerID: number;
-    ListData: any;// SPClientTemplates.ListData_InView | SPClientTemplates.ListData_InForm
+    ListData: any; // SPClientTemplates.ListData_InView | SPClientTemplates.ListData_InForm
     ListSchema: SPClientTemplates.ListSchema;
     ModerationStatus: number;
     PortalUrl: string;
@@ -1455,7 +1455,7 @@ declare namespace SPClientTemplates {
         /** Returns ";#" */
         static UserLookupDelimitString: string;
         /** Returns ";#" */
-        static UserMultiValueDelimitString:string;
+        static UserMultiValueDelimitString: string;
     }
 
     export class ClientFormContext {
@@ -1535,12 +1535,12 @@ declare namespace SPClientForms {
     }
 
     export enum FormManagerEvents {
-        Event_OnControlValueChanged,//: 1,
-        Event_OnControlInitializedCallback,//: 2,
-        Event_OnControlFocusSetCallback,//: 3,
-        Event_GetControlValueCallback,//: 4,
-        Event_OnControlValidationError,//: 5,
-        Event_RegisterControlValidator,//: 6,
+        Event_OnControlValueChanged, //: 1,
+        Event_OnControlInitializedCallback, //: 2,
+        Event_OnControlFocusSetCallback, //: 3,
+        Event_GetControlValueCallback, //: 4,
+        Event_OnControlValidationError, //: 5,
+        Event_RegisterControlValidator, //: 6,
         Event_GetHasValueChangedCallback//: 7
     }
 
@@ -5641,7 +5641,7 @@ declare namespace Microsoft.SharePoint.Client.Search {
         }
 
         export class SearchConfigurationPortabilityPropertyNames {
-            static importWarnings: string;// = 'ImportWarnings'
+            static importWarnings: string; // = 'ImportWarnings'
         }
     }
 
@@ -7456,7 +7456,7 @@ declare namespace SPNotifications {
 declare class SPStatusNotificationData {
     constructor(text: string, subText: string, imageUrl: string, sip: string);
 }
-declare function RefreshCommandUI():void;
+declare function RefreshCommandUI(): void;
 
 declare namespace SP {
     export namespace UI {
@@ -9015,8 +9015,8 @@ declare namespace SP {
 declare namespace SP {
     export namespace CompliancePolicy {
         export enum SPContainerType {
-            site,//: 0,
-            web,//: 1,
+            site, //: 0,
+            web, //: 1,
             list//: 2
         }
 
@@ -9282,9 +9282,9 @@ declare namespace SP {
     export namespace Discovery {
 
         export enum ExportStatus {
-            notStarted,//: 0,
-            started,//: 1,
-            complete,//: 2,
+            notStarted, //: 0,
+            started, //: 1,
+            complete, //: 2,
             failed//: 3
         }
 
@@ -9341,10 +9341,10 @@ declare class SPClientAutoFill {
     };
 
     static KeyProperty: string; //= 'AutoFillKey';
-    static DisplayTextProperty: string;// = 'AutoFillDisplayText';
+    static DisplayTextProperty: string; // = 'AutoFillDisplayText';
     static SubDisplayTextProperty: string; //= 'AutoFillSubDisplayText';
     static TitleTextProperty: string; //= 'AutoFillTitleText';
-    static MenuOptionTypeProperty: string;//= 'AutoFillMenuOptionType';
+    static MenuOptionTypeProperty: string; //= 'AutoFillMenuOptionType';
 
     static GetAutoFillObjFromInput(elmText: HTMLInputElement): SPClientAutoFill;
     static GetAutoFillObjFromContainer(elmChild: HTMLElement): SPClientAutoFill;
@@ -9559,9 +9559,9 @@ interface ISPClientPeoplePickerSchema {
 }
 
 declare class SPClientPeoplePickerMRU {
-    static PPMRUVersion: number;// = 1;
-    static MaxPPMRUItems: number;// = 200;
-    static PPMRUDomLocalStoreKey: string;// = "ClientPeoplePickerMRU";
+    static PPMRUVersion: number; // = 1;
+    static MaxPPMRUItems: number; // = 200;
+    static PPMRUDomLocalStoreKey: string; // = "ClientPeoplePickerMRU";
     static GetSPClientPeoplePickerMRU(): SPClientPeoplePickerMRU;
 
     GetItems(strKey: string): Object[];
@@ -9589,18 +9589,18 @@ interface ISPClientPeoplePickerEntity {
 }
 
 declare class SPClientPeoplePickerProcessedUser {
-    UserContainerElementId: string;// '',
-    DisplayElementId: string;// '',
-    PresenceElementId: string;// '',
-    DeleteUserElementId: string;// '',
-    SID: string;// '',
-    DisplayName: string;// '',
-    SIPAddress: string;// '',
-    UserInfo: ISPClientPeoplePickerEntity;// null,
-    ResolvedUser: boolean;// true,
-    Suggestions: ISPClientAutoFillData[];// null,
-    ErrorDescription: string;// '',
-    ResolveText: string;// '',
+    UserContainerElementId: string; // '',
+    DisplayElementId: string; // '',
+    PresenceElementId: string; // '',
+    DeleteUserElementId: string; // '',
+    SID: string; // '',
+    DisplayName: string; // '',
+    SIPAddress: string; // '',
+    UserInfo: ISPClientPeoplePickerEntity; // null,
+    ResolvedUser: boolean; // true,
+    Suggestions: ISPClientAutoFillData[]; // null,
+    ErrorDescription: string; // '',
+    ResolveText: string; // '',
     public UpdateResolvedUser(newUserInfo: ISPClientPeoplePickerEntity, strNewElementId: string): void;
     public UpdateSuggestions(entity: ISPClientPeoplePickerEntity): void;
     public BuildUserHTML(): string;
@@ -11050,8 +11050,8 @@ declare namespace SP {
 
         export class StaticDataSource {
             constructor(jsGridData: IGridData, optFnGetPropType?: Function);
-            AddColumn(gridField: SP.JsGrid.GridField, values: IValue[]):void;
-            RemoveColumn(fieldKey: string):void;
+            AddColumn(gridField: SP.JsGrid.GridField, values: IValue[]): void;
+            RemoveColumn(fieldKey: string): void;
             InitJsGridParams(optGridParams?: JsGridControl.Parameters): JsGridControl.Parameters;
         }
 
@@ -11291,7 +11291,7 @@ declare namespace Srch
         scriptApplication_PreLoad(sender: any, e: any): void;
         scriptApplication_Load(sender: any, e: any): void;
         scriptApplication_PostLoad(sender: any, e: any): void;
-        loadServerTemplateScripts():void;
+        loadServerTemplateScripts(): void;
         serverTemplateScriptsToLoad: any[];
         serverTemplateScriptsCallback(): void;
         loadRenderTemplateScripts(scriptReferences: any, success: any, failure: any, timeout: any, loadStandAloneCustomScripts: any): boolean;
@@ -12000,7 +12000,7 @@ declare namespace Srch
         /** Retrieves localized string with the specified id */
         static loadResourceForTemplate(id: string, templateFunc: {(ctx: any): string}): string;
         /** Registers in system resources defined by the dictionary object */
-        static registerResourceDictionary(locale:string, dict: {[key: string]: string}): void;
+        static registerResourceDictionary(locale: string, dict: {[key: string]: string}): void;
 
         static restorePath(el: Element, originalText: string, selectText: string): void;
         static selectPath(text: string, el: Element): void;
@@ -12829,7 +12829,7 @@ declare function $includeScript(templateLink: string, relativeLink: string): voi
 declare function $includeCSS(templateLink: string, scriptLink: string): void;
 declare function $includeLanguageScript(templateLink: string, scriptLink: string): any;
 /** Registers in system resources defined by the dictionary object (alias for Srch.U.registerResourceDictionary) */
-declare function $registerResourceDictionary(locale:string, dict: {[key: string]: string}): void;
+declare function $registerResourceDictionary(locale: string, dict: {[key: string]: string}): void;
 /** Retrieves localized string with the specified id */
 declare function $resource(id: string): string;
 /** (calls Srch.U.setItemRenderWrapper) */

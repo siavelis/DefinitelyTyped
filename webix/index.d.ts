@@ -3430,55 +3430,6 @@ interface formConfig{
 }
 type formEventName = 'onAfterLoad'|'onAfterScroll'|'onAfterValidation'|'onBeforeLoad'|'onBeforeValidate'|'onBindRequest'|'onChange'|'onDestruct'|'onLoadError'|'onSubmit'|'onValidationError'|'onValidationSuccess'|'onValues';
 interface form extends webix.ui.baseview{
-<<<<<<< Updated upstream
-	addView(view:any, index?:number):webix.ui.baseview;
-	adjust():void;
-	attachEvent(type:formEventName, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	clear():void;
-	clearValidation():void;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	disable():void;
-	enable():void;
-	focus(item:string):void;
-	getChildViews():any[];
-	getCleanValues():any;
-	getDirtyValues():any;
-	getFormView():webix.ui.baseview;
-	getNode():any;
-	getParentView():any;
-	getScrollState():any;
-	getTopParentView():webix.ui.baseview;
-	getValues(details?:any): { [key: string]: any; };
-	hasEvent(name:string):boolean;
-	hide():void;
-	index(obj:any):number;
-	isDirty():boolean;
-	isEnabled():boolean;
-	isVisible():boolean;
-	load(url:string, type?:string, callback?:WebixCallback):webix.promise;
-	mapEvent(map:any):void;
-	markInvalid(name:string, state?:boolean|string):void;
-	parse(data:any, type:string):void;
-	reconstruct():void;
-	refresh():void;
-	removeView(id:string|number):void;
-	render(id:string|number, data:any, type:string):void;
-	resize():void;
-	resizeChildren():void;
-	scrollTo(x:number, y:number):void;
-	setDirty(mark?:boolean):void;
-	setValues(values:any, update?:boolean):void;
-	show(force?:boolean, animation?:boolean):void;
-	showBatch(name:string):void;
-	unbind():void;
-	unblockEvent():void;
-	validate(mode?:any):boolean;
-=======
 	addView(view: any, index?: number): webix.ui.baseview;
 	adjust(): void;
 	attachEvent(type: formEventName, functor: WebixCallback, id?: string): string|number;
@@ -3526,7 +3477,6 @@ interface form extends webix.ui.baseview{
 	unbind(): void;
 	unblockEvent(): void;
 	validate(mode?: any): boolean;
->>>>>>> Stashed changes
 
 	$getSize: any[];
 	$height: number;
@@ -3890,51 +3840,6 @@ interface htmlformConfig{
 }
 type htmlformEventName = 'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onBeforeLoad'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onChange'|'onDestruct'|'onFocus'|'onKeyPress'|'onLoadError'|'onLongTouch'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onValues'|'onViewResize';
 interface htmlform extends webix.ui.baseview{
-<<<<<<< Updated upstream
-	adjust():void;
-	attachEvent(type:htmlformEventName, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	blur():void;
-	callEvent(name:string, params:any[]):boolean;
-	clear(all?:boolean):void;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	disable():void;
-	enable():void;
-	focus(item:string):void;
-	getChildViews():any[];
-	getCleanValues():any;
-	getDirtyValues():any;
-	getFormView():webix.ui.baseview;
-	getNode():any;
-	getParentView():any;
-	getScrollState():any;
-	getTopParentView():webix.ui.baseview;
-	getValues(details?:any): { [key: string]: any; };
-	hasEvent(name:string):boolean;
-	hide():void;
-	isDirty():boolean;
-	isEnabled():boolean;
-	isVisible():boolean;
-	load(url:string, type?:string, callback?:WebixCallback):webix.promise;
-	mapEvent(map:any):void;
-	markInvalid(name:string, state?:boolean|string):void;
-	parse(data:any, type:string):void;
-	refresh():void;
-	render(id:string|number, data:any, type:string):void;
-	resize():void;
-	scrollTo(x:number, y:number):void;
-	setContent(node:any):void;
-	setDirty(mark?:boolean):void;
-	setHTML(html:string):void;
-	setValues(values:any, update?:boolean):void;
-	show(force?:boolean, animation?:boolean):void;
-	sync(source:any, filter:WebixCallback, silent:boolean):void;
-	unbind():void;
-	unblockEvent():void;
-=======
 	adjust(): void;
 	attachEvent(type: htmlformEventName, functor: WebixCallback, id?: string): string|number;
 	bind(target: any, rule?: WebixCallback, format?: string): void;
@@ -3978,7 +3883,6 @@ interface htmlform extends webix.ui.baseview{
 	sync(source: any, filter: WebixCallback, silent: boolean): void;
 	unbind(): void;
 	unblockEvent(): void;
->>>>>>> Stashed changes
 
 	$getSize: any[];
 	$height: number;
@@ -5499,57 +5403,6 @@ interface propertyConfig{
 }
 type propertyEventName = 'onAfterContextMenu'|'onAfterEditStart'|'onAfterEditStop'|'onAfterLoad'|'onAfterRender'|'onAfterScroll'|'onBeforeContextMenu'|'onBeforeEditStart'|'onBeforeEditStop'|'onBeforeLoad'|'onBeforeRender'|'onBindRequest'|'onBlur'|'onDestruct'|'onFocus'|'onItemClick'|'onItemDblClick'|'onKeyPress'|'onLiveEdit'|'onLoadError'|'onLongTouch'|'onMouseMove'|'onMouseMoving'|'onMouseOut'|'onSwipeX'|'onSwipeY'|'onTimedKeyPress'|'onTouchEnd'|'onTouchMove'|'onTouchStart'|'onViewResize';
 interface property extends webix.ui.baseview{
-<<<<<<< Updated upstream
-	adjust():void;
-	attachEvent(type:propertyEventName, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	customize(obj:any):void;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	disable():void;
-	edit(id:any):void;
-	editCancel():void;
-	editNext():boolean;
-	editStop():void;
-	enable():void;
-	focusEditor():void;
-	getChildViews():any[];
-	getEditState():any;
-	getEditor(id?:string):any;
-	getEditorValue():string;
-	getFormView():webix.ui.baseview;
-	getItem(id:string):any;
-	getItemNode(id:string|number):void;
-	getNode():any;
-	getParentView():any;
-	getScrollState():any;
-	getTopParentView():webix.ui.baseview;
-	getValues(): { [key: string]: any; };
-	hasEvent(name:string):boolean;
-	hide():void;
-	isEnabled():boolean;
-	isVisible():boolean;
-	load(url:string, type?:string, callback?:WebixCallback):webix.promise;
-	locate(e:Event):string|number;
-	mapEvent(map:any):void;
-	parse(data:any, type:string):void;
-	refresh(id?:string|number):void;
-	registerType(name:string, data:any):void;
-	render(id:string|number, data:any, type:string):void;
-	resize():void;
-	scrollTo(x:number, y:number):void;
-	setValues(values:any, update?:boolean):void;
-	show(force?:boolean, animation?:boolean):void;
-	showItem(id:string|number):void;
-	sync(source:any, filter:WebixCallback, silent:boolean):void;
-	unbind():void;
-	unblockEvent():void;
-	updateItem():void;
-	validateEditor(id?:string|number):boolean;
-=======
 	adjust(): void;
 	attachEvent(type: propertyEventName, functor: WebixCallback, id?: string): string|number;
 	bind(target: any, rule?: WebixCallback, format?: string): void;
@@ -5599,7 +5452,6 @@ interface property extends webix.ui.baseview{
 	unblockEvent(): void;
 	updateItem(): void;
 	validateEditor(id?: string|number): boolean;
->>>>>>> Stashed changes
 
 	$getSize: any[];
 	$height: number;
@@ -7693,55 +7545,6 @@ interface toolbarConfig{
 }
 type toolbarEventName = 'onAfterLoad'|'onAfterScroll'|'onAfterValidation'|'onBeforeLoad'|'onBeforeValidate'|'onBindRequest'|'onChange'|'onDestruct'|'onLoadError'|'onValidationError'|'onValidationSuccess'|'onValues';
 interface toolbar extends webix.ui.baseview{
-<<<<<<< Updated upstream
-	addView(view:any, index?:number):webix.ui.baseview;
-	adjust():void;
-	attachEvent(type:toolbarEventName, functor:WebixCallback, id?:string):string|number;
-	bind(target:any, rule?:WebixCallback, format?:string):void;
-	blockEvent():void;
-	callEvent(name:string, params:any[]):boolean;
-	clear():void;
-	clearValidation():void;
-	define(property:string, value:any):void;
-	destructor():void;
-	detachEvent(id:string):void;
-	disable():void;
-	enable():void;
-	focus(item:string):void;
-	getChildViews():any[];
-	getCleanValues():any;
-	getDirtyValues():any;
-	getFormView():webix.ui.baseview;
-	getNode():any;
-	getParentView():any;
-	getScrollState():any;
-	getTopParentView():webix.ui.baseview;
-	getValues(details?:any): { [key: string]: any; };
-	hasEvent(name:string):boolean;
-	hide():void;
-	index(obj:any):number;
-	isDirty():boolean;
-	isEnabled():boolean;
-	isVisible():boolean;
-	load(url:string, type?:string, callback?:WebixCallback):webix.promise;
-	mapEvent(map:any):void;
-	markInvalid(name:string, state?:boolean|string):void;
-	parse(data:any, type:string):void;
-	reconstruct():void;
-	refresh():void;
-	removeView(id:string|number):void;
-	render(id:string|number, data:any, type:string):void;
-	resize():void;
-	resizeChildren():void;
-	scrollTo(x:number, y:number):void;
-	setDirty(mark?:boolean):void;
-	setValues(values:any, update?:boolean):void;
-	show(force?:boolean, animation?:boolean):void;
-	showBatch(name:string):void;
-	unbind():void;
-	unblockEvent():void;
-	validate(mode?:any):boolean;
-=======
 	addView(view: any, index?: number): webix.ui.baseview;
 	adjust(): void;
 	attachEvent(type: toolbarEventName, functor: WebixCallback, id?: string): string|number;
@@ -7789,7 +7592,6 @@ interface toolbar extends webix.ui.baseview{
 	unbind(): void;
 	unblockEvent(): void;
 	validate(mode?: any): boolean;
->>>>>>> Stashed changes
 
 	$getSize: any[];
 	$height: number;

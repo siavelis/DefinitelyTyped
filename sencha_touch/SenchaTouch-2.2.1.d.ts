@@ -3,6 +3,8 @@
 // Definitions by: Brian Kotek <https://github.com/brian428/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+// tslint:disable
+
 declare namespace Ext {
 	export interface IAbstractComponent extends Ext.IEvented {
 	}

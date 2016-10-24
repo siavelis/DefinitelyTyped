@@ -15,7 +15,7 @@ declare namespace SigmaJs{
         graphPosition(x: number, y: number): {x: number; y: number};
         ratio: number;
         readPrefix: string;
-        settings(setting: string) : any;
+        settings(setting: string): any;
         x: number;
         y: number;
     }
@@ -46,7 +46,7 @@ declare namespace SigmaJs{
     }
 
     interface Edge {
-        [key : string] : any;
+        [key: string]: any;
         color?: string;
         id: string;
         size?: number;
@@ -100,7 +100,7 @@ declare namespace SigmaJs{
     }
 
     interface Node {
-        [key : string] : any;
+        [key: string]: any;
         color?: string;
         id: string;
         image?: any;

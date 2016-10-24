@@ -16,7 +16,7 @@
 		"member-access": false,
 		"member-ordering": false,
 		"no-bitwise": false,
-		"no-consecutive-blank-lines": false, //todo
+		"no-consecutive-blank-lines": false,
 		"no-console": false,
 		"no-construct": false,
 		"no-empty": false,

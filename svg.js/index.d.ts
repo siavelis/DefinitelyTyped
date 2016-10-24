@@ -42,7 +42,7 @@ declare namespace svgjs {
         gaussianBlur(values: string): Filter;
         colorMatrix(name: string, value: number): Filter;
         colorMatrix(name: string, matrix: number[]): Filter;
-        componentTransfer(components: {rgb?: FilterComponentTransfer; g?: FilterComponentTransfer;}): Filter;
+        componentTransfer(components: {rgb?: FilterComponentTransfer; g?: FilterComponentTransfer}): Filter;
         offset(x: number, y: number): Filter;
         blend(): Filter;
         in(source: FilterSource): Filter;

@@ -89,7 +89,7 @@ declare namespace VoxImplant {
 			/**
 			*	Auth error code, possible values are: 301 - code for 'code' auth type was sent, 302 - key for 'onetimekey' auth type received, 401 - invalid password, 404 - invalid username, 403 - user account is frozen, 500 - internal error
 			*/
-			code? : number;
+			code?: number;
 			/**
 			*	Authorized user's display name
 			*/
