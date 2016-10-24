@@ -24,7 +24,6 @@ declare namespace Wu {
 		cycle<T>(iter: Iterable<T>): Iterable<T>;
 		chunk<T>(n: number, iter: Iterable<T>): WuIterable<T[]>;
 		concatMap<T, U>(fn: (t: T) => Iterable<U>, iter: Iterable<T>): WuIterable<U>;
-		dropWhile<T>(fn: Filter<T>, iter: Iterable<T>): WuIterable<T>;
 		enumerate<T>(iter: Iterable<T>): Iterable<[number, T]>;
 		every<T>(fn: Filter<T>, iter: Iterable<T>): boolean;
 		filter<T>(fn: Filter<T>, iter: Iterable<T>): WuIterable<T>;

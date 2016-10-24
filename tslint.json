@@ -1,49 +1,35 @@
 {
 	"extends": "tslint:latest",
 	"rules": {
-		"adjacent-overload-signatures": false, //todo
-		"align": false, //todo
+		"adjacent-overload-signatures": false,
+		"align": true,
         "semicolon": true,
-		"only-arrow-functions": false, //This was activating for `declare function socket(type: string, options?: any): Socket;`
+		"only-arrow-functions": false, //todo: This was activating for `declare function socket(type: string, options?: any): Socket;`
 		"class-name": false, //todo
 		"comment-format": false, //todo
 		"curly": false,
-		"eofline": false, //todo
-		"indent": false, //[true, "tabs"],
+		"eofline": false,
+		"indent": false,
 		"interface-name": false,
-		"jsdoc-format": false,
+		"jsdoc-format": true,
 		"max-line-length": false, //todo
 		"member-access": false,
 		"member-ordering": false,
 		"no-bitwise": false,
 		"no-consecutive-blank-lines": false,
 		"no-console": false,
-		"no-construct": false,
-		"no-empty": false,
 		"no-namespace": false,
-		"no-reference": false,
+		"no-reference": false, //todo
 		"no-shadowed-variable": false,
 		"no-string-literal": false,
 		"no-unused-variable": false,
 		"no-var-keyword": false, //todo
-		"no-var-requires": false,
 		"object-literal-sort-keys": false,
-		"one-line": false,
-		"ordered-imports": false, //todo
+		"one-line": true,
+		"ordered-imports": false,
 		"quotemark": false, //todo
-		"switch-default": false,
-		"typedef": false, //todo
-		"trailing-comma": false,
-		"typedef": false, ///todo
+		"trailing-comma": false, //todo
 		"variable-name": false,
-		"whitespace": [true,
-			"check-branch",
-			"check-decl",
-			"check-operator",
-			"check-module",
-			"check-separator",
-			"check-type",
-			"check-typecast"
-		]
+		"whitespace": true
 	}
 }
