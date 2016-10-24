@@ -29,9 +29,10 @@
 		"no-var-requires": false,
 		"object-literal-sort-keys": false,
 		"one-line": false,
-		"ordered-imports": false,
+		"ordered-imports": false, //todo
 		"quotemark": false, //todo
 		"switch-default": false,
+		"typedef": false, //todo
 		"trailing-comma": false,
 		"typedef": false, ///todo
 		"variable-name": false,

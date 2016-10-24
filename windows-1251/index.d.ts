@@ -18,7 +18,7 @@ declare namespace windows1251 {
     type DecoderMode = "replacement" | "fatal";
 
     interface windows1251 {
-        encode(input:string, options?: { mode?: EncoderMode }): string;
+        encode(input: string, options?: { mode?: EncoderMode }): string;
         decode(text: string, options?: { mode?: DecoderMode }): string;
     }
 }

@@ -66,7 +66,7 @@ interface mozRTCPeerConnection extends RTCPeerConnection {
 declare var mozRTCPeerConnection: {
   prototype: mozRTCPeerConnection;
   new (settings?: RTCConfiguration,
-       constraints?:RTCMediaConstraints): mozRTCPeerConnection;
+       constraints?: RTCMediaConstraints): mozRTCPeerConnection;
 };
 // webkit (Chrome) specific prefixes.
 interface webkitRTCPeerConnection extends RTCPeerConnection {
@@ -74,7 +74,7 @@ interface webkitRTCPeerConnection extends RTCPeerConnection {
 declare var webkitRTCPeerConnection: {
   prototype: webkitRTCPeerConnection;
   new (settings?: RTCConfiguration,
-       constraints?:RTCMediaConstraints): webkitRTCPeerConnection;
+       constraints?: RTCMediaConstraints): webkitRTCPeerConnection;
 };
 
 // For Chrome, look at the code here:
@@ -90,7 +90,7 @@ interface RTCOptionalMediaConstraint {
 // http://www.w3.org/TR/2013/WD-webrtc-20130910/
 interface RTCMediaConstraints {
   mandatory?: RTCMediaOfferConstraints;
-  optional?: RTCOptionalMediaConstraint[]
+  optional?: RTCOptionalMediaConstraint[];
 }
 
 interface RTCMediaOfferConstraints {
@@ -301,9 +301,9 @@ interface RTCPeerConnection {
   updateIce(configuration?: RTCConfiguration,
             constraints?: RTCMediaConstraints): void;
   addIceCandidate(candidate: RTCIceCandidate): Promise<void>;
-  addIceCandidate(candidate:RTCIceCandidate,
+  addIceCandidate(candidate: RTCIceCandidate,
                   successCallback: () => void,
-                  failureCallback:RTCPeerConnectionErrorCallback): void;
+                  failureCallback: RTCPeerConnectionErrorCallback): void;
   iceGatheringState: string;  // RTCIceGatheringState; see TODO(1)
   iceConnectionState: string;  // RTCIceConnectionState; see TODO(1)
   getLocalStreams(): MediaStream[];

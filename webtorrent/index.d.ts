@@ -14,19 +14,19 @@ export as namespace WebTorrent;
 
 declare namespace WebTorrent {
   export interface ClientOptions {
-    dht?: boolean|Object,   // Enable DHT (default=true), or options object for DHT
-    maxConns?: number,      // Max number of connections per torrent (default=55)
-    nodeId?: string|Buffer, // DHT protocol node ID (default=randomly generated)
-    peerId?: string|Buffer, // Wire protocol peer ID (default=randomly generated)
-    rtcConfig?: Object,     // RTCPeerConnection configuration object (default=STUN only)
-    tracker?: boolean,      // Whether or not to enable trackers (default=true)
-    wrtc?: Object           // Custom webrtc implementation (in node, specify the [wrtc](https://www.npmjs.com/package/wrtc) package)
+    dht?: boolean|Object;   // Enable DHT (default=true), or options object for DHT
+    maxConns?: number;      // Max number of connections per torrent (default=55)
+    nodeId?: string|Buffer; // DHT protocol node ID (default=randomly generated)
+    peerId?: string|Buffer; // Wire protocol peer ID (default=randomly generated)
+    rtcConfig?: Object;     // RTCPeerConnection configuration object (default=STUN only)
+    tracker?: boolean;      // Whether or not to enable trackers (default=true)
+    wrtc?: Object;          // Custom webrtc implementation (in node, specify the [wrtc](https://www.npmjs.com/package/wrtc) package)
   }
 
   export interface TorrentOptions {
-    announce?: Array<string>,   // Torrent trackers to use (added to list in .torrent or magnet uri)
-    path?: string,   // Folder to download files to (default=`/tmp/webtorrent/`)
-    store?: Function // Custom chunk store (must follow [abstract-chunk-store](https://www.npmjs.com/package/abstract-chunk-store) API)
+    announce?: Array<string>;   // Torrent trackers to use (added to list in .torrent or magnet uri)
+    path?: string;   // Folder to download files to (default=`/tmp/webtorrent/`)
+    store?: Function; // Custom chunk store (must follow [abstract-chunk-store](https://www.npmjs.com/package/abstract-chunk-store) API)
   }
 
   export interface ClientConstructor {
@@ -234,17 +234,17 @@ declare namespace WebTorrent {
     /**
      * Emitted when all the torrent's files have been downloaded.
      */
-    on(event: 'done', callback: () => void): this;
+    on(event: "done", callback: () => void): this;
 
     /**
      * Emitted every time a new chunk of data arrives, it's useful for reporting the current torrent status.
      */
-    on(event: 'download', callback: (chunkSize: number) => void): this;
+    on(event: "download", callback: (chunkSize: number) => void): this;
 
     /**
      * Emitted whenever a new peer is connected for this torrent. wire is an instance of bittorrent-protocol, which is a node.js-style duplex stream to the remote peer. This event can be used to specify custom BitTorrent protocol extensions.
      */
-    on(event: 'wire', callback: (wire: any) => void): this;
+    on(event: "wire", callback: (wire: any) => void): this;
   }
 
   export interface InTorrentFile extends NodeJS.EventEmitter {
@@ -336,6 +336,6 @@ declare namespace WebTorrent {
     /**
      * Emitted when the file have been downloaded.
      */
-    on(event: 'done', callback: () => void): this;
+    on(event: "done", callback: () => void): this;
   }
 }

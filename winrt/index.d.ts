@@ -3366,7 +3366,7 @@ declare namespace Windows {
                 operation: {
                     completed: Windows.Foundation.AsyncOperationCompletedHandler<any>;
                     getResults(): any;
-                }
+                };
             }
             export interface ISmsMessageReceivedEventArgs {
                 binaryMessage: Windows.Devices.Sms.SmsBinaryMessage;
