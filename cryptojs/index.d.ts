@@ -165,7 +165,7 @@ declare namespace CryptoJS {
             padding?: pad.IPaddingImpl;
         }
 
-        interface IPasswordBasedCipher<C extends IPasswordBasedCipherCfg> extends Base{
+        interface IPasswordBasedCipher<C extends IPasswordBasedCipherCfg> extends Base {
             cfg: C;
             encrypt(cipher: Cipher, message: WordArray, password: string, cfg?: C): CipherParams;
             encrypt(cipher: Cipher, message: string,    password: string, cfg?: C): CipherParams;
@@ -195,7 +195,7 @@ declare namespace CryptoJS {
         }
 
         interface CipherHelper extends ICipherHelper<Object> {}
-        interface LibStatic{
+        interface LibStatic {
             Base: lib.Base;
             WordArray: lib.WordArray;
             CipherParams: lib.CipherParams;
@@ -204,16 +204,16 @@ declare namespace CryptoJS {
         }
     }
 
-    namespace enc{
+    namespace enc {
         interface IEncoder {
             stringify(wordArray: lib.WordArray): string;
         }
-        interface IDecoder{
+        interface IDecoder {
             parse(s: string): lib.WordArray;
         }
         interface ICoder extends IEncoder, IDecoder {}
 
-        interface EncStatic{
+        interface EncStatic {
             Hex: ICoder;
             Latin1: ICoder;
             Utf8: ICoder;
@@ -225,7 +225,7 @@ declare namespace CryptoJS {
     }
 
     namespace kdf {
-        interface KdfStatic{
+        interface KdfStatic {
             OpenSSL: IKdfImpl;
         }
 
@@ -374,7 +374,7 @@ declare namespace CryptoJS {
         interface OFB extends IBlockCipherModeImpl {}
     }
 
-    namespace pad{
+    namespace pad {
         interface PadStatic {
             Pkcs7: pad.Pkcs7;
             AnsiX923: pad.AnsiX923;

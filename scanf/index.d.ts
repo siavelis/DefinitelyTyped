@@ -3,13 +3,11 @@
 // Definitions by: Jeongho Nam <http://samchon.org>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module "scanf"
-{
+declare module "scanf" {
 	export = __node_scanf.scanf;
 }
 
-declare namespace __node_scanf
-{
+declare namespace __node_scanf {
 	/* ------------------------------------------------------------
 		SCANF - FROM STDIN
 	------------------------------------------------------------ */
@@ -98,8 +96,7 @@ declare namespace __node_scanf
 	/* ------------------------------------------------------------
 		SSCANF - FROM SOURCE STRING
 	------------------------------------------------------------ */
-	namespace scanf
-	{
+	namespace scanf {
 		/**
 		 * <p> Read formatted word from string. </p>
 		 *

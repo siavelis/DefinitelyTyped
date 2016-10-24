@@ -3,10 +3,8 @@
 // Definitions by: Niklas Mollenhauer <https://github.com/nikeee/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare module "highlight.js"
-{
-	namespace hljs
-	{
+declare module "highlight.js" {
+	namespace hljs {
 		export var LANGUAGES: { [name: string]: any; };
 
 		export function blockText(block: Node, ignoreNewLines: boolean): string;
@@ -43,23 +41,20 @@ declare module "highlight.js"
 		export var C_NUMBER_MODE: IMode;
 		export var BINARY_NUMBER_MODE: IMode;
 
-		export interface IHighlightResult
-		{
+		export interface IHighlightResult {
 			relevance: number;
 			keyword_count: number;
 			value: string;
 		}
 
-		export interface IAutoHighlightResult extends IHighlightResult
-		{
+		export interface IAutoHighlightResult extends IHighlightResult {
 			language: string;
 			second_best?: IAutoHighlightResult;
 		}
 
 		// Reference:
 		// https://github.com/isagalaev/highlight.js/blob/master/docs/reference.rst
-		export interface IMode
-		{
+		export interface IMode {
 			className?: string;
 			begin: string;
 			end?: string;

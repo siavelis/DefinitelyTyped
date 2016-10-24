@@ -1082,13 +1082,13 @@ declare namespace AtomCore {
 		new(): IWorkspace;
 	}
 
-	interface IWorkspacePanelOptions{
+	interface IWorkspacePanelOptions {
 		item: any;
 		visible?: boolean;
 		priority?: number;
 	}
 
-	interface Panel{
+	interface Panel {
 		getItem(): any;
 		getPriority(): any;
 		isVisible(): boolean;

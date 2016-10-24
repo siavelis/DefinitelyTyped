@@ -1782,8 +1782,7 @@ declare module "core-js/fn/function/has-instance" {
     var hasInstance: (value: any) => boolean;
     export = hasInstance;
 }
-declare module "core-js/fn/function/name"
-{
+declare module "core-js/fn/function/name" {
 }
 declare module "core-js/fn/function/part" {
     var part: typeof core.Function.part;

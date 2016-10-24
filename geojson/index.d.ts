@@ -8,8 +8,7 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#geojson-objects
     */
-    export interface GeoJsonObject
-    {
+    export interface GeoJsonObject {
         type: string;
         bbox?: number[];
         crs?: CoordinateReferenceSystem;
@@ -23,16 +22,14 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#geometry-objects
     */
-    export interface GeometryObject extends GeoJsonObject
-    {
+    export interface GeometryObject extends GeoJsonObject {
         coordinates: any;
     }
 
     /***
     * http://geojson.org/geojson-spec.html#point
     */
-    export interface Point extends GeometryObject
-    {
+    export interface Point extends GeometryObject {
         type: 'Point';
         coordinates: Position;
     }
@@ -40,8 +37,7 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#multipoint
     */
-    export interface MultiPoint extends GeometryObject
-    {
+    export interface MultiPoint extends GeometryObject {
         type: 'MultiPoint';
         coordinates: Position[];
     }
@@ -49,8 +45,7 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#linestring
     */
-    export interface LineString extends GeometryObject
-    {
+    export interface LineString extends GeometryObject {
         type: 'LineString';
         coordinates: Position[];
     }
@@ -58,8 +53,7 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#multilinestring
     */
-    export interface MultiLineString extends GeometryObject
-    {
+    export interface MultiLineString extends GeometryObject {
         type: 'MultiLineString';
         coordinates: Position[][];
     }
@@ -67,8 +61,7 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#polygon
     */
-    export interface Polygon extends GeometryObject
-    {
+    export interface Polygon extends GeometryObject {
         type: 'Polygon';
         coordinates: Position[][];
     }
@@ -76,8 +69,7 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#multipolygon
     */
-    export interface MultiPolygon extends GeometryObject
-    {
+    export interface MultiPolygon extends GeometryObject {
         type: 'MultiPolygon';
         coordinates: Position[][][];
     }
@@ -85,8 +77,7 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#geometry-collection
     */
-    export interface GeometryCollection extends GeoJsonObject
-    {
+    export interface GeometryCollection extends GeoJsonObject {
         type: 'GeometryCollection';
         geometries: GeometryObject[];
     }
@@ -94,8 +85,7 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#feature-objects
     */
-    export interface Feature<T extends GeometryObject> extends GeoJsonObject
-    {
+    export interface Feature<T extends GeometryObject> extends GeoJsonObject {
         type: 'Feature';
         geometry: T;
         properties: any;
@@ -105,8 +95,7 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#feature-collection-objects
     */
-    export interface FeatureCollection<T extends GeometryObject> extends GeoJsonObject
-    {
+    export interface FeatureCollection<T extends GeometryObject> extends GeoJsonObject {
         type: 'FeatureCollection';
         features: Feature<T>[];
     }
@@ -114,19 +103,16 @@ declare namespace GeoJSON {
     /***
     * http://geojson.org/geojson-spec.html#coordinate-reference-system-objects
     */
-    export interface CoordinateReferenceSystem
-    {
+    export interface CoordinateReferenceSystem {
         type: string;
         properties: any;
     }
 
-    export interface NamedCoordinateReferenceSystem extends CoordinateReferenceSystem
-    {
+    export interface NamedCoordinateReferenceSystem extends CoordinateReferenceSystem {
         properties: { name: string };
     }
 
-    export interface LinkedCoordinateReferenceSystem extends CoordinateReferenceSystem
-    {
+    export interface LinkedCoordinateReferenceSystem extends CoordinateReferenceSystem {
         properties: { href: string; type: string };
     }
 }

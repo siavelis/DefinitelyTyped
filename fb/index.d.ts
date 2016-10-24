@@ -3,7 +3,7 @@
 // Definitions by: Joshua Strobl <https://github.com/JoshStrobl>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-interface FBInitParams{
+interface FBInitParams {
     appId?: string;
     authResponse?: string;
     cookie?: boolean;
@@ -90,7 +90,7 @@ declare type FBUIParams = ShareDialogParams
                         | PayDialogParams
                         | FeedDialogParams;
 
-interface FBLoginOptions{
+interface FBLoginOptions {
     auth_type?: string;
     scope?: string;
     return_scopes?: boolean;
@@ -98,7 +98,7 @@ interface FBLoginOptions{
     profile_selector_ids?: string;
 }
 
-interface FBSDKEvents{
+interface FBSDKEvents {
     /* This method allows you to subscribe to a range of events, and define callback functions for when they fire. */
     subscribe(event: string, callback: (fbResponseObject: Object) => any): void;
 
@@ -106,13 +106,13 @@ interface FBSDKEvents{
     unsubscribe(event: string, callback: (fbResponseObject: Object) => any): void;
 }
 
-interface FBSDKXFBML{
+interface FBSDKXFBML {
     /* This function parses and renders XFBML markup in a document on the fly. */
     parse(ParseElement?: Element): void;
     parse(ParseElement?: HTMLElement): void;
 }
 
-interface FBSDKCanvasPrefetcher{
+interface FBSDKCanvasPrefetcher {
     /* Tells Facebook that the current page uses a specified resource. */
     addStaticResource(res: string): void;
 
@@ -120,16 +120,16 @@ interface FBSDKCanvasPrefetcher{
     setCollectionMode(option: string): void;
 }
 
-interface FBSDKCanvasSize{
+interface FBSDKCanvasSize {
     height?: Number;
     width?: Number;
 }
 
-interface FBSDKCanvasDoneLoading{
+interface FBSDKCanvasDoneLoading {
     time_delta_ms: Number;
 }
 
-interface FBSDKCanvas{
+interface FBSDKCanvas {
     Prefetcher: FBSDKCanvasPrefetcher;
 
     /* Hides the HTML element passed in via the elem param from view. */
@@ -191,7 +191,7 @@ interface FBError {
     fbtrace_id: string;
 }
 
-interface FBSDK{
+interface FBSDK {
     /* This method is used to initialize and setup the SDK. */
     init(fbInitObject: FBInitParams): void;
 
@@ -222,7 +222,7 @@ interface FBSDK{
     Error: FBError;
 }
 
-interface Window{
+interface Window {
     fbAsyncInit(): any;
 }
 

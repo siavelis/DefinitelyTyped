@@ -102,7 +102,7 @@ declare namespace yo {
         short?: string;
     }
 
-    export interface IPromptOptions{
+    export interface IPromptOptions {
         type?: string;
         name: string;
         message: string | ((answers: Object) => string);

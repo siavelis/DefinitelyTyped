@@ -73,8 +73,7 @@ declare namespace YT {
         suggestedQuality?: string;
     }
 
-    export interface VideoData
-    {
+    export interface VideoData {
         video_id: string;
         author: string;
         title: string;

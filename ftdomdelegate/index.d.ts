@@ -3,8 +3,7 @@
 // Definitions by: Christian Holm Nielsen <https://github.com/dotnetnerd>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare class Delegate
-{
+declare class Delegate {
     constructor(element: HTMLElement);
 
     on(eventType: string, selector: string, handler: (event: Event, targetElement: Element) => void, eventData?: any): void;

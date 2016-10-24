@@ -123,7 +123,7 @@ interface amplifyStorageTypeStore {
     (): any;
 }
 
-interface amplifyStore extends amplifyStorageTypeStore{
+interface amplifyStore extends amplifyStorageTypeStore {
 
     /***
     * IE 8+, Firefox 3.5+, Safari 4+, Chrome, Opera 10.5+, iPhone 2+, Android 2+

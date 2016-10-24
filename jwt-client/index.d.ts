@@ -4,14 +4,14 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 
-declare module "jwt-client"{
+declare module "jwt-client" {
 
-  interface JWTHeader{
+  interface JWTHeader {
     typ: string;
     alg: string;
   }
 
-  interface JWTObject{
+  interface JWTObject {
     header: JWTHeader;
     claim: any;
     signature: string;

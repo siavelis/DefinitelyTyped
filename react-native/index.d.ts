@@ -4297,7 +4297,7 @@ declare module "react" {
         scrollTo(
             y?: number | { x?: number, y?: number, animated?: boolean },
             x?: number,
-            animated?: boolean;
+            animated?: boolean
         ): void;
 
         /**
@@ -5664,7 +5664,7 @@ declare module "react" {
          */
         export function modulo(
             a: Animated,
-            modulus: number;
+            modulus: number
         ): AnimatedModulo;
 
         class AnimatedModulo extends AnimatedInterpolation { }
@@ -5680,7 +5680,7 @@ declare module "react" {
          * following animations will be started.
          */
         export function sequence(
-            animations: Array<CompositeAnimation>;
+            animations: Array<CompositeAnimation>
         ): CompositeAnimation;
 
         /**
@@ -5690,7 +5690,7 @@ declare module "react" {
 
         export function stagger(
             time: number,
-            animations: Array<CompositeAnimation>;
+            animations: Array<CompositeAnimation>
         ): CompositeAnimation;
 
         /**

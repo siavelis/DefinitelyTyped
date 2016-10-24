@@ -74,7 +74,7 @@ interface RedisSMQStatic {
     new (options: ClientOptions): Client;
 }
 
-interface Client extends RedisSMQ.Client{
+interface Client extends RedisSMQ.Client {
     redis: redis.RedisClient;
 }
 

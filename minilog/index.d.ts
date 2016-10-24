@@ -26,7 +26,7 @@ declare namespace Minilog {
     export var defaultFormatter: string;
 
 
-    export class Filter extends Transform{
+    export class Filter extends Transform {
 
         /**
         * Adds an entry to the whitelist
@@ -68,7 +68,7 @@ declare namespace Minilog {
         jQuery: any;
     }
 
-    export class Console extends Transform{
+    export class Console extends Transform {
 
         /**
         * List of available formatters

@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-interface SelectListProps extends React.Props<SelectListClass>{
+interface SelectListProps extends React.Props<SelectListClass> {
     /**
      * The current value or values of the SelectList. This can be an object (such as a member of
      * the data array) or a primitive value, hinted to by the valueField. The widget value does

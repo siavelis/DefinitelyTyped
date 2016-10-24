@@ -5,7 +5,7 @@
 
 ///<reference types="node" />
 
-declare module 'logat'{
+declare module 'logat' {
 
   interface LogOptionsI {
     logLevel?: number;

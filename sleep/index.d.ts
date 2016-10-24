@@ -3,8 +3,7 @@
 // Definitions by: Jeongho Nam <http://samchon.org>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare namespace __node_sleep
-{
+declare namespace __node_sleep {
 	/**
 	 * Sleep for <i>n</i> seconds.
 	 *
@@ -20,7 +19,6 @@ declare namespace __node_sleep
 	function usleep(n: number): void;
 }
 
-declare module "sleep"
-{
+declare module "sleep" {
 	export = __node_sleep;
 }

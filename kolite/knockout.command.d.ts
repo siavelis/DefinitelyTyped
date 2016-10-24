@@ -46,7 +46,7 @@ interface KnockoutBindingHandlers {
 
 // Ambient declarations for typescript+requirejs
 declare var kocommand: KnockoutCommandStatic;
-declare module 'kocommand'{
+declare module 'kocommand' {
     export = kocommand;
 }
 

@@ -7,12 +7,12 @@ export = cucumber;
 
 declare namespace cucumber {
 
-	export interface CallbackStepDefinition{
+	export interface CallbackStepDefinition {
 		pending: () => PromiseLike<any>;
 		(errror?: any, pending?: string): void;
 	}
 
-	export interface TableDefinition{
+	export interface TableDefinition {
 		raw: () => Array<any>;
 		rows: () => Array<any>;
 		rowsHash: () => {};
@@ -25,7 +25,7 @@ declare namespace cucumber {
 		(...stepArgs: Array<StepDefinitionParam>): PromiseLike<any> | any | void;
 	}
 
-	interface StepDefinitionOptions{
+	interface StepDefinitionOptions {
 		timeout?: number;
 	}
 
@@ -39,7 +39,7 @@ declare namespace cucumber {
 		setDefaultTimeout(time: number): void;
 	}
 
-	interface HookScenario{
+	interface HookScenario {
 		getKeyword(): string;
 		getName(): string;
 		getDescription(): string;
@@ -60,7 +60,7 @@ declare namespace cucumber {
 		(scenario: HookScenario, callback?: CallbackStepDefinition): void;
 	}
 
-	interface AroundCode{
+	interface AroundCode {
 		(scenario: HookScenario, runScenario?: (error: string, callback?: Function) => void): void;
 	}
 

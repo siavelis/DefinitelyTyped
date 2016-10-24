@@ -3,11 +3,11 @@
 // Definitions by: Kon <http://phyzkit.net/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare namespace Gamepad{
+declare namespace Gamepad {
     /**
      * This interface defines an individual gamepad device.
      */
-    export interface Gamepad{
+    export interface Gamepad {
         /**
          * An identification string for the gamepad. This string identifies the brand or style of connected gamepad device. Typically, this will include the USB vendor and a product ID.
          * @readonly
@@ -54,7 +54,7 @@ declare namespace Gamepad{
     /**
      *
      */
-    export interface GamepadEvent extends Event{
+    export interface GamepadEvent extends Event {
         /**
          * The single gamepad attribute provides access to the associated gamepad data for this event.
          * @readonly
@@ -62,12 +62,12 @@ declare namespace Gamepad{
         gamepad: Gamepad;
     }
 
-    export interface GamepadList{
+    export interface GamepadList {
         [index: number]: Gamepad;
         length: number;
     }
 
-    export interface GamepadButton{
+    export interface GamepadButton {
         pressed: boolean;
         value: number;
     }
@@ -83,7 +83,7 @@ declare namespace Gamepad{
      */
 }
 
-interface Navigator{
+interface Navigator {
     /**
      * The currently connected and interacted-with gamepads. Gamepads must only appear in the list if they are currently connected to the user agent, and have been interacted with by the user. Otherwise, they must not appear in the list to avoid a malicious page from fingerprinting the user based on connected devices.
      * @readonly

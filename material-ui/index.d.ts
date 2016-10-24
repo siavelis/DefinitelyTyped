@@ -457,8 +457,7 @@ declare namespace __MaterialUI {
         interface MuiThemeProviderProps extends React.Props<MuiThemeProvider> {
             muiTheme?: Styles.MuiTheme;
         }
-        export class MuiThemeProvider extends React.Component<MuiThemeProviderProps, {}>{
-        }
+        export class MuiThemeProvider extends React.Component<MuiThemeProviderProps, {}> { }
 
         export function getMuiTheme(...muiTheme: MuiTheme[]): MuiTheme;
 

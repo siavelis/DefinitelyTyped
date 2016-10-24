@@ -95,7 +95,7 @@ declare module "react-relay" {
 
     class RootContainer extends React.Component<RootContainerProps, any> {}
 
-    interface RootContainerProps extends React.Props<RootContainer>{
+    interface RootContainerProps extends React.Props<RootContainer> {
         Component: RelayContainerClass<any>;
         route: Route;
         renderLoading?(): JSX.Element;

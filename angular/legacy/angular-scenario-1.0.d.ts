@@ -61,7 +61,7 @@ declare namespace angularScenario {
         toBeGreaterThan(value: any): void;
     }
 
-    export interface CustomMatchers extends Matchers{
+    export interface CustomMatchers extends Matchers {
     }
 
     export interface Expect extends CustomMatchers {

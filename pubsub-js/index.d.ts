@@ -9,7 +9,7 @@ declare namespace PubSubJS {
         name: string;
     }
 
-    interface Publish{
+    interface Publish {
         publish(message: any, data: any): boolean;
 
         publish(message: any, data: any, sync: boolean, immediateExceptions: Function): boolean;
@@ -17,17 +17,17 @@ declare namespace PubSubJS {
         publishSync(message: any, data: any): boolean;
     }
 
-    interface Subscribe{
+    interface Subscribe {
         subscribe(message: any, func: Function): any;
     }
 
 
-    interface Unsubscribe{
+    interface Unsubscribe {
         unsubscribe(tokenOrFunction: any): any;
     }
 
 
-    interface ClearAllSubscriptions{
+    interface ClearAllSubscriptions {
         clearAllSubscriptions(): any;
     }
 }

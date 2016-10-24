@@ -123,8 +123,7 @@ interface KnockoutValidationAsyncCallback {
     (result: KnockoutValidationAsyncCallbackArgs): void;
 }
 
-interface KnockoutValidationRuleBase
-{
+interface KnockoutValidationRuleBase {
     message: string;
 }
 

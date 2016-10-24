@@ -114,7 +114,7 @@ declare var RTCSessionDescription: {
   // See: http://dev.w3.org/2011/webrtc/editor/webrtc.html#idl-def-RTCSdpType)
 };
 
-interface webkitRTCSessionDescription extends RTCSessionDescription{
+interface webkitRTCSessionDescription extends RTCSessionDescription {
   type?: string;
   sdp?: string;
 }
@@ -123,7 +123,7 @@ declare var webkitRTCSessionDescription: {
   new (descriptionInitDict?: RTCSessionDescriptionInit): webkitRTCSessionDescription;
 };
 
-interface mozRTCSessionDescription extends RTCSessionDescription{
+interface mozRTCSessionDescription extends RTCSessionDescription {
   type?: string;
   sdp?: string;
 }
@@ -392,7 +392,7 @@ declare var RTCPeerConnectionConfig: {
   new (): RTCPeerConnectionConfig;
 };
 
-interface Window{
+interface Window {
   RTCPeerConnection: RTCPeerConnection;
   webkitRTCPeerConnection: webkitRTCPeerConnection;
   mozRTCPeerConnection: mozRTCPeerConnection;

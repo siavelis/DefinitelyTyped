@@ -12,7 +12,7 @@ interface $script {
   ready(deps: string | string[], ready: () => void, req?: (missing: string[]) => void): $script;
 }
 
-declare module 'scriptjs'{
+declare module 'scriptjs' {
     var $script: $script;
     export = $script;
 }

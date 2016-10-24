@@ -3,13 +3,13 @@
 // Definitions by: Lokesh Peta <https://github.com/lokeshpeta/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-interface IConfiguration{
+interface IConfiguration {
 	SYSTEM_CHANNEL: string;
 	DEFAULT_CHANNEL: string;
 	resolver: any;
 }
 
-interface ISubscriptionDefinition{
+interface ISubscriptionDefinition {
 	unsubscribe(): void;
 	subscribe(callback: (data: any, envelope: IEnvelope) => void): void;
 	defer(): ISubscriptionDefinition;
@@ -25,7 +25,7 @@ interface ISubscriptionDefinition{
 	withThrottle(milliseconds: number): ISubscriptionDefinition;
 }
 
-interface IEnvelope{
+interface IEnvelope {
 	topic: string;
 	data?: any;
 
@@ -46,7 +46,7 @@ interface IChannelDefinition {
 	channel: string;
 }
 
-interface IPostalUtils{
+interface IPostalUtils {
 	getSubscribersFor(channel: string, tpc: any): any;
 	reset(): void;
 }

@@ -381,7 +381,7 @@ declare namespace Snap {
         toRelative(path: string): Array<any>;
     }
 
-    interface IntersectionDot{
+    interface IntersectionDot {
         x: number;
         y: number;
         t1: number;

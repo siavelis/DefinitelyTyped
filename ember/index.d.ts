@@ -2603,7 +2603,7 @@ declare namespace Em {
         var compile: typeof Ember.Handlebars.compile;
         var precompile: typeof Ember.Handlebars.precompile;
         class Compiler extends Ember.Handlebars.Compiler { }
-        class JavaScriptCompiler extends Ember.Handlebars.JavaScriptCompiler{ }
+        class JavaScriptCompiler extends Ember.Handlebars.JavaScriptCompiler { }
         var registerPartial: typeof Ember.Handlebars.registerPartial;
         var K: typeof Ember.Handlebars.K;
         var createFrame: typeof Ember.Handlebars.createFrame;

@@ -237,8 +237,7 @@ interface JoyrideOptions {
 	template?: JoyrideTemplate;
 }
 
-interface Joyride
-{
+interface Joyride {
 	/**
 	* Default function, no options
 	* @method

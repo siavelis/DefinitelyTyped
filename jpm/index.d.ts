@@ -478,7 +478,7 @@ declare module "sdk/request" {
     response: Response;
   }
 
-  interface STRequest<ResponseType> extends BaseRequest{
+  interface STRequest<ResponseType> extends BaseRequest {
     response: STResponse<ResponseType>;
   }
 

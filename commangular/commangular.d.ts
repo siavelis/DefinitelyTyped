@@ -104,7 +104,7 @@ declare namespace commangular {
 
 	}
 
-	interface IResultCommand extends ICommand{
+	interface IResultCommand extends ICommand {
 		/**
 		 * Is executed after the execute method and the interception chain and can receive
 		 * the result from the execute method of the same command.

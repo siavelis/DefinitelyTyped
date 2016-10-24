@@ -7,15 +7,12 @@
 // - Static methods that are defined in JQueryStatic.fn are not typed.
 // - Plugin and extension definitions are not typed.
 
-interface JQuery
-{
+interface JQuery {
 	dataTable(param?: DataTables.Options): DataTables.DataTable;
 }
 
-declare namespace DataTables
-{
-	export interface DataTable
-	{
+declare namespace DataTables {
+	export interface DataTable {
 		/// Perform a jQuery selector action on the table's TR elements (from the tbody) and return the resulting jQuery object.
 		$(selector: string, opts?: RowParams): JQuery;
 		$(selector: Node[], opts?: RowParams): JQuery;
@@ -98,8 +95,7 @@ declare namespace DataTables
 		fnVersionCheck(version: string): boolean;
 	}
 
-	export interface Static
-	{
+	export interface Static {
 		/// Provide a common method for plug-ins to check the version of DataTables being used,
 		/// in order to ensure compatibility.
 		fnVersionCheck(version: string): boolean;
@@ -111,8 +107,7 @@ declare namespace DataTables
 		fnTables(visible?: boolean): Node[];
 	}
 
-	export interface RowParams
-	{
+	export interface RowParams {
 		/// Select TR elements that meet the current filter criterion ("applied") or all TR elements (i.e. no filter).
 		filter?: string;
 
@@ -127,8 +122,7 @@ declare namespace DataTables
 		page?: string;
 	}
 
-	export interface Options
-	{
+	export interface Options {
 		aaData?: any[];
 		aaSorting?: any[];
 		aaSortingFixed?: any[];
@@ -191,8 +185,7 @@ declare namespace DataTables
 		sServerMethod?: string;
 	}
 
-	export interface LanguageOptions
-	{
+	export interface LanguageOptions {
 		oAria?: AriaOptions;
 		oPaginate?: PaginateOptions;
 		sEmptyTable?: string;
@@ -209,22 +202,19 @@ declare namespace DataTables
 		sZeroRecords?: string;
 	}
 
-	export interface AriaOptions
-	{
+	export interface AriaOptions {
 		sSortAscending?: string;
 		sSortDescending?: string;
 	}
 
-	export interface PaginateOptions
-	{
+	export interface PaginateOptions {
 		sFirst?: string;
 		sLast?: string;
 		sNext?: string;
 		sPrevious?: string;
 	}
 
-	export interface ColumnOptions
-	{
+	export interface ColumnOptions {
 		aDataSort?: number[];
 		asSorting?: string[];
 		bSearchable?: boolean;
@@ -247,13 +237,11 @@ declare namespace DataTables
 		sWidth?: string;
 	}
 
-	export interface ColumnDef extends ColumnOptions
-	{
+	export interface ColumnDef extends ColumnOptions {
 		aTargets: any[];
 	}
 
-	export interface Settings
-	{
+	export interface Settings {
 		oFeatures: Features;
 		oScroll: ScrollingSettings;
 		oLanguage: { fnInfoCallback: InfoCallback; };
@@ -334,8 +322,7 @@ declare namespace DataTables
 		nScrollFoot: Node;
 	}
 
-	export interface Features
-	{
+	export interface Features {
 		bAutoWidth: boolean;
 		bDeferRender: boolean;
 		bFilter: boolean;
@@ -349,8 +336,7 @@ declare namespace DataTables
 		bStateSave: boolean;
 	}
 
-	export interface ScrollingSettings
-	{
+	export interface ScrollingSettings {
 		bAutoCss: boolean;
 		bCollapse: boolean;
 		bInfinite: boolean;
@@ -360,8 +346,7 @@ declare namespace DataTables
 		sY: string;
 	}
 
-	export interface Row
-	{
+	export interface Row {
 		nTr: Node;
 		_aData: any;
 		_aSortData: any[];
@@ -369,8 +354,7 @@ declare namespace DataTables
 		_sRowStripe: string;
 	}
 
-	export interface Column
-	{
+	export interface Column {
 		aDataSort: any;
 		asSorting: string[];
 		bSearchable: boolean;
@@ -397,83 +381,67 @@ declare namespace DataTables
 		sWidthOrig: string;
 	}
 
-	export interface CookieCallback
-	{
+	export interface CookieCallback {
 		(name: string, data: any, expires: string, path: string, cookie: string): void;
 	}
 
-	export interface RowCreatedCallback
-	{
+	export interface RowCreatedCallback {
 		(row: Node, data: any[], dataIndex: number): void;
 	}
 
-	export interface DrawCallback
-	{
+	export interface DrawCallback {
 		(settings: Settings): void;
 	}
 
-	export interface FooterCallback
-	{
+	export interface FooterCallback {
 		(foot: Element, data: any[], start: number, end: number, display: number[]): void;
 	}
 
-	export interface FormatNumber
-	{
+	export interface FormatNumber {
 		(toFormat: number): string;
 	}
 
-	export interface HeaderCallback
-	{
+	export interface HeaderCallback {
 		(head: Element, data: any[], start: number, end: number, display: number[]): void;
 	}
 
-	export interface InfoCallback
-	{
+	export interface InfoCallback {
 		(settings: Settings, start: number, end: number, max: number, total: number, pre: string): string;
 	}
 
-	export interface InitComplete
-	{
+	export interface InitComplete {
 		(settings: Settings, json: any): void;
 	}
 
-	export interface PreDrawCallback
-	{
+	export interface PreDrawCallback {
 		(settings: Settings): boolean;
 	}
 
-	export interface RowCallback
-	{
+	export interface RowCallback {
 		(row: Settings, data: any[], displayIndex: number, displayIndexFull: number): void;
 	}
 
-	export interface StateLoadCallback
-	{
+	export interface StateLoadCallback {
 		(settings: Settings): any;
 	}
 
-	export interface StateLoadParams
-	{
+	export interface StateLoadParams {
 		(settings: Settings, data: any): void;
 	}
 
-	export interface StateLoaded
-	{
+	export interface StateLoaded {
 		(settings: Settings, data: any): void;
 	}
 
-	export interface StateSaveCallback
-	{
+	export interface StateSaveCallback {
 		(settings: any, data: any): void;
 	}
 
-	export interface StateSaveParams
-	{
+	export interface StateSaveParams {
 		(settings: any, data: any): void;
 	}
 
-	export interface CreatedCell
-	{
+	export interface CreatedCell {
 		(nTd: Node, cellData: any, rowData: any, row: number, col: number): void;
 	}
 }

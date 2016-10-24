@@ -34,7 +34,7 @@ declare module "react-redux-toastr" {
     /**
      * Toastr react component.
      */
-    export default class ReduxToastr extends R.Component<ToastrOptions, any>{ }
+    export default class ReduxToastr extends R.Component<ToastrOptions, any> { }
 
     interface EmitterOptions {
         /**

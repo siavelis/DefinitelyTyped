@@ -17,8 +17,8 @@ interface YUI {
     mix(receiver: Object, supplier: Object, overwrite?: boolean, whitelist?: string[], mode?: number, merge?: boolean): any; // Function|Object|YUI
 }
 
-declare namespace Y{
-    interface IConfig{
+declare namespace Y {
+    interface IConfig {
         requires: string[];
         optional: string[];
         use: string[];

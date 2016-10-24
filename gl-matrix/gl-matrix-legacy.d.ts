@@ -4,8 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 declare namespace GLM {
-    interface IArray
-    {
+    interface IArray {
         /**
          * Must be indexable like an array
          */

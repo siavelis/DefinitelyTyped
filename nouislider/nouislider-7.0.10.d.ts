@@ -6,7 +6,7 @@
 /// <reference types="wnumb"/>
 
 
-interface noUiSliderInstance extends JQuery{
+interface noUiSliderInstance extends JQuery {
     /**
      * For one-handle sliders, calling .val() will return the value.
      * For two-handle sliders, an array[value, value] will be returned.

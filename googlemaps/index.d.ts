@@ -1025,8 +1025,7 @@ declare namespace google.maps {
         TRAM
     }
 
-    export enum TransitRoutePreference
-    {
+    export enum TransitRoutePreference {
         FEWER_TRANSFERS,
         LESS_WALKING
     }
@@ -1038,8 +1037,7 @@ declare namespace google.maps {
         trafficModel: TrafficModel;
     }
 
-    export enum TrafficModel
-    {
+    export enum TrafficModel {
         BEST_GUESS,
         OPTIMISTIC,
         PESSIMISTIC
@@ -1158,8 +1156,7 @@ declare namespace google.maps {
         type: VehicleType;
     }
 
-    export enum VehicleType
-    {
+    export enum VehicleType {
         BUS,
         CABLE_CAR,
         COMMUTER_TRAIN,
@@ -1295,7 +1292,7 @@ declare namespace google.maps {
         setPlace(place: Place): void;
     }
 
-    export interface SaveWidgetOptions{
+    export interface SaveWidgetOptions {
         attribution?: Attribution;
         place?: Place;
     }

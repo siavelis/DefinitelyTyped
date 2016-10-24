@@ -5,10 +5,8 @@
 
 /// <reference types="node" />
 
-declare module "fs"
-{
-    interface FSWatcher
-    {
+declare module "fs" {
+    interface FSWatcher {
         add(fileDirOrGlob: string): void;
         add(filesDirsOrGlobs: Array<string>): void;
         unwatch(fileDirOrGlob: string): void;
@@ -17,10 +15,8 @@ declare module "fs"
     }
 }
 
-declare module "chokidar"
-{
-    interface WatchOptions
-    {
+declare module "chokidar" {
+    interface WatchOptions {
         persistent?: boolean;
         ignored?: any;
         ignoreInitial?: boolean;

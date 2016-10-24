@@ -4,7 +4,7 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
 
-interface Uniq{
+interface Uniq {
   <T>(ip: Array<T>): Array<T>;
 }
 

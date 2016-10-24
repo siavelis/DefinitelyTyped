@@ -341,13 +341,13 @@ interface FirebaseAuthData {
 	anonymous?: any;
 }
 
-interface FirebaseAuthDataPassword{
+interface FirebaseAuthDataPassword {
 	email: string;
 	isTemporaryPassword: boolean;
 	profileImageURL: string;
 }
 
-interface FirebaseAuthDataTwitter{
+interface FirebaseAuthDataTwitter {
 	id: string;
 	accessToken: string;
 	accessTokenSecret: string;
@@ -357,7 +357,7 @@ interface FirebaseAuthDataTwitter{
 	cachedUserProfile: any;
 }
 
-interface FirebaseAuthDataGithub{
+interface FirebaseAuthDataGithub {
 	id: string;
 	accessToken: string;
 	displayName: string;
@@ -367,7 +367,7 @@ interface FirebaseAuthDataGithub{
 	cachedUserProfile: any;
 }
 
-interface FirebaseAuthDataFacebook{
+interface FirebaseAuthDataFacebook {
 	id: string;
 	accessToken: string;
 	displayName: string;

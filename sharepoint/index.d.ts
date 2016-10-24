@@ -11212,10 +11212,8 @@ declare namespace SP {
 
 // ------- Srch namespace -------
 
-declare namespace Srch
-{
-    export enum EventType
-    {
+declare namespace Srch {
+    export enum EventType {
         none,
         queryReady,
         queryIssuing,
@@ -11229,15 +11227,13 @@ declare namespace Srch
         postLoad
     }
 
-    export enum MessageLevel
-    {
+    export enum MessageLevel {
         information,
         warning,
         error
     }
 
-    export enum UserActionType
-    {
+    export enum UserActionType {
         search,
         pageNext,
         pagePrev,
@@ -11246,15 +11242,13 @@ declare namespace Srch
         filterLanguage
     }
 
-    export enum DateTimeKind
-    {
+    export enum DateTimeKind {
         unspecified,
         utc,
         local
     }
 
-    export class ClientControl extends Sys.UI.Control
-    {
+    export class ClientControl extends Sys.UI.Control {
         constructor(elem: Element);
 
         /** toggles visibility of children controls of the messageContainer */
@@ -11306,8 +11300,7 @@ declare namespace Srch
         clickHandler(e: Event): any;
     }
 
-    export class DataProvider extends ClientControl
-    {
+    export class DataProvider extends ClientControl {
         constructor(elem: Element);
         get_currentQueryState(): any;
         get_sourceID(): string;
@@ -11437,8 +11430,7 @@ declare namespace Srch
         getSortName(): string;
     }
 
-    export class DisplayControl extends ClientControl
-    {
+    export class DisplayControl extends ClientControl {
         get_queryGroupName(): string;
         set_queryGroupName(value: string): string;
         get_dataProvider(): DataProvider;
@@ -11470,8 +11462,7 @@ declare namespace Srch
         render(): void;
     }
 
-    export class Refinement extends DisplayControl
-    {
+    export class Refinement extends DisplayControl {
         static createRefinementTextbox(name: string): Element;
         static submitMultiRefinement(name: string, control: Refinement, useContains: boolean, useKQL: boolean): void;
         static ensureUserSpecifiedRefinerValueHasWhiteSpaceQuotes(inputText: string): string;
@@ -11518,8 +11509,7 @@ declare namespace Srch
         updateRefinementControls(newControls: RefinementControl[]): void;
     }
 
-    export class RefinementControl
-    {
+    export class RefinementControl {
         constructor(propertyName: string, spec: string, renderTemplateId: string);
 
         propertyName: string;
@@ -11534,8 +11524,7 @@ declare namespace Srch
         deepHits: number;
     }
 
-    export class Result extends DisplayControl
-    {
+    export class Result extends DisplayControl {
         static parsePropertyMappingWithSlotDisplayNames(mappings: any): { [key: string]: any };
         static parsePropertyMappingsString(mappings: any): { [key: string]: any };
         static getSelectedPropertiesFromMappingDictionary(propMappings: any): any[];
@@ -11608,8 +11597,7 @@ declare namespace Srch
     }
 
     /** Represents the search box control */
-    export class SearchBox extends ClientControl
-    {
+    export class SearchBox extends ClientControl {
         constructor(elem: Element);
 
         /** Returns the current search term */
@@ -11775,8 +11763,7 @@ declare namespace Srch
 
     }
 
-    export class U
-    {
+    export class U {
         /** Returns true if the value parameter is null or empty string */
         static e(value: string): boolean;
         /** Returns true if the value parameter is empty string */
@@ -12033,8 +12020,7 @@ declare namespace Srch
     }
 
     export namespace U {
-        export class PropNames
-        {
+        export class PropNames {
             static renderTemplates: 'RenderTemplates';
             static renderTemplateId: 'RenderTemplateId';
             static tableType: 'TableType';
@@ -12052,8 +12038,7 @@ declare namespace Srch
             static isFirstRankedBlock: 'IsFirstRankedResultBlock';
         }
 
-        export class Ids
-        {
+        export class Ids {
             static group: '_group';
             static groupTitle: '_groupTitle';
             static groupLink: '_groupLink';
@@ -12076,23 +12061,20 @@ declare namespace Srch
             static postInfo: '_postInfo';
         }
 
-        export class LoadScriptsState
-        {
+        export class LoadScriptsState {
             scriptsToLoad: any;
             progress: number;
             timeoutHandle: any;
         }
 
-        export enum LoadScriptsProgress
-        {
+        export enum LoadScriptsProgress {
             loading,
             success,
             failure
         }
     }
 
-    export class ScriptApplicationManager
-    {
+    export class ScriptApplicationManager {
         static get_current(): ScriptApplicationManager;
         static get_clientRuntimeContext(): SP.ClientRuntimeContext;
         /** Returns server-relative link to _layouts/EditUserPref.aspx */
@@ -12146,8 +12128,7 @@ declare namespace Srch
         get_searchSessionID(): void;
     }
 
-    export class Res
-    {
+    export class Res {
         static sb_ResultsPageTitle: string;
         static sb_EmptyQueryWarning: string;
         static sb_InvalidResultPageURL: string;

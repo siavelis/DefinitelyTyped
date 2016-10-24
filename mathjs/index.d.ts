@@ -2228,7 +2228,7 @@ declare namespace mathjs {
 	}
 }
 
-declare module 'mathjs'{
+declare module 'mathjs' {
 	export = math;
 }
 

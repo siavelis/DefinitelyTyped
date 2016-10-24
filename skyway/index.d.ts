@@ -5,8 +5,8 @@
 
 /// <reference types="webrtc" />
 
-declare namespace PeerJs{
-    interface PeerJSOption{
+declare namespace PeerJs {
+    interface PeerJSOption {
         key?: string;
         host?: string;
         port?: number;
@@ -17,14 +17,14 @@ declare namespace PeerJs{
         debug?: number;
     }
 
-    interface PeerConnectOption{
+    interface PeerConnectOption {
         label?: string;
         metadata?: any;
         serialization?: string;
         reliable?: boolean;
     }
 
-    interface DataConnection{
+    interface DataConnection {
         send(data: any): void;
         close(): void;
         on(event: string, cb: () => void): void;
@@ -45,7 +45,7 @@ declare namespace PeerJs{
         type: string;
     }
 
-    interface MediaConnection{
+    interface MediaConnection {
         answer(stream?: any): void;
         close(): void;
         on(event: string, cb: () => void): void;
@@ -66,12 +66,12 @@ declare namespace PeerJs{
         reliable: boolean;
     }
 
-    interface util{
+    interface util {
         browser: string;
         supports: utilSupportsObj;
     }
 
-    export interface Peer{
+    export interface Peer {
         /**
          *
          * @param id The brokering ID of the remote peer (their peer.id).

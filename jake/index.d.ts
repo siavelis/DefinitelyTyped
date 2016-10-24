@@ -76,13 +76,13 @@ declare function npmPublishTask(name: string, packageFiles: string[]): jake.NpmP
 declare function npmPublishTask(name: string, definition?: () => void): jake.NpmPublishTask;
 
 
-declare namespace jake{
+declare namespace jake {
 
     ////////////////////////////////////////////////////////////////////////////////////
 	// File-utils //////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////
 
-	interface UtilOptions{
+	interface UtilOptions {
 		silent?: boolean;
 	}
 
@@ -117,7 +117,7 @@ declare namespace jake{
 	// Running shell-commands ////////////////////////////////////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////
 
-	interface ExecOptions{
+	interface ExecOptions {
 		/**
 		 * print to stdout, default false
 		 */
@@ -162,7 +162,7 @@ declare namespace jake{
 	// Logging and output ////////////////////////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-	interface Logger{
+	interface Logger {
 		log(value: any): void;
 		error(value: any): void;
 	}
@@ -189,7 +189,7 @@ declare namespace jake{
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-	export interface TaskOptions{
+	export interface TaskOptions {
 		/**
 		 * Perform this task asynchronously. If you flag a task with this option, you must call the global `complete` method inside the task's action, for execution to proceed to the next task.
 		 * @default false
@@ -239,14 +239,14 @@ declare namespace jake{
 		value: any;
 	}
 
-	export class DirectoryTask{
+	export class DirectoryTask {
 		/**
          * @param name The name of the directory to create.
 		 */
 		constructor(name: string);
 	}
 
-	export interface FileTaskOptions{
+	export interface FileTaskOptions {
 		/**
 		 * Perform this task asynchronously. If you flag a task with this option, you must call the global `complete` method inside the task's action, for execution to proceed to the next task.
 		 * @default false
@@ -254,7 +254,7 @@ declare namespace jake{
 		async?: boolean;
 	}
 
-	export class FileTask{
+	export class FileTask {
 		/**
 		 * @param name The name of the Task
 		 * @param prereqs Prerequisites to be run before this task
@@ -264,11 +264,11 @@ declare namespace jake{
 		constructor(name: string, prereqs?: string[], action?: () => void, opts?: FileTaskOptions);
 	}
 
-	interface FileFilter{
+	interface FileFilter {
 		(filename: string): boolean;
 	}
 
-	export class FileList{
+	export class FileList {
 		constructor();
 
 		/**
@@ -318,7 +318,7 @@ declare namespace jake{
   		clearExclude(): void;
 	}
 
-	export class PackageTask{
+	export class PackageTask {
         /**
          * Instantiating a PackageTask creates a number of Jake Tasks that make packaging and distributing your software easy.
          * @param name The name of the project
@@ -394,11 +394,11 @@ declare namespace jake{
 
 	}
 
-	export class TestTask{
+	export class TestTask {
 		constructor(name: string, definition?: () => void);
 	}
 
-	export class NpmPublishTask{
+	export class NpmPublishTask {
 		constructor(name: string, packageFiles: string[]);
 		constructor(name: string, definition?: () => void);
 	}

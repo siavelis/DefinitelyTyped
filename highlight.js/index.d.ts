@@ -6,8 +6,7 @@
 export = hljs;
 export as namespace hljs;
 
-declare  namespace hljs
-{
+declare  namespace hljs {
 	export function highlight(
 		name: string,
 		value: string,
@@ -63,25 +62,21 @@ declare  namespace hljs
 	export var TITLE_MODE: IMode;
 	export var UNDERSCORE_TITLE_MODE: IMode;
 
-	export interface IHighlightResultBase
-	{
+	export interface IHighlightResultBase {
 		relevance: number;
 		language: string;
 		value: string;
 	}
 
-	export interface IAutoHighlightResult extends IHighlightResultBase
-	{
+	export interface IAutoHighlightResult extends IHighlightResultBase {
 		second_best?: IAutoHighlightResult;
 	}
 
-	export interface IHighlightResult extends IHighlightResultBase
-	{
+	export interface IHighlightResult extends IHighlightResultBase {
 		top: ICompiledMode;
 	}
 
-	export interface HLJSStatic
-	{
+	export interface HLJSStatic {
 		inherit(parent: Object, obj: Object): Object;
 
 		// Common regexps
@@ -111,8 +106,7 @@ declare  namespace hljs
 
 	// Reference:
 	// https://github.com/isagalaev/highlight.js/blob/master/docs/reference.rst
-	export interface IModeBase
-	{
+	export interface IModeBase {
 		className?: string;
 		aliases?: string[];
 		begin?: (string|RegExp);
@@ -133,14 +127,12 @@ declare  namespace hljs
 		variants?: IMode[];
 	}
 
-	export interface IMode extends IModeBase
-	{
+	export interface IMode extends IModeBase {
 		keywords?: any;
 		contains?: IMode[];
 	}
 
-	export interface ICompiledMode extends IModeBase
-	{
+	export interface ICompiledMode extends IModeBase {
 		compiled: boolean;
 		contains?: ICompiledMode[];
 		keywords?: Object;
@@ -148,8 +140,7 @@ declare  namespace hljs
 		terminator_end?: string;
 	}
 
-	export interface IOptions
-	{
+	export interface IOptions {
 		classPrefix?: string;
 		tabReplace?: string;
 		useBR?: boolean;

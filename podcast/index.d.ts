@@ -3,16 +3,14 @@
 // Definitions by: Niklas Mollenhauer <https://github.com/nikeee>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-interface PodcastStatic
-{
+interface PodcastStatic {
     new(options: IFeedOptions): PodcastStatic;
 
     item(options: IItemOptions): void;
     xml(indent?: string): string;
 }
 
-interface IFeedOptions
-{
+interface IFeedOptions {
     title: string;
     description?: string;
     generator?: string;
@@ -37,24 +35,20 @@ interface IFeedOptions
     itunesImage?: string;
 }
 
-interface IItunesOwner
-{
+interface IItunesOwner {
     name: string;
     email: string;
 }
-interface IItunesCategory
-{
+interface IItunesCategory {
     name: string;
     subcats: IItunesSubCategory[];
 }
-interface IItunesSubCategory
-{
+interface IItunesSubCategory {
     name: string;
     subcat: string[]; /* ? */
 }
 
-interface IItemOptions
-{
+interface IItemOptions {
     title: string;
     description: string;
     url: string;
@@ -80,7 +74,6 @@ interface IItemOptions
 
 declare var Podcast: PodcastStatic;
 
-declare module "podcast"
-{
+declare module "podcast" {
     export = Podcast;
 }

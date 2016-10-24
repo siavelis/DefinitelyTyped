@@ -7,14 +7,12 @@
 /// <reference types="jquery"/>
 
 
-declare namespace JQueryValidation
-{
+declare namespace JQueryValidation {
     type RulesDictionary = { [name: string]: any };
 
     type ShouldValidatePredicate = boolean|((element: HTMLElement, event: JQueryEventObject) => void);
 
-    interface ValidationOptions
-    {
+    interface ValidationOptions {
         /**
          * Enables debug mode. If true, the form is not submitted and certain errors are displayed on the console (will check if a window.console property exists). Try to enable when a form is just submitted instead of validation stopping the submit.
          *
@@ -155,19 +153,16 @@ declare namespace JQueryValidation
         wrapper?: string;
     }
 
-    interface ErrorDictionary
-    {
+    interface ErrorDictionary {
         [name: string]: string;
     }
 
-    interface ErrorListItem
-    {
+    interface ErrorListItem {
         message: string;
         element: HTMLElement;
     }
 
-    interface ValidatorStatic
-    {
+    interface ValidatorStatic {
         /**
          * Add a compound class method - useful to refactor common combinations of rules into a single class.
          *
@@ -214,8 +209,7 @@ declare namespace JQueryValidation
         methods: { [index: string]: Function };
     }
 
-    interface Validator
-    {
+    interface Validator {
         element(element: string|JQuery): boolean;
         /**
          * Validates the form, returns true if it is valid, false otherwise.
@@ -254,8 +248,7 @@ declare namespace JQueryValidation
     }
 }
 
-interface JQuery
-{
+interface JQuery {
     /**
      * Remove the specified attributes from the first matched element and return them.
      *
@@ -303,8 +296,7 @@ interface JQuery
     validate(options?: JQueryValidation.ValidationOptions): JQueryValidation.Validator;
 }
 
-interface JQueryStatic
-{
+interface JQueryStatic {
     /**
      * Replaces {n} placeholders with arguments.
      *

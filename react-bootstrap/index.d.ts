@@ -1031,11 +1031,11 @@ declare namespace ReactBootstrap {
     var Media: MediaClass;
 
     /* Utils */
-    interface bootstrapUtilsType{
+    interface bootstrapUtilsType {
         // TODO: Implement functions
     }
     function createChainedFunctionType(...funcs: Function[]): Function;
-    interface ValidComponentChildrenType{
+    interface ValidComponentChildrenType {
         map: (children: any, func: any, context: any) => any;
         forEach: (children: any, func: any, context: any) => any;
         count: (children: any) => number;

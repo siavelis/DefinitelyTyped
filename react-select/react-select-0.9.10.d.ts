@@ -14,12 +14,12 @@ declare module "react-select" {
     // Import React
     import React = require("react");
 
-    interface Option{
+    interface Option {
         label: string;
         value: string;
     }
 
-    interface ReactSelectProps extends React.Props<ReactSelectClass>{
+    interface ReactSelectProps extends React.Props<ReactSelectClass> {
         addLabelText?: string;
         allowCreate?: boolean;
         autoload?: boolean;
@@ -59,7 +59,7 @@ declare module "react-select" {
         valueRenderer?: () => void;
     }
 
-    interface ReactAsyncSelectProps extends React.Props<ReactSelectClass>{
+    interface ReactAsyncSelectProps extends React.Props<ReactSelectClass> {
         cache?: any;
         loadOptions?: () => void;
         ignoreAccents?: boolean;
@@ -68,7 +68,7 @@ declare module "react-select" {
     }
 
     interface ReactSelect extends  React.ReactElement<ReactSelectProps> { }
-    interface ReactSelectClass extends React.ComponentClass<ReactSelectProps>{}
+    interface ReactSelectClass extends React.ComponentClass<ReactSelectProps> { }
 
     interface SelectWithAsync extends ReactSelectClass {
         Async?: ReactAsyncSelectProps;

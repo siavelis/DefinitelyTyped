@@ -669,7 +669,7 @@ declare namespace ng {
     // and http://docs.angularjs.org/guide/directive
     ///////////////////////////////////////////////////////////////////////////
 
-    interface IDirective{
+    interface IDirective {
         priority?: number;
         template?: any;
         templateUrl?: any;

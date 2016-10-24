@@ -266,7 +266,7 @@ declare namespace OData {
         (queryString: string, success: () => any, error: () => any, isSingleElement?: boolean, forceSingleElement?: boolean): T;
     }
 
-    interface ICountResult{
+    interface ICountResult {
         result: number;
         $promise: angular.IPromise<any>;
     }

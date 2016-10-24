@@ -130,6 +130,6 @@ declare namespace NodeJS {
     }
 }
 
-declare module "_debugger"{
+declare module "_debugger" {
     export = NodeJS._debugger;
 }

@@ -3,12 +3,12 @@
 // Definitions by: Xavier Stouder <https://github.com/xstoudi/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare namespace RiotGamesAPI{
+declare namespace RiotGamesAPI {
 	/**
 	* champion-v1.2
 	*/
-	namespace Champion{
-		interface ChampionDto{
+	namespace Champion {
+		interface ChampionDto {
 			active: boolean;
 			botEnabled: boolean;
 			botMmEnabled: boolean;
@@ -16,7 +16,7 @@ declare namespace RiotGamesAPI{
 			id: number;
 			rankedPlayEnabled: boolean;
 		}
-		interface ChampionListDto{
+		interface ChampionListDto {
 			champions: Array<ChampionDto>;
 		}
 	}
@@ -24,7 +24,7 @@ declare namespace RiotGamesAPI{
 	/**
 	* championmastery
 	*/
-	namespace ChampionMastery{
+	namespace ChampionMastery {
 		interface ChampionMasteryDto {
 			championId: number;
 			championLevel: number;
@@ -41,8 +41,8 @@ declare namespace RiotGamesAPI{
 	/**
 	* current-game-v1.0
 	*/
-	namespace CurrentGame{
-		interface CurrentGameInfo{
+	namespace CurrentGame {
+		interface CurrentGameInfo {
 			bannedChampion: Array<BannedChampion>;
 			gameId: number;
 			gameLength: number;
@@ -55,12 +55,12 @@ declare namespace RiotGamesAPI{
 			participants: Array<CurrentGameParticipant>;
 			platformId: string;
 		}
-		interface BannedChampion{
+		interface BannedChampion {
 			championId: number;
 			pickTurn: number;
 			teamId: number;
 		}
-		interface CurrentGameParticipant{
+		interface CurrentGameParticipant {
 			bot: boolean;
 			championId: number;
 			masteries: Array<Mastery>;
@@ -72,14 +72,14 @@ declare namespace RiotGamesAPI{
 			summonerName: string;
 			teamId: number;
 		}
-		interface Observer{
+		interface Observer {
 			encryptionKey: string;
 		}
-		interface Mastery{
+		interface Mastery {
 			masterId: number;
 			rank: number;
 		}
-		interface Rune{
+		interface Rune {
 			count: number;
 			runeId: number;
 		}
@@ -88,12 +88,12 @@ declare namespace RiotGamesAPI{
 	/**
 	* featured-games-v1.0
 	*/
-	namespace FeaturedGames{
-		interface FeaturedGames{
+	namespace FeaturedGames {
+		interface FeaturedGames {
 			clientRefreshInterval: number;
 			gameList: Array<FeaturedGameInfo>;
 		}
-		interface FeaturedGameInfo{
+		interface FeaturedGameInfo {
 			bannedChampions: Array<BannedChampion>;
 			gameId: number;
 			gameLength: number;
@@ -106,7 +106,7 @@ declare namespace RiotGamesAPI{
 			participants: Array<Participant>;
 			plateformId: string;
 		}
-		interface Participant{
+		interface Participant {
 			bot: boolean;
 			championId: number;
 			profileIconId: number;
@@ -115,12 +115,12 @@ declare namespace RiotGamesAPI{
 			summonerName: string;
 			teamId: number;
 		}
-		interface BannedChampion{
+		interface BannedChampion {
 			championId: number;
 			pickTurn: number;
 			teamId: number;
 		}
-		interface Observer{
+		interface Observer {
 			encryptionKey: string;
 		}
 	}
@@ -128,12 +128,12 @@ declare namespace RiotGamesAPI{
 	/**
 	* game-v1.3
 	*/
-	namespace Game{
-		interface RecentGamesDto{
+	namespace Game {
+		interface RecentGamesDto {
 			games: Array<GameDto>;
 			summonerId: number;
 		}
-		interface GameDto{
+		interface GameDto {
 			championId: number;
 			createDate: number;
 			fellowPlayers: Array<PlayerDto>;
@@ -150,12 +150,12 @@ declare namespace RiotGamesAPI{
 			subType: string;
 			teamId: number;
 		}
-		interface PlayerDto{
+		interface PlayerDto {
 			championId: number;
 			summonerId: number;
 			teamId: number;
 		}
-		interface RawStatsDto{
+		interface RawStatsDto {
 			assists: number;
 			barracksKilled: number;
 			championsKilled: number;
@@ -240,15 +240,15 @@ declare namespace RiotGamesAPI{
 	/**
 	* league-v2.5
 	*/
-	namespace League{
-		interface LeagueDto{
+	namespace League {
+		interface LeagueDto {
 			entries: Array<LeagueEntryDto>;
 			name: string;
 			participantId: string;
 			queue: string;
 			tier: string;
 		}
-		interface LeagueEntryDto{
+		interface LeagueEntryDto {
 			division: string;
 			isFreshBlood: boolean;
 			isHotStreak: boolean;
@@ -261,7 +261,7 @@ declare namespace RiotGamesAPI{
 			playerOrTeamName: string;
 			wins: number;
 		}
-		interface MiniSeriesDto{
+		interface MiniSeriesDto {
 			losses: number;
 			progress: string;
 			target: number;
@@ -272,15 +272,15 @@ declare namespace RiotGamesAPI{
 	/**
 	* lol-static-data-v1.2
 	*/
-	namespace LolStaticData{
-		interface ChampionListDto{
+	namespace LolStaticData {
+		interface ChampionListDto {
 			data: {[str: string]: ChampionDto};
 			format: string;
 			keys: {[str: string]: string};
 			type: string;
 			version: string;
 		}
-		interface ChampionDto{
+		interface ChampionDto {
 			allytips: Array<string>;
 			blurb: string;
 			enemytips: Array<string>;
@@ -299,7 +299,7 @@ declare namespace RiotGamesAPI{
 			tags: Array<string>;
 			title: string;
 		}
-		interface ChampionSpellDto{
+		interface ChampionSpellDto {
 			altimages: Array<ImageDto>;
 			cooldown: Array<number>;
 			cooldownBurn: string;
@@ -322,7 +322,7 @@ declare namespace RiotGamesAPI{
 			tooltip: string;
 			vars: Array<SpellVarsDto>;
 		}
-		interface ImageDto{
+		interface ImageDto {
 			full: string;
 			group: string;
 			h: number;
@@ -331,19 +331,19 @@ declare namespace RiotGamesAPI{
 			x: number;
 			y: number;
 		}
-		interface InfoDto{
+		interface InfoDto {
 			attack: number;
 			defense: number;
 			difficulty: number;
 			magic: number;
 		}
-		interface PassiveDto{
+		interface PassiveDto {
 			description: string;
 			image: ImageDto;
 			name: string;
 			sanitizedDescription: string;
 		}
-		interface RecommendedDto{
+		interface RecommendedDto {
 			block: Array<BlockDto>;
 			champion: string;
 			map: string;
@@ -352,12 +352,12 @@ declare namespace RiotGamesAPI{
 			title: string;
 			type: string;
 		}
-		interface SkinDto{
+		interface SkinDto {
 			id: number;
 			name: string;
 			num: number;
 		}
-		interface StatsDto{
+		interface StatsDto {
 			armor: number;
 			armorperlevel: number;
 			attackdamage: number;
@@ -379,27 +379,27 @@ declare namespace RiotGamesAPI{
 			spellblock: number;
 			spellblockperlevel: number;
 		}
-		interface LevelTipDto{
+		interface LevelTipDto {
 			effect: Array<string>;
 			label: Array<string>;
 		}
-		interface SpellVarsDto{
+		interface SpellVarsDto {
 			coeff: Array<number>;
 			dyn: string;
 			key: string;
 			link: string;
 			ranksWith: string;
 		}
-		interface BlockDto{
+		interface BlockDto {
 			items: Array<BlockItemDto>;
 			recMath: boolean;
 			type: string;
 		}
-		interface BlockItemDto{
+		interface BlockItemDto {
 			count: number;
 			id: number;
 		}
-		interface ItemListDto{
+		interface ItemListDto {
 			basic: BasicDataDto;
 			data: Array<{[str: string]: ItemDto}>;
 			groups: Array<GroupDto>;
@@ -407,7 +407,7 @@ declare namespace RiotGamesAPI{
 			type: string;
 			version: string;
 		}
-		interface BasicDataDto{
+		interface BasicDataDto {
 			colloq: string;
 			consumeOnFull: boolean;
 			consumed: boolean;
@@ -432,11 +432,11 @@ declare namespace RiotGamesAPI{
 			stats: BasicDataStatsDto;
 			tags: Array<string>;
 		}
-		interface GroupDto{
+		interface GroupDto {
 			MaxGroupOwnable: string;
 			key: string;
 		}
-		interface ItemDto{
+		interface ItemDto {
 			colloq: string;
 			consumeOnFull: boolean;
 			consumed: boolean;
@@ -462,11 +462,11 @@ declare namespace RiotGamesAPI{
 			stats: BasicDataStatsDto;
 			tags: Array<string>;
 		}
-		interface ItemTreeDto{
+		interface ItemTreeDto {
 			header: string;
 			tags: Array<string>;
 		}
-		interface BasicDataStatsDto{
+		interface BasicDataStatsDto {
 			FlatArmorMod: number;
 			FlatAttackSpeedMod: number;
 			FlatBlockMod: number;
@@ -533,40 +533,40 @@ declare namespace RiotGamesAPI{
 			rPercentTimeDeadMod: number;
 			rPercentTimeDeadModPerLevel: number;
 		}
-		interface GoldDto{
+		interface GoldDto {
 			base: number;
 			purchasable: boolean;
 			sell: number;
 			total: number;
 		}
-		interface MetaDataDto{
+		interface MetaDataDto {
 			isRune: boolean;
 			tier: string;
 			type: string;
 		}
-		interface LanguageStringsDto{
+		interface LanguageStringsDto {
 			data: Array<{[str: string]: string}>;
 			type: string;
 			version: string;
 		}
-		interface MapDataDto{
+		interface MapDataDto {
 			data: Array<{[str: string]: MapDetailsDto}>;
 			type: string;
 			version: string;
 		}
-		interface MapDetailsDto{
+		interface MapDetailsDto {
 			image: ImageDto;
 			mapId: number;
 			mapName: string;
 			unpurchasableItemList: Array<number>;
 		}
-		interface MasteryListDto{
+		interface MasteryListDto {
 			data: Array<{[str: string]: MasteryDto}>;
 			tree: MasteryTreeDto;
 			type: string;
 			version: string;
 		}
-		interface MasteryDto{
+		interface MasteryDto {
 			description: Array<string>;
 			id: number;
 			image: ImageDto;
@@ -576,19 +576,19 @@ declare namespace RiotGamesAPI{
 			ranks: number;
 			sanitizedDescription: Array<string>;
 		}
-		interface MasteryTreeDto{
+		interface MasteryTreeDto {
 			Defense: Array<MasteryTreeListDto>;
 			Offense: Array<MasteryTreeListDto>;
 			Utility: Array<MasteryTreeListDto>;
 		}
-		interface MasteryTreeListDto{
+		interface MasteryTreeListDto {
 			masteryTreeItems: Array<MasteryTreeItemDto>;
 		}
-		interface MasteryTreeItemDto{
+		interface MasteryTreeItemDto {
 			masteryId: number;
 			prereq: string;
 		}
-		interface RealmDto{
+		interface RealmDto {
 			cdn: string;
 			css: string;
 			dd: string;
@@ -599,13 +599,13 @@ declare namespace RiotGamesAPI{
 			storage: string;
 			v: string;
 		}
-		interface RuneListDto{
+		interface RuneListDto {
 			basic: BasicDataDto;
 			data: Array<{[str: string]: RuneDto}>;
 			type: string;
 			version: string;
 		}
-		interface RuneDto{
+		interface RuneDto {
 			colloq: string;
 			consumeOnFull: boolean;
 			consumed: boolean;
@@ -629,12 +629,12 @@ declare namespace RiotGamesAPI{
 			stats: BasicDataStatsDto;
 			tags: Array<string>;
 		}
-		interface SummonerSpellListDto{
+		interface SummonerSpellListDto {
 			data: Array<{[str: string]: SummonerSpellDto}>;
 			type: string;
 			version: string;
 		}
-		interface SummonerSpellDto{
+		interface SummonerSpellDto {
 			cooldown: Array<number>;
 			cooldownBurn: string;
 			cost: Array<number>;
@@ -664,15 +664,15 @@ declare namespace RiotGamesAPI{
 	/**
 	* lol-status-v1.0
 	*/
-	namespace LolStatus{
-		interface Shard{
+	namespace LolStatus {
+		interface Shard {
 			hostname: string;
 			locales: Array<string>;
 			name: string;
 			region_tag: string;
 			slug: string;
 		}
-		interface ShardStatus{
+		interface ShardStatus {
 			hostname: string;
 			locales: Array<string>;
 			name: string;
@@ -680,19 +680,19 @@ declare namespace RiotGamesAPI{
 			services: Array<Service>;
 			slug: string;
 		}
-		interface Service{
+		interface Service {
 			incidents: Array<Incident>;
 			name: string;
 			slug: string;
 			status: string;
 		}
-		interface Incident{
+		interface Incident {
 			active: boolean;
 			created_at: string;
 			id: number;
 			updates: Array<Message>;
 		}
-		interface Message{
+		interface Message {
 			author: string;
 			content: string;
 			created_at: string;
@@ -701,7 +701,7 @@ declare namespace RiotGamesAPI{
 			translations: Array<Translation>;
 			updated_at: string;
 		}
-		interface Translation{
+		interface Translation {
 			content: string;
 			locale: string;
 			updated_at: string;
@@ -711,8 +711,8 @@ declare namespace RiotGamesAPI{
 	/**
 	* match-v2.2
 	*/
-	namespace Match{
-		interface MatchDetail{
+	namespace Match {
+		interface MatchDetail {
 			mapId: number;
 			matchCreation: number;
 			matchId: number;
@@ -728,7 +728,7 @@ declare namespace RiotGamesAPI{
 			teams: Array<Team>;
 			timeline: Timeline;
 		}
-		interface Participant{
+		interface Participant {
 			championId: number;
 			highestAchievedSeasonTier: string;
 			masteries: Array<Mastery>;
@@ -740,11 +740,11 @@ declare namespace RiotGamesAPI{
 			teamId: number;
 			timeline: ParticipantTimeline;
 		}
-		interface ParticipantIdentity{
+		interface ParticipantIdentity {
 			participantId: number;
 			player: Player;
 		}
-		interface Team{
+		interface Team {
 			bans: Array<BannedChampion>;
 			baronKills: number;
 			dominionVictoryScore: number;
@@ -760,15 +760,15 @@ declare namespace RiotGamesAPI{
 			vilemawKills: number;
 			winner: boolean;
 		}
-		interface Timeline{
+		interface Timeline {
 			frameInverval: number;
 			frames: Array<Frame>;
 		}
-		interface Mastery{
+		interface Mastery {
 			masteryId: number;
 			rank: number;
 		}
-		interface ParticipantStats{
+		interface ParticipantStats {
 			assists: number;
 			champLevel: number;
 			combatPlayerScore: number;
@@ -833,7 +833,7 @@ declare namespace RiotGamesAPI{
 			wardsPlaced: number;
 			winner: boolean;
 		}
-		interface ParticipantTimeline{
+		interface ParticipantTimeline {
 			ancientGolemAssistsPerMinCounts: ParticipantTimelineData;
 			ancientGolemKillsPerMinCounts: ParticipantTimelineData;
 			assistedLaneDeathsPerMinDeltas: ParticipantTimelineData;
@@ -862,32 +862,32 @@ declare namespace RiotGamesAPI{
 			xpDiffPerMinDeltas: ParticipantTimelineData;
 			xpPerMinDeltas: ParticipantTimelineData;
 		}
-		interface Rune{
+		interface Rune {
 			rank: number;
 			runeId: number;
 		}
-		interface Player{
+		interface Player {
 			matchHistoryUri: string;
 			profileIcon: number;
 			summonerId: number;
 			summonerName: string;
 		}
-		interface BannedChampion{
+		interface BannedChampion {
 			championId: number;
 			pickTurn: number;
 		}
-		interface Frame{
+		interface Frame {
 			events: Array<Event>;
 			participanFrames: Array<{[str: string]: ParticipantFrame}>;
 			timestamp: number;
 		}
-		interface ParticipantTimelineData{
+		interface ParticipantTimelineData {
 			tenToTwenty: number;
 			thirtyToEnd: number;
 			twentyToThirty: number;
 			zeroToTen: number;
 		}
-		interface Event{
+		interface Event {
 			ascendedType: string;
 			assistingParticipantIds: Array<number>;
 			buildingType: string;
@@ -910,7 +910,7 @@ declare namespace RiotGamesAPI{
 			victimId: number;
 			wardType: string;
 		}
-		interface ParticipantFrame{
+		interface ParticipantFrame {
 			currentGold: number;
 			dominionScore: number;
 			jungleMinionsKilled: number;
@@ -922,7 +922,7 @@ declare namespace RiotGamesAPI{
 			totalGold: number;
 			xp: number;
 		}
-		interface Position{
+		interface Position {
 			x: number;
 			y: number;
 		}
@@ -931,14 +931,14 @@ declare namespace RiotGamesAPI{
 	/**
 	* matchlist-v2.2
 	*/
-	namespace MatchList{
-		interface MatchList{
+	namespace MatchList {
+		interface MatchList {
 			endIndex: number;
 			matches: Array<MatchReference>;
 			startIndex: number;
 			totalGames: number;
 		}
-		interface MatchReference{
+		interface MatchReference {
 			champion: number;
 			lane: string;
 			matchId: number;
@@ -954,17 +954,17 @@ declare namespace RiotGamesAPI{
 	/**
 	* stats-v1.3
 	*/
-	namespace Stats{
-		interface RankedStatsDto{
+	namespace Stats {
+		interface RankedStatsDto {
 			champions: Array<ChampionStatsDto>;
 			modifyDate: number;
 			summonerId: number;
 		}
-		interface ChampionStatsDto{
+		interface ChampionStatsDto {
 			id: number;
 			stats: AggregatedStatsDto;
 		}
-		interface AggregatedStatsDto{
+		interface AggregatedStatsDto {
 			averageAssists: number;
 			averageChampionsKilled: number;
 			averageCombatPlayerScore: number;
@@ -1022,11 +1022,11 @@ declare namespace RiotGamesAPI{
 			totalTurretsKilleds: number;
 			totalUnrealKills: number;
 		}
-		interface PlayerStatsSummaryListDto{
+		interface PlayerStatsSummaryListDto {
 			playerStatSummaries: Array<PlayerStatsSummaryDto>;
 			summonerId: number;
 		}
-		interface PlayerStatsSummaryDto{
+		interface PlayerStatsSummaryDto {
 			aggregatedStats: AggregatedStatsDto;
 			losses: number;
 			modifyDate: number;
@@ -1038,39 +1038,39 @@ declare namespace RiotGamesAPI{
 	/**
 	* summoner-v1.4
 	*/
-	namespace Summoner{
-		interface SummonerDto{
+	namespace Summoner {
+		interface SummonerDto {
 			id: number;
 			name: string;
 			profileIconId: number;
 			revisionDate: number;
 			summonerLevel: number;
 		}
-		interface MasteryPagesDto{
+		interface MasteryPagesDto {
 			pages: Array<MasteryPageDto>;
 			summonerId: number;
 		}
-		interface MasteryPageDto{
+		interface MasteryPageDto {
 			current: boolean;
 			id: number;
 			masteries: Array<MasteryDto>;
 			name: string;
 		}
-		interface MasteryDto{
+		interface MasteryDto {
 			id: number;
 			rank: number;
 		}
-		interface RunePagesDto{
+		interface RunePagesDto {
 			pages: Array<RunePageDto>;
 			summonerId: number;
 		}
-		interface RunePageDto{
+		interface RunePageDto {
 			current: boolean;
 			id: number;
 			name: string;
 			slots: Array<RuneSlotDto>;
 		}
-		interface RuneSlotDto{
+		interface RuneSlotDto {
 			runeId: number;
 			runeSlotId: number;
 		}
@@ -1079,8 +1079,8 @@ declare namespace RiotGamesAPI{
 	/**
 	* team-v2.4
 	*/
-	namespace Team{
-		interface TeamDto{
+	namespace Team {
+		interface TeamDto {
 			createDate: number;
 			fullId: string;
 			lastGameDate: number;
@@ -1096,7 +1096,7 @@ declare namespace RiotGamesAPI{
 			teamStatDetails: Array<TeamStatDetailDto>;
 			thirdLastJoinDate: number;
 		}
-		interface MatchHistorySummaryDto{
+		interface MatchHistorySummaryDto {
 			assists: number;
 			date: number;
 			deaths: number;
@@ -1109,17 +1109,17 @@ declare namespace RiotGamesAPI{
 			opposingTeamName: string;
 			win: boolean;
 		}
-		interface RosterDto{
+		interface RosterDto {
 			memberList: Array<TeamMemberInfoDto>;
 			ownerId: number;
 		}
-		interface TeamStatDetailDto{
+		interface TeamStatDetailDto {
 			averageGamesPlayed: number;
 			losses: number;
 			teamStatType: string;
 			wins: number;
 		}
-		interface TeamMemberInfoDto{
+		interface TeamMemberInfoDto {
 			inviteDate: number;
 			joinDate: number;
 			playerId: number;
@@ -1130,8 +1130,8 @@ declare namespace RiotGamesAPI{
 	/**
 	* tournament-provider-v1
 	*/
-	namespace TournamentProvider{
-		interface TournamentCodeParameters{
+	namespace TournamentProvider {
+		interface TournamentCodeParameters {
 			allowedSummonerIds: SummonerIdParams;
 			mapType: string;
 			metadata: string;
@@ -1139,10 +1139,10 @@ declare namespace RiotGamesAPI{
 			spectatorType: string;
 			teamSize: number;
 		}
-		interface SummonerIdParams{
+		interface SummonerIdParams {
 			participants: number[];
 		}
-		interface TournamentCodeDto{
+		interface TournamentCodeDto {
 			code: string;
 			id: number;
 			lobbyName: string;
@@ -1157,25 +1157,25 @@ declare namespace RiotGamesAPI{
 			teamSize: number;
 			tournamentId: number;
 		}
-		interface TournamentCodeUpdateParameters{
+		interface TournamentCodeUpdateParameters {
 			allowedParticipants: string;
 			mapType: string;
 			pickType: string;
 			spectatorType: string;
 		}
-		interface LobbyEventDtoWrapper{
+		interface LobbyEventDtoWrapper {
 			eventList: LobbyEventDto[];
 		}
-		interface LobbyEventDto{
+		interface LobbyEventDto {
 			eventType: string;
 			summonerId: string;
 			timestamp: string;
 		}
-		interface ProviderRegistrationParameters{
+		interface ProviderRegistrationParameters {
 			region: string;
 			url: string;
 		}
-		interface TournamentRegistrationParameters{
+		interface TournamentRegistrationParameters {
 			name: string;
 			providerId: number;
 		}

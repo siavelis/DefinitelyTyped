@@ -99,7 +99,7 @@ interface Flags {
 /**
  * This interface represents a file system.
  */
-interface FileSystem{
+interface FileSystem {
     /**
      * This is the name of the file system. The specifics of naming filesystems is unspecified, but a name must be unique across the list of exposed file systems.
      * @readonly
@@ -388,7 +388,7 @@ interface FileSystemSync {
 /**
  * An abstract interface representing entries in a file system, each of which may be a FileEntrySync or DirectoryEntrySync.
  */
-interface EntrySync{
+interface EntrySync {
     /**
      * EntrySync is a file.
      * @readonly
@@ -541,8 +541,6 @@ interface FileEntrySync extends EntrySync {
     file(): File;
 }
 
-interface Window extends LocalFileSystem, LocalFileSystemSync{
-}
+interface Window extends LocalFileSystem, LocalFileSystemSync { }
 
-interface WorkerGlobalScope extends LocalFileSystem, LocalFileSystemSync{
-}
+interface WorkerGlobalScope extends LocalFileSystem, LocalFileSystemSync { }

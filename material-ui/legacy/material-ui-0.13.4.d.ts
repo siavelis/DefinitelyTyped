@@ -119,7 +119,7 @@ declare namespace __MaterialUI {
         onLeftIconButtonTouchTap?: TouchTapEventHandler;
         onRightIconButtonTouchTap?: TouchTapEventHandler;
     }
-    export class AppBar extends React.Component<AppBarProps, {}>{
+    export class AppBar extends React.Component<AppBarProps, {}> {
     }
 
     interface AppCanvasProps extends React.Props<AppCanvas> {
@@ -1507,7 +1507,7 @@ declare namespace __MaterialUI {
             zDepth?: number;
             style?: React.CSSProperties;
         }
-        export class Menu extends React.Component<MenuProps, {}>{
+        export class Menu extends React.Component<MenuProps, {}> {
         }
 
         interface MenuItemProps extends React.Props<MenuItem> {
@@ -1527,14 +1527,14 @@ declare namespace __MaterialUI {
             onItemTouchTap?: (e: TouchTapEvent, item: React.ReactElement<any>) => void;
             onChange?: (e: React.FormEvent, value: string) => void;
         }
-        export class MenuItem extends React.Component<MenuItemProps, {}>{
+        export class MenuItem extends React.Component<MenuItemProps, {}> {
         }
 
         interface MenuDividerProps extends React.Props<MenuDivider> {
             inset?: boolean;
             style?: React.CSSProperties;
         }
-        export class MenuDivider extends React.Component<MenuDividerProps, {}>{
+        export class MenuDivider extends React.Component<MenuDividerProps, {}> {
         }
     }
 
@@ -1547,7 +1547,7 @@ declare namespace __MaterialUI {
             style?: React.CSSProperties;
         }
 
-        export class GridList extends React.Component<GridListProps, {}>{
+        export class GridList extends React.Component<GridListProps, {}> {
         }
 
         interface GridTileProps extends React.Props<GridTile> {
@@ -1563,7 +1563,7 @@ declare namespace __MaterialUI {
             style?: React.CSSProperties;
         }
 
-        export class GridTile extends React.Component<GridTileProps, {}>{
+        export class GridTile extends React.Component<GridTileProps, {}> {
         }
 
     }

@@ -776,8 +776,7 @@ declare namespace google {
         //#region AnnotationChart
 
         // https://developers.google.com/chart/interactive/docs/gallery/annotationchart
-        export class AnnotationChart extends CoreChartBase
-        {
+        export class AnnotationChart extends CoreChartBase {
             draw(data: DataTable, options: AnnotationChartOptions): void;
             draw(data: DataView, options: AnnotationChartOptions): void;
             setVisibleChartRange(start: Date, end: Date): void;
@@ -787,8 +786,7 @@ declare namespace google {
         }
 
         // https://developers.google.com/chart/interactive/docs/gallery/annotationchart#Configuration_Options
-        export interface AnnotationChartOptions
-        {
+        export interface AnnotationChartOptions {
             allowHtml?: boolean;
             allValuesSuffix?: string;
             annotationsWidth?: number;

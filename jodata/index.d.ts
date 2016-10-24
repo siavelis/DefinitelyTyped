@@ -3,8 +3,7 @@
 // Definitions by: Chris Wrench <https://github.com/cgwrench>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare class jo
-{
+declare class jo {
     constructor(baseUri: string);
 
     baseUri: string;

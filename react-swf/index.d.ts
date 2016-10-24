@@ -110,7 +110,7 @@ declare namespace rswf {
         */
         flashVars?: Object | string;
     }
-    export class ReactSWF extends React.Component<Props, State>{
+    export class ReactSWF extends React.Component<Props, State> {
         /**
         * Returns the Flash Player object DOM node.
         * Should be prefered over `React.findDOMNode`.

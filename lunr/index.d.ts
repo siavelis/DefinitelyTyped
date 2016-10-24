@@ -9,8 +9,7 @@
  * MIT Licensed
  * @license
  */
-declare namespace lunr
-{
+declare namespace lunr {
     var version: string;
 
 
@@ -115,8 +114,7 @@ declare namespace lunr
      * lunr.EventEmitter is an event emitter for lunr. It manages adding and removing event handlers
      * and triggering events and their handlers.
      */
-    class EventEmitter
-    {
+    class EventEmitter {
         /**
          * Can bind a single function to many different events in one call.
          *
@@ -188,8 +186,7 @@ declare namespace lunr
      *
      * If not planning on serialising the pipeline then registering pipeline functions is not necessary.
      */
-    class Pipeline
-    {
+    class Pipeline {
         registeredFunctions: {[label: string]: Function};
 
 
@@ -292,8 +289,7 @@ declare namespace lunr
     /**
      * lunr.Vectors implement vector related operations for a series of elements.
      */
-    class Vector
-    {
+    class Vector {
         list: Node;
 
 
@@ -322,8 +318,7 @@ declare namespace lunr
     /**
      * lunr.Vector.Node is a simple struct for each node in a lunr.Vector.
      */
-    class Node
-    {
+    class Node {
         /**
          * The index of the node in the vector.
          */
@@ -352,8 +347,7 @@ declare namespace lunr
     /**
      * lunr.SortedSets are used to maintain an array of unique values in a sorted order.
      */
-    class SortedSet<T>
-    {
+    class SortedSet<T> {
         elements: T[];
 
         length: number;
@@ -460,8 +454,7 @@ declare namespace lunr
     }
 
 
-    interface IIndexField
-    {
+    interface IIndexField {
         /**
          * The name of the field within the document that
          */
@@ -474,8 +467,7 @@ declare namespace lunr
     }
 
 
-    interface IIndexSearchResult
-    {
+    interface IIndexSearchResult {
         ref: any;
 
         score: number;
@@ -487,8 +479,7 @@ declare namespace lunr
      * all the tokens and document lookups. It also provides the main user facing API for
      * the library.
      */
-    class Index
-    {
+    class Index {
         eventEmitter: EventEmitter;
 
         documentStore: Store<string>;
@@ -707,8 +698,7 @@ declare namespace lunr
      * lunr.Store is a simple key-value store used for storing sets of tokens for documents
      * stored in index.
      */
-    class Store<T>
-    {
+    class Store<T> {
         store: {[id: string]: SortedSet<T>};
 
         length: number;
@@ -762,8 +752,7 @@ declare namespace lunr
     }
 
 
-    interface ITokenDocument
-    {
+    interface ITokenDocument {
         ref: number;
 
         tf: number;
@@ -774,8 +763,7 @@ declare namespace lunr
      * lunr.TokenStore is used for efficient storing and lookup of the reverse index of token
      * to document ref.
      */
-    class TokenStore
-    {
+    class TokenStore {
         root: {[token: string]: TokenStore};
 
         docs: {[ref: string]: ITokenDocument};

@@ -66,8 +66,7 @@ declare namespace QTip2 {
 		modal?: boolean | Modal;
 	}
 
-	interface Modal
-	{
+	interface Modal {
 		on?: boolean;
 		blur?: boolean;
 		escape?: boolean;

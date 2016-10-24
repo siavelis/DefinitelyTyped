@@ -5534,8 +5534,7 @@ interface HighchartsGlobalOptions extends HighchartsOptions {
     lang?: HighchartsLangObject;
 }
 
-interface HighchartsDateFormatSpecifiers
-{
+interface HighchartsDateFormatSpecifiers {
     [index: string]: (timestamp: number) => string;
 }
 

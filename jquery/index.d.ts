@@ -495,7 +495,7 @@ interface JQueryKeyEventObject extends JQueryInputEventObject {
     keyCode: number;
 }
 
-interface JQueryEventObject extends BaseJQueryEventObject, JQueryInputEventObject, JQueryMouseEventObject, JQueryKeyEventObject{
+interface JQueryEventObject extends BaseJQueryEventObject, JQueryInputEventObject, JQueryMouseEventObject, JQueryKeyEventObject {
 }
 
 /*

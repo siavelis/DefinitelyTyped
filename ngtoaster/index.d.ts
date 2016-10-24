@@ -43,7 +43,7 @@ declare namespace ngtoaster {
     unsubscribeToClearToastsEvent(onClearToasts: IToastEventListener): void;
   }
 
-  interface IPopParams extends IToast{
+  interface IPopParams extends IToast {
     toasterId?: number;
   }
 

@@ -4,8 +4,7 @@
 // Definitions by: Knut Eirik Leira Hjelle <https://github.com/hjellek/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-interface Mixpanel
-{
+interface Mixpanel {
     people: Mixpanel.People;
 
     init(token: string, config?: {[index: string]: any}, libraryName?: string): Mixpanel;

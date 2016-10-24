@@ -17,14 +17,14 @@ declare namespace THREE {
         FovToProjection(fov: VRFov, rightHanded: boolean, zNear: number, zFar: number): Matrix4;
     }
 
-    export interface VRFov{
+    export interface VRFov {
         leftTan: number;
         rightTan: number;
         upTan: number;
         downTan: number;
     }
 
-    export interface VREffectOffset{
+    export interface VREffectOffset {
         scale: number;
         offset: number;
     }

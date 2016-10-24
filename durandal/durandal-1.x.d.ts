@@ -513,8 +513,7 @@ declare module "durandal/widget" {
     export function convertKindToViewId(kind): string;
 }
 
-interface IEventSubscription
-{
+interface IEventSubscription {
     /**
       * This function adding callback to event subscription
       */

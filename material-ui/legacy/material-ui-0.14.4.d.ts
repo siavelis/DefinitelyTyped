@@ -457,7 +457,7 @@ declare namespace __MaterialUI {
         titleStyle?: React.CSSProperties;
         zDepth?: number;
     }
-    export class AppBar extends React.Component<AppBarProps, {}>{
+    export class AppBar extends React.Component<AppBarProps, {}> {
     }
 
     interface AppCanvasProps extends React.Props<AppCanvas> {
@@ -877,7 +877,7 @@ declare namespace __MaterialUI {
         inset?: boolean;
         style?: React.CSSProperties;
     }
-    export class Divider extends React.Component<DividerProps, {}>{
+    export class Divider extends React.Component<DividerProps, {}> {
     }
 
     namespace GridList {
@@ -888,7 +888,7 @@ declare namespace __MaterialUI {
             style?: React.CSSProperties;
         }
 
-        export class GridList extends React.Component<GridListProps, {}>{
+        export class GridList extends React.Component<GridListProps, {}> {
         }
 
         interface GridTileProps extends React.Props<GridTile> {
@@ -904,7 +904,7 @@ declare namespace __MaterialUI {
             titlePosition?: string; //"top"|"bottom"
         }
 
-        export class GridTile extends React.Component<GridTileProps, {}>{
+        export class GridTile extends React.Component<GridTileProps, {}> {
         }
     }
 
@@ -1050,7 +1050,7 @@ declare namespace __MaterialUI {
             width?: string | number;
             zDepth?: number;
         }
-        export class Menu extends React.Component<MenuProps, {}>{
+        export class Menu extends React.Component<MenuProps, {}> {
         }
 
         interface MenuItemProps extends React.HTMLAttributes, React.Props<MenuItem> {
@@ -1073,7 +1073,7 @@ declare namespace __MaterialUI {
             primaryText?: React.ReactNode;
             secondaryTextLines?: number; // 1 or 2
         }
-        export class MenuItem extends React.Component<MenuItemProps, {}>{
+        export class MenuItem extends React.Component<MenuItemProps, {}> {
         }
 
         interface IconMenuProps extends React.Props<IconMenu> {
@@ -1184,7 +1184,7 @@ declare namespace __MaterialUI {
             useLayerForClickAway?: boolean;
             zDepth?: number;
         }
-        export class Popover extends React.Component<PopoverProps, {}>{
+        export class Popover extends React.Component<PopoverProps, {}> {
         }
 
         interface PopoverAnimationFromTopProps extends PopoverAnimationProps, React.Props<PopoverAnimationFromTop> {
@@ -1192,7 +1192,7 @@ declare namespace __MaterialUI {
             targetOrigin?: Origin;
             zDepth?: number;
         }
-        export class PopoverAnimationFromTop extends React.Component<PopoverAnimationFromTopProps, {}>{
+        export class PopoverAnimationFromTop extends React.Component<PopoverAnimationFromTopProps, {}> {
         }
 
         interface PopoverDefaultAnimationProps extends PopoverAnimationProps, React.Props<PopoverDefaultAnimation> {
@@ -1200,7 +1200,7 @@ declare namespace __MaterialUI {
             targetOrigin?: Origin;
             zDepth?: number;
         }
-        export class PopoverDefaultAnimation extends React.Component<PopoverDefaultAnimationProps, {}>{
+        export class PopoverDefaultAnimation extends React.Component<PopoverDefaultAnimationProps, {}> {
         }
     }
 

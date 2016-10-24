@@ -4,16 +4,14 @@
 // Definitions: https://github.com/daptiv/DefinitelyTyped
 
 
-interface formatters_info
-{
+interface formatters_info {
     i?: string;
     u?: string;
     xxx?: string;
     vvv?: (xdate: XDate, useutc: boolean) => string;
 }
 
-interface locale_detail
-{
+interface locale_detail {
     monthNames?: string [];
     monthNamesShort?: string [];
     dayNames?: string[];

@@ -1442,7 +1442,7 @@ id(value: number|string): this;
 
 	}
 
-    interface BulletChart extends Chart{
+    interface BulletChart extends Chart {
         bullet: Bullet;
         tooltip: Tooltip;
 
@@ -3346,7 +3346,7 @@ id(value: number|string): this;
 
 //#endregion
 
-    interface Models{
+    interface Models {
         boxPlotChart(): BoxPlotChart;
         bullet(): Bullet;
         bulletChart(): BulletChart;
@@ -3383,7 +3383,7 @@ id(value: number|string): this;
 		tooltip(): Tooltip;
 	}
 
-    interface Nvd3Static{
+    interface Nvd3Static {
         /*set to false in production*/
         dev: boolean;
         /*stores all the ready to use charts*/

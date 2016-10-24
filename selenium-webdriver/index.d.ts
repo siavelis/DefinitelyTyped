@@ -3559,7 +3559,7 @@ declare namespace webdriver {
      * @implements {promise.Thenable.<!webdriver.Alert>}
      * @final
      */
-    class AlertPromise extends Alert implements webdriver.promise.IThenable<Alert>{
+    class AlertPromise extends Alert implements webdriver.promise.IThenable<Alert> {
       /**
        * @param {!WebDriver} driver The driver controlling the browser this
        *     alert is attached to.

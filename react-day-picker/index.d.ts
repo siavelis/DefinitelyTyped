@@ -59,7 +59,7 @@ declare namespace ReactDayPicker {
         locale?: string;
     }
 
-    interface Props extends React.Props<DayPicker>{
+    interface Props extends React.Props<DayPicker> {
         modifiers?: Modifiers;
         initialMonth?: Date;
         numberOfMonths?: number;

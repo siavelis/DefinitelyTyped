@@ -10,7 +10,7 @@ declare namespace ngNotify {
     /**
      * Contains the options used to configure notification.
      */
-    interface IUserOptions{
+    interface IUserOptions {
         type?: string;
         theme?: string;
         position?: string;

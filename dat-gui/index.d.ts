@@ -30,7 +30,7 @@ declare namespace dat {
         remember(target: Object): void;
     }
 
-    export interface GUIParams{
+    export interface GUIParams {
         autoPlace?: boolean;
         closed?: boolean;
         load?: any;

@@ -224,7 +224,7 @@ declare module 'angular' {
             hues: IThemeHues;
         }
 
-        interface IBrowserColors{
+        interface IBrowserColors {
             theme: string;
             palette: string;
             hue: string;

@@ -9,8 +9,7 @@ declare module "hammerjs" {
     export = Hammer;
 }
 
-interface HammerStatic
-{
+interface HammerStatic {
   new( element: HTMLElement | SVGElement, options?: HammerOptions ): HammerManager;
 
   defaults: HammerDefaults;
@@ -74,8 +73,7 @@ type RecognizerTuple =
   | [RecognizerStatic, RecognizerOptions, string | string[]]
   | [RecognizerStatic, RecognizerOptions, string | string[], (string | Recognizer) | (string | Recognizer)[]];
 
-interface HammerDefaults extends HammerOptions
-{
+interface HammerDefaults extends HammerOptions {
   domEvents: boolean;
   enable: boolean;
   preset: RecognizerTuple[];
@@ -86,8 +84,7 @@ interface HammerDefaults extends HammerOptions
   inputTarget: EventTarget;
 }
 
-interface CssProps
-{
+interface CssProps {
   contentZooming: string;
   tapHighlightColor: string;
   touchCallout: string;
@@ -96,8 +93,7 @@ interface CssProps
   userSelect: string;
 }
 
-interface HammerOptions
-{
+interface HammerOptions {
   cssProps?: CssProps;
   domEvents?: boolean;
   enable?: boolean | ((manager: HammerManager) => boolean);
@@ -117,8 +113,7 @@ interface HammerListener {
   (event: HammerInput): void;
 }
 
-interface HammerManager
-{
+interface HammerManager {
   add( recogniser: Recognizer ): Recognizer;
   add( recogniser: Recognizer ): HammerManager;
   add( recogniser: Recognizer[] ): Recognizer;
@@ -136,8 +131,7 @@ interface HammerManager
   stop( force: boolean ): void;
 }
 
-declare class HammerInput
-{
+declare class HammerInput {
   constructor( manager: HammerManager, callback: Function );
 
   destroy(): void;
@@ -214,28 +208,23 @@ declare class HammerInput
   preventDefault: Function;
 }
 
-declare class MouseInput extends HammerInput
-{
+declare class MouseInput extends HammerInput {
   constructor( manager: HammerManager, callback: Function );
 }
 
-declare class PointerEventInput extends HammerInput
-{
+declare class PointerEventInput extends HammerInput {
   constructor( manager: HammerManager, callback: Function );
 }
 
-declare class SingleTouchInput extends HammerInput
-{
+declare class SingleTouchInput extends HammerInput {
   constructor( manager: HammerManager, callback: Function );
 }
 
-declare class TouchInput extends HammerInput
-{
+declare class TouchInput extends HammerInput {
   constructor( manager: HammerManager, callback: Function );
 }
 
-declare class TouchMouseInput extends HammerInput
-{
+declare class TouchMouseInput extends HammerInput {
   constructor( manager: HammerManager, callback: Function );
 }
 
@@ -252,13 +241,11 @@ interface RecognizerOptions {
   velocity?: number;
 }
 
-interface RecognizerStatic
-{
+interface RecognizerStatic {
   new( options?: RecognizerOptions ): Recognizer;
 }
 
-interface Recognizer
-{
+interface Recognizer {
   defaults: any;
 
   canEmit(): boolean;
@@ -281,73 +268,55 @@ interface Recognizer
   tryEmit( input: HammerInput ): void;
 }
 
-interface AttrRecognizerStatic
-{
+interface AttrRecognizerStatic {
   attrTest( input: HammerInput ): boolean;
   process( input: HammerInput ): any;
 }
 
-interface AttrRecognizer extends Recognizer
-{
+interface AttrRecognizer extends Recognizer {
   new( options?: RecognizerOptions ): AttrRecognizer;
 }
 
-interface PanRecognizerStatic
-{
+interface PanRecognizerStatic {
   new( options?: RecognizerOptions ): PanRecognizer;
 }
 
-interface PanRecognizer extends AttrRecognizer
-{
+interface PanRecognizer extends AttrRecognizer {
 }
 
-interface PinchRecognizerStatic
-{
+interface PinchRecognizerStatic {
   new( options?: RecognizerOptions ): PinchRecognizer;
 }
 
-interface PinchRecognizer extends AttrRecognizer
-{
+interface PinchRecognizer extends AttrRecognizer {
 }
 
-interface PressRecognizerStatic
-{
+interface PressRecognizerStatic {
   new( options?: RecognizerOptions ): PressRecognizer;
 }
 
-interface PressRecognizer extends AttrRecognizer
-{
+interface PressRecognizer extends AttrRecognizer {
 }
 
-interface RotateRecognizerStatic
-{
+interface RotateRecognizerStatic {
   new( options?: RecognizerOptions ): RotateRecognizer;
 }
 
-interface RotateRecognizer extends AttrRecognizer
-{
-}
+interface RotateRecognizer extends AttrRecognizer { }
 
-interface SwipeRecognizerStatic
-{
+interface SwipeRecognizerStatic {
   new( options?: RecognizerOptions ): SwipeRecognizer;
 }
 
-interface SwipeRecognizer extends AttrRecognizer
-{
-}
+interface SwipeRecognizer extends AttrRecognizer { }
 
-interface TapRecognizerStatic
-{
+interface TapRecognizerStatic {
   new( options?: RecognizerOptions ): TapRecognizer;
 }
 
-interface TapRecognizer extends AttrRecognizer
-{
-}
+interface TapRecognizer extends AttrRecognizer { }
 
-declare class TouchAction
-{
+declare class TouchAction {
   constructor( manager: HammerManager, value: string );
 
   compute(): string;
@@ -357,8 +326,7 @@ declare class TouchAction
   update(): void;
 }
 
-interface HammerPoint
-{
+interface HammerPoint {
   x: number;
   y: number;
 }

@@ -17,7 +17,7 @@ declare namespace TypeCheck {
     customTypes: CustomType;
   }
 
-  export interface TC{
+  export interface TC {
     VERSION: string;
     typeCheck: (typeDescription: string , inst: any, options?: Options) => boolean;
     parseType: (typeDescription: string) => Object;

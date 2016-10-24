@@ -144,8 +144,7 @@ declare namespace ng {
     }
 }
 
-interface Array<T>
-{
+interface Array<T> {
     /** the promise of the original server interaction that created this collection. **/
     $promise: ng.IPromise<Array<T>>;
     $resolved: boolean;

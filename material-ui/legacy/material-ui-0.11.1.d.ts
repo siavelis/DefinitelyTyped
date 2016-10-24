@@ -126,7 +126,7 @@ declare namespace __MaterialUI {
         onLeftIconButtonTouchTap?: TouchTapEventHandler;
         onRightIconButtonTouchTap?: TouchTapEventHandler;
     }
-    export class AppBar extends React.Component<AppBarProps, {}>{
+    export class AppBar extends React.Component<AppBarProps, {}> {
     }
 
     interface AppCanvasProps extends React.Props<AppCanvas> {
@@ -1393,7 +1393,7 @@ declare namespace __MaterialUI {
             width?: string | number;
             zDepth?: number;
         }
-        export class Menu extends React.Component<MenuProps, {}>{
+        export class Menu extends React.Component<MenuProps, {}> {
         }
 
         interface MenuItemProps extends React.Props<MenuItem> {
@@ -1412,14 +1412,14 @@ declare namespace __MaterialUI {
             onItemTouchTap?: (e: TouchTapEvent, item: React.ReactElement<any>) => void;
             onChange?: (e: React.FormEvent, value: string) => void;
         }
-        export class MenuItem extends React.Component<MenuItemProps, {}>{
+        export class MenuItem extends React.Component<MenuItemProps, {}> {
         }
 
         interface MenuDividerProps extends React.Props<MenuDivider> {
             inset?: boolean;
             style?: React.CSSProperties;
         }
-        export class MenuDivider extends React.Component<MenuDividerProps, {}>{
+        export class MenuDivider extends React.Component<MenuDividerProps, {}> {
         }
     }
 }    // __MaterialUI

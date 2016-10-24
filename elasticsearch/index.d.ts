@@ -60,7 +60,7 @@ declare namespace Elasticsearch {
         refresh(params: IndicesRefreshParams): PromiseLike<any>;
     }
 
-    export interface ConfigOptions{
+    export interface ConfigOptions {
         host?: any;
         hosts?: any;
         log?: any;

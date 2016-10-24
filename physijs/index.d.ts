@@ -9,7 +9,7 @@ declare namespace Physijs {
     export function noConflict(): Object;
     export function createMaterial(material: THREE.Material, friction?: number, restitution?: number): Material;
 
-    export interface Material extends THREE.Material{
+    export interface Material extends THREE.Material {
         _physijs: {
             id: number;
             friction: number;

@@ -10,8 +10,7 @@
 
 /// <reference types="jdataview" />
 
-declare class jBinary
-{
+declare class jBinary {
 
     static loadData(source: any, callback?: (error: string, data: any) => any): any;
     static load(source: any, typeSet?: any, callback?: (error: string, data: any) => any): any;

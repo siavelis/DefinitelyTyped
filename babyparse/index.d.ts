@@ -139,7 +139,7 @@ declare namespace BabyParse {
 
 declare var Baby: BabyParse.Static;
 
-declare module "babyparse"{
+declare module "babyparse" {
     var Baby: BabyParse.Static;
     export = Baby;
 }

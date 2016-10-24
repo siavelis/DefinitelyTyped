@@ -54,7 +54,7 @@ interface CSSBeautifyOptions {
   newline_between_rules?: boolean;
 }
 
-interface jsb{
+interface jsb {
   (js_source_text: string, options?: JsBeautifyOptions): string ;
   js: (js_source_text: string, options?: JsBeautifyOptions) => string ;
   beautify_js: (js_source_text: string, options?: JsBeautifyOptions) => string ;
@@ -67,8 +67,7 @@ interface jsb{
 }
 
 declare var js_beautify: jsb;
-declare module "js-beautify"
-{
+declare module "js-beautify" {
     export = js_beautify;
 }
 

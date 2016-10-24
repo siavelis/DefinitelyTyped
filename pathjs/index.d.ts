@@ -3,14 +3,14 @@
 // Definitions by: Lokesh Peta <https://github.com/lokeshpeta/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-interface IPathHistory{
+interface IPathHistory {
 	initial: any;
 	pushState(state: any, title: string, path: string): void;
 	popState(event: any): void;
 	listen(fallback: any): void;
 }
 
-interface IPathRoute{
+interface IPathRoute {
 	to(fn: () => void): IPathRoute;
 	enter(fns: Function|Function[]): IPathRoute;
 	exit(fn: () => void): IPathRoute;
@@ -18,7 +18,7 @@ interface IPathRoute{
 	run(): void;
 }
 
-interface IPathRoutes{
+interface IPathRoutes {
 	current: IPathRoute;
     root: IPathRoute;
 	rescue: Function;
@@ -26,7 +26,7 @@ interface IPathRoutes{
 	defined: {};
 }
 
-interface IPathCore{
+interface IPathCore {
 	route: IPathRouteConstructor;
 }
 

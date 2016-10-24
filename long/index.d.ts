@@ -8,8 +8,7 @@ export = Long;
 export as namespace Long;
 
 declare namespace Long {}
-declare class Long
-{
+declare class Long {
     /**
      * Constructs a 64 bit two's-complement integer, given its low and high 32 bit values as signed integers. See the from* functions below for more convenient ways of constructing Longs.
      */

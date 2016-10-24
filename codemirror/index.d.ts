@@ -665,7 +665,7 @@ declare namespace CodeMirror {
         (line: number, ch?: number): Position;
     }
 
-    interface Range{
+    interface Range {
         from: CodeMirror.Position;
         to: CodeMirror.Position;
     }

@@ -5,7 +5,7 @@
 
 /// <reference types="jquery" />
 
-interface PlaygroundOptions{
+interface PlaygroundOptions {
     height?: number;
     width?: number;
     refreshRate?: number;
@@ -15,18 +15,18 @@ interface PlaygroundOptions{
     disableCollision?: boolean;
 }
 
-interface Coordinate3D{
+interface Coordinate3D {
     x: number;
     y: number;
     z: number;
 }
 
-interface Size{
+interface Size {
     w: number;
     h: number;
 }
 
-interface SpriteOptions{
+interface SpriteOptions {
     animation?: any;
     height?: number;
     width?: number;
@@ -35,7 +35,7 @@ interface SpriteOptions{
     callback?: () => any;
 }
 
-interface GroupOptions{
+interface GroupOptions {
     overflow?: string;
     height?: number;
     width?: number;
@@ -43,7 +43,7 @@ interface GroupOptions{
     posy?: number;
 }
 
-interface TileMapOptions{
+interface TileMapOptions {
     sizex?: number;
     sizey?: number;
     height?: number;
@@ -53,7 +53,7 @@ interface TileMapOptions{
     buffer?: number;
 }
 
-interface AnimationOptions{
+interface AnimationOptions {
     imageURL: string;
     numberOfFrame?: number;
     delta?: number;
@@ -64,7 +64,7 @@ interface AnimationOptions{
     offsety?: number;
 }
 
-interface Animation{
+interface Animation {
     imageURL: string;
     numberOfFrame: number;
     delta: number;
@@ -97,7 +97,7 @@ interface GameQuery {
     tileIdPrefix: string;
 }
 
-interface JQuery{
+interface JQuery {
     playground(options?: PlaygroundOptions): JQuery;
 
     collision(query?: any): JQuery;
@@ -163,7 +163,7 @@ interface JQuery{
     resumeAnimation(): JQuery;
 }
 
-interface JQueryStatic{
+interface JQueryStatic {
     playground(): JQuery;
 
     gQ: GameQuery;

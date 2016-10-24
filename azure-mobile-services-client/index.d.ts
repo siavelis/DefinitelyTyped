@@ -34,8 +34,7 @@ declare namespace Microsoft.WindowsAzure {
         invokeApi(apiName: string, options?: InvokeApiOptions, callback?: (error: any, results: any) => void): asyncPromise;
     }
 
-    interface Push
-    {
+    interface Push {
         /**
          * Register a push channel with the Mobile Apps backend to start receiving notifications.
          *
@@ -55,8 +54,7 @@ declare namespace Microsoft.WindowsAzure {
         unregister(pushChannel: string, callback?: (error: any, results: any) => void): void;
     }
 
-    interface InvokeApiOptions
-	{
+    interface InvokeApiOptions {
 		method?: string;
 		body?: any;
 		headers?: Object;

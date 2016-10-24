@@ -290,7 +290,7 @@ declare class SaveQuery<T> implements IQuery<T> {
     execute(criteriaRawJsObject: any, callback?: (_result: T | any) => any): Promise<T | any>;
 }
 
-declare class DeleteQuery<T> implements IQuery<T>{
+declare class DeleteQuery<T> implements IQuery<T> {
     _table: Table<T>;
     constructor(_table: Table<T>);
     execute(criteriaOrID: any | number | string, callback?: (_result: DeleteAnswer) => any): Promise<DeleteAnswer>;

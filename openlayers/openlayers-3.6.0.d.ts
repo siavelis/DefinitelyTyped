@@ -1175,7 +1175,7 @@ declare namespace olx {
             wrapX?: boolean;
         }
 
-        interface ClusterOptions extends VectorOptions{
+        interface ClusterOptions extends VectorOptions {
 
             /**
              * Minimum distance in pixels between clusters. Default is 20.
@@ -2816,7 +2816,7 @@ declare namespace ol {
             type Units = 'degrees' | 'imperial' | 'nautical' | 'metric' | 'us';
         }
 
-        class Control extends ol.Object{
+        class Control extends ol.Object {
             constructor(options: olx.control.ControlOptions);
 
             /**
@@ -2905,13 +2905,11 @@ declare namespace ol {
 
         }
 
-        class Zoom extends Control{
-        }
+        class Zoom extends Control { }
 
-        class ZoomSlider extends Control{
-        }
+        class ZoomSlider extends Control { }
 
-        class ZoomToExtent extends Control{
+        class ZoomToExtent extends Control {
         	constructor(options?: olx.ZoomToExtentOptions);
         }
     }

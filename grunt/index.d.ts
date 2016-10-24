@@ -121,7 +121,7 @@ declare namespace grunt {
         /**
          * {@link http://gruntjs.com/sample-gruntfile}
          */
-        interface IProjectConfig{
+        interface IProjectConfig {
             [plugin: string]: any;
         }
 

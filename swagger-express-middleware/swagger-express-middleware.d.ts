@@ -75,7 +75,7 @@ declare module "swagger-express-middleware" {
                  * Express routing options (e.g. `caseSensitive`, `strict`).
                  * If an Express Application or Router is passed, then its routing settings will be used.
                  */
-                router?: Application | Router;
+                router?: Application | Router,
                 /**
                 * The data store that will be used to persist REST resources.
                 * If `router` is an Express Application, then you can set/get the data store
@@ -159,7 +159,7 @@ declare module "swagger-express-middleware" {
             multipart?: MulterOptions;
         }
 
-        interface MulterOptions{
+        interface MulterOptions {
             /** The destination directory for the uploaded files. */
             dest?: string;
             /** The storage engine to use for uploaded files. */
