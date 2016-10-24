@@ -130,7 +130,7 @@ declare module 'redux-saga/lib/emitter' {
   export default function emitter(): {
     subscribe(cb: Function): Function;
     emit(item: any): void;
-  }
+  };
 }
 
 declare module 'redux-saga/lib/monitorActions' {

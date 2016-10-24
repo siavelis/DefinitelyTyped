@@ -472,5 +472,5 @@ export declare const reducer: {
      * form.
      */
     plugin(reducers: { [formName: string]: Reducer<any> }): Reducer<any>;
-}
+};
 

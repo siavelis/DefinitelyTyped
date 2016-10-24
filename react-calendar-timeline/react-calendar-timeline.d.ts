@@ -65,6 +65,6 @@ declare module "react-calendar-timeline" {
         onBoundsChange?(canvasTimeStart: any, canvasTimeEnd: any): any;
         children?: any;
     }
-    let ReactCalendarTimeline : React.ClassicComponentClass<ReactCalendarTimeline>;
+    let ReactCalendarTimeline: React.ClassicComponentClass<ReactCalendarTimeline>;
     export default ReactCalendarTimeline;
 }

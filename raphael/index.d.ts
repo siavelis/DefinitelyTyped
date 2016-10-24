@@ -38,7 +38,7 @@ interface RaphaelElement {
     data(key: string): any;
     data(key: string, value: any): RaphaelElement;
     dblclick(handler: Function): RaphaelElement;
-    drag(onmove: (dx: number, dy: number, x: number, y: number, event: DragEvent) =>{ }, onstart: (x: number, y: number, event: DragEvent) =>{ }, onend: (DragEvent: any) =>{ }, mcontext?: any, scontext?: any, econtext?: any): RaphaelElement;
+    drag(onmove: (dx: number, dy: number, x: number, y: number, event: DragEvent) => { }, onstart: (x: number, y: number, event: DragEvent) => { }, onend: (DragEvent: any) => { }, mcontext?: any, scontext?: any, econtext?: any): RaphaelElement;
     getBBox(isWithoutTransform?: boolean): BoundingBox;
     glow(glow?: { width?: number; fill?: boolean; opacity?: number; offsetx?: number; offsety?: number; color?: string; }): RaphaelSet;
     hide(): RaphaelElement;
@@ -126,7 +126,7 @@ interface RaphaelSet {
     data(key: string): any;
     data(key: string, value: any): RaphaelSet;
     dblclick(handler: Function): RaphaelSet;
-    drag(onmove: (dx: number, dy: number, x: number, y: number, event: DragEvent) =>{ }, onstart: (x: number, y: number, event: DragEvent) =>{ }, onend: (DragEvent: any) =>{ }, mcontext?: any, scontext?: any, econtext?: any): RaphaelSet;
+    drag(onmove: (dx: number, dy: number, x: number, y: number, event: DragEvent) => { }, onstart: (x: number, y: number, event: DragEvent) => { }, onend: (DragEvent: any) => { }, mcontext?: any, scontext?: any, econtext?: any): RaphaelSet;
     getBBox(isWithoutTransform?: boolean): BoundingBox;
     glow(glow?: { width?: number; fill?: boolean; opacity?: number; offsetx?: number; offsety?: number; color?: string; }): RaphaelSet;
     hide(): RaphaelSet;

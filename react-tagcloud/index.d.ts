@@ -39,5 +39,5 @@ declare namespace reactTagCloud {
 }
 
 declare module "react-tagcloud" {
-    export = reactTagCloud
+    export = reactTagCloud;
 }

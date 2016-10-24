@@ -6,47 +6,47 @@
 export = RefluxCore;
 export as namespace Reflux;
 
-declare module  RefluxCore {
+declare namespace RefluxCore {
 
     interface StoreDefinition {
-        listenables?: any[],
-        init?: Function,
-        getInitialState?: Function,
+        listenables?: any[];
+        init?: Function;
+        getInitialState?: Function;
         [propertyName: string]: any;
     }
 
     interface ListenFn {
-        (...params: any[]): any,
-        completed: Function,
-        failed: Function
+        (...params: any[]): any;
+        completed: Function;
+        failed: Function;
     }
     interface Listenable {
-        listen: ListenFn
+        listen: ListenFn;
     }
 
     interface Subscription {
-        stop: Function,
-        listenable: Listenable
+        stop: Function;
+        listenable: Listenable;
     }
 
     interface Store {
-        hasListener(listenable: Listenable): boolean,
-        listenToMany(listenables: Listenable[]): void,
-        validateListening(listenable: Listenable): string,
-        listenTo(listenable: Listenable, callback: Function, defaultCallback?: Function): Subscription,
-        stopListeningTo(listenable: Listenable): boolean,
-        stopListeningToAll(): void,
-        fetchInitialState(listenable: Listenable, defaultCallback: Function): void,
+        hasListener(listenable: Listenable): boolean;
+        listenToMany(listenables: Listenable[]): void;
+        validateListening(listenable: Listenable): string;
+        listenTo(listenable: Listenable, callback: Function, defaultCallback?: Function): Subscription;
+        stopListeningTo(listenable: Listenable): boolean;
+        stopListeningToAll(): void;
+        fetchInitialState(listenable: Listenable, defaultCallback: Function): void;
         trigger(state: any): void;
         listen(callback: Function, bindContext: any): Function;
     }
 
     interface ActionsDefinition {
-        [index: string]: any
+        [index: string]: any;
     }
 
     interface Actions {
-        [index: string]: Listenable
+        [index: string]: Listenable;
     }
 
     function createStore(definition: StoreDefinition): Store;

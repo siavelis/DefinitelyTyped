@@ -33,7 +33,7 @@ interface RevealStatic {
     getPreviousSlide(): Element;
     getCurrentSlide(): Element;
 
-    getIndices(slide?: Element): {h: number; v: number;};
+    getIndices(slide?: Element): {h: number; v: number};
     getProgress(): number;
     getTotalSlides(): number;
 

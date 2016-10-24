@@ -249,7 +249,7 @@ declare namespace ROSLIB {
 		 * @param failedCallback - the callback function when the service call failed (optional). Params:
 		 *   * error - the error message reported by ROS
 		 */
-		callService(request:ServiceRequest, callback: (response:any) => void, failedCallback?: (error:any) => void):void;
+		callService(request: ServiceRequest, callback: (response: any) => void, failedCallback?: (error: any) => void): void;
 
 		/**
 		 * Advertise this service and call the callback each time a client calls it.
@@ -258,12 +258,12 @@ declare namespace ROSLIB {
 		 *   * request - the service request data
 		 *   * response - the data which should be sent back to the caller
 		 */
-		advertise(callback: (request:any, response:any) => void):void;
+		advertise(callback: (request: any, response: any) => void): void;
 
 		/**
 		 * Unadvertise a previously advertised service
 		 */
-		unadvertise():void;
+		unadvertise(): void;
 	}
 
 	export class ServiceRequest {
@@ -273,7 +273,7 @@ declare namespace ROSLIB {
 		 * @constructor
 		 * @param values - object matching the fields defined in the .srv definition file
 		 */
-		constructor(values?:any);
+		constructor(values?: any);
 	}
 
 	export class ServiceResponse {
@@ -283,7 +283,7 @@ declare namespace ROSLIB {
 		 * @constructor
 		 * @param values - object matching the fields defined in the .srv definition file
 		 */
-		constructor(values?:any);
+		constructor(values?: any);
 	}
 
 	export class Topic {
@@ -317,9 +317,9 @@ declare namespace ROSLIB {
 		});
 
 		// getter
-		public name:string;
+		public name: string;
 		// getter
-		public messageType:string;
+		public messageType: string;
 
 		/**
 		 * Every time a message is published for the given topic, the callback
@@ -328,7 +328,7 @@ declare namespace ROSLIB {
 		 * @param callback - function with the following params:
 		 *   * message - the published message
 		 */
-		subscribe(callback: (message:Message) => void):void;
+		subscribe(callback: (message: Message) => void): void;
 
 		/**
 		 * Unregisters as a subscriber for the topic. Unsubscribing stop remove
@@ -339,24 +339,24 @@ declare namespace ROSLIB {
 		 *     * provided and other listeners are registered the topic won't
 		 *     * unsubscribe, just stop emitting to the passed listener
 		 */
-		unsubscribe(callback?: () => void):void;
+		unsubscribe(callback?: () => void): void;
 
 		/**
 		 * Registers as a publisher for the topic.
 		 */
-		advertise():void;
+		advertise(): void;
 
 		/**
 		 * Unregisters as a publisher for the topic.
 		 */
-		unadvertise():void;
+		unadvertise(): void;
 
 		/**
 		 * Publish the message.
 		 *
 		 * @param message - A ROSLIB.Message object.
 		 */
-		publish(message:Message):void;
+		publish(message: Message): void;
 	}
 
 	class ActionClient {
@@ -386,7 +386,7 @@ declare namespace ROSLIB {
 		/**
 		 * Cancel all goals associated with this ActionClient.
 		 */
-		cancel():void;
+		cancel(): void;
 	}
 
 	class Goal {
@@ -411,11 +411,11 @@ declare namespace ROSLIB {
 		 *
 		 * @param timeout (optional) - a timeout length for the goal's result
 		 */
-		send(timeout?:number):void;
+		send(timeout?: number): void;
 
 		/**
 		 * Cancel the current goal.
 		 */
-		cancel():void;
+		cancel(): void;
 	}
 }
