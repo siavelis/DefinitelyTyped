@@ -38,10 +38,8 @@ interface Mixpanel {
     get_property(propertyName: string): any;
 }
 
-declare namespace Mixpanel
-{
-    interface People
-    {
+declare namespace Mixpanel {
+    interface People {
         set(keys: {[index: string]: any}, callback?: () => void): void;
 
         set(key: string, value: any, callback?: () => void): void;

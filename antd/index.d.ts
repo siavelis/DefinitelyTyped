@@ -104,8 +104,8 @@ declare namespace Antd {
 
 
     enum ButtonType {
-        primary;
-        ghost;
+        primary,
+        ghost,
         dashed
     }
 
