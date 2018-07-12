@@ -526,6 +526,12 @@ export interface ReactSelectProps<TValue = OptionValues> extends React.Props<Rea
      */
     tabSelectsValue?: boolean;
     /**
+     * Optional function for deciding if touchstart event is on the select component or not.
+     * Must be used if `menuRenderer` is specified and you use react portals.
+     * @default undefined
+     */
+    touchEventComesFromMenu?: (event: React.SyntheticEvent<any>) => boolean;
+    /**
      * initial field value
      */
     value?: Option<TValue> | Options<TValue> | string | string[] | number | number[] | boolean;
